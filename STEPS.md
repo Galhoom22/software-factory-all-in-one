@@ -18,7 +18,7 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 
 ### 0.3 Create the repository and the workspace
 
-- **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready.
+- **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the studio’s private playbook mirror when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
 - **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`PROTOTYPE.md`](PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
 - **Done:** the first commit (templates copied) is pushed.
 

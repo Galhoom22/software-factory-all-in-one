@@ -24,7 +24,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 
 ## Start a New Product
 
-1. Create an empty repository for the product's planning (for example `erp-planning`).
+1. Create an empty **private** repository for the product's planning (for example `erp-planning`). If you use a studio org copy of this playbook, start from that private mirror’s `templates/` instead of inventing a new layout.
 2. Copy everything inside [`templates/`](templates/) to the new repository's root, including the hidden `.github/`, `.editorconfig`, `.gitattributes`, and `.gitignore`.
 3. Rename the files that carry a different name here so they do not affect this repository:
    - `AGENTS.template.md` → `AGENTS.md`
