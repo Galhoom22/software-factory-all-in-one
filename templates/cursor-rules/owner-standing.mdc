@@ -1,0 +1,10 @@
+---
+description: Persist and obey lasting owner working preferences
+alwaysApply: true
+---
+
+# Owner standing instructions
+
+1. Read `docs/OWNER_STANDING.md` (repo root) for lasting owner working preferences. Do **not** rely on chat memory alone.
+2. When the user states a **lasting** preference about how agents must work (not a one-off task), **update `docs/OWNER_STANDING.md` in the same session** (edit the matching section + changelog line). Tool-specific board details go in their standing board file; product/tech decisions go in `docs/DECISIONS.md`.
+3. After updating standing docs, keep local default branch ↔ origin mirrored per OWNER_STANDING / AGENTS Git Safety.

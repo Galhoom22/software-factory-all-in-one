@@ -1,0 +1,36 @@
+name: Requirement change
+description: Add, change, or remove a product requirement.
+labels: [requirements]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change, and why
+      description: The user problem it solves. Link the current rule (requirements.md §, SRS FR/NFR, PRD F-xx), if any.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Specific and testable, one per line.
+      placeholder: "- Given …, when …, then …"
+    validations:
+      required: true
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Owner
+      options: [FE, BE, Both]
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: It is in the current actor scope (requirements.md §7), not a deferred item (§8); production-complete for that actor (docs/DELIVERY.md).
+          required: true
+        - label: It keeps the Governing Product Rules and the docs/COMPLIANCE.md red lines.
+          required: true
+        - label: If it reverses or makes a lasting decision, a new docs/DECISIONS.md entry is planned.

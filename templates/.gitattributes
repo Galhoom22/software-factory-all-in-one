@@ -1,0 +1,5 @@
+# Agent skill scripts are tooling, not product code; keep them out of GitHub's language stats.
+.cursor/** linguist-vendored
+.agents/** linguist-vendored
+.codex/agents/** linguist-vendored
+

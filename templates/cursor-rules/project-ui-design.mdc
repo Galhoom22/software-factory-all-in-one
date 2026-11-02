@@ -1,0 +1,41 @@
+---
+description: Design and scope rules for the prototype in project-ui/
+globs: project-ui/**
+alwaysApply: false
+---
+
+# project-ui Design Rules
+
+Enforced in CI by `project-ui/scripts/check-ui.mjs` and the other quality gates in `project-ui/README.md`. Never weaken a gate to make a change pass; fix the change.
+
+## Precedence (highest wins)
+
+1. `requirements.md`, `docs/COMPLIANCE.md`, and `docs/SECURITY.md` (run its Every Page Checklist)
+2. `project-ui/PRODUCT.md`
+3. `project-ui/DESIGN.md`
+4. This file
+5. Design skill defaults
+
+## Resolved Conflicts
+
+- **Icons:** {{ICON_LIBRARY}} only. No emojis as icons.
+- **Fonts:** {{FONTS}}, self-hosted, licensed for commercial use.
+- **Color:** design tokens from `globals.css` only; no default palette classes, raw hex, gradients, or glassmorphism.
+- **Motion:** subtle (150–600ms, transform and opacity), always honoring `prefers-reduced-motion`.
+- **Components:** {{COMPONENT_LIBRARY}} as the only component foundation.
+- **Images:** local assets only, never external image URLs.
+
+## Behavior Design (ethical filter)
+
+- **Use:** one clear primary action per screen named with a verb, visible progress, clear success, short hints at the point of need, sensible defaults.
+- **Never:** fabricated social proof or metrics, fear or loss framing, artificial urgency or scarcity, gamification, re-engagement nags, pre-checked consent or marketing boxes, upgrade pressure.
+
+## Non-Negotiables
+
+- **Languages:** every screen exists in {{UI_LANGUAGES}} with a visible language switch.
+- **RTL:** if any language is right-to-left, use logical utilities (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`, `text-start`), never left/right.
+- **Accessibility:** WCAG 2.2 AA: 4.5:1 text contrast, visible focus, keyboard navigation, labels on inputs.
+- **UI only:** mock data lives in `project-ui/src/mocks/`, shaped exactly like `docs/API_CONTRACT.md`.
+- **Production-realistic data:** fictional but real-looking, with long and short values and enough items to exercise lists.
+- **Long content:** every screen survives dozens of items and long unbroken values at 320px without horizontal scroll.
+- **Simplicity:** fewest files and dependencies.

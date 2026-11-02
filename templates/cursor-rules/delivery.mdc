@@ -1,0 +1,25 @@
+---
+description: Actor-loop delivery — no MVP mode; production-ready per actor
+alwaysApply: true
+---
+
+# Delivery method (mandatory)
+
+Read and follow `docs/DELIVERY.md` (repo root). After you rename `cursor-rules/` to `.cursor/rules/`, keep this file’s alwaysApply flag on.
+
+**There is no MVP delivery mode** in this repository.
+
+## Loop
+
+1. In this planning repo: one **actor** at a time.
+2. Discuss business and product until rules are written.
+3. Design and prototype every screen for that actor to **production** quality (millimetre-accurate — what ships).
+4. Implement that actor in the backend and frontend repositories until done.
+5. Return here for the next actor. Repeat.
+
+## Hard rules
+
+- Do **not** omit, weaken, stub, or “simplify for later” anything for the actor in focus.
+- Do **not** cite MVP, “phase 1 UI”, or “good enough for now” to leave a screen incomplete.
+- Deferred lists and other actors are **sequencing**, not permission to half-finish the current actor.
+- Prototype screens must match the production product for that actor; fix gaps here before implementation.

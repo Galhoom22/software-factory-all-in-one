@@ -1,0 +1,78 @@
+# Before the first push, update each pinned SHA to the latest release of its action
+# (Dependabot keeps them current afterwards), and pin the impeccable version.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Scan for secrets
+        uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Required docs exist
+        run: |
+          # Optional when using CodeRabbit: also require docs/CODERABBIT.md and per-owner coderabbit.yaml + CODERABBIT_GUIDELINES.md
+          # Optional when using TestSprite: also require docs/TESTSPRITE.md and per-owner TESTSPRITE_GUIDELINES.md + testsprite.prd.md (+ BE api-doc)
+          for f in README.md requirements.md AGENTS.md docs/AGENT_START.md CLAUDE.md GEMINI.md llms.txt .codex/config.toml .codex/hooks.json .codex/README.md .codex/CLI.md scripts/verify-codex-cli.mjs .github/copilot-instructions.md .github/instructions/project-ui.instructions.md .gemini/settings.json .windsurf/rules/00-agent-start.md docs/BRD.md docs/PRD.md docs/SRS.md docs/API_CONTRACT.md docs/DELIVERY.md docs/SEO.md docs/DOCKER.md docs/frontend/README.md docs/frontend/ARCHITECTURE.md docs/frontend/SEO.md docs/frontend/TESTING.md docs/frontend/DEPLOYMENT.md docs/frontend/DOCKER.md docs/backend/README.md docs/backend/ARCHITECTURE.md docs/backend/TESTING.md docs/backend/DEPLOYMENT.md docs/backend/DOCKER.md docs/COMPLIANCE.md docs/SECURITY.md docs/DECISIONS.md docs/DEPLOYMENT.md project-ui/README.md playbook/DELIVERY.md; do
+            test -f "$f" || { echo "Missing $f"; exit 1; }
+          done
+
+      - name: Governing product rules are intact
+        run: grep -qE "^## [0-9]+\. Governing Product Rules" requirements.md
+
+      - name: Actor-loop delivery method intact
+        run: node scripts/check-delivery.mjs
+
+      - name: Universal agent discovery intact
+        run: node scripts/check-agents.mjs
+
+      - name: Planning-only scope intact
+        run: node scripts/check-scope.mjs
+
+      - name: Codex CLI project wiring intact
+        run: node scripts/verify-codex-cli.mjs --ci
+
+      - name: Every SRS requirement has an owner (FE / BE / Both)
+        run: |
+          missing=$(grep -E '^\| (FR|NFR)-[0-9]+ ' docs/SRS.md | grep -vE '\| (FE|BE|Both) \|$' || true)
+          if [ -n "$missing" ]; then echo "Requirements without owner:"; echo "$missing"; exit 1; fi
+
+      # Add the steps below once project-ui/ exists (playbook STEPS.md, step 11).
+      # - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      #   with:
+      #     node-version: 26
+      #     cache: npm
+      #     cache-dependency-path: project-ui/package-lock.json
+      # - name: Install, check, and build (project-ui)
+      #   working-directory: project-ui
+      #   run: |
+      #     npm ci
+      #     npm audit --omit=dev --audit-level=high
+      #     npm run check:ui
+      #     npm test
+      #     npm run lint
+      #     npm run build
+      # - name: UI anti-pattern check (project-ui)
+      #   working-directory: project-ui
+      #   run: npx -y impeccable@4.8.0 detect .
