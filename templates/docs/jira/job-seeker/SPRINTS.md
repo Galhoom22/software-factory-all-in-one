@@ -5,3 +5,8 @@
 | S1 | Foundations | … | … | … |
 
 Keep FE and BE Sub-tasks for the same Feature in the same sprint when the API contract is ready.
+
+## Schedule flexibility
+
+- Finish a Story early → pull the next ranked board item the same day (do not wait for Due).
+- When plan calendar windows must move, edit the actor ESTIMATES / sprint plan first, then rebaseline the live tracker and any implementation-repo calendar docs in the same session.
