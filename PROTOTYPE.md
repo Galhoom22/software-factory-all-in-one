@@ -32,7 +32,7 @@ Install design skills with **one role each**, and write the precedence in the ru
 | Taste skill (minimalist-ui, redesign-existing-projects) | Visual direction and an audit checklist for generic patterns. |
 | UI UX Pro Max | One-time research (palette, type, UX rules), merged into `DESIGN.md`, never kept separately. |
 
-Pin the Impeccable version in CI (and prefer the same pin locally). Vendor design skills in `.cursor/skills/` with their licenses in `THIRD_PARTY_NOTICES.md`, and mark `.cursor/**` as `linguist-vendored`. When a new skill or guideline site comes up, take only the rules that fill a real gap and put them in the rules file; do not install every skill. A false positive from `impeccable detect` (for example a deliberately chosen font) goes in `.impeccable/config.json` with a reason.
+Pin the Impeccable version in CI (and prefer the same pin locally). Vendor design skills in `.cursor/skills/` with their licenses in `THIRD_PARTY_NOTICES.md`, and mark `.cursor/**` as `linguist-vendored`. When a new skill or guideline site comes up, take only the rules that fill a real gap and put them in the rules file; do not install every skill. Motion/taste packs (for example Emil Kowalski's animation skills) may stay **global** on the machine: distill frequency/purpose/easing gates into the product Motion rule, keep CSS-only constraints, and never vendor skills that push animation libraries the product forbids. A false positive from `impeccable detect` (for example a deliberately chosen font) goes in `.impeccable/config.json` with a reason.
 
 ### Starter Kit
 
