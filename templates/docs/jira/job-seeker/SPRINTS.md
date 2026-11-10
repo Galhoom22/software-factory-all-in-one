@@ -23,5 +23,5 @@ Keep FE and BE Stories for the same Feature in the same sprint when the API cont
 ## Schedule flexibility
 
 - Finish a Story early → pull the next ranked board item the same day (do not wait for Due).
-- When plan calendar windows or daily hours must move: edit this actor’s `ESTIMATES.json` + this file first, then same-session rebaseline the live tracker (Start/Due + Schedule bodies + sprint labels) **and** each implementation repo’s `docs/JIRA.md` (or equivalent calendar doc).
+- When plan calendar windows or daily hours must move: edit this actor’s `ESTIMATES.json` + this file first, then same-session rebaseline the live tracker (Start/Due + Schedule bodies + sprint labels), each implementation repo’s `docs/JIRA.md` (or equivalent calendar doc), **and** any day→issue daily checklist pages.
 - Mechanical find/replace of end dates is not enough — drop obsolete sprint rows and remap every Story’s sprint label when collapsing or expanding the plan.

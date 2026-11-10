@@ -17,4 +17,4 @@
 | Sprint length / count | … |
 | Capacity / developer | … |
 
-Keep FE/BE as separate owner Stories (or Sub-tasks under the same Feature) with a `Component` column. Regenerate when screens change. When the calendar moves, rebaseline the live board and implementation-repo calendar docs in the same session.
+Keep FE/BE as separate owner Stories (not one shared umbrella) with a `Component` column. Regenerate when screens change. When the calendar moves, rebaseline the live board, implementation-repo calendar docs, and any day→issue daily checklist in the same session.

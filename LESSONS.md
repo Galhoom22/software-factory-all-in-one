@@ -40,6 +40,8 @@ Each lesson comes from real rework in MasarHub (146 commits over three long chat
 - **Name the actor calendar explicitly.** Start date, end date, daily hours, and “this actor only” must be in ESTIMATES / SPRINTS / board rules and mirrored to the live tracker. Compressing with AI-assisted longer days is fine when owners accept it — record it as a decision; do not silently stub production quality.
 - **Do not half-patch a calendar.** Replacing only end dates while leaving S2–S6 rows (or old capacity math) produces fake windows like identical start/end per sprint. Rewrite the sprint table and Story map; remapping labels to a single sprint means every Story’s schedule and implementation-repo `docs/JIRA.md` move together.
 - **Same-session mirror to implementation repos.** When the planning calendar moves, update FE/BE `docs/JIRA.md` (binding side, capacity, Story→sprint map) in the same session as Jira Start/Due and Schedule bodies.
+- **Board cards are separate FE/BE Stories**, not one shared umbrella with nested Sub-tasks for both owners. Assignee filters must show only that person’s work.
+- **Daily checklist ↔ tracker.** If the team keeps a daily must-finish page (Notion or similar), use separate FE/BE lanes, link each day to the matching issue keys, treat the tracker as status SoT, and refresh day→issue links whenever the calendar map moves — same session as the rebaseline.
 
 ## Design
 
