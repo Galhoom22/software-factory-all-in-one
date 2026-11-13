@@ -29,8 +29,12 @@ Each lesson comes from real rework in MasarHub (146 commits over three long chat
 - **Absorb, then delete, outside references.** A UX roadmap PDF and an Agile course file were added as input; their useful rules were merged into the rules and docs, then the files were deleted.
 - **Check hosting against the exact stack, not the brand.** Managed platforms lagged the planned versions (one offered PostgreSQL 17 against a required 18, another an older pgvector), a free frontend tier forbade commercial use, and an edge adapter only experimentally supported Next.js 16's `proxy.ts`. Compare each requirement in SRS §2 with the host's own docs before choosing.
 - **Give staging its own domain when cookies span subdomains.** Production cookies scoped to `.domain` reach every subdomain, so a staging subdomain breaks sign-in for anyone using both.
-- **Spec tooling belongs in the implementation repositories.** A spec-driven tool such as Spec Kit in the planning repository would add a constitution and specs beside the requirements, a second source of truth. Use it where code is built, with a constitution that cites the planning rules by ID.
-- **Feature files hold evidence, not a second SRS.** Decompose once with [`FEATURE_SDLC.md`](FEATURE_SDLC.md); match Lightweight / Standard / Comprehensive to real risk; never mark Done without linked verification. Done, Released, and Outcome Achieved are separate.
+- **Spec tooling belongs in the implementation repositories.** A spec-driven tool such as Spec Kit in the planning repository would add a constitution and specs beside the requirements, a second source of truth. Use it where code is built, with a constitution that cites the planning rules by ID. In planning, absorb outside methods as **judgment only** ([`07-judgment/`](07-judgment/README.md)) — map and converge; never install a second constitution.
+- **Number the playbook method files.** Prefixed names (`01-STEPS`, `02-DELIVERY`, …) keep delivery order visible without forcing a BRD/PRD folder tree onto every product.
+- **Log borrows and rejections.** A `REFERENCES.md` register (taken / rejected / commit) stops agents from re-proposing ideas the owner already killed.
+- **Stable REJ-xx IDs.** Agents answer scope questions from one file; free-text “deferred” paragraphs drift.
+- **Actor packs beat a flat screen dump.** Per-actor `screens.md` + `flow.md` scale when the product has more than one role.
+- **Feature files hold evidence, not a second SRS.** Decompose once with [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md); match Lightweight / Standard / Comprehensive to real risk; never mark Done without linked verification. Done, Released, and Outcome Achieved are separate.
 - **SEO is technical honesty, not growth hacks.** Index marketing and legal; keep the app `noindex`; ship robots/sitemap/hreflang/honest JSON-LD. Do not invent reviews or ratings for rich results ([`docs/SEO.md`](../docs/SEO.md) pattern).
 - **Docker is for local parity, not a silent production rewrite.** Compose for Postgres/mail/API on laptops; keep the accepted production host (Forge, PaaS, …) until DECISIONS change. Never bake secrets into images.
 - **Keep a `notes.md` for ideas**, and move an idea out once it is decided or built, so it never reads as a requirement.
@@ -45,7 +49,9 @@ Each lesson comes from real rework in MasarHub (146 commits over three long chat
 
 ## Design
 
-- **Pick references once, with one role each.** Many skill and guideline sites were tried one by one; only rules that filled a real gap were kept. Decide the component foundation, the UX reference, and the visual inspiration early, and write the precedence order.
+- **Pick references once, with one role each.** Many skill and guideline sites were tried one by one; only rules that filled a real gap were kept. Decide the component foundation, the UX reference, and the visual inspiration early, and write the precedence order. Keep anti-slop and pre-delivery checklists subordinate to `DESIGN.md`.
+- **Design errors are a log, not chat.** Owner-reported visual defects: fix same turn, append to `DESIGN-ERRORS.md`, so the next session does not repeat them.
+- **Engineering aha ≠ planning lessons.** Put non-obvious bug root causes in `docs/learning-from-mistakes/`; keep `06-LESSONS.md` for process mistakes.
 - **Distinct brand, not a copy.** A dark theme too close to a competitor's had to be redone, and the light theme was redone to match it. Borrow patterns, never palettes, logos, or illustrations wholesale.
 - **The product name needs a wordmark** that stands out from the copy, and a unique logo; plan them with the brand, not after the screens.
 - **The screen index changed four times** (Figma-like canvas, live thumbnails, text catalogue, then one "Screens and flows" page). Build the final shape from PROTOTYPE.md directly.

@@ -8,13 +8,13 @@
 | Product | {{PRODUCT}} |
 | Status | Draft |
 | Source of truth | [`requirements.md`](../requirements.md) |
-| Related | [`BRD.md`](BRD.md), [`SRS.md`](SRS.md), [`DELIVERY.md`](DELIVERY.md) |
+| Related | [`BRD.md`](BRD.md), [`SRS.md`](SRS.md), [`02-DELIVERY.md`](02-DELIVERY.md) |
 
 ---
 
 ## 1. Purpose
 
-This document defines **what** the **current actor** ({{CURRENT_ACTOR}}) gets at production quality ([`DELIVERY.md`](DELIVERY.md)): features, user stories, and acceptance criteria. Detailed rules live in `requirements.md`; technical specifications live in the SRS. There is no MVP delivery mode.
+This document defines **what** the **current actor** ({{CURRENT_ACTOR}}) gets at production quality ([`02-DELIVERY.md`](02-DELIVERY.md)): features, user stories, and acceptance criteria. Detailed rules live in `requirements.md`; technical specifications live in the SRS. There is no MVP delivery mode.
 
 ## 2. Product Summary
 

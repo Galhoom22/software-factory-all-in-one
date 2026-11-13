@@ -1,6 +1,6 @@
 # Prompts — What to Ask the Agent at Each Step
 
-Ready prompts for the steps in [`STEPS.md`](STEPS.md). Replace the `<...>` parts. Write them in any language; the agent always replies in **English** per `AGENTS.md`. Each prompt assumes the agent follows `docs/AGENT_START.md` and `AGENTS.md` (checks, commit, push, CI).
+Ready prompts for the steps in [`01-STEPS.md`](01-STEPS.md). Replace the `<...>` parts. Write them in any language; the agent always replies in **English** per `AGENTS.md`. Each prompt assumes the agent follows `docs/AGENT_START.md` and `AGENTS.md` (checks, commit, push, CI).
 
 ## Starting
 
@@ -22,7 +22,7 @@ Ready prompts for the steps in [`STEPS.md`](STEPS.md). Replace the `<...>` parts
 
 **Set up from the playbook (new product):**
 
-> This is a new planning repository for `<product>`: `<one-line idea>`. Copy `playbook/templates/` to the root as `playbook/README.md` describes, fill every placeholder from what I tell you, and ask me for anything you cannot infer. Then follow `playbook/STEPS.md` from Phase 1.
+> This is a new planning repository for `<product>`: `<one-line idea>`. Copy `playbook/templates/` to the root as `playbook/README.md` describes, fill every placeholder from what I tell you, and ask me for anything you cannot infer. Then follow `playbook/01-STEPS.md` from Phase 1.
 
 ## Phase 0 and 1
 
@@ -44,9 +44,9 @@ Ready prompts for the steps in [`STEPS.md`](STEPS.md). Replace the `<...>` parts
 
 > Write `docs/DEPLOYMENT.md` (shared) plus `docs/frontend/DEPLOYMENT.md` and `docs/backend/DEPLOYMENT.md` (step by step, one per repository). Pick the cheapest hosting that meets every requirement in SRS §2 and COMPLIANCE, with prices and terms checked today on the official pages, the options compared, environments, release flow, backups, rollback, and when to grow. Record the choice in DECISIONS.md.
 
-> *(In a new implementation repository)* On a branch, run `specify init --here --integration <agent>` with the Spec Kit version pinned in SRS §2, then write the constitution only from rules that already exist in the planning repository, cited by ID: the governing rules, the SECURITY and COMPLIANCE red lines, the accessibility target, the stack versions, this developer's Definition of Done, and the adaptive feature rules in `playbook/FEATURE_SDLC.md` (evidence over checklists, no fabricated results, security unchanged by profile).
+> *(In a new implementation repository)* On a branch, run `specify init --here --integration <agent>` with the Spec Kit version pinned in SRS §2, then write the constitution only from rules that already exist in the planning repository, cited by ID: the governing rules, the SECURITY and COMPLIANCE red lines, the accessibility target, the stack versions, this developer's Definition of Done, and the adaptive feature rules in `playbook/04-FEATURE_SDLC.md` (evidence over checklists, no fabricated results, security unchanged by profile).
 
-> *(Handoff to implementation)* Using `playbook/FEATURE_SDLC.md`, decompose the approved SRS into epics and independently verifiable features. Write `docs/features/requirements-map.md` so every FR/NFR is mapped or explicitly unresolved, flag conflicts, and create one short feature file per feature from the skeleton. Do not copy the SRS into those files.
+> *(Handoff to implementation)* Using `playbook/04-FEATURE_SDLC.md`, decompose the approved SRS into epics and independently verifiable features. Write `docs/features/requirements-map.md` so every FR/NFR is mapped or explicitly unresolved, flag conflicts, and create one short feature file per feature from the skeleton. Do not copy the SRS into those files.
 
 > *(AI products)* Write `docs/AI.md`: at least ten free AI sources with an API, their current models per task, and the rules a source must pass before it handles real data.
 
@@ -54,9 +54,9 @@ Ready prompts for the steps in [`STEPS.md`](STEPS.md). Replace the `<...>` parts
 
 > In `project-ui/`, install `<framework>` using only the official installer from `<official docs URL>`. Install nothing else.
 
-> Set up the design skills with one role each as `playbook/PROTOTYPE.md` describes, write `PRODUCT.md`, `DESIGN.md`, the design rules file, the UI guard, and the tests, then add them to CI.
+> Set up the design skills with one role each as `playbook/03-PROTOTYPE.md` describes, write `PRODUCT.md`, `DESIGN.md`, the design rules file, the UI guard, and the tests, then add them to CI.
 
-> Build the starter kit from `playbook/PROTOTYPE.md` and the home page "Screens and flows".
+> Build the starter kit from `playbook/03-PROTOTYPE.md` and the home page "Screens and flows".
 
 > Build the `<area>` screens for the `<actor>`: every state in the PROTOTYPE.md state checklist, production-level, realistic fictional data in every language, both themes, phone width. Add them to `screens.ts`, `flows.ts`, and the README Screen Index, and run the design review.
 

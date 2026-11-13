@@ -28,9 +28,11 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 | Product rules | `requirements.md` |
 | Delivery method | `docs/DELIVERY.md` |
 | Full agent rules | `AGENTS.md` |
-| Decisions | `docs/DECISIONS.md` |
+| Decisions | `docs/DECISIONS.md`, `docs/decision-logs/` |
+| Scope bans / borrows | `docs/SCOPE_REJECTIONS.md`, `docs/REFERENCES.md` |
+| Judgment / actors | `docs/JUDGMENT.md`, `docs/actors/` |
 | Legal / security | `docs/COMPLIANCE.md`, `docs/SECURITY.md` |
-| Prototype | `project-ui/PRODUCT.md`, `project-ui/DESIGN.md`, `.cursor/rules/project-ui-design.mdc` (open even if you are not Cursor) |
+| Prototype | `project-ui/PRODUCT.md`, `project-ui/DESIGN.md`, `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`, `project-ui/DESIGN-ERRORS.md`, `.cursor/rules/project-ui-design.mdc` (open even if you are not Cursor) |
 
 ## Git (short)
 

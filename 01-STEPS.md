@@ -1,6 +1,6 @@
 # Steps — From an Idea to a Complete Plan
 
-The order below is the order that worked, corrected with hindsight. In MasarHub several things came late and forced rework: the product name changed after dozens of screens, compliance, security, the decision log, and the license were applied backwards, and prices changed three times. Here they come early. Each step names its output and what **done** means; [`PROMPTS.md`](PROMPTS.md) has a ready prompt for most steps, and [`LESSONS.md`](LESSONS.md) explains why each rule exists.
+The order below is the order that worked, corrected with hindsight. In MasarHub several things came late and forced rework: the product name changed after dozens of screens, compliance, security, the decision log, and the license were applied backwards, and prices changed three times. Here they come early. Each step names its output and what **done** means; [`05-PROMPTS.md`](05-PROMPTS.md) has a ready prompt for most steps, and [`06-LESSONS.md`](06-LESSONS.md) explains why each rule exists.
 
 ## Phase 0 — Before the Repository
 
@@ -12,14 +12,14 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 
 ### 0.2 Research competitors and choose references
 
-- **Output:** a short competitor list, the **one** closest competitor to learn from, the features that would make the product stronger than it, and the references the prototype will borrow from: one component foundation (for example shadcn/ui), one UX reference for the core screen (for example Reactive Resume), and visual inspiration sites.
+- **Output:** a short competitor list, the **one** closest competitor to learn from, the features that would make the product stronger than it, and the references the prototype will borrow from: one component foundation (for example shadcn/ui), one UX reference for the core screen (for example Reactive Resume), and visual inspiration sites. Start [`docs/REFERENCES.md`](templates/docs/REFERENCES.md) in the same pass (taken / rejected / where it landed).
 - **Rule:** borrow patterns, never branding, logos, copy, or illustrations. Record every reference and its license.
-- **Done:** BRD §8 lists the competitors; `project-ui/README.md` lists the references.
+- **Done:** BRD §8 lists the competitors; `docs/REFERENCES.md` has the borrow register; `project-ui/README.md` lists prototype references.
 
 ### 0.3 Create the repository and the workspace
 
 - **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the studio’s private playbook mirror when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
-- **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`PROTOTYPE.md`](PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
+- **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`03-PROTOTYPE.md`](PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
 - **Done:** the first commit (templates copied) is pushed.
 
 ## Phase 1 — Foundation
@@ -27,7 +27,7 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 ### 1. Write the requirements
 
 - **Output:** [`requirements.md`](templates/requirements.md), the single source of truth, in English (write the idea in any language first, then have it converted).
-- **How:** the idea, the problem, the core flow, every feature as `User:` / `System:` / `Rule:` lines, the **current actor** scope, what is deferred, the actor-loop delivery method ([`DELIVERY.md`](DELIVERY.md)), and the **Governing Product Rules**.
+- **How:** the idea, the problem, the core flow, every feature as `User:` / `System:` / `Rule:` lines, the **current actor** scope, what is deferred, the actor-loop delivery method ([`02-DELIVERY.md`](02-DELIVERY.md)), and the **Governing Product Rules**. Open [`docs/SCOPE_REJECTIONS.md`](templates/docs/SCOPE_REJECTIONS.md) with stable `REJ-xx` IDs for out-of-scope and won-forever items, and seed [`docs/actors/Actor-01-CurrentActor/`](templates/docs/actors/Actor-01-CurrentActor/) (rename the folder to a real slug).
 - **Include from the start:** both interface languages and a language switch on every screen, sign-in methods (email plus the social providers the market expects), sign-out, account settings, data rights (download, delete, consent), and the empty states of every core object. MasarHub added each of these later.
 - **Done:** someone new can read it and explain the current actor, that there is no MVP delivery mode, and the red lines.
 
@@ -83,7 +83,7 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 
 ### 10. Decision log and AI sources
 
-- **Output:** [`docs/DECISIONS.md`](templates/docs/DECISIONS.md) from the first lasting decision. *Optional:* [`docs/AI.md`](templates/docs/AI.md) if the product uses AI: at least ten free sources with their current models, and the rules a source must pass before it touches real data.
+- **Output:** [`docs/DECISIONS.md`](templates/docs/DECISIONS.md) from the first lasting decision, plus [`docs/decision-logs/`](templates/docs/decision-logs/) for light forks that are not yet ADRs, and [`docs/JUDGMENT.md`](templates/docs/JUDGMENT.md) when absorbing outside methods ([`07-judgment/`](07-judgment/README.md)). *Optional:* [`docs/AI.md`](templates/docs/AI.md) if the product uses AI: at least ten free sources with their current models, and the rules a source must pass before it touches real data.
 - **Rule:** never edit an accepted decision; add a new entry that supersedes it.
 - **Done:** every non-obvious choice in SRS §2 has an entry.
 
@@ -96,12 +96,12 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 - **Also:** local containerization ([`docs/DOCKER.md`](templates/docs/DOCKER.md) plus FE/BE Docker guides and copyable `docker/` skeletons): Compose for database/mail/API on laptops; do not silently replace the production hosting decision with Docker on the server.
 - **Also:** if the team will use an AI PR reviewer (for example [CodeRabbit](https://www.coderabbit.ai/)), add a shared setup doc plus per-owner `coderabbit.yaml` and `CODERABBIT_GUIDELINES.md` to copy into each implementation repository ([templates](templates/docs/CODERABBIT.md)).
 - **Also:** if the team will use agentic live-app verification (for example [TestSprite](https://www.testsprite.com/)), add a shared setup doc plus per-owner guidelines, lean PRD/api-doc upload files, and optional FE plan samples ([templates](templates/docs/TESTSPRITE.md)). Keep it complementary to in-repo unit/E2E tests — staging proof, not a substitute for PR CI.
-- **Also:** decide the working method for the implementation repositories (for example Spec Kit plus [`FEATURE_SDLC.md`](FEATURE_SDLC.md)) as a DECISIONS entry, with a line in each Definition of Done. Keep feature files and Spec Kit out of the planning repository. Record the testing split (FE vs BE tools and mandatory safety nets) in DECISIONS when it is product-specific.
+- **Also:** decide the working method for the implementation repositories (for example Spec Kit plus [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md)) as a DECISIONS entry, with a line in each Definition of Done. Keep feature files and Spec Kit out of the planning repository. Record the testing split (FE vs BE tools and mandatory safety nets) in DECISIONS when it is product-specific.
 - **Done:** each developer can start from their own README without reading the other's, can deploy from their own deployment guide, and knows which tests they must write before coding.
 
 ## Phase 4 — Prototype
 
-Everything in this phase is detailed in [`PROTOTYPE.md`](PROTOTYPE.md).
+Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 
 ### 12. Scaffold
 
@@ -110,8 +110,8 @@ Everything in this phase is detailed in [`PROTOTYPE.md`](PROTOTYPE.md).
 
 ### 13. Design system and protection
 
-- **Output:** `PRODUCT.md`, `DESIGN.md` (tokens for light and dark, typography per language, components), the design rules file, the UI guard script, CODEOWNERS on the design files.
-- **Done:** the guard fails the build on every banned pattern.
+- **Output:** `PRODUCT.md`, `DESIGN.md` (tokens for light and dark, typography per language, components), the design rules file, the UI guard script, CODEOWNERS on the design files, plus `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`, and empty `project-ui/DESIGN-ERRORS.md`.
+- **Done:** the guard fails the build on every banned pattern; craft checklists exist and are checklist-only (no competing design pack as authority).
 
 ### 14. The starter kit and the home page
 
@@ -121,7 +121,7 @@ Everything in this phase is detailed in [`PROTOTYPE.md`](PROTOTYPE.md).
 ### 15. Screens, area by area
 
 - **Order:** account → the core feature (the product's reason to exist) → its supporting screens → billing and settings → landing page → legal pages.
-- **Scope:** one actor at a time, production-complete for that actor ([`DELIVERY.md`](DELIVERY.md)); other actors and deferred screens stay out of the index. **There is no MVP delivery mode.**
+- **Scope:** one actor at a time, production-complete for that actor ([`02-DELIVERY.md`](02-DELIVERY.md)); other actors and deferred screens stay out of the index. **There is no MVP delivery mode.** Keep that actor’s `docs/actors/.../screens.md` and `flow.md` current with the prototype index.
 - **Each screen:** every state reachable through `?state=` (see the state checklist in PROTOTYPE.md), production-level copy with no "prototype" labels, realistic fictional data, both languages, both themes, phone width — millimetre-accurate to what ships.
 - **Done:** the tests prove every screen is in a flow and the README, and every state belongs to a screen.
 
@@ -133,8 +133,8 @@ Everything in this phase is detailed in [`PROTOTYPE.md`](PROTOTYPE.md).
 
 ### 17. Quality pass
 
-- Accessibility (WCAG 2.2 AA; `npm run crawl` with axe on every screen and state, both languages and themes), responsive at 320px, long content, RTL and LTR alignment, spelling in every language, fonts, colors, button states (hover, pressed, current), touch targets of 44px, purposeful motion that respects reduced motion, SEO per `docs/SEO.md` (public pages indexed with title/description/canonical/hreflang/robots/sitemap/honest JSON-LD; private ones not), Lighthouse.
-- **Done:** the crawl reports only intentional problems; Lighthouse accessibility is 100 on every screen; landing SEO category is clean on a production-like build.
+- Accessibility (WCAG 2.2 AA; `npm run crawl` with axe on every screen and state, both languages and themes), responsive at 320px, long content, RTL and LTR alignment, spelling in every language, fonts, colors, button states (hover, pressed, current), touch targets of 44px, purposeful motion that respects reduced motion, SEO per `docs/SEO.md` (public pages indexed with title/description/canonical/hreflang/robots/sitemap/honest JSON-LD; private ones not), Lighthouse. Tick `project-ui/PRE-DELIVERY-UX.md` and skim `ANTI-SLOP.md` before calling a screen done.
+- **Done:** the crawl reports only intentional problems; Lighthouse accessibility is 100 on every screen; landing SEO category is clean on a production-like build; owner-reported visual defects are fixed and logged in `DESIGN-ERRORS.md`.
 
 ## Phase 5 — Ongoing
 
@@ -145,7 +145,7 @@ Everything in this phase is detailed in [`PROTOTYPE.md`](PROTOTYPE.md).
 
 ### 19. Regular audits
 
-Run these after every large batch of work (prompts in [`PROMPTS.md`](PROMPTS.md#audits)):
+Run these after every large batch of work (prompts in [`05-PROMPTS.md`](PROMPTS.md#audits)):
 
 - Consistency: every derived document against `requirements.md`.
 - Versions: every version against its official site.
@@ -159,10 +159,10 @@ Run these after every large batch of work (prompts in [`PROMPTS.md`](PROMPTS.md#
 
 ### 21. Hand over between chats
 
-- Before a chat gets long, ask for a handoff (template in [`PROMPTS.md`](PROMPTS.md#handoff-before-a-new-chat)) and start the next chat with it, then have the agent read the repository.
+- Before a chat gets long, ask for a handoff (template in [`05-PROMPTS.md`](PROMPTS.md#handoff-before-a-new-chat)) and start the next chat with it, then have the agent read the repository.
 
 ### 22. Hand over to implementation
 
-- **Output:** separate implementation repositories that read this one as their reference; a `docs/features/requirements-map.md` (and feature files) produced by the decomposition in [`FEATURE_SDLC.md`](FEATURE_SDLC.md); Spec Kit (or the chosen method) initialized with a constitution that cites planning rules by ID; optional Jira import from the planning repo’s `docs/jira/<actor>/` CSV pack (MasarHub job seeker: `docs/jira/job-seeker/`, D-46) for Epics → separate FE/BE Stories and sprint slicing — Jira remains a tracker, not the requirements SoT.
+- **Output:** separate implementation repositories that read this one as their reference; a `docs/features/requirements-map.md` (and feature files) produced by the decomposition in [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md); Spec Kit (or the chosen method) initialized with a constitution that cites planning rules by ID; optional Jira import from the planning repo’s `docs/jira/<actor>/` CSV pack (MasarHub job seeker: `docs/jira/job-seeker/`, D-46) for Epics → separate FE/BE Stories and sprint slicing — Jira remains a tracker, not the requirements SoT.
 - **How:** when every PRD feature meets the Definition of Ready (PRD §9), decompose the SRS into independently verifiable features once, then build each feature with an engineering profile (Lightweight / Standard / Comprehensive) matched to its risk. Keep planning docs as the single source of truth; feature files hold evidence and status, not a second copy of the SRS. Definition of Done, production release, and business-outcome validation stay separate milestones.
 - **Done:** every SRS requirement is mapped or explicitly unresolved; each developer can start a feature from the map, the API contract, and their Definition of Done without inventing scope.

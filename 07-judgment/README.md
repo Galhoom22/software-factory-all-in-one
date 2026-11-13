@@ -1,0 +1,24 @@
+# 07 — Judgment only (absorb outside methods)
+
+When a useful external method appears (Spec Kit, enterprise design courses, engineering-agent kits, design-skill packs), **do not** install it as a second source of truth inside the planning repository.
+
+## Rule
+
+1. **Map** the useful ideas onto documents you already keep (`requirements.md`, BRD/PRD/SRS, `docs/API_CONTRACT.md`, ADRs / `DECISIONS.md`, actor UI packs, CI).
+2. **Write** a short judgment note (this folder or `docs/JUDGMENT.md` in the product repo) that names what was adopted and what is forbidden.
+3. **Converge** at the end of a slice: fix drift in the canonical file; do not add a parallel `specs/` or `constitution.md` tree.
+4. Upstream material stays **human reading only** unless the owner explicitly names that tool as the process for a **new implementation** repository.
+
+## Adopt vs forbid (default)
+
+| Adopt | Forbid |
+|-------|--------|
+| Explore cheaply before expensive build | Vendoring a full course or agent kit as AGENTS |
+| Clarify only load-bearing unknowns in one batch | `specify init` / second constitution in planning |
+| Verify before claiming done (observation > hope) | Design-system generators that override `DESIGN.md` |
+| Six boundary questions on consequential writes | Microservices / cloud labs that fight the chosen architecture |
+| Converge checklist after a docs/UI pass | Installing competing UI “taste” packs as always-on authority |
+
+Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
+
+Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.

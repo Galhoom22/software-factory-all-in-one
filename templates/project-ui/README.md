@@ -1,6 +1,6 @@
 # project-ui — Prototype
 
-A non-functional prototype of {{PRODUCT}}, built with **{{FRONTEND}}** (the production frontend stack), or an API explorer for a backend-only product. Its only purpose is to see and click through the product from [`requirements.md`](../requirements.md) before implementation starts. How to build it: `playbook/PROTOTYPE.md`.
+A non-functional prototype of {{PRODUCT}}, built with **{{FRONTEND}}** (the production frontend stack), or an API explorer for a backend-only product. Its only purpose is to see and click through the product from [`requirements.md`](../requirements.md) before implementation starts. How to build it: `playbook/03-PROTOTYPE.md`.
 
 **Owner:** the frontend developer (see [`docs/frontend/README.md`](../docs/frontend/README.md)).
 
@@ -28,6 +28,8 @@ npm run dev
 | Unit tests | `npm test` | Flows that miss a screen, a Screen Index below that misses a screen, broken traceability, broken Markdown links. |
 | Dependency audit | `npm audit --omit=dev --audit-level=high` | Known vulnerabilities. |
 | Lint and types | `npm run lint`, `npm run build` | Code and type errors. |
+
+Before calling a screen done: tick `PRE-DELIVERY-UX.md`, skim `ANTI-SLOP.md`, and keep `DESIGN-ERRORS.md` current when the owner reports a visual defect.
 
 After a batch of screens, run the crawl on a production build (`npm run build`, `npx next start -p 3100`, then `npm run crawl -- http://localhost:3100`): axe, overflow, unnamed controls, broken anchors, wrong language or direction, console errors, and link status on every screen and state, in every language and theme.
 

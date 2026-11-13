@@ -33,6 +33,16 @@ When adding a new harness: add a thin pointer that points here; do not fork a se
 
 - Always reply to the user in **{{REPLY_LANGUAGE}}**, whatever language the user writes in.
 
+## Professionalism bar
+
+- Every pass must leave the repository **measurably more professional** than before: fix defects found on the way (and log them), leave a guard or check when a contract changed, delete dead weight you uncover, verify every interface language and text direction that the change touches, and report concretely what improved. A pass that only adds without improving quality is incomplete.
+
+## Borrowing from outside
+
+- Log every external borrow in [`docs/REFERENCES.md`](docs/REFERENCES.md) in the same commit (taken / rejected / where it landed). Read that register before a new borrowing pass.
+- Scope bans live in [`docs/SCOPE_REJECTIONS.md`](docs/SCOPE_REJECTIONS.md) as stable `REJ-xx` IDs.
+- Absorb outside methods as judgment only ([`docs/JUDGMENT.md`](docs/JUDGMENT.md) / playbook `07-judgment/`) — never install a second constitution or competing design authority.
+
 ## Efficiency (ponytail)
 
 Lazy means efficient, not careless. Before writing anything new: skip if unneeded, reuse what exists, prefer stdlib / platform / installed deps, prefer one clear line over a new abstraction, then write the minimum that works. No unrequested abstractions or dependencies. Shortest **correct** diff after you understand the real flow. Never lazy about security, accessibility, or what the user explicitly asked for.
@@ -57,7 +67,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
 - [`docs/SEO.md`](docs/SEO.md) and [`docs/frontend/SEO.md`](docs/frontend/SEO.md) define launch search readiness: index public marketing and legal only; keep the signed-in app `noindex`; bilingual metadata, robots/sitemap, honest structured data — never fake authority.
 - **Official references only:** versions and documentation links live in [SRS §2](docs/SRS.md#2-technology-stack). Use the latest **stable / Active LTS** of each listed line (not RCs). Verify on the official site before changing a version. Pin CI tools (Node, `impeccable@x.y.z`) to the same lines.
 - [`notes.md`](notes.md) holds ideas, not requirements. An idea enters `requirements.md` only when the user decides it, and leaves `notes.md` once it is built.
-- `playbook/` holds the reusable method behind this repository. When a change creates a practice worth repeating in the next product (a document, a check, a rule, a lesson), update the playbook in the same commit, keeping it generic. `playbook/FEATURE_SDLC.md` is for **implementation** repositories (feature decomposition and adaptive depth); do not create `docs/features/` in the planning repository.
+- `playbook/` holds the reusable method behind this repository. When a change creates a practice worth repeating in the next product (a document, a check, a rule, a lesson), update the playbook in the same commit, keeping it generic. `playbook/04-FEATURE_SDLC.md` is for **implementation** repositories (feature decomposition and adaptive depth); do not create `docs/features/` in the planning repository.
 
 ## Git Safety (Mandatory)
 
@@ -85,8 +95,9 @@ For every AI agent and every change, large or small:
 In the same commit as every change:
 
 1. Search the repository for the feature, screen ID, route, number, or term that changed, and update every document that mentions it.
-2. For prototype work, also update the screen index, the user flows, and the Screen Index paragraph in `project-ui/README.md`; `npm test` fails if one is missing.
-3. Fix any outdated statement you notice, or tell the user if it needs their decision.
+2. For prototype work, also update the screen index, the user flows, the Screen Index paragraph in `project-ui/README.md`, and the current actor’s `docs/actors/.../screens.md` / `flow.md`; `npm test` fails if a prototype index entry is missing.
+3. Owner-reported UI defects: fix in the same turn and append `project-ui/DESIGN-ERRORS.md`. Non-obvious engineering lessons go under `docs/learning-from-mistakes/`.
+4. Fix any outdated statement you notice, or tell the user if it needs their decision.
 4. Reread every summary line that counts or lists things and correct it.
 
 ## Protecting the Requirements

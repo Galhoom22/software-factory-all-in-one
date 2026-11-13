@@ -16,7 +16,7 @@
 2. Prefer unit/component tests; keep E2E to a short critical list.
 3. Mock the API on every PR; full-stack smoke is staging/release.
 4. Accessibility is a gate (axe on critical journeys).
-5. Depth follows `playbook/FEATURE_SDLC.md` profiles — not coverage %.
+5. Depth follows `playbook/04-FEATURE_SDLC.md` profiles — not coverage %.
 
 ## 2. Tooling
 

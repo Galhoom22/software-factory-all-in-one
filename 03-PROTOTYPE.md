@@ -9,7 +9,7 @@ The prototype lives in `project-ui/` inside the planning repository. It is the *
 - **No real system.** No backend, database, real auth, real AI, analytics, trackers, or storing user input (cookies only for UI preferences such as the theme).
 - **Fictional but realistic data.** Invented people and companies, emails and links on reserved `example` domains, never real names (not even the team's). Enough items to exercise lists, long and short values, concrete numbers and dates, and native content in every interface language, never `Lorem ipsum` or `Test`.
 - **Mocks follow the contract.** All mock data lives in `src/mocks/`, shaped exactly like `docs/API_CONTRACT.md` §3.
-- **One actor, production-complete ([`DELIVERY.md`](DELIVERY.md)).** **There is no MVP delivery mode.** Only screens for the actor in focus, finished millimetre-accurate to production. Other actors and deferred features stay out of the index until their turn.
+- **One actor, production-complete ([`02-DELIVERY.md`](02-DELIVERY.md)).** **There is no MVP delivery mode.** Only screens for the actor in focus, finished millimetre-accurate to production. Other actors and deferred features stay out of the index until their turn.
 - **Guarded in CI.** Tests and a guard script fail the build when a rule is broken. Never weaken a gate to make a change pass.
 
 ## Track A — Product With a Frontend
@@ -32,7 +32,7 @@ Install design skills with **one role each**, and write the precedence in the ru
 | Taste skill (minimalist-ui, redesign-existing-projects) | Visual direction and an audit checklist for generic patterns. |
 | UI UX Pro Max | One-time research (palette, type, UX rules), merged into `DESIGN.md`, never kept separately. |
 
-Pin the Impeccable version in CI (and prefer the same pin locally). Vendor design skills in `.cursor/skills/` with their licenses in `THIRD_PARTY_NOTICES.md`, and mark `.cursor/**` as `linguist-vendored`. When a new skill or guideline site comes up, take only the rules that fill a real gap and put them in the rules file; do not install every skill. Motion/taste packs (for example Emil Kowalski's animation skills) may stay **global** on the machine: distill frequency/purpose/easing gates into the product Motion rule, keep CSS-only constraints, and never vendor skills that push animation libraries the product forbids. A false positive from `impeccable detect` (for example a deliberately chosen font) goes in `.impeccable/config.json` with a reason.
+Pin the Impeccable version in CI (and prefer the same pin locally). Vendor design skills in `.cursor/skills/` with their licenses in `THIRD_PARTY_NOTICES.md`, and mark `.cursor/**` as `linguist-vendored`. When a new skill or guideline site comes up, take only the rules that fill a real gap and put them in the rules file; do not install every skill. Distill UX/anti-slop rules into `PRE-DELIVERY-UX.md` and `ANTI-SLOP.md` (**checklist only** — never let an external pack override `DESIGN.md`). Keep a living `DESIGN-ERRORS.md`: fix owner-reported visual defects in the same turn, then append. Motion/taste packs (for example Emil Kowalski's animation skills) may stay **global** on the machine: distill frequency/purpose/easing gates into the product Motion rule, keep CSS-only constraints, and never vendor skills that push animation libraries the product forbids. A false positive from `impeccable detect` (for example a deliberately chosen font) goes in `.impeccable/config.json` with a reason.
 
 ### Starter Kit
 

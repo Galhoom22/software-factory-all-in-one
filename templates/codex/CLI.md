@@ -34,7 +34,7 @@ Optional non-interactive:
 codex exec "Read docs/AGENT_START.md and AGENTS.md, then reply only ok"
 ```
 
-Paste the Codex prompt from `playbook/PROMPTS.md` if you want an explicit start line.
+Paste the Codex prompt from `playbook/05-PROMPTS.md` if you want an explicit start line.
 
 ## What the CLI loads (when trusted)
 

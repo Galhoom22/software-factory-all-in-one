@@ -49,7 +49,7 @@
 - [ ] Tests match [TESTING.md](TESTING.md).
 - [ ] Lint, type check, and tests pass in CI.
 - [ ] Staging smoke against the real API once before release (see TESTING.md).
-- [ ] Engineering depth matches the feature's risk profile in `playbook/FEATURE_SDLC.md`; completion cites verification evidence. Definition of Done, release, and outcome validation stay separate.
+- [ ] Engineering depth matches the feature's risk profile in `playbook/04-FEATURE_SDLC.md`; completion cites verification evidence. Definition of Done, release, and outcome validation stay separate.
 
 ## 6. Working With the Backend Developer
 

@@ -8,7 +8,7 @@ How to turn an approved planning repository into small, independently verifiable
 
 **Principle:** Maximum justified quality. Minimum unnecessary complexity. Evidence-based completion.
 
-**Actor sequencing ([`DELIVERY.md`](DELIVERY.md)):** **There is no MVP delivery mode.** When planning and prototype work is underway, finish one actor to production-ready completeness (millimetre-accurate screens), implement that actor, then return to planning for the next. Deferred lists are sequencing only — never an incomplete current actor.
+**Actor sequencing ([`02-DELIVERY.md`](02-DELIVERY.md)):** **There is no MVP delivery mode.** When planning and prototype work is underway, finish one actor to production-ready completeness (millimetre-accurate screens), implement that actor, then return to planning for the next. Deferred lists are sequencing only — never an incomplete current actor.
 
 ## When to Use This
 

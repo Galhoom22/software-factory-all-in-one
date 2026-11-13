@@ -36,7 +36,7 @@ In every new planning repository:
 
 ## Related
 
-- [`STEPS.md`](STEPS.md) — when to design screens vs implement
-- [`PROTOTYPE.md`](PROTOTYPE.md) — prototype fidelity
-- [`FEATURE_SDLC.md`](FEATURE_SDLC.md) — implementation repos after planning is ready for an actor
-- [`LESSONS.md`](LESSONS.md) — do not reopen incomplete-actor mistakes
+- [`01-STEPS.md`](01-STEPS.md) — when to design screens vs implement
+- [`03-PROTOTYPE.md`](03-PROTOTYPE.md) — prototype fidelity
+- [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) — implementation repos after planning is ready for an actor
+- [`06-LESSONS.md`](06-LESSONS.md) — do not reopen incomplete-actor mistakes

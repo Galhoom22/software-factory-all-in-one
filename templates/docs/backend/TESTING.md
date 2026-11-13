@@ -16,7 +16,7 @@
 2. Feature (HTTP) tests are the default; unit tests for pure domain math.
 3. Fake external providers (AI, payments, mail) in CI.
 4. Coverage % is a signal, not a merge goal.
-5. Depth follows `playbook/FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
+5. Depth follows `playbook/04-FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
 
 ## 2. Tooling
 

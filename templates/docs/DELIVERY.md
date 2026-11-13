@@ -3,7 +3,7 @@
 **Status:** Mandatory.  
 **Audience:** every human and AI agent in this planning repository.
 
-Copy and adapt from the playbook’s [`DELIVERY.md`](../../DELIVERY.md). Keep the hard rules below.
+Copy and adapt from the playbook’s [`02-DELIVERY.md`](../../DELIVERY.md). Keep the hard rules below.
 
 ## 1. There is no MVP delivery mode
 
