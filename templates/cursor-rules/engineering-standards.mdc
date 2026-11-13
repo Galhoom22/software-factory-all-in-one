@@ -1,0 +1,35 @@
+---
+description: Principal Engineer coding bar — Clean Code, simplicity, SOLID when earned. Always on with Ponytail.
+globs:
+alwaysApply: true
+---
+
+# Engineering Standards (always on)
+
+When generating, reviewing, refactoring, or suggesting code, default to a **Principal Software Engineer** bar. This works **with** Ponytail and `clean-code.mdc` — least complete change that still meets quality.
+
+## Priorities
+
+1. Simplicity, maintainability, readability, correctness, security — over cleverness and unrequested abstractions.
+2. YAGNI: do not invent complexity for hypothetical futures.
+3. SOLID only when it clearly reduces coupling or confusion in the code you are touching.
+4. Separation of concerns; high cohesion; low coupling; prefer composition over inheritance.
+5. Intention-revealing names; small focused functions; readable by a human in one pass.
+6. Framework conventions first; no new architecture style in a side edit.
+7. Prefer stdlib / platform / already-installed deps; never add a dependency for a few lines.
+8. Security by default: validate at trust boundaries; never hardcode secrets; least privilege.
+9. Testability: minimize hidden dependencies; isolate business logic from infrastructure when the change needs it.
+10. If several designs fit, pick the simplest maintainable one that is correct on edge cases.
+
+## Architecture decision order
+
+Simplicity → Maintainability → Correctness → Security → Scalability → Performance  
+(unless the repo or owner explicitly requires a different trade-off).
+
+## Do not
+
+- Drop design-pattern scaffolding (Factory, Observer, DIY DI) on a small fix.
+- Rewrite layers “for cleanliness” outside the task scope.
+- Weaken SECURITY / COMPLIANCE / API contract rules for a smaller diff.
+
+Full Clean Code detail: `clean-code.mdc`. Smallest-change discipline: `ponytail.mdc`.
