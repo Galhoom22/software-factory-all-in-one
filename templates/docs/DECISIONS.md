@@ -40,5 +40,5 @@ This log records **why** each lasting product or technical decision was made. Th
 - **Context:** “Ship an MVP subset first” caused incomplete current-actor screens, pricing gaps, and rework when those choices later became permanent.
 - **Decision:** There is no MVP delivery mode. Deliver one **actor** at a time to production quality: plan here → prototype millimetre-accurate → implement in FE/BE → return for the next actor. Deferred lists are sequencing only.
 - **Consequences:** ✅ Agents and CI cannot excuse stubs for the actor in focus. ✅ Production rules (billing periods, languages, empty states) are decided once. ❌ Other actors wait their turn even when tempting to sketch early.
-- **Details:** [`02-DELIVERY.md`](02-DELIVERY.md), `AGENTS.md`, `scripts/check-delivery.mjs`.
+- **Details:** [`02-DELIVERY.md`](DELIVERY.md), `AGENTS.md`, `scripts/check-delivery.mjs`.
 

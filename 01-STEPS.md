@@ -19,7 +19,7 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 ### 0.3 Create the repository and the workspace
 
 - **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the studio’s private playbook mirror when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
-- **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`03-PROTOTYPE.md`](PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
+- **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`03-PROTOTYPE.md`](03-PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
 - **Done:** the first commit (templates copied) is pushed.
 
 ## Phase 1 — Foundation
@@ -145,7 +145,7 @@ Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 
 ### 19. Regular audits
 
-Run these after every large batch of work (prompts in [`05-PROMPTS.md`](PROMPTS.md#audits)):
+Run these after every large batch of work (prompts in [`05-PROMPTS.md`](05-PROMPTS.md#audits)):
 
 - Consistency: every derived document against `requirements.md`.
 - Versions: every version against its official site.
@@ -159,7 +159,7 @@ Run these after every large batch of work (prompts in [`05-PROMPTS.md`](PROMPTS.
 
 ### 21. Hand over between chats
 
-- Before a chat gets long, ask for a handoff (template in [`05-PROMPTS.md`](PROMPTS.md#handoff-before-a-new-chat)) and start the next chat with it, then have the agent read the repository.
+- Before a chat gets long, ask for a handoff (template in [`05-PROMPTS.md`](05-PROMPTS.md#handoff-before-a-new-chat)) and start the next chat with it, then have the agent read the repository.
 
 ### 22. Hand over to implementation
 

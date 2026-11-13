@@ -8,7 +8,7 @@
 | Product | {{PRODUCT}} (current actor: {{CURRENT_ACTOR}}) |
 | Status | Draft |
 | Source of truth | [`requirements.md`](../requirements.md) |
-| Related | [`BRD.md`](BRD.md), [`PRD.md`](PRD.md), [`02-DELIVERY.md`](02-DELIVERY.md) |
+| Related | [`BRD.md`](BRD.md), [`PRD.md`](PRD.md), [`02-DELIVERY.md`](DELIVERY.md) |
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### 1.1 Purpose
 
-This document specifies **how** the **current actor** ({{CURRENT_ACTOR}}) must behave technically at production quality ([`02-DELIVERY.md`](02-DELIVERY.md)): architecture, functional and non-functional requirements, data model, and API outline. There is no MVP delivery mode.
+This document specifies **how** the **current actor** ({{CURRENT_ACTOR}}) must behave technically at production quality ([`02-DELIVERY.md`](DELIVERY.md)): architecture, functional and non-functional requirements, data model, and API outline. There is no MVP delivery mode.
 
 ### 1.2 Definitions
 
