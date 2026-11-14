@@ -1,6 +1,6 @@
 # CodeRabbit — Review Setup
 
-> ⚠️ **Planning only.** Copy the owner yaml and guidelines into each **implementation** repository when you subscribe.
+> ⚠️ **Planning only.** Copy the owner yaml and guidelines into each **implementation** repository. Default to the **Free** plan until the owner explicitly pays.
 
 > Product: [CodeRabbit](https://www.coderabbit.ai/). Docs: [configuration reference](https://docs.coderabbit.ai/reference/configuration) · [path instructions](https://docs.coderabbit.ai/configuration/path-instructions) · [code guidelines](https://docs.coderabbit.ai/knowledge-base/code-guidelines).
 
@@ -31,13 +31,14 @@ Closeout: **must-finish 100% → PR → CodeRabbit (Free: CLI/IDE + summary; pai
 | **GitHub App** | PR summary; keep repos connected | Full PR review gate |
 | **Web** | Connect org + repos + yaml | Same |
 
-## 2. Install checklist
+## 2. Free-plan install checklist (default)
 
-1. Subscribe and install the GitHub App on both implementation repos.
-2. Commit `.coderabbit.yaml` and `CODERABBIT_GUIDELINES.md`.
-3. Open a small PR and confirm a review posts.
-4. Tune profile (`assertive` → `chill`) if comments are too noisy.
-5. Never put real personal data in branches the bot reviews.
+1. Stay on **Free** — do not start paid trials, usage-based reviews, Deep Scan, or Agent unless the owner asks.
+2. Create a CodeRabbit account (GitHub login). Connect the product org and install the GitHub App on both implementation repos (enables **PR summarization** on Free).
+3. Commit `.coderabbit.yaml` and `CODERABBIT_GUIDELINES.md` (+ `AGENTS.md`) in each implementation repo.
+4. Install/auth the **CLI** (`coderabbit auth login`) and optionally the Cursor/VS Code extension — this is the **full-review merge gate** on Free (3 IDE + 3 CLI reviews/dev/hour).
+5. Smoke: on a day branch run `coderabbit review` (or IDE review); open a small PR and confirm a **summary** posts on GitHub.
+6. Never put real personal data in branches CodeRabbit sees.
 
 ## 3. Non-negotiable review themes
 
