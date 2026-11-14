@@ -109,9 +109,19 @@ Use with [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md). One fresh chat 
 
 ### End-of-day reply shape (agent — after closeout)
 
+**Pareto 20%** = pick the most important topics (not a full diary). For each topic, write a **full teachable explanation** the owner can paste into ChatGPT to learn — not a terse stub. Put operational facts in the handoff half.
+
 ```markdown
-## Pareto 20%
-- <highest-leverage facts: what shipped, SHAs/links, risks>
+## Pareto 20% (teachable depth)
+
+### <Topic 1 — e.g. feature / concept name>
+- What shipped and why it matters
+- Key terms and concepts (define them)
+- How the pieces fit (modules, flows, decisions/trade-offs)
+- Proof (tests, SHAs, links) and what to study next
+
+### <Topic 2 — …>
+- …
 
 ## New-chat handoff (paste into tomorrow’s chat)
 

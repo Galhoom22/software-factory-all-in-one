@@ -19,7 +19,7 @@ Closeout (automatic, same session):
   → day checklist page (checked + day finished + day summary)
         ↓
 Final chat reply only:
-  1) Pareto 20%   2) New-chat handoff
+  1) Pareto 20% (teachable depth)   2) New-chat handoff
 ```
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
@@ -57,10 +57,16 @@ Never mark tracker or checklist finished before post-merge verification succeeds
 
 After closeout, the agent’s last message has **exactly two parts**, in order:
 
-1. **Pareto 20%** — the few highest-leverage facts (what shipped, SHAs/links that matter, risks). No play-by-play.
-2. **New-chat handoff** — one copy-paste block for tomorrow’s fresh chat: paths, SHAs, issue keys, tomorrow must-finish, do-not-break rails.
+1. **Pareto 20% (teachable depth)** — select the **most important** outcomes of the day (not every commit log). For **each** selected topic, write a **full, thorough explanation** the owner can paste into ChatGPT (or similar) to learn: what was built, why it matters, the key terms and concepts, how the pieces fit, decisions and trade-offs, and what to study next. **“20%” means topic selection (highest leverage only), not ultra-short stubs.** Skimping on depth defeats the purpose — the owner uses this block to grow as an engineer.
+2. **New-chat handoff** — one copy-paste block for tomorrow’s fresh chat: paths, SHAs, issue keys, tomorrow must-finish, do-not-break rails. Keep the handoff operational and tight; put teaching depth in the Pareto half.
 
-Emit the handoff automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPTS.md`](05-PROMPTS.md#implementation-day-start-and-end).
+Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPTS.md`](05-PROMPTS.md#implementation-day-start-and-end).
+
+## Pareto 20% — what it means
+
+- **Select** the few highest-leverage outcomes of the day (features, concepts, decisions). Do not narrate every commit or mid-day detour.
+- **Explain each selected topic thoroughly** — enough that the owner can copy the Pareto half into ChatGPT (or similar) and learn: vocabulary, how the system works, why choices were made, and what to study next.
+- **“20%” is topic selection, not brevity.** Ultra-short stubs fail this requirement. Teaching depth belongs here; the handoff stays operational and tight.
 
 ## Owner standing ↔ playbook mirror
 
