@@ -21,13 +21,15 @@ Keep `AGENTS.md` in each implementation repo (CodeRabbit loads it by default).
 
 ### Where it sits in the day pipeline
 
-Closeout order (implementation days): **must-finish 100% → PR → CodeRabbit GitHub review (fix blocking) → merge → verify on default branch → tracker → day page**.
+Default **Free** plan: full reviews via **CLI/IDE**; GitHub PRs get **summarization** only ([plans](https://docs.coderabbit.ai/management/plans)). Do not enable paid trials or usage products unless the owner asks.
 
-| Surface | Role |
-|---------|------|
-| **GitHub App** (automatic on PRs) | **Primary.** Merge gate for `main`. |
-| **Web wizard / settings** | Configure profile (assertive), path filters, PR summary — not the daily review step. |
-| **Cursor extension / CLI** | Optional local pre-check before opening the PR — never replaces the GitHub review. |
+Closeout: **must-finish 100% → PR → CodeRabbit (Free: CLI/IDE + summary; paid: GitHub review) → merge → verify → tracker → day page**.
+
+| Surface | Free | Paid later |
+|---------|------|------------|
+| **CLI / IDE** | Primary merge gate | Optional early |
+| **GitHub App** | PR summary; keep repos connected | Full PR review gate |
+| **Web** | Connect org + repos + yaml | Same |
 
 ## 2. Install checklist
 
