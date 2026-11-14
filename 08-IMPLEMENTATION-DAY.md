@@ -14,7 +14,8 @@ Agent: run through the whole day’s must-finish list (no mid-day pause)
 Proof: tests / acceptance evidence for every checkbox
         ↓
 Closeout (automatic, same session):
-  PR → merge to default branch → verify on that commit
+  PR → CodeRabbit review (fix blocking findings) → merge to default branch
+  → verify on that commit
   → issue tracker (Done, or progress comment if the Story continues)
   → day checklist page (checked + day finished + day summary)
         ↓
@@ -46,12 +47,20 @@ State the blocker once, then stop. Do not weaken rails to keep moving.
 When must-finish is truly 100%:
 
 1. **PR** — one PR for the day’s finished work (Conventional Commits; no secrets / no real PII).
-2. **Merge** into the default branch in the same session.
-3. **Verify** on that merge commit (re-run the day’s proof checks). If verify fails: stop — do not mark tracker/checklist Done; fix first.
-4. **Issue tracker** — mark Done only when the Story’s acceptance is fully met; otherwise leave In Progress with a progress comment (Stories may span days).
-5. **Day page** — check off must-finish, mark day finished, fill finished / tomorrow / **full day summary**.
+2. **CodeRabbit (GitHub App)** — wait for the automatic PR review. Fix **blocking** findings (security, correctness, contract/policy) on the PR branch and re-request review if needed. Do **not** merge while unresolved blocking findings remain. Cursor/CLI CodeRabbit is optional earlier in the day for a local pre-check; the **merge gate** is the GitHub review on this PR.
+3. **Merge** into the default branch in the same session.
+4. **Verify** on that merge commit (re-run the day’s proof checks). If verify fails: stop — do not mark tracker/checklist Done; fix first.
+5. **Issue tracker** — mark Done only when the Story’s acceptance is fully met; otherwise leave In Progress with a progress comment (Stories may span days).
+6. **Day page** — check off must-finish, mark day finished, fill finished / tomorrow / **full day summary**.
 
 Never mark tracker or checklist finished before post-merge verification succeeds. Never wait for the owner to ask for closeout.
+
+## CodeRabbit in this pipeline
+
+- **Primary (required for `main` quality):** [CodeRabbit](https://www.coderabbit.ai/) **GitHub App** auto-reviews every end-of-day PR. That review sits **between PR and merge**.
+- **Config surface:** [CodeRabbit web wizard](https://app.coderabbit.ai/wizard) / org settings — profile (**assertive** at launch), path filters, PR summary. Not the day-to-day review step.
+- **Optional early:** Cursor extension or CodeRabbit CLI during coding for a local pass before opening the PR. Helpful; **not** a substitute for the GitHub PR review gate.
+- CodeRabbit does **not** replace CI tests, human judgment on auth/billing/AI/deletion, or SECURITY/COMPLIANCE red lines. Setup copyables: product `docs/CODERABBIT.md` (or playbook `templates/docs/CODERABBIT.md`).
 
 ## Final reply shape (mandatory)
 

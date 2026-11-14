@@ -31,7 +31,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 - When the owner says to work **today’s** tasks, finish the **whole** must-finish list without mid-day continue / “approve next slice” waits.
 - **Final reply after closeout:** (1) **Pareto 20% (teachable depth)** — most important topics only, each explained thoroughly so the owner can paste into ChatGPT and learn (terms, concepts, what shipped, why) — not ultra-short stubs; (2) **New-chat handoff** — copy-paste block for tomorrow. Emit both automatically.
-- **Closeout (automatic when 100%):** PR → merge → verify on default branch → issue tracker (Done or progress comment) → day checklist page + day summary.
+- **Closeout (automatic when 100%):** PR → **CodeRabbit GitHub review** (fix blocking findings) → merge → verify on default branch → issue tracker (Done or progress comment) → day checklist page + day summary. Cursor/CLI CodeRabbit optional mid-day; merge gate = GitHub PR review.
 - Pause only for real blockers (security/compliance/product/spend decisions, interactive approvals, unfixable hard stops).
 
 ## Git and remotes
