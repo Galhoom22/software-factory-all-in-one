@@ -45,6 +45,8 @@ Each lesson comes from real rework in MasarHub (146 commits over three long chat
 - **Do not half-patch a calendar.** Replacing only end dates while leaving S2–S6 rows (or old capacity math) produces fake windows like identical start/end per sprint. Rewrite the sprint table and Story map; remapping labels to a single sprint means every Story’s schedule and implementation-repo `docs/JIRA.md` move together.
 - **Same-session mirror to implementation repos.** When the planning calendar moves, update FE/BE `docs/JIRA.md` (binding side, capacity, Story→sprint map) in the same session as Jira Start/Due and Schedule bodies.
 - **Board cards are separate FE/BE Stories**, not one shared umbrella with nested Sub-tasks for both owners. Assignee filters must show only that person’s work.
+- **Day run-through beats mid-day continue cues.** For implementation days, the owner starts once; the agent finishes the whole must-finish list, closeout, then Pareto 20% + handoff. Mid-day “approve the next slice” gates burn context and break the pipeline — see [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md).
+- **Standing changes update the playbook twice.** Lasting owner↔agent cadence belongs in product `OWNER_STANDING.md` **and** in this playbook (generic) + studio playbook mirror same session — otherwise the next product forgets the pipeline.
 - **Daily checklist ↔ tracker.** If the team keeps a daily must-finish page (Notion or similar), use separate FE/BE lanes, link each day to the matching issue keys, treat the tracker as status SoT, and refresh day→issue links whenever the calendar map moves — same session as the rebaseline.
 
 ## Design

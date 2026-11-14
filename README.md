@@ -18,6 +18,7 @@ playbook/
   05-PROMPTS.md             Ready agent prompts + audits
   06-LESSONS.md             Planning-process lessons
   07-judgment/              Absorb outside methods as judgment only
+  08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline (run-through → closeout → Pareto + handoff)
   templates/                Skeleton of a new planning repository
 ```
 
@@ -35,9 +36,10 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`02-DELIVERY.md`](02-DELIVERY.md) | **Mandatory:** actor-loop delivery; there is no MVP mode. Wire CI and AGENTS so agents cannot forget. |
 | [`03-PROTOTYPE.md`](03-PROTOTYPE.md) | How to build the prototype: a clickable UI in the exact production frontend stack, or an API explorer with mock responses for a backend-only product. |
 | [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) | Adaptive feature-level delivery for the **implementation** repositories: decompose the SRS once, match engineering depth to risk, require evidence for completion. |
-| [`05-PROMPTS.md`](05-PROMPTS.md) | Ready prompts for the agent at each step, the regular audits, and the handoff before a new chat. |
+| [`05-PROMPTS.md`](05-PROMPTS.md) | Ready prompts for the agent at each step, the regular audits, planning handoffs, and **implementation day** start/end prompts. |
 | [`06-LESSONS.md`](06-LESSONS.md) | Mistakes already made and how to avoid them. |
 | [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / ATLAS-style methods as **judgment only** — map onto existing docs; never install a second constitution. |
+| [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → automatic closeout → Pareto 20% + new-chat handoff; standing ↔ playbook mirror. |
 | [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository. |
 
 **Reference implementation:** a completed Code Hunters Studio product planning repository (e.g. MasarHub planning) once it lives under this org — until then, use the working planning repo that produced this playbook. When the playbook says "copy" a prototype piece (the starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, the tests), take it from MasarHub's `project-ui/` and adapt names and routes.

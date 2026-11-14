@@ -98,3 +98,29 @@ A good handoff has these sections:
 ```
 
 Then start the new chat with the handoff, followed by the "read the repository" prompt above.
+
+## Implementation Day Start and End
+
+Use with [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md). One fresh chat per calendar day in the FE/BE repo.
+
+### Start the day
+
+> Start today’s tasks. Work the whole must-finish list for this calendar day end-to-end (day run-through). Do not pause for mid-day continue cues. When every checkbox is proven, run automatic closeout, then reply with Pareto 20% and the new-chat handoff only.
+
+### End-of-day reply shape (agent — after closeout)
+
+```markdown
+## Pareto 20%
+- <highest-leverage facts: what shipped, SHAs/links, risks>
+
+## New-chat handoff (paste into tomorrow’s chat)
+
+    <product> Day N+1 — start today’s tasks (day run-through).
+
+    Paths / SHAs / tracker keys / yesterday shipped (do not redo)
+    Must finish today
+    Do not break
+```
+
+Planning-repo handoffs (long planning chats) still use the section above; implementation days use this shape.
+

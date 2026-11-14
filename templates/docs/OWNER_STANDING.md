@@ -11,6 +11,7 @@
 3. Prefer editing an existing section over duplicating.
 4. Date the change in the **Changelog** below.
 5. Keep tool-specific boards (e.g. Jira) in their own standing file; point to them from here.
+6. If the preference is a **reusable method** (day loop, closeout order, final reply shape, remotes mirror), also update the product’s `playbook/` copy in generic wording (especially `playbook/08-IMPLEMENTATION-DAY.md` and this template) **and** sync any studio playbook GitHub mirror in the same session.
 
 ---
 
@@ -18,6 +19,20 @@
 
 - Always reply in **English**, even when the user writes in another language.
 - Be direct and concise.
+
+## Owner supervises; agent executes
+
+- The owner is the **supervisor**, not the hands-on executor (unless they choose otherwise).
+- The agent executes commands, code, checks, PRs/merges (when the day’s cadence allows), and tracker/checklist updates.
+
+### Day run-through (implementation FE/BE)
+
+Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.md`.
+
+- When the owner says to work **today’s** tasks, finish the **whole** must-finish list without mid-day continue / “approve next slice” waits.
+- **Final reply after closeout:** (1) **Pareto 20%** — highest-leverage facts only; (2) **New-chat handoff** — copy-paste block for tomorrow. Emit automatically.
+- **Closeout (automatic when 100%):** PR → merge → verify on default branch → issue tracker (Done or progress comment) → day checklist page + day summary.
+- Pause only for real blockers (security/compliance/product/spend decisions, interactive approvals, unfixable hard stops).
 
 ## Git and remotes
 
@@ -28,9 +43,10 @@
 
 - Link your delivery / actor-loop doc here.
 - Link your board standing rules here (if any).
+- Implementation day pipeline: `playbook/08-IMPLEMENTATION-DAY.md`.
 
 ## Changelog
 
 | Date (UTC) | Change |
 |------------|--------|
-| YYYY-MM-DD | Created ledger. |
+| YYYY-MM-DD | Created ledger; seeded day run-through + Pareto/handoff + playbook dual-update rule. |
