@@ -1,10 +1,10 @@
 # Lessons — What Went Wrong Once, So It Doesn't Again
 
-Each lesson comes from real rework in MasarHub (146 commits over three long chats). Add a line whenever a mistake costs time. Keep each lesson to the problem and the fix.
+Each lesson comes from real rework on a shipped planning product (many commits across long agent chats). Add a line whenever a mistake costs time. Keep each lesson to the problem and the fix — no product or personal names.
 
 ## Product and Scope
 
-- **Name the product before anything else.** MasarHub started as "AI Resume Tailor" and was renamed after dozens of screens; every document, screen, and mock email changed.
+- **Name the product before anything else.** One product started under a working title and was renamed after dozens of screens; every document, screen, and mock email changed.
 - **Write the full current-actor surface on day one.** Social sign-in (Google, LinkedIn, GitHub), sign-out, settings, data rights, billing, the empty-state ways to start, and "current job" dates were each added later and touched many documents. Requirements step 1 lists them. There is no MVP mode that excuses leaving them out.
 - **Design the returning user's path, not only the first visit.** A user who already has data must not be asked for it again; this was caught late.
 - **Emails are screens too.** Verification, reset, security notices, data export links, and renewal reminders were missing until a final completeness audit; design them in the screen index with the account screens, and give every emailed link a landing state (a download page, an expired link, a confirmation).
@@ -13,7 +13,7 @@ Each lesson comes from real rework in MasarHub (146 commits over three long chat
 
 ## Pricing and Payments
 
-- **Prices only in US dollars.** Fixed local-currency prices (for example 49 EGP) go stale when the exchange rate moves; convert at payment time instead.
+- **Prices only in US dollars.** Fixed local-currency prices go stale when the exchange rate moves; convert at payment time instead (or price only in a stable currency such as USD).
 - **Prices and periods changed several times** (including a mid commitment SKU, a doubling paid-plan ladder, a temporary drop of a period under MVP framing, then restoring the production catalog). Keep amounts and periods in one place (`requirements.md` §4) so each change is one edit plus links; record it in DECISIONS without rewriting older accepted entries.
 - **Show only the main payment methods.** A long list of wallets and gateways on the landing page looked cluttered; the full list belongs at checkout, by country.
 - **Undefined numbers stay labelled.** A value not decided yet (such as plan limits) is a clearly labelled sample in the prototype and "defined later" in the requirements.

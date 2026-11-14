@@ -1,8 +1,8 @@
 # Playbook — Planning Repository Template
 
-A reusable method for starting any new product the way MasarHub was started: one **planning repository** that holds the requirements, the derived documents, the rules for AI agents, CI, and a **prototype** that shows every screen (or every API call) before real implementation begins.
+A reusable method for starting any new product: one **planning repository** that holds the requirements, the derived documents, the rules for AI agents, CI, and a **prototype** that shows every screen (or every API call) before real implementation begins.
 
-This repository is the **Code Hunters Studio** canonical copy of the playbook (private). The content stays generic — nothing here is specific to one product; MasarHub is only the example it was learned from.
+This folder is **generic**. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product.
 
 ## Numbered layout
 
@@ -42,7 +42,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → CodeRabbit → merge → verify) → Pareto 20% + new-chat handoff; standing ↔ playbook mirror. |
 | [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository. |
 
-**Reference implementation:** a completed Code Hunters Studio product planning repository (e.g. MasarHub planning) once it lives under this org — until then, use the working planning repo that produced this playbook. When the playbook says "copy" a prototype piece (the starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, the tests), take it from MasarHub's `project-ui/` and adapt names and routes.
+**Optional reference:** if your studio already has one finished planning repo with a solid `project-ui/`, copy its starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, and tests — then adapt names and routes. Do not bake that product’s name into this playbook.
 
 ## Start a New Product
 
@@ -64,16 +64,16 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 
 | Placeholder | Example |
 |-------------|---------|
-| `{{PRODUCT}}` | MasarHub |
-| `{{ONE_LINE}}` | An AI platform that tailors a master resume to each job |
+| `{{PRODUCT}}` | Acme Planner |
+| `{{ONE_LINE}}` | A bilingual planning workspace for product teams |
 | `{{FRONTEND}}` | Next.js 16 + Tailwind CSS 4.3 |
 | `{{BACKEND}}` | Laravel 13 |
 | `{{DATABASE}}` | PostgreSQL 18 + pgvector |
 | `{{OWNER}}` | The repository owner's GitHub handle, without `@` |
-| `{{MARKETS}}` | Egypt, the Gulf, worldwide |
-| `{{UI_LANGUAGES}}` | Modern Standard Arabic (RTL) and English |
+| `{{MARKETS}}` | Primary markets for this product |
+| `{{UI_LANGUAGES}}` | Language A (RTL if needed) and Language B |
 | `{{REPLY_LANGUAGE}}` | English |
-| `{{CURRENT_ACTOR}}` | Job seeker / User |
+| `{{CURRENT_ACTOR}}` | Primary end user |
 | `{{NODE_LTS}}` | 26 (Active LTS at planning time — re-verify on nodejs.org) |
 | `{{YEAR}}` | 2026 |
 | `{{COMPONENT_LIBRARY}}`, `{{ICON_LIBRARY}}`, `{{FONTS}}` | shadcn/ui (Radix base, RTL mode); Phosphor; Geist for Latin and IBM Plex Sans Arabic |

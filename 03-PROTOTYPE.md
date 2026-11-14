@@ -1,6 +1,6 @@
 # Prototype — See the Product Before Building It
 
-The prototype lives in `project-ui/` inside the planning repository. It is the **only** code allowed there. Its job is to make the plan visible and clickable so gaps show up before implementation, not after. The reference implementation is MasarHub's `project-ui/` (Next.js 16, React 19, Tailwind CSS 4.3, shadcn/ui with Radix, Phosphor icons; CI on Node Active LTS); copy its pieces rather than rewriting them.
+The prototype lives in `project-ui/` inside the planning repository. It is the **only** code allowed there. Its job is to make the plan visible and clickable so gaps show up before implementation, not after. Prefer copying a finished `project-ui/` from an existing planning repo (typical stack example: Next.js + React + Tailwind + shadcn/ui + Phosphor; CI on Node Active LTS) rather than rewriting the starter kit.
 
 ## Rules for Both Tracks
 
@@ -36,9 +36,9 @@ Pin the Impeccable version in CI (and prefer the same pin locally). Vendor desig
 
 ### Starter Kit
 
-Build these before the first product screen; every screen then reuses them. File names refer to MasarHub's `project-ui/`.
+Build these before the first product screen; every screen then reuses them. File names below are the usual `project-ui/` layout.
 
-| Piece | What it does | MasarHub file |
+| Piece | What it does | Typical file |
 |-------|--------------|---------------|
 | Language and direction | `?lang=` picks the language (default: the main market's); the root sets `lang` and `dir`; a proxy passes the language and path to server components such as the 404 page; fonts per language through `next/font`. | `src/lib/i18n.ts`, `src/proxy.ts`, `src/app/layout.tsx` |
 | Language switch | Visible on every screen, keeps the current path and state. | `src/components/common.tsx` |
@@ -54,7 +54,7 @@ Build these before the first product screen; every screen then reuses them. File
 
 ### Home Page: Screens and Flows
 
-The home page (`/`) is the team's map, built in its final shape from the start (MasarHub went through four versions):
+The home page (`/`) is the team's map, built in its final shape from the start (one product went through four versions):
 
 - **On top, the user flows:** one card per actor listing its stages; each stage opens a clickable diagram (`/flows/<actor>`).
 - **Below, the screen index:** text only (no thumbnails or live previews), grouped by actor and section, each screen with its ID and its states underneath, each section linking to the flow stages that use it.

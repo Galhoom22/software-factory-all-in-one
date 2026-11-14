@@ -4,7 +4,7 @@ How to turn an approved planning repository into small, independently verifiable
 
 > **Planning vs implementation.** Decomposition and feature files live where code is built. This planning repository stays the single source of truth for product requirements (`requirements.md`, PRD, SRS, API contract, COMPLIANCE, SECURITY). Do not copy those documents into feature files. Do not dump a full external Adaptive Feature-Level SDLC template into the planning repo — keep this condensed guide, and put `docs/features/` only in the implementation repositories.
 
-**Issue tracker handoff:** a planning repo may ship a **Jira/CSV import pack** (Epics → stories → tasks) for sprint planning. That pack must cite PRD/SRS IDs and must not become a second requirements source. MasarHub’s pack lives under `docs/jira/<actor>/` (job seeker first: `docs/jira/job-seeker/`, D-46).
+**Issue tracker handoff:** a planning repo may ship a **Jira/CSV import pack** (Epics → stories → tasks) for sprint planning. That pack must cite PRD/SRS IDs and must not become a second requirements source. Keep the pack under `docs/jira/<actor>/` (one folder per actor; start with the current actor only).
 
 **Principle:** Maximum justified quality. Minimum unnecessary complexity. Evidence-based completion.
 

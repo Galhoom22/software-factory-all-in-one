@@ -1,12 +1,12 @@
 # Steps — From an Idea to a Complete Plan
 
-The order below is the order that worked, corrected with hindsight. In MasarHub several things came late and forced rework: the product name changed after dozens of screens, compliance, security, the decision log, and the license were applied backwards, and prices changed three times. Here they come early. Each step names its output and what **done** means; [`05-PROMPTS.md`](05-PROMPTS.md) has a ready prompt for most steps, and [`06-LESSONS.md`](06-LESSONS.md) explains why each rule exists.
+The order below is the order that worked, corrected with hindsight. In the reference product several things came late and forced rework: the product name changed after dozens of screens, compliance, security, the decision log, and the license were applied backwards, and prices changed three times. Here they come early. Each step names its output and what **done** means; [`05-PROMPTS.md`](05-PROMPTS.md) has a ready prompt for most steps, and [`06-LESSONS.md`](06-LESSONS.md) explains why each rule exists.
 
 ## Phase 0 — Before the Repository
 
 ### 0.1 Decide the name and the brand basics
 
-- **Output:** the product name in every interface language (MasarHub / مسار هب), checked for an available domain and no obvious trademark clash.
+- **Output:** the product name in every interface language, checked for an available domain and no obvious trademark clash.
 - **Why first:** the name appears in every document, screen, metadata tag, and mock email. Renaming later touched the whole repository.
 - **Done:** the name is final and written in `requirements.md`.
 
@@ -28,7 +28,7 @@ The order below is the order that worked, corrected with hindsight. In MasarHub 
 
 - **Output:** [`requirements.md`](templates/requirements.md), the single source of truth, in English (write the idea in any language first, then have it converted).
 - **How:** the idea, the problem, the core flow, every feature as `User:` / `System:` / `Rule:` lines, the **current actor** scope, what is deferred, the actor-loop delivery method ([`02-DELIVERY.md`](02-DELIVERY.md)), and the **Governing Product Rules**. Open [`docs/SCOPE_REJECTIONS.md`](templates/docs/SCOPE_REJECTIONS.md) with stable `REJ-xx` IDs for out-of-scope and won-forever items, and seed [`docs/actors/Actor-01-CurrentActor/`](templates/docs/actors/Actor-01-CurrentActor/) (rename the folder to a real slug).
-- **Include from the start:** both interface languages and a language switch on every screen, sign-in methods (email plus the social providers the market expects), sign-out, account settings, data rights (download, delete, consent), and the empty states of every core object. MasarHub added each of these later.
+- **Include from the start:** both interface languages and a language switch on every screen, sign-in methods (email plus the social providers the market expects), sign-out, account settings, data rights (download, delete, consent), and the empty states of every core object. The reference product added each of these later.
 - **Done:** someone new can read it and explain the current actor, that there is no MVP delivery mode, and the red lines.
 
 ### 2. Add the README, the license, and the notes file
@@ -129,7 +129,7 @@ Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 
 - Click through each flow from the landing page to the last success screen, as a first-time user and as a returning user.
 - Check that every success state offers the next action, every object offers the same actions wherever it appears, every button leads to the right screen, and a returning user is never asked again for data the product already has.
-- **Done:** no dead end and no missing step; MasarHub's owner found five such gaps by clicking.
+- **Done:** no dead end and no missing step; One product’s owner found five such gaps by clicking.
 
 ### 17. Quality pass
 
@@ -163,7 +163,7 @@ Run these after every large batch of work (prompts in [`05-PROMPTS.md`](05-PROMP
 
 ### 22. Hand over to implementation
 
-- **Output:** separate implementation repositories that read this one as their reference; a `docs/features/requirements-map.md` (and feature files) produced by the decomposition in [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md); Spec Kit (or the chosen method) initialized with a constitution that cites planning rules by ID; optional Jira import from the planning repo’s `docs/jira/<actor>/` CSV pack (MasarHub job seeker: `docs/jira/job-seeker/`, D-46) for Epics → separate FE/BE Stories and sprint slicing — Jira remains a tracker, not the requirements SoT.
+- **Output:** separate implementation repositories that read this one as their reference; a `docs/features/requirements-map.md` (and feature files) produced by the decomposition in [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md); Spec Kit (or the chosen method) initialized with a constitution that cites planning rules by ID; optional Jira import from the planning repo’s `docs/jira/<actor>/` CSV pack for Epics → separate FE/BE Stories and sprint slicing — Jira remains a tracker, not the requirements SoT.
 - **How:** when every PRD feature meets the Definition of Ready (PRD §9), decompose the SRS into independently verifiable features once, then build each feature with an engineering profile (Lightweight / Standard / Comprehensive) matched to its risk. Keep planning docs as the single source of truth; feature files hold evidence and status, not a second copy of the SRS. Definition of Done, production release, and business-outcome validation stay separate milestones.
 - **Done:** every SRS requirement is mapped or explicitly unresolved; each developer can start a feature from the map, the API contract, and their Definition of Done without inventing scope.
 

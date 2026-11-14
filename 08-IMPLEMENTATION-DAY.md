@@ -92,7 +92,7 @@ When the owner **changes** a lasting preference that belongs in this method (day
 
 1. Update the product `docs/OWNER_STANDING.md` (+ changelog) in the same session.
 2. Update **this playbook** (this file and/or `templates/docs/OWNER_STANDING.md`, prompts, lessons) so the **next** product inherits it — keep wording generic.
-3. If the studio keeps a private playbook GitHub mirror, **sync in the same session** (MasarHub: `node scripts/sync-planning-playbook.mjs` → `code-hunters-studio/planning-playbook`, D-52).
+3. If the studio keeps a private playbook GitHub mirror, **sync in the same session** (for example `node scripts/sync-planning-playbook.mjs`).
 
 Do not leave standing only in chat memory or only in one product’s docs.
 

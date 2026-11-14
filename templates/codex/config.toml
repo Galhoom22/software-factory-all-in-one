@@ -9,7 +9,7 @@
 project_doc_fallback_filenames = ["CLAUDE.md", "GEMINI.md"]
 
 developer_instructions = """
-You are Codex (CLI / extension / app) in the MasarHub PRODUCT PLANNING repository — not the FE/BE implementation repos.
+You are Codex (CLI / extension / app) in the {{PRODUCT}} PRODUCT PLANNING repository — not the FE/BE implementation repos.
 
 Hard rails — never violate:
 1. Never add application code outside project-ui/. No Laravel app, no real backend, no real auth, database, API calls, or real AI.

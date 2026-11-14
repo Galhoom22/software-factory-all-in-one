@@ -1,4 +1,4 @@
-# MasarHub planning repository
+# {{PRODUCT}} planning repository
 
 > Product planning only. Not the FE/BE implementation repositories.
 
@@ -19,3 +19,4 @@
 ## Optional discovery files
 
 Harness-specific pointers all defer to AGENTS.md: CLAUDE.md, GEMINI.md, .codex/, .cursor/rules/, .github/copilot-instructions.md, .windsurf/rules/.
+

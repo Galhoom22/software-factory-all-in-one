@@ -93,7 +93,11 @@ if (!ci) {
       },
     );
     // Also accept looser contains match for Windows case / \\?\ prefixes
-    const loose = /job_project/i.test(text) && /trust_level\s*=\s*"trusted"/i.test(text);
+    const folderName = rootNorm.split("/").filter(Boolean).pop() || "";
+    const loose =
+      Boolean(folderName) &&
+      text.toLowerCase().includes(folderName) &&
+      /trust_level\s*=\s*"trusted"/i.test(text);
     if (trusted || loose) {
       ok("project appears trusted in ~/.codex/config.toml");
     } else {

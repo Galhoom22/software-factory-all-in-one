@@ -4,7 +4,7 @@
  * Prints JSON with additionalContext (Codex SessionStart schema).
  */
 const additionalContext = [
-  "MasarHub planning repo — Codex SessionStart rails:",
+  "{{PRODUCT}} planning repo — Codex SessionStart rails:",
   "- Scope: planning docs + project-ui prototype only. No real backend/app code outside project-ui/.",
   "- Delivery: There is no MVP delivery mode. Actor loop only (docs/DELIVERY.md, D-40). Current actor = {{CURRENT_ACTOR}}.",
   "- Rules: docs/AGENT_START.md then AGENTS.md. English replies. No secrets, no real personal data, no force-push, no history rewrite.",
@@ -22,3 +22,4 @@ process.stdout.write(
     },
   }),
 );
+
