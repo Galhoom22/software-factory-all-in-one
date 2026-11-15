@@ -52,6 +52,16 @@ jobs:
       - name: Planning-only scope intact
         run: node scripts/check-scope.mjs
 
+      - name: Playbook requirements-activation wiring
+        run: |
+          if [ -f playbook/scripts/check-requirements-activation.mjs ]; then
+            node playbook/scripts/check-requirements-activation.mjs
+          else
+            echo "No nested playbook/ — skip activation wiring check"
+          fi
+      - name: Planning entry activation gate
+        run: node scripts/check-planning-entry.mjs
+
       - name: Codex CLI project wiring intact
         run: node scripts/verify-codex-cli.mjs --ci
 

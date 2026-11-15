@@ -92,3 +92,12 @@ Edit `my-project-requirements.md` again. On the next session the agent reconcile
 - [ ] Later: create implementation repos and build  
 
 **Provide the requirements file. The AI Agent handles the planning process.**
+
+## Automation (CI)
+
+Planning CI runs these without a manual step:
+
+- `playbook/scripts/check-requirements-activation.mjs` — playbook still wires activation.
+- `scripts/check-planning-entry.mjs` — if `my-project-requirements.md` exists, agent rules must be wired; prints derived-doc progress. If the file is absent, the check skips.
+
+Studio mirror `planning-playbook` runs the same gates via synced `.github/workflows/ci.yml`.

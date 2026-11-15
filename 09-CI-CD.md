@@ -50,6 +50,7 @@ Minimum jobs (grow with the product):
 
 - Secret scan (e.g. gitleaks CLI).
 - Required docs exist; governing rules / delivery / agent-discovery / scope scripts.
+- **Automation (always):** `playbook/scripts/check-requirements-activation.mjs` (playbook wiring) and `scripts/check-planning-entry.mjs` (when root `my-project-requirements.md` exists, enforce agent activation rules and print planning progress; skip cleanly when the entry file is absent). Studio mirror runs the same via Playbook CI.
 - When `project-ui/` exists: install, lint, tests, build, UI anti-pattern detect.
 
 Agents: run the same scripts locally before every push; watch the Actions run after push; fix red CI in the same session.

@@ -57,7 +57,10 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 node scripts/check-delivery.mjs
 node scripts/check-agents.mjs
 node scripts/check-scope.mjs
+node scripts/check-planning-entry.mjs
 ```
+
+If this repository keeps a nested `playbook/`, also run `node playbook/scripts/check-requirements-activation.mjs`.
 
 If you changed `project-ui/`, also run that package's `npm test`, `npm run check:ui`, and `npm run lint`.
 

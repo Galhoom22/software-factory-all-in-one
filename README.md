@@ -52,6 +52,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |
 | [`examples/`](examples/) | Copyable samples, including `my-project-requirements.example.md`. |
 | [`scripts/check-requirements-activation.mjs`](scripts/check-requirements-activation.mjs) | Verifies activation wiring is present (run after playbook edits). |
+| [`scripts/check-planning-entry.mjs`](scripts/check-planning-entry.mjs) | CI entry gate: enforce activation when `my-project-requirements.md` exists; skip otherwise. |
 | [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository (includes `implementation/github-actions/` for FE/BE). |
 
 **Optional reference:** if your studio already has one finished planning repo with a solid `project-ui/`, copy its starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, and tests — then adapt names and routes. Do not bake that product’s name into this playbook.
