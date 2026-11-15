@@ -34,6 +34,10 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch) → **CD when configured** (staging deploy → smoke → Sentry if live) → tracker → day page. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
 - Pause only for real blockers (security/compliance/product/spend decisions, interactive approvals, unfixable hard stops).
 
+## Playbook generic (hard rule)
+
+- The product’s `playbook/` copy (and any studio playbook mirror) must stay **generic forever**: practices only, never product names, people, tracker keys, or day-page URLs. Those belong in this OWNER_STANDING file and other product docs.
+
 ## Git and remotes
 
 - Keep local default branch and `origin` identical after verified work: commit, push, confirm CI.
@@ -50,5 +54,6 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 |------------|--------|
+| YYYY-MM-DD | Playbook forever-generic hard rule.
 | YYYY-MM-DD | CI/CD (GitHub Actions + staging/prod delivery) is a hard gate in implementation day closeout (`09-CI-CD.md`). |
 | YYYY-MM-DD | Created ledger; seeded day run-through + Pareto/handoff + playbook dual-update rule. |
