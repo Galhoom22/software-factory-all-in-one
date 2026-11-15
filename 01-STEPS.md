@@ -1,8 +1,17 @@
 # Steps — From an Idea to a Complete Plan
 
+**Requirements-driven path (preferred for new products):** the user seeds this playbook into an empty planning repo and adds root `my-project-requirements.md`. That file is the activation signal — see [`00-USAGE.md`](00-USAGE.md). The agent detects it, owns planning, applies **80/20** (smallest complete set for this project's complexity), and walks the phases below without waiting for "start planning". Do **not** overwrite the entry file. Formal `requirements.md` is derived from it. If the entry file is absent, do **not** assume bootstrap.
+
 The order below is the order that worked, corrected with hindsight. In the reference product several things came late and forced rework: the product name changed after dozens of screens, compliance, security, the decision log, and the license were applied backwards, and prices changed three times. Here they come early. Each step names its output and what **done** means; [`05-PROMPTS.md`](05-PROMPTS.md) has a ready prompt for most steps, and [`06-LESSONS.md`](06-LESSONS.md) explains why each rule exists.
 
 ## Phase 0 — Before the Repository
+
+### 0.0 Provide the entry requirements file
+
+- **Output:** root `my-project-requirements.md` (copy from [`examples/my-project-requirements.example.md`](examples/my-project-requirements.example.md) and adapt). Incomplete is fine.
+- **Why:** this is the **only** required human input and the agent activation signal ([`00-USAGE.md`](00-USAGE.md)).
+- **Agent:** on detecting the file, start or continue planning automatically; ask only blocking questions; record assumptions.
+- **Done:** the file exists at the repo root and the agent has read it. The agent must never overwrite it.
 
 ### 0.1 Decide the name and the brand basics
 
@@ -20,13 +29,14 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 - **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the studio’s private playbook mirror when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
 - **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`03-PROTOTYPE.md`](03-PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
-- **Done:** the first commit (templates copied) is pushed.
+- **Also:** add root `my-project-requirements.md` in the same bootstrap when starting a new product (see 0.0).
+- **Done:** the first commit (templates copied, entry file present when bootstrapping) is pushed.
 
 ## Phase 1 — Foundation
 
 ### 1. Write the requirements
 
-- **Output:** [`requirements.md`](templates/requirements.md), the single source of truth, in English (write the idea in any language first, then have it converted).
+- **Output:** [`requirements.md`](templates/requirements.md), the structured single source of truth, in English — derived from root `my-project-requirements.md` when that entry file exists (write the idea in any language first; the agent converts and structures).
 - **How:** the idea, the problem, the core flow, every feature as `User:` / `System:` / `Rule:` lines, the **current actor** scope, what is deferred, the actor-loop delivery method ([`02-DELIVERY.md`](02-DELIVERY.md)), and the **Governing Product Rules**. Open [`docs/SCOPE_REJECTIONS.md`](templates/docs/SCOPE_REJECTIONS.md) with stable `REJ-xx` IDs for out-of-scope and won-forever items, and seed [`docs/actors/Actor-01-CurrentActor/`](templates/docs/actors/Actor-01-CurrentActor/) (rename the folder to a real slug).
 - **Include from the start:** both interface languages and a language switch on every screen, sign-in methods (email plus the social providers the market expects), sign-out, account settings, data rights (download, delete, consent), and the empty states of every core object. The reference product added each of these later.
 - **Done:** someone new can read it and explain the current actor, that there is no MVP delivery mode, and the red lines.

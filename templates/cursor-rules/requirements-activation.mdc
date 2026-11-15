@@ -1,0 +1,19 @@
+---
+description: Detect root my-project-requirements.md and run playbook planning without a separate start command
+alwaysApply: true
+---
+
+# Requirements-driven activation
+
+When this planning repository has a root file named **`my-project-requirements.md`**:
+
+1. That file is the **activation signal**. Read it fully before inventing scope.
+2. Do **not** wait for “start planning”, “initialize”, or “apply the template”.
+3. Do **not** overwrite, delete, or empty `my-project-requirements.md`.
+4. Follow `playbook/00-USAGE.md` and `playbook/01-STEPS.md` with **80/20** depth (smallest complete planning set for this product).
+5. Derive formal `requirements.md` and other docs from the entry file; reconcile on later edits; preserve accepted decisions unless new text justifies revisiting them.
+6. Ask only blocking questions; record assumptions otherwise.
+7. Keep `playbook/` generic — no product-specific names in method docs.
+8. Never mix production application code into this planning repo; do not create implementation repos unless the user authorizes that.
+
+If `my-project-requirements.md` is **absent**, do **not** assume a new-project bootstrap. Obey the user’s explicit task and `AGENTS.md`.

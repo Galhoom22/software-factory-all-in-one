@@ -89,6 +89,7 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 - **Keep audit scripts in the repository.** The crawl script lived in `%TEMP%` for weeks, where Windows can delete it; it now lives in `project-ui/scripts/`.
 
 ## Working With AI Agents
+- **Root `my-project-requirements.md` is the start command.** If the agent waits for “initialize” or asks the user to pick templates while that file exists, the playbook failed its job. Detect the file, do not overwrite it, run `00-USAGE` / `01-STEPS` with 80/20 depth, and keep `playbook/` generic.
 - **Keep skills and MCP servers on today’s stables.** Design skills (Impeccable, ui-ux-pro-max, taste-skill) and local MCPs (lean-ctx, Context7, REA) drift. After a Node LTS bump, rebuild native CLIs (`npm rebuild lean-ctx-bin` when the binary is missing), pin `impeccable@x.y.z` in CI, and restart the editor so MCP discovery reloads.
 - **Never commit MCP API keys.** Tokens belong in the user’s local `mcp.json` / secrets store, not in the planning repository or playbook templates.
 

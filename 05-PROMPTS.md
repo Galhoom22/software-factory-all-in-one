@@ -2,11 +2,27 @@
 
 Ready prompts for the steps in [`01-STEPS.md`](01-STEPS.md). Replace the `<...>` parts. Write them in any language; the agent always replies in **English** per `AGENTS.md`. Each prompt assumes the agent follows `docs/AGENT_START.md` and `AGENTS.md` (checks, commit, push, CI).
 
+## Requirements-driven activation
+
+Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick templates.
+
+**New planning repo (user already added `my-project-requirements.md`):**
+
+> Root `my-project-requirements.md` is present. That is the activation signal. Read it fully, then `playbook/00-USAGE.md` and `playbook/01-STEPS.md`. Do not wait for another command. Do not overwrite the entry file. Apply 80/20: produce the smallest complete planning workspace for this project. Fill placeholders from the file, ask only blocking questions, record assumptions, keep `playbook/` generic, and do not create implementation repos unless I authorize that.
+
+**Reconcile after the user edited the entry file:**
+
+> I updated `my-project-requirements.md`. Reconcile derived planning docs (`requirements.md`, BRD/PRD/SRS, and anything stale). Preserve accepted decisions unless the new text justifies revisiting them. List what is still incomplete. Do not duplicate whole documents from scratch.
+
+**Read the repository (start of every chat — detect entry file):**
+
+> First check for root `my-project-requirements.md`. If it exists, follow `AGENTS.md` § Requirements-driven activation and `playbook/00-USAGE.md`. Also read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md` (if present), `.cursor/rules/`, `.codex/`, `.github/`, `docs/`, `playbook/`, and `project-ui/`. Then continue the user's task (or planning if the entry file just activated work).
+
 ## Starting
 
 **Read the repository (start of every chat):**
 
-> Read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md`, `.cursor/rules/`, `.codex/`, `.github/copilot-instructions.md`, `GEMINI.md`, `.windsurf/rules/`, `.github/`, `docs/`, `playbook/`, and `project-ui/`, then reply only "ok".
+> Check for root `my-project-requirements.md` first (activation). Then read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md` (if present), `.cursor/rules/`, `.codex/`, `.github/copilot-instructions.md`, `GEMINI.md`, `.windsurf/rules/`, `.github/`, `docs/`, `playbook/`, and `project-ui/`, then reply only "ok".
 
 **Any AI (including a weak or unfamiliar harness):**
 
@@ -22,7 +38,7 @@ Ready prompts for the steps in [`01-STEPS.md`](01-STEPS.md). Replace the `<...>`
 
 **Set up from the playbook (new product):**
 
-> This is a new planning repository for `<product>`: `<one-line idea>`. Copy `playbook/templates/` to the root as `playbook/README.md` describes, fill every placeholder from what I tell you, and ask me for anything you cannot infer. Then follow `playbook/01-STEPS.md` from Phase 1.
+> This is a new planning repository. Seed `playbook/templates/` per `playbook/00-USAGE.md` / `playbook/README.md`. I will put (or already put) requirements in root `my-project-requirements.md` — treat that file as activation. Fill placeholders from it, ask only blocking questions, keep the playbook generic, then follow `playbook/01-STEPS.md` with 80/20 depth.
 
 ## Phase 0 and 1
 

@@ -6,6 +6,24 @@ Instructions for AI coding agents working in this repository. These rules overri
 
 **New or weak model?** Read `docs/AGENT_START.md` first (hard rails + map + checks), then continue with this file.
 
+## Requirements-driven activation (mandatory)
+
+Root file **`my-project-requirements.md`** is the user's project entry and the **activation signal**.
+
+When you start or inspect this repository:
+
+1. If root `my-project-requirements.md` **exists**, treat that as the instruction to run (or continue) playbook planning — do **not** wait for "start planning" / "initialize".
+2. Read the whole file. Do **not** overwrite, delete, or empty it.
+3. Read `playbook/00-USAGE.md` and `playbook/01-STEPS.md`. Apply **80/20**: smallest complete planning set for this project's complexity; skip unneeded docs.
+4. Derive formal [`requirements.md`](requirements.md) and other planning assets from the entry file (and later reconciliations). Keep `my-project-requirements.md` as the human entry; keep `requirements.md` as the structured product source of truth once it exists.
+5. Ask only **blocking** questions. Record assumptions and their impact. Do not re-ask facts already in the file.
+6. On re-runs: reconcile derived docs; preserve accepted decisions unless the new requirements justify revisiting them; list incomplete work. Do not duplicate whole documents from scratch.
+7. Never contaminate `playbook/` method docs or generic templates with product names, people, tracker IDs, or URLs.
+8. Do **not** create implementation repositories unless the user explicitly authorizes that. Never mix production application code into this planning repo.
+
+If root `my-project-requirements.md` is **absent**, do **not** assume a new-project bootstrap was requested. Follow the user's explicit task and the rest of this file.
+
+
 ## Agent platforms
 
 This file is the **single rulebook**. Harness-specific files only help discovery — they must stay consistent with this file and never weaken it.
@@ -53,7 +71,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
 - **Delivery method ([`docs/DELIVERY.md`](docs/DELIVERY.md)):** **There is no MVP delivery mode.** Work one **actor** at a time: discuss business and product here → design and prototype every screen for that actor to **production** quality (millimetre-accurate) → implement that actor in the backend and frontend repositories → return here for the next actor. Do not omit, weaken, or stub anything for the actor in focus. Deferred features and other actors wait their turn; that is sequencing, not half-finishing the current actor. CI enforces this via `scripts/check-delivery.mjs`.
 - **Single exception:** [`project-ui/`](project-ui/README.md) may contain a prototype in the production stack ({{FRONTEND}}), or an API explorer for a backend-only product. It must have no backend, no real API calls, no real AI, no auth, no database, and no real personal data — only static, clearly fictional mock data. Follow its README and `.cursor/rules/` when working there. Prototype fidelity for the actor in focus must match production.
 - **Prototype non-negotiables:** bilingual UI with a language switch; full RTL with logical CSS; accessibility bar from COMPLIANCE; mocks shaped like the API contract; no fabricated social proof; keep screen/flow indexes current. Never weaken a quality gate to pass a change.
-- [`requirements.md`](requirements.md) is the **source of truth** for product requirements.
+- Root **`my-project-requirements.md`** (when present) is the human entry / activation signal — see **Requirements-driven activation** above. Formal [`requirements.md`](requirements.md) is the **structured source of truth** for product requirements once derived.
 - [`docs/BRD.md`](docs/BRD.md), [`docs/PRD.md`](docs/PRD.md), [`docs/SRS.md`](docs/SRS.md), [`docs/API_CONTRACT.md`](docs/API_CONTRACT.md), [`docs/frontend/`](docs/frontend/), and [`docs/backend/`](docs/backend/) are derived from `requirements.md` and must stay consistent with it.
 - The team is **frontend and backend**. Frontend-only content goes in `docs/frontend/`, backend-only content in `docs/backend/`, and anything both sides need stays in the shared docs. Every SRS requirement has an Owner (FE / BE / Both). The API contract is the only shared interface.
 - [`README.md`](README.md) is the public summary and must stay consistent with `requirements.md`.
@@ -98,7 +116,7 @@ In the same commit as every change:
 2. For prototype work, also update the screen index, the user flows, the Screen Index paragraph in `project-ui/README.md`, and the current actor’s `docs/actors/.../screens.md` / `flow.md`; `npm test` fails if a prototype index entry is missing.
 3. Owner-reported UI defects: fix in the same turn and append `project-ui/DESIGN-ERRORS.md`. Non-obvious engineering lessons go under `docs/learning-from-mistakes/`.
 4. Fix any outdated statement you notice, or tell the user if it needs their decision.
-4. Reread every summary line that counts or lists things and correct it.
+5. Reread every summary line that counts or lists things and correct it.
 
 ## Protecting the Requirements
 

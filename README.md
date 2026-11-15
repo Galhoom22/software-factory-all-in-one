@@ -1,6 +1,10 @@
 # Playbook — Planning Repository Template
 
-A reusable method for starting any new product: one **planning repository** that holds the requirements, the derived documents, the rules for AI agents, CI, and a **prototype** that shows every screen (or every API call) before real implementation begins.
+A reusable **project-planning engine**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
+
+**How to use (start here):** [`00-USAGE.md`](00-USAGE.md)
+
+**One principle:** the user provides root `my-project-requirements.md`. The AI Agent detects that file and runs the playbook. No manual template picking.
 
 This folder is **generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
 
@@ -11,6 +15,7 @@ Method files are **prefixed so they sort in delivery order**. Keep this numberin
 ```text
 playbook/
   README.md                 Entry (this file)
+  00-USAGE.md               How a new user starts (requirements-driven)
   01-STEPS.md               Ordered steps idea → complete plan
   02-DELIVERY.md            Actor-loop delivery (no MVP mode)
   03-PROTOTYPE.md           Prototype / API-explorer guide
@@ -18,8 +23,10 @@ playbook/
   05-PROMPTS.md             Ready agent prompts + audits
   06-LESSONS.md             Planning-process lessons
   07-judgment/              Absorb outside methods as judgment only
-  08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline (run-through → closeout → Pareto + handoff)
-  09-CI-CD.md               CI/CD gates (GitHub Actions + staging/prod delivery) for day closeout
+  08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline
+  09-CI-CD.md               CI/CD progressive phases for day closeout
+  examples/                 Copyable samples (e.g. my-project-requirements)
+  scripts/                  Playbook self-checks (activation wiring)
   templates/                Skeleton of a new planning repository
 ```
 
@@ -33,20 +40,27 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 
 | File | Purpose |
 |------|---------|
-| [`01-STEPS.md`](01-STEPS.md) | The steps in order, each with why it matters and what "done" means. Follow it top to bottom. |
+| [`00-USAGE.md`](00-USAGE.md) | **Start here.** Empty planning repo → `my-project-requirements.md` → agent runs the playbook. |
+| [`01-STEPS.md`](01-STEPS.md) | The steps in order, each with why it matters and what "done" means. Follow it top to bottom (agent adapts with 80/20). |
 | [`02-DELIVERY.md`](02-DELIVERY.md) | **Mandatory:** actor-loop delivery; there is no MVP mode. Wire CI and AGENTS so agents cannot forget. |
 | [`03-PROTOTYPE.md`](03-PROTOTYPE.md) | How to build the prototype: a clickable UI in the exact production frontend stack, or an API explorer with mock responses for a backend-only product. |
 | [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) | Adaptive feature-level delivery for the **implementation** repositories: decompose the SRS once, match engineering depth to risk, require evidence for completion. |
-| [`05-PROMPTS.md`](05-PROMPTS.md) | Ready prompts for the agent at each step, the regular audits, planning handoffs, and **implementation day** start/end prompts. |
+| [`05-PROMPTS.md`](05-PROMPTS.md) | Ready prompts for the agent at each step, audits, planning handoffs, implementation day, and requirements-driven activation. |
 | [`06-LESSONS.md`](06-LESSONS.md) | Mistakes already made and how to avoid them. |
 | [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / ATLAS-style methods as **judgment only** — map onto existing docs; never install a second constitution. |
-| [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff; standing ↔ playbook mirror. |
-| [`09-CI-CD.md`](09-CI-CD.md) | Continuous integration and delivery: planning CI, FE/BE GitHub Actions, staging auto-deploy / production approval, how CI/CD sits in the day closeout. |
+| [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
+| [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |
+| [`examples/`](examples/) | Copyable samples, including `my-project-requirements.example.md`. |
+| [`scripts/check-requirements-activation.mjs`](scripts/check-requirements-activation.mjs) | Verifies activation wiring is present (run after playbook edits). |
 | [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository (includes `implementation/github-actions/` for FE/BE). |
 
 **Optional reference:** if your studio already has one finished planning repo with a solid `project-ui/`, copy its starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, and tests — then adapt names and routes. Do not bake that product’s name into this playbook.
 
 ## Start a New Product
+
+**Preferred path (requirements-driven):** follow [`00-USAGE.md`](00-USAGE.md) — seed the repo from this playbook, add root `my-project-requirements.md`, open the AI agent. The agent detects the file and runs planning.
+
+**Manual seed checklist** (what the agent also does when bootstrapping):
 
 1. Create an empty **private** repository for the product's planning (for example `erp-planning`). If you use a studio org copy of this playbook, start from that private mirror’s `templates/` instead of inventing a new layout.
 2. Copy everything inside [`templates/`](templates/) to the new repository's root, including the hidden `.github/`, `.editorconfig`, `.gitattributes`, and `.gitignore`.
@@ -59,8 +73,9 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
    - `codex/` → `.codex/` (OpenAI Codex project config + hooks)
    - `LICENSE.template` → `LICENSE`
 4. Copy this whole `playbook/` folder into the new repository too, so it keeps improving there.
-5. Replace every `{{PLACEHOLDER}}` (search for `{{`). Delete any section marked *Optional* that the product does not need (for example `docs/AI.md` when the product has no AI).
-6. Follow [`01-STEPS.md`](01-STEPS.md) from Phase 0.
+5. Add root **`my-project-requirements.md`** (from [`examples/my-project-requirements.example.md`](examples/my-project-requirements.example.md)). That file is the activation signal.
+6. Replace every `{{PLACEHOLDER}}` in seeded templates as the agent fills them from the requirements file. Delete any section marked *Optional* that the product does not need (for example `docs/AI.md` when the product has no AI).
+7. The agent follows [`01-STEPS.md`](01-STEPS.md) from Phase 0 with 80/20 depth.
 
 ### Placeholders
 
