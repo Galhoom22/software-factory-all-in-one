@@ -25,7 +25,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.3"
+          php-version: "8.4"
           extensions: mbstring, pdo_sqlite, sqlite3, bcmath, intl
           coverage: none
 
@@ -45,3 +45,4 @@ jobs:
 
       # Uncomment when Forge staging hook exists (secret: FORGE_DEPLOY_HOOK_STAGING).
       # deploy-staging must be a separate job with: needs: [tests], if: push to main.
+
