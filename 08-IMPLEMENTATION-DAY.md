@@ -4,7 +4,7 @@ Reusable **day loop** for frontend and backend **implementation** repositories o
 
 Keep this generic. Product-specific names (Notion pages, Jira keys, repo paths) live in that product’s `docs/OWNER_STANDING.md` and day pages — not here.
 
-CI/CD detail: [`09-CI-CD.md`](09-CI-CD.md).
+CI/CD detail: [`09-CI-CD.md`](09-CI-CD.md) — **progressive phases** (A = CI only by default; B/C = CD only when host hooks exist). Agents auto-detect the phase; never block Done on missing staging/production.
 
 ## Pipeline (fixed order)
 
@@ -68,7 +68,7 @@ Never mark tracker or checklist finished before post-merge verification (and req
 
 - **CI** proves the branch on a clean runner (tests, lint/format, secret scan). It is a **merge gate** equal in force to local proof.
 - **CD** ships only from green `main` through the host pipeline (e.g. Forge deploy hooks called by Actions). No laptop deploys.
-- Until hooks exist, CI still runs; CD steps are skipped honestly.
+- Until hooks exist (**Phase A**), CI still runs; CD steps are skipped honestly. When hooks appear later, move to Phase B/C using the same method — no new philosophy ([`09-CI-CD.md`](09-CI-CD.md) § Progressive activation).
 - Full rules and workflow skeletons: [`09-CI-CD.md`](09-CI-CD.md), [`templates/implementation/github-actions/`](templates/implementation/github-actions/).
 
 ## CodeRabbit in this pipeline
