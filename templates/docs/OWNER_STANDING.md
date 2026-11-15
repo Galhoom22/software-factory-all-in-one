@@ -11,7 +11,7 @@
 3. Prefer editing an existing section over duplicating.
 4. Date the change in the **Changelog** below.
 5. Keep tool-specific boards (e.g. Jira) in their own standing file; point to them from here.
-6. If the preference is a **reusable method** (day loop, closeout order, final reply shape, remotes mirror), also update the product’s `playbook/` copy in generic wording (especially `playbook/08-IMPLEMENTATION-DAY.md` and this template) **and** sync any studio playbook GitHub mirror in the same session.
+6. If the preference is a **reusable method** (day loop, closeout order, CI/CD gates, final reply shape, remotes mirror), also update the product’s `playbook/` copy in generic wording (especially `playbook/08-IMPLEMENTATION-DAY.md`, `playbook/09-CI-CD.md`, and this template) **and** sync any studio playbook GitHub mirror in the same session.
 
 ---
 
@@ -27,11 +27,11 @@
 
 ### Day run-through (implementation FE/BE)
 
-Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.md`.
+Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.md` + `playbook/09-CI-CD.md`.
 
 - When the owner says to work **today’s** tasks, finish the **whole** must-finish list without mid-day continue / “approve next slice” waits.
 - **Final reply after closeout:** (1) **Pareto 20% (teachable depth)** — most important topics only, each explained thoroughly so the owner can paste into ChatGPT and learn (terms, concepts, what shipped, why) — not ultra-short stubs; (2) **New-chat handoff** — copy-paste block for tomorrow. Emit both automatically.
-- **Closeout (automatic when 100%):** PR → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify → tracker → day page. Stay on Free until the owner explicitly pays; no paid trials/usage products by default.
+- **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch) → **CD when configured** (staging deploy → smoke → Sentry if live) → tracker → day page. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
 - Pause only for real blockers (security/compliance/product/spend decisions, interactive approvals, unfixable hard stops).
 
 ## Git and remotes
@@ -44,9 +44,11 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - Link your delivery / actor-loop doc here.
 - Link your board standing rules here (if any).
 - Implementation day pipeline: `playbook/08-IMPLEMENTATION-DAY.md`.
+- CI/CD gates: `playbook/09-CI-CD.md`.
 
 ## Changelog
 
 | Date (UTC) | Change |
 |------------|--------|
+| YYYY-MM-DD | CI/CD (GitHub Actions + staging/prod delivery) is a hard gate in implementation day closeout (`09-CI-CD.md`). |
 | YYYY-MM-DD | Created ledger; seeded day run-through + Pareto/handoff + playbook dual-update rule. |

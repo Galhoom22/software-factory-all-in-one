@@ -19,6 +19,7 @@ playbook/
   06-LESSONS.md             Planning-process lessons
   07-judgment/              Absorb outside methods as judgment only
   08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline (run-through → closeout → Pareto + handoff)
+  09-CI-CD.md               CI/CD gates (GitHub Actions + staging/prod delivery) for day closeout
   templates/                Skeleton of a new planning repository
 ```
 
@@ -39,8 +40,9 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`05-PROMPTS.md`](05-PROMPTS.md) | Ready prompts for the agent at each step, the regular audits, planning handoffs, and **implementation day** start/end prompts. |
 | [`06-LESSONS.md`](06-LESSONS.md) | Mistakes already made and how to avoid them. |
 | [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / ATLAS-style methods as **judgment only** — map onto existing docs; never install a second constitution. |
-| [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → CodeRabbit → merge → verify) → Pareto 20% + new-chat handoff; standing ↔ playbook mirror. |
-| [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository. |
+| [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff; standing ↔ playbook mirror. |
+| [`09-CI-CD.md`](09-CI-CD.md) | Continuous integration and delivery: planning CI, FE/BE GitHub Actions, staging auto-deploy / production approval, how CI/CD sits in the day closeout. |
+| [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository (includes `implementation/github-actions/` for FE/BE). |
 
 **Optional reference:** if your studio already has one finished planning repo with a solid `project-ui/`, copy its starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, and tests — then adapt names and routes. Do not bake that product’s name into this playbook.
 

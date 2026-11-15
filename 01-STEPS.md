@@ -169,5 +169,5 @@ Run these after every large batch of work (prompts in [`05-PROMPTS.md`](05-PROMP
 
 ### 23. Run implementation days as a fixed pipeline
 
-- Once FE/BE repos are building against a daily must-finish checklist, follow [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md): owner starts the day → agent finishes every checkbox without mid-day continue cues → automatic closeout (PR → CodeRabbit → merge → verify → tracker → day page) → final reply = Pareto 20% then new-chat handoff.
+- Once FE/BE repos are building against a daily must-finish checklist, follow [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) and [`09-CI-CD.md`](09-CI-CD.md): owner starts the day → agent finishes every checkbox without mid-day continue cues → automatic closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured** → tracker → day page) → final reply = Pareto 20% then new-chat handoff. Copy FE/BE workflow skeletons from [`templates/implementation/github-actions/`](templates/implementation/github-actions/) before the first implementation PR.
 - Seed the product’s `docs/OWNER_STANDING.md` from [`templates/docs/OWNER_STANDING.md`](templates/docs/OWNER_STANDING.md). When lasting day-loop preferences change, update standing **and** this playbook (generic wording) in the same session, then sync any studio playbook mirror.

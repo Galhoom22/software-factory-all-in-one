@@ -1,0 +1,12 @@
+# Optional pattern: append a deploy-staging job to backend-ci.yml / frontend-ci.yml
+# only after FORGE_DEPLOY_HOOK_STAGING (or host equivalent) exists in repo secrets.
+#
+#   deploy-staging:
+#     needs: [tests]   # or [checks] on frontend
+#     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Trigger staging deploy hook
+#         run: curl -fsS -X POST "$HOOK"
+#         env:
+#           HOOK: ${{ secrets.FORGE_DEPLOY_HOOK_STAGING }}

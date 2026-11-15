@@ -46,6 +46,7 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 - **Same-session mirror to implementation repos.** When the planning calendar moves, update FE/BE `docs/JIRA.md` (binding side, capacity, Story→sprint map) in the same session as Jira Start/Due and Schedule bodies.
 - **Board cards are separate FE/BE Stories**, not one shared umbrella with nested Sub-tasks for both owners. Assignee filters must show only that person’s work.
 - **Day run-through beats mid-day continue cues.** For implementation days, the owner starts once; the agent finishes the whole must-finish list, closeout, then Pareto 20% + handoff. Mid-day “approve the next slice” gates burn context and break the pipeline — see [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md).
+- **CI green before merge; CD only from main.** Local tests are not enough — wait for GitHub Actions on the day PR, then merge, then confirm CI on the default branch. Staging may auto-deploy from green `main`; production stays manual approval. Wire this into the day closeout, not as a side habit — [`09-CI-CD.md`](09-CI-CD.md).
 - **Pareto 20% is not “be terse.”** Owners paste the Pareto half into another AI to learn. Cover the important slice in enough depth (names, concepts, proofs) that teaching works; skip session chatter, not substance — see [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md#pareto-20--what-it-means).
 - **CodeRabbit gates merge, not the whole day.** On **Free**, the merge gate is **CLI/IDE** full review (GitHub posts a PR summary only). On paid, GitHub App full review becomes primary. Do not skip the Free CLI/IDE pass to “finish faster.”
 - **Standing changes update the playbook twice.** Lasting owner↔agent cadence belongs in product `OWNER_STANDING.md` **and** in this playbook (generic) + studio playbook mirror same session — otherwise the next product forgets the pipeline.
@@ -78,6 +79,7 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 
 ## Git, CI, and Tooling
 
+- **Implementation repos need their own Actions workflows** (not only the planning repo). Copy [`templates/implementation/github-actions/`](templates/implementation/github-actions/) early; day closeout treats CI as a merge gate ([`09-CI-CD.md`](09-CI-CD.md)).
 - **CI Node tracks Active LTS.** When Node publishes a new Active LTS, move `actions/setup-node` and SRS §2 together; leave Maintenance LTS only when a hard dependency forces it.
 - **Pin CI actions to commit SHAs** and pin CLI tools run through `npx` to an exact version, then let Dependabot update them.
 - **Use a branch and a pull request for large changes** (the shadcn foundation went through PR #1); small changes go straight to `main` after the checks.

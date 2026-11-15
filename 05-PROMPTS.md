@@ -105,7 +105,7 @@ Use with [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md). One fresh chat 
 
 ### Start the day
 
-> Start today’s tasks. Work the whole must-finish list for this calendar day end-to-end (day run-through). Do not pause for mid-day continue cues. When every checkbox is proven, run automatic closeout, then reply with Pareto 20% and the new-chat handoff only.
+> Start today’s tasks. Work the whole must-finish list for this calendar day end-to-end (day run-through). Do not pause for mid-day continue cues. When every checkbox is proven, run automatic closeout (PR → CI green → CodeRabbit → merge → verify on main → CD when configured → tracker → day page), then reply with Pareto 20% and the new-chat handoff only. Follow playbook `08-IMPLEMENTATION-DAY.md` and `09-CI-CD.md`.
 
 ### End-of-day reply shape (agent — after closeout)
 
