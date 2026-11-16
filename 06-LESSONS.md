@@ -24,6 +24,7 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 - **Start the decision log with the first decision.** Writing it later means reconstructing reasons from memory.
 - **One home per fact.** Versions only in SRS §2, endpoints only in the API contract, prices only in `requirements.md`. Repeated tables drift; a cleanup commit had to resolve contradictions between copies.
 - **ADRs live in `DECISIONS.md`, not a second SAD.** Capture options and honest ❌ consequences; add C4/context diagrams in FE/BE `ARCHITECTURE.md`. Do not paste a full Solution Architecture Document that rewrites BRD/PRD/SRS ([`07-judgment/sad-adr.md`](07-judgment/sad-adr.md)).
+- **Agent skills are judgment, not a second OS.** Keep vertical slices, assumption surfacing, and five-axis review; do not vendor a full skills pack over product `AGENTS.md` ([`07-judgment/agent-skills.md`](07-judgment/agent-skills.md)).
 - **State each standard once, at one level.** The compliance and SRS rows said WCAG 2.1 AA while the README and the audit used 2.2; pick the level in COMPLIANCE and make every other mention follow it.
 - **Every requirement row has an owner** (FE / BE / Both) from the moment it is written; CI checks it.
 - **Counting lines go stale first.** "Six templates", "14 AI sources", "21 tests": reread every line that counts or lists things before each commit.

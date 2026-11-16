@@ -2,6 +2,16 @@
 
 Ready prompts for the steps in [`01-STEPS.md`](01-STEPS.md). Replace the `<...>` parts. Write them in any language; the agent always replies in **English** per `AGENTS.md`. Each prompt assumes the agent follows `docs/AGENT_START.md` and `AGENTS.md` (checks, commit, push, CI).
 
+## Implementation bar (judgment)
+
+When coding in an implementation repo (see also [08-IMPLEMENTATION-DAY.md](08-IMPLEMENTATION-DAY.md) and [07-judgment/agent-skills.md](07-judgment/agent-skills.md)):
+
+1. State assumptions or ask — do not silently invent requirements.
+2. Prefer a thin vertical slice that leaves tests green.
+3. Contract before dual FE/BE work (docs/API_CONTRACT.md).
+4. High-stakes changes: name what would falsify the claim before Done.
+5. Pre-merge: correctness, readability, architecture, security, performance (CodeRabbit Free CLI + CI).
+
 ## Requirements-driven activation
 
 Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick templates.

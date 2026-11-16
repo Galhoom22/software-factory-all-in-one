@@ -37,5 +37,6 @@ Product locks and Governing Product Rules always win. A reference is inspiration
 | {{METHOD_OR_SKILL}} | Checklist / judgment note path | Installing it as a competing constitution |
 | AI system design guide (staff patterns) | `docs/AI.md` / `SECURITY.md` LM / FEATURE_SDLC AI module; playbook `07-judgment/ai-system-design.md` | Full guide tree, interview banks, rotating price tables |
 | SAD / ADR best-practice templates (C4 + Mermaid) | `DECISIONS.md` shape + FE/BE architecture views; playbook `07-judgment/sad-adr.md` | Copying full SAD examples or multi-language template trees |
+| Agent skills packs (lifecycle engineering) | Day closeout review axes + incremental slices; playbook `07-judgment/agent-skills.md` | Full pack install as AGENTS; autonomous build past owner gates |
 
 Read this file **before** a new borrowing pass.

@@ -158,7 +158,7 @@ These are independent unless an explicit product policy ties them together.
 | Detailed API design | New or changed external contracts |
 | Database & migration design | Schema changes or data-integrity risk |
 | Concurrency & idempotency | Parallel work, retries, or duplicate events |
-| Threat modeling | Material security or privacy risk |
+| Threat modeling | Material security or privacy risk — name trust boundaries and one abuse case before controls; quick STRIDE lens when helpful |
 | Detailed UX / accessibility | Complex interaction or accessibility-critical UI |
 | Architecture decision record | Significant architectural trade-off — write/supersede `DECISIONS.md` with options + consequences; update FE/BE C4 views if boundaries change |
 | Dependency evaluation | New third-party dependency |

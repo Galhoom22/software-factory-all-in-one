@@ -12,6 +12,7 @@ See playbook [`07-judgment/`](../../07-judgment/README.md). This file is the pro
 | Design skill packs | Distill into `DESIGN.md` + `project-ui/PRE-DELIVERY-UX.md` + `ANTI-SLOP.md` | Generators or packs that override product tokens |
 | AI system design guides | Map into `docs/AI.md` + `SECURITY.md` LM + FEATURE_SDLC AI module; playbook `07-judgment/ai-system-design.md` | Vendoring the full guide, interview banks, or rotating model price sheets |
 | SAD / ADR template packs | Strengthen `DECISIONS.md` + FE/BE `ARCHITECTURE.md` C4 views; playbook `07-judgment/sad-adr.md` | Full Uber-style SAD tree or parallel `docs/adr/` in planning |
+| Production agent-skills packs | Map behaviors into day loop + FEATURE_SDLC + SECURITY; playbook `07-judgment/agent-skills.md` | Installing 25 skills as a second constitution or mandatory slash-command OS |
 
 ## Converge checklist (end of a docs / UI pass)
 

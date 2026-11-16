@@ -33,6 +33,8 @@ Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent m
 
 ## Day run-through
 
+**Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. Review axes before merge: correctness, readability, architecture, security, performance — CodeRabbit Free CLI is the default mechanical assist. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md).
+
 When a new chat starts and the owner says to work **today’s** tasks (any clear start cue, including other languages), the agent:
 
 1. Opens that day’s must-finish list (daily checklist tool + linked issue keys).
