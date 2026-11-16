@@ -22,7 +22,7 @@ playbook/
   04-FEATURE_SDLC.md        Feature depth for implementation repos
   05-PROMPTS.md             Ready agent prompts + audits
   06-LESSONS.md             Planning-process lessons
-| [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / CLAS / AI-system-design methods as **judgment only** — map onto existing docs; never install a second constitution. |
+| [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / CLAS / AI-system-design / SAD-ADR methods as **judgment only** — map onto existing docs; never install a second constitution. |
   08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline
   09-CI-CD.md               CI/CD progressive phases for day closeout
   examples/                 Copyable samples (e.g. my-project-requirements)

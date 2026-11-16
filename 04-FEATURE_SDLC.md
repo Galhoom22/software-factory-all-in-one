@@ -160,7 +160,7 @@ These are independent unless an explicit product policy ties them together.
 | Concurrency & idempotency | Parallel work, retries, or duplicate events |
 | Threat modeling | Material security or privacy risk |
 | Detailed UX / accessibility | Complex interaction or accessibility-critical UI |
-| Architecture decision record | Significant architectural trade-off |
+| Architecture decision record | Significant architectural trade-off — write/supersede `DECISIONS.md` with options + consequences; update FE/BE C4 views if boundaries change |
 | Dependency evaluation | New third-party dependency |
 | Design pattern evaluation | Consequential new abstraction |
 | Performance engineering | Significant latency, throughput, or scale needs |

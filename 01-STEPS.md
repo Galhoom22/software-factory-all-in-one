@@ -93,7 +93,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 10. Decision log and AI sources
 
-- **Output:** [`docs/DECISIONS.md`](templates/docs/DECISIONS.md) from the first lasting decision, plus [`docs/decision-logs/`](templates/docs/decision-logs/) for light forks that are not yet ADRs, and [`docs/JUDGMENT.md`](templates/docs/JUDGMENT.md) when absorbing outside methods ([`07-judgment/`](07-judgment/README.md)). *Optional:* [`docs/AI.md`](templates/docs/AI.md) if the product uses AI: at least ten free sources with their current models, and the rules a source must pass before it touches real data.
+- **Output:** [`docs/DECISIONS.md`](templates/docs/DECISIONS.md) from the first lasting decision (context, options considered, decision, honest consequences; optional impact sections when earned), FE/BE [`ARCHITECTURE.md`](templates/docs/frontend/ARCHITECTURE.md) C4 context/container views, [`docs/decision-logs/`](templates/docs/decision-logs/) for light forks, and [`docs/JUDGMENT.md`](templates/docs/JUDGMENT.md) when absorbing outside methods ([`07-judgment/sad-adr.md`](07-judgment/sad-adr.md)). Do **not** add a standalone SAD that duplicates BRD/PRD/SRS. *Optional:* [`docs/AI.md`](templates/docs/AI.md) if the product uses AI: at least ten free sources with their current models, and the rules a source must pass before it touches real data.
 - **Rule:** never edit an accepted decision; add a new entry that supersedes it.
 - **Done:** every non-obvious choice in SRS §2 has an entry.
 
