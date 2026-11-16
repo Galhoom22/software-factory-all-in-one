@@ -35,5 +35,6 @@ Product locks and Governing Product Rules always win. A reference is inspiration
 | Source | Adopted as | Never |
 |--------|------------|-------|
 | {{METHOD_OR_SKILL}} | Checklist / judgment note path | Installing it as a competing constitution |
+| AI system design guide (staff patterns) | `docs/AI.md` / `SECURITY.md` LM / FEATURE_SDLC AI module; playbook `07-judgment/ai-system-design.md` | Full guide tree, interview banks, rotating price tables |
 
 Read this file **before** a new borrowing pass.

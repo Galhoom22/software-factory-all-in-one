@@ -45,6 +45,7 @@ When a new chat starts and the owner says to work **today’s** tasks (any clear
 
 - A missing owner decision would change security, compliance, product rules, or spend.
 - An interactive approval the agent cannot complete alone (host UI).
+- The day changes AI models, prompts, retrieval, or AI jobs: re-run the product fictional golden set (or assert smoke in `docs/AI.md`) before marking Done.
 - A hard blocker the agent cannot fix.
 
 State the blocker once, then stop. Do not weaken rails to keep moving.

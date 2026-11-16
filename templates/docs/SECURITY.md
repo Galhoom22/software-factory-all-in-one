@@ -72,7 +72,19 @@ Every page, component, endpoint, and job must satisfy this file and [`COMPLIANCE
 
 ## 7. AI and LLM Safety (LM)
 
-*Optional:* OWASP Top 10 for LLM Applications: prompt injection, output validation, no tools or agency, capped consumption.
+*Optional:* delete this section if the product uses no AI. Align with [`AI.md`](AI.md) and OWASP Top 10 for LLM Applications (verify current edition on owasp.org).
+
+| ID | Rule | Owner |
+|----|------|-------|
+| LM-01 | Personal / regulated data reaches an external model only after product strip/redact rules and user consent (`SR-04`). | BE |
+| LM-02 | Treat user uploads, retrieved documents, and tool results as **untrusted data**, not as instructions that can override system policy. | BE |
+| LM-03 | Models that hold privileged tools must not be the same path that freely reads untrusted text; quarantine or strip agency from untrusted content. | BE |
+| LM-04 | Validate model output before HTML, SQL, shell, file, or redirect use (`SR-05`, `SR-06`). | Both |
+| LM-05 | Cap tokens, rate, and spend per user; fail closed when limits or timeouts fire. | BE |
+| LM-06 | Tool/egress allowlists by default; never combine private data + untrusted content + open outbound fetch without a documented exception. | BE |
+| LM-07 | Pin model IDs; re-run the fictional golden set before a production model swap (`AI.md`). | BE |
+
+Upload parsing for AI ingest also follows §6 (content type by bytes, size caps including expanded archive entries).
 
 ## 8. Secrets and Cryptography (CR)
 
@@ -145,3 +157,4 @@ The prototype has no backend, so server rules do not apply to it, but it must no
 | OWASP ASVS | {{VERSION}} | [owasp.org/www-project-application-security-verification-standard](https://owasp.org/www-project-application-security-verification-standard/) |
 | OWASP API Security Top 10 | {{VERSION}} | [owasp.org/API-Security](https://owasp.org/API-Security/) |
 | NIST SP 800-63B | {{VERSION}} | [pages.nist.gov/800-63-4/sp800-63b](https://pages.nist.gov/800-63-4/sp800-63b/) |
+| OWASP Top 10 for LLM Applications | {{VERSION}} | [owasp.org/www-project-top-10-for-large-language-model-applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) |

@@ -18,7 +18,11 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Verify before claiming done (observation > hope) | Design-system generators that override `DESIGN.md` |
 | Six boundary questions on consequential writes | Microservices / cloud labs that fight the chosen architecture |
 | Converge checklist after a docs/UI pass | Installing competing UI “taste” packs as always-on authority |
+| AI production patterns (injection architecture, golden-set eval, pin models, RAG triad) | Dumping interview banks / price tables / LangChain trees into the repo |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
+AI system design judgment: [`ai-system-design.md`](ai-system-design.md).
+
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
+

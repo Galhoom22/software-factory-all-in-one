@@ -35,6 +35,7 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 - **Stable REJ-xx IDs.** Agents answer scope questions from one file; free-text “deferred” paragraphs drift.
 - **Actor packs beat a flat screen dump.** Per-actor `screens.md` + `flow.md` scale when the product has more than one role.
 - **Feature files hold evidence, not a second SRS.** Decompose once with [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md); match Lightweight / Standard / Comprehensive to real risk; never mark Done without linked verification. Done, Released, and Outcome Achieved are separate.
+- **AI paths need a golden set, not vibes.** Pin model IDs; treat uploads and retrieved text as untrusted; evaluate before lock/swap. Absorb AI design guides as judgment only ([`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md)) — never dump interview banks or price sheets into the repo.
 - **SEO is technical honesty, not growth hacks.** Index marketing and legal; keep the app `noindex`; ship robots/sitemap/hreflang/honest JSON-LD. Do not invent reviews or ratings for rich results ([`docs/SEO.md`](../docs/SEO.md) pattern).
 - **Docker is for local parity, not a silent production rewrite.** Compose for Postgres/mail/API on laptops; keep the accepted production host (Forge, PaaS, …) until DECISIONS change. Never bake secrets into images.
 - **Keep a `notes.md` for ideas**, and move an idea out once it is decided or built, so it never reads as a requirement.

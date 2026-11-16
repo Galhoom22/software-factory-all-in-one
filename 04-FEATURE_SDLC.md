@@ -168,8 +168,9 @@ These are independent unless an explicit product policy ties them together.
 | Compliance review | Contractual or regulatory obligations for this change |
 | Feature-flag management | Temporary or long-lived flag |
 | Data migration verification | Migration, backfill, or destructive data change |
+| AI path evaluation | New or changed model, prompt, retrieval, or AI job — require fictional golden-set pass; pin model IDs; if RAG: relevance + groundedness + answer relevance; privacy strip before provider; injection/agency threat row |
 
-Link out to the project's existing templates; do not paste large module bodies into every feature file.
+Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md).
 
 ### 12. Retrospective (optional)
 

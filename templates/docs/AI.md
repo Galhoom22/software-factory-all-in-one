@@ -40,15 +40,62 @@ Sources that fail these rules are for development with fictional data only.
 
 ## 5. Evaluation Before Choosing
 
-- Test each candidate on the same fictional dataset and record quality, speed, and cost; the final choice becomes a DECISIONS.md entry.
+- Test each candidate on the same **fictional** golden set; record quality, speed, and cost.
+- The final production lock (or swap) becomes a `DECISIONS.md` entry **after** the golden set passes.
+- API compatibility alone is not quality proof.
+- If the product uses retrieval (RAG): score **context relevance**, **groundedness** (faithfulness), and **answer relevance** on that set — not only “the model answered.”
 
 ## 6. Keeping This File Current
 
 - Re-verify models, limits, and terms on each provider's official page before relying on them.
+- Pin concrete model IDs in config; do not rely on SDK “default model” that can change on a dependency bump.
 
 ## 7. Provider and model independence
 
 - Prefer the framework AI SDK (or one thin OpenAI-compatible adapter) over a bespoke multi-provider client layer.
 - Configure chat and embeddings separately; allow per-task model IDs.
 - Vectors from different embedding models are not interchangeable: stamp the model id on each row and re-embed on change.
-- A fixed fictional evaluation set must pass before a production model lock or swap; API compatibility is not quality proof.
+- A fixed fictional evaluation set must pass before a production model lock or swap.
+
+## 8. Data path and trust boundaries
+
+- Call external AI only from the **backend**, preferably from **queued jobs**, on text that already meets product privacy rules (strip or redact personal data before any provider that must not see it).
+- Treat **user uploads**, **retrieved chunks**, web pages, and tool results as **untrusted data** — never as instructions that can raise privilege or call tools.
+- Prefer a clear separation: privileged planner (may call tools under policy) vs quarantined analysis of untrusted text (no tools, no egress).
+- Validate and sanitize **outputs** before they hit the browser, shell, SQL, or file system (`SECURITY.md` LM / IV).
+
+## 9. Capability ladder (avoid premature fine-tuning)
+
+Try in order until quality on the golden set is enough:
+
+1. Clear task prompts + structured output  
+2. Few-shot / in-context examples from the product domain  
+3. Retrieval over owned knowledge (with access control on every fetch)  
+4. Fine-tuning or heavier adaptation — only with evidence that 1–3 failed  
+
+## 10. Reliability for AI jobs
+
+- Timeouts, bounded retries with backoff, and a terminal failure path that marks the user-visible job failed and cleans temporary uploads.
+- Claim or lock work so queue redelivery cannot wipe a completed result.
+- Cross-vendor failover only if the **same golden set** still passes on the fallback (a silent quality change is an outage).
+- Observe refusals and empty outputs as failures when the product contract expects content — not only HTTP 5xx.
+
+## 11. Cost and routing
+
+- Route cheap models to cheap tasks; reserve stronger models for high-stakes steps.
+- Use provider prompt/prefix caching only for **stable, non-secret** prefixes.
+- Do not “max effort” or max tokens on every request by default.
+
+## 12. Anti-patterns (reject in design review)
+
+| Anti-pattern | Prefer |
+|--------------|--------|
+| One giant “god prompt” for every feature | Small task-specific prompts |
+| Retrieve top-N large and stuff the context | Smaller top-K + relevance threshold (and rerank if needed) |
+| Floating model defaults | Pinned model IDs + eval on change |
+| Tools + private data + open network together | Remove egress or tools or private data from that agent |
+| Fabricating missing professional facts “to help” | Leave unknown / require user confirm (product rules win) |
+
+## 13. Judgment source
+
+Staff-level AI design patterns are absorbed as judgment only — see playbook [`07-judgment/ai-system-design.md`](../../07-judgment/ai-system-design.md). Do not vendor interview guides or rotating price sheets into this repo.
