@@ -37,6 +37,8 @@ Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent m
 
 **Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. Review axes before merge: correctness, readability, architecture, security, performance — CodeRabbit Free CLI is the default mechanical assist. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md).
 
+**Feature SDLC on the day:** Stories that map to a `docs/features/…` file follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md). Same day: keep the verification matrix and lifecycle status honest (evidence links). Match proof depth to the feature’s profile. Never call the day Done from a filled template alone — gates in Design / Security / Verification / Integration still need real results.
+
 When a new chat starts and the owner says to work **today’s** tasks (any clear start cue, including other languages), the agent:
 
 1. Opens that day’s must-finish list (daily checklist tool + linked issue keys).
@@ -44,6 +46,7 @@ When a new chat starts and the owner says to work **today’s** tasks (any clear
 3. Does **not** stop after each slice to ask for continue / “go.”
 4. Does **not** open or merge a PR until the day’s must-finish is **100%** earned locally.
 5. Runs the **same local checks CI will run** before opening the PR (fail fast).
+6. When the day touches a mapped feature file, updates that file’s evidence (matrix + status + PR links) before closeout.
 
 **Pause only when:**
 
@@ -124,6 +127,6 @@ Do not leave standing only in chat memory or only in one product’s docs.
 ## What this is not
 
 - Not permission to half-finish the current actor (see [`02-DELIVERY.md`](02-DELIVERY.md) — no MVP mode).
-- Not a second requirements source. Features still follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md).
+- Not a second requirements source. Features still follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (adaptive depth, evidence, separate Done / Released / Outcome).
 - Not a substitute for SECURITY / COMPLIANCE / Governing Product Rules.
 - Not permission to skip CI because local tests passed, or to deploy from a laptop.

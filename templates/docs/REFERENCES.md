@@ -41,5 +41,6 @@ Product locks and Governing Product Rules always win. A reference is inspiration
 | Payment-provider Agents / security / webhooks / sandboxes docs | `SECURITY.md` WH, `COMPLIANCE.md` CP, BE TESTING, playbook `07-judgment/payments.md` | Product catalog dump; Connect/Issuing/Treasury unless the product needs them |
 | Playwright docs (intro, best practices, CI, accessibility) | FE `TESTING.md`, FE CI, playbook `07-judgment/playwright-e2e.md` | Exhaustive PR E2E; untrusted report uploads with secrets |
 | GoF-style design pattern courses (creational/structural/behavioral) | playbook `07-judgment/design-patterns.md` + FEATURE pattern gate | Course PDF/sample trees kept in the repo; pattern-for-show scaffolding |
+| Adaptive Feature-Level SDLC (external template) | `playbook/04-FEATURE_SDLC.md` + `08` day bridge | Full template dump into planning or empty feature bureaucracy |
 
 Read this file **before** a new borrowing pass.
