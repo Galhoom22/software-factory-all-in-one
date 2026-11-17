@@ -40,13 +40,14 @@ What fixed it (credit owner guidance if that unblocked it).
 Transferable rule for next time.
 ```
 
-## Promote to the playbook (same session)
+## Promote to the playbook (same session — automatic)
 
-If the **Lesson** would help the **next** product (not only this codebase):
+Agents promote **without waiting for the owner** when the **Lesson** would help the **next** product **and** clearly raises template professionalism:
 
-1. Add one bullet under the matching section in `playbook/06-LESSONS.md` (keep it forever-generic — no product names, people, or ticket keys).
+1. Add one bullet under the matching section in `playbook/06-LESSONS.md` (forever-generic — no product names, people, or ticket keys). Or tighten TESTING / SECURITY / CI templates if that is the better home.
 2. Sync the studio planning-playbook mirror the same session when that is how the studio works.
 3. Leave the detailed story in this folder; the playbook only keeps the rule.
+4. **Do not promote** typos, one-off env glitches, or a rule already present in `06-LESSONS.md`. Depth over volume.
 
 Starter examples (generic): [`queue-dispatch-before-commit.md`](queue-dispatch-before-commit.md), [`ci-runtime-mismatched-lockfile.md`](ci-runtime-mismatched-lockfile.md), [`ai-suggestions-must-not-mutate-source.md`](ai-suggestions-must-not-mutate-source.md).
 

@@ -38,6 +38,10 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 - The product’s `playbook/` copy (and any studio playbook mirror) must stay **generic forever**: practices only, never product names, people, tracker keys, or day-page URLs. Those belong in this OWNER_STANDING file and other product docs.
 
+## Automatic playbook improvement (hard rule)
+
+- When agents hit non-obvious problems or useful discoveries during build, they **automatically** (no owner ask) write `docs/learning-from-mistakes/` and, if the rule is reusable **and** raises professionalism, add a generic bullet to `playbook/06-LESSONS.md` (or the matching template) and sync any studio playbook mirror the same session. Skip noise and duplicates. Method: `playbook/08-IMPLEMENTATION-DAY.md` § Lesson capture.
+
 ## Git and remotes
 
 - Keep local default branch and `origin` identical after verified work: commit, push, confirm CI.

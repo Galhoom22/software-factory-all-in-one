@@ -29,7 +29,7 @@ Final chat reply only:
   1) Pareto 20% (teachable depth)   2) New-chat handoff
 ```
 
-**Lesson capture (when earned):** if the day produced a surprising root cause, write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo before the final reply. If the rule is reusable across products, also add one generic bullet to playbook `06-LESSONS.md` and sync the studio playbook mirror the same session. Skip routine fixes.
+**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, add one generic bullet to playbook `06-LESSONS.md` (or the matching template) and sync the studio playbook mirror the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
 
@@ -67,7 +67,7 @@ When must-finish is truly 100%:
 6. **CD (when staging/production hooks exist)** — wait for the staging deploy started by CI on `main` (or the documented hook); run the smoke test from the repo’s DEPLOYMENT guide; glance Sentry if that release is live. If CD is **not** configured yet, say so in the day summary and skip — do not invent a fake deploy pass. Production stays **manual approval** (`workflow_dispatch` + environment reviewers), not an automatic day step.
 7. **Issue tracker** — mark Done only when the Story’s acceptance is fully met; otherwise leave In Progress with a progress comment (Stories may span days).
 8. **Day page** — check off must-finish, mark day finished, fill finished / tomorrow / **full day summary** (include merge SHA, CI run link, and CD/smoke result or “CD not configured”).
-9. **Lesson capture (optional but expected when surprised)** — non-obvious root cause → implementation `docs/learning-from-mistakes/`; reusable rule → playbook `06-LESSONS.md` (+ studio sync). Do this before or with the Pareto reply.
+9. **Lesson capture (automatic when earned)** — surprising root cause or useful discovery → implementation `docs/learning-from-mistakes/`; if reusable **and** it raises professionalism → playbook `06-LESSONS.md` (or matching template) + studio sync same session. No owner prompt. Skip noise and duplicates.
 
 Never mark tracker or checklist finished before post-merge verification (and required CI) succeeds. Never wait for the owner to ask for closeout.
 

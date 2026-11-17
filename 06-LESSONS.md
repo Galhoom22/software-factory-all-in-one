@@ -1,6 +1,6 @@
 # Lessons — What Went Wrong Once, So It Doesn't Again
 
-Each lesson comes from real rework on a shipped planning product (many commits across long agent chats). Add a line whenever a mistake costs time. Keep each lesson to the problem and the fix — no product or personal names.
+Each lesson comes from real rework on a shipped planning product **or** from implementation days (API/app surprises). Add a line whenever a mistake costs time **or** a useful discovery would raise the next product’s professionalism. Agents do this **automatically** (no owner ask) when the quality bar is met — see [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) § Lesson capture. Keep each lesson to the problem and the fix — no product or personal names. Prefer one sharp reusable rule over a long diary.
 
 ## Product and Scope
 
