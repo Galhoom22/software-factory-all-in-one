@@ -62,6 +62,8 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Absorb GoF-style design-pattern judgment (problem → naive → blueprint; composition; shared language; forbid pattern-for-show) into FEATURE_SDLC and `07-judgment/design-patterns.md`. Do not dump a pattern catalog into the repo.
 
+> Absorb Pareto DSA / Big-O habits (name `n`, Time/Space, Brute→better, edges; hot-path check in the day loop) into `07-judgment/dsa-performance.md`, FEATURE Performance module, and `08-IMPLEMENTATION-DAY.md`. Do not dump LeetCode problem catalogs or solution trees into the product.
+
 > Absorb Playwright official intro / best practices / CI / accessibility into the FE TESTING guide and CI templates (short critical list, user-facing locators, web-first asserts, mocked PR API, axe, traces on retry). Update playbook `07-judgment/playwright-e2e.md` if missing. Do not grow a flaky mega-suite.
 
 > Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Plan webhook-first entitlement, signature verification, idempotent events, separate local/CI sandboxes (or fakes), and current Checkout/Payment Intent/Setup Intent patterns (no deprecated Sources/Charges/Tokens for new work). Update `requirements.md` §4, expand `SECURITY.md` WH and `COMPLIANCE.md` CP, and every document that mentions pricing. Use the provider's official Agents/docs (MCP/skills or `.md` URLs) — not memorized API shapes. Judgment: `playbook/07-judgment/payments.md`.

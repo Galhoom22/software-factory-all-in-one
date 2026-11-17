@@ -35,7 +35,7 @@ Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent m
 
 ## Day run-through
 
-**Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. Review axes before merge: correctness, readability, architecture, security, performance — CodeRabbit Free CLI is the default mechanical assist. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md).
+**Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. Review axes before merge: correctness, readability, architecture, security, performance (**includes DSA / Big-O on hot paths** — name `n`, complexity class, structure, edges) — CodeRabbit Free CLI is the default mechanical assist. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md) · [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md).
 
 **Feature SDLC on the day:** Stories that map to a `docs/features/…` file follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md). Same day: keep the verification matrix and lifecycle status honest (evidence links). Match proof depth to the feature’s profile. Never call the day Done from a filled template alone — gates in Design / Security / Verification / Integration still need real results.
 
@@ -95,7 +95,7 @@ Default while on the **Free** plan ([plans](https://docs.coderabbit.ai/managemen
 
 - Closeout still opens a PR (summary may post). Agent runs **CodeRabbit CLI or IDE review**, fixes **blocking** findings, then merges **only after CI is green**.
 - When the owner later pays (Essentials+), GitHub App full PR review becomes the primary review gate again; CLI/IDE stay optional early passes.
-- CodeRabbit does **not** replace CI tests, human judgment on auth/billing/AI/deletion, or SECURITY/COMPLIANCE red lines. Setup: product `docs/CODERABBIT.md` (or playbook `templates/docs/CODERABBIT.md`).
+- CodeRabbit does **not** replace CI tests, human judgment on auth/billing/AI/deletion, SECURITY/COMPLIANCE red lines, or the DSA hot-path check. Setup: product `docs/CODERABBIT.md` (or playbook `templates/docs/CODERABBIT.md`).
 
 ## Final reply shape (mandatory)
 

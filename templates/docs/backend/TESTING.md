@@ -56,3 +56,7 @@ Mutation testing, load suites in CI, browser E2E in the backend repo — unless 
 ## 6. CI
 
 Formatter, static analysis, full test suite, secret scan on every PR.
+
+## Algorithmic / hot-path performance
+
+When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `playbook/07-judgment/dsa-performance.md`.

@@ -69,3 +69,7 @@ Visual regression CI, Pact, exhaustive E2E of every screen state, full multi-bro
 ## 7. CI
 
 Lint, typecheck, unit/component, **critical Playwright** (when enabled), secret scan on every PR. Upload `playwright-report/` on failure/cancelled. Method: playbook `09-CI-CD.md` + `07-judgment/playwright-e2e.md`.
+
+## Algorithmic / hot-path performance
+
+When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `playbook/07-judgment/dsa-performance.md`.

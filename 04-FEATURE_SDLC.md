@@ -136,12 +136,15 @@ Time-box spikes; record the decision when the box ends. Approach, affected compo
 - [ ] Relevant security, performance, and reliability concerns addressed
 - [ ] Significant trade-offs recorded
 - [ ] Avoids unjustified complexity
+- [ ] Hot paths name expected `n` and an acceptable complexity class (or document why bounded/tiny)
 
 ### 5. Implementation
 
 Tasks traced to acceptance criteria; follow project standards; prefer framework-native features; no new pattern or package without a short justification (evaluate existing deps, license, advisories, transitive cost). Keep changes focused and independently verifiable. Link PRs as evidence (task → PR / commit).
 
 When introducing a consequential pattern, package, or architecture choice: record problem → selected solution → rejected alternative → trade-off (one row). Pattern judgment: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
+
+When the change is an algorithmic / collection / query hot path: prefer a correct linear (or justified n log n) approach over nested O(n²+) in the request path; record time↔space trade-offs. DSA judgment: [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md).
 
 ### 6. Security, privacy & reliability
 
@@ -228,7 +231,7 @@ These are independent unless an explicit product policy ties them together.
 | Architecture decision record | Significant architectural trade-off — write/supersede `DECISIONS.md` with options + consequences; update FE/BE C4 views if boundaries change |
 | Dependency evaluation | New third-party dependency |
 | Design pattern evaluation | Consequential new abstraction — name the **problem**, the **naive** approach, and why this blueprint (or framework-native stand-in) wins; prefer composition; forbid pattern-for-show; judgment: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md) |
-| Performance engineering | Significant latency, throughput, or scale needs |
+| Performance engineering | Significant latency, throughput, scale, **or algorithmic hot paths** (large collections, search/match/rank, export/batch, recursive walks) — name `n`, Time/Space class, structure choice, edges; judgment: [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md) |
 | Resilience & recovery | High-impact operational failure modes |
 | Compliance review | Contractual or regulatory obligations for this change |
 | Feature-flag management | Temporary or long-lived flag |
@@ -332,6 +335,7 @@ Copy into the implementation repository's `docs/features/<epic>/<feature>.md` an
 10. Release with safeguards proportional to operational risk.
 11. Monitor real behavior and validate intended outcomes.
 12. Continuously remove unnecessary engineering and process complexity.
+13. For hot paths: choose appropriate data structures and complexity class for real `n` — do not ship interview-TLE-shaped nested loops in production request paths.
 
 ---
 

@@ -24,6 +24,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Payment-provider agent guidance (hosted checkout, webhook entitlement, sandboxes, modern Intent APIs) | Dumping full Connect/Issuing/Tax catalogs or making agentic commerce required scope |
 | Playwright E2E (user-facing locators, web-first asserts, mocked PR CI, axe, traces on retry) | Exhaustive E2E of every screen on every PR; live backend required for CI; trace-on-every-test |
 | GoF-style design patterns (problem → naive → blueprint; composition; shared language) | Pattern encyclopedia in-repo; Factory/Observer on three-line fixes; Singleton as default global |
+| DSA / Big-O / algorithmic performance (Pareto study habits) | Day + FEATURE Performance module: name `n`, Time/Space class, structure, edges | Dumping LeetCode catalogs/solutions into product repos; interview grind as merge gate |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -38,6 +39,8 @@ Payments / billing judgment: [`payments.md`](payments.md).
 Playwright E2E judgment: [`playwright-e2e.md`](playwright-e2e.md).
 
 Design patterns judgment: [`design-patterns.md`](design-patterns.md).
+
+DSA / algorithmic performance judgment: [`dsa-performance.md`](dsa-performance.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

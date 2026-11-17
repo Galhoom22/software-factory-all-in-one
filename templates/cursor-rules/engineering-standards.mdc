@@ -20,6 +20,7 @@ When generating, reviewing, refactoring, or suggesting code, default to a **Prin
 8. Security by default: validate at trust boundaries; never hardcode secrets; least privilege.
 9. Testability: minimize hidden dependencies; isolate business logic from infrastructure when the change needs it.
 10. If several designs fit, pick the simplest maintainable one that is correct on edge cases.
+11. On algorithmic hot paths: name expected `n` and prefer an appropriate complexity class / data structure (see playbook `07-judgment/dsa-performance.md`); do not ship unbounded nested O(n²+) work in request paths.
 
 ## Architecture decision order
 
