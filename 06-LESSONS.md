@@ -98,6 +98,12 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - **Module providers must be registered.** A modular monolith with empty `bootstrap/providers` (or missing module service providers) “builds” but routes/bindings vanish. Prove module boot with a smoke test.
 - **Promote surprising root causes twice.** Write `docs/learning-from-mistakes/<kebab>.md` in the **implementation** repo the same day; if the rule is reusable across products, add one bullet to playbook [`06-LESSONS.md`](06-LESSONS.md) and sync the studio playbook mirror the same session.
 
+## Design patterns (implementation)
+
+- **Problem → naive → enhance — then name the blueprint.** Patterns are shared language for a solved pain (duplication, coupling, closed-for-extension), not a badge. If you cannot state the naive failure, you do not need the pattern yet.
+- **Composition before inheritance; framework before DIY.** Prefer has-a and platform features (middleware, jobs, container) over inventing Factory/Observer/Singleton scaffolding. Singleton-as-global is usually a smell.
+- **Not mandatory; not unique.** Many problems have more than one valid shape — record the chosen one and the rejected alternative when the abstraction is consequential (`DECISIONS.md` / FEATURE note). Judgment: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
+
 ## Frontend E2E (Playwright)
 
 - **Short critical list beats a flaky mega-suite.** Three to six user journeys with mocked API on PRs; unit/component for logic. Exhaustive `?state=` coverage belongs to the planning prototype crawl, not FE PR CI.
