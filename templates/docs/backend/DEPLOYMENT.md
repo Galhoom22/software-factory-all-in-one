@@ -30,7 +30,7 @@ Commands, timeouts shorter than the queue's retry window, and a heartbeat.
 
 ## 7. Email, Storage, and Webhooks
 
-Domain authentication (DKIM, SPF, DMARC), leaving the email sandbox, private storage with lifecycle rules, signed webhooks tested.
+Domain authentication (DKIM, SPF, DMARC), leaving the email sandbox, private storage with lifecycle rules, signed webhooks tested (live endpoints registered; duplicate/delayed/out-of-order events handled; keys rotated before first live charge).
 
 ## 8. Smoke Test (after every deploy)
 

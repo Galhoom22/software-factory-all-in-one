@@ -118,7 +118,17 @@ Upload parsing for AI ingest also follows §6 (content type by bytes, size caps 
 
 ## 12. Payments and Webhooks (WH)
 
-*Optional:* verify every webhook signature, process each event once, change plans only from verified webhooks.
+*Optional — delete this section if the product takes no payments.* Card data never touches product servers (`SR-07`). Prefer the provider's hosted checkout or Elements so the product stays out of raw PAN scope. Judgment: playbook [`07-judgment/payments.md`](../../07-judgment/payments.md).
+
+| ID | Rule | Owner |
+|----|------|-------|
+| WH-01 | Never store, log, or transmit raw card numbers, CVCs, or full PANs; only provider tokens / last-four metadata the API returns as safe. | Both |
+| WH-02 | Verify every webhook (or event destination) signature; reject missing or invalid signatures fail-closed. | BE |
+| WH-03 | Process each provider event at most once (persist event id); tolerate duplicates, delays, and out-of-order delivery. | BE |
+| WH-04 | Grant, change, or revoke paid entitlement only from verified provider events (or an equivalent server-side confirm) — never from a browser success redirect or client "paid" flag alone. | BE |
+| WH-05 | Secret API keys and webhook signing secrets stay server-side; publishable keys only in the browser; rotate before first live charge. | BE |
+| WH-06 | New integrations use current Checkout Session / Payment Intent / Setup Intent patterns (or the provider's current equivalent); do not introduce deprecated Sources / Charges-first / Tokens flows for new work. | Both |
+| WH-07 | Local and CI use separate sandboxes (or full fakes in CI); never live keys in tests or agents. | BE |
 
 ## 13. Logging, Errors, and Monitoring (LG)
 
@@ -148,6 +158,7 @@ The prototype has no backend, so server rules do not apply to it, but it must no
 - [ ] Every rule above reviewed against the implementation.
 - [ ] Verified against OWASP ASVS Level 1 at least.
 - [ ] Independent penetration test; critical and high findings fixed.
+- [ ] If payments are in scope: live webhook endpoints registered; signature + idempotency proven; secret keys rotated; no card data on product servers (WH-01–WH-07).
 
 ## 16. Sources
 

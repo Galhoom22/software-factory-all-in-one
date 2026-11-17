@@ -38,5 +38,6 @@ Product locks and Governing Product Rules always win. A reference is inspiration
 | AI system design guide (staff patterns) | `docs/AI.md` / `SECURITY.md` LM / FEATURE_SDLC AI module; playbook `07-judgment/ai-system-design.md` | Full guide tree, interview banks, rotating price tables |
 | SAD / ADR best-practice templates (C4 + Mermaid) | `DECISIONS.md` shape + FE/BE architecture views; playbook `07-judgment/sad-adr.md` | Copying full SAD examples or multi-language template trees |
 | Agent skills packs (lifecycle engineering) | Day closeout review axes + incremental slices; playbook `07-judgment/agent-skills.md` | Full pack install as AGENTS; autonomous build past owner gates |
+| Payment-provider Agents / security / webhooks / sandboxes docs | `SECURITY.md` WH, `COMPLIANCE.md` CP, BE TESTING, playbook `07-judgment/payments.md` | Product catalog dump; Connect/Issuing/Treasury unless the product needs them |
 
 Read this file **before** a new borrowing pass.

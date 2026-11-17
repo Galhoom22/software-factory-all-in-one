@@ -35,6 +35,7 @@
 | API error mapping | Important contract error codes → correct UI |
 | Auth gate | Protected routes redirect when signed out |
 | High-risk widgets | Interactive flows that can lose data or money |
+| Billing UI | Full price + renewal shown before CTA; cancel path reachable; never treat thank-you query params as paid proof |
 | Critical E2E | Short journey list in each supported locale |
 | axe | No critical/serious on those journeys |
 

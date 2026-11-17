@@ -21,6 +21,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | AI production patterns (injection architecture, golden-set eval, pin models, RAG triad) | Dumping interview banks / price tables / LangChain trees into the repo |
 | SAD/ADR craft (options, consequences, optional impacts, C4 progressive views) | Standalone SAD that duplicates BRD/PRD/SRS; microservices examples forced onto a modular monolith |
 | Agent lifecycle skills (assumptions, vertical slices, five-axis review, threat boundaries) | Vendoring a full skills pack as AGENTS / always-on override of product rules |
+| Payment-provider agent guidance (hosted checkout, webhook entitlement, sandboxes, modern Intent APIs) | Dumping full Connect/Issuing/Tax catalogs or making agentic commerce required scope |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -29,6 +30,8 @@ AI system design judgment: [`ai-system-design.md`](ai-system-design.md).
 SAD / ADR judgment: [`sad-adr.md`](sad-adr.md).
 
 Agent engineering skills judgment: [`agent-skills.md`](agent-skills.md).
+
+Payments / billing judgment: [`payments.md`](payments.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

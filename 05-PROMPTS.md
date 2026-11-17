@@ -60,7 +60,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Create the BRD, PRD, and SRS from `requirements.md`. Every FR and NFR has an Owner (FE / BE / Both) and appears in SRS §10 traceability. Write the stack in SRS §2 with versions checked today on each official site.
 
-> Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Update `requirements.md` §4 and every document that mentions pricing.
+> Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Plan webhook-first entitlement, signature verification, idempotent events, separate local/CI sandboxes (or fakes), and current Checkout/Payment Intent/Setup Intent patterns (no deprecated Sources/Charges/Tokens for new work). Update `requirements.md` §4, expand `SECURITY.md` WH and `COMPLIANCE.md` CP, and every document that mentions pricing. Use the provider's official Agents/docs (MCP/skills or `.md` URLs) — not memorized API shapes. Judgment: `playbook/07-judgment/payments.md`.
 
 > Write `docs/COMPLIANCE.md` covering the data protection, consumer protection, payment, marketing, accessibility, and AI laws of `<markets>`, from official sources. List the UI each law requires.
 

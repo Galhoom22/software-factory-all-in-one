@@ -36,7 +36,7 @@ Before claiming an implementation slice Done:
 
 1. Assumptions stated or eliminated?
 2. Slice left the system testable (not a half-wired horizontal layer)?
-3. Trust boundaries named if the change touches auth, PII, uploads, webhooks, or AI?
+3. Trust boundaries named if the change touches auth, PII, uploads, webhooks, money/billing, or AI?
 4. Five-axis glance (or CodeRabbit Free) done; structural issues have a proposed move?
 5. Evidence linked (tests, CI, golden set for AI) — not “looks fine”?
 

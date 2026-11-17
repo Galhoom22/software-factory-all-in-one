@@ -72,6 +72,7 @@ Agents: run the same scripts locally before every push; watch the Actions run af
 
 - Secret scan (when added).
 - Fail the job on test failure; do not `continue-on-error` for the merge gate.
+- **Payments:** fake the provider in CI by default. If a sandbox is required, use a **CI-only** sandbox (never shared with local, never live keys). Cover bad webhook signatures and duplicate event ids when billing is in scope.
 
 Copy the YAML under [`templates/implementation/github-actions/`](templates/implementation/github-actions/) into each FE/BE repo’s `.github/workflows/`, then pin SHAs and match the stack versions. **Start with `backend-ci.yml` / `frontend-ci.yml` only (Phase A).** Add staging/production from `ci-with-staging-deploy.yml` / `deploy-production.yml` only when entering Phase B/C.
 

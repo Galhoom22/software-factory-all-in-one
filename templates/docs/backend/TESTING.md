@@ -14,7 +14,7 @@
 
 1. Test behavior that can lose money, leak data, invent facts, or break authorization.
 2. Feature (HTTP) tests are the default; unit tests for pure domain math.
-3. Fake external providers (AI, payments, mail) in CI.
+3. Fake external providers (AI, payments, mail) in CI. If a real provider sandbox is required, use a **CI-only** sandbox separate from local developer sandboxes.
 4. Coverage % is a signal, not a merge goal.
 5. Depth follows `playbook/04-FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
 
@@ -36,6 +36,7 @@
 | Object-level auth | Foreign IDs cannot read/write another user’s resources |
 | Privacy / AI | Outbound payloads have no direct identifiers (if the product uses AI) |
 | Money / limits | Plan, credits, webhooks, idempotency as applicable |
+| Payments / webhooks | Bad signature → reject; duplicate event id → no double entitlement; success URL without webhook → no upgrade; sandbox/fake only (never live keys) |
 | Auth | Password and session rules from SECURITY |
 
 ## 4. Per-feature matrix

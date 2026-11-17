@@ -51,6 +51,9 @@ Launch in a market only after its row is reviewed.
 |----|------|-------|
 | CP-01 | Show the full price, period, taxes, and renewal terms before payment. | FE |
 | CP-02 | No dark patterns: no hidden costs, fake urgency, or confirm-shaming. | FE |
+| CP-03 | Paid access is granted only after the provider confirms the payment (verified webhook / server confirm) — not when the user merely lands on a success page. | BE |
+| CP-04 | Cancelling or downgrading is one clear path from billing settings (`RL-05`); no retention maze. | Both |
+| CP-05 | Customers can reach receipts or invoices for charges they made (provider portal or in-app list). | Both |
 
 ## 6. Marketing and Cookies
 
@@ -74,3 +77,4 @@ Launch in a market only after its row is reviewed.
 - [ ] Every market's laws reviewed by a lawyer.
 - [ ] Legal documents published and linked from every public page's footer.
 - [ ] Data processing agreements signed with every vendor.
+- [ ] If payments are in scope: full price/renewal shown before charge; cancel as easy as start; entitlement only after provider confirm; receipts reachable (CP-01–CP-05).

@@ -17,6 +17,9 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 - **Prices and periods changed several times** (including a mid commitment SKU, a doubling paid-plan ladder, a temporary drop of a period under MVP framing, then restoring the production catalog). Keep amounts and periods in one place (`requirements.md` §4) so each change is one edit plus links; record it in DECISIONS without rewriting older accepted entries.
 - **Show only the main payment methods.** A long list of wallets and gateways on the landing page looked cluttered; the full list belongs at checkout, by country.
 - **Undefined numbers stay labelled.** A value not decided yet (such as plan limits) is a clearly labelled sample in the prototype and "defined later" in the requirements.
+- **Never upgrade from the thank-you URL.** Browser redirects are UX; paid entitlement comes from a verified webhook (or server confirm) with idempotent event ids. Signature failures fail closed.
+- **Separate sandboxes for local and CI.** Shared test-mode data makes flaky suites and polluted fixtures. Prefer fakes in CI; if a live sandbox is needed, isolate it.
+- **Agents use provider MCP/skills for payments, not memory.** Pin SDK versions from the registry; prefer current Intent/Checkout/Setup APIs; skip deprecated Sources/Charges/Tokens for new work. Judgment: [`07-judgment/payments.md`](07-judgment/payments.md).
 
 ## Documents
 

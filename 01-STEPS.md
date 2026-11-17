@@ -77,7 +77,8 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 - **Output:** `requirements.md` §4: plans, prices, regional prices, one-time credits if any, renewal rules, and payment providers per market.
 - **Rules:** set prices only in US dollars and convert to local currency at payment time (local-currency prices go stale when exchange rates move); show only the main payment methods on public pages (too many confuse the user); hosted checkout only (no card data on the product); state which methods can renew automatically; keep the smallest payment well above the provider's fixed fee per payment (for one-time packs, give regional users more units for the same price instead of a lower price). Values not decided yet are written as "defined later" and shown as labelled samples.
-- **Done:** prices exist in one place; every other document links to it.
+- **Also plan the rails (when the product charges):** entitlement only after verified provider webhooks; signature verification + idempotent event handling; current Checkout / Payment Intent / Setup Intent patterns (not deprecated Sources/Charges/Tokens for new work); separate local vs CI sandboxes or full fakes in CI; secret keys server-only. Expand `SECURITY.md` WH and `COMPLIANCE.md` CP; judgment in [`07-judgment/payments.md`](07-judgment/payments.md).
+- **Done:** prices exist in one place; every other document links to it; payment security/compliance IDs exist when billing is in scope.
 
 ### 8. Legal and security red lines
 

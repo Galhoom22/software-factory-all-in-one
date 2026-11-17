@@ -91,7 +91,7 @@ Assess each factor as Low / Medium / High: scope & complexity, dependencies, sec
 | **Standard** (default) | Ordinary feature work across a few components, meaningful logic, or moderate risk | Documented approach; unit / integration / contract tests as needed; relevant failure analysis; normal review |
 | **Comprehensive** | Material High risk in security, privacy, integrity, reliability, architecture, or deployment | Trade-off analysis; explicit mitigations; expanded verification and specialist review when needed; rollout and recovery plan |
 
-**Selection rules:** any material High risk → Comprehensive; Lightweight only when remaining risks are bounded and existing controls suffice; risk **impact** matters more than how many Mediums appear; reassess when scope or risk changes; mandatory product security and compliance still apply at every profile.
+**Selection rules:** any material High risk → Comprehensive; Lightweight only when remaining risks are bounded and existing controls suffice; risk **impact** matters more than how many Mediums appear; reassess when scope or risk changes; mandatory product security and compliance still apply at every profile. **Money / first-time checkout / webhook entitlement:** treat as material High for data integrity and security — default **Comprehensive** (or Standard only with explicit WH mitigations and tests); never Lightweight for the first payments slice.
 
 ---
 
@@ -169,8 +169,9 @@ These are independent unless an explicit product policy ties them together.
 | Feature-flag management | Temporary or long-lived flag |
 | Data migration verification | Migration, backfill, or destructive data change |
 | AI path evaluation | New or changed model, prompt, retrieval, or AI job — require fictional golden-set pass; pin model IDs; if RAG: relevance + groundedness + answer relevance; privacy strip before provider; injection/agency threat row |
+| Payments / billing | Checkout, subscriptions, credits, refunds, or provider webhooks — activate WH threat rows; signature + idempotency tests; entitlement never from success URL alone; sandbox/fake isolation; go-live key rotation checklist |
 
-Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md).
+Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md). Judgment for payments: [`07-judgment/payments.md`](07-judgment/payments.md).
 
 ### 12. Retrospective (optional)
 

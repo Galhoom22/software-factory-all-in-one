@@ -8,7 +8,7 @@ Copy into the backend implementation repository. Keep this short; point to SECUR
 - No cross-user resource access.
 - No secrets in code or logs.
 - No PII in AI payloads or application logs.
-- Webhook signatures verified; no card data stored.
+- Webhook signatures verified; no card data stored; entitlement only from verified events (not success URLs); no deprecated Sources/Charges/Tokens for new payment work.
 - Governing product rules enforced in code (no fabrication, limits, consent).
 
 ## Prefer
