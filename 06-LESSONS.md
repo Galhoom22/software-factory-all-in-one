@@ -98,6 +98,14 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - **Module providers must be registered.** A modular monolith with empty `bootstrap/providers` (or missing module service providers) “builds” but routes/bindings vanish. Prove module boot with a smoke test.
 - **Promote surprising root causes twice.** Write `docs/learning-from-mistakes/<kebab>.md` in the **implementation** repo the same day; if the rule is reusable across products, add one bullet to playbook [`06-LESSONS.md`](06-LESSONS.md) and sync the studio playbook mirror the same session.
 
+## Frontend E2E (Playwright)
+
+- **Short critical list beats a flaky mega-suite.** Three to six user journeys with mocked API on PRs; unit/component for logic. Exhaustive `?state=` coverage belongs to the planning prototype crawl, not FE PR CI.
+- **User-facing locators and web-first assertions.** Prefer role/label/text/test-id; `await expect(…).toBeVisible()`. CSS/XPath and manual `isVisible()` checks cause flakes when the DOM or timing moves.
+- **Isolate every test; mock what you do not own.** Own cookies/storage per test; `page.route` third parties. Never hit a live sibling API or external checkout on PR CI.
+- **axe inside Playwright, after the UI is ready.** Wait for the state under test, then analyze; WCAG A/AA tags when the product requires AA. Automated axe is necessary, not sufficient.
+- **CI: Chromium-first, traces on retry, report artifact.** Install only needed browsers; `trace: on-first-retry`; upload HTML report; treat artifacts like secrets. Judgment: [`07-judgment/playwright-e2e.md`](07-judgment/playwright-e2e.md).
+
 ## Prototype Engineering
 
 - **Install only with the official installer**, then add one approved dependency at a time.

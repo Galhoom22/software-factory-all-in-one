@@ -50,6 +50,7 @@ When a new chat starts and the owner says to work **today’s** tasks (any clear
 - A missing owner decision would change security, compliance, product rules, or spend.
 - An interactive approval the agent cannot complete alone (host UI).
 - The day changes AI models, prompts, retrieval, or AI jobs: re-run the product fictional golden set (or assert smoke in `docs/AI.md`) before marking Done.
+- The day changes FE critical journeys (auth, money, locale, irreversible UI): run the matching **mocked** Playwright list locally the same way CI will; on failure use HTML report / trace — do not guess.
 - The day changes a lasting architecture or product trade-off: add or supersede a `docs/DECISIONS.md` entry (options + consequences) in the same session before Done.
 - A hard blocker the agent cannot fix.
 

@@ -41,6 +41,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 ## Automatic playbook improvement (hard rule)
 
 - When agents hit non-obvious problems or useful discoveries during build, they **automatically** (no owner ask) write `docs/learning-from-mistakes/` and, if the rule is reusable **and** raises professionalism, add a generic bullet to `playbook/06-LESSONS.md` (or the matching template) and sync any studio playbook mirror the same session. Skip noise and duplicates. Method: `playbook/08-IMPLEMENTATION-DAY.md` § Lesson capture.
+- When the owner says to **add something to the playbook / template**, always update local `playbook/` **and** sync the studio GitHub mirror in the same session — no second ask. Quality bar: only changes that raise professionalism; forever-generic.
 
 ## Git and remotes
 

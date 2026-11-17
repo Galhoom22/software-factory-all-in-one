@@ -66,8 +66,10 @@ Agents: run the same scripts locally before every push; watch the Actions run af
 
 ### Frontend (typical Next.js)
 
-- Checkout → setup Node (Active LTS from SRS) → `npm ci` → lint → unit/component tests → build → short Playwright list if the TESTING guide requires it on PRs.
+- Checkout → setup Node (Active LTS from SRS / lockfile) → `npm ci` → lint → unit/component tests → build → **short Playwright list** when the TESTING guide requires it on PRs.
 - Mock the API on PRs; full-stack smoke is staging/release.
+- **Playwright on CI (when enabled):** `npx playwright install chromium --with-deps` (or only the browsers you run); `npx playwright test`; upload `playwright-report/` with `if: !cancelled()`; configure `trace: 'on-first-retry'` in `playwright.config` — not traces on every test. Prefer Linux runners. Shard only when the suite is large enough to need it.
+- Keep `@playwright/test` current when upgrading; re-install browsers after bumps. Judgment: [`07-judgment/playwright-e2e.md`](07-judgment/playwright-e2e.md).
 
 ### Shared on every implementation PR
 

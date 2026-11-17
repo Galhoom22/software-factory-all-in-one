@@ -22,6 +22,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | SAD/ADR craft (options, consequences, optional impacts, C4 progressive views) | Standalone SAD that duplicates BRD/PRD/SRS; microservices examples forced onto a modular monolith |
 | Agent lifecycle skills (assumptions, vertical slices, five-axis review, threat boundaries) | Vendoring a full skills pack as AGENTS / always-on override of product rules |
 | Payment-provider agent guidance (hosted checkout, webhook entitlement, sandboxes, modern Intent APIs) | Dumping full Connect/Issuing/Tax catalogs or making agentic commerce required scope |
+| Playwright E2E (user-facing locators, web-first asserts, mocked PR CI, axe, traces on retry) | Exhaustive E2E of every screen on every PR; live backend required for CI; trace-on-every-test |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -32,6 +33,8 @@ SAD / ADR judgment: [`sad-adr.md`](sad-adr.md).
 Agent engineering skills judgment: [`agent-skills.md`](agent-skills.md).
 
 Payments / billing judgment: [`payments.md`](payments.md).
+
+Playwright E2E judgment: [`playwright-e2e.md`](playwright-e2e.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 
