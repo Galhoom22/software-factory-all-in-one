@@ -14,9 +14,10 @@
 
 1. Test behavior that can lose money, leak data, invent facts, or break authorization.
 2. Feature (HTTP) tests are the default; unit tests for pure domain math.
-3. Fake external providers (AI, payments, mail) in CI. If a real provider sandbox is required, use a **CI-only** sandbox separate from local developer sandboxes.
-4. Coverage % is a signal, not a merge goal.
-5. Depth follows `playbook/04-FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
+3. Fake external providers (AI, payments, mail, embeddings) in CI. If a real provider sandbox is required, use a **CI-only** sandbox separate from local developer sandboxes.
+4. SPA cookie-auth feature tests use the stateful/session harness the product actually ships — not bearer-only assumptions.
+5. Coverage % is a signal, not a merge goal.
+6. Depth follows `playbook/04-FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
 
 ## 2. Tooling
 
@@ -37,6 +38,9 @@
 | Privacy / AI | Outbound payloads have no direct identifiers (if the product uses AI) |
 | Money / limits | Plan, credits, webhooks, idempotency as applicable |
 | Payments / webhooks | Bad signature → reject; duplicate event id → no double entitlement; success URL without webhook → no upgrade; sandbox/fake only (never live keys) |
+| Queue + DB | Job that loads a row created in the same request: prove dispatch-after-commit (sync queue must not race uncommitted rows) |
+| AI output | Fabrication guards (length / identity / numerics) + consent gate; suggestions do not mutate source records |
+| Authz | Second-user foreign ID → `404 not_found` JSON (not 403) |
 | Auth | Password and session rules from SECURITY |
 
 ## 4. Per-feature matrix

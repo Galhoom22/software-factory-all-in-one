@@ -62,7 +62,7 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 
 - **Pick references once, with one role each.** Many skill and guideline sites were tried one by one; only rules that filled a real gap were kept. Decide the component foundation, the UX reference, and the visual inspiration early, and write the precedence order. Keep anti-slop and pre-delivery checklists subordinate to `DESIGN.md`.
 - **Design errors are a log, not chat.** Owner-reported visual defects: fix same turn, append to `DESIGN-ERRORS.md`, so the next session does not repeat them.
-- **Engineering aha ≠ planning lessons.** Put non-obvious bug root causes in `docs/learning-from-mistakes/`; keep `06-LESSONS.md` for process mistakes.
+- **Engineering aha ≠ planning lessons.** Put non-obvious bug root causes in `docs/learning-from-mistakes/` (planning **or** implementation repo). Promote reusable rules into this file (especially **Implementation (backend API)**) the same session; keep product names out.
 - **Distinct brand, not a copy.** A dark theme too close to a competitor's had to be redone, and the light theme was redone to match it. Borrow patterns, never palettes, logos, or illustrations wholesale.
 - **The product name needs a wordmark** that stands out from the copy, and a unique logo; plan them with the brand, not after the screens.
 - **The screen index changed four times** (Figma-like canvas, live thumbnails, text catalogue, then one "Screens and flows" page). Build the final shape from PROTOTYPE.md directly.
@@ -72,6 +72,31 @@ Each lesson comes from real rework on a shipped planning product (many commits a
 - **Design tokens only.** Raw colors and default palette classes break the themes; the guard catches them.
 - **Interactive states are part of the design**: hover, pressed, current section, sticky header, 44px touch targets on touch screens.
 - **Small text in empty states is easy to miss**; the owner asked to enlarge an empty preview message. Check empty states at real size.
+
+## Implementation (backend API)
+
+Hard-won while shipping a real Laravel (or similar) modular API beside a planning contract. Keep product names out; write the practice.
+
+- **Inventory `main` before reinventing.** A multi-day Story often already landed jobs, validators, or routes on an earlier day. Read the feature file + handoff “already on main” list first — deepening beats a duplicate greenfield.
+- **Dispatch queue work after the DB commit.** Creating a row and `dispatch()` inside the same transaction lets a sync/fast worker run before commit → job loads nothing and sticks as `queued`. Create rows in the transaction; dispatch **after** commit (embeddings, imports, AI suggestion jobs).
+- **AI proposes; humans commit.** Async suggestion endpoints return `202` + a suggestion set. They must **not** mutate the canonical user record. The client applies via normal CRUD. Auto-merge “to be helpful” violates product trust.
+- **Cheap fabrication guards beat vibes.** After the model replies, enforce a length floor, identity-field survival (company/school/title/…), and numeric-token survival (years, grades, counts). Reject drops that invent or erase facts; allow synonym/clarity rewrites. Full NLP can wait.
+- **Consent: soft-skip vs hard-fail.** Background enrichments (e.g. embed-on-save) skip quietly when AI consent is missing so ordinary saves still work. Explicit AI endpoints fail closed with `ai_consent_required` (or the product’s contract code).
+- **Anonymize before any external AI call.** Strip direct identifiers in Shared code; send the stripped payload; restore only into trusted local shapes. Log purpose/provider for ops — never leak provider secrets or raw PII in API resources.
+- **Stamp the embedding model; guard stale jobs.** Store `embedding_model` with the vector. Ignore or refuse older jobs that would overwrite a newer item’s embedding after a later save.
+- **Vector DB in prod; JSON/null fallback in CI.** pgvector (or equivalent) on Postgres; sqlite/CI tests use a non-vector column or fake so the suite stays fast without the extension.
+- **Fake AI/embeddings in CI.** Use the framework’s fake (`Embeddings::fake()`, HTTP fakes). Never live provider keys in GitHub Actions.
+- **Foreign IDs → `404 not_found` JSON.** Ownership misses must not return `403` that confirms the record exists. One shared NotFound exception + renderer; feature tests with a second user.
+- **Validate discriminators before nested rules.** If a request uses a type string to choose content rules, reject non-strings first — otherwise validation errors explode or lie.
+- **CI language version follows the lockfile.** Composer/npm pins (and transitive Symfony/etc.) can require a newer PHP/Node than “latest LTS memory.” Match `composer.lock` / engine fields in Actions; re-verify after lock bumps.
+- **Run the formatter before every PR.** Format-check gates (`pint --test`, prettier) fail closeout otherwise. Apply format locally; don’t “fix later.”
+- **CodeRabbit Free is a merge gate, not decoration.** Run CLI/IDE review; fix **blocking** findings (authz gaps, silent export field drops, unsafe dispatch) before merge. Review does not replace CI.
+- **SPA cookie auth tests must be stateful.** Sanctum/session login tests need the SPA/stateful harness (`withSession` / acting as first-party), not bearer-only assumptions, or login appears to “not stick.”
+- **Host PHP vs Compose hostname.** Local Herd/host PHP uses `DB_HOST=127.0.0.1`; containers use the Compose service name. Document both; don’t copy one `.env` blindly into the other.
+- **Export templates drop fields silently.** Every identity field the API returns must render in PDF/DOCX (or the review will flag data loss). One action, two builders is fine — shared field checklist is not optional.
+- **Webhook-only plan/credit changes.** Checkout success URLs are UX. Entitlement updates land from verified webhooks (see payments judgment). Coupons and prices stay server-side.
+- **Module providers must be registered.** A modular monolith with empty `bootstrap/providers` (or missing module service providers) “builds” but routes/bindings vanish. Prove module boot with a smoke test.
+- **Promote surprising root causes twice.** Write `docs/learning-from-mistakes/<kebab>.md` in the **implementation** repo the same day; if the rule is reusable across products, add one bullet to playbook [`06-LESSONS.md`](06-LESSONS.md) and sync the studio playbook mirror the same session.
 
 ## Prototype Engineering
 

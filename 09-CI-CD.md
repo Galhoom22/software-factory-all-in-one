@@ -59,9 +59,10 @@ Agents: run the same scripts locally before every push; watch the Actions run af
 
 ### Backend (typical Laravel)
 
-- Checkout → setup PHP (version from SRS / `composer.json`) → `composer install` → app key for testing → format check (e.g. Pint `--test`) → `php artisan test` (or Pest).
-- Prefer the same DB driver the test suite already uses in CI (often SQLite `:memory:` via `phpunit.xml`) so PRs stay fast. Use Compose Postgres in CI only when tests require it.
+- Checkout → setup PHP (**version from `composer.lock` / platform pins**, not memorized “latest”) → `composer install` → app key for testing → format check (e.g. Pint `--test`) → `php artisan test` (or Pest).
+- Prefer the same DB driver the test suite already uses in CI (often SQLite `:memory:` via `phpunit.xml`) so PRs stay fast. Use Compose Postgres in CI only when tests require it (pgvector features need Postgres or a documented fallback).
 - Optional later: static analysis, `composer audit`.
+- Format locally before push — a red Pint/prettier gate is a closeout failure, not a surprise.
 
 ### Frontend (typical Next.js)
 
