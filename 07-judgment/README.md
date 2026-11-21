@@ -34,6 +34,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Booking / reservations | Holds, recheck-before-commit, idempotency, inventory, cancel snapshots; AI/MCP sandbox | Confirm from search cache; skip recheck; double-book on retry |
 | Context window hygiene | Memory pointers, truth outside chat, fresh-chat handoff, mid-day checkpoint ≠ owner “go” | Paste-bomb logs/dumps; polluted chat as SoT; slice-approval theater |
 | Studio as a company | Org seats, goal ancestry, atomic checkout, board approvals; optional Paperclip CLI | Vendor Paperclip as AGENTS; 20 unsupervised agent tabs; dual checkout |
+| Competitor recon / clean-room parity | Screen/flow/feature matrix; evidence-linked gaps; must-have parity; brand sweep | Clone pack as AGENTS; copy peer assets; invent reviews; vibe “parity” |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -61,6 +62,7 @@ SEO + GEO: [`seo-geo.md`](seo-geo.md).
 Compliance / ethics / risk: [`compliance-ethics-risk.md`](compliance-ethics-risk.md).
 Context window hygiene: [`context-window.md`](context-window.md).
 Studio as a company: [`studio-company.md`](studio-company.md).
+Competitor recon / clean-room: [`competitor-recon.md`](competitor-recon.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

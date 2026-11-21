@@ -64,7 +64,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 ## Phase 0 and 1
 
-> List the competitors of `<product>` in `<markets>`, pick the single closest one to learn from (without copying), and list the features that would make us stronger than it. Write the result into BRD §8.
+> List the competitors of `<product>` in `<markets>`, pick the single closest one to learn from (**clean-room**: patterns/flows only — no code, logos, copy, or owned content), and list the features that would make us stronger than it. When that peer is load-bearing, add a recon map + must/should/could matrix (`docs/competitor-recon/` or BRD appendix) per `playbook/07-judgment/competitor-recon.md`. If using public reviews for gaps: verbatim linked quotes only, state sample size, mark thin themes — never fabricate. Write the result into BRD §8 and `docs/REFERENCES.md`.
 
 > Turn this idea into `requirements.md` in English, following the template's line style. Include both interface languages with a switch on every screen, every sign-in method, sign-out, settings, data rights, billing, the account emails, and the empty state of every core object: `<idea>`.
 

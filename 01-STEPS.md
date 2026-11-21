@@ -21,7 +21,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 0.2 Research competitors and choose references
 
-- **Output:** a short competitor list, the **one** closest competitor to learn from, the features that would make the product stronger than it, and the references the prototype will borrow from: one component foundation (for example shadcn/ui), one UX reference for the core screen (for example Reactive Resume), and visual inspiration sites. Start [`docs/REFERENCES.md`](templates/docs/REFERENCES.md) in the same pass (taken / rejected / where it landed).
+- **Output:** a short competitor list, the **one** closest competitor to learn from, the features that would make the product stronger than it, and the references the prototype will borrow from: one component foundation (for example shadcn/ui), one UX reference for the core screen (for example Reactive Resume), and visual inspiration sites. Start [`docs/REFERENCES.md`](templates/docs/REFERENCES.md) in the same pass (taken / rejected / where it landed). When that peer is load-bearing, deepen with a **clean-room recon** (screens, flows, states, must/should/could matrix, what cannot be cloned) per [`07-judgment/competitor-recon.md`](07-judgment/competitor-recon.md) / [`templates/docs/competitor-recon.md`](templates/docs/competitor-recon.md) — patterns only, never their code/logos/copy; evidence-linked review gaps if used for positioning.
 - **Rule:** borrow patterns, never branding, logos, copy, or illustrations. Record every reference and its license.
 - **Done:** BRD §8 lists the competitors; `docs/REFERENCES.md` has the borrow register; `project-ui/README.md` lists prototype references.
 
