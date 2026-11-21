@@ -31,6 +31,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Workflow | Homes | % | Covered behaviors |
 |----|----------|-------|---|-------------------|
 | ✅ | Day run-through (no mid-day waits) | `08-IMPLEMENTATION-DAY`, OWNER_STANDING template | **96** | Start cue → finish whole must-finish |
+| ✅ | Proportional day depth | `08` § Proportional, `09` phases, FEATURE profiles | **90** | Scale rigor; never skip CI/red lines (D-85) |
 | ✅ | Local proof = CI checks | `08`, `09` | **94** | Same commands GitHub Actions will run |
 | ✅ | Feature evidence same day | `04-FEATURE_SDLC`, `08` | **93** | Filled template ≠ Done; gates need results |
 | ✅ | DSA check on hot paths | `07-judgment/dsa-performance`, `08` | **90** | Name `n`, class, structure, edges |

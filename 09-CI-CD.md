@@ -5,6 +5,8 @@ Reusable method for **continuous integration** (prove every change) and **contin
 Pairs with [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md): CI/CD is not optional decoration; it is a **hard gate** in the day closeout — **at the phase the product has reached**, not beyond it.
 
 ## Progressive activation (flexibility — hard rule)
+Same spirit as the day loop’s **proportional depth** ([`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) § Proportional day pipeline): Phase A is professional for early products; add B/C when hooks exist — do not fake CD or skip CI.
+
 
 The template must work on **day one of a new product**, when there is no server and no deploy hooks yet. Do **not** require CD, Forge, staging domains, or production environments until those exist. Do **not** invent fake deploys. Agents detect the current phase and run only what that phase allows — no owner re-teaching each time.
 

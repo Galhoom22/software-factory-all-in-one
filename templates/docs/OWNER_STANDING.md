@@ -35,6 +35,7 @@
 
 Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.md` + `playbook/09-CI-CD.md`.
 
+- **Proportional depth (template default):** match day-loop rigor to product size and risk (`08` § Proportional day pipeline). Small/early products use core closeout + N/A on unused gates; grow gates when money/PII/API/public/booking appear. Never skip CI, red lines, or honest proof. This product may **pin full cadence** below if it is a real multi-day FE/BE build.
 - When the owner says to work **today’s** tasks, finish the **whole** must-finish list without mid-day continue / “approve next slice” waits.
 - **Final reply after closeout:** (1) **Pareto 20% (teachable depth)** — most important topics only, each explained thoroughly so the owner can paste into ChatGPT and learn (terms, concepts, what shipped, why) — not ultra-short stubs; (2) **New-chat handoff** — copy-paste block for tomorrow. Emit both automatically.
 - **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch, **including API tests**) → **CD when configured** (staging deploy → **API smoke** → Sentry if live) → tracker → day page. **API readiness** (contract + local + CI + phase smoke) is a day gate like DSA/CodeRabbit — see `playbook/07-judgment/api-readiness.md`. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
@@ -70,6 +71,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 ## Changelog
 
 | Date (UTC) | Change |
+| YYYY-MM-DD | Proportional day pipeline — scale rigor with product risk (D-85). |
 | YYYY-MM-DD | Booking/reservations judgment + day gate (D-84). |
 | YYYY-MM-DD | Candor hard rule: push back when a request would lower professionalism (D-82). |
 | YYYY-MM-DD | Compliance / ethics / risk judgment; candor covers unlawful/unethical/High-risk asks (D-83). |

@@ -6,7 +6,7 @@ Keep this generic. Product-specific names (Notion pages, Jira keys, repo paths) 
 
 CI/CD detail: [`09-CI-CD.md`](09-CI-CD.md) — **progressive phases** (A = CI only by default; B/C = CD only when host hooks exist). Agents auto-detect the phase; never block Done on missing staging/production.
 
-## Pipeline (fixed order)
+## Pipeline (fixed order — depth is proportional)
 
 ```text
 Owner: “start today’s tasks”
@@ -28,6 +28,50 @@ Closeout (automatic, same session):
 Final chat reply only:
   1) Pareto 20% (teachable depth)   2) New-chat handoff
 ```
+
+## Proportional day pipeline (flexibility — hard rule)
+
+The pipeline **order** above is stable. The **depth and which gates fire** must fit the product and the day’s risk — not every new product starts at “enterprise full stack.”
+
+### Always on (every implementation product)
+
+These never shrink away for convenience:
+
+- Finish that calendar day’s **must-finish 100%** (no mid-day “go” waits once the owner started the day).
+- Proof that matches what CI will run; **PR → CI green → merge → verify** on the default branch.
+- **Candor** on SECURITY / COMPLIANCE / ethics / High residual risk (refuse + safer scenario).
+- No secrets / no real PII in git.
+- Honest skip notes (e.g. “CD not configured — Phase A”) — never fake passes.
+
+Actor-loop delivery still applies when the product uses it: do not stub the **current actor** by calling the day “flexible.”
+
+### Scale with the product (template default)
+
+| Product shape | Day loop depth | Typical gates |
+|---------------|----------------|---------------|
+| **Small / early** (prototype tool, few screens, no money/PII/booking) | Core closeout only; FEATURE **Lightweight** when risk is bounded | CI Phase A; skip SEO/booking/API-readiness/CodeRabbit theater when those surfaces do not exist — mark **N/A** |
+| **Growing** (real users, API, bilingual app) | Core + gates that match touched surfaces | API readiness when APIs change; SEO+GEO when public pages change; DSA on hot paths |
+| **Full product** (payments, PII, AI, booking, multi-day Stories, Notion/Jira calendar) | Full method in this file | All applicable numbered gates; CodeRabbit; Pareto + handoff; tracker + day page; CD when hooks exist |
+
+**Grow forward, do not pretent:** when risk or surface area increases (first payment, first PII, first booking, first public marketing page), **add** the matching gate the same day — do not keep running “small product” mode after those surfaces exist.
+
+**Shrink honestly:** domain gates already say **N/A** when the day does not touch that surface. Flexibility means using those N/As and FEATURE profiles — **not** deleting CI, skipping merge verification, or inventing a second MVP delivery mode.
+
+### Product standing may pin “full cadence”
+
+A product’s `docs/OWNER_STANDING.md` may require the **full** implementation day cadence (calendar must-finish, CodeRabbit, Pareto, Notion/Jira closeout, all applicable gates). That pin **overrides** “start small” for that product. Example: a real multi-day FE/BE build with money/PII stays on full cadence even though the generic template allows lighter starts elsewhere.
+
+### Anti-patterns
+
+| Do not | Why |
+|--------|-----|
+| Run every optional gate on a tiny no-API tool “because the playbook listed them” | Over-engineering; wastes the day |
+| Skip CI / merge verify / red lines “because the project is small” | Under-engineering; not flexibility |
+| Keep Lightweight FEATURE profile after High-risk money/PII/booking appears | Risk grew; rigor must grow |
+| Invent a parallel “lite day loop” file | One pipeline; proportional depth inside it |
+
+Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard / Comprehensive), [`09-CI-CD.md`](09-CI-CD.md) (Phase A/B/C), Candor (D-82 / D-83).
+
 
 **Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, add one generic bullet to playbook `06-LESSONS.md` (or the matching template) and sync the studio playbook mirror the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
 

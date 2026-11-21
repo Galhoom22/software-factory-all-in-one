@@ -94,6 +94,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Candor / refuse degrading asks | OWNER_STANDING + coverage protocol + `08` (D-82) | ✅ ~90% |
 | Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (D-83) | ✅ ~88% |
 | Booking / reservations | `07-judgment/booking` + `08` (D-84) | ✅ ~88% |
+| Proportional day pipeline | `08` § Proportional + `09` phases + FEATURE profiles (D-85) | ✅ ~90% |
 | TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
@@ -132,6 +133,7 @@ playbook/coverage/
 ## Changelog
 
 | Date (UTC) | Change |
+| 2026-11-21 | D-85: proportional day pipeline (flexible rigor; always-on core). |
 | 2026-11-21 | D-84: booking/reservations judgment + day gate. |
 | 2026-11-21 | D-83: compliance/ethics/risk judgment + candor safer-scenario; day check. |
 | 2026-11-21 | D-82 candor: refuse/advise when an add would lower professionalism. |
