@@ -38,6 +38,8 @@ Put in it whatever you know: vision, goals, users, features, constraints, market
 
 Copy and adapt the example: [`examples/my-project-requirements.example.md`](examples/my-project-requirements.example.md).
 
+**Stack is not assumed:** there is no universal default stack. From your requirements the agent must **advise** (options + recommendation + architecture/patterns fit) using [`07-judgment/stack-selection.md`](07-judgment/stack-selection.md), then pin the lasting choice in `DECISIONS.md` + SRS. [`technologies/`](technologies/README.md) packs are for writing well **after** that pin — not for picking by fashion.
+
 **Do not** delete or empty this file after the agent starts. The agent must **not overwrite** it. It is your human entry point; the agent derives the formal `requirements.md` and other planning docs from it.
 
 ## Step 3 — Automatic AI Agent activation
@@ -49,10 +51,11 @@ The agent must automatically:
 1. Read the whole file.
 2. Inspect this playbook (`00-USAGE`, `01-STEPS`, `02-DELIVERY`, templates, …).
 3. Apply the **80/20** rule: smallest complete planning set for this project’s complexity.
-4. Fill placeholders, instantiate templates, and run [`01-STEPS.md`](01-STEPS.md) in order (adapted to what the product needs).
-5. Produce a usable planning workspace (formal `requirements.md`, shared docs, agent rules, CI, prototype when UI exists, CI/CD phase A by default — see [`09-CI-CD.md`](09-CI-CD.md)).
-6. Ask only **blocking** questions; record assumptions otherwise.
-7. Keep the playbook **generic** — never paste product names into `playbook/` method docs.
+4. **Advise and pin the stack** from requirements ([`07-judgment/stack-selection.md`](07-judgment/stack-selection.md)): constraints that bite → 2–3 options → one recommendation → specify language/frameworks/FE↔BE join/packages → architecture + earned patterns → ADR + SRS pin. Never claim one stack fits every product.
+5. Fill placeholders, instantiate templates, and run [`01-STEPS.md`](01-STEPS.md) in order (adapted to what the product needs).
+6. Produce a usable planning workspace (formal `requirements.md`, shared docs, agent rules, CI, prototype when UI exists, CI/CD phase A by default — see [`09-CI-CD.md`](09-CI-CD.md)).
+7. Ask only **blocking** questions; record assumptions otherwise.
+8. Keep the playbook **generic** — never paste product names into `playbook/` method docs.
 
 No separate “initialize” command is required. If the file is **absent**, the agent must **not** assume a new-project bootstrap was requested.
 

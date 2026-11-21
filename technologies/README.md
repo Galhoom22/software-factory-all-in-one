@@ -2,7 +2,9 @@
 
 **What this is:** a growing library of **per-technology** packs. Goal: when an agent writes code in that stack, the result is **modern syntax**, **Clean Code**, **sound architecture**, and **patterns only when earned** — using **today’s** official standards, not memory.
 
-**What this is not:** a second SRS, a full vendor-manual mirror, or a silent upgrade of a product’s pinned versions.
+**What this is not:** a second SRS, a full vendor-manual mirror, a silent upgrade of a product’s pinned versions, or permission to force one stack onto every product.
+
+**Select before craft:** which language/framework/packages a product uses is decided by **that product’s requirements** ([`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md)). Packs teach **how to write well** in a chosen stack. They never mean “always use TALL / always use Next / always use Filament.”
 
 ## Does this meet the quality bar?
 
@@ -53,7 +55,9 @@ playbook/technologies/
 
 ## How agents must use a pack (hard rules)
 
-When the task writes or reviews code in a stack that has (or should have) a pack:
+**Before** treating a stack as the product default: run [`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md) (requirements → options → recommendation → ADR/SRS pin). Do not invent a product stack from pack availability.
+
+When the task writes or reviews code in a stack the product **already pinned** (or the owner named for a greenfield after selection):
 
 1. **Open the pack first** — `best-practices.md`, `quality.md`, and the current version slice (`use-these` / `stop-using` / `common-mistakes`).
 2. **Automatic latest check (no owner ask):** re-verify the pinned line on the **official** vendor site and/or Context7 in that session before non-trivial code. Memory and old chat are not evidence of “latest.”

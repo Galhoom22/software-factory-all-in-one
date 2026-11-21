@@ -26,6 +26,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | GoF-style design patterns (problem → naive → blueprint; composition; shared language) | Pattern encyclopedia in-repo; Factory/Observer on three-line fixes; Singleton as default global |
 | DSA / Big-O / algorithmic performance (Pareto study habits) | Day + FEATURE Performance module: name `n`, Time/Space class, structure, edges | Dumping LeetCode catalogs/solutions into product repos; interview grind as merge gate |
 | API readiness across environments (contract + local + CI + staging/prod smoke) | Day API gate + BACKEND TESTING + DEPLOYMENT smoke | Second OpenAPI/Postman SoT; Done on local-only green; live prod checks with real PII |
+| Requirements-driven stack selection (advise → specify → ADR) | Options + recommendation from **this** product’s requirements; pin in SRS + DECISIONS; architecture/patterns follow | One-size-fits-all stack; locking TALL/MERN/Next by fashion; packs that replace product constitution |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -44,6 +45,8 @@ Design patterns judgment: [`design-patterns.md`](design-patterns.md).
 DSA / algorithmic performance judgment: [`dsa-performance.md`](dsa-performance.md).
 
 API readiness across environments: [`api-readiness.md`](api-readiness.md).
+
+Requirements-driven stack selection: [`stack-selection.md`](stack-selection.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

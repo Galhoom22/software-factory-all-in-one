@@ -5,6 +5,7 @@ Paths under `playbook/technologies/`.
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
 | ✅ | Technologies library layout | `technologies/README.md` | **90** | Slug + version-slice convention; agent protocol |
+| ✅ | Select-before-craft gate | `07-judgment/stack-selection.md` + `technologies/README` | **90** | Packs ≠ product stack; requirements decide |
 | ✅ | PHP pack hub | `technologies/php/` | **90** | Official refs + modern baseline + `quality.md` |
 | ✅ | PHP 8.6 version slice | `technologies/php/php-8.6/` | **85** | use / stop / common mistakes from php.net |
 | ✅ | Quality bar + auto latest-docs | `technologies/README` + each `quality.md` | **92** | Clean Code/architecture/patterns + mandatory official refresh (D-66) |
