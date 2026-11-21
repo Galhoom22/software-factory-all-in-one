@@ -44,6 +44,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Progressive CD (A/B/C) | `09-CI-CD`, impl Actions YAML | **94** | Auto-detect; honest skip; no fake deploys |
 | ✅ | CodeRabbit Free default | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked |
 | ✅ | Pareto 20% + handoff | `08`, prompts | **95** | Teachable depth + operational handoff |
+| ✅ | Context window hygiene | `07-judgment/context-window`, `08`, `05`, lessons | **90** | Pointers over blobs; fresh-chat checkpoint; D-86 |
 | ✅ | Automatic lesson capture | `08`, `06-LESSONS`, learning-from-mistakes templates | **93** | Quality bar; dual sync when reusable |
 
 ---

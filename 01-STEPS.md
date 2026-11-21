@@ -171,7 +171,7 @@ Run these after every large batch of work (prompts in [`05-PROMPTS.md`](05-PROMP
 
 ### 21. Hand over between chats
 
-- Before a chat gets long, ask for a handoff (template in [`05-PROMPTS.md`](05-PROMPTS.md#handoff-before-a-new-chat)) and start the next chat with it, then have the agent read the repository.
+- Before a chat gets long, ask for a handoff (template in [`05-PROMPTS.md`](05-PROMPTS.md#handoff-before-a-new-chat)) and start the next chat with it, then have the agent read the repository. During work, keep large tool outputs as **pointers** (path/summary), not paste-bombs — [`07-judgment/context-window.md`](07-judgment/context-window.md).
 
 ### 22. Hand over to implementation
 

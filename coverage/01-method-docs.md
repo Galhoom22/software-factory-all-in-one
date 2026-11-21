@@ -39,6 +39,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **88** | Assumptions, thin slices, five-axis review | Not a vendored skills OS |
 | ✅ | Payments / providers | `07-judgment/payments.md` | **88** | Webhook-first, idempotency, current APIs | Pair with SECURITY/COMPLIANCE templates |
 | ✅ | Booking / reservations | `07-judgment/booking.md` | **88** | Holds, recheck, idempotency, inventory; pair payments |
+| ✅ | Context window hygiene | `07-judgment/context-window.md` | **90** | Pointers; fresh chat; D-86 | — |
 | ✅ | Playwright E2E | `07-judgment/playwright-e2e.md` | **88** | Short critical list, locators, CI traces | FE TESTING template holds product rules |
 | ✅ | SAD / ADR | `07-judgment/sad-adr.md` | **90** | DECISIONS.md + C4 in ARCHITECTURE; no second SAD | — |
 | ✅ | AI system design | `07-judgment/ai-system-design.md` | **86** | Golden set, untrusted text, model pins | Product `docs/AI.md` holds provider shortlist |

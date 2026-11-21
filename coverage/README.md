@@ -95,6 +95,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (D-83) | ✅ ~88% |
 | Booking / reservations | `07-judgment/booking` + `08` (D-84) | ✅ ~88% |
 | Proportional day pipeline | `08` § Proportional + `09` phases + FEATURE profiles (D-85) | ✅ ~90% |
+| Context window / memory pointers | `07-judgment/context-window` + `08` + handoffs (D-86) | ✅ ~90% |
 | TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
@@ -133,6 +134,7 @@ playbook/coverage/
 ## Changelog
 
 | Date (UTC) | Change |
+| 2026-11-21 | D-86: context-window hygiene (memory pointers, handoff, mid-day checkpoint ≠ owner go). |
 | 2026-11-21 | D-85: proportional day pipeline (flexible rigor; always-on core). |
 | 2026-11-21 | D-84: booking/reservations judgment + day gate. |
 | 2026-11-21 | D-83: compliance/ethics/risk judgment + candor safer-scenario; day check. |

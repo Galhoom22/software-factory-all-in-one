@@ -32,6 +32,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | SEO + GEO (public pages) | Dual technical + citeable craft on indexable marketing/legal; Google foundations over vendor hacks | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
 | Compliance / ethics / risk | Laws + IEEE ethics + identify/assess/treat/monitor; refuse unlawful or unethical asks with safer alternative | Checklist theater; fake certifications; silent High-risk acceptance |
 | Booking / reservations | Holds, recheck-before-commit, idempotency, inventory, cancel snapshots; AI/MCP sandbox | Confirm from search cache; skip recheck; double-book on retry |
+| Context window hygiene | Memory pointers, truth outside chat, fresh-chat handoff, mid-day checkpoint ≠ owner “go” | Paste-bomb logs/dumps; polluted chat as SoT; slice-approval theater |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -57,6 +58,7 @@ Requirements-driven stack selection: [`stack-selection.md`](stack-selection.md).
 Packages over reinvention: [`packages.md`](packages.md).
 SEO + GEO: [`seo-geo.md`](seo-geo.md).
 Compliance / ethics / risk: [`compliance-ethics-risk.md`](compliance-ethics-risk.md).
+Context window hygiene: [`context-window.md`](context-window.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

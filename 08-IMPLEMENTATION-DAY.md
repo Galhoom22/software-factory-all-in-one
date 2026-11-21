@@ -77,11 +77,21 @@ Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard /
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
 
+## Context window hygiene (hard rule)
+
+Long days and large tool outputs **silently** degrade agents (truncation, lost early instructions, invented “Done”). Treat context as scarce.
+
+**Always:** keep truth in git / feature files / day page / tracker — not only in chat. Prefer **memory pointers** (path, SHA, tool store key + short summary) over pasting CI logs, dumps, or whole files into the model. Read the slice you need; use bounded subagents for big searches and keep compact findings. End-of-day **New-chat handoff** is the primary cross-session pointer; the next chat re-verifies against the repo.
+
+**Mid-day context refresh ≠ mid-day owner “go”:** start-once / finish must-finish still holds. If the window is polluted, write a short progress checkpoint (paths, SHAs, next action), then continue in a **fresh chat** with that checkpoint — never invent per-slice approval theater.
+
+Judgment: [`07-judgment/context-window.md`](07-judgment/context-window.md) (D-86). Pairs with Anthropic-style compaction/handoff craft and the Memory Pointer pattern (large payloads stay outside the LLM).
+
 ## Day run-through
 
 **Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. When the day’s stack has a [`technologies/`](technologies/README.md) pack (e.g. PHP), open it before coding and **re-check official docs/Context7 for the pinned line** (no owner ask). Apply pack `quality.md` (Clean Code + architecture + patterns) together with modern syntax.
 
-Review axes before merge: correctness, readability, architecture, security, performance (**includes DSA / Big-O on hot paths** — name `n`, complexity class, structure, edges) — CodeRabbit Free CLI is the default mechanical assist. **API surfaces:** contract parity + HTTP proof for every endpoint touched today; local green is not enough — CI must pass, and staging/production smoke runs when that phase exists. **Public pages:** SEO + GEO checklist when indexable surfaces change. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md) · [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md) · [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md) · [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
+Review axes before merge: correctness, readability, architecture, security, performance (**includes DSA / Big-O on hot paths** — name `n`, complexity class, structure, edges) — CodeRabbit Free CLI is the default mechanical assist. **API surfaces:** contract parity + HTTP proof for every endpoint touched today; local green is not enough — CI must pass, and staging/production smoke runs when that phase exists. **Public pages:** SEO + GEO checklist when indexable surfaces change. Apply [`07-judgment/context-window.md`](07-judgment/context-window.md) every turn (pointers over blobs; checkpoint before a fresh-chat refresh). Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md) · [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md) · [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md) · [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
 
 **Feature SDLC on the day:** Stories that map to a `docs/features/…` file follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md). Same day: keep the verification matrix and lifecycle status honest (evidence links). Match proof depth to the feature’s profile. Never call the day Done from a filled template alone — gates in Design / Security / Verification / Integration still need real results.
 
@@ -152,7 +162,7 @@ Default while on the **Free** plan ([plans](https://docs.coderabbit.ai/managemen
 After closeout, the agent’s last message has **exactly two parts**, in order:
 
 1. **Pareto 20% (teachable depth)** — select the **most important** outcomes of the day (not every commit log). For **each** selected topic, write a **full, thorough explanation** the owner can paste into ChatGPT (or similar) to learn: what was built, why it matters, the key terms and concepts, how the pieces fit, decisions and trade-offs, and what to study next. **“20%” means topic selection (highest leverage only), not ultra-short stubs.** Skimping on depth defeats the purpose — the owner uses this block to grow as an engineer.
-2. **New-chat handoff** — one copy-paste block for tomorrow’s fresh chat: paths, SHAs, issue keys, tomorrow must-finish, do-not-break rails. Include last green CI / merge evidence. Keep the handoff operational and tight; put teaching depth in the Pareto half.
+2. **New-chat handoff** — one copy-paste block for tomorrow’s fresh chat: paths, SHAs, issue keys, tomorrow must-finish, do-not-break rails. Include last green CI / merge evidence. Keep the handoff operational and tight (**pointers**, not a transcript dump); put teaching depth in the Pareto half. Receiving chat re-verifies against git ([`07-judgment/context-window.md`](07-judgment/context-window.md)).
 
 Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPTS.md`](05-PROMPTS.md#implementation-day-start-and-end).
 

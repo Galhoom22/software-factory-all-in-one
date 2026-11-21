@@ -123,6 +123,12 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Score the repository out of 100 as a planning repository with a prototype. List concrete findings only, then fix them until none remain.
 
+## Context window (during any long session)
+
+Use with [`07-judgment/context-window.md`](07-judgment/context-window.md).
+
+> Keep large tool outputs out of the chat: write or leave them on disk / in the tool store and reply with a path or id plus a short summary (memory pointers). Prefer `path:line` over pasting whole files. If this chat is polluted mid-day, write a progress checkpoint (paths, SHAs, next action) then open a fresh chat with that checkpoint — do not invent mid-day slice-approval waits. End-of-day handoff stays the primary cross-session pointer.
+
 ## Handoff Before a New Chat
 
 > I am opening a new chat. Write a handoff I can paste: what the repository is, the rules to follow, the prototype conventions, the CI checks and how to watch the run, the audit commands, tooling quirks, what was done and pushed in this chat (commit hashes and one line each), and the open items and decisions waiting for me.
@@ -150,7 +156,7 @@ Use with [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md). One fresh chat 
 
 ### Start the day
 
-> Start today’s tasks. Work the whole must-finish list for this calendar day end-to-end (day run-through). Do not pause for mid-day continue cues. When every checkbox is proven, run automatic closeout (PR → CI green → CodeRabbit → merge → verify on main → CD when configured → tracker → day page → **automatically** capture surprising root causes / useful discoveries in `docs/learning-from-mistakes/` and promote reusable high-bar rules to playbook `06-LESSONS.md` + sync studio mirror — no owner ask), then reply with Pareto 20% and the new-chat handoff only. Follow playbook `08-IMPLEMENTATION-DAY.md` (including § Proportional day pipeline — D-85: match rigor to product risk; N/A unused gates; never skip CI/red lines) and `09-CI-CD.md`. On backend/API days also enforce the **API readiness gate** (contract parity + local HTTP + CI; staging/prod smoke per phase) — `07-judgment/api-readiness.md`. On frontend/public-page days also enforce the **SEO + GEO gate** (index allow-list, metadata, honest schema, people-first/Q&A craft) — `07-judgment/seo-geo.md`; mark N/A when no public surfaces changed.
+> Start today’s tasks. Work the whole must-finish list for this calendar day end-to-end (day run-through). Do not pause for mid-day continue cues. When every checkbox is proven, run automatic closeout (PR → CI green → CodeRabbit → merge → verify on main → CD when configured → tracker → day page → **automatically** capture surprising root causes / useful discoveries in `docs/learning-from-mistakes/` and promote reusable high-bar rules to playbook `06-LESSONS.md` + sync studio mirror — no owner ask), then reply with Pareto 20% and the new-chat handoff only. Follow playbook `08-IMPLEMENTATION-DAY.md` (including § Proportional day pipeline — D-85; § Context window hygiene — D-86: pointers over blobs, fresh-chat checkpoint if polluted, never mid-day slice-approval theater) and `09-CI-CD.md`. On backend/API days also enforce the **API readiness gate** (contract parity + local HTTP + CI; staging/prod smoke per phase) — `07-judgment/api-readiness.md`. On frontend/public-page days also enforce the **SEO + GEO gate** (index allow-list, metadata, honest schema, people-first/Q&A craft) — `07-judgment/seo-geo.md`; mark N/A when no public surfaces changed.
 
 ### End-of-day reply shape (agent — after closeout)
 
