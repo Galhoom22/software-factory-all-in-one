@@ -59,7 +59,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | [`03-agents-ci-tooling.md`](03-agents-ci-tooling.md) | Agents, harnesses, scripts, GitHub, impl CI/CD YAML | 28 | **87%** | ✅ |
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
-| [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~6 | **72%** | ⚠️ |
+| [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~18 | **87%** | ✅ |
 
 ### Overall playbook professionalism
 
@@ -94,6 +94,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Alpine.js 3 tech pack | `technologies/alpinejs` | ✅ ~88% |
 | Livewire 4 tech pack | `technologies/livewire` | ✅ ~88% |
 | Filament 5 tech pack | `technologies/filament` | ✅ ~88% |
+| JavaScript / ES2026 tech pack | `technologies/javascript` | ✅ ~88% |
 | Next.js tech pack | `technologies/nextjs` | ❌ 0% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
 | Notion daily task page template | `05-gaps` | ❌ 0% in playbook (product standing by design) |
@@ -118,6 +119,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-21 | JavaScript / ES2026 pack (D-72) from MDN Web/JavaScript. |
 | 2026-11-21 | Laravel 13 pack (D-67). |
 | 2026-11-21 | Technologies library + PHP 8.6 pack (D-65). |
 | 2026-11-21 | API readiness gate absorbed (D-64); workflows ~91%. |

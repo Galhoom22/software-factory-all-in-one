@@ -19,10 +19,12 @@ Paths under `playbook/technologies/`.
 | ✅ | Livewire 4.x slice | `technologies/livewire/livewire-4/` | **88** | use / stop / mistakes from livewire.laravel.com/docs/4.x |
 | ✅ | Filament pack hub | `technologies/filament/` | **88** | Getting started + install + quality |
 | ✅ | Filament 5.x slice | `technologies/filament/filament-5/` | **88** | use / stop / mistakes from filamentphp.com/docs/5.x |
+| ✅ | JavaScript pack hub | `technologies/javascript/` | **88** | MDN hub + Guide/Reference + quality |
+| ✅ | ECMAScript 2026 slice | `technologies/javascript/javascript-es2026/` | **88** | use / stop / mistakes from MDN + ECMA-262 |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
-**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~86%.**
+**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~87%.**
 
 ## Agent decision cheat-sheet
 
@@ -30,8 +32,9 @@ Paths under `playbook/technologies/`.
 |-----------|--------|
 | Add PHP / 8.6 practices | Deepen `php/` — do not fork a second PHP bible |
 | Pastes an official stack docs URL (e.g. Tailwind Vite install) | Create or deepen `technologies/<slug>/` from `_pack-template/`; pin latest official line; update this atlas + sync |
+| Pastes MDN JavaScript / ECMAScript docs | Deepen `javascript/` — do not fork a second JS bible |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
-| Product still on older PHP / CSS | Keep SRS pin; use pack as upgrade guide, not silent bump |
+| Product still on older PHP / CSS / JS engines | Keep SRS pin; use pack as upgrade guide, not silent bump |
 
 
 

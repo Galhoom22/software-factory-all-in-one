@@ -36,13 +36,14 @@ playbook/technologies/
   alpinejs/                 ← Alpine.js 3.x pack
   livewire/                 ← Livewire 4.x pack
   filament/                 ← Filament 5.x pack
+  javascript/               ← ECMAScript / JavaScript language pack
   nextjs/                   ← add when owner asks
 ```
 
 | Folder naming | Rule |
 |---------------|------|
-| Top-level slug | Lowercase (`php`, `laravel`, `tailwindcss`, `alpinejs`, `livewire`, `filament`, `nextjs`, `postgresql`) |
-| Version slice | Exact line (`php-8.6`, `laravel-13`, `tailwindcss-v4`, `alpinejs-v3`, `livewire-4`, `filament-5`, `nextjs-16`) |
+| Top-level slug | Lowercase (`php`, `laravel`, `tailwindcss`, `alpinejs`, `livewire`, `filament`, `javascript`, `nextjs`, `postgresql`) |
+| Version slice | Exact line (`php-8.6`, `laravel-13`, `tailwindcss-v4`, `alpinejs-v3`, `livewire-4`, `filament-5`, `javascript-es2026`, `nextjs-16`) |
 | Required files | See [`_pack-template/README.md`](_pack-template/README.md) — always include `quality.md` |
 
 ## How agents must use a pack (hard rules)
@@ -73,4 +74,5 @@ When the task writes or reviews code in a stack that has (or should have) a pack
 | [`alpinejs/`](alpinejs/README.md) | [`alpinejs-v3/`](alpinejs/alpinejs-v3/README.md) | [`quality.md`](alpinejs/quality.md) | ✅ |
 | [`livewire/`](livewire/README.md) | [`livewire-4/`](livewire/livewire-4/README.md) | [`quality.md`](livewire/quality.md) | ✅ |
 | [`filament/`](filament/README.md) | [`filament-5/`](filament/filament-5/README.md) | [`quality.md`](filament/quality.md) | ✅ |
+| [`javascript/`](javascript/README.md) | [`javascript-es2026/`](javascript/javascript-es2026/README.md) | [`quality.md`](javascript/quality.md) | ✅ |
 | `nextjs/` | — | — | ❌ Add when owner asks |
