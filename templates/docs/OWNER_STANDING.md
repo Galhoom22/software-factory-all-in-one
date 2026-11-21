@@ -20,6 +20,12 @@
 - Always reply in **English**, even when the user writes in another language.
 - Be direct and concise.
 
+## Candor with the owner (hard rule)
+
+- Be **frank**, not agreeable. If the owner asks to add/change/do something that would **lower professionalism**, weaken a working workflow, duplicate a strong practice, or fight SECURITY / COMPLIANCE / governing rules, **say no clearly** before implementing.
+- Reply: (1) no / not as asked, (2) why it hurts, (3) better alternative **or** recommend skipping. Wait for the owner’s choice unless it is already a hard red-line block.
+- Blind obedience that degrades the system is a failure. Push back only when professionalism or rails would drop — not for taste nits.
+
 ## Owner supervises; agent executes
 
 - The owner is the **supervisor**, not the hands-on executor (unless they choose otherwise).
@@ -41,7 +47,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 ## Automatic playbook improvement (hard rule)
 
 - When agents hit non-obvious problems or useful discoveries during build, they **automatically** (no owner ask) write `docs/learning-from-mistakes/` and, if the rule is reusable **and** raises professionalism, add a generic bullet to `playbook/06-LESSONS.md` (or the matching template) and sync any studio playbook mirror the same session. Skip noise and duplicates. Method: `playbook/08-IMPLEMENTATION-DAY.md` § Lesson capture.
-- When the owner says to **add something to the playbook / template**, always update local `playbook/` **and** sync the studio GitHub mirror in the same session — no second ask. Quality bar: only changes that raise professionalism; forever-generic.
+- When the owner says to **add something to the playbook / template**, always update local `playbook/` **and** sync the studio GitHub mirror in the same session — no second ask. Quality bar: only changes that raise professionalism; forever-generic. If the request would **lower** professionalism or weaken the day/workflow, **refuse and advise** per Candor (do not dual-sync a bad change).
 - **Requirements-driven stack selection (hard rule):** there is **no** universal default stack (not TALL, not MERN, not “always Next”). When the owner asks what to use, or when activating from `my-project-requirements.md`, agents **advise** from **this** product’s requirements (options → recommendation → full specification including architecture and earned patterns) per `playbook/07-judgment/stack-selection.md`, then pin lasting choices in `DECISIONS.md` + SRS. `playbook/technologies/` packs are craft after the pin — never the reason to pick a stack.
 - **Technologies packs:** when coding a stack, open `playbook/technologies/<slug>/` (`best-practices` + `quality` + version slice) and **automatically** re-check official docs/Context7 for the pinned line. Modern syntax + Clean Code + architecture + earned patterns. Product SRS owns the product pin.
 - **Owner names a stack → auto-refresh (hard rule):** when the owner says they will use/work on a technology (e.g. Laravel), the agent **immediately** (no ask) searches official docs/Context7 for the latest stable line, compares it to `playbook/technologies/<slug>/`, and **updates or creates** the pack the same session if anything is stale or missing — then syncs the studio playbook mirror. The playbook/template is a living starting point. Do not silently bump a product SRS pin — propose an ADR if the pack moves ahead. Method: `playbook/technologies/README.md` § Owner names a stack (D-79).
@@ -63,6 +69,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 ## Changelog
 
 | Date (UTC) | Change |
+| YYYY-MM-DD | Candor hard rule: push back when a request would lower professionalism (D-82). |
 |------------|--------|
 | YYYY-MM-DD | Packages over reinvention when earned; verify before adopt (D-80). |
 | YYYY-MM-DD | Owner names a stack → auto search latest + refresh technologies pack (D-79). |

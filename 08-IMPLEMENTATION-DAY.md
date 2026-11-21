@@ -118,6 +118,7 @@ Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPT
 
 ## Coverage atlas (before inventing a practice)
 When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
+**Candor (D-82):** if that ask would lower professionalism or weaken this pipeline, **refuse and advise** (why + better alternative or skip). Do not dual-sync a degrading change. Product standing: `docs/OWNER_STANDING.md` § Candor.
 
 ## Owner standing ↔ playbook mirror
 

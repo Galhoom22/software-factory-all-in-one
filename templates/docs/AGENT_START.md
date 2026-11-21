@@ -22,6 +22,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 1. Do **not** add application code outside `project-ui/`.
 2. **There is no MVP delivery mode.** Actor-loop only: `docs/DELIVERY.md`. Finish the **current actor** ({{CURRENT_ACTOR}}) to production quality; do not stub or weaken it. Historical “MVP” wording in old decisions is not permission to ship incomplete work.
 3. Reply in **English** (or the language `AGENTS.md` sets).
+4. **Candor:** refuse/advise when an ask would lower professionalism (`OWNER_STANDING` § Candor).
 4. Never commit secrets, `.env` files, or **real** personal data.
 5. Never force-push, rewrite pushed history, or change remotes / repo settings.
 6. Do only what the user asked. Prefer the smallest correct change. (Exception: when `my-project-requirements.md` is present, “what the user asked” includes running the playbook from that file.)

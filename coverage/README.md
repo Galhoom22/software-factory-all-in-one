@@ -22,6 +22,7 @@ When the owner says *add X to the playbook / template / workflow* (any language)
 4. **If ⚠️ (40–84%):** upgrade the existing home first (method + template + prompt + lesson as needed) — do not create a parallel doc.
 5. **If ❌ or &lt; 40%:** add the smallest complete practice (method and/or `templates/`), update this atlas in the **same** change, then sync the studio mirror.
 6. Quality bar unchanged: forever-generic; must raise professionalism; dual local + GitHub sync.
+7. **Candor:** if the owner’s ask would **lower** professionalism or weaken a working workflow, **do not implement it**. Say no, explain why, propose a better alternative or recommend skipping (D-82). Dual-sync only changes that raise the bar.
 
 Owner standing / product calendars stay out of this folder — link from product `docs/OWNER_STANDING.md` only.
 
@@ -90,6 +91,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Owner-names-stack pack freshness | `technologies/README` (D-79) | ✅ ~90% |
 | Packages over reinvention | `07-judgment/packages` (D-80) | ✅ ~90% |
 | SEO + GEO dual opt (public pages) | `07-judgment/seo-geo` + SEO templates + `08` (D-81) | ✅ ~88% |
+| Candor / refuse degrading asks | OWNER_STANDING + coverage protocol + `08` (D-82) | ✅ ~90% |
 | TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
@@ -128,6 +130,7 @@ playbook/coverage/
 ## Changelog
 
 | Date (UTC) | Change |
+| 2026-11-21 | D-82 candor: refuse/advise when an add would lower professionalism. |
 | 2026-11-21 | D-81: SEO + GEO judgment + templates + day gate; dual sync. |
 |------------|--------|
 | 2026-11-21 | Symfony 8 pack (D-77) from symfony.com/doc. |

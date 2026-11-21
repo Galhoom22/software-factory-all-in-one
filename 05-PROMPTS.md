@@ -21,6 +21,7 @@ Use with [`technologies/README.md`](technologies/README.md).
 Use with [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
 
 > Before adding or inventing practice `<X>` in the playbook/template: read `playbook/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.
+> If `<X>` would **lower** professionalism or weaken the day/workflow: Action = **refuse**; explain why; propose a better alternative or recommend skipping (Candor / D-82). Do not dual-sync a degrading change.
 
 ## Requirements-driven activation
 
