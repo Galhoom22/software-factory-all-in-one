@@ -98,6 +98,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (D-87) | ✅ ~92% |
 | Studio as a company / org seats | `07-judgment/studio-company` + `STUDIO_ORG` template (D-88) | ✅ ~90% |
 | Competitor recon / clean-room | `07-judgment/competitor-recon` + template (D-89) | ✅ ~88% |
+| Software Factory + multi-agent | `07-judgment/software-factory` + `STUDIO_ORG` + `08` (D-90) | ✅ ~90% |
 | Proportional day pipeline | `08` § Proportional + `09` phases + FEATURE profiles (D-85) | ✅ ~90% |
 | Context window / memory pointers | `07-judgment/context-window` + `08` + handoffs (D-86) | ✅ ~90% |
 | TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
@@ -138,6 +139,7 @@ playbook/coverage/
 ## Changelog
 
 | Date (UTC) | Change |
+| 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
 | 2026-11-21 | D-89: competitor recon / clean-room parity (replica-skill judgment).
 | 2026-11-21 | D-88: studio-as-company (Paperclip judgment) + STUDIO_ORG + optional CLI.
 | 2026-11-21 | D-87: EXCELLENCE.md north star + ratchet for every future playbook upgrade.

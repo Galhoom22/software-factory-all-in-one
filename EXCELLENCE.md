@@ -40,6 +40,7 @@ Score a change against these — not against marketing adjectives:
 
 | **Operable day loop** | Start once → finish must-finish → closeout → Pareto + handoff |
 | **Company seats** | Org chart, goal ancestry, atomic checkout — studio feels like a firm ([`07-judgment/studio-company.md`](07-judgment/studio-company.md)) |
+| **Software Factory line** | Intake→triage→plan→build→independent review→Done with evidence ([`07-judgment/software-factory.md`](07-judgment/software-factory.md)) |
 
 | **Transferable lessons** | Real surprises become one sharp playbook bullet when the next product benefits |
 

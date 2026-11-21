@@ -37,6 +37,7 @@ Product locks and Governing Product Rules always win. A reference is inspiration
 | {{METHOD_OR_SKILL}} | Checklist / judgment note path | Installing it as a competing constitution |
 | [Paperclip](https://github.com/paperclipai/paperclip) (agent-company OS) | playbook `07-judgment/studio-company.md` + `STUDIO_ORG` template | Installing Paperclip as AGENTS / day SoT / required onboard |
 | [replica-skill](https://github.com/Jakeschincariol/replica-skill) (recon / parity / evidence reviews) | playbook `07-judgment/competitor-recon.md` + `competitor-recon` template | Pack as AGENTS; “clone any app” as default delivery; copying peer assets |
+| [Mastra Software Factory](https://mastra.ai/blog/software-factory) (+ Vercel/Warp factory docs) | playbook `07-judgment/software-factory.md` (stages + independent review + MAS seats) | Mastra/Warp as AGENTS / required factory product |
 | AI system design guide (staff patterns) | `docs/AI.md` / `SECURITY.md` LM / FEATURE_SDLC AI module; playbook `07-judgment/ai-system-design.md` | Full guide tree, interview banks, rotating price tables |
 | SAD / ADR best-practice templates (C4 + Mermaid) | `DECISIONS.md` shape + FE/BE architecture views; playbook `07-judgment/sad-adr.md` | Copying full SAD examples or multi-language template trees |
 | Agent skills packs (lifecycle engineering) | Day closeout review axes + incremental slices; playbook `07-judgment/agent-skills.md` | Full pack install as AGENTS; autonomous build past owner gates |

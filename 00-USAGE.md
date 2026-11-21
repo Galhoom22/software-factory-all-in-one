@@ -99,7 +99,7 @@ Edit `my-project-requirements.md` again. On the next session the agent reconcile
 
 ## Studio org seats
 
-After seeding templates, fill `docs/STUDIO_ORG.md` (company seats, goals, exclusive checkout). Method: [`07-judgment/studio-company.md`](07-judgment/studio-company.md).
+After seeding templates, fill `docs/STUDIO_ORG.md` (company seats, goals, exclusive checkout, factory line). Methods: [`07-judgment/studio-company.md`](07-judgment/studio-company.md) + [`07-judgment/software-factory.md`](07-judgment/software-factory.md).
 
 ## Excellence trajectory
 

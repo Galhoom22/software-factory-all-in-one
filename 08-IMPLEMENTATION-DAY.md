@@ -89,7 +89,7 @@ Judgment: [`07-judgment/context-window.md`](07-judgment/context-window.md) (D-86
 
 ## Studio company seats (hard rule)
 
-Work like a **small company**, not a pile of chats. At day start, name: (1) **goal** (product + current actor), (2) **seat** (FE or BE day agent — see product `docs/STUDIO_ORG.md`), (3) **checkout** — this session exclusively owns today’s must-finish (no second agent competing on the same Story/day). Escalate blockers to the Board (owner); do not invent parallel product direction. Consequential new seats/tools need owner approval. Judgment: [`07-judgment/studio-company.md`](07-judgment/studio-company.md) (Paperclip org patterns absorbed as judgment only — D-88).
+Work like a **small company**, not a pile of chats. At day start, name: (1) **goal** (product + current actor), (2) **seat** (FE or BE day agent — see product `docs/STUDIO_ORG.md`), (3) **checkout** — this session exclusively owns today’s must-finish (no second agent competing on the same Story/day). Escalate blockers to the Board (owner); do not invent parallel product direction. Consequential new seats/tools need owner approval. Judgment: [`07-judgment/studio-company.md`](07-judgment/studio-company.md) (seats — D-88) + [`07-judgment/software-factory.md`](07-judgment/software-factory.md) (line: intake→triage→plan→build→independent review→Done — D-90). Name the factory stage you are in; keep acceptance criteria as the contract; CI/CodeRabbit are independent review — not the builder’s self-score.
 
 ## Day run-through
 

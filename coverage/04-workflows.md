@@ -59,6 +59,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Excellence north star / ratchet | `EXCELLENCE.md`, coverage protocol step 0 | **92** | Every edit raises a dimension; trajectory not one-shot (D-87) |
 | ✅ | Studio as a company | `07-judgment/studio-company`, `STUDIO_ORG`, `08` | **90** | Seats, goals, checkout; Paperclip judgment only (D-88) |
 | ✅ | Competitor recon / clean-room | `07-judgment/competitor-recon`, `01-STEPS` 0.2, REFERENCES | **88** | Patterns only; evidence reviews; D-89 |
+| ✅ | Software Factory + multi-agent | `07-judgment/software-factory`, `STUDIO_ORG`, `08`, `09` | **90** | Line + seats; independent review; D-90 |
 | ✅ | Standing preference → playbook | OWNER_STANDING template | **92** | Lasting workflow prefs update method + sync |
 | ⚠️ | Studio repo-map diagram updates | Product standing / decisions (not in generic templates deeply) | **55** | Practice exists in mature studios; thin in seed templates — see gaps |
 

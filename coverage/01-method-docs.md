@@ -58,6 +58,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Excellence north star | `EXCELLENCE.md` | **92** | Ratchet; trajectory not one-prompt finish | — |
 | ✅ | Studio as a company | `07-judgment/studio-company.md` + `templates/docs/STUDIO_ORG.md` | **90** | Org seats; Paperclip judgment | — |
 | ✅ | Competitor recon / clean-room | `07-judgment/competitor-recon.md` | **88** | Matrix + evidence gaps; no clone OS | — |
+| ✅ | Software Factory + multi-agent | `07-judgment/software-factory.md` | **90** | Stages + independent review; pairs with seats | — |
 | ✅ | Coverage atlas (this folder) | `coverage/` | **100** | Inventory + %; update on every practice change |
 
 ---
