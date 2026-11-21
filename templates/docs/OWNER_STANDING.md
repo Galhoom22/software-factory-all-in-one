@@ -61,6 +61,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 |------------|--------|
+| YYYY-MM-DD | Laravel 13 technologies pack. |
 | YYYY-MM-DD | Technologies packs: quality.md + automatic latest-docs check (D-66). |
 | YYYY-MM-DD | Technologies library (`playbook/technologies/`); PHP 8.6 first pack. |
 | YYYY-MM-DD | API readiness gate in day loop (contract + local + CI + env smoke). |

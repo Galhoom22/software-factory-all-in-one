@@ -64,5 +64,5 @@ When the task writes or reviews code in a stack that has (or should have) a pack
 | Pack | Current slice | Quality bar file | Status |
 |------|---------------|------------------|--------|
 | [`php/`](php/README.md) | [`php-8.6/`](php/php-8.6/README.md) | [`quality.md`](php/quality.md) | ✅ |
-| `laravel/` | — | — | ❌ Add when owner asks |
+| [`laravel/`](laravel/README.md) | [`laravel-13/`](laravel/laravel-13/README.md) | [`quality.md`](laravel/quality.md) | ✅ |
 | `nextjs/` | — | — | ❌ Add when owner asks |
