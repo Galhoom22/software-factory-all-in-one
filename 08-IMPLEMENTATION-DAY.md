@@ -35,7 +35,7 @@ Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent m
 
 ## Day run-through
 
-**Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. Review axes before merge: correctness, readability, architecture, security, performance (**includes DSA / Big-O on hot paths** — name `n`, complexity class, structure, edges) — CodeRabbit Free CLI is the default mechanical assist. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md) · [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md).
+**Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. Review axes before merge: correctness, readability, architecture, security, performance (**includes DSA / Big-O on hot paths** — name `n`, complexity class, structure, edges) — CodeRabbit Free CLI is the default mechanical assist. **API surfaces:** contract parity + HTTP proof for every endpoint touched today; local green is not enough — CI must pass, and staging/production smoke runs when that phase exists. Details: [`07-judgment/agent-skills.md`](07-judgment/agent-skills.md) · [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md) · [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md).
 
 **Feature SDLC on the day:** Stories that map to a `docs/features/…` file follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md). Same day: keep the verification matrix and lifecycle status honest (evidence links). Match proof depth to the feature’s profile. Never call the day Done from a filled template alone — gates in Design / Security / Verification / Integration still need real results.
 
@@ -47,6 +47,7 @@ When a new chat starts and the owner says to work **today’s** tasks (any clear
 4. Does **not** open or merge a PR until the day’s must-finish is **100%** earned locally.
 5. Runs the **same local checks CI will run** before opening the PR (fail fast).
 6. When the day touches a mapped feature file, updates that file’s evidence (matrix + status + PR links) before closeout.
+7. **API readiness gate** (backend / contract days): for every API surface in must-finish — (a) matches planning `API_CONTRACT.md` (update contract first if needed), (b) feature/HTTP tests pass locally, (c) ready for the same suite on CI, (d) FE-handoff notes honest if FE consumes it. Remote env smoke follows the CI/CD phase in closeout — do not claim staging/prod green in Phase A. Judgment: [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md).
 
 **Pause only when:**
 
@@ -71,7 +72,7 @@ When must-finish is truly 100%:
 5. **Verify** on that merge commit (re-run the day’s proof checks locally) **and** confirm CI on the default branch is green. If either fails: stop — do not mark tracker/checklist Done; fix first.
 6. **CD (when staging/production hooks exist)** — wait for the staging deploy started by CI on `main` (or the documented hook); run the smoke test from the repo’s DEPLOYMENT guide; glance Sentry if that release is live. If CD is **not** configured yet, say so in the day summary and skip — do not invent a fake deploy pass. Production stays **manual approval** (`workflow_dispatch` + environment reviewers), not an automatic day step.
 7. **Issue tracker** — mark Done only when the Story’s acceptance is fully met; otherwise leave In Progress with a progress comment (Stories may span days).
-8. **Day page** — check off must-finish, mark day finished, fill finished / tomorrow / **full day summary** (include merge SHA, CI run link, and CD/smoke result or “CD not configured”).
+8. **Day page** — check off must-finish, mark day finished, fill finished / tomorrow / **full day summary** (include merge SHA, CI run link, **API readiness evidence** — contract IDs + test/CI proof + phase A/B/C smoke note — and CD/smoke result or “CD not configured”).
 9. **Lesson capture (automatic when earned)** — surprising root cause or useful discovery → implementation `docs/learning-from-mistakes/`; if reusable **and** it raises professionalism → playbook `06-LESSONS.md` (or matching template) + studio sync same session. No owner prompt. Skip noise and duplicates.
 
 Never mark tracker or checklist finished before post-merge verification (and required CI) succeeds. Never wait for the owner to ask for closeout.
@@ -95,7 +96,7 @@ Default while on the **Free** plan ([plans](https://docs.coderabbit.ai/managemen
 
 - Closeout still opens a PR (summary may post). Agent runs **CodeRabbit CLI or IDE review**, fixes **blocking** findings, then merges **only after CI is green**.
 - When the owner later pays (Essentials+), GitHub App full PR review becomes the primary review gate again; CLI/IDE stay optional early passes.
-- CodeRabbit does **not** replace CI tests, human judgment on auth/billing/AI/deletion, SECURITY/COMPLIANCE red lines, or the DSA hot-path check. Setup: product `docs/CODERABBIT.md` (or playbook `templates/docs/CODERABBIT.md`).
+- CodeRabbit does **not** replace CI tests, human judgment on auth/billing/AI/deletion, SECURITY/COMPLIANCE red lines, the DSA hot-path check, or the API readiness gate (contract + HTTP + env smoke). Setup: product `docs/CODERABBIT.md` (or playbook `templates/docs/CODERABBIT.md`).
 
 ## Final reply shape (mandatory)
 

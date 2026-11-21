@@ -26,6 +26,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | Priority | Capability | Today % | Target % | Suggested upgrade (smallest complete) | Status |
 |----------|------------|---------|----------|----------------------------------------|--------|
 | P0 | **Coverage atlas itself** | was 0 | **100** | This folder + agent protocol + prompts/lessons | ✅ Done 2026-11-21 |
+| P0 | **API readiness in day loop** | was ~55 | **88** | `07-judgment/api-readiness.md` + `08`/`09` + BE TESTING/DEPLOYMENT | ✅ Done 2026-11-21 |
 | P1 | Consult-before-add agent habit | was ~40 | **95** | Wire atlas into README, `05-PROMPTS`, `06-LESSONS`, OWNER_STANDING | ✅ Done 2026-11-21 |
 | P2 | TestSprite rails depth | **78** | **88** | When a product ships TestSprite for real: fold lessons into templates + `06-LESSONS` | ⚠️ Open |
 | P2 | Observability (Sentry-class) method in templates | **60** | **85** | Short shared `docs/` stub or DEPLOYMENT subsection: DSN empty in git, no PII, glance-after-deploy — keep host names out | ⚠️ Open |

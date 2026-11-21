@@ -31,7 +31,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 - When the owner says to work **today’s** tasks, finish the **whole** must-finish list without mid-day continue / “approve next slice” waits.
 - **Final reply after closeout:** (1) **Pareto 20% (teachable depth)** — most important topics only, each explained thoroughly so the owner can paste into ChatGPT and learn (terms, concepts, what shipped, why) — not ultra-short stubs; (2) **New-chat handoff** — copy-paste block for tomorrow. Emit both automatically.
-- **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch) → **CD when configured** (staging deploy → smoke → Sentry if live) → tracker → day page. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
+- **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch, **including API tests**) → **CD when configured** (staging deploy → **API smoke** → Sentry if live) → tracker → day page. **API readiness** (contract + local + CI + phase smoke) is a day gate like DSA/CodeRabbit — see `playbook/07-judgment/api-readiness.md`. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
 - Pause only for real blockers (security/compliance/product/spend decisions, interactive approvals, unfixable hard stops).
 
 ## Playbook generic (hard rule)
@@ -60,6 +60,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 |------------|--------|
+| YYYY-MM-DD | API readiness gate in day loop (contract + local + CI + env smoke). |
 | YYYY-MM-DD | Coverage atlas: consult `playbook/coverage/` before adding practices; update % when coverage changes. |
 | YYYY-MM-DD | Playbook forever-generic hard rule.
 | YYYY-MM-DD | CI/CD (GitHub Actions + staging/prod delivery) is a hard gate in implementation day closeout (`09-CI-CD.md`). |

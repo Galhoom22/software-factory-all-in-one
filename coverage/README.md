@@ -83,6 +83,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Playwright E2E | `07-judgment/playwright-e2e` + FE TESTING + CI | ✅ ~88% |
 | Design patterns | `07-judgment/design-patterns` | ✅ ~85% |
 | AI system design / golden set | `07-judgment/ai-system-design` + `docs/AI.md` | ✅ ~86% |
+| API readiness (all environments) | `07-judgment/api-readiness` + day/`09` | ✅ ~88% |
 | ADR / architecture decisions | `07-judgment/sad-adr` + `DECISIONS` template | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
@@ -109,4 +110,5 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-21 | API readiness gate absorbed (D-64); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |

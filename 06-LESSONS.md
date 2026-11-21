@@ -78,6 +78,8 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 
 Hard-won while shipping a real Laravel (or similar) modular API beside a planning contract. Keep product names out; write the practice.
 
+- **Local API green is not FE-ready or prod-ready.** Contract parity + CI on a clean runner are required before Done; staging smoke when CD exists; production smoke only on approved release. A laptop-only pass still breaks the frontend developer and production. Judgment: [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md).
+
 - **Inventory `main` before reinventing.** A multi-day Story often already landed jobs, validators, or routes on an earlier day. Read the feature file + handoff “already on main” list first — deepening beats a duplicate greenfield.
 - **Dispatch queue work after the DB commit.** Creating a row and `dispatch()` inside the same transaction lets a sync/fast worker run before commit → job loads nothing and sticks as `queued`. Create rows in the transaction; dispatch **after** commit (embeddings, imports, AI suggestion jobs).
 - **AI proposes; humans commit.** Async suggestion endpoints return `202` + a suggestion set. They must **not** mutate the canonical user record. The client applies via normal CRUD. Auto-merge “to be helpful” violates product trust.

@@ -60,3 +60,18 @@ Formatter, static analysis, full test suite, secret scan on every PR.
 ## Algorithmic / hot-path performance
 
 When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `playbook/07-judgment/dsa-performance.md`.
+
+## 7. API readiness (environments)
+
+Local HTTP green is **not** enough to hand an API to frontend or call it production-ready. Judgment: `playbook/07-judgment/api-readiness.md`.
+
+| Layer | Proof | Owner |
+|-------|-------|-------|
+| Contract parity | Touched routes/errors/shapes match planning `API_CONTRACT.md` (update contract first if the shape changed) | BE (+ FE notified) |
+| Local | Feature/HTTP tests for today’s surfaces; mandatory safety net still green | BE |
+| CI | Same suite on GitHub Actions (clean runner) | BE |
+| Staging | After deploy: health + critical-path smoke from `backend/DEPLOYMENT.md` | BE (Phase B+) |
+| Production | Same smoke on approved release only — never real PII | BE (Phase C release) |
+| FE handoff | Status codes, auth/cookie needs, and error codes documented; fictional examples only | BE |
+
+**Day Done bar:** contract + local + CI. Add staging smoke when CD Phase B+ exists. Do not claim production API verified on a normal day merge.

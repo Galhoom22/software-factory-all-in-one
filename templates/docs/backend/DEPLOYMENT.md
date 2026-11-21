@@ -34,7 +34,16 @@ Domain authentication (DKIM, SPF, DMARC), leaving the email sandbox, private sto
 
 ## 8. Smoke Test (after every deploy)
 
-Health route, sign-in, a background job, file export, an email, no debug output.
+Run after **staging** deploy on every day closeout that reaches Phase B+, and after **production** only on an approved release. Fictional data only. Part of API readiness: `playbook/07-judgment/api-readiness.md`.
+
+Minimum:
+
+- [ ] Health route returns success (no debug stack traces)
+- [ ] Sign-in / session cookie path works on this host’s domain and HTTPS settings
+- [ ] Today’s critical API paths (from the day’s Stories) return contract-shaped JSON
+- [ ] A background job that the day relies on actually runs
+- [ ] Webhook or signed URL paths are reachable if the day touched them (no edge challenge blocking them)
+- [ ] No debug output, no secrets in responses
 
 ## 9. Backups and Restore
 

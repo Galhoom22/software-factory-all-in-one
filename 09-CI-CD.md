@@ -113,6 +113,25 @@ Order that raises quality without mid-day PR spam (run only the steps the curren
 8. Tracker → day checklist page.
 9. Final reply: Pareto 20% + new-chat handoff (cite CI run URL + merge SHA + current CI/CD phase).
 
+
+## API readiness by environment
+
+Pairs with [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md) and day closeout in [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md). **Local green ≠ every environment green.**
+
+| Environment | What proves the API | Required for day Done? |
+|-------------|---------------------|-------------------------|
+| **Local** | Feature/HTTP tests + contract parity for surfaces touched today | **Yes** (always) |
+| **CI (PR + main)** | Same suite on a clean runner | **Yes** once a CI workflow exists (Phase A+) |
+| **Staging** | DEPLOYMENT smoke after deploy from green `main` (health + critical paths) | **Yes in Phase B+**; Phase A: skip honestly |
+| **Production** | Same smoke on approved release only | **Release gate (Phase C)** — not every daily merge |
+
+Rules:
+
+1. Never mark an API Story Done for frontend consumption without contract parity + local + CI proof.
+2. Never use real personal data on staging/production smoke — fictional fixtures only.
+3. Never invent a staging/production pass in Phase A.
+4. Backend production deploy before frontend when the contract changes (DR-08).
+
 ## Agent checklist (implementation day)
 
 - [ ] Detect phase (A / B / C) from workflows + secrets + DEPLOYMENT — do not ask the owner to restate it every day.

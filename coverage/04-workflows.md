@@ -34,6 +34,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Local proof = CI checks | `08`, `09` | **94** | Same commands GitHub Actions will run |
 | ✅ | Feature evidence same day | `04-FEATURE_SDLC`, `08` | **93** | Filled template ≠ Done; gates need results |
 | ✅ | DSA check on hot paths | `07-judgment/dsa-performance`, `08` | **90** | Name `n`, class, structure, edges |
+| ✅ | API readiness across environments | `07-judgment/api-readiness`, `08`, `09`, BE TESTING/DEPLOYMENT | **88** | Contract + local + CI + phase smoke; FE-handoff honesty |
 | ✅ | Automatic closeout order | `08`, `09` | **96** | PR → CI green → CodeRabbit → merge → verify → CD(phase) → tracker → day page |
 | ✅ | Progressive CD (A/B/C) | `09-CI-CD`, impl Actions YAML | **94** | Auto-detect; honest skip; no fake deploys |
 | ✅ | CodeRabbit Free default | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked |
@@ -67,4 +68,4 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 
 ## Domain average
 
-**Workflow coverage ≈ 90%** — strongest studio operating system area. Remaining gaps are mostly product-side tooling (Notion page shapes, org atlas) intentionally kept out of the generic playbook.
+**Workflow coverage ≈ 91%** — strongest studio operating system area. Remaining gaps are mostly product-side tooling (Notion page shapes, org atlas) intentionally kept out of the generic playbook.
