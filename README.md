@@ -25,6 +25,7 @@ playbook/
   07-judgment/              Judgment-only absorb of outside methods
   08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline
   09-CI-CD.md               CI/CD progressive phases for day closeout
+  EXCELLENCE.md             North star + ratchet for every future upgrade
   coverage/                 Inventory + ✅/% of what the template already covers
   technologies/             Per-stack packs (PHP, Laravel, Next.js, …)
   examples/                 Copyable samples (e.g. my-project-requirements)
@@ -51,6 +52,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`06-LESSONS.md`](06-LESSONS.md) | Mistakes already made and how to avoid them. |
   07-judgment/              Judgment-only absorb of outside methods
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
+| [`EXCELLENCE.md`](EXCELLENCE.md) | North star + **ratchet**: every edit must raise professionalism toward the best reusable method — trajectory, not a one-prompt finish. |
 | [`coverage/`](coverage/README.md) | Living atlas: what the playbook/template already covers, with ✅ / ⚠️ / ❌ and a **%** per capability. Agents consult it before adding or duplicating a practice. |
 | [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
 | [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |
