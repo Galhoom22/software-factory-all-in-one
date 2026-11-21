@@ -34,13 +34,14 @@ playbook/technologies/
   laravel/                  ← Laravel 13 pack
   tailwindcss/              ← Tailwind CSS v4 pack
   alpinejs/                 ← Alpine.js 3.x pack
+  livewire/                 ← Livewire 4.x pack
   nextjs/                   ← add when owner asks
 ```
 
 | Folder naming | Rule |
 |---------------|------|
-| Top-level slug | Lowercase (`php`, `laravel`, `tailwindcss`, `alpinejs`, `nextjs`, `postgresql`) |
-| Version slice | Exact line (`php-8.6`, `laravel-13`, `tailwindcss-v4`, `alpinejs-v3`, `nextjs-16`) |
+| Top-level slug | Lowercase (`php`, `laravel`, `tailwindcss`, `alpinejs`, `livewire`, `nextjs`, `postgresql`) |
+| Version slice | Exact line (`php-8.6`, `laravel-13`, `tailwindcss-v4`, `alpinejs-v3`, `livewire-4`, `nextjs-16`) |
 | Required files | See [`_pack-template/README.md`](_pack-template/README.md) — always include `quality.md` |
 
 ## How agents must use a pack (hard rules)
@@ -69,4 +70,5 @@ When the task writes or reviews code in a stack that has (or should have) a pack
 | [`laravel/`](laravel/README.md) | [`laravel-13/`](laravel/laravel-13/README.md) | [`quality.md`](laravel/quality.md) | ✅ |
 | [`tailwindcss/`](tailwindcss/README.md) | [`tailwindcss-v4/`](tailwindcss/tailwindcss-v4/README.md) | [`quality.md`](tailwindcss/quality.md) | ✅ |
 | [`alpinejs/`](alpinejs/README.md) | [`alpinejs-v3/`](alpinejs/alpinejs-v3/README.md) | [`quality.md`](alpinejs/quality.md) | ✅ |
+| [`livewire/`](livewire/README.md) | [`livewire-4/`](livewire/livewire-4/README.md) | [`quality.md`](livewire/quality.md) | ✅ |
 | `nextjs/` | — | — | ❌ Add when owner asks |

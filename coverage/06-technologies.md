@@ -15,10 +15,12 @@ Paths under `playbook/technologies/`.
 | ✅ | Tailwind CSS v4 slice | `technologies/tailwindcss/tailwindcss-v4/` | **88** | use / stop / mistakes from tailwindcss.com |
 | ✅ | Alpine.js pack hub | `technologies/alpinejs/` | **88** | Start Here + install + quality |
 | ✅ | Alpine.js 3.x slice | `technologies/alpinejs/alpinejs-v3/` | **88** | use / stop / mistakes from alpinejs.dev |
+| ✅ | Livewire pack hub | `technologies/livewire/` | **88** | Quickstart + install + quality |
+| ✅ | Livewire 4.x slice | `technologies/livewire/livewire-4/` | **88** | use / stop / mistakes from livewire.laravel.com/docs/4.x |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
-**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~84%.**
+**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~85%.**
 
 ## Agent decision cheat-sheet
 
