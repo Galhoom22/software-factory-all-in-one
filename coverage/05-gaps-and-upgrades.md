@@ -28,6 +28,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | P0 | **Coverage atlas itself** | was 0 | **100** | This folder + agent protocol + prompts/lessons | ✅ Done 2026-11-21 |
 | P0 | **API readiness in day loop** | was ~55 | **88** | `07-judgment/api-readiness.md` + `08`/`09` + BE TESTING/DEPLOYMENT | ✅ Done 2026-11-21 |
 | P0 | **Technologies library + PHP 8.6** | was 0 | **85** (PHP slice) | `technologies/` + php-8.6 pack from php.net | ✅ Done 2026-11-21 |
+| P0 | **Tech pack quality bar + auto latest-docs** | was thin | **92** | `quality.md` + hard agent protocol (D-66) | ✅ Done 2026-11-21 |
 | P2 | Laravel / Next.js packs | **0** | **80** | Add when owner starts those stacks | ❌ Open |
 | P1 | Consult-before-add agent habit | was ~40 | **95** | Wire atlas into README, `05-PROMPTS`, `06-LESSONS`, OWNER_STANDING | ✅ Done 2026-11-21 |
 | P2 | TestSprite rails depth | **78** | **88** | When a product ships TestSprite for real: fold lessons into templates + `06-LESSONS` | ⚠️ Open |

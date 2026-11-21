@@ -42,7 +42,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 - When agents hit non-obvious problems or useful discoveries during build, they **automatically** (no owner ask) write `docs/learning-from-mistakes/` and, if the rule is reusable **and** raises professionalism, add a generic bullet to `playbook/06-LESSONS.md` (or the matching template) and sync any studio playbook mirror the same session. Skip noise and duplicates. Method: `playbook/08-IMPLEMENTATION-DAY.md` § Lesson capture.
 - When the owner says to **add something to the playbook / template**, always update local `playbook/` **and** sync the studio GitHub mirror in the same session — no second ask. Quality bar: only changes that raise professionalism; forever-generic.
-- **Technologies packs:** when coding a stack, open `playbook/technologies/<slug>/` (version slice + best practices). Official vendor docs; product SRS owns the product pin.
+- **Technologies packs:** when coding a stack, open `playbook/technologies/<slug>/` (`best-practices` + `quality` + version slice) and **automatically** re-check official docs/Context7 for the pinned line. Modern syntax + Clean Code + architecture + earned patterns. Product SRS owns the product pin.
 - **Coverage atlas first:** before adding a practice, read `playbook/coverage/README.md` (and the matching domain file). Report ✅/⚠️/❌ + coverage %. If already strong, deepen that home instead of duplicating. When coverage changes, update the atlas row/% in the same change.
 
 ## Git and remotes
@@ -61,6 +61,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 |------------|--------|
+| YYYY-MM-DD | Technologies packs: quality.md + automatic latest-docs check (D-66). |
 | YYYY-MM-DD | Technologies library (`playbook/technologies/`); PHP 8.6 first pack. |
 | YYYY-MM-DD | API readiness gate in day loop (contract + local + CI + env smoke). |
 | YYYY-MM-DD | Coverage atlas: consult `playbook/coverage/` before adding practices; update % when coverage changes. |

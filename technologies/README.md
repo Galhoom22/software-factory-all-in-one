@@ -1,53 +1,68 @@
 # Technologies — reusable stack references
 
-**What this is:** a growing library of **per-technology** packs agents and humans use when a product chooses that stack. Each pack distills **official** docs into best practices, “prefer these,” “stop using these,” and common mistakes — forever-generic, no product names.
+**What this is:** a growing library of **per-technology** packs. Goal: when an agent writes code in that stack, the result is **modern syntax**, **Clean Code**, **sound architecture**, and **patterns only when earned** — using **today’s** official standards, not memory.
 
-**What this is not:** a second SRS, a dump of the full manual, or permission to change a product’s pinned versions without an ADR / SRS update. Product stack pins stay in that product’s `docs/SRS.md` §2.
+**What this is not:** a second SRS, a full vendor-manual mirror, or a silent upgrade of a product’s pinned versions.
+
+## Does this meet the quality bar?
+
+| Need | How the library meets it |
+|------|--------------------------|
+| Latest standards / modern syntax | Version slice `use-these.md` + `stop-using.md`; **automatic** re-check of official docs before coding |
+| Clean Code | Each pack’s `quality.md` + always-on `clean-code` rules |
+| Clean / modular architecture | `quality.md` + product `ARCHITECTURE.md` (framework pack when present) |
+| Good design patterns | Link to [`07-judgment/design-patterns.md`](../07-judgment/design-patterns.md) — problem→naive→enhance; no pattern-for-show |
+| Auto search without owner ask | **Hard rule below** — Context7 / official vendor pages every non-trivial coding session on that stack |
+
+If a pack is missing a row above, deepen that pack — do not invent a parallel bible outside `technologies/`.
 
 ## Layout
 
 ```text
 playbook/technologies/
-  README.md                 ← this file
-  php/                      ← language pack
+  README.md                 ← this file (agent protocol)
+  _pack-template/           ← copy when adding Laravel, Next.js, …
+  php/                      ← first language pack
     README.md
     official-refs.md
     best-practices.md
-    php-8.6/                ← version slice (current Active line for this pack)
-      README.md
+    quality.md              ← Clean Code + architecture + patterns in PHP form
+    php-8.6/
       use-these.md
       stop-using.md
       common-mistakes.md
-  laravel/                  ← (add when needed)
-  nextjs/                   ← (add when needed)
-  …
+  laravel/                  ← add when owner asks
+  nextjs/                   ← add when owner asks
 ```
 
 | Folder naming | Rule |
 |---------------|------|
-| Top-level slug | Lowercase, no spaces (`php`, `laravel`, `nextjs`, `postgresql`) |
-| Version slice | Exact line the pack targets (`php-8.6`, `laravel-13`, `nextjs-16`) |
-| Always include | `README.md` (pin + when to open) + `official-refs.md` (dated links to official sites) |
+| Top-level slug | Lowercase (`php`, `laravel`, `nextjs`, `postgresql`) |
+| Version slice | Exact line (`php-8.6`, `laravel-13`, `nextjs-16`) |
+| Required files | See [`_pack-template/README.md`](_pack-template/README.md) — always include `quality.md` |
 
-## How agents must use a pack
+## How agents must use a pack (hard rules)
 
-1. **Product SRS wins** for which major/minor the *product* runs. If SRS says PHP 8.4 and the pack is 8.6, do not upgrade silently — propose an ADR.
-2. When coding in that language/framework, **read the matching pack** (version slice + `best-practices.md`) before inventing style.
-3. Prefer **official** links in `official-refs.md`. Re-verify on the vendor site when bumping a version.
-4. When the owner asks to “add docs for X,” either deepen the existing pack or add `technologies/<slug>/` — then update [`coverage/`](../coverage/README.md) and sync the studio playbook mirror.
-5. Keep packs **actionable** (rules agents can apply). Do not paste entire manuals.
+When the task writes or reviews code in a stack that has (or should have) a pack:
+
+1. **Open the pack first** — `best-practices.md`, `quality.md`, and the current version slice (`use-these` / `stop-using` / `common-mistakes`).
+2. **Automatic latest check (no owner ask):** re-verify the pinned line on the **official** vendor site and/or Context7 in that session before non-trivial code. Memory and old chat are not evidence of “latest.”
+3. **Apply the full bar:** modern syntax **and** Clean Code **and** architecture fit **and** patterns only when earned (see pack `quality.md`).
+4. **Product SRS wins** for which version the product runs. If the pack is ahead of SRS, do not upgrade silently — propose an ADR.
+5. **If the pack is missing** for a stack the owner named: create it from `_pack-template/`, fill from official docs today, update [`coverage/`](../coverage/README.md), sync the studio playbook mirror the same session.
+6. Prefer **deepening** an existing pack over a second folder with the same slug.
 
 ## Adding the next technology
 
-1. Create `technologies/<slug>/README.md` + `official-refs.md` + `best-practices.md`.
-2. Add a version slice `<slug>-<version>/` with `use-these.md`, `stop-using.md`, `common-mistakes.md` when the release line matters.
-3. Link it from this README’s table below and bump coverage %.
-4. Sync studio `planning-playbook` the same session.
+1. Copy [`_pack-template/`](_pack-template/) → `technologies/<slug>/`.
+2. Fill from **official** docs only (date the check in `official-refs.md`).
+3. Add version slice + `quality.md`.
+4. Link in the table below; bump coverage %; sync studio mirror.
 
 ## Packs present
 
-| Pack | Current slice | Status |
-|------|---------------|--------|
-| [`php/`](php/README.md) | [`php-8.6/`](php/php-8.6/README.md) | ✅ Started 2026-11-21 (official PHP 8.6, released 2026-11-19) |
-| `laravel/` | — | ❌ Placeholder — add when owner asks |
-| `nextjs/` | — | ❌ Placeholder — add when owner asks |
+| Pack | Current slice | Quality bar file | Status |
+|------|---------------|------------------|--------|
+| [`php/`](php/README.md) | [`php-8.6/`](php/php-8.6/README.md) | [`quality.md`](php/quality.md) | ✅ |
+| `laravel/` | — | — | ❌ Add when owner asks |
+| `nextjs/` | — | — | ❌ Add when owner asks |
