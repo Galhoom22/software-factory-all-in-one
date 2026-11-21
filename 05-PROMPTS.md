@@ -12,6 +12,11 @@ When coding in an implementation repo (see also [08-IMPLEMENTATION-DAY.md](08-IM
 4. High-stakes changes: name what would falsify the claim before Done.
 5. Pre-merge: correctness, readability, architecture, security, performance (CodeRabbit Free CLI + CI).
 
+## Playbook coverage (before adding a practice)
+Use with [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
+
+> Before adding or inventing practice `<X>` in the playbook/template: read `playbook/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.
+
 ## Requirements-driven activation
 
 Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick templates.

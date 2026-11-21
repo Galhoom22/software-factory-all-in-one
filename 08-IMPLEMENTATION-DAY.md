@@ -112,6 +112,9 @@ Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPT
 - **Explain each selected topic thoroughly** — enough that the owner can copy the Pareto half into ChatGPT (or similar) and learn: vocabulary, how the system works, why choices were made, and what to study next.
 - **“20%” is topic selection, not brevity.** Ultra-short stubs fail this requirement. Teaching depth belongs here; the handoff stays operational and tight.
 
+## Coverage atlas (before inventing a practice)
+When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
+
 ## Owner standing ↔ playbook mirror
 
 Lasting collaboration preferences (this pipeline, language, remotes, assignees) live in the product’s `docs/OWNER_STANDING.md`.

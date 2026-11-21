@@ -22,9 +22,10 @@ playbook/
   04-FEATURE_SDLC.md        Feature depth for implementation repos
   05-PROMPTS.md             Ready agent prompts + audits
   06-LESSONS.md             Planning-process lessons
-| [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / CLAS / AI-system-design / SAD-ADR / agent-skills / payments / Playwright E2E / design-patterns methods as **judgment only** — map onto existing docs; never install a second constitution. |
+  07-judgment/              Judgment-only absorb of outside methods
   08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline
   09-CI-CD.md               CI/CD progressive phases for day closeout
+  coverage/                 Inventory + ✅/% of what the template already covers
   examples/                 Copyable samples (e.g. my-project-requirements)
   scripts/                  Playbook self-checks (activation wiring)
   templates/                Skeleton of a new planning repository
@@ -47,8 +48,9 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) | Adaptive feature-level delivery for the **implementation** repositories: decompose the SRS once, match engineering depth to risk, require evidence for completion. |
 | [`05-PROMPTS.md`](05-PROMPTS.md) | Ready prompts for the agent at each step, audits, planning handoffs, implementation day, and requirements-driven activation. |
 | [`06-LESSONS.md`](06-LESSONS.md) | Mistakes already made and how to avoid them. |
-| [`07-judgment/`](07-judgment/README.md) | How to borrow Spec Kit / ESD / ATLAS-style methods as **judgment only** — map onto existing docs; never install a second constitution. |
+  07-judgment/              Judgment-only absorb of outside methods
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
+| [`coverage/`](coverage/README.md) | Living atlas: what the playbook/template already covers, with ✅ / ⚠️ / ❌ and a **%** per capability. Agents consult it before adding or duplicating a practice. |
 | [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |
 | [`examples/`](examples/) | Copyable samples, including `my-project-requirements.example.md`. |
 | [`scripts/check-requirements-activation.mjs`](scripts/check-requirements-activation.mjs) | Verifies activation wiring is present (run after playbook edits). |
@@ -103,3 +105,6 @@ Every other `{{...}}` is a local fill-in named for what it holds (for example `{
 This playbook is a living document. Whenever work in a planning repository creates a practice worth repeating (a new document, a CI check, a test, a rule, a lesson learned), update the matching playbook file in the same commit. `AGENTS.md` makes this mandatory for AI agents. Keep it generic: write the practice, not the product details.
 
 Also keep agent **skills**, CLI pins (for example `impeccable@x.y.z` in CI), and MCP registrations current against **today’s** stable releases — not tomorrow’s RCs. Re-verify on the official pages when the planning stack or tooling moves.
+
+### Before adding a practice
+Consult [`coverage/`](coverage/README.md). If the capability is already ✅ at high %, deepen that home instead of inventing a parallel file. When you add or deepen something, update the matching coverage row and % in the same change, then sync the studio playbook mirror.
