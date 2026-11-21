@@ -89,4 +89,4 @@ When the owner asks for something that fails these lenses:
 
 - Templates: `templates/docs/COMPLIANCE.md`, `templates/docs/SECURITY.md`, `templates/docs/OWNER_STANDING.md` § Candor
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md)
-- Sibling: [`payments.md`](payments.md), [`api-readiness.md`](api-readiness.md), Candor (D-82)
+- Sibling: [`payments.md`](payments.md), [`booking.md`](booking.md), [`api-readiness.md`](api-readiness.md), Candor (D-82)

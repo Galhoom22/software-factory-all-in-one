@@ -31,6 +31,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Packages over reinvention (when earned) | Prefer a verified package for non-trivial work; skip packages for trivial helpers | DIY complexity by habit; dependency for every micro-task |
 | SEO + GEO (public pages) | Dual technical + citeable craft on indexable marketing/legal; Google foundations over vendor hacks | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
 | Compliance / ethics / risk | Laws + IEEE ethics + identify/assess/treat/monitor; refuse unlawful or unethical asks with safer alternative | Checklist theater; fake certifications; silent High-risk acceptance |
+| Booking / reservations | Holds, recheck-before-commit, idempotency, inventory, cancel snapshots; AI/MCP sandbox | Confirm from search cache; skip recheck; double-book on retry |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -41,6 +42,7 @@ SAD / ADR judgment: [`sad-adr.md`](sad-adr.md).
 Agent engineering skills judgment: [`agent-skills.md`](agent-skills.md).
 
 Payments / billing judgment: [`payments.md`](payments.md).
+Booking / reservations: [`booking.md`](booking.md).
 
 Playwright E2E judgment: [`playwright-e2e.md`](playwright-e2e.md).
 

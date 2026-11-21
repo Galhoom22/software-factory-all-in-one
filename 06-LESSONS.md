@@ -20,6 +20,7 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 - **Never upgrade from the thank-you URL.** Browser redirects are UX; paid entitlement comes from a verified webhook (or server confirm) with idempotent event ids. Signature failures fail closed.
 - **Separate sandboxes for local and CI.** Shared test-mode data makes flaky suites and polluted fixtures. Prefer fakes in CI; if a live sandbox is needed, isolate it.
 - **Agents use provider MCP/skills for payments, not memory.** Pin SDK versions from the registry; prefer current Intent/Checkout/Setup APIs; skip deprecated Sources/Charges/Tokens for new work. Judgment: [`07-judgment/payments.md`](07-judgment/payments.md).
+- **Recheck before you confirm a booking.** Search results are not inventory truth; holds expire; retries without idempotency + external reference double-book suppliers; cancel using the policy snapshot on the booking. AI/MCP travel tools still need lock-price then book ([`07-judgment/booking.md`](07-judgment/booking.md)).
 
 ## Documents
 

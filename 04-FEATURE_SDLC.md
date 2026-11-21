@@ -239,7 +239,7 @@ These are independent unless an explicit product policy ties them together.
 | AI path evaluation | New or changed model, prompt, retrieval, or AI job — require fictional golden-set pass; pin model IDs; if RAG: relevance + groundedness + answer relevance; privacy strip before provider; injection/agency threat row |
 | Payments / billing | Checkout, subscriptions, credits, refunds, or provider webhooks — activate WH threat rows; signature + idempotency tests; entitlement never from success URL alone; sandbox/fake isolation; go-live key rotation checklist |
 
-For each activated module, record: Module · Reason · Artifact / evidence link · Status. Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md). Judgment for payments: [`07-judgment/payments.md`](07-judgment/payments.md). Judgment for design patterns: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
+For each activated module, record: Module · Reason · Artifact / evidence link · Status. Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md). Judgment for payments: [`07-judgment/payments.md`](07-judgment/payments.md). Judgment for booking/reservations: [`07-judgment/booking.md`](07-judgment/booking.md). Judgment for design patterns: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
 
 ### 12. Retrospective (optional)
 
