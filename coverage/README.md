@@ -91,6 +91,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | PHP 8.6 tech pack | `technologies/php` | ✅ ~85% |
 | Laravel 13 tech pack | `technologies/laravel` | ✅ ~88% |
 | Tailwind CSS v4 tech pack | `technologies/tailwindcss` | ✅ ~88% |
+| Alpine.js 3 tech pack | `technologies/alpinejs` | ✅ ~88% |
 | Next.js tech pack | `technologies/nextjs` | ❌ 0% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
 | Notion daily task page template | `05-gaps` | ❌ 0% in playbook (product standing by design) |

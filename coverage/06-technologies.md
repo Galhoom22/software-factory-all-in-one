@@ -13,10 +13,12 @@ Paths under `playbook/technologies/`.
 | ✅ | Laravel 13 version slice | `technologies/laravel/laravel-13/` | **88** | use / stop / mistakes from laravel.com/docs/13.x |
 | ✅ | Tailwind CSS pack hub | `technologies/tailwindcss/` | **88** | Vite install + v4 practices + quality |
 | ✅ | Tailwind CSS v4 slice | `technologies/tailwindcss/tailwindcss-v4/` | **88** | use / stop / mistakes from tailwindcss.com |
+| ✅ | Alpine.js pack hub | `technologies/alpinejs/` | **88** | Start Here + install + quality |
+| ✅ | Alpine.js 3.x slice | `technologies/alpinejs/alpinejs-v3/` | **88** | use / stop / mistakes from alpinejs.dev |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
-**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~83%.**
+**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~84%.**
 
 ## Agent decision cheat-sheet
 
