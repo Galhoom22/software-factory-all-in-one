@@ -32,7 +32,7 @@ Paths relative to `playbook/templates/` unless noted. These seed a **new plannin
 | ✅ | Compliance red lines | `docs/COMPLIANCE.md` | **90** | Markets, consent, payments, a11y |
 | ✅ | Security red lines | `docs/SECURITY.md` | **92** | OWASP IDs + Every Page Checklist |
 | ✅ | AI provider / rules | `docs/AI.md` | **85** | Optional delete if no AI |
-| ✅ | SEO (shared) | `docs/SEO.md` | **85** | Honest public SEO only |
+| ✅ | SEO + GEO (shared) | `docs/SEO.md` | **90** | Honest public SEO + GEO craft; day gate wired |
 | ✅ | Docker (shared) | `docs/DOCKER.md` | **85** | Local Compose; prod host separate |
 | ✅ | Deployment (shared) | `docs/DEPLOYMENT.md` | **88** | Hosting choice + DR rules |
 | ✅ | CodeRabbit (shared) | `docs/CODERABBIT.md` | **88** | Free vs paid; does not replace CI |
@@ -45,7 +45,7 @@ Paths relative to `playbook/templates/` unless noted. These seed a **new plannin
 | ✅ | Learning-from-mistakes | `docs/learning-from-mistakes/**` | **90** | README + sample lessons (queue, AI mutate, CI lockfile) |
 | ✅ | Jira / tracker pack | `docs/jira/**` | **82** | Generic current-actor SPRINTS + README (product fills keys) |
 
-**Shared-docs average: ~88%**
+**Shared-docs average: ~89%**
 
 ---
 
@@ -53,7 +53,7 @@ Paths relative to `playbook/templates/` unless noted. These seed a **new plannin
 
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
-| ✅ | FE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER / SEO | `docs/frontend/**` | **88** | Owner-split testing (D-33 pattern) |
+| ✅ | FE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER / SEO+GEO | `docs/frontend/**` | **90** | Owner-split testing (D-33); FE SEO includes GEO craft |
 | ✅ | BE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER | `docs/backend/**` | **88** | — |
 | ✅ | FE/BE CodeRabbit yaml + guidelines | `docs/frontend|backend/coderabbit.yaml`, `CODERABBIT_GUIDELINES.md` | **90** | Sync when SECURITY/COMPLIANCE change |
 | ✅ | FE/BE TestSprite guidelines | `docs/*/TESTSPRITE_GUIDELINES.md` | **78** | Present; less battle-tested than CodeRabbit rails |

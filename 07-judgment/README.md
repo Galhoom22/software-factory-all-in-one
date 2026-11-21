@@ -29,6 +29,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Requirements-driven stack selection (advise → specify → ADR) | Options + recommendation from **this** product’s requirements; pin in SRS + DECISIONS; architecture/patterns follow | One-size-fits-all stack; locking TALL/MERN/Next by fashion; packs that replace product constitution |
 | Owner names a stack → pack freshness | Search official/Context7; update `technologies/<slug>/` if stale (same session) | Waiting for “update the pack”; advising from memory while the pack drifts |
 | Packages over reinvention (when earned) | Prefer a verified package for non-trivial work; skip packages for trivial helpers | DIY complexity by habit; dependency for every micro-task |
+| SEO + GEO (public pages) | Dual technical + citeable craft on indexable marketing/legal; Google foundations over vendor hacks | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -51,6 +52,7 @@ API readiness across environments: [`api-readiness.md`](api-readiness.md).
 Requirements-driven stack selection: [`stack-selection.md`](stack-selection.md).
 
 Packages over reinvention: [`packages.md`](packages.md).
+SEO + GEO: [`seo-geo.md`](seo-geo.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

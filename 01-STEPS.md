@@ -144,7 +144,7 @@ Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 
 ### 17. Quality pass
 
-- Accessibility (WCAG 2.2 AA; `npm run crawl` with axe on every screen and state, both languages and themes), responsive at 320px, long content, RTL and LTR alignment, spelling in every language, fonts, colors, button states (hover, pressed, current), touch targets of 44px, purposeful motion that respects reduced motion, SEO per `docs/SEO.md` (public pages indexed with title/description/canonical/hreflang/robots/sitemap/honest JSON-LD; private ones not), Lighthouse. Tick `project-ui/PRE-DELIVERY-UX.md` and skim `ANTI-SLOP.md` before calling a screen done.
+- Accessibility (WCAG 2.2 AA; `npm run crawl` with axe on every screen and state, both languages and themes), responsive at 320px, long content, RTL and LTR alignment, spelling in every language, fonts, colors, button states (hover, pressed, current), touch targets of 44px, purposeful motion that respects reduced motion, SEO+GEO per `docs/SEO.md` (public pages indexed with title/description/canonical/hreflang/robots/sitemap/honest JSON-LD + citeable Q&A craft; private ones not), Lighthouse. Tick `project-ui/PRE-DELIVERY-UX.md` and skim `ANTI-SLOP.md` before calling a screen done.
 - **Done:** the crawl reports only intentional problems; Lighthouse accessibility is 100 on every screen; landing SEO category is clean on a production-like build; owner-reported visual defects are fixed and logged in `DESIGN-ERRORS.md`.
 
 ## Phase 5 — Ongoing

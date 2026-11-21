@@ -21,6 +21,7 @@ See playbook [`07-judgment/`](../../07-judgment/README.md). This file is the pro
 | API readiness across environments | Day API gate + BE TESTING/DEPLOYMENT smoke; playbook `07-judgment/api-readiness.md` | Second OpenAPI SoT; Done on local-only; real PII on smoke |
 | Stack / framework shopping lists | Advise from **this** product’s requirements; pin in SRS + DECISIONS; playbook `07-judgment/stack-selection.md` | One stack for every product; locking from pack availability alone |
 | Package vs DIY for a capability | Prefer verified packages for non-trivial work; playbook `07-judgment/packages.md` | Dependency for every micro-task; reinventing maintained ecosystem solutions |
+| SEO + GEO (public pages) | Dual technical + citeable craft; playbook `07-judgment/seo-geo.md` + day gate in `08` | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
 
 ## Converge checklist (end of a docs / UI pass)
 
