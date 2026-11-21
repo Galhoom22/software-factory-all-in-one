@@ -106,9 +106,13 @@ Every other `{{...}}` is a local fill-in named for what it holds (for example `{
 
 ## Keeping It Current
 
+**North star:** [`EXCELLENCE.md`](EXCELLENCE.md) — aspiration is the best human+AI planning→implementation playbook; progress is a **ratchet** (each change raises at least one excellence dimension). One session never “finishes” that dream.
+
 This playbook is a living document. Whenever work in a planning repository creates a practice worth repeating (a new document, a CI check, a test, a rule, a lesson learned), update the matching playbook file in the same commit. `AGENTS.md` makes this mandatory for AI agents. Keep it generic: write the practice, not the product details.
 
 Also keep agent **skills**, CLI pins (for example `impeccable@x.y.z` in CI), and MCP registrations current against **today’s** stable releases — not tomorrow’s RCs. Re-verify on the official pages when the planning stack or tooling moves.
 
 ### Before adding a practice
-Consult [`coverage/`](coverage/README.md). If the capability is already ✅ at high %, deepen that home instead of inventing a parallel file. When you add or deepen something, update the matching coverage row and % in the same change, then sync the studio playbook mirror.
+1. Read [`EXCELLENCE.md`](EXCELLENCE.md) ratchet (dimension up, none down).
+2. Consult [`coverage/`](coverage/README.md). If the capability is already ✅ at high %, deepen that home instead of inventing a parallel file.
+3. When you add or deepen something, update the matching coverage row and % in the same change, then sync the studio playbook mirror.

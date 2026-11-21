@@ -172,6 +172,10 @@ Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPT
 - **Explain each selected topic thoroughly** — enough that the owner can copy the Pareto half into ChatGPT (or similar) and learn: vocabulary, how the system works, why choices were made, and what to study next.
 - **“20%” is topic selection, not brevity.** Ultra-short stubs fail this requirement. Teaching depth belongs here; the handoff stays operational and tight.
 
+## Excellence ratchet (playbook changes)
+
+When this day (or any session) updates the playbook/template: follow [`EXCELLENCE.md`](EXCELLENCE.md) — raise a dimension, atlas first, candor on downgrades, update coverage %, sync studio mirror. The dream is the best reusable method; progress is incremental, never a single megaprompt.
+
 ## Coverage atlas (before inventing a practice)
 When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
 **Candor (D-82 / D-83):** if that ask would lower professionalism, weaken this pipeline, violate COMPLIANCE/SECURITY/ethics, or create unmanaged High risk, **refuse and advise** (why + safer alternative scenario or skip). Do not dual-sync a degrading change. Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md). Product standing: `docs/OWNER_STANDING.md` § Candor.

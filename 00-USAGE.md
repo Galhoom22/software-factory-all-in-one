@@ -96,6 +96,10 @@ Edit `my-project-requirements.md` again. On the next session the agent reconcile
 
 **Provide the requirements file. The AI Agent handles the planning process.**
 
+## Excellence trajectory
+
+This playbook improves forever via [`EXCELLENCE.md`](EXCELLENCE.md) (north star + ratchet) and [`coverage/`](coverage/README.md). New products inherit the latest bar; they do not freeze a “finished” template.
+
 ## Automation (CI)
 
 Planning CI runs these without a manual step:

@@ -1,5 +1,7 @@
 # Coverage — gaps, intentional exclusions, upgrade backlog
 
+
+**North star:** upgrades exist to ratchet toward [`EXCELLENCE.md`](../EXCELLENCE.md) — prefer closing ⚠️ / low-% rows over inventing parallel domains. One prompt never finishes the dream.
 Honest weak spots. **Intentional exclusions are not defects.** Upgrade only when professionalism rises for the *next* product.
 
 Scoring of a gap uses the same rubric as [`README.md`](README.md): how covered the capability is **inside the playbook today**.

@@ -55,6 +55,7 @@ When adding a new harness: add a thin pointer that points here; do not fork a se
 ## Professionalism bar
 
 - Every pass must leave the repository **measurably more professional** than before: fix defects found on the way (and log them), leave a guard or check when a contract changed, delete dead weight you uncover, verify every interface language and text direction that the change touches, and report concretely what improved. A pass that only adds without improving quality is incomplete.
+- Playbook/template edits follow [`playbook/EXCELLENCE.md`](playbook/EXCELLENCE.md): ratchet toward the best reusable method; raise an excellence dimension; deepen-over-duplicate via `playbook/coverage/`; never dual-sync a bar-lowering change.
 
 ## Borrowing from outside
 

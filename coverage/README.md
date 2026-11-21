@@ -12,6 +12,7 @@
 
 When the owner says *add X to the playbook / template / workflow* (any language):
 
+0. **North star** — [`EXCELLENCE.md`](../EXCELLENCE.md): raise at least one excellence dimension without lowering another? If not, skip or refuse (Candor).
 1. **Search this atlas first** (`README` scorecard + the matching domain file).
 2. Report in one short block:
    - **Status:** ✅ present · ⚠️ thin / partial · ❌ missing
@@ -94,6 +95,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Candor / refuse degrading asks | OWNER_STANDING + coverage protocol + `08` (D-82) | ✅ ~90% |
 | Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (D-83) | ✅ ~88% |
 | Booking / reservations | `07-judgment/booking` + `08` (D-84) | ✅ ~88% |
+| Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (D-87) | ✅ ~92% |
 | Proportional day pipeline | `08` § Proportional + `09` phases + FEATURE profiles (D-85) | ✅ ~90% |
 | Context window / memory pointers | `07-judgment/context-window` + `08` + handoffs (D-86) | ✅ ~90% |
 | TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
@@ -134,6 +136,7 @@ playbook/coverage/
 ## Changelog
 
 | Date (UTC) | Change |
+| 2026-11-21 | D-87: EXCELLENCE.md north star + ratchet for every future playbook upgrade.
 | 2026-11-21 | D-86: context-window hygiene (memory pointers, handoff, mid-day checkpoint ≠ owner go). |
 | 2026-11-21 | D-85: proportional day pipeline (flexible rigor; always-on core). |
 | 2026-11-21 | D-84: booking/reservations judgment + day gate. |

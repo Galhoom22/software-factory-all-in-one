@@ -56,6 +56,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Forever-generic playbook | OWNER_STANDING template, `README` | **98** | No product/people/tracker URLs in playbook |
 | ✅ | Owner “add to playbook” dual mirror | OWNER_STANDING, `08` | **95** | Local `playbook/` + studio sync same session |
 | ✅ | Coverage atlas consult-before-add | `coverage/` (this folder), prompts, lessons | **100** | Status + % + upgrade vs add |
+| ✅ | Excellence north star / ratchet | `EXCELLENCE.md`, coverage protocol step 0 | **92** | Every edit raises a dimension; trajectory not one-shot (D-87) |
 | ✅ | Standing preference → playbook | OWNER_STANDING template | **92** | Lasting workflow prefs update method + sync |
 | ⚠️ | Studio repo-map diagram updates | Product standing / decisions (not in generic templates deeply) | **55** | Practice exists in mature studios; thin in seed templates — see gaps |
 
