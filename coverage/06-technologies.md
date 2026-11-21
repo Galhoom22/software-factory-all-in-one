@@ -23,6 +23,8 @@ Paths under `playbook/technologies/`.
 | ✅ | ECMAScript 2026 slice | `technologies/javascript/javascript-es2026/` | **88** | use / stop / mistakes from MDN + ECMA-262 |
 | ✅ | HTML pack hub | `technologies/html/` | **88** | MDN HTML + WHATWG Living Standard + quality |
 | ✅ | HTML Living Standard slice | `technologies/html/html-living/` | **88** | use / stop / mistakes from MDN + obsolete.html |
+| ✅ | CSS pack hub | `technologies/css/` | **88** | MDN CSS + Snapshot 2026 + quality |
+| ✅ | CSS Snapshot 2026 slice | `technologies/css/css-2026/` | **88** | use / stop / mistakes from MDN + W3C snapshot |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
@@ -36,6 +38,7 @@ Paths under `playbook/technologies/`.
 | Pastes an official stack docs URL (e.g. Tailwind Vite install) | Create or deepen `technologies/<slug>/` from `_pack-template/`; pin latest official line; update this atlas + sync |
 | Pastes MDN JavaScript / ECMAScript docs | Deepen `javascript/` — do not fork a second JS bible |
 | Pastes MDN HTML / WHATWG HTML docs | Deepen `html/` — do not fork a second HTML bible |
+| Pastes MDN CSS / W3C CSS Snapshot docs | Deepen `css/` (keep Tailwind pack for utilities) — do not fork a second CSS bible |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
 | Product still on older PHP / CSS / JS engines | Keep SRS pin; use pack as upgrade guide, not silent bump |
 
