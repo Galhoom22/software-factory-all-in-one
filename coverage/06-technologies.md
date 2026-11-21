@@ -27,10 +27,12 @@ Paths under `playbook/technologies/`.
 | ✅ | CSS Snapshot 2026 slice | `technologies/css/css-2026/` | **88** | use / stop / mistakes from MDN + W3C snapshot |
 | ✅ | Inertia.js pack hub | `technologies/inertiajs/` | **88** | Getting started + install + quality |
 | ✅ | Inertia.js 3.x slice | `technologies/inertiajs/inertiajs-v3/` | **88** | use / stop / mistakes from inertiajs.com/docs/v3 |
+| ✅ | Vue.js pack hub | `technologies/vue/` | **88** | Introduction + Quick Start + quality |
+| ✅ | Vue 3 slice | `technologies/vue/vue-3/` | **88** | use / stop / mistakes from vuejs.org (3.5.x) |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
-**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~88%.**
+**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~89%.**
 
 ## Agent decision cheat-sheet
 
@@ -42,6 +44,7 @@ Paths under `playbook/technologies/`.
 | Pastes MDN HTML / WHATWG HTML docs | Deepen `html/` — do not fork a second HTML bible |
 | Pastes MDN CSS / W3C CSS Snapshot docs | Deepen `css/` (keep Tailwind pack for utilities) — do not fork a second CSS bible |
 | Pastes Inertia.js docs URL | Deepen `inertiajs/` — do not fork a second Inertia bible |
+| Pastes Vue.js docs URL | Deepen `vue/` — do not fork a second Vue bible |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
 | Product still on older PHP / CSS / JS engines | Keep SRS pin; use pack as upgrade guide, not silent bump |
 

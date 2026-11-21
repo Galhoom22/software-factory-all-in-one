@@ -59,7 +59,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | [`03-agents-ci-tooling.md`](03-agents-ci-tooling.md) | Agents, harnesses, scripts, GitHub, impl CI/CD YAML | 28 | **87%** | ✅ |
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
-| [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~24 | **88%** | ✅ |
+| [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~26 | **89%** | ✅ |
 
 ### Overall playbook professionalism
 
@@ -98,6 +98,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | HTML Living Standard tech pack | `technologies/html` | ✅ ~88% |
 | CSS Snapshot 2026 tech pack | `technologies/css` | ✅ ~88% |
 | Inertia.js 3 tech pack | `technologies/inertiajs` | ✅ ~88% |
+| Vue 3 tech pack | `technologies/vue` | ✅ ~88% |
 | Next.js tech pack | `technologies/nextjs` | ❌ 0% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
 | Notion daily task page template | `05-gaps` | ❌ 0% in playbook (product standing by design) |
@@ -122,6 +123,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-21 | Vue 3 pack (D-76) from vuejs.org/guide/introduction. |
 | 2026-11-21 | Inertia.js 3 pack (D-75) from inertiajs.com/docs/v3/getting-started. |
 | 2026-11-21 | CSS Snapshot 2026 pack (D-74) from MDN Web/CSS. |
 | 2026-11-21 | HTML Living Standard pack (D-73) from MDN Web/HTML. |
