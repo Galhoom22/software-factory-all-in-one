@@ -60,11 +60,22 @@ playbook/technologies/
 When the task writes or reviews code in a stack the product **already pinned** (or the owner named for a greenfield after selection):
 
 1. **Open the pack first** — `best-practices.md`, `quality.md`, and the current version slice (`use-these` / `stop-using` / `common-mistakes`).
-2. **Automatic latest check (no owner ask):** re-verify the pinned line on the **official** vendor site and/or Context7 in that session before non-trivial code. Memory and old chat are not evidence of “latest.”
+2. **Automatic latest check (no owner ask):** re-verify the pinned line on the **official** vendor site and/or Context7 in that session before non-trivial code. Memory and old chat are not evidence of “latest.” Same duty applies when the owner **names** a stack to work with — see **Owner names a stack** below.
 3. **Apply the full bar:** modern syntax **and** Clean Code **and** architecture fit **and** patterns only when earned (see pack `quality.md`).
 4. **Product SRS wins** for which version the product runs. If the pack is ahead of SRS, do not upgrade silently — propose an ADR.
 5. **If the pack is missing** for a stack the owner named **or the owner pastes an official docs URL**: create/deepen it from `_pack-template/` the same session, fill from that URL + related official pages today, update [`coverage/`](../coverage/README.md), sync the studio playbook mirror.
 6. Prefer **deepening** an existing pack over a second folder with the same slug.
+
+## Owner names a stack (hard trigger — no ask)
+
+When the owner says they will **use / work on / build with** a technology (e.g. “we’ll use Laravel”, “يلا PHP و Laravel”, “start with Filament”), treat that as an immediate cue — **do not wait** for “update the playbook” or a docs URL paste:
+
+1. **Search latest (same session):** open official vendor docs and/or Context7 for that stack’s **current stable** line. Memory and old chat are not evidence.
+2. **Compare to the playbook pack:** read `technologies/<slug>/` (or note that it is missing). Match version slice, `use-these` / `stop-using`, `official-refs` dates, and `quality.md` against what official docs say **today**.
+3. **If current:** say so briefly and proceed with advice/coding from the pack + product SRS pin.
+4. **If stale or missing:** update or create the pack from `_pack-template/` the **same session** (latest line + use/stop/mistakes + quality + dated official-refs), bump [`coverage/`](../coverage/README.md), commit path through planning `main` per product rules, and run `node scripts/sync-planning-playbook.mjs` (D-52). The playbook is a **starting point that must stay current**, not a frozen snapshot.
+5. **Product SRS still wins** for what that product *runs*. If the pack moves ahead of a product pin, update the pack and **propose** an ADR — do not silently bump production versions.
+6. Still run [`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md) when the question is “which stack?” — this trigger is for **freshness of craft**, not for forcing one stack onto every product.
 
 ## Adding the next technology
 

@@ -87,6 +87,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | API readiness (all environments) | `07-judgment/api-readiness` + day/`09` | ✅ ~88% |
 | ADR / architecture decisions | `07-judgment/sad-adr` + `DECISIONS` template | ✅ ~90% |
 | Requirements-driven stack selection | `07-judgment/stack-selection` + `00-USAGE` + `technologies/` | ✅ ~90% |
+| Owner-names-stack pack freshness | `technologies/README` (D-79) | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
 | PHP 8.6 tech pack | `technologies/php` | ✅ ~85% |

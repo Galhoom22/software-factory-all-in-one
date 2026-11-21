@@ -27,6 +27,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | DSA / Big-O / algorithmic performance (Pareto study habits) | Day + FEATURE Performance module: name `n`, Time/Space class, structure, edges | Dumping LeetCode catalogs/solutions into product repos; interview grind as merge gate |
 | API readiness across environments (contract + local + CI + staging/prod smoke) | Day API gate + BACKEND TESTING + DEPLOYMENT smoke | Second OpenAPI/Postman SoT; Done on local-only green; live prod checks with real PII |
 | Requirements-driven stack selection (advise → specify → ADR) | Options + recommendation from **this** product’s requirements; pin in SRS + DECISIONS; architecture/patterns follow | One-size-fits-all stack; locking TALL/MERN/Next by fashion; packs that replace product constitution |
+| Owner names a stack → pack freshness | Search official/Context7; update `technologies/<slug>/` if stale (same session) | Waiting for “update the pack”; advising from memory while the pack drifts |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
