@@ -89,6 +89,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Requirements-driven stack selection | `07-judgment/stack-selection` + `00-USAGE` + `technologies/` | ✅ ~90% |
 | Owner-names-stack pack freshness | `technologies/README` (D-79) | ✅ ~90% |
 | Packages over reinvention | `07-judgment/packages` (D-80) | ✅ ~90% |
+| TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
 | PHP 8.6 tech pack | `technologies/php` | ✅ ~85% |

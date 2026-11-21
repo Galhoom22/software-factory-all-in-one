@@ -6,6 +6,8 @@
 
 **Select before craft:** which language/framework/packages a product uses is decided by **that product’s requirements** ([`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md)). Packs teach **how to write well** in a chosen stack. They never mean “always use TALL / always use Next / always use Filament.”
 
+**TALL / VILT / PHP compositions:** which packs to open together → [`php-laravel-compositions.md`](php-laravel-compositions.md).
+
 **Packages over reinvention:** for non-trivial capabilities, prefer a **verified** ecosystem package when it saves cost and raises professionalism — see [`07-judgment/packages.md`](../07-judgment/packages.md). Never add a package for a few obvious lines.
 
 ## Does this meet the quality bar?
@@ -46,6 +48,7 @@ playbook/technologies/
   inertiajs/                ← Inertia.js 3.x pack
   vue/                      ← Vue 3 pack
   symfony/                  ← Symfony 8 pack
+  php-laravel-compositions.md ← TALL / VILT / PHP pack map
   nextjs/                   ← add when owner asks
 ```
 
@@ -102,4 +105,5 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 | [`inertiajs/`](inertiajs/README.md) | [`inertiajs-v3/`](inertiajs/inertiajs-v3/README.md) | [`quality.md`](inertiajs/quality.md) | ✅ |
 | [`vue/`](vue/README.md) | [`vue-3/`](vue/vue-3/README.md) | [`quality.md`](vue/quality.md) | ✅ |
 | [`symfony/`](symfony/README.md) | [`symfony-8/`](symfony/symfony-8/README.md) | [`quality.md`](symfony/quality.md) | ✅ |
+| [`php-laravel-compositions.md`](php-laravel-compositions.md) | TALL + VILT + Symfony map | — | ✅ |
 | `nextjs/` | — | — | ❌ Add when owner asks |

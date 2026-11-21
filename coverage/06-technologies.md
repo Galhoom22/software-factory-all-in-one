@@ -7,6 +7,7 @@ Paths under `playbook/technologies/`.
 | ✅ | Technologies library layout | `technologies/README.md` | **90** | Slug + version-slice convention; agent protocol |
 | ✅ | Select-before-craft gate | `07-judgment/stack-selection.md` + `technologies/README` | **90** | Packs ≠ product stack; requirements decide |
 | ✅ | Owner-names-stack freshness | `technologies/README` § Owner names a stack | **90** | Auto search official/Context7; update pack if stale (D-79) |
+| ✅ | TALL / VILT / PHP compositions map | `technologies/php-laravel-compositions.md` | **90** | Which packs to open together; gaps listed honestly |
 | ✅ | PHP pack hub | `technologies/php/` | **90** | Official refs + modern baseline + `quality.md` |
 | ✅ | PHP 8.6 version slice | `technologies/php/php-8.6/` | **85** | use / stop / common mistakes from php.net |
 | ✅ | Quality bar + auto latest-docs | `technologies/README` + each `quality.md` | **92** | Clean Code/architecture/patterns + mandatory official refresh (D-66) |
@@ -44,6 +45,7 @@ Paths under `playbook/technologies/`.
 |-----------|--------|
 | Add PHP / 8.6 practices | Deepen `php/` — do not fork a second PHP bible |
 | Pastes an official stack docs URL (e.g. Tailwind Vite install) | Create or deepen `technologies/<slug>/` from `_pack-template/`; pin latest official line; update this atlas + sync |
+| Asks if TALL / VILT / PHP world is covered | Open `php-laravel-compositions.md`; deepen packs or fill listed gaps |
 | Pastes MDN JavaScript / ECMAScript docs | Deepen `javascript/` — do not fork a second JS bible |
 | Pastes MDN HTML / WHATWG HTML docs | Deepen `html/` — do not fork a second HTML bible |
 | Pastes MDN CSS / W3C CSS Snapshot docs | Deepen `css/` (keep Tailwind pack for utilities) — do not fork a second CSS bible |

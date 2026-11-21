@@ -21,6 +21,7 @@ Agents **advise** before they lock. Owners decide lasting pins via ADR / `DECISI
 | Specify the stack **completely enough to build**: language + major frameworks + how FE/BE connect + auth shape + data store class + notable packages | SRS §2 + FE/BE `ARCHITECTURE.md` + API contract (if any) |
 | Tie architecture and **earned** patterns to that choice (modular monolith vs other; Resource/controller patterns; etc.) | Architecture docs + [`design-patterns.md`](design-patterns.md) |
 | Open matching [`technologies/`](../technologies/README.md) packs **after** the pin for professionalism (syntax, quality, stop-using) | Packs are **how to write well**, not **which stack to pick** |
+| For Laravel TALL / VILT, open the composition map so every letter’s pack is loaded | [`php-laravel-compositions.md`](../technologies/php-laravel-compositions.md) |
 | Re-check official docs / Context7 for pinned lines before non-trivial code | D-66 habit |
 | When the owner **names** a stack to work with, search latest + refresh the playbook pack if stale (same session, no ask) | [`technologies/README`](../technologies/README.md) § Owner names a stack (D-79) |
 
