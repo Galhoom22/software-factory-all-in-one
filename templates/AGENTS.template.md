@@ -77,6 +77,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
 - The team is **frontend and backend**. Frontend-only content goes in `docs/frontend/`, backend-only content in `docs/backend/`, and anything both sides need stays in the shared docs. Every SRS requirement has an Owner (FE / BE / Both). The API contract is the only shared interface.
 - [`README.md`](README.md) is the public summary and must stay consistent with `requirements.md`.
 - [`docs/COMPLIANCE.md`](docs/COMPLIANCE.md) and [`docs/SECURITY.md`](docs/SECURITY.md) define legal and security red lines. Never propose or document a feature that violates them; flag any conflict to the user. Run the SECURITY "Every Page Checklist" for UI work.
+- Booking/reservation products: follow `playbook/07-judgment/booking.md` (holds, recheck-before-commit, idempotency; D-84). Pair with `07-judgment/payments.md` when money moves.
 - [`docs/frontend/TESTING.md`](docs/frontend/TESTING.md) and [`docs/backend/TESTING.md`](docs/backend/TESTING.md) define how each owner verifies the product. Keep them split; prefer risk-matched tests over coverage theater.
 - [`docs/CODERABBIT.md`](docs/CODERABBIT.md) (if present) defines how an AI PR reviewer is configured for implementation repos. Keep FE/BE yaml and guidelines in sync with SECURITY and the API contract.
 - [`docs/TESTSPRITE.md`](docs/TESTSPRITE.md) (if present) defines how agentic live-app verification is configured for staging. Keep FE/BE guidelines and PRD/api-doc uploads in sync with the product contract; never use real personal data.
