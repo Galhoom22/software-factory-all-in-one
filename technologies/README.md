@@ -31,7 +31,7 @@ playbook/technologies/
       use-these.md
       stop-using.md
       common-mistakes.md
-  laravel/                  ← add when owner asks
+  laravel/                  ← Laravel 13 pack
   nextjs/                   ← add when owner asks
 ```
 
