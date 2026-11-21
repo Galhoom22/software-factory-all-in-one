@@ -59,6 +59,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | [`03-agents-ci-tooling.md`](03-agents-ci-tooling.md) | Agents, harnesses, scripts, GitHub, impl CI/CD YAML | 28 | **87%** | ✅ |
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
+| [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~6 | **72%** | ⚠️ |
 
 ### Overall playbook professionalism
 
@@ -87,6 +88,8 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | ADR / architecture decisions | `07-judgment/sad-adr` + `DECISIONS` template | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
 | Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
+| PHP 8.6 tech pack | `technologies/php` | ✅ ~85% (first pack) |
+| Laravel / Next.js tech packs | `technologies/` | ❌ 0% (structure ready) |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
 | Notion daily task page template | `05-gaps` | ❌ 0% in playbook (product standing by design) |
 
@@ -110,5 +113,6 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-21 | Technologies library + PHP 8.6 pack (D-65). |
 | 2026-11-21 | API readiness gate absorbed (D-64); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |

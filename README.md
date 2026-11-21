@@ -26,6 +26,7 @@ playbook/
   08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline
   09-CI-CD.md               CI/CD progressive phases for day closeout
   coverage/                 Inventory + ✅/% of what the template already covers
+  technologies/             Per-stack packs (PHP, Laravel, Next.js, …)
   examples/                 Copyable samples (e.g. my-project-requirements)
   scripts/                  Playbook self-checks (activation wiring)
   templates/                Skeleton of a new planning repository
@@ -51,6 +52,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
   07-judgment/              Judgment-only absorb of outside methods
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
 | [`coverage/`](coverage/README.md) | Living atlas: what the playbook/template already covers, with ✅ / ⚠️ / ❌ and a **%** per capability. Agents consult it before adding or duplicating a practice. |
+| [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
 | [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |
 | [`examples/`](examples/) | Copyable samples, including `my-project-requirements.example.md`. |
 | [`scripts/check-requirements-activation.mjs`](scripts/check-requirements-activation.mjs) | Verifies activation wiring is present (run after playbook edits). |

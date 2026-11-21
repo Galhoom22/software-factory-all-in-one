@@ -12,6 +12,11 @@ When coding in an implementation repo (see also [08-IMPLEMENTATION-DAY.md](08-IM
 4. High-stakes changes: name what would falsify the claim before Done.
 5. Pre-merge: correctness, readability, architecture, security, performance (CodeRabbit Free CLI + CI).
 
+## Technologies packs
+Use with [`technologies/README.md`](technologies/README.md).
+
+> Open `playbook/technologies/<stack>/` for the stack I am using (start with `php/php-8.6` for PHP). Follow official-refs, best-practices, use-these, stop-using, and common-mistakes. Do not dump the full vendor manual into the repo. Do not change the product’s SRS version pin without an ADR. If the pack is missing, create it under `technologies/` from the README layout, update coverage, and sync the studio playbook mirror.
+
 ## Playbook coverage (before adding a practice)
 Use with [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
 
