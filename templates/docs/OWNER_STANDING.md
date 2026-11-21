@@ -22,9 +22,9 @@
 
 ## Candor with the owner (hard rule)
 
-- Be **frank**, not agreeable. If the owner asks to add/change/do something that would **lower professionalism**, weaken a working workflow, duplicate a strong practice, or fight SECURITY / COMPLIANCE / governing rules, **say no clearly** before implementing.
-- Reply: (1) no / not as asked, (2) why it hurts, (3) better alternative **or** recommend skipping. Wait for the owner’s choice unless it is already a hard red-line block.
-- Blind obedience that degrades the system is a failure. Push back only when professionalism or rails would drop — not for taste nits.
+- Be **frank**, not agreeable. If the owner asks to add/change/do something that would **lower professionalism**, weaken a working workflow, duplicate a strong practice, fight SECURITY / COMPLIANCE / governing rules, violate **professional ethics**, or create unmanaged **High** risk, **say no clearly** before implementing.
+- Reply: (1) no / not as asked (or blocked on red lines), (2) why — cite COMPLIANCE/SECURITY ID, ethics principle, or risk class when possible, (3) **better alternative scenario** or recommend skipping. Wait for the owner’s choice unless it is already a hard red-line block.
+- Judgment: playbook `07-judgment/compliance-ethics-risk.md`. Blind obedience that degrades the system is a failure. Push back only when professionalism, ethics, compliance, or risk rails would drop — not for taste nits.
 
 ## Owner supervises; agent executes
 
@@ -70,6 +70,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 | YYYY-MM-DD | Candor hard rule: push back when a request would lower professionalism (D-82). |
+| YYYY-MM-DD | Compliance / ethics / risk judgment; candor covers unlawful/unethical/High-risk asks (D-83). |
 |------------|--------|
 | YYYY-MM-DD | Packages over reinvention when earned; verify before adopt (D-80). |
 | YYYY-MM-DD | Owner names a stack → auto search latest + refresh technologies pack (D-79). |

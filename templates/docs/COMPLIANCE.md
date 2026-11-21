@@ -78,3 +78,31 @@ Launch in a market only after its row is reviewed.
 - [ ] Legal documents published and linked from every public page's footer.
 - [ ] Data processing agreements signed with every vendor.
 - [ ] If payments are in scope: full price/renewal shown before charge; cancel as easy as start; entitlement only after provider confirm; receipts reachable (CP-01–CP-05).
+
+
+## Ethics and professional conduct
+
+Product laws are necessary but not sufficient. Agents and the team also follow the spirit of the [IEEE-CS/ACM Software Engineering Code of Ethics](https://www.computer.org/education/code-of-ethics): public interest first; no deception; respect privacy; disclose danger; refuse unethical work.
+
+| ID | Rule | Owner |
+|----|------|-------|
+| ET-01 | Never ship or document features that deceive users (fake proof, guaranteed outcomes, invented metrics). | Both |
+| ET-02 | Never process or commit real personal data in planning/prototype/CI; fictional fixtures only. | Both |
+| ET-03 | If a requested design is likely unsafe, unlawful, or ethically wrong, **refuse and propose a safer alternative** before building (Candor). | Both |
+| ET-04 | Prefer privacy-friendly defaults; collect the minimum personal data the product needs. | Both |
+
+Judgment map: playbook `07-judgment/compliance-ethics-risk.md`.
+
+## Risk management (engineering)
+
+Compliance is the **floor**. Risk management closes gaps statutes have not named yet.
+
+For non-trivial features and owner asks that touch money, PII, AI, irreversible actions, new vendors, or workflow changes:
+
+1. **Identify** risk class (project / technical / business / compliance / cyber / reputational / AI / third-party).
+2. **Assess** likelihood × impact (Low / Med / High is enough unless a product risk register exists).
+3. **Treat** — avoid → reduce → share/transfer → accept (accept only with explicit owner acknowledgment).
+4. **Monitor** — name the proof that watches residual risk (tests, CI, logs, counsel).
+
+Do not silently accept High residual risk. Day gate: playbook `08-IMPLEMENTATION-DAY.md` + `07-judgment/compliance-ethics-risk.md`.
+

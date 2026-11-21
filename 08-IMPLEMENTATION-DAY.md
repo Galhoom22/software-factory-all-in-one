@@ -51,6 +51,7 @@ When a new chat starts and the owner says to work **today’s** tasks (any clear
 6. When the day touches a mapped feature file, updates that file’s evidence (matrix + status + PR links) before closeout.
 7. **API readiness gate** (backend / contract days): for every API surface in must-finish — (a) matches planning `API_CONTRACT.md` (update contract first if needed), (b) feature/HTTP tests pass locally, (c) ready for the same suite on CI, (d) FE-handoff notes honest if FE consumes it. Remote env smoke follows the CI/CD phase in closeout — do not claim staging/prod green in Phase A. Judgment: [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md).
 8. **SEO + GEO gate** (frontend / public-page days): when must-finish ships or changes **indexable** marketing/legal URLs, metadata, robots, sitemap, public FAQ, or JSON-LD — run the product `docs/SEO.md` + FE SEO checklist **and** GEO craft (people-first copy, clear headings/Q&A, citeable claims, no fake authority). Backend-only or private-app days: mark **N/A**. Do not block Done on ranking or AI citation counts. Judgment: [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md). Prefer [Google’s generative AI Search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) over vendor “GEO hack” lists.
+9. **Compliance / ethics / risk check** (any day): before Done, if must-finish touches PII, money, AI, marketing claims, new vendors, irreversible delete, or cross-border data — confirm product COMPLIANCE/SECURITY red lines still hold; name residual risk and treatment (avoid/reduce/accept). If the owner asked for something unlawful or unethical, refuse with a safer scenario (Candor). Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md).
 
 **Pause only when:**
 
@@ -118,7 +119,7 @@ Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPT
 
 ## Coverage atlas (before inventing a practice)
 When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
-**Candor (D-82):** if that ask would lower professionalism or weaken this pipeline, **refuse and advise** (why + better alternative or skip). Do not dual-sync a degrading change. Product standing: `docs/OWNER_STANDING.md` § Candor.
+**Candor (D-82 / D-83):** if that ask would lower professionalism, weaken this pipeline, violate COMPLIANCE/SECURITY/ethics, or create unmanaged High risk, **refuse and advise** (why + safer alternative scenario or skip). Do not dual-sync a degrading change. Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md). Product standing: `docs/OWNER_STANDING.md` § Candor.
 
 ## Owner standing ↔ playbook mirror
 

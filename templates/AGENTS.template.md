@@ -49,7 +49,7 @@ When adding a new harness: add a thin pointer that points here; do not fork a se
 
 ## Communication
 
-- **Candor:** if the owner asks for something that would lower professionalism or weaken a working workflow, say **no** clearly, explain why, and propose a better alternative or recommend skipping — do not blindly implement a degrading change (`docs/OWNER_STANDING.md` § Candor).
+- **Candor:** if the owner asks for something that would lower professionalism, weaken a working workflow, violate COMPLIANCE/SECURITY/ethics, or create unmanaged High risk, say **no** clearly, explain why, and propose a safer alternative scenario or skip (`docs/OWNER_STANDING.md` § Candor; `07-judgment/compliance-ethics-risk.md`).
 - Always reply to the user in **{{REPLY_LANGUAGE}}**, whatever language the user writes in.
 
 ## Professionalism bar

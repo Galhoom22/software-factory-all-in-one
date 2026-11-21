@@ -22,6 +22,7 @@ See playbook [`07-judgment/`](../../07-judgment/README.md). This file is the pro
 | Stack / framework shopping lists | Advise from **this** product’s requirements; pin in SRS + DECISIONS; playbook `07-judgment/stack-selection.md` | One stack for every product; locking from pack availability alone |
 | Package vs DIY for a capability | Prefer verified packages for non-trivial work; playbook `07-judgment/packages.md` | Dependency for every micro-task; reinventing maintained ecosystem solutions |
 | SEO + GEO (public pages) | Dual technical + citeable craft; playbook `07-judgment/seo-geo.md` + day gate in `08` | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
+| Compliance / ethics / risk | Map laws + IEEE ethics + risk treat cycle; playbook `07-judgment/compliance-ethics-risk.md` | Dumping ISO manuals; fake SOC2 claims; obeying unlawful asks |
 
 ## Converge checklist (end of a docs / UI pass)
 

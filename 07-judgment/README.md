@@ -30,6 +30,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Owner names a stack → pack freshness | Search official/Context7; update `technologies/<slug>/` if stale (same session) | Waiting for “update the pack”; advising from memory while the pack drifts |
 | Packages over reinvention (when earned) | Prefer a verified package for non-trivial work; skip packages for trivial helpers | DIY complexity by habit; dependency for every micro-task |
 | SEO + GEO (public pages) | Dual technical + citeable craft on indexable marketing/legal; Google foundations over vendor hacks | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
+| Compliance / ethics / risk | Laws + IEEE ethics + identify/assess/treat/monitor; refuse unlawful or unethical asks with safer alternative | Checklist theater; fake certifications; silent High-risk acceptance |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -53,6 +54,7 @@ Requirements-driven stack selection: [`stack-selection.md`](stack-selection.md).
 
 Packages over reinvention: [`packages.md`](packages.md).
 SEO + GEO: [`seo-geo.md`](seo-geo.md).
+Compliance / ethics / risk: [`compliance-ethics-risk.md`](compliance-ethics-risk.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

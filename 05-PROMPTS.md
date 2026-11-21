@@ -22,6 +22,7 @@ Use with [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicat
 
 > Before adding or inventing practice `<X>` in the playbook/template: read `playbook/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.
 > If `<X>` would **lower** professionalism or weaken the day/workflow: Action = **refuse**; explain why; propose a better alternative or recommend skipping (Candor / D-82). Do not dual-sync a degrading change.
+> If `<X>` would violate COMPLIANCE/SECURITY, professional ethics, or create unmanaged High risk: Action = **refuse**; cite the rule/risk class; propose a **safer alternative scenario** (`07-judgment/compliance-ethics-risk.md`, D-83).
 
 ## Requirements-driven activation
 
@@ -79,7 +80,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Plan webhook-first entitlement, signature verification, idempotent events, separate local/CI sandboxes (or fakes), and current Checkout/Payment Intent/Setup Intent patterns (no deprecated Sources/Charges/Tokens for new work). Update `requirements.md` §4, expand `SECURITY.md` WH and `COMPLIANCE.md` CP, and every document that mentions pricing. Use the provider's official Agents/docs (MCP/skills or `.md` URLs) — not memorized API shapes. Judgment: `playbook/07-judgment/payments.md`.
 
-> Write `docs/COMPLIANCE.md` covering the data protection, consumer protection, payment, marketing, accessibility, and AI laws of `<markets>`, from official sources. List the UI each law requires.
+> Write `docs/COMPLIANCE.md` covering the data protection, consumer protection, payment, marketing, accessibility, and AI laws of `<markets>` (include Egypt / Arab / global as relevant), from official sources. List the UI each law requires. Include ethics (IEEE-CS/ACM spirit) and a short risk-management section. Judgment: `playbook/07-judgment/compliance-ethics-risk.md`.
 
 > Write `docs/SECURITY.md` from the latest OWASP Top 10 (web, API, and LLM if the product uses AI), ASVS, and NIST password guidance, with rule IDs, owners, and an Every Page Checklist.
 

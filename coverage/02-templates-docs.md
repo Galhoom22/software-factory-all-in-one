@@ -29,7 +29,7 @@ Paths relative to `playbook/templates/` unless noted. These seed a **new plannin
 | ✅ | PRD | `docs/PRD.md` | **90** | Features F-xx, acceptance, DoR |
 | ✅ | SRS | `docs/SRS.md` | **92** | Stack + FR/NFR + owners + traceability |
 | ✅ | API contract | `docs/API_CONTRACT.md` | **90** | Only shared FE↔BE interface |
-| ✅ | Compliance red lines | `docs/COMPLIANCE.md` | **90** | Markets, consent, payments, a11y |
+| ✅ | Compliance red lines | `docs/COMPLIANCE.md` | **92** | Markets, consent, payments, a11y, ethics + risk sections |
 | ✅ | Security red lines | `docs/SECURITY.md` | **92** | OWASP IDs + Every Page Checklist |
 | ✅ | AI provider / rules | `docs/AI.md` | **85** | Optional delete if no AI |
 | ✅ | SEO + GEO (shared) | `docs/SEO.md` | **90** | Honest public SEO + GEO craft; day gate wired |
