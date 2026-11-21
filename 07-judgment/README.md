@@ -33,6 +33,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Compliance / ethics / risk | Laws + IEEE ethics + identify/assess/treat/monitor; refuse unlawful or unethical asks with safer alternative | Checklist theater; fake certifications; silent High-risk acceptance |
 | Booking / reservations | Holds, recheck-before-commit, idempotency, inventory, cancel snapshots; AI/MCP sandbox | Confirm from search cache; skip recheck; double-book on retry |
 | Context window hygiene | Memory pointers, truth outside chat, fresh-chat handoff, mid-day checkpoint ≠ owner “go” | Paste-bomb logs/dumps; polluted chat as SoT; slice-approval theater |
+| Studio as a company | Org seats, goal ancestry, atomic checkout, board approvals; optional Paperclip CLI | Vendor Paperclip as AGENTS; 20 unsupervised agent tabs; dual checkout |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -59,6 +60,7 @@ Packages over reinvention: [`packages.md`](packages.md).
 SEO + GEO: [`seo-geo.md`](seo-geo.md).
 Compliance / ethics / risk: [`compliance-ethics-risk.md`](compliance-ethics-risk.md).
 Context window hygiene: [`context-window.md`](context-window.md).
+Studio as a company: [`studio-company.md`](studio-company.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

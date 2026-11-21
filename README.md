@@ -53,6 +53,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
   07-judgment/              Judgment-only absorb of outside methods
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
 | [`EXCELLENCE.md`](EXCELLENCE.md) | North star + **ratchet**: every edit must raise professionalism toward the best reusable method — trajectory, not a one-prompt finish. |
+| [`07-judgment/studio-company.md`](07-judgment/studio-company.md) + [`templates/docs/STUDIO_ORG.md`](templates/docs/STUDIO_ORG.md) | Studio-as-company seats, goals, atomic checkout (Paperclip patterns as judgment). |
 | [`coverage/`](coverage/README.md) | Living atlas: what the playbook/template already covers, with ✅ / ⚠️ / ❌ and a **%** per capability. Agents consult it before adding or duplicating a practice. |
 | [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
 | [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |

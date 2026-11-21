@@ -87,6 +87,10 @@ Long days and large tool outputs **silently** degrade agents (truncation, lost e
 
 Judgment: [`07-judgment/context-window.md`](07-judgment/context-window.md) (D-86). Pairs with Anthropic-style compaction/handoff craft and the Memory Pointer pattern (large payloads stay outside the LLM).
 
+## Studio company seats (hard rule)
+
+Work like a **small company**, not a pile of chats. At day start, name: (1) **goal** (product + current actor), (2) **seat** (FE or BE day agent — see product `docs/STUDIO_ORG.md`), (3) **checkout** — this session exclusively owns today’s must-finish (no second agent competing on the same Story/day). Escalate blockers to the Board (owner); do not invent parallel product direction. Consequential new seats/tools need owner approval. Judgment: [`07-judgment/studio-company.md`](07-judgment/studio-company.md) (Paperclip org patterns absorbed as judgment only — D-88).
+
 ## Day run-through
 
 **Operating bar (from agent-skills judgment):** surface assumptions on non-trivial work; stop and name confusion instead of guessing; deliver in thin vertical slices that stay testable; before Done on high-stakes paths (auth, money, PII, irreversible data), ask what would prove the claim wrong. When the day’s stack has a [`technologies/`](technologies/README.md) pack (e.g. PHP), open it before coding and **re-check official docs/Context7 for the pinned line** (no owner ask). Apply pack `quality.md` (Clean Code + architecture + patterns) together with modern syntax.
@@ -95,7 +99,7 @@ Review axes before merge: correctness, readability, architecture, security, perf
 
 **Feature SDLC on the day:** Stories that map to a `docs/features/…` file follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md). Same day: keep the verification matrix and lifecycle status honest (evidence links). Match proof depth to the feature’s profile. Never call the day Done from a filled template alone — gates in Design / Security / Verification / Integration still need real results.
 
-When a new chat starts and the owner says to work **today’s** tasks (any clear start cue, including other languages), the agent:
+When a new chat starts and the owner says to work **today’s** tasks (any clear start cue, including other languages), the agent confirms **goal + seat + checkout** (`STUDIO_ORG` / studio-company judgment), then:
 
 1. Opens that day’s must-finish list (daily checklist tool + linked issue keys).
 2. Completes **every** checkbox with real proof — no stubs, no “good enough for later.”

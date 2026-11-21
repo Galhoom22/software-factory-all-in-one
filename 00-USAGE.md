@@ -91,10 +91,15 @@ Edit `my-project-requirements.md` again. On the next session the agent reconcile
 - [ ] Playbook method + `templates/` seeded at root  
 - [ ] `my-project-requirements.md` written at root  
 - [ ] Agent opened on the repo (it should start from that file)  
+- [ ] Fill `docs/STUDIO_ORG.md` (seats + company goal)
 - [ ] Review generated planning docs; answer only blocking questions  
 - [ ] Later: create implementation repos and build  
 
 **Provide the requirements file. The AI Agent handles the planning process.**
+
+## Studio org seats
+
+After seeding templates, fill `docs/STUDIO_ORG.md` (company seats, goals, exclusive checkout). Method: [`07-judgment/studio-company.md`](07-judgment/studio-company.md).
 
 ## Excellence trajectory
 

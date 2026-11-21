@@ -56,6 +56,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Playbook self-check scripts | `scripts/check-requirements-activation.mjs`, `check-planning-entry.mjs` | **92** | CI + local |
 | ✅ | Playbook CI workflow | `.github/workflows/ci.yml` | **90** | Studio mirror uses synced copy |
 | ✅ | Excellence north star | `EXCELLENCE.md` | **92** | Ratchet; trajectory not one-prompt finish | — |
+| ✅ | Studio as a company | `07-judgment/studio-company.md` + `templates/docs/STUDIO_ORG.md` | **90** | Org seats; Paperclip judgment | — |
 | ✅ | Coverage atlas (this folder) | `coverage/` | **100** | Inventory + %; update on every practice change |
 
 ---
