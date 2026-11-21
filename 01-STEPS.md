@@ -82,7 +82,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 8. Legal and security red lines
 
-- **Output:** [`docs/COMPLIANCE.md`](templates/docs/COMPLIANCE.md) (laws per market, consent, consumer protection, payments, accessibility, legal documents needed) and [`docs/SECURITY.md`](templates/docs/SECURITY.md) (OWASP-based rules with IDs and owners, and an **Every Page Checklist**).
+- **Output:** [`docs/COMPLIANCE.md`](templates/docs/COMPLIANCE.md) (laws per market including Egypt / Arab / global as relevant, consent, consumer protection, payments, accessibility, AI, ethics, risk-management notes, legal documents needed) and [`docs/SECURITY.md`](templates/docs/SECURITY.md) (OWASP-based rules with IDs and owners, and an **Every Page Checklist**). Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md).
 - **How:** research the official sources for every launch market; write both **before** the prototype so screens are built compliant.
 - **Also list the UI the law requires:** consent at sign-up (unchecked marketing box), AI or processing consent before first use, data download, account deletion, one-step cancellation, full price and renewal terms, legal footer links, company information, sub-processor list.
 - **Done:** each has a red-lines table, and the PRD and SRS cite their rule IDs.
