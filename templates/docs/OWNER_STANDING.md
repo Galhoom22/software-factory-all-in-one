@@ -45,6 +45,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - **Requirements-driven stack selection (hard rule):** there is **no** universal default stack (not TALL, not MERN, not “always Next”). When the owner asks what to use, or when activating from `my-project-requirements.md`, agents **advise** from **this** product’s requirements (options → recommendation → full specification including architecture and earned patterns) per `playbook/07-judgment/stack-selection.md`, then pin lasting choices in `DECISIONS.md` + SRS. `playbook/technologies/` packs are craft after the pin — never the reason to pick a stack.
 - **Technologies packs:** when coding a stack, open `playbook/technologies/<slug>/` (`best-practices` + `quality` + version slice) and **automatically** re-check official docs/Context7 for the pinned line. Modern syntax + Clean Code + architecture + earned patterns. Product SRS owns the product pin.
 - **Owner names a stack → auto-refresh (hard rule):** when the owner says they will use/work on a technology (e.g. Laravel), the agent **immediately** (no ask) searches official docs/Context7 for the latest stable line, compares it to `playbook/technologies/<slug>/`, and **updates or creates** the pack the same session if anything is stale or missing — then syncs the studio playbook mirror. The playbook/template is a living starting point. Do not silently bump a product SRS pin — propose an ADR if the pack moves ahead. Method: `playbook/technologies/README.md` § Owner names a stack (D-79).
+- **Packages over reinvention (hard rule):** language-agnostic. For **non-trivial** work, search and prefer a **verified** package when it saves time/money and raises professionalism; recommend it and use it. Do **not** add a package for trivial helpers. Verify fit, maintenance, license, security, and architecture before adopting. Method: `playbook/07-judgment/packages.md` (D-80).
 - **Coverage atlas first:** before adding a practice, read `playbook/coverage/README.md` (and the matching domain file). Report ✅/⚠️/❌ + coverage %. If already strong, deepen that home instead of duplicating. When coverage changes, update the atlas row/% in the same change.
 
 ## Git and remotes
@@ -63,6 +64,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 |------------|--------|
+| YYYY-MM-DD | Packages over reinvention when earned; verify before adopt (D-80). |
 | YYYY-MM-DD | Owner names a stack → auto search latest + refresh technologies pack (D-79). |
 | YYYY-MM-DD | Requirements-driven stack selection (no universal stack; advise from requirements). |
 | YYYY-MM-DD | Laravel 13 technologies pack. |

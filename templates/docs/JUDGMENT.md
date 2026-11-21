@@ -20,6 +20,7 @@ See playbook [`07-judgment/`](../../07-judgment/README.md). This file is the pro
 | DSA / Big-O / algorithmic performance (Pareto study) | FEATURE Performance module + day hot-path check; playbook `07-judgment/dsa-performance.md` | LeetCode catalog/solution dumps; interview grind as CI gate |
 | API readiness across environments | Day API gate + BE TESTING/DEPLOYMENT smoke; playbook `07-judgment/api-readiness.md` | Second OpenAPI SoT; Done on local-only; real PII on smoke |
 | Stack / framework shopping lists | Advise from **this** product’s requirements; pin in SRS + DECISIONS; playbook `07-judgment/stack-selection.md` | One stack for every product; locking from pack availability alone |
+| Package vs DIY for a capability | Prefer verified packages for non-trivial work; playbook `07-judgment/packages.md` | Dependency for every micro-task; reinventing maintained ecosystem solutions |
 
 ## Converge checklist (end of a docs / UI pass)
 

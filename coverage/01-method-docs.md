@@ -32,6 +32,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | DSA / performance on hot paths | `07-judgment/dsa-performance.md` | **90** | `n`, Big-O, structure, edges; TLE mindset | Wire into day Done (already in `08`) |
 | ✅ | API readiness across environments | `07-judgment/api-readiness.md` | **88** | Contract + local + CI + staging/prod smoke by phase | Wired into `08`/`09`/BE TESTING |
 | ✅ | Requirements-driven stack selection | `07-judgment/stack-selection.md` | **90** | Advise from requirements; no universal stack; pin via ADR/SRS | Wired into `00-USAGE` + `technologies/` |
+| ✅ | Packages over reinvention | `07-judgment/packages.md` | **90** | Non-trivial → verified package; trivial → house/stdlib | Wired into standing + engineering-standards |
 | ✅ | Design patterns | `07-judgment/design-patterns.md` | **85** | Problem → naive → enhance; composition first | Not a pattern catalog dump |
 | ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **88** | Assumptions, thin slices, five-axis review | Not a vendored skills OS |
 | ✅ | Payments / providers | `07-judgment/payments.md` | **88** | Webhook-first, idempotency, current APIs | Pair with SECURITY/COMPLIANCE templates |

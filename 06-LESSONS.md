@@ -133,6 +133,7 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - **Use a branch and a pull request for large changes** (the shadcn foundation went through PR #1); small changes go straight to `main` after the checks.
 - **Never commit build output** (`.next/`, `node_modules/`) or personal files the owner keeps uncommitted.
 - **Ask before adding any dependency**, and record it in SRS §2 and the guard's allowed list in the same commit.
+- **Packages over reinvention (when earned):** for non-trivial work, prefer a verified package over costly DIY; never add a package for a few obvious lines. Judgment: `07-judgment/packages.md`.
 - **Branch protection is a repository setting**; the owner turns it on, not an agent.
 - **Keep audit scripts in the repository.** The crawl script lived in `%TEMP%` for weeks, where Windows can delete it; it now lives in `project-ui/scripts/`.
 

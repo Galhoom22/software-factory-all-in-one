@@ -6,6 +6,8 @@
 
 **Select before craft:** which language/framework/packages a product uses is decided by **that product’s requirements** ([`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md)). Packs teach **how to write well** in a chosen stack. They never mean “always use TALL / always use Next / always use Filament.”
 
+**Packages over reinvention:** for non-trivial capabilities, prefer a **verified** ecosystem package when it saves cost and raises professionalism — see [`07-judgment/packages.md`](../07-judgment/packages.md). Never add a package for a few obvious lines.
+
 ## Does this meet the quality bar?
 
 | Need | How the library meets it |
