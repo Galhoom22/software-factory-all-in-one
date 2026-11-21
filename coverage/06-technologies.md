@@ -11,17 +11,21 @@ Paths under `playbook/technologies/`.
 | ✅ | Pack template for next stacks | `technologies/_pack-template/` | **90** | Required file list for Laravel/Next/… |
 | ✅ | Laravel pack hub | `technologies/laravel/` | **88** | Official 13.x refs + practices + quality |
 | ✅ | Laravel 13 version slice | `technologies/laravel/laravel-13/` | **88** | use / stop / mistakes from laravel.com/docs/13.x |
+| ✅ | Tailwind CSS pack hub | `technologies/tailwindcss/` | **88** | Vite install + v4 practices + quality |
+| ✅ | Tailwind CSS v4 slice | `technologies/tailwindcss/tailwindcss-v4/` | **88** | use / stop / mistakes from tailwindcss.com |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
-| ❌ | Other stacks | — | **0** | Add on demand |
+| ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
-**Domain average (started packs only): ~90%. Library-wide including empty Next slot: ~82%.**
+**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~83%.**
 
 ## Agent decision cheat-sheet
 
 | Owner ask | Action |
 |-----------|--------|
 | Add PHP / 8.6 practices | Deepen `php/` — do not fork a second PHP bible |
+| Pastes an official stack docs URL (e.g. Tailwind Vite install) | Create or deepen `technologies/<slug>/` from `_pack-template/`; pin latest official line; update this atlas + sync |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
-| Product still on older PHP | Keep SRS pin; use pack as upgrade guide, not silent bump |
+| Product still on older PHP / CSS | Keep SRS pin; use pack as upgrade guide, not silent bump |
+
 
 

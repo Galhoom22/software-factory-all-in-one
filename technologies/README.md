@@ -49,7 +49,7 @@ When the task writes or reviews code in a stack that has (or should have) a pack
 2. **Automatic latest check (no owner ask):** re-verify the pinned line on the **official** vendor site and/or Context7 in that session before non-trivial code. Memory and old chat are not evidence of “latest.”
 3. **Apply the full bar:** modern syntax **and** Clean Code **and** architecture fit **and** patterns only when earned (see pack `quality.md`).
 4. **Product SRS wins** for which version the product runs. If the pack is ahead of SRS, do not upgrade silently — propose an ADR.
-5. **If the pack is missing** for a stack the owner named: create it from `_pack-template/`, fill from official docs today, update [`coverage/`](../coverage/README.md), sync the studio playbook mirror the same session.
+5. **If the pack is missing** for a stack the owner named **or the owner pastes an official docs URL**: create/deepen it from `_pack-template/` the same session, fill from that URL + related official pages today, update [`coverage/`](../coverage/README.md), sync the studio playbook mirror.
 6. Prefer **deepening** an existing pack over a second folder with the same slug.
 
 ## Adding the next technology
