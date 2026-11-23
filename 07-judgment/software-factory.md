@@ -26,6 +26,8 @@ A studio with **seats** (who) but no **line** (how work moves) still thrash: age
 
 Together: **specialized roles on a governed assembly line**, humans own judgment gates.
 
+When a build step uses a **separate implementer** (another CLI/session/subagent), apply [`delegation.md`](delegation.md): self-contained brief, implementer never commits, orchestrator re-runs gates and lands. That is the portable craft behind optional tools such as [delegate-skills](https://github.com/amElnagdy/delegate-skills) — judgment only; do not vendor the package.
+
 
 
 ## Sources (judgment only)

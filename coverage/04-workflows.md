@@ -50,6 +50,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Verification engineering gate | `07-judgment/verification-engineering`, `08` always-on | **94** | Criteria→evidence; builder ≠ sole judge |
 | ✅ | Integration engineering gate | `07-judgment/integration-engineering`, `08` always-on | **93** | External partners: checklist or N/A |
 | ✅ | AI engineering gate | `07-judgment/ai-engineering`, `08` always-on | **92** | AI paths: seam + eval + admission or N/A |
+| ✅ | Agent delegation gate | `07-judgment/delegation`, `08` always-on | **91** | Separate implementer: brief + land or N/A |
 | ✅ | CodeRabbit Free default | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked; does not waive human bar |
 | ✅ | Pareto 20% + handoff | `08`, prompts | **97** | Teachable depth **file-anchored** (paths/structure/connections) + operational handoff |
 | ✅ | Context window hygiene | `07-judgment/context-window`, `08`, `05`, lessons | **90** | Pointers over blobs; fresh-chat checkpoint; D-86 |

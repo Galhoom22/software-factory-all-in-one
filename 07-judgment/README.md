@@ -44,6 +44,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Verification engineering (AI-written change proof) | Criteria→evidence; author≠judge; layers; risk-matched depth | “Agent said Done”; builder tests alone; vendor SaaS lock-in; chip UVM ceremony |
 | Integration engineering (any external connection) | Boundaries/interfaces; contract; adapter; idempotency; fallback; SoR | “SDK installed = integrated”; blind retries; NEDION vendor lock-in |
 | AI engineering (det/prob + evals) | Seam propose≠execute; golden eval; admission; dual-mode classical+AI | Soften classical bars; vendor LLMOps/LangChain as constitution; vibes Done |
+| Agent delegation (orchestrator→implementer) | Self-contained brief; implementer never commits; orchestrator reviews+lands | Paste chat as brief; implementer auto-commit; trust self-report; vendor all *-delegate skills |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -86,6 +87,7 @@ Verification engineering: [`verification-engineering.md`](verification-engineeri
 
 Integration engineering: [`integration-engineering.md`](integration-engineering.md).
 AI engineering (det/prob seam + evals): [`ai-engineering.md`](ai-engineering.md).
+Agent delegation: [`delegation.md`](delegation.md).
 
 Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 

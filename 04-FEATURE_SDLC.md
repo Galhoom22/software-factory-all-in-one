@@ -364,6 +364,7 @@ Build, lint, tests, security / dependency checks, secret scanning, required revi
 
 **Integration engineering (when external deps):** interfaces, contract, adapter, idempotency, fallback — [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md).
 **AI engineering (when model/prompt/RAG/agent paths):** det/prob seam, admission, golden eval, practice level — [`07-judgment/ai-engineering.md`](07-judgment/ai-engineering.md).
+**Agent delegation (when a separate implementer is used):** self-contained brief, no implementer commit, orchestrator gates+land — [`07-judgment/delegation.md`](07-judgment/delegation.md).
 
 **Integration quality gate**
 

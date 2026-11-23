@@ -65,6 +65,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`07-judgment/verification-engineering.md`](07-judgment/verification-engineering.md) | Prove AI-written changes: criteria→evidence; author≠judge; risk-matched layers. |
 | [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md) | Any external integration: interfaces, contract, adapter, idempotency, fallback. |
 | [`07-judgment/ai-engineering.md`](07-judgment/ai-engineering.md) | Deterministic + probabilistic systems: seam, admission, golden eval, practice level. |
+| [`07-judgment/delegation.md`](07-judgment/delegation.md) | Orchestrator→implementer: brief, review gates, land; implementer never commits. |
 | [`07-judgment/enterprise-system-design.md`](07-judgment/enterprise-system-design.md) | Boundary/verification craft: six questions, AI practice levels, output admission. |
 | [`07-judgment/api-design.md`](07-judgment/api-design.md) | Consumer-first REST craft (design bar inside API readiness). |
 | [`07-judgment/cross-surface-compatibility.md`](07-judgment/cross-surface-compatibility.md) | FE↔BE↔services compatibility gate: read sibling, write owned seat, contract-first. |
