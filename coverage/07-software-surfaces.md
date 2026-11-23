@@ -6,7 +6,7 @@
 
 **Score meaning for a surface:** method rails that already apply **plus** surface-specific judgment, templates, and `technologies/` packs. Same rubric as [`README.md`](README.md) (✅/⚠️/❌ + %).
 
-Last audit: **2026-11-23**.
+Last audit: **2026-11-23** (Rust pack landed).
 
 ---
 
@@ -31,12 +31,12 @@ Last audit: **2026-11-23**.
 | **Mobile — Android native** | ❌ | **8** | Same generic rails only | No Kotlin / Jetpack Compose pack; no Play Console judgment |
 | **Mobile — cross-platform** | ❌ | **12** | React pack helps RN slightly; C#/.NET helps MAUI slightly | No Flutter / RN / MAUI product packs; no store dual-pipeline |
 | **Desktop — native** (Win / macOS / Linux) | ⚠️ | **18** | C# / .NET packs (Win/.NET path); generic CI | No WinUI/WPF/AppKit/GTK judgment; signing/notarization |
-| **Desktop — hybrid** (Electron / Tauri / similar) | ⚠️ | **15** | JS/TS + web packs transferable | No Electron/Tauri pack; auto-update / sandbox craft |
+| **Desktop — hybrid** (Electron / Tauri / similar) | ⚠️ | **20** | JS/TS + web packs; **Rust** language pack (Tauri affinity) | No Electron/Tauri product pack yet; auto-update / sandbox craft |
 | **Browser extensions** (Chromium / Firefox / Safari) | ❌ | **5** | Web security judgment partially transferable | No MV3 pack; store review / permissions craft |
-| **CLI & developer tools** | ⚠️ | **28** | Agent/CI scripts culture; .NET/`dotnet` CLI notes; packages judgment | No CLI UX / distribution judgment pack |
-| **Libraries / SDKs / packages** | ⚠️ | **35** | Packages judgment; versioning in technologies | Semver/publish/API-compat playbook thin |
+| **CLI & developer tools** | ⚠️ | **36** | Agent/CI scripts culture; .NET/`dotnet` CLI notes; **Rust** pack; packages judgment | Dedicated CLI UX / distribution judgment still thin |
+| **Libraries / SDKs / packages** | ⚠️ | **40** | Packages judgment; Cargo crate craft in Rust pack; versioning in technologies | Semver/publish/API-compat playbook still thin |
 | **Games** (engines / realtime interactive) | ❌ | **3** | Almost nothing surface-specific | No engine pack (Unity/Godot/Unreal); no loop/perf craft |
-| **Embedded / IoT / firmware** | ❌ | **2** | Security red lines only at product level | No RTOS / device pack |
+| **Embedded / IoT / firmware** | ❌ | **8** | **Rust** pack + Embedded Book pointer; security red lines | No RTOS / device-specific pack |
 | **Operating systems / kernels / drivers** | ❌ | **1** | Out of studio default scope | Do not fake coverage; add only if a real product needs it |
 | **Data engineering / pipelines / warehouses** | ❌ | **10** | Backend + integration judgment partial | No Spark/dbt/orchestration pack |
 | **ML / model-serving products** | ⚠️ | **40** | AI engineering + AI system-design + product AI template | Training/MLOps depth; Python/ML packs missing |
@@ -51,7 +51,7 @@ Last audit: **2026-11-23**.
 | Metric | Value |
 |--------|-------|
 | **Surfaces listed** | 21 |
-| **Weighted readiness** (equal weight per surface row) | **~25%** |
+| **Weighted readiness** (equal weight per surface row) | **~27%** |
 | **Studio-default strength** (web app + HTTP API + admin web only) | **~83%** |
 | **Honest message** | Playbook **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (~25%). Do not confuse the two numbers. |
 
@@ -76,7 +76,7 @@ Affinity only. A language can serve many surfaces; a product still pins via stac
 | **Java** | Android legacy, enterprise backends | ❌ | — |
 | **Python** | Data, ML, backends, scripting | ❌ | High value for ML/data surfaces |
 | **Go** | APIs, CLI, infra | ❌ | — |
-| **Rust** | CLI, systems, Tauri, WASM | ❌ | — |
+| **Rust** | CLI, systems, Tauri, WASM, embedded | ✅ language | Stable 1.100 + edition 2024; framework crates still separate packs |
 | **C / C++** | Native, games, embedded, OS | ❌ | Low studio priority unless product needs it |
 | **Ruby / Elixir / Scala / …** | Various | ❌ | Add on demand (owner pastes official docs) |
 

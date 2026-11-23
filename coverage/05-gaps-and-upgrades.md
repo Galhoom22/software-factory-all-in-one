@@ -35,6 +35,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | P0 | **Laravel 13 pack** | was 0 | **88** | `technologies/laravel/` from laravel.com/docs/13.x | ✅ Done 2026-11-21 |
 | P2 | Next.js pack | **92** | **92** | `technologies/nextjs/` (D-100) | ✅ Done 2026-11-23 |
 | P1 | Consult-before-add agent habit | was ~40 | **95** | Wire atlas into README, `05-PROMPTS`, `06-LESSONS`, OWNER_STANDING | ✅ Done 2026-11-21 |
+| P1 | Rust language pack | **88** | **88** | `technologies/rust/` from doc.rust-lang.org/stable (D-107) | ✅ Done 2026-11-23 |
 | P1 | TypeScript pack | **0** | **85** | `technologies/typescript/` from typescriptlang.org | ❌ Open (raises web/RN/Electron/extensions) |
 | P1 | Mobile surface (Swift **or** Kotlin **or** Flutter — product-driven) | **8–12** | **70** | Judgment + one pack when first mobile product starts | ❌ Open |
 | P2 | Browser extension MV3 | **5** | **70** | Judgment + Chromium/Firefox pack | ❌ Open |

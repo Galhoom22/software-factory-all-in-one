@@ -53,6 +53,7 @@ playbook/technologies/
   nextjs/                   ← Next.js 16 pack
   csharp/                   ← C# 14 (.NET 10) pack
   dotnet/                    ← .NET 10 LTS platform pack
+  rust/                      ← Rust 1.100 + edition 2024 pack
 ```
 
 | Folder naming | Rule |
@@ -115,3 +116,4 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 | [`nextjs/`](nextjs/README.md) | [`nextjs-16/`](nextjs/nextjs-16/README.md) | [`quality.md`](nextjs/quality.md) | ✅ |
 | [`csharp/`](csharp/README.md) | [`csharp-14/`](csharp/csharp-14/README.md) | [`quality.md`](csharp/quality.md) | ✅ |
 | [`dotnet/`](dotnet/README.md) | [`dotnet-10/`](dotnet/dotnet-10/README.md) | [`quality.md`](dotnet/quality.md) | ✅ |
+| [`rust/`](rust/README.md) | [`rust-1.100/`](rust/rust-1.100/README.md) | [`quality.md`](rust/quality.md) | ✅ |

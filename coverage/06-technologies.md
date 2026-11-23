@@ -43,9 +43,11 @@ Paths under `playbook/technologies/`.
 | ✅ | C# 14 version slice | `technologies/csharp/csharp-14/` | **88** | use / stop / mistakes; .NET 10 LTS default; C# 15 noted for net11 |
 | ✅ | .NET pack hub | `technologies/dotnet/` | **88** | Learn.microsoft.com/dotnet; Context7 `/websites/learn_microsoft_en-us_dotnet` |
 | ✅ | .NET 10 version slice | `technologies/dotnet/dotnet-10/` | **88** | LTS TFM; SDK/CLI/host/DI; .NET 11 STS noted |
+| ✅ | Rust pack hub | `technologies/rust/` | **88** | doc.rust-lang.org/stable; Context7 `/rust-lang/rust` |
+| ✅ | Rust 1.100 + edition 2024 slice | `technologies/rust/rust-1.100/` | **88** | use / stop / mistakes; stable 1.100.0; edition 2024 |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
-**Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~89%.**
+**Domain average (started packs only): ~89%.**
 
 ## Agent decision cheat-sheet
 
@@ -62,6 +64,8 @@ Paths under `playbook/technologies/`.
 | Pastes React docs URL (react.dev) | Deepen `react/` — do not fork a second React bible |
 | Pastes Next.js docs URL (nextjs.org/docs) | Deepen `nextjs/` — do not fork a second Next bible |
 | Pastes Symfony docs URL | Deepen `symfony/` — do not fork a second Symfony bible |
+| Pastes Rust docs (doc.rust-lang.org/stable) | Deepen `rust/` — do not fork a second Rust bible |
+| Pastes C# / .NET Learn docs | Deepen `csharp/` / `dotnet/` — do not fork second bibles |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
 | Product still on older PHP / CSS / JS engines | Keep SRS pin; use pack as upgrade guide, not silent bump |
 

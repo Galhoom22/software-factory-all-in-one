@@ -62,14 +62,14 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
 | [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~28 | **89%** | ✅ |
-| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~25%** breadth | ⚠️ |
+| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~27%** breadth | ⚠️ |
 
 ### Overall playbook professionalism
 
 | Metric | Value |
 |--------|-------|
 | **Weighted overall coverage** (domains 01–06 craft homes) | **~89%** |
-| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~25%** |
+| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~27%** |
 | **Studio-default strength** (web app + HTTP API + admin web) | **~83%** |
 | **Strongest areas** | Actor-loop delivery, implementation day pipeline, CI/CD progressive phases, agent discovery, requirements activation, lessons capture, web/API stack packs |
 | **Weakest areas** | Mobile native/cross-platform, games, extensions, OS/embedded, full `project-ui` scaffold in templates, observability method depth |
@@ -162,6 +162,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-23 | D-107: Rust 1.100 + edition 2024 technologies pack from doc.rust-lang.org/stable. |
 | 2026-11-23 | D-106: software industry surfaces atlas (`07-software-surfaces`) — % per surface + language map; two-numbers rule vs 01–06 professionalism. |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
 | 2026-11-23 | D-101: integration engineering judgment (any partner boundary) in day workflow. |
