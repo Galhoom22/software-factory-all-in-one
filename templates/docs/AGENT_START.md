@@ -61,7 +61,7 @@ node scripts/check-scope.mjs
 node scripts/check-planning-entry.mjs
 ```
 
-If this repository keeps a nested `playbook/`, also run `node playbook/scripts/check-requirements-activation.mjs`.
+If this repository keeps a nested `playbook/`, also run `node playbook/scripts/check-requirements-activation.mjs` and `node playbook/scripts/check-playbook-freshness.mjs`.
 
 If you changed `project-ui/`, also run that package's `npm test`, `npm run check:ui`, and `npm run lint`.
 
