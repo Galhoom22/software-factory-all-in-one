@@ -4,6 +4,11 @@
 
 You do **not** need to learn the internal folder layout, pick templates by hand, or tell the agent “start planning.” The requirements file **is** the instruction to begin.
 
+
+## Why bother (speed × quality)
+
+AI agents are fast by default. **Quality** only stays high when requirements, rails, contracts, stack craft, day loops, and lessons live in **one** loadable reference — this playbook (local copy **and** any studio GitHub mirror). Use it for hands-off agent coding and for professional products alike. North star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
+
 ## What this is
 
 A reusable **project-planning engine** for a **planning repository** (requirements, specs, architecture, contracts, prototype, backlog) — **not** the place for production application code.

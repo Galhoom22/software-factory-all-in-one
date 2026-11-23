@@ -97,7 +97,8 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Candor / refuse degrading asks | OWNER_STANDING + coverage protocol + `08` (D-82) | ✅ ~90% |
 | Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (D-83) | ✅ ~88% |
 | Booking / reservations | `07-judgment/booking` + `08` (D-84) | ✅ ~88% |
-| Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (D-87) | ✅ ~92% |
+| Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (D-87) | ✅ ~94% |
+| Playbook purpose / speed×quality single reference | `EXCELLENCE.md` § Why + `README` + `00-USAGE` (D-93) | ✅ ~95% |
 | Studio as a company / org seats | `07-judgment/studio-company` + `STUDIO_ORG` template (D-88) | ✅ ~90% |
 | Competitor recon / clean-room | `07-judgment/competitor-recon` + template (D-89) | ✅ ~88% |
 | Software Factory + multi-agent | `07-judgment/software-factory` + `STUDIO_ORG` + `08` (D-90) | ✅ ~90% |
@@ -142,6 +143,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | D-93: playbook purpose explicit — single reference for agent speed×quality (vibe + professional products). |
 | 2026-11-23 | D-92: API design judgment (consumer-first REST craft) absorbed from course; design bar in API readiness gate. |
 | 2026-11-23 | D-91: cross-surface compatibility day gate (sibling read / owned-seat write; monorepo+split+services). |
 | 2026-11-21 | D-89: competitor recon / clean-room parity (replica-skill judgment).

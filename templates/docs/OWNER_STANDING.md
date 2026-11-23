@@ -57,7 +57,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - **Packages over reinvention (hard rule):** language-agnostic. For **non-trivial** work, search and prefer a **verified** package when it saves time/money and raises professionalism; recommend it and use it. Do **not** add a package for trivial helpers. Verify fit, maintenance, license, security, and architecture before adopting. Method: `playbook/07-judgment/packages.md` (D-80).
 - **Software Factory line:** day work follows intake→triage→plan→build→independent review→Done (`07-judgment/software-factory.md`); CI/CodeRabbit = independent review.
 - **Studio as a company:** fill `docs/STUDIO_ORG.md`; day agents confirm goal + seat + exclusive checkout (`07-judgment/studio-company.md`). Do not replace trackers with an agent-company OS unless decided.
-- **Excellence north star:** every playbook/template upgrade follows `playbook/EXCELLENCE.md` (ratchet; raise a dimension; never claim one-prompt “best forever”). Atlas + Candor still apply.
+- **Excellence north star:** every playbook/template upgrade follows `playbook/EXCELLENCE.md` (ratchet; raise a dimension; never claim one-prompt “best forever”). Atlas + Candor still apply. Purpose: one living reference so agents stay fast **and** high-quality (hands-off agent coding and professional products) — `playbook/EXCELLENCE.md` § Why this playbook exists (D-93).
 - **Coverage atlas first:** before adding a practice, read `playbook/coverage/README.md` (and the matching domain file). Report ✅/⚠️/❌ + coverage %. If already strong, deepen that home instead of duplicating. When coverage changes, update the atlas row/% in the same change.
 
 ## Git and remotes

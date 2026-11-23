@@ -14,6 +14,45 @@ That is a **trajectory**, not a claim that today’s files are already “#1 in 
 
 
 
+## Why this playbook exists (purpose — hard)
+
+**One sentence:** gather everything useful for building software into **one** living reference so an AI agent can execute **fast** and still ship at **high quality**.
+
+Agents already supply **speed**. They do **not** automatically supply **judgment, rails, stack craft, day loops, security, contracts, or lessons** unless those live where the agent can load them. Scattered tips in chat memory fail; a single playbook succeeds.
+
+### What “everything useful” means
+
+| Include | Examples (generic) |
+|---------|-------------------|
+| Method | Delivery, day loop, CI/CD, FEATURE_SDLC, prompts, lessons |
+| Judgment | Outside methods absorbed as craft — never second constitutions |
+| Stack craft | `technologies/` packs that grow as languages/frameworks are added |
+| Templates | Skeletons a new planning product can copy |
+| Adjacent ship craft | Brand/logo, imagery, motion/video, SEO/GEO — **when they serve shipping software**, not as a random media library |
+
+If it helps a human+AI team **plan or build software** (including AI products and software-backed businesses), it belongs here in a forever-generic form. If it only serves one product’s gossip or tracker URLs, it belongs in that product’s `docs/OWNER_STANDING.md` — not in method/`templates/`.
+
+### Who it must serve
+
+The same playbook must work for:
+
+1. **Hands-off agent coding** — the owner mostly supervises; the agent executes end-to-end against this reference.
+2. **Professional / revenue products** — real users, money, PII, compliance; full rigor and evidence (proportional depth still applies — D-85).
+3. **Anything in between** — prototypes, tools, APIs, studios — as long as software is being built.
+
+Do **not** fork a “vibe” playbook and a “serious” playbook. One method; rigor scales with risk.
+
+### How agents use this purpose
+
+When the owner says “add X to the playbook / raise professionalism”:
+
+1. Ask: does X make the **single reference** stronger for the **next** software build (speed **and** quality)?
+2. If yes → atlas → deepen or add → wire → sync (D-52).
+3. If it is vanity, duplicate, or lowers a rail → Candor refuse (D-82).
+
+The dream is the **strongest reusable software-building playbook** we can grow over time (more languages, more craft, more lessons) — never a finished one-shot dump. Trajectory: [`EXCELLENCE.md`](EXCELLENCE.md) ratchet + [`coverage/`](coverage/README.md).
+
+
 ## What “best” means here (dimensions)
 
 
@@ -26,6 +65,7 @@ Score a change against these — not against marketing adjectives:
 
 |-----------|-----------------|
 
+| **Speed × quality** | One reference makes agents fast **and** high-quality; chat memory alone is not enough |
 | **Safety rails** | SECURITY / COMPLIANCE / ethics / candor hold; High risk is named and treated |
 
 | **Evidence** | Done needs proof (tests, CI, contract); no checklist theater |

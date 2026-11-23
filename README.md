@@ -8,6 +8,12 @@ A reusable **project-planning engine**: one **planning repository** that holds r
 
 This folder is **generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
 
+## Why this playbook exists
+
+**Purpose:** one living place that holds the craft needed to build **any** software (and AI/software-backed products) so AI agents work at **maximum speed with maximum quality**. Agents bring speed; this playbook brings the rails, judgment, stacks, day loops, and lessons that make quality repeatable — for hands-off agent coding **and** for professional revenue products. Grow it over time (languages, packs, lessons). Full north star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
+
+
+
 ## Numbered layout
 
 Method files are **prefixed so they sort in delivery order**. Keep this numbering when you add a new method doc.
