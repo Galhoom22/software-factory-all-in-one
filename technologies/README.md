@@ -47,6 +47,7 @@ playbook/technologies/
   css/                      ← CSS (Snapshot 2026) pack
   inertiajs/                ← Inertia.js 3.x pack
   vue/                      ← Vue 3 pack
+  react/                    ← React 19 pack
   symfony/                  ← Symfony 8 pack
   php-laravel-compositions.md ← TALL / VILT / PHP pack map
   nextjs/                   ← add when owner asks
@@ -54,8 +55,8 @@ playbook/technologies/
 
 | Folder naming | Rule |
 |---------------|------|
-| Top-level slug | Lowercase (`php`, `laravel`, `tailwindcss`, `alpinejs`, `livewire`, `filament`, `javascript`, `html`, `css`, `inertiajs`, `vue`, `symfony`, `nextjs`, `postgresql`) |
-| Version slice | Exact line (`php-8.6`, `laravel-13`, `tailwindcss-v4`, `alpinejs-v3`, `livewire-4`, `filament-5`, `javascript-es2026`, `html-living`, `css-2026`, `inertiajs-v3`, `vue-3`, `symfony-8`, `nextjs-16`) |
+| Top-level slug | Lowercase (`php`, `laravel`, `tailwindcss`, `alpinejs`, `livewire`, `filament`, `javascript`, `html`, `css`, `inertiajs`, `vue`, `react`, `symfony`, `nextjs`, `postgresql`) |
+| Version slice | Exact line (`php-8.6`, `laravel-13`, `tailwindcss-v4`, `alpinejs-v3`, `livewire-4`, `filament-5`, `javascript-es2026`, `html-living`, `css-2026`, `inertiajs-v3`, `vue-3`, `react-19`, `symfony-8`, `nextjs-16`) |
 | Required files | See [`_pack-template/README.md`](_pack-template/README.md) — always include `quality.md` |
 
 ## How agents must use a pack (hard rules)
@@ -106,6 +107,7 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 | [`css/`](css/README.md) | [`css-2026/`](css/css-2026/README.md) | [`quality.md`](css/quality.md) | ✅ |
 | [`inertiajs/`](inertiajs/README.md) | [`inertiajs-v3/`](inertiajs/inertiajs-v3/README.md) | [`quality.md`](inertiajs/quality.md) | ✅ |
 | [`vue/`](vue/README.md) | [`vue-3/`](vue/vue-3/README.md) | [`quality.md`](vue/quality.md) | ✅ |
+| [`react/`](react/README.md) | [`react-19/`](react/react-19/README.md) | [`quality.md`](react/quality.md) | ✅ |
 | [`symfony/`](symfony/README.md) | [`symfony-8/`](symfony/symfony-8/README.md) | [`quality.md`](symfony/quality.md) | ✅ |
 | [`php-laravel-compositions.md`](php-laravel-compositions.md) | TALL + VILT + Symfony map | — | ✅ |
 | `nextjs/` | — | — | ❌ Add when owner asks |

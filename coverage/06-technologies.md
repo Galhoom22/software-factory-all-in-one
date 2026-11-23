@@ -33,6 +33,8 @@ Paths under `playbook/technologies/`.
 | ✅ | Inertia.js 3.x slice | `technologies/inertiajs/inertiajs-v3/` | **88** | use / stop / mistakes from inertiajs.com/docs/v3 |
 | ✅ | Vue.js pack hub | `technologies/vue/` | **88** | Introduction + Quick Start + quality |
 | ✅ | Vue 3 slice | `technologies/vue/vue-3/` | **88** | use / stop / mistakes from vuejs.org (3.5.x) |
+| ✅ | React pack hub | `technologies/react/` | **90** | react.dev + quality |
+| ✅ | React 19 slice | `technologies/react/react-19/` | **90** | use / stop / mistakes (npm 19.3.x) |
 | ✅ | Symfony pack hub | `technologies/symfony/` | **88** | Doc hub + setup + official best practices + quality |
 | ✅ | Symfony 8 slice | `technologies/symfony/symfony-8/` | **88** | use / stop / mistakes (8.1 stable; LTS 7.4 noted) |
 | ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
@@ -52,6 +54,7 @@ Paths under `playbook/technologies/`.
 | Pastes MDN CSS / W3C CSS Snapshot docs | Deepen `css/` (keep Tailwind pack for utilities) — do not fork a second CSS bible |
 | Pastes Inertia.js docs URL | Deepen `inertiajs/` — do not fork a second Inertia bible |
 | Pastes Vue.js docs URL | Deepen `vue/` — do not fork a second Vue bible |
+| Pastes React docs URL (react.dev) | Deepen `react/` — do not fork a second React bible |
 | Pastes Symfony docs URL | Deepen `symfony/` — do not fork a second Symfony bible |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
 | Product still on older PHP / CSS / JS engines | Keep SRS pin; use pack as upgrade guide, not silent bump |

@@ -147,6 +147,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | D-99: React 19 technologies pack from react.dev; npm 19.3.x. |
 | 2026-11-23 | D-98: verification engineering judgment (criteria→evidence; author≠judge) in day workflow. |
 | 2026-11-23 | D-97: Context7 / current-docs day gate (pinned-line freshness; day evidence). |
 | 2026-11-23 | D-96: human code-review bar (readability, modern syntax, best practices) in day workflow; CodeRabbit assists. |
