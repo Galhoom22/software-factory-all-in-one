@@ -62,6 +62,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`07-judgment/studio-company.md`](07-judgment/studio-company.md) + [`templates/docs/STUDIO_ORG.md`](templates/docs/STUDIO_ORG.md) | Studio-as-company seats, goals, atomic checkout (Paperclip patterns as judgment). |
 | [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md) | Senior/tech-lead bar: human readability, modern syntax, best practices. |
 | [`07-judgment/context7-docs.md`](07-judgment/context7-docs.md) | Context7 / current library docs for pinned lines (this-session freshness). |
+| [`07-judgment/verification-engineering.md`](07-judgment/verification-engineering.md) | Prove AI-written changes: criteria→evidence; author≠judge; risk-matched layers. |
 | [`07-judgment/enterprise-system-design.md`](07-judgment/enterprise-system-design.md) | Boundary/verification craft: six questions, AI practice levels, output admission. |
 | [`07-judgment/api-design.md`](07-judgment/api-design.md) | Consumer-first REST craft (design bar inside API readiness). |
 | [`07-judgment/cross-surface-compatibility.md`](07-judgment/cross-surface-compatibility.md) | FE↔BE↔services compatibility gate: read sibling, write owned seat, contract-first. |
