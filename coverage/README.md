@@ -13,7 +13,7 @@
 When the owner says *add X to the playbook / template / workflow* (any language):
 
 0. **North star** — [`EXCELLENCE.md`](../EXCELLENCE.md): raise at least one excellence dimension without lowering another? If not, skip or refuse (Candor).
-1. **Search this atlas first** (`README` scorecard + the matching domain file). For *can we build X kind of software?* or *what percent are we on mobile/desktop?* use [`07-software-surfaces.md`](07-software-surfaces.md) — do not confuse that **industry breadth** number with the **professionalism** scorecard for domains 01–06.
+1. **Search this atlas first** (`README` scorecard + the matching domain file). For *can we build X kind of software?* or *what percent are we on mobile/desktop?* use [`07-software-surfaces.md`](07-software-surfaces.md). For *what % are we on Cursor/Codex/Trae/Antigravity?* use [`08-ai-agents.md`](08-ai-agents.md). Do not confuse industry/harness breadth with the **professionalism** scorecard for domains 01–06.
 2. Report in one short block:
    - **Status:** ✅ present · ⚠️ thin / partial · ❌ missing
    - **Coverage %** from the row (or a revised % if you re-audited the files)
@@ -63,6 +63,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
 | [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~28 | **89%** | ✅ |
 | [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~27%** breadth | ⚠️ |
+| [`08-ai-agents.md`](08-ai-agents.md) | AI agent / IDE harnesses (Cursor, Codex, Claude, Gemini, CN tools, …) | ~20 | **~58%** breadth | ⚠️ |
 
 ### Overall playbook professionalism
 
@@ -70,6 +71,8 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 |--------|-------|
 | **Weighted overall coverage** (domains 01–06 craft homes) | **~89%** |
 | **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~27%** |
+| **AI-agent harness breadth** ([`08`](08-ai-agents.md), equal-weight harnesses) | **~58%** |
+| **Studio-default harness strength** (Cursor + Codex + Claude Code) | **~92%** |
 | **Studio-default strength** (web app + HTTP API + admin web) | **~83%** |
 | **Strongest areas** | Actor-loop delivery, implementation day pipeline, CI/CD progressive phases, agent discovery, requirements activation, lessons capture, web/API stack packs |
 | **Weakest areas** | Mobile native/cross-platform, games, extensions, OS/embedded, full `project-ui` scaffold in templates, observability method depth |
@@ -135,6 +138,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Next.js tech pack | `technologies/nextjs` | ❌ 0% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
 | Always-Current / playbook freshness | `07-judgment/playbook-freshness` + CI script | ✅ ~95% |
+| AI agent harness % (Cursor/Codex/Claude/Trae/…) | `08-ai-agents` + `agents/` | ⚠️ breadth ~58%; studio-default ~92% |
 | Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth ~27%; web+API ~83% |
 | Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌ ~8–12% |
 | Desktop / Electron / extensions / games | `07-software-surfaces` | ❌/~⚠️ ~3–18% |
@@ -155,6 +159,7 @@ playbook/coverage/
   05-gaps-and-upgrades.md   ← weak spots + what to deepen next
   06-technologies.md        ← technologies/ packs
   07-software-surfaces.md   ← industry surfaces + language↔surface map
+  08-ai-agents.md           ← AI agent / IDE harnesses + %
 ```
 
 ---
@@ -163,6 +168,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-23 | D-109: AI agent harness atlas (`08-ai-agents`) + `agents/` packs (US + China + Antigravity). |
 | 2026-11-23 | D-108: Always-Current playbook freshness closeout + `check-playbook-freshness.mjs` CI gate. |
 | 2026-11-23 | D-107: Rust 1.100 + edition 2024 technologies pack from doc.rust-lang.org/stable. |
 | 2026-11-23 | D-106: software industry surfaces atlas (`07-software-surfaces`) — % per surface + language map; two-numbers rule vs 01–06 professionalism. |

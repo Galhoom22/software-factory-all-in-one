@@ -20,6 +20,8 @@ Use with [`technologies/README.md`](technologies/README.md).
 ## Playbook coverage (before adding a practice)
 Use with [`EXCELLENCE.md`](EXCELLENCE.md) + [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
 
+> **AI harness coverage (D-109):** before adding a new coding agent/IDE guide, read `playbook/coverage/08-ai-agents.md` + `playbook/agents/README.md`. Deepen the pack; do not fork AGENTS.md.
+
 > **Always-Current (D-108):** after any playbook edit, finish `07-judgment/playbook-freshness.md` closeout and run `node playbook/scripts/check-playbook-freshness.mjs` before Done.
 
 > Before adding or inventing practice `<X>` in the playbook/template: confirm it raises an [`EXCELLENCE.md`](EXCELLENCE.md) dimension (none down). Then read `playbook/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.

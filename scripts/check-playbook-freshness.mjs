@@ -11,6 +11,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const playbookRoot = path.resolve(__dirname, "..");
 const techRoot = path.join(playbookRoot, "technologies");
+const agentsRoot = path.join(playbookRoot, "agents");
 const coverageRoot = path.join(playbookRoot, "coverage");
 
 const errors = [];
@@ -39,6 +40,8 @@ for (const rel of [
   "coverage/07-software-surfaces.md",
   "EXCELLENCE.md",
   "technologies/README.md",
+  "agents/README.md",
+  "coverage/08-ai-agents.md",
 ]) {
   if (!exists(path.join(playbookRoot, rel))) {
     fail(`missing required home: ${rel}`);
@@ -148,6 +151,56 @@ for (const slug of packDirs) {
       note(`surfaces file should mention ${label} when pack exists`);
     }
   }
+}
+
+// --- Agent harness packs (same structural bar as technologies) ---
+if (exists(agentsRoot)) {
+  const skipAgentDirs = new Set(["_pack-template"]);
+  const agentDirs = fs
+    .readdirSync(agentsRoot, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && !skipAgentDirs.has(d.name))
+    .map((d) => d.name)
+    .sort();
+  const agentsReadme = read(path.join(agentsRoot, "README.md"));
+  for (const slug of agentDirs) {
+    if (!agentsReadme.includes("[`" + slug + "/`]")) {
+      fail("agents/" + slug + "/ exists but is not listed in agents/README.md packs table");
+    }
+    const packDir = path.join(agentsRoot, slug);
+    for (const req of ["README.md", "official-refs.md", "best-practices.md", "quality.md"]) {
+      if (!exists(path.join(packDir, req))) fail("agents/" + slug + "/ missing " + req);
+    }
+    const refs = read(path.join(packDir, "official-refs.md"));
+    if (!/Checked/i.test(refs) || ![...refs.matchAll(/\b(20\d{2}-\d{2}-\d{2})\b/g)].length) {
+      fail("agents/" + slug + "/official-refs.md needs YYYY-MM-DD Checked dates");
+    }
+    const slices = fs
+      .readdirSync(packDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory());
+    if (!slices.length) fail("agents/" + slug + "/ has no version-slice directory");
+    for (const slice of slices) {
+      for (const f of ["use-these.md", "stop-using.md", "common-mistakes.md"]) {
+        if (!exists(path.join(packDir, slice.name, f))) {
+          fail("agents/" + slug + "/" + slice.name + "/ missing " + f);
+        }
+      }
+    }
+  }
+  for (const m of agentsReadme.matchAll(/\|\s*\[`([a-z0-9-]+)\/`\]\(\1\/README\.md\)/g)) {
+    const slug = m[1];
+    if (!exists(path.join(agentsRoot, slug))) {
+      fail("agents/README.md lists " + slug + "/ but directory is missing");
+    }
+  }
+  note("agents packs scanned: " + agentDirs.length + " (" + agentDirs.join(", ") + ")");
+} else {
+  fail("playbook/agents/ missing");
+}
+
+const aiAgentsCov = path.join(coverageRoot, "08-ai-agents.md");
+if (!exists(aiAgentsCov)) fail("coverage/08-ai-agents.md missing");
+if (!covReadme.includes("08-ai-agents")) {
+  fail("coverage/README.md must reference 08-ai-agents");
 }
 
 note(`packs scanned: ${packDirs.length} (${packDirs.join(", ")})`);

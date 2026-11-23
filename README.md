@@ -32,7 +32,8 @@ playbook/
   08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline
   09-CI-CD.md               CI/CD progressive phases for day closeout
   EXCELLENCE.md             North star + ratchet for every future upgrade
-  coverage/                 Inventory + ✅/% of craft homes **and** software-industry surfaces
+  coverage/                 Inventory + ✅/% of craft homes, software surfaces, **and** AI agent harnesses
+  agents/                   Per-harness packs (Cursor, Codex, Claude, Gemini, Trae, …)
   technologies/             Per-stack packs (PHP, Laravel, Next.js, …)
   examples/                 Copyable samples (e.g. my-project-requirements)
   scripts/                  Playbook self-checks (activation wiring)
@@ -71,7 +72,8 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`07-judgment/api-design.md`](07-judgment/api-design.md) | Consumer-first REST craft (design bar inside API readiness). |
 | [`07-judgment/cross-surface-compatibility.md`](07-judgment/cross-surface-compatibility.md) | FE↔BE↔services compatibility gate: read sibling, write owned seat, contract-first. |
 | [`07-judgment/software-factory.md`](07-judgment/software-factory.md) | Software Factory + multi-agent line (Mastra/Vercel/Warp patterns as judgment) paired with seats. |
-| [`coverage/`](coverage/README.md) | Living atlas: craft homes (01–06) **and** [`07-software-surfaces.md`](coverage/07-software-surfaces.md) industry % (web/mobile/desktop/…). Agents consult it before adding or duplicating a practice. |
+| [`coverage/`](coverage/README.md) | Living atlas: craft homes, [`07-software-surfaces`](coverage/07-software-surfaces.md), and [`08-ai-agents`](coverage/08-ai-agents.md) harness %. |
+| [`agents/`](agents/README.md) | Per-AI-agent / IDE harness packs (how to drive AGENTS.md on Cursor, Codex, Claude, Gemini, ChatGPT, Antigravity, Trae, …). |
 | [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
 | [`09-CI-CD.md`](09-CI-CD.md) | CI/CD with **progressive phases** (A = CI only by default; B/C when host hooks exist). |
 | [`examples/`](examples/) | Copyable samples, including `my-project-requirements.example.md`. |

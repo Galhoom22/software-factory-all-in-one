@@ -1,0 +1,24 @@
+# Google Antigravity — best practices (playbook-aligned)
+
+Defaults for agents **and** humans driving **Google Antigravity** against this Engineering Playbook.
+
+## 1. Load the single rulebook first
+
+1. Open `docs/AGENT_START.md` (hard rails).
+2. Open `AGENTS.md` (full rulebook).
+3. Open this pack’s slice for harness-specific tips.
+4. Never invent a parallel constitution in chat memory.
+
+## 2. Session shape
+
+- Prefer **one clear goal** per session (planning stage, or one implementation day must-finish).
+- Keep large outputs as **paths + summaries** (context-window judgment).
+- End with evidence: checks run, coverage/% touched, mirror sync when playbook changed.
+
+## 3. Discovery pointer
+
+No dedicated template yet — use `AGENTS.md` via IDE/App project open; add thin pointer when owner standardizes on Antigravity.
+
+## 4. Depth note
+
+Pack depth: **skeleton**. If thin: deepen from official docs before claiming high coverage %.

@@ -78,6 +78,7 @@ Score a change against these — not against marketing adjectives:
 
 | **Deepen-over-duplicate** | Coverage atlas first; one home per practice; % stays honest |
 | **Always-Current** | Touched homes stay fresh this session; official/Context7 evidence; freshness CI gate ([`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md)) |
+| **Harness breadth** | Popular AI agents/IDEs (US + China + cloud chat) have honest % + packs ([`coverage/08-ai-agents.md`](coverage/08-ai-agents.md), [`agents/`](agents/README.md)) |
 
 | **Operable day loop** | Start once → finish must-finish → closeout → Pareto + handoff |
 | **Company seats** | Org chart, goal ancestry, atomic checkout — studio feels like a firm ([`07-judgment/studio-company.md`](07-judgment/studio-company.md)) |

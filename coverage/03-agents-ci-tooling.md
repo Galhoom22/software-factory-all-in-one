@@ -10,6 +10,7 @@ Paths under `playbook/templates/` unless noted.
 |----|------------|------|---|-------|
 | ✅ | Single rulebook | `AGENTS.template.md` | **95** | Becomes product `AGENTS.md` |
 | ✅ | Agent discovery pack | `agent-discovery/**` | **93** | CLAUDE, GEMINI, llms.txt, Copilot, Windsurf, Gemini settings |
+| ✅ | Agents harness library | `playbook/agents/**` + `coverage/08-ai-agents` | **88** | Per-harness craft; atlas % (D-109) |
 | ✅ | Cursor rules | `cursor-rules/*.mdc` | **92** | delivery, ponytail, clean-code, engineering-standards, owner-standing, project-ui-design, requirements-activation |
 | ✅ | Codex rails | `codex/**` | **90** | config.toml, hooks, SessionStart/Stop scripts, CLI.md |
 | ✅ | Codex verify script | `scripts/verify-codex-cli.mjs` | **85** | Machine check |
@@ -66,7 +67,7 @@ These live in the **product planning repo** that owns the playbook copy (not cop
 
 | If owner asks to add… | Prefer | Avoid |
 |-----------------------|--------|-------|
-| New AI harness support | Thin pointer under `agent-discovery/` + keep `AGENTS` single SoT | Forking a second rulebook |
+| New AI harness support | Pack under `playbook/agents/<slug>/` + thin `agent-discovery/` pointer + `08-ai-agents` % | Forking a second rulebook |
 | New CI gate | Extend `09-CI-CD` + matching YAML skeleton | Mid-day PR spam “for CI” |
 | New CodeRabbit paid product | Wait for explicit owner opt-in (`08` Free default) | Starting trials |
 | Auto-sync playbook | Use existing sync script | Manual GitHub web edits that diverge |

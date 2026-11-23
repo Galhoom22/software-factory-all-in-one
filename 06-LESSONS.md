@@ -185,3 +185,5 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - To stop a server on a port: `Get-NetTCPConnection -LocalPort <port> -State Listen | % { Stop-Process -Id $_.OwningProcess -Force }`.
 
 - **Playbook Always-Current is a gate, not a wish.** Every playbook edit finishes the freshness closeout (atlas/%, official Checked dates for touched packs, structural script, D-52 mirror) or it is unfinished — stale advice is a professionalism failure (D-108).
+
+- **Harness packs live under `playbook/agents/`.** Discovery pointers stay thin; coverage % lives in `coverage/08-ai-agents.md`. China and preview products start as honest skeletons — deepen from official docs, never from rumor (D-109).
