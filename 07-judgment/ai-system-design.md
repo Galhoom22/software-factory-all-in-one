@@ -36,4 +36,4 @@ Upstream reading (human only, optional): [ombharatiya/ai-system-design-guide](ht
 
 ## Day workflow hook
 
-When a calendar day’s must-finish touches model choice, prompts, retrieval, or AI jobs: re-run the product’s fictional eval set (or assert-based smoke) before closeout marks Done; name practice level + admission rule for any new side effect — see [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md) and [`enterprise-system-design.md`](enterprise-system-design.md).
+Day craft checklist: [`ai-engineering.md`](ai-engineering.md). When a calendar day’s must-finish touches model choice, prompts, retrieval, or AI jobs: re-run the product’s fictional eval set (or assert-based smoke) before closeout marks Done; name practice level + admission rule for any new side effect — see [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md) and [`enterprise-system-design.md`](enterprise-system-design.md).

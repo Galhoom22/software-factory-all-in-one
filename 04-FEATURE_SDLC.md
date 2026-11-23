@@ -363,6 +363,7 @@ Build, lint, tests, security / dependency checks, secret scanning, required revi
 **Human code-review (when code shipped):** readability + modern pinned-line syntax + best practices — [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md).
 
 **Integration engineering (when external deps):** interfaces, contract, adapter, idempotency, fallback — [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md).
+**AI engineering (when model/prompt/RAG/agent paths):** det/prob seam, admission, golden eval, practice level — [`07-judgment/ai-engineering.md`](07-judgment/ai-engineering.md).
 
 **Integration quality gate**
 
@@ -486,7 +487,7 @@ These are independent unless an explicit product policy ties them together.
 
 
 
-For each activated module, record: Module · Reason · Artifact / evidence link · Status. Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md). Judgment for payments: [`07-judgment/payments.md`](07-judgment/payments.md). Judgment for booking/reservations: [`07-judgment/booking.md`](07-judgment/booking.md). Judgment for design patterns: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
+For each activated module, record: Module · Reason · Artifact / evidence link · Status. Link out to the project's existing templates; do not paste large module bodies into every feature file. Judgment for AI patterns: [`07-judgment/ai-system-design.md`](07-judgment/ai-system-design.md). Day craft for AI paths: [`07-judgment/ai-engineering.md`](07-judgment/ai-engineering.md). Judgment for payments: [`07-judgment/payments.md`](07-judgment/payments.md). Judgment for booking/reservations: [`07-judgment/booking.md`](07-judgment/booking.md). Judgment for design patterns: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
 
 
 

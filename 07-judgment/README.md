@@ -43,10 +43,11 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Context7 / current library docs | This-session docs for pinned lines; resolve→query; official fallback | Training memory as “latest”; silent major bumps; Context7 theater on renames |
 | Verification engineering (AI-written change proof) | Criteria→evidence; author≠judge; layers; risk-matched depth | “Agent said Done”; builder tests alone; vendor SaaS lock-in; chip UVM ceremony |
 | Integration engineering (any external connection) | Boundaries/interfaces; contract; adapter; idempotency; fallback; SoR | “SDK installed = integrated”; blind retries; NEDION vendor lock-in |
+| AI engineering (det/prob + evals) | Seam propose≠execute; golden eval; admission; dual-mode classical+AI | Soften classical bars; vendor LLMOps/LangChain as constitution; vibes Done |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
-AI system design judgment: [`ai-system-design.md`](ai-system-design.md).
+AI system design judgment: [`ai-system-design.md`](ai-system-design.md) (patterns). Day craft: [`ai-engineering.md`](ai-engineering.md).
 
 SAD / ADR judgment: [`sad-adr.md`](sad-adr.md).
 
@@ -84,6 +85,7 @@ Context7 / current docs: [`context7-docs.md`](context7-docs.md).
 Verification engineering: [`verification-engineering.md`](verification-engineering.md).
 
 Integration engineering: [`integration-engineering.md`](integration-engineering.md).
+AI engineering (det/prob seam + evals): [`ai-engineering.md`](ai-engineering.md).
 
 Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 

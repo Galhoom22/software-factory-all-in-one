@@ -24,7 +24,7 @@ Integrations fail at **boundaries**, not inside the happy-path SDK call: unclear
 | **Adapter over bleed** | Isolate partner protocols behind a narrow house interface |
 | **Author ≠ partner** | We do not control their uptime; plan fallbacks and kill switches |
 
-Domain packs still win for money/booking/AI: [`payments.md`](payments.md), [`booking.md`](booking.md), [`ai-system-design.md`](ai-system-design.md), [`api-design.md`](api-design.md), [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
+Domain packs still win for money/booking/AI: [`payments.md`](payments.md), [`booking.md`](booking.md), [`ai-system-design.md`](ai-system-design.md), [`ai-engineering.md`](ai-engineering.md), [`api-design.md`](api-design.md), [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 
 ## Integration checklist (any partner)
 

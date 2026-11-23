@@ -68,7 +68,7 @@ Timeouts and lost responses are **unknown**, not automatic failure. Blind retry 
 
 Generation **stop reason** explains why decoding stopped — **not** whether output is safe to publish or act on. **Output admission** is a separate fail-closed step for consequential workflows (schema, policy, task completeness, product rules such as no fabrication). Low-consequence advisory may warn-and-show; high-consequence must block.
 
-Deepens [`ai-system-design.md`](ai-system-design.md).
+Deepens [`ai-system-design.md`](ai-system-design.md). Day craft: [`ai-engineering.md`](ai-engineering.md).
 
 ## Workload review lens (Well-Architected — cloud-agnostic use)
 
@@ -101,7 +101,7 @@ When reviewing a whole deployable, score trade-offs across: **Reliability**, **S
 
 When must-finish touches High-risk boundaries, AI tools/side effects, or architecture authority:
 
-1. Open this file + [`ai-system-design.md`](ai-system-design.md) / [`sad-adr.md`](sad-adr.md) / SECURITY as needed.
+1. Open this file + [`ai-system-design.md`](ai-system-design.md) / [`ai-engineering.md`](ai-engineering.md) / [`sad-adr.md`](sad-adr.md) / SECURITY as needed.
 2. Answer the **six questions** (or N/A with reason).
 3. Name **practice level** if AI/agents can cause effects.
 4. Cite evidence class in the day summary.
@@ -110,5 +110,5 @@ Closeout: architecture/AI consequential days mention boundary review (or **N/A**
 
 ## Related homes
 
-- [`agent-skills.md`](agent-skills.md) · [`ai-system-design.md`](ai-system-design.md) · [`sad-adr.md`](sad-adr.md) · [`api-design.md`](api-design.md) · [`booking.md`](booking.md) · [`payments.md`](payments.md)
+- [`agent-skills.md`](agent-skills.md) · [`ai-system-design.md`](ai-system-design.md) · [`ai-engineering.md`](ai-engineering.md) · [`sad-adr.md`](sad-adr.md) · [`api-design.md`](api-design.md) · [`booking.md`](booking.md) · [`payments.md`](payments.md)
 - Method: [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md), [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md)
