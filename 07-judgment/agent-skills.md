@@ -14,6 +14,8 @@ Upstream reading (human only, optional): packs such as [addyosmani/agent-skills]
 | Contract-first when FE/BE parallelize | `docs/API_CONTRACT.md` before dual implementation |
 | Five-axis review before merge: correctness, readability, architecture, security, performance | Day closeout + CodeRabbit Free CLI · propose structural remedies, not only nits |
 | Threat-model briefly (trust boundaries + abuse cases) before hardening a feature | `SECURITY.md` + FEATURE security module |
+| Six boundary questions (object → contract → authority → scope → evidence → recovery) on consequential writes | [`enterprise-system-design.md`](enterprise-system-design.md) · FEATURE Design |
+| AI/agent **practice level** by consequence (advisory → consequential), not model confidence | [`enterprise-system-design.md`](enterprise-system-design.md) · `docs/AI.md` |
 | Evidence over hope; adversarial check on high-stakes claims (auth, money, PII, irreversible data) | FEATURE verification matrix · doubt before Done |
 | Official docs over memory for library APIs | Context7 / SRS §2 official links · source-driven habit |
 | Quality bar lives in CI + SECURITY + TESTING — numbers decided once | [`09-CI-CD.md`](../09-CI-CD.md) · product TESTING docs — not a new `CONSTRAINTS.md` unless the owner wants one |
@@ -39,6 +41,7 @@ Before claiming an implementation slice Done:
 3. Trust boundaries named if the change touches auth, PII, uploads, webhooks, money/billing, or AI?
 4. Five-axis glance (or CodeRabbit Free) done; structural issues have a proposed move?
 5. Evidence linked (tests, CI, golden set for AI) — not “looks fine”?
+6. If High-risk / AI side effects: six questions + practice level answered ([`enterprise-system-design.md`](enterprise-system-design.md))?
 
 ## Day workflow hook
 

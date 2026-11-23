@@ -85,7 +85,8 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Payments / webhooks | `07-judgment/payments` + SECURITY/COMPLIANCE templates | ✅ ~88% |
 | Playwright E2E | `07-judgment/playwright-e2e` + FE TESTING + CI | ✅ ~88% |
 | Design patterns | `07-judgment/design-patterns` | ✅ ~85% |
-| AI system design / golden set | `07-judgment/ai-system-design` + `docs/AI.md` | ✅ ~86% |
+| AI system design / golden set | `07-judgment/ai-system-design` + `docs/AI.md` | ✅ ~88% |
+| Enterprise system design (boundaries) | `07-judgment/enterprise-system-design` + day high-stakes | ✅ ~90% |
 | API readiness (all environments) | `07-judgment/api-readiness` + day/`09` | ✅ ~90% |
 | API design (consumer-first REST) | `07-judgment/api-design` + contract template + gate 7 | ✅ ~90% |
 | Cross-surface compatibility (FE↔BE↔services) | `07-judgment/cross-surface-compatibility` + `08` + `SIBLING` | ✅ ~90% |
@@ -143,6 +144,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | D-94: enterprise system-design judgment (six questions, practice levels, verification-dominant) absorbed; course tree not vendored. |
 | 2026-11-23 | D-93: playbook purpose explicit — single reference for agent speed×quality (vibe + professional products). |
 | 2026-11-23 | D-92: API design judgment (consumer-first REST craft) absorbed from course; design bar in API readiness gate. |
 | 2026-11-23 | D-91: cross-surface compatibility day gate (sibling read / owned-seat write; monorepo+split+services). |

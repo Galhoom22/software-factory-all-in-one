@@ -15,6 +15,8 @@ Upstream reading (human only, optional): SAD+ADR template packs that use C4 + Me
 | Progressive views: landscape → context → containers → (components only if needed) | `docs/frontend/ARCHITECTURE.md`, `docs/backend/ARCHITECTURE.md` |
 | Mermaid (incl. C4) in-repo so GitHub renders without extra tools | Architecture docs + decision impact when a diagram changes |
 | Light forks stay out of the ADR log | `docs/decision-logs/` |
+| Evidence-driven ADRs: name verification class (local / contractual / concurrent / consequential) and recovery | [`enterprise-system-design.md`](enterprise-system-design.md) · FEATURE Verification |
+| Workload trade-offs across reliability / security / cost / ops / performance when the whole deployable changes | ADR + ARCHITECTURE (cloud-agnostic Well-Architected lens) |
 
 ## Forbid
 
@@ -35,6 +37,7 @@ When writing or reviewing architecture / decisions:
 3. Does a consequential decision say what happens to security, data, or deploy — or explicitly say “none”?
 4. Do FE and BE architecture docs show **context** (actors + externals) and **containers** (deployable pieces) before deep folder trees?
 5. Is there still only one place for stack versions (SRS §2) and one place for API shapes (`API_CONTRACT.md`)?
+6. For consequential boundaries: can you answer the six questions ([`enterprise-system-design.md`](enterprise-system-design.md))?
 
 ## Day workflow hook
 

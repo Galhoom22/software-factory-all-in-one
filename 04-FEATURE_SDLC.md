@@ -152,6 +152,8 @@ Identify applicable SECURITY / COMPLIANCE controls and feature-specific threats.
 
 Table: risk or failure mode → control → verification → status. Residual risk: mitigate / accept / block with an owner.
 
+**Boundary / verification (when High-risk):** six questions + practice level — [`07-judgment/enterprise-system-design.md`](07-judgment/enterprise-system-design.md).
+
 **Security quality gate**
 
 - [ ] Applicable security requirements identified

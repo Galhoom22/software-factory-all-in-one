@@ -44,6 +44,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Context window hygiene | `07-judgment/context-window.md` | **90** | Pointers; fresh chat; D-86 | — |
 | ✅ | Playwright E2E | `07-judgment/playwright-e2e.md` | **88** | Short critical list, locators, CI traces | FE TESTING template holds product rules |
 | ✅ | SAD / ADR | `07-judgment/sad-adr.md` | **90** | DECISIONS.md + C4 in ARCHITECTURE; no second SAD | — |
+| ✅ | Enterprise system design | `07-judgment/enterprise-system-design.md` | **90** | Six questions; practice levels; verification-dominant; output admission |
 | ✅ | AI system design | `07-judgment/ai-system-design.md` | **86** | Golden set, untrusted text, model pins | Product `docs/AI.md` holds provider shortlist |
 
 **Domain average (judgment): ~88%**

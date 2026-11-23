@@ -76,6 +76,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 | YYYY-MM-DD | Proportional day pipeline — scale rigor with product risk (D-85). |
+| YYYY-MM-DD | Enterprise system-design judgment (boundary/verification craft) (D-94). |
 | YYYY-MM-DD | API design judgment (consumer-first REST; design bar in API readiness) (D-92). |
 | YYYY-MM-DD | Cross-surface compatibility day gate (FE↔BE↔services; sibling read-only unless standing grants write) (D-91). |
 | YYYY-MM-DD | Booking/reservations judgment + day gate (D-84). |

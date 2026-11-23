@@ -18,6 +18,9 @@ Upstream reading (human only, optional): [ombharatiya/ai-system-design-guide](ht
 | Cost: route by task; cache stable prefixes when the provider supports it; do not max effort on every call | `docs/AI.md` |
 | Document ingest: content sniffing, compressed + expanded size limits, no fabricated professional facts | `docs/SECURITY.md` FU + product rules |
 | Anti-patterns: god prompt, retrieve-everything, no observability, floating model defaults, single-provider with no evalled failover | `docs/AI.md` |
+| **Practice level** (advisory / assisted / delegated / consequential) matches side effects — not model confidence | `docs/AI.md` · [`enterprise-system-design.md`](enterprise-system-design.md) |
+| **Output admission** after generation stop: schema/policy/product-rule check before publish or tool/commit (fail closed when consequential) | `docs/AI.md` · FEATURE verification |
+| Untrusted retrieval/tool text never silently gains write authority (promotion gate outside the model) | SECURITY · [`enterprise-system-design.md`](enterprise-system-design.md) |
 
 ## Forbid
 
@@ -28,7 +31,9 @@ Upstream reading (human only, optional): [ombharatiya/ai-system-design-guide](ht
 | Claim Done on an AI path without golden-set evidence | Same as FEATURE_SDLC: observation over hope |
 | Give an AI job tools + private data + open egress together | “Lethal trifecta” — remove one leg |
 | Fine-tune before exhausting prompt / few-shot / retrieval | Premature complexity |
+| Treat “model finished generating” as safe to commit side effects | Termination ≠ admission |
+| Raise tool/write power because the model is “confident” | Practice level follows consequence |
 
 ## Day workflow hook
 
-When a calendar day’s must-finish touches model choice, prompts, retrieval, or AI jobs: re-run the product’s fictional eval set (or assert-based smoke) before closeout marks Done — see [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md).
+When a calendar day’s must-finish touches model choice, prompts, retrieval, or AI jobs: re-run the product’s fictional eval set (or assert-based smoke) before closeout marks Done; name practice level + admission rule for any new side effect — see [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md) and [`enterprise-system-design.md`](enterprise-system-design.md).

@@ -38,6 +38,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Competitor recon / clean-room parity | Screen/flow/feature matrix; evidence-linked gaps; must-have parity; brand sweep | Clone pack as AGENTS; copy peer assets; invent reviews; vibe “parity” |
 | Cross-surface compatibility (FE↔BE↔services) | Day gate + `SIBLING.md`; read sibling, write only owned seat; contract-first | Edit sibling seat; Done without consumer parity; ship breaking shapes silently |
 | Software Factory + multi-agent line | Intake→triage→plan→build→independent review→Done; seats + convergence owner | Vendor Mastra/Warp as AGENTS; builder self-approve; dual checkout |
+| Enterprise system design (boundary / verification) | Six questions; AI practice levels; verification-dominant changes; output admission | Vendor Azure/HPC course trees; HATEOAS/enterprise fashion on modular monoliths |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -69,6 +70,8 @@ Context window hygiene: [`context-window.md`](context-window.md).
 Studio as a company: [`studio-company.md`](studio-company.md).
 Competitor recon / clean-room: [`competitor-recon.md`](competitor-recon.md).
 Software Factory + multi-agent line: [`software-factory.md`](software-factory.md).
+
+Enterprise system design: [`enterprise-system-design.md`](enterprise-system-design.md).
 
 Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 
