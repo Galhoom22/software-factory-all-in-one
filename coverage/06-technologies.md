@@ -39,6 +39,8 @@ Paths under `playbook/technologies/`.
 | ✅ | Symfony 8 slice | `technologies/symfony/symfony-8/` | **88** | use / stop / mistakes (8.1 stable; LTS 7.4 noted) |
 | ✅ | Next.js pack hub | `technologies/nextjs/` | **92** | nextjs.org/docs + quality |
 | ✅ | Next.js 16 slice | `technologies/nextjs/nextjs-16/` | **92** | App Router; Proxy; npm 16.4.x |
+| ✅ | C# pack hub | `technologies/csharp/` | **88** | Learn.microsoft.com csharp; Context7 `/websites/learn_microsoft_en-us_dotnet_csharp` |
+| ✅ | C# 14 version slice | `technologies/csharp/csharp-14/` | **88** | use / stop / mistakes; .NET 10 LTS default; C# 15 noted for net11 |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
 **Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~89%.**

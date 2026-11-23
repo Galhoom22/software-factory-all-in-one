@@ -51,6 +51,7 @@ playbook/technologies/
   symfony/                  ← Symfony 8 pack
   php-laravel-compositions.md ← TALL / VILT / PHP pack map
   nextjs/                   ← Next.js 16 pack
+  csharp/                   ← C# 14 (.NET 10) pack
 ```
 
 | Folder naming | Rule |
@@ -111,3 +112,4 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 | [`symfony/`](symfony/README.md) | [`symfony-8/`](symfony/symfony-8/README.md) | [`quality.md`](symfony/quality.md) | ✅ |
 | [`php-laravel-compositions.md`](php-laravel-compositions.md) | TALL + VILT + Symfony map | — | ✅ |
 | [`nextjs/`](nextjs/README.md) | [`nextjs-16/`](nextjs/nextjs-16/README.md) | [`quality.md`](nextjs/quality.md) | ✅ |
+| [`csharp/`](csharp/README.md) | [`csharp-14/`](csharp/csharp-14/README.md) | [`quality.md`](csharp/quality.md) | ✅ |
