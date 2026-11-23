@@ -46,6 +46,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Automatic closeout order | `08`, `09` | **96** | PR → CI green → CodeRabbit → merge → verify → CD(phase) → tracker → day page |
 | ✅ | Progressive CD (A/B/C) | `09-CI-CD`, impl Actions YAML | **94** | Auto-detect; honest skip; no fake deploys |
 | ✅ | Human code-review bar | `07-judgment/human-code-review`, `08` closeout | **92** | Senior self-review: readability + modern syntax + best practices |
+| ✅ | Context7 / current-docs gate | `07-judgment/context7-docs`, `08` always-on | **93** | This-session docs for pinned library/framework APIs |
 | ✅ | CodeRabbit Free default | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked; does not waive human bar |
 | ✅ | Pareto 20% + handoff | `08`, prompts | **97** | Teachable depth **file-anchored** (paths/structure/connections) + operational handoff |
 | ✅ | Context window hygiene | `07-judgment/context-window`, `08`, `05`, lessons | **90** | Pointers over blobs; fresh-chat checkpoint; D-86 |

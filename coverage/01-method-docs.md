@@ -39,6 +39,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Packages over reinvention | `07-judgment/packages.md` | **90** | Non-trivial → verified package; trivial → house/stdlib | Wired into standing + engineering-standards |
 | ✅ | Design patterns | `07-judgment/design-patterns.md` | **85** | Problem → naive → enhance; composition first | Not a pattern catalog dump |
 | ✅ | Human code review (senior bar) | `07-judgment/human-code-review.md` | **92** | Readability; modern pinned-line syntax; pack best practices; CodeRabbit assists |
+| ✅ | Context7 / current library docs | `07-judgment/context7-docs.md` | **93** | This-session Context7/official for pinned lines; day evidence |
 | ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **88** | Assumptions, thin slices, five-axis review | Not a vendored skills OS |
 | ✅ | Payments / providers | `07-judgment/payments.md` | **88** | Webhook-first, idempotency, current APIs | Pair with SECURITY/COMPLIANCE templates |
 | ✅ | Booking / reservations | `07-judgment/booking.md` | **88** | Holds, recheck, idempotency, inventory; pair payments |

@@ -60,6 +60,8 @@ playbook/technologies/
 
 ## How agents must use a pack (hard rules)
 
+**Current docs gate:** Context7 MCP and/or official vendor pages this session — [`07-judgment/context7-docs.md`](../07-judgment/context7-docs.md). Packs distill craft; they do not replace a freshness check on non-trivial APIs.
+
 **Before** treating a stack as the product default: run [`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md) (requirements → options → recommendation → ADR/SRS pin). Do not invent a product stack from pack availability.
 
 When the task writes or reviews code in a stack the product **already pinned** (or the owner named for a greenfield after selection):
