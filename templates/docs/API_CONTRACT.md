@@ -27,6 +27,10 @@ This document is the single agreement between the frontend and backend. Any chan
 | Nullability | Optional fields are always present with `null`, never omitted. |
 | Localization | `Accept-Language` selects the language of validation and error messages. |
 | Versioning | Breaking changes need `/api/v2`; additive changes are allowed, and the frontend ignores unknown fields. |
+| Resource paths | Plural nouns for collections (`/jobs`, `/jobs/{id}`); nest only for real ownership; no RPC verbs in paths (`/createJob` ❌). |
+| HTTP semantics | GET/HEAD safe (no side effects); PUT/DELETE idempotent; POST for non-idempotent creates; PATCH for partial updates. |
+| Consumer tasks | Each endpoint group states which consumer tasks it enables (API-as-UI). |
+| Docs currency | This file is the agreement; keep it current the same day as the change. Optional OpenAPI is a **view** of this contract — never a second SoT. |
 
 ### 1.1 Response Envelope
 
@@ -75,6 +79,8 @@ How the frontend signs in and sends credentials (prefer HTTP-only cookie session
 | Mock data | Provides example responses | Builds screens on mocks until the endpoint is live |
 
 ### 6.1 Change Process (contract-first)
+
+Design bar (consumer tasks, naming, method semantics): playbook `07-judgment/api-design.md`.
 
 1. Whoever needs a change opens a pull request that edits **this file only**.
 2. The other developer approves it. No code is written against an unapproved change.

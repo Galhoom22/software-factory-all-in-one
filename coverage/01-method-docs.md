@@ -31,6 +31,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Spec Kit / ESD / ATLAS style | `07-judgment/README.md` | **90** | Map onto existing docs; forbid second SoT | Spec Kit lives in **impl** repos |
 | ✅ | DSA / performance on hot paths | `07-judgment/dsa-performance.md` | **90** | `n`, Big-O, structure, edges; TLE mindset | Wire into day Done (already in `08`) |
 | ✅ | Cross-surface compatibility | `07-judgment/cross-surface-compatibility.md` | **90** | Read sibling; write owned seat; contract-first; day gate |
+| ✅ | API design (consumer-first) | `07-judgment/api-design.md` | **90** | Resource naming; method semantics; docs=agreement; no HATEOAS/Digest mandate |
 | ✅ | API readiness across environments | `07-judgment/api-readiness.md` | **88** | Contract + local + CI + staging/prod smoke by phase | Wired into `08`/`09`/BE TESTING |
 | ✅ | SEO + GEO (public pages) | `07-judgment/seo-geo.md` + `08` + SEO templates | **88** | Dual tech + citeable craft; day gate when indexable URLs change |
 | ✅ | Compliance / ethics / risk | `07-judgment/compliance-ethics-risk.md` | **88** | IEEE ethics + risk treat cycle; candor safer scenario |

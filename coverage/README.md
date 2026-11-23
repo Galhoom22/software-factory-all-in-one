@@ -86,7 +86,8 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Playwright E2E | `07-judgment/playwright-e2e` + FE TESTING + CI | ✅ ~88% |
 | Design patterns | `07-judgment/design-patterns` | ✅ ~85% |
 | AI system design / golden set | `07-judgment/ai-system-design` + `docs/AI.md` | ✅ ~86% |
-| API readiness (all environments) | `07-judgment/api-readiness` + day/`09` | ✅ ~88% |
+| API readiness (all environments) | `07-judgment/api-readiness` + day/`09` | ✅ ~90% |
+| API design (consumer-first REST) | `07-judgment/api-design` + contract template + gate 7 | ✅ ~90% |
 | Cross-surface compatibility (FE↔BE↔services) | `07-judgment/cross-surface-compatibility` + `08` + `SIBLING` | ✅ ~90% |
 | ADR / architecture decisions | `07-judgment/sad-adr` + `DECISIONS` template | ✅ ~90% |
 | Requirements-driven stack selection | `07-judgment/stack-selection` + `00-USAGE` + `technologies/` | ✅ ~90% |
@@ -141,6 +142,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | D-92: API design judgment (consumer-first REST craft) absorbed from course; design bar in API readiness gate. |
 | 2026-11-23 | D-91: cross-surface compatibility day gate (sibling read / owned-seat write; monorepo+split+services). |
 | 2026-11-21 | D-89: competitor recon / clean-room parity (replica-skill judgment).
 | 2026-11-21 | D-88: studio-as-company (Paperclip judgment) + STUDIO_ORG + optional CLI.

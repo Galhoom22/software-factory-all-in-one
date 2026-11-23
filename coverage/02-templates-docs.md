@@ -28,7 +28,7 @@ Paths relative to `playbook/templates/` unless noted. These seed a **new plannin
 | ✅ | BRD | `docs/BRD.md` | **88** | Why / market / competitors |
 | ✅ | PRD | `docs/PRD.md` | **90** | Features F-xx, acceptance, DoR |
 | ✅ | SRS | `docs/SRS.md` | **92** | Stack + FR/NFR + owners + traceability |
-| ✅ | API contract | `docs/API_CONTRACT.md` | **90** | Only shared FE↔BE interface |
+| ✅ | API contract | `docs/API_CONTRACT.md` | **92** | Only shared FE↔BE interface; design bar conventions (resources, HTTP semantics, docs currency) |
 | ✅ | Compliance red lines | `docs/COMPLIANCE.md` | **92** | Markets, consent, payments, a11y, ethics + risk sections |
 | ✅ | Security red lines | `docs/SECURITY.md` | **92** | OWASP IDs + Every Page Checklist |
 | ✅ | AI provider / rules | `docs/AI.md` | **85** | Optional delete if no AI |

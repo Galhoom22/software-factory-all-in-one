@@ -71,6 +71,6 @@ Closeout day summary: cite **cross-surface compatibility** evidence (surfaces ch
 
 ## Related homes
 
-- [`api-readiness.md`](api-readiness.md) · [`software-factory.md`](software-factory.md) · [`studio-company.md`](studio-company.md)
+- [`api-readiness.md`](api-readiness.md) · [`api-design.md`](api-design.md) · [`software-factory.md`](software-factory.md) · [`studio-company.md`](studio-company.md)
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md) Integration gate
 - Templates: `templates/docs/SIBLING.md`, `templates/docs/API_CONTRACT.md`, FE/BE `README.md` “Working with …”

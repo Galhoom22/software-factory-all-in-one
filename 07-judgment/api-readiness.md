@@ -18,6 +18,7 @@ Local feature tests alone do **not** prove FE-ready or production-ready.
 | Check | Pass when | Where it runs |
 |-------|-----------|---------------|
 | **Contract parity** | Every route/error/shape touched today matches planning `API_CONTRACT.md` (or the contract was updated first, with FE notified) | Before Done / before PR |
+| **API design bar** | Consumer tasks named; resource paths; safe/idempotent methods; stable error codes — see [`api-design.md`](api-design.md) | When routes/shapes change |
 | **Local API proof** | Feature (HTTP) tests for the day’s surfaces pass; authz/privacy/money/AI guards from BACKEND TESTING still hold | Day run-through |
 | **CI API proof** | Same suite green on GitHub Actions (clean runner) | Closeout merge gate |
 | **Staging API smoke** | After staging deploy (Phase B+): health + today’s critical paths from DEPLOYMENT smoke | Closeout CD step |
@@ -60,4 +61,5 @@ Progressive phases stay in force (`09-CI-CD.md`): Phase A skips remote smoke hon
 
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`09-CI-CD.md`](../09-CI-CD.md)
 - Templates: `templates/docs/backend/TESTING.md`, `templates/docs/backend/DEPLOYMENT.md` § Smoke, `templates/docs/API_CONTRACT.md`
+- Design craft: [`api-design.md`](api-design.md)
 - Sibling quality gates: [`cross-surface-compatibility.md`](cross-surface-compatibility.md), [`dsa-performance.md`](dsa-performance.md), CodeRabbit in `08`, CI in `09`

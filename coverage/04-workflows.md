@@ -36,7 +36,8 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Feature evidence same day | `04-FEATURE_SDLC`, `08` | **93** | Filled template ≠ Done; gates need results |
 | ✅ | DSA check on hot paths | `07-judgment/dsa-performance`, `08` | **90** | Name `n`, class, structure, edges |
 | ✅ | Cross-surface compatibility | `07-judgment/cross-surface-compatibility`, `08`, `SIBLING` template | **90** | Sibling read; owned-seat write; contract-first handoff |
-| ✅ | API readiness across environments | `07-judgment/api-readiness`, `08`, `09`, BE TESTING/DEPLOYMENT | **88** | Contract + local + CI + phase smoke; FE-handoff honesty |
+| ✅ | API readiness across environments | `07-judgment/api-readiness`, `08`, `09`, BE TESTING/DEPLOYMENT | **90** | Contract + design bar + local + CI + phase smoke; FE-handoff honesty |
+| ✅ | API design craft | `07-judgment/api-design`, contract template, `08` gate 7 | **90** | Consumer-first; HTTP semantics; docs=agreement |
 | ✅ | SEO + GEO on public-page days | `07-judgment/seo-geo`, `08`, SEO templates | **88** | Checklist + N/A for private-only days; no ranking vanity Done |
 | ✅ | Candor on degrading asks | OWNER_STANDING + coverage + `08` (D-82) | **90** | Refuse/advise; no dual-sync of bar-lowering changes |
 | ✅ | Compliance / ethics / risk day check | `07-judgment/compliance-ethics-risk`, `08`, COMPLIANCE | **88** | PII/money/AI/claims; safer scenario on refuse |

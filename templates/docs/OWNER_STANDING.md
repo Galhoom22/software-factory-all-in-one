@@ -39,7 +39,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - When the owner says to work **today’s** tasks, finish the **whole** must-finish list without mid-day continue / “approve next slice” waits.
 - **Context window:** follow playbook `07-judgment/context-window.md` — pointers over paste-bombs; fresh-chat handoff; mid-day context checkpoint allowed, mid-day slice-approval waits are not.
 - **Final reply after closeout:** (1) **Pareto 20% (teachable depth)** — most important topics only, each explained thoroughly so the owner can paste into ChatGPT and learn (terms, concepts, what shipped, why) — not ultra-short stubs; (2) **New-chat handoff** — copy-paste block for tomorrow. Emit both automatically.
-- **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch, **including API tests**) → **CD when configured** (staging deploy → **API smoke** → Sentry if live) → tracker → day page. **API readiness** (contract + local + CI + phase smoke) is a day gate like DSA/CodeRabbit — see `playbook/07-judgment/api-readiness.md`. **Cross-surface compatibility** (read sibling; write only owned seat; contract-first handoff) — `playbook/07-judgment/cross-surface-compatibility.md`. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
+- **Closeout (automatic when 100%):** PR → **CI green** (GitHub Actions) → **CodeRabbit** (Free: CLI/IDE full review + optional PR summary; paid: GitHub review) → merge → verify on default branch (+ confirm CI on that branch, **including API tests**) → **CD when configured** (staging deploy → **API smoke** → Sentry if live) → tracker → day page. **API readiness** (contract + **API design bar** + local + CI + phase smoke) is a day gate like DSA/CodeRabbit — see `playbook/07-judgment/api-readiness.md` + `playbook/07-judgment/api-design.md`. **Cross-surface compatibility** (read sibling; write only owned seat; contract-first handoff) — `playbook/07-judgment/cross-surface-compatibility.md`. Stay on Free CodeRabbit until the owner explicitly pays; no paid trials/usage products by default.
 - Pause only for real blockers (security/compliance/product/spend decisions, interactive approvals, unfixable hard stops).
 
 ## Playbook generic (hard rule)
@@ -76,6 +76,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 | YYYY-MM-DD | Proportional day pipeline — scale rigor with product risk (D-85). |
+| YYYY-MM-DD | API design judgment (consumer-first REST; design bar in API readiness) (D-92). |
 | YYYY-MM-DD | Cross-surface compatibility day gate (FE↔BE↔services; sibling read-only unless standing grants write) (D-91). |
 | YYYY-MM-DD | Booking/reservations judgment + day gate (D-84). |
 | YYYY-MM-DD | Candor hard rule: push back when a request would lower professionalism (D-82). |
