@@ -362,6 +362,8 @@ Build, lint, tests, security / dependency checks, secret scanning, required revi
 
 **Human code-review (when code shipped):** readability + modern pinned-line syntax + best practices — [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md).
 
+**Integration engineering (when external deps):** interfaces, contract, adapter, idempotency, fallback — [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md).
+
 **Integration quality gate**
 
 

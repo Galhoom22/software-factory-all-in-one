@@ -7,6 +7,7 @@ Absorb **API design** craft as **judgment only**. Map it onto planning `API_CONT
 Pairs with:
 - [`api-readiness.md`](api-readiness.md) — environments / CI / smoke (ship readiness)
 - [`cross-surface-compatibility.md`](cross-surface-compatibility.md) — sibling consumers (integration honesty)
+- [`integration-engineering.md`](integration-engineering.md) — any external partner (adapters, retries, SoR)
 
 This file is the **design bar** (how the interface should look and behave for humans and clients).
 

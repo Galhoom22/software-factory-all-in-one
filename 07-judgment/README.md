@@ -42,6 +42,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Human code review (senior / tech-lead bar) | Readability for humans; modern pinned-line syntax; pack best practices; CodeRabbit assists | “AI understands it” as Done; CodeRabbit-only waiver; style-committee theater |
 | Context7 / current library docs | This-session docs for pinned lines; resolve→query; official fallback | Training memory as “latest”; silent major bumps; Context7 theater on renames |
 | Verification engineering (AI-written change proof) | Criteria→evidence; author≠judge; layers; risk-matched depth | “Agent said Done”; builder tests alone; vendor SaaS lock-in; chip UVM ceremony |
+| Integration engineering (any external connection) | Boundaries/interfaces; contract; adapter; idempotency; fallback; SoR | “SDK installed = integrated”; blind retries; NEDION vendor lock-in |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -81,6 +82,8 @@ Human code review: [`human-code-review.md`](human-code-review.md).
 Context7 / current docs: [`context7-docs.md`](context7-docs.md).
 
 Verification engineering: [`verification-engineering.md`](verification-engineering.md).
+
+Integration engineering: [`integration-engineering.md`](integration-engineering.md).
 
 Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 

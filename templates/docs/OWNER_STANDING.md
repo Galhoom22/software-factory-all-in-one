@@ -51,6 +51,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - When agents hit non-obvious problems or useful discoveries during build, they **automatically** (no owner ask) write `docs/learning-from-mistakes/` and, if the rule is reusable **and** raises professionalism, add a generic bullet to `playbook/06-LESSONS.md` (or the matching template) and sync any studio playbook mirror the same session. Skip noise and duplicates. Method: `playbook/08-IMPLEMENTATION-DAY.md` § Lesson capture.
 - When the owner says to **add something to the playbook / template**, always update local `playbook/` **and** sync the studio GitHub mirror in the same session — no second ask. Quality bar: only changes that raise professionalism; forever-generic. If the request would **lower** professionalism or weaken the day/workflow, **refuse and advise** per Candor (do not dual-sync a bad change).
 - **Requirements-driven stack selection (hard rule):** there is **no** universal default stack (not TALL, not MERN, not “always Next”). When the owner asks what to use, or when activating from `my-project-requirements.md`, agents **advise** from **this** product’s requirements (options → recommendation → full specification including architecture and earned patterns) per `playbook/07-judgment/stack-selection.md`, then pin lasting choices in `DECISIONS.md` + SRS. `playbook/technologies/` packs are craft after the pin — never the reason to pick a stack.
+- **Integration engineering (hard rule):** when connecting any external partner, run the integration checklist — `playbook/07-judgment/integration-engineering.md`.
 - **Verification engineering (hard rule):** criteria→evidence on must-finish; builder does not sole-certify Done; CI + independent review + human bar are the judge plane — `playbook/07-judgment/verification-engineering.md`.
 - **Context7 / current docs (hard rule):** before non-trivial library/framework code, query Context7 MCP (or official vendor pages) for the **product-pinned** line this session — `playbook/07-judgment/context7-docs.md`. Memory is not “latest.”
 - **Technologies packs:** when coding a stack, open `playbook/technologies/<slug>/` (`best-practices` + `quality` + version slice) and **automatically** re-check official docs/Context7 for the pinned line. Modern syntax + Clean Code + architecture + earned patterns. Product SRS owns the product pin.
@@ -79,6 +80,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 
 | Date (UTC) | Change |
 | YYYY-MM-DD | Proportional day pipeline — scale rigor with product risk (D-85). |
+| YYYY-MM-DD | Integration engineering day gate for external partners (D-101). |
 | YYYY-MM-DD | Verification engineering day gate (criteria→evidence; author≠judge) (D-98). |
 | YYYY-MM-DD | Context7 / current-docs day gate for pinned library freshness (D-97). |
 | YYYY-MM-DD | Human code-review bar in day closeout (senior readability / modern syntax / best practices) (D-96). |

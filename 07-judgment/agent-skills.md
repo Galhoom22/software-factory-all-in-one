@@ -19,6 +19,7 @@ Upstream reading (human only, optional): packs such as [addyosmani/agent-skills]
 | AI/agent **practice level** by consequence (advisory → consequential), not model confidence | [`enterprise-system-design.md`](enterprise-system-design.md) · `docs/AI.md` |
 | Evidence over hope; adversarial check on high-stakes claims (auth, money, PII, irreversible data) | FEATURE verification matrix · doubt before Done |
 | **Verification engineering:** criteria→evidence; author≠judge; deterministic before model opinion | [`verification-engineering.md`](verification-engineering.md) · CI · CodeRabbit · human bar |
+| **Integration engineering:** any partner boundary — checklist before Done | [`integration-engineering.md`](integration-engineering.md) · payments/booking/API packs |
 | Official docs over memory for library APIs | Context7 / SRS §2 official links · source-driven habit |
 | **Context7 / current-docs** day gate: resolve→query for pinned line before non-trivial stack code | [`context7-docs.md`](context7-docs.md) · packs · official fallback |
 | Quality bar lives in CI + SECURITY + TESTING — numbers decided once | [`09-CI-CD.md`](../09-CI-CD.md) · product TESTING docs — not a new `CONSTRAINTS.md` unless the owner wants one |

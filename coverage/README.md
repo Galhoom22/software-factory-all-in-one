@@ -82,6 +82,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Human code review (senior bar) | `07-judgment/human-code-review` + `08` + CodeRabbit | ✅ ~92% |
 | Context7 / current library docs | `07-judgment/context7-docs` + `08` + technologies | ✅ ~93% |
 | Verification engineering | `07-judgment/verification-engineering` + `08` + FEATURE | ✅ ~94% |
+| Integration engineering | `07-judgment/integration-engineering` + `08` + FEATURE | ✅ ~93% |
 | CI / CD / Forge phases | `04-workflows` + `09-CI-CD` + impl GA templates | ✅ ~92% |
 | Feature files / Done vs Released | `01-method` + `04-FEATURE_SDLC` | ✅ ~93% |
 | DSA / Big-O on hot paths | `07-judgment/dsa-performance` + day pipeline | ✅ ~90% |
@@ -147,6 +148,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | D-101: integration engineering judgment (any partner boundary) in day workflow. |
 | 2026-11-23 | D-100: Next.js 16 technologies pack from nextjs.org/docs; npm 16.4.x. |
 | 2026-11-23 | D-99: React 19 technologies pack from react.dev; npm 19.3.x. |
 | 2026-11-23 | D-98: verification engineering judgment (criteria→evidence; author≠judge) in day workflow. |

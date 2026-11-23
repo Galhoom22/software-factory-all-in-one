@@ -41,6 +41,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Human code review (senior bar) | `07-judgment/human-code-review.md` | **92** | Readability; modern pinned-line syntax; pack best practices; CodeRabbit assists |
 | ✅ | Context7 / current library docs | `07-judgment/context7-docs.md` | **93** | This-session Context7/official for pinned lines; day evidence |
 | ✅ | Verification engineering | `07-judgment/verification-engineering.md` | **94** | Criteria→evidence; author≠judge; layers; risk-matched |
+| ✅ | Integration engineering | `07-judgment/integration-engineering.md` | **93** | Any partner: interfaces, contract, adapter, idempotency, fallback |
 | ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **88** | Assumptions, thin slices, five-axis review | Not a vendored skills OS |
 | ✅ | Payments / providers | `07-judgment/payments.md` | **88** | Webhook-first, idempotency, current APIs | Pair with SECURITY/COMPLIANCE templates |
 | ✅ | Booking / reservations | `07-judgment/booking.md` | **88** | Holds, recheck, idempotency, inventory; pair payments |

@@ -71,6 +71,8 @@ When the work is non-trivial:
 
 ## Related
 
+- External SDKs/partners: also [`integration-engineering.md`](integration-engineering.md).
+
 - Ponytail / engineering standards: never add a dependency for a few lines — this judgment covers the **other** side (do not DIY a product when a package earns it)
 - [`stack-selection.md`](stack-selection.md) — whole-stack choice; this file is **per capability**
 - [`design-patterns.md`](design-patterns.md) — patterns ≠ packages; both must be earned

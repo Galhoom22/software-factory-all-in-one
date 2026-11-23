@@ -48,6 +48,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Human code-review bar | `07-judgment/human-code-review`, `08` closeout | **92** | Senior self-review: readability + modern syntax + best practices |
 | ✅ | Context7 / current-docs gate | `07-judgment/context7-docs`, `08` always-on | **93** | This-session docs for pinned library/framework APIs |
 | ✅ | Verification engineering gate | `07-judgment/verification-engineering`, `08` always-on | **94** | Criteria→evidence; builder ≠ sole judge |
+| ✅ | Integration engineering gate | `07-judgment/integration-engineering`, `08` always-on | **93** | External partners: checklist or N/A |
 | ✅ | CodeRabbit Free default | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked; does not waive human bar |
 | ✅ | Pareto 20% + handoff | `08`, prompts | **97** | Teachable depth **file-anchored** (paths/structure/connections) + operational handoff |
 | ✅ | Context window hygiene | `07-judgment/context-window`, `08`, `05`, lessons | **90** | Pointers over blobs; fresh-chat checkpoint; D-86 |
