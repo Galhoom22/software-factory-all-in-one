@@ -62,6 +62,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`07-judgment/studio-company.md`](07-judgment/studio-company.md) + [`templates/docs/STUDIO_ORG.md`](templates/docs/STUDIO_ORG.md) | Studio-as-company seats, goals, atomic checkout (Paperclip patterns as judgment). |
 | [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md) | Senior/tech-lead bar: human readability, modern syntax, best practices. |
 | [`07-judgment/context7-docs.md`](07-judgment/context7-docs.md) | Context7 / current library docs for pinned lines (this-session freshness). |
+| [`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md) | **Always-Current** closeout: every playbook edit leaves packs/coverage/mirror fresh (CI-gated). |
 | [`07-judgment/verification-engineering.md`](07-judgment/verification-engineering.md) | Prove AI-written changes: criteria→evidence; author≠judge; risk-matched layers. |
 | [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md) | Any external integration: interfaces, contract, adapter, idempotency, fallback. |
 | [`07-judgment/ai-engineering.md`](07-judgment/ai-engineering.md) | Deterministic + probabilistic systems: seam, admission, golden eval, practice level. |
@@ -122,6 +123,8 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 Every other `{{...}}` is a local fill-in named for what it holds (for example `{{RISK}}` in a risks table).
 
 ## Keeping It Current
+
+**Hard gate (Always-Current):** [`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md) — after every playbook change, finish the closeout checklist and run `node playbook/scripts/check-playbook-freshness.mjs` before Done. Stale packs/%/pins are a professionalism failure.
 
 **North star:** [`EXCELLENCE.md`](EXCELLENCE.md) — aspiration is the best human+AI planning→implementation playbook; progress is a **ratchet** (each change raises at least one excellence dimension). One session never “finishes” that dream.
 

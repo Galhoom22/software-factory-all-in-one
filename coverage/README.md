@@ -134,7 +134,8 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Symfony 8 tech pack | `technologies/symfony` | ✅ ~88% |
 | Next.js tech pack | `technologies/nextjs` | ❌ 0% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
-| Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth ~25%; web+API ~83% |
+| Always-Current / playbook freshness | `07-judgment/playbook-freshness` + CI script | ✅ ~95% |
+| Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth ~27%; web+API ~83% |
 | Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌ ~8–12% |
 | Desktop / Electron / extensions / games | `07-software-surfaces` | ❌/~⚠️ ~3–18% |
 | Which language maps to which surface | `07-software-surfaces` § Languages | living map |
@@ -162,6 +163,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-23 | D-108: Always-Current playbook freshness closeout + `check-playbook-freshness.mjs` CI gate. |
 | 2026-11-23 | D-107: Rust 1.100 + edition 2024 technologies pack from doc.rust-lang.org/stable. |
 | 2026-11-23 | D-106: software industry surfaces atlas (`07-software-surfaces`) — % per surface + language map; two-numbers rule vs 01–06 professionalism. |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.

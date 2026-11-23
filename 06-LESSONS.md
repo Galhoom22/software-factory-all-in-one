@@ -183,3 +183,5 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - Headless Edge screenshots may stop writing files; use the IDE's browser tool instead.
 - `Start-Process npx` fails silently (npx is a `.cmd` file); use `Start-Process npx.cmd`, and check the server answers `200` before an audit. A crawl against a server that never started reports hundreds of false problems from the browser's error page.
 - To stop a server on a port: `Get-NetTCPConnection -LocalPort <port> -State Listen | % { Stop-Process -Id $_.OwningProcess -Force }`.
+
+- **Playbook Always-Current is a gate, not a wish.** Every playbook edit finishes the freshness closeout (atlas/%, official Checked dates for touched packs, structural script, D-52 mirror) or it is unfinished — stale advice is a professionalism failure (D-108).

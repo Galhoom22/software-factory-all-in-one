@@ -20,6 +20,8 @@ Use with [`technologies/README.md`](technologies/README.md).
 ## Playbook coverage (before adding a practice)
 Use with [`EXCELLENCE.md`](EXCELLENCE.md) + [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
 
+> **Always-Current (D-108):** after any playbook edit, finish `07-judgment/playbook-freshness.md` closeout and run `node playbook/scripts/check-playbook-freshness.mjs` before Done.
+
 > Before adding or inventing practice `<X>` in the playbook/template: confirm it raises an [`EXCELLENCE.md`](EXCELLENCE.md) dimension (none down). Then read `playbook/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.
 > If `<X>` would **lower** professionalism or weaken the day/workflow: Action = **refuse**; explain why; propose a better alternative or recommend skipping (Candor / D-82). Do not dual-sync a degrading change.
 > If `<X>` would violate COMPLIANCE/SECURITY, professional ethics, or create unmanaged High risk: Action = **refuse**; cite the rule/risk class; propose a **safer alternative scenario** (`07-judgment/compliance-ethics-risk.md`, D-83).

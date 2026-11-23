@@ -77,6 +77,7 @@ Score a change against these — not against marketing adjectives:
 | **Forever-generic** | No product names, people, or tracker URLs in method/`templates/` |
 
 | **Deepen-over-duplicate** | Coverage atlas first; one home per practice; % stays honest |
+| **Always-Current** | Touched homes stay fresh this session; official/Context7 evidence; freshness CI gate ([`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md)) |
 
 | **Operable day loop** | Start once → finish must-finish → closeout → Pareto + handoff |
 | **Company seats** | Org chart, goal ancestry, atomic checkout — studio feels like a firm ([`07-judgment/studio-company.md`](07-judgment/studio-company.md)) |
@@ -109,8 +110,9 @@ Agents run this **before** inventing or “improving” a practice:
 5. **Wire it** — method + prompts/lessons/day loop/CI as needed so agents actually use it.
 
 6. **Measure** — update the coverage row/% in the same change; sync the studio playbook mirror (D-52).
+7. **Always-Current** — run the freshness closeout + `node playbook/scripts/check-playbook-freshness.mjs`; re-verify official docs for touched packs ([`playbook-freshness.md`](07-judgment/playbook-freshness.md)).
 
-7. **Leave a trail** — if it is a lasting bar change, add a `DECISIONS` row in the product that hosts the playbook copy.
+8. **Leave a trail** — if it is a lasting bar change, add a `DECISIONS` row in the product that hosts the playbook copy.
 
 
 
