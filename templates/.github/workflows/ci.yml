@@ -62,6 +62,14 @@ jobs:
       - name: Planning entry activation gate
         run: node scripts/check-planning-entry.mjs
 
+      - name: Playbook Always-Current freshness gate
+        run: |
+          if [ -f playbook/scripts/check-playbook-freshness.mjs ]; then
+            node playbook/scripts/check-playbook-freshness.mjs
+          else
+            echo "No nested playbook/ — skip freshness check"
+          fi
+
       - name: Codex CLI project wiring intact
         run: node scripts/verify-codex-cli.mjs --ci
 
