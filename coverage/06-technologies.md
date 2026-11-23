@@ -41,6 +41,8 @@ Paths under `playbook/technologies/`.
 | ✅ | Next.js 16 slice | `technologies/nextjs/nextjs-16/` | **92** | App Router; Proxy; npm 16.4.x |
 | ✅ | C# pack hub | `technologies/csharp/` | **88** | Learn.microsoft.com csharp; Context7 `/websites/learn_microsoft_en-us_dotnet_csharp` |
 | ✅ | C# 14 version slice | `technologies/csharp/csharp-14/` | **88** | use / stop / mistakes; .NET 10 LTS default; C# 15 noted for net11 |
+| ✅ | .NET pack hub | `technologies/dotnet/` | **88** | Learn.microsoft.com/dotnet; Context7 `/websites/learn_microsoft_en-us_dotnet` |
+| ✅ | .NET 10 version slice | `technologies/dotnet/dotnet-10/` | **88** | LTS TFM; SDK/CLI/host/DI; .NET 11 STS noted |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
 **Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~89%.**

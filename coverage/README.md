@@ -86,6 +86,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | AI engineering (det/prob) | `07-judgment/ai-engineering` + `08` + FEATURE + `docs/AI.md` | ✅ ~92% |
 | Agent delegation | `07-judgment/delegation` + `08` + FEATURE | ✅ ~91% |
 | C# language pack | `technologies/csharp` + `csharp-14` | ✅ ~88% |
+| .NET platform pack | `technologies/dotnet` + `dotnet-10` | ✅ ~88% |
 | CI / CD / Forge phases | `04-workflows` + `09-CI-CD` + impl GA templates | ✅ ~92% |
 | Feature files / Done vs Released | `01-method` + `04-FEATURE_SDLC` | ✅ ~93% |
 | DSA / Big-O on hot paths | `07-judgment/dsa-performance` + day pipeline | ✅ ~90% |
@@ -155,6 +156,7 @@ playbook/coverage/
 | 2026-11-23 | D-102: AI engineering judgment (det/prob seam, evals, admission) in day workflow. |
 | 2026-11-23 | D-103: agent delegation judgment (brief → review → land; implementer never commits). |
 | 2026-11-23 | D-104: C# 14 (.NET 10) technologies pack from learn.microsoft.com/dotnet/csharp. |
+| 2026-11-23 | D-105: .NET 10 LTS technologies pack from learn.microsoft.com/dotnet. |
 | 2026-11-23 | D-100: Next.js 16 technologies pack from nextjs.org/docs; npm 16.4.x. |
 | 2026-11-23 | D-99: React 19 technologies pack from react.dev; npm 19.3.x. |
 | 2026-11-23 | D-98: verification engineering judgment (criteria→evidence; author≠judge) in day workflow. |
