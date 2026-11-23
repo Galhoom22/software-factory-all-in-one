@@ -1,6 +1,6 @@
 # Playbook coverage atlas
 
-**What this is:** the living inventory of what the Engineering Playbook already covers — method docs, templates, workflows, judgment packs, and CI rails. Agents use it **before** adding or “inventing” a practice the owner requests.
+**What this is:** the living inventory of what the Engineering Playbook already covers — method docs, templates, workflows, judgment packs, CI rails, **and software-industry surfaces** (web, mobile, desktop, games, …) with honest ✅/⚠️/❌ and **%**. Agents use it **before** adding or “inventing” a practice the owner requests.
 
 **What this is not:** a second constitution, a product backlog, or permission to skip quality. Presence ≠ Done for a product; this atlas only answers “does the **template/method** already have this?”
 
@@ -13,7 +13,7 @@
 When the owner says *add X to the playbook / template / workflow* (any language):
 
 0. **North star** — [`EXCELLENCE.md`](../EXCELLENCE.md): raise at least one excellence dimension without lowering another? If not, skip or refuse (Candor).
-1. **Search this atlas first** (`README` scorecard + the matching domain file).
+1. **Search this atlas first** (`README` scorecard + the matching domain file). For *can we build X kind of software?* or *what percent are we on mobile/desktop?* use [`07-software-surfaces.md`](07-software-surfaces.md) — do not confuse that **industry breadth** number with the **professionalism** scorecard for domains 01–06.
 2. Report in one short block:
    - **Status:** ✅ present · ⚠️ thin / partial · ❌ missing
    - **Coverage %** from the row (or a revised % if you re-audited the files)
@@ -52,7 +52,7 @@ Owner standing / product calendars stay out of this folder — link from product
 
 ## Scorecard (rollup)
 
-Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
+Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 
 | Domain file | Focus | Rows (approx.) | Domain avg % | Mark |
 |-------------|-------|----------------|--------------|------|
@@ -62,15 +62,19 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
 | [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~28 | **89%** | ✅ |
+| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~25%** breadth | ⚠️ |
 
 ### Overall playbook professionalism
 
 | Metric | Value |
 |--------|-------|
-| **Weighted overall coverage** | **~89%** |
-| **Strongest areas** | Actor-loop delivery, implementation day pipeline, CI/CD progressive phases, agent discovery, requirements activation, lessons capture |
-| **Weakest areas** | Full `project-ui` code scaffold in templates, Notion day-page skeleton (intentionally product-side), Spec Kit files in planning templates (judgment-only by design), observability method depth in templates |
+| **Weighted overall coverage** (domains 01–06 craft homes) | **~89%** |
+| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~25%** |
+| **Studio-default strength** (web app + HTTP API + admin web) | **~83%** |
+| **Strongest areas** | Actor-loop delivery, implementation day pipeline, CI/CD progressive phases, agent discovery, requirements activation, lessons capture, web/API stack packs |
+| **Weakest areas** | Mobile native/cross-platform, games, extensions, OS/embedded, full `project-ui` scaffold in templates, observability method depth |
 | **Atlas itself** | ✅ **100%** present (this folder) — keep it honest when practices change |
+| **Two numbers rule** | Never quote ~89% when the owner asked about *mobile/desktop/games coverage* — use [`07`](07-software-surfaces.md) |
 
 ---
 
@@ -130,6 +134,10 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 | Symfony 8 tech pack | `technologies/symfony` | ✅ ~88% |
 | Next.js tech pack | `technologies/nextjs` | ❌ 0% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
+| Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth ~25%; web+API ~83% |
+| Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌ ~8–12% |
+| Desktop / Electron / extensions / games | `07-software-surfaces` | ❌/~⚠️ ~3–18% |
+| Which language maps to which surface | `07-software-surfaces` § Languages | living map |
 | Notion daily task page template | `05-gaps` | ❌ 0% in playbook (product standing by design) |
 
 ---
@@ -144,6 +152,8 @@ playbook/coverage/
   03-agents-ci-tooling.md   ← agents, cursor, codex, .github, scripts, impl Actions
   04-workflows.md           ← how work runs day-to-day
   05-gaps-and-upgrades.md   ← weak spots + what to deepen next
+  06-technologies.md        ← technologies/ packs
+  07-software-surfaces.md   ← industry surfaces + language↔surface map
 ```
 
 ---
@@ -151,6 +161,8 @@ playbook/coverage/
 ## Changelog
 
 | Date (UTC) | Change |
+|------------|--------|
+| 2026-11-23 | D-106: software industry surfaces atlas (`07-software-surfaces`) — % per surface + language map; two-numbers rule vs 01–06 professionalism. |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
 | 2026-11-23 | D-101: integration engineering judgment (any partner boundary) in day workflow. |
 | 2026-11-23 | D-102: AI engineering judgment (det/prob seam, evals, admission) in day workflow. |

@@ -28,12 +28,17 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | Priority | Capability | Today % | Target % | Suggested upgrade (smallest complete) | Status |
 |----------|------------|---------|----------|----------------------------------------|--------|
 | P0 | **Coverage atlas itself** | was 0 | **100** | This folder + agent protocol + prompts/lessons | ✅ Done 2026-11-21 |
+| P1 | **Software industry surfaces atlas** | was 0 | **living** | `07-software-surfaces.md` + language map + two-numbers rule | ✅ Done 2026-11-23 |
 | P0 | **API readiness in day loop** | was ~55 | **88** | `07-judgment/api-readiness.md` + `08`/`09` + BE TESTING/DEPLOYMENT | ✅ Done 2026-11-21 |
 | P0 | **Technologies library + PHP 8.6** | was 0 | **85** (PHP slice) | `technologies/` + php-8.6 pack from php.net | ✅ Done 2026-11-21 |
 | P0 | **Tech pack quality bar + auto latest-docs** | was thin | **92** | `quality.md` + hard agent protocol (D-66) | ✅ Done 2026-11-21 |
 | P0 | **Laravel 13 pack** | was 0 | **88** | `technologies/laravel/` from laravel.com/docs/13.x | ✅ Done 2026-11-21 |
-| P2 | Next.js pack | **0** | **80** | Add when owner asks | ❌ Open |
+| P2 | Next.js pack | **92** | **92** | `technologies/nextjs/` (D-100) | ✅ Done 2026-11-23 |
 | P1 | Consult-before-add agent habit | was ~40 | **95** | Wire atlas into README, `05-PROMPTS`, `06-LESSONS`, OWNER_STANDING | ✅ Done 2026-11-21 |
+| P1 | TypeScript pack | **0** | **85** | `technologies/typescript/` from typescriptlang.org | ❌ Open (raises web/RN/Electron/extensions) |
+| P1 | Mobile surface (Swift **or** Kotlin **or** Flutter — product-driven) | **8–12** | **70** | Judgment + one pack when first mobile product starts | ❌ Open |
+| P2 | Browser extension MV3 | **5** | **70** | Judgment + Chromium/Firefox pack | ❌ Open |
+| P2 | Electron or Tauri pack | **15** | **70** | Hybrid desktop craft | ❌ Open |
 | P2 | TestSprite rails depth | **78** | **88** | When a product ships TestSprite for real: fold lessons into templates + `06-LESSONS` | ⚠️ Open |
 | P2 | Observability (Sentry-class) method in templates | **60** | **85** | Short shared `docs/` stub or DEPLOYMENT subsection: DSN empty in git, no PII, glance-after-deploy — keep host names out | ⚠️ Open |
 | P3 | Studio repo-map practice in seed | **55** | **80** | Generic one-pager under method or templates: “when product repos change, update atlas diagrams” (no org URLs) | ⚠️ Open |

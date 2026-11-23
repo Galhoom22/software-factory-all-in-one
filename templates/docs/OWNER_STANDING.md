@@ -64,7 +64,7 @@ Default for implementation chats. Full method: `playbook/08-IMPLEMENTATION-DAY.m
 - **Studio as a company:** fill `docs/STUDIO_ORG.md`; day agents confirm goal + seat + exclusive checkout (`07-judgment/studio-company.md`). Do not replace trackers with an agent-company OS unless decided.
 - **Excellence north star:** every playbook/template upgrade follows `playbook/EXCELLENCE.md` (ratchet; raise a dimension; never claim one-prompt “best forever”). Atlas + Candor still apply.
  Purpose: one living reference so agents stay fast **and** high-quality (hands-off agent coding and professional products) — `playbook/EXCELLENCE.md` § Why this playbook exists (D-93).
-- **Coverage atlas first:** before adding a practice, read `playbook/coverage/README.md` (and the matching domain file). Report ✅/⚠️/❌ + coverage %. If already strong, deepen that home instead of duplicating. When coverage changes, update the atlas row/% in the same change.
+- **Software industry surfaces:** consult `playbook/coverage/07-software-surfaces.md` for web/mobile/desktop/games % and language maps (keep distinct from craft-home %). **Coverage atlas first:** before adding a practice, read `playbook/coverage/README.md` (and the matching domain file). Report ✅/⚠️/❌ + coverage %. If already strong, deepen that home instead of duplicating. When coverage changes, update the atlas row/% in the same change.
 
 ## Git and remotes
 
