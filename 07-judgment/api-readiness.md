@@ -22,7 +22,7 @@ Local feature tests alone do **not** prove FE-ready or production-ready.
 | **CI API proof** | Same suite green on GitHub Actions (clean runner) | Closeout merge gate |
 | **Staging API smoke** | After staging deploy (Phase B+): health + today’s critical paths from DEPLOYMENT smoke | Closeout CD step |
 | **Production API smoke** | Only on approved production release (Phase C): same smoke list; never auto on every day merge | Release only |
-| **FE-handoff readiness** | Contract + example status codes + required headers/cookies documented; fictional fixtures only; no “works on my laptop” caveats | Before marking Story Done if FE consumes it |
+| **FE-handoff readiness** | Contract + example status codes + required headers/cookies documented; fictional fixtures only; no “works on my laptop” caveats; pair with [`cross-surface-compatibility.md`](cross-surface-compatibility.md) (read sibling expectations) | Before marking Story Done if FE consumes it |
 | **Docs honesty** | No endpoint in the day’s PR is undocumented; no documented-as-shipped endpoint is missing from the suite or smoke list | Same day |
 
 ## Forbid
@@ -60,4 +60,4 @@ Progressive phases stay in force (`09-CI-CD.md`): Phase A skips remote smoke hon
 
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`09-CI-CD.md`](../09-CI-CD.md)
 - Templates: `templates/docs/backend/TESTING.md`, `templates/docs/backend/DEPLOYMENT.md` § Smoke, `templates/docs/API_CONTRACT.md`
-- Sibling quality gates: [`dsa-performance.md`](dsa-performance.md), CodeRabbit in `08`, CI in `09`
+- Sibling quality gates: [`cross-surface-compatibility.md`](cross-surface-compatibility.md), [`dsa-performance.md`](dsa-performance.md), CodeRabbit in `08`, CI in `09`

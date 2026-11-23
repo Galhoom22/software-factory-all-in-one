@@ -35,6 +35,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Local proof = CI checks | `08`, `09` | **94** | Same commands GitHub Actions will run |
 | ✅ | Feature evidence same day | `04-FEATURE_SDLC`, `08` | **93** | Filled template ≠ Done; gates need results |
 | ✅ | DSA check on hot paths | `07-judgment/dsa-performance`, `08` | **90** | Name `n`, class, structure, edges |
+| ✅ | Cross-surface compatibility | `07-judgment/cross-surface-compatibility`, `08`, `SIBLING` template | **90** | Sibling read; owned-seat write; contract-first handoff |
 | ✅ | API readiness across environments | `07-judgment/api-readiness`, `08`, `09`, BE TESTING/DEPLOYMENT | **88** | Contract + local + CI + phase smoke; FE-handoff honesty |
 | ✅ | SEO + GEO on public-page days | `07-judgment/seo-geo`, `08`, SEO templates | **88** | Checklist + N/A for private-only days; no ranking vanity Done |
 | ✅ | Candor on degrading asks | OWNER_STANDING + coverage + `08` (D-82) | **90** | Refuse/advise; no dual-sync of bar-lowering changes |

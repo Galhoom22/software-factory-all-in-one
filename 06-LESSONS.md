@@ -80,6 +80,7 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 
 Hard-won while shipping a real Laravel (or similar) modular API beside a planning contract. Keep product names out; write the practice.
 
+- **Own-seat green ≠ product-ready.** When FE/BE (or services) share a contract, read the sibling’s client/mocks/types before Done; do not edit the other seat’s tree unless standing grants write. Contract-first for breaking shapes; cite a handoff note. Judgment: [`07-judgment/cross-surface-compatibility.md`](07-judgment/cross-surface-compatibility.md).
 - **Local API green is not FE-ready or prod-ready.** Contract parity + CI on a clean runner are required before Done; staging smoke when CD exists; production smoke only on approved release. A laptop-only pass still breaks the frontend developer and production. Judgment: [`07-judgment/api-readiness.md`](07-judgment/api-readiness.md).
 
 - **Inventory `main` before reinventing.** A multi-day Story often already landed jobs, validators, or routes on an earlier day. Read the feature file + handoff “already on main” list first — deepening beats a duplicate greenfield.

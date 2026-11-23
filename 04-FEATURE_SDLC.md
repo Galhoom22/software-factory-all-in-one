@@ -183,7 +183,7 @@ Build, lint, tests, security / dependency checks, secret scanning, required revi
 - [ ] Required CI checks pass
 - [ ] Required review approvals obtained
 - [ ] Change integrates with existing functionality
-- [ ] Compatibility requirements satisfied
+- [ ] Compatibility requirements satisfied (sibling/consumer expectations read; owned-seat write only — see [`07-judgment/cross-surface-compatibility.md`](07-judgment/cross-surface-compatibility.md))
 - [ ] No unresolved release-blocking regressions
 
 ### 9. Release & operations

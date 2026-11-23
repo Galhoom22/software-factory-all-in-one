@@ -55,3 +55,9 @@
 
 - Need a new field or endpoint? Propose it as a change to [`API_CONTRACT.md`](../API_CONTRACT.md) (§6.1).
 - Until an endpoint is live, build on mocks in the exact contract shape.
+
+## Working with the backend (compatibility)
+
+- Meet the backend only in [`API_CONTRACT.md`](../API_CONTRACT.md).
+- Before Done: **read** sibling API expectations; do **not** edit the backend repo unless standing grants write. Method: playbook `07-judgment/cross-surface-compatibility.md`.
+- Keep implementation-repo `docs/SIBLING.md` current.
