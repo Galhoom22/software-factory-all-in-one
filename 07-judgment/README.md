@@ -39,6 +39,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Cross-surface compatibility (FE↔BE↔services) | Day gate + `SIBLING.md`; read sibling, write only owned seat; contract-first | Edit sibling seat; Done without consumer parity; ship breaking shapes silently |
 | Software Factory + multi-agent line | Intake→triage→plan→build→independent review→Done; seats + convergence owner | Vendor Mastra/Warp as AGENTS; builder self-approve; dual checkout |
 | Enterprise system design (boundary / verification) | Six questions; AI practice levels; verification-dominant changes; output admission | Vendor Azure/HPC course trees; HATEOAS/enterprise fashion on modular monoliths |
+| Human code review (senior / tech-lead bar) | Readability for humans; modern pinned-line syntax; pack best practices; CodeRabbit assists | “AI understands it” as Done; CodeRabbit-only waiver; style-committee theater |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 
@@ -72,6 +73,8 @@ Competitor recon / clean-room: [`competitor-recon.md`](competitor-recon.md).
 Software Factory + multi-agent line: [`software-factory.md`](software-factory.md).
 
 Enterprise system design: [`enterprise-system-design.md`](enterprise-system-design.md).
+
+Human code review: [`human-code-review.md`](human-code-review.md).
 
 Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 
