@@ -160,10 +160,10 @@ Use with [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md). One fresh chat 
 
 ### End-of-day reply shape (agent — after closeout)
 
-**Pareto 20%** = pick the most important topics (not a full diary). For each topic, write a **full teachable explanation** the owner can paste into ChatGPT to learn — not a terse stub. Put operational facts in the handoff half.
+**Pareto 20%** = pick the most important topics (not a full diary). For each topic, write a **full teachable explanation** the owner can paste into ChatGPT to learn — not a terse stub — and **anchor it to real files/symbols + how they connect** (structure/architecture when earned). Do not dump every file or entire sources. Put operational facts in the handoff half. Method: `08` § Pareto 20% (D-95).
 
 ```markdown
-## Pareto 20% (teachable depth)
+## Pareto 20% (teachable depth, file-anchored)
 
 ### <Topic 1 — e.g. feature / concept name>
 - What shipped and why it matters

@@ -167,7 +167,7 @@ Default while on the **Free** plan ([plans](https://docs.coderabbit.ai/managemen
 
 After closeout, the agent’s last message has **exactly two parts**, in order:
 
-1. **Pareto 20% (teachable depth)** — select the **most important** outcomes of the day (not every commit log). For **each** selected topic, write a **full, thorough explanation** the owner can paste into ChatGPT (or similar) to learn: what was built, why it matters, the key terms and concepts, how the pieces fit, decisions and trade-offs, and what to study next. **“20%” means topic selection (highest leverage only), not ultra-short stubs.** Skimping on depth defeats the purpose — the owner uses this block to grow as an engineer.
+1. **Pareto 20% (teachable depth, file-anchored)** — select the **most important** outcomes of the day (not every commit log). For **each** selected topic, write a **full, thorough explanation** the owner can paste into ChatGPT (or similar) to learn — **and** ground it in real paths/symbols, structure roles, and how pieces connect (see § Pareto 20%). **“20%” means topic selection (highest leverage only), not ultra-short stubs and not a file dump.** Depth + concreteness; the owner uses this block to grow as an engineer **and** as a code reader.
 2. **New-chat handoff** — one copy-paste block for tomorrow’s fresh chat: paths, SHAs, issue keys, tomorrow must-finish, do-not-break rails. Include last green CI / merge evidence. Keep the handoff operational and tight (**pointers**, not a transcript dump); put teaching depth in the Pareto half. Receiving chat re-verifies against git ([`07-judgment/context-window.md`](07-judgment/context-window.md)).
 
 Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPTS.md`](05-PROMPTS.md#implementation-day-start-and-end).
@@ -177,6 +177,34 @@ Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPT
 - **Select** the few highest-leverage outcomes of the day (features, concepts, decisions). Do not narrate every commit or mid-day detour.
 - **Explain each selected topic thoroughly** — enough that the owner can copy the Pareto half into ChatGPT (or similar) and learn: vocabulary, how the system works, why choices were made, and what to study next.
 - **“20%” is topic selection, not brevity.** Ultra-short stubs fail this requirement. Teaching depth belongs here; the handoff stays operational and tight.
+- **File-anchored (hard rule — D-95):** keep Pareto topic selection. Do **not** replace it with a file dump or a long diary. For **each** selected topic, ground the teaching in the **real paths the day changed or introduced**, so a second AI (ChatGPT, etc.) can walk the owner through **code reading**, structure, and architecture — not only abstract prose.
+
+### Per-topic shape (teachable + concrete)
+
+For every Pareto topic, include all of the following (skip a bullet only with an explicit **N/A** reason):
+
+1. **Why this topic** — one sentence: why it is in the 20% (highest leverage for the day).
+2. **Concept** — terms, mental model, trade-offs (same depth as before).
+3. **Primary paths** — concrete repo-relative files/dirs (and key symbols: class/function/component names). Prefer the few files that *teach* the topic; not every file in the diff.
+4. **Role in the structure** — what this unit is (e.g. HTTP action, domain service, job, React feature module, test, contract slice) and which layer it lives in.
+5. **How it connects** — what calls it / what it calls (siblings, modules, API contract IDs, queue/event). Enough for a call-path or “component A → B → C” picture.
+6. **Architecture / system-design angle** — only when earned: where it sits in the modular monolith (or other pinned shape), trust boundary, or design choice; otherwise **N/A**.
+7. **How to read it next time** — 2–4 cues the owner should look for when this pattern appears in another project (naming, folder, test shape).
+8. **Study next** — one focused follow-up (official docs, judgment file, or related path).
+
+### Anti-patterns
+
+| Do not | Why |
+|--------|-----|
+| Generic essay with no paths | Second AI cannot open or map the real tree |
+| Paste entire files or huge diffs into Pareto | Context bloat; handoff/context-window rules; owner asked for focus |
+| List every touched file “for completeness” | Breaks 20% selection; becomes a commit log |
+| Paths without roles/connections | Names alone do not teach structure |
+| Ultra-short stubs that only say “see `Foo.php`” | Depth still required — paths **add** concreteness, they do not replace explanation |
+
+### Owner paste intent
+
+The Pareto block is written so the owner can paste it into ChatGPT (or similar) and ask to explain **those files**, how they fit the architecture, and how to **read** similar code later. The agent does not need to render full source in chat; accurate paths + symbols + connection narrative are enough for the next tool to load the tree.
 
 ## Excellence ratchet (playbook changes)
 

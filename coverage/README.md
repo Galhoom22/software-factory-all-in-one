@@ -78,7 +78,7 @@ Last full audit: **2026-11-21**. Domain files hold the line-by-line detail.
 
 | Owner ask (examples) | Atlas home | Typical status |
 |----------------------|------------|----------------|
-| Day run-through / closeout / Pareto | `04-workflows` + `08-IMPLEMENTATION-DAY` | ✅ ~95% |
+| Day run-through / closeout / Pareto | `04-workflows` + `08-IMPLEMENTATION-DAY` | ✅ ~97% |
 | CI / CD / Forge phases | `04-workflows` + `09-CI-CD` + impl GA templates | ✅ ~92% |
 | Feature files / Done vs Released | `01-method` + `04-FEATURE_SDLC` | ✅ ~93% |
 | DSA / Big-O on hot paths | `07-judgment/dsa-performance` + day pipeline | ✅ ~90% |
@@ -144,6 +144,7 @@ playbook/coverage/
 
 | Date (UTC) | Change |
 | 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | D-95: Pareto 20% file-anchored (paths, structure, connections) for ChatGPT code-reading growth. |
 | 2026-11-23 | D-94: enterprise system-design judgment (six questions, practice levels, verification-dominant) absorbed; course tree not vendored. |
 | 2026-11-23 | D-93: playbook purpose explicit — single reference for agent speed×quality (vibe + professional products). |
 | 2026-11-23 | D-92: API design judgment (consumer-first REST craft) absorbed from course; design bar in API readiness gate. |
