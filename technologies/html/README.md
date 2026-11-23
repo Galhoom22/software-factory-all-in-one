@@ -29,6 +29,6 @@
 - JavaScript: [`../javascript/`](../javascript/README.md)
 - Tailwind / CSS: [`../tailwindcss/`](../tailwindcss/README.md)
 - Alpine / Livewire / Filament: markup consumers — keep semantics here first
-- Next.js: add `technologies/nextjs/` when the owner asks
+- Next.js: [`../nextjs/`](../nextjs/README.md)
 
 ---

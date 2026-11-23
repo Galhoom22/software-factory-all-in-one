@@ -50,7 +50,7 @@ playbook/technologies/
   react/                    ← React 19 pack
   symfony/                  ← Symfony 8 pack
   php-laravel-compositions.md ← TALL / VILT / PHP pack map
-  nextjs/                   ← add when owner asks
+  nextjs/                   ← Next.js 16 pack
 ```
 
 | Folder naming | Rule |
@@ -110,4 +110,4 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 | [`react/`](react/README.md) | [`react-19/`](react/react-19/README.md) | [`quality.md`](react/quality.md) | ✅ |
 | [`symfony/`](symfony/README.md) | [`symfony-8/`](symfony/symfony-8/README.md) | [`quality.md`](symfony/quality.md) | ✅ |
 | [`php-laravel-compositions.md`](php-laravel-compositions.md) | TALL + VILT + Symfony map | — | ✅ |
-| `nextjs/` | — | — | ❌ Add when owner asks |
+| [`nextjs/`](nextjs/README.md) | [`nextjs-16/`](nextjs/nextjs-16/README.md) | [`quality.md`](nextjs/quality.md) | ✅ |

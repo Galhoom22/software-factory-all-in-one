@@ -37,7 +37,8 @@ Paths under `playbook/technologies/`.
 | ✅ | React 19 slice | `technologies/react/react-19/` | **90** | use / stop / mistakes (npm 19.3.x) |
 | ✅ | Symfony pack hub | `technologies/symfony/` | **88** | Doc hub + setup + official best practices + quality |
 | ✅ | Symfony 8 slice | `technologies/symfony/symfony-8/` | **88** | use / stop / mistakes (8.1 stable; LTS 7.4 noted) |
-| ❌ | Next.js pack | `technologies/nextjs/` | **0** | Structure ready; add when owner asks |
+| ✅ | Next.js pack hub | `technologies/nextjs/` | **92** | nextjs.org/docs + quality |
+| ✅ | Next.js 16 slice | `technologies/nextjs/nextjs-16/` | **92** | App Router; Proxy; npm 16.4.x |
 | ❌ | Other stacks | — | **0** | Add on demand (owner pastes official docs URL → fill pack same session) |
 
 **Domain average (started packs only): ~89%. Library-wide including empty Next slot: ~89%.**
@@ -55,6 +56,7 @@ Paths under `playbook/technologies/`.
 | Pastes Inertia.js docs URL | Deepen `inertiajs/` — do not fork a second Inertia bible |
 | Pastes Vue.js docs URL | Deepen `vue/` — do not fork a second Vue bible |
 | Pastes React docs URL (react.dev) | Deepen `react/` — do not fork a second React bible |
+| Pastes Next.js docs URL (nextjs.org/docs) | Deepen `nextjs/` — do not fork a second Next bible |
 | Pastes Symfony docs URL | Deepen `symfony/` — do not fork a second Symfony bible |
 | Add Laravel / Next.js | Create `technologies/<slug>/` from README template; pin official version |
 | Product still on older PHP / CSS / JS engines | Keep SRS pin; use pack as upgrade guide, not silent bump |

@@ -34,6 +34,6 @@ Before non-trivial React work:
 
 ## Related
 
-- JS / HTML / CSS / Tailwind · Next (when added) · Inertia · `coverage/06-technologies.md` · `07-judgment/context7-docs.md`
+- JS / HTML / CSS / Tailwind · [`../nextjs/`](../nextjs/README.md) · Inertia · `coverage/06-technologies.md` · `07-judgment/context7-docs.md`
 
 ---
