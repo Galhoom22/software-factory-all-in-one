@@ -52,7 +52,7 @@ None replaces another. A green pack file dated last month is not enough without 
 - [ ] Non-trivial library/framework work was checked against Context7 **or** official vendor docs **this session**
 - [ ] Version matched the **product pin** / pack slice (no silent major bump)
 - [ ] Pack opened when one exists (`best-practices` + `quality` + version slice)
-- [ ] Stale pack updated same session when owner named the stack or docs proved drift (D-79 + D-52)
+- [ ] Stale pack updated same session when owner named the stack or docs proved drift (D-79 + D-110)
 - [ ] Day summary records the check or honest N/A
 
 ## Anti-patterns

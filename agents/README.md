@@ -22,7 +22,7 @@ software-factory-all-in-one/agents/
 1. Open product `AGENT_START` + `AGENTS.md` first.
 2. Open the matching `agents/<slug>/` pack (best-practices + slice).
 3. Keep discovery files thin (`templates/agent-discovery/`).
-4. If the owner names a harness or pastes official docs: create/deepen the pack **same session**, update [`coverage/08-ai-agents.md`](../coverage/08-ai-agents.md), run freshness check, sync mirror (D-52 / D-108).
+4. If the owner names a harness or pastes official docs: create/deepen the pack **same session**, update [`coverage/08-ai-agents.md`](../coverage/08-ai-agents.md), run freshness check, sync mirror (D-110 / D-108).
 
 ## Packs present
 

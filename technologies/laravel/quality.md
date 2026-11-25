@@ -41,7 +41,7 @@ Before non-trivial Laravel work:
 
 1. Open this pack + PHP pack.
 2. Re-check [laravel.com/docs/13.x](https://laravel.com/docs/13.x) and/or Context7 `/laravel/docs` **13.x** — no owner ask.
-3. If docs moved (new minor practices, new deprecations), update this pack when professionalism rises; sync studio playbook.
+3. If docs moved (new minor practices, new deprecations), update this pack when professionalism rises; sync the public Software Factory mirror.
 4. Product SRS pin still wins for upgrades.
 
 ## Related

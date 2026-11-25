@@ -80,7 +80,7 @@ A product’s `docs/OWNER_STANDING.md` may require the **full** implementation d
 Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard / Comprehensive), [`09-CI-CD.md`](09-CI-CD.md) (Phase A/B/C), Candor (D-82 / D-83).
 
 
-**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, add one generic bullet to playbook `06-LESSONS.md` (or the matching template) and sync the studio playbook mirror the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
+**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, add one generic bullet to playbook `06-LESSONS.md` (or the matching template) and sync the public Software Factory mirror the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
 
@@ -232,7 +232,7 @@ When the owner **changes** a lasting preference that belongs in this method (day
 
 1. Update the product `docs/OWNER_STANDING.md` (+ changelog) in the same session.
 2. Update **this playbook** (this file, [`09-CI-CD.md`](09-CI-CD.md), and/or `templates/docs/OWNER_STANDING.md`, prompts, lessons) so the **next** product inherits it — keep wording generic.
-3. If the studio keeps a private playbook GitHub mirror, **sync in the same session** (for example `node scripts/sync-software-factory.mjs`).
+3. If the studio keeps a public Software Factory GitHub mirror, **sync in the same session** (for example `node scripts/sync-software-factory.mjs`).
 
 Do not leave standing only in chat memory or only in one product’s docs.
 

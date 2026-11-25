@@ -57,7 +57,7 @@ These live in the **product planning repo** that owns the playbook copy (not cop
 
 | ✅ | Capability | Typical path (product planning repo) | % | Notes |
 |----|------------|--------------------------------------|---|-------|
-| ✅ | Sync local `software-factory-all-in-one/` → studio GitHub mirror | `scripts/sync-software-factory.mjs` | **93** | Private-only; same-session D-52 pattern |
+| ✅ | Sync local `software-factory-all-in-one/` → public Software Factory GitHub mirror | `scripts/sync-software-factory.mjs` | **93** | Public OSS; same-session D-110 pattern |
 | ✅ | Jira CSV / card generators | `scripts/generate-jira-*.mjs` (product) | **70** | Product-specific; method in `docs/jira` templates is thinner |
 | ⚠️ | Coverage % auto-validator | *(none)* | **20** | Atlas is manual by design; do not invent a heavy scorer unless drift becomes real |
 

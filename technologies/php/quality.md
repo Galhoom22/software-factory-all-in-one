@@ -56,7 +56,7 @@ Before non-trivial PHP work in a session:
 
 1. Open this pack (`best-practices` + version slice + this file).
 2. **Re-verify** the pinned line on official pages / Context7 ([php.net manual](https://www.php.net/manual/en/), [supported versions](https://www.php.net/supported-versions.php)) — do not trust chat memory for “latest.”
-3. If the vendor moved (new minor, new deprecations), update the pack in the same session when professionalism rises, then sync the studio playbook mirror.
+3. If the vendor moved (new minor, new deprecations), update the pack in the same session when professionalism rises, then sync the public Software Factory mirror.
 4. Never silently bump the **product** SRS pin — propose ADR if the product should move.
 
 ## Related

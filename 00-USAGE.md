@@ -7,7 +7,7 @@ You do **not** need to learn the internal folder layout, pick templates by hand,
 
 ## Why bother (speed × quality)
 
-AI agents are fast by default. **Quality** only stays high when requirements, rails, contracts, stack craft, day loops, and lessons live in **one** loadable reference — this playbook (local copy **and** any studio GitHub mirror). Use it for hands-off agent coding and for professional products alike. North star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
+AI agents are fast by default. **Quality** only stays high when requirements, rails, contracts, stack craft, day loops, and lessons live in **one** loadable reference — this playbook (local copy **and** any public Software Factory GitHub mirror). Use it for hands-off agent coding and for professional products alike. North star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
 
 ## What this is
 

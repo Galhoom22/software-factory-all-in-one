@@ -27,7 +27,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 0.3 Create the repository and the workspace
 
-- **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the studio’s private playbook mirror when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
+- **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the public Software Factory home when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
 - **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`03-PROTOTYPE.md`](03-PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
 - **Also:** add root `my-project-requirements.md` in the same bootstrap when starting a new product (see 0.0).
 - **Done:** the first commit (templates copied, entry file present when bootstrapping) is pushed.
@@ -182,4 +182,4 @@ Run these after every large batch of work (prompts in [`05-PROMPTS.md`](05-PROMP
 ### 23. Run implementation days as a fixed pipeline
 
 - Once FE/BE repos are building against a daily must-finish checklist, follow [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) and [`09-CI-CD.md`](09-CI-CD.md): owner starts the day → agent finishes every checkbox without mid-day continue cues → automatic closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured** → tracker → day page) → final reply = Pareto 20% then new-chat handoff. Copy FE/BE workflow skeletons from [`templates/implementation/github-actions/`](templates/implementation/github-actions/) before the first implementation PR.
-- Seed the product’s `docs/OWNER_STANDING.md` from [`templates/docs/OWNER_STANDING.md`](templates/docs/OWNER_STANDING.md). When lasting day-loop preferences change, update standing **and** this playbook (generic wording) in the same session, then sync any studio playbook mirror.
+- Seed the product’s `docs/OWNER_STANDING.md` from [`templates/docs/OWNER_STANDING.md`](templates/docs/OWNER_STANDING.md). When lasting day-loop preferences change, update standing **and** this playbook (generic wording) in the same session, then sync any public Software Factory mirror.

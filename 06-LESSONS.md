@@ -58,7 +58,7 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 - **CI green before merge; CD only from main.** Local tests are not enough — wait for GitHub Actions on the day PR, then merge, then confirm CI on the default branch. Staging may auto-deploy from green `main`; production stays manual approval. Wire this into the day closeout, not as a side habit — [`09-CI-CD.md`](09-CI-CD.md).
 - **Pareto 20% is not “be terse.”** Owners paste the Pareto half into another AI to learn. Cover the important slice in enough depth (names, concepts, proofs) that teaching works; skip session chatter, not substance — see [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md#pareto-20--what-it-means).
 - **CodeRabbit gates merge, not the whole day.** On **Free**, the merge gate is **CLI/IDE** full review (GitHub posts a PR summary only). On paid, GitHub App full review becomes primary. Do not skip the Free CLI/IDE pass to “finish faster.”
-- **Standing changes update the playbook twice.** Lasting owner↔agent cadence belongs in product `OWNER_STANDING.md` **and** in this playbook (generic) + studio playbook mirror same session — otherwise the next product forgets the pipeline.
+- **Standing changes update the playbook twice.** Lasting owner↔agent cadence belongs in product `OWNER_STANDING.md` **and** in this playbook (generic) + public Software Factory mirror same session — otherwise the next product forgets the pipeline.
 - **Daily checklist ↔ tracker.** If the team keeps a daily must-finish page (Notion or similar), use separate FE/BE lanes, link each day to the matching issue keys, treat the tracker as status SoT, and refresh day→issue links whenever the calendar map moves — same session as the rebaseline.
 
 ## Design
@@ -105,7 +105,7 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - **Export templates drop fields silently.** Every identity field the API returns must render in PDF/DOCX (or the review will flag data loss). One action, two builders is fine — shared field checklist is not optional.
 - **Webhook-only plan/credit changes.** Checkout success URLs are UX. Entitlement updates land from verified webhooks (see payments judgment). Coupons and prices stay server-side.
 - **Module providers must be registered.** A modular monolith with empty `bootstrap/providers` (or missing module service providers) “builds” but routes/bindings vanish. Prove module boot with a smoke test.
-- **Promote surprising root causes twice.** Write `docs/learning-from-mistakes/<kebab>.md` in the **implementation** repo the same day; if the rule is reusable across products, add one bullet to playbook [`06-LESSONS.md`](06-LESSONS.md) and sync the studio playbook mirror the same session.
+- **Promote surprising root causes twice.** Write `docs/learning-from-mistakes/<kebab>.md` in the **implementation** repo the same day; if the rule is reusable across products, add one bullet to playbook [`06-LESSONS.md`](06-LESSONS.md) and sync the public Software Factory mirror the same session.
 
 ## Design patterns (implementation)
 
@@ -184,6 +184,6 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - `Start-Process npx` fails silently (npx is a `.cmd` file); use `Start-Process npx.cmd`, and check the server answers `200` before an audit. A crawl against a server that never started reports hundreds of false problems from the browser's error page.
 - To stop a server on a port: `Get-NetTCPConnection -LocalPort <port> -State Listen | % { Stop-Process -Id $_.OwningProcess -Force }`.
 
-- **Playbook Always-Current is a gate, not a wish.** Every playbook edit finishes the freshness closeout (atlas/%, official Checked dates for touched packs, structural script, D-52 mirror) or it is unfinished — stale advice is a professionalism failure (D-108).
+- **Playbook Always-Current is a gate, not a wish.** Every playbook edit finishes the freshness closeout (atlas/%, official Checked dates for touched packs, structural script, D-110 mirror) or it is unfinished — stale advice is a professionalism failure (D-108).
 
 - **Harness packs live under `software-factory-all-in-one/agents/`.** Discovery pointers stay thin; coverage % lives in `coverage/08-ai-agents.md`. China and preview products start as honest skeletons — deepen from official docs, never from rumor (D-109).

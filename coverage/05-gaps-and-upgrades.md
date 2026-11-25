@@ -71,7 +71,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 2. If missing, check this file’s **intentional exclusions** — maybe it must stay product-side.
 3. If it is a **real thin spot**, prefer upgrading the listed home over a new parallel file.
 4. After the change: update the row %, this backlog status, and `coverage/README` scorecard date.
-5. Sync studio playbook mirror same session.
+5. Sync public Software Factory mirror same session.
 
 ---
 

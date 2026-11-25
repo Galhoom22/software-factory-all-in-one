@@ -13,7 +13,7 @@ Last audit: **2026-11-23**.
 ## How agents must use this file
 
 1. Owner asks “what % are we on Cursor / Codex / Trae / Antigravity / ChatGPT?” → open **this file**, report mark + %, pack path, deepen vs add.
-2. Owner names a new harness or pastes official docs → create/deepen `agents/<slug>/` same session; bump this table; freshness + D-52.
+2. Owner names a new harness or pastes official docs → create/deepen `agents/<slug>/` same session; bump this table; freshness + D-110.
 3. **Candor:** do not claim high % from AGENTS.md alone when the harness has no pointer/pack.
 
 ---

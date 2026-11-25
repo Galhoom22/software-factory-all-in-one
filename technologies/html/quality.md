@@ -30,7 +30,7 @@ Before non-trivial HTML work:
 
 1. Open this pack (`best-practices` + `html-living/` slice).
 2. Re-check [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and/or [WHATWG HTML](https://html.spec.whatwg.org/multipage/) (especially [obsolete](https://html.spec.whatwg.org/multipage/obsolete.html)).
-3. Update the pack same session if professionalism rises; sync the studio playbook mirror.
+3. Update the pack same session if professionalism rises; sync the public Software Factory mirror.
 
 ## Related
 

@@ -140,4 +140,4 @@ Also keep agent **skills**, CLI pins (for example `impeccable@x.y.z` in CI), and
 ### Before adding a practice
 1. Read [`EXCELLENCE.md`](EXCELLENCE.md) ratchet (dimension up, none down).
 2. Consult [`coverage/`](coverage/README.md). If the capability is already ✅ at high %, deepen that home instead of inventing a parallel file.
-3. When you add or deepen something, update the matching coverage row and % in the same change, then sync the studio playbook mirror.
+3. When you add or deepen something, update the matching coverage row and % in the same change, then sync the public Software Factory mirror.
