@@ -146,6 +146,18 @@ This repository must stay **100% reusable** for any team and any product.
 
 ---
 
+## Community
+
+| File | Purpose |
+|------|---------|
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to propose changes · forever-generic rules |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Contributor Covenant 2.1 |
+| [`SECURITY.md`](SECURITY.md) | Private vulnerability reporting |
+| [Issue forms](.github/ISSUE_TEMPLATE/) | Bug · idea · question |
+| [PR template](.github/pull_request_template.md) | Checklist for every pull request |
+
+Open a **bug**, **idea**, or **question** from the Issues tab — blank issues are disabled so reports stay structured. Security reports go through [private advisories](https://github.com/Galhoom22/software-factory-all-in-one/security/advisories/new), not public issues.
+
 ## Contributing
 
 Improvements that **raise professionalism** are welcome. Prefer deepening an existing [`coverage/`](coverage/README.md) home over inventing a parallel file. Run:
