@@ -39,6 +39,12 @@ Put product-specific details only in a **private** product planning repository a
 4. Prefer deepening an existing home over inventing a parallel file (see `coverage/`).
 5. Open a PR with **why** the change raises professionalism.
 
+## Conduct and security
+
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — Contributor Covenant 2.1
+- [`SECURITY.md`](SECURITY.md) — report vulnerabilities privately
+- Prefer the issue forms (bug / idea / question) over blank issues
+
 ## License
 
 By contributing, you agree your work is licensed under the MIT License in [`LICENSE`](LICENSE).
