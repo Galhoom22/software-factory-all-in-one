@@ -1,5 +1,14 @@
 # Software Factory All-in-One
 
+<p align="center">
+  <img src="assets/software-factory-hero.gif" alt="Software Factory All-in-One — animated terminal demo: factory start routes a new product from requirements through Intake, Plan, and Ship" width="920" />
+</p>
+
+<p align="center">
+  <strong>Open-source software factory</strong> · requirements in → production-ready plan out · forever generic
+</p>
+
+
 **Canonical public home:** [Galhoom22/software-factory-all-in-one](https://github.com/Galhoom22/software-factory-all-in-one) · **License:** MIT
 
 Open-source **software factory**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
