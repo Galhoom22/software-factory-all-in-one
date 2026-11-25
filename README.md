@@ -1,15 +1,12 @@
+README.md [91L]
 README.md [101L]
 README.md [164L]
 # Software Factory All-in-One
 <p align="center">
-  <img src="assets/software-factory-hero.svg" alt="Software Factory All-in-One — animated forge-atelier preview: requirements intake lights the rails, day line stamps Build through Ship, coverage ratchet climbs" width="920" />
-... [lean-ctx: omitted 5 lines]
-Open-source **software factory**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
-... [lean-ctx: omitted 1 lines]
+... [lean-ctx: omitted 4 lines]
 **One principle:** the user provides root `my-project-requirements.md`. The AI Agent detects that file and runs this factory. No manual template picking.
 This folder is **100% generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
-
-**Enforced:** every push/PR runs `node scripts/check-forever-generic.mjs` (denylist in `scripts/forever-generic-denylist.json`). A planning sync that fails the same check is refused. Non-generic content cannot land on `main`.
+**Enforced:** every push/PR runs `node scripts/check-forever-generic.mjs` (structural denylist: mailboxes, secrets, day-page URLs, absolute user paths). Planning sync also runs a **private** product/person denylist that is never published into this kit. Failures refuse the sync / fail CI — non-generic content cannot land on `main`.
 ## Contributing
 Improvements that raise professionalism are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md). Keep the kit **forever generic** — practices only, never one product’s private details.
 ## Why this factory exists
@@ -50,13 +47,11 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
 ... [lean-ctx: omitted 1 lines]
 | [`07-judgment/studio-company.md`](07-judgment/studio-company.md) + [`templates/docs/STUDIO_ORG.md`](templates/docs/STUDIO_ORG.md) | Studio-as-company seats, goals, atomic checkout (Paperclip patterns as judgment). |
-... [lean-ctx: omitted 3 lines]
+... [lean-ctx: omitted 1 lines]
 | [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md) | Any external integration: interfaces, contract, adapter, idempotency, fallback. |
-... [lean-ctx: omitted 4 lines]
+... [lean-ctx: omitted 1 lines]
 | [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
-... [lean-ctx: omitted 1 lines]
-| [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository (includes `implementation/github-actions/` for FE/BE). |
-... [lean-ctx: omitted 1 lines]
+... [lean-ctx: omitted 3 lines]
 ## Start a New Product
 **Preferred path (requirements-driven):** follow [`00-USAGE.md`](00-USAGE.md) — seed the repo from this playbook, add root `my-project-requirements.md`, open the AI agent. The agent detects the file and runs planning.
 ... [lean-ctx: omitted 1 lines]
@@ -66,14 +61,12 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
    - `docs/` (including `AGENT_START.md`, `OWNER_STANDING.md`, `DELIVERY.md`, SEO, Docker, FE/BE guides, `REFERENCES.md`, `SCOPE_REJECTIONS.md`, `JUDGMENT.md`, `actors/`, `decision-logs/`, `learning-from-mistakes/`) → `docs/`
 ... [lean-ctx: omitted 1 lines]
    - `agent-discovery/` root pointers (`CLAUDE.md`, `GEMINI.md`, `llms.txt`, `.gemini/`, `.github/…`, `.windsurf/…`) → matching paths at the new repo root
-... [lean-ctx: omitted 3 lines]
+... [lean-ctx: omitted 1 lines]
 ### Placeholders
 | Placeholder | Example |
 ... [lean-ctx: omitted 1 lines]
 | `{{ONE_LINE}}` | A bilingual planning workspace for product teams |
 | `{{FRONTEND}}` | Next.js 16 + Tailwind CSS 4.3 |
-... [lean-ctx: omitted 1 lines]
-| `{{DATABASE}}` | PostgreSQL 18 + pgvector |
 ... [lean-ctx: omitted 3 lines]
 | `{{NODE_LTS}}` | 26 (Active LTS at planning time — re-verify on nodejs.org) |
 ... [lean-ctx: omitted 1 lines]

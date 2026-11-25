@@ -6,10 +6,12 @@ Thanks for helping raise the craft. This repository is **forever generic at 100%
 
 CI runs `node scripts/check-forever-generic.mjs` on every push and PR. Sync from a planning repo also refuses if that check fails. **Non-generic content cannot land on `main`.**
 
-If a private product/person/org name ever slips in once:
+If structural private leakage (mailbox, secret, day-page URL, absolute user path) ever slips in once:
 
 1. Remove it in the same change.
-2. Add a denylist rule in [`scripts/forever-generic-denylist.json`](scripts/forever-generic-denylist.json) so it cannot return.
+2. Add a rule in [`scripts/forever-generic-denylist.json`](scripts/forever-generic-denylist.json) so that *shape* cannot return.
+
+Product/person/org names are blocked before sync by the planning repo’s product denylist (never published into this kit).
 
 ## What belongs here
 
@@ -40,4 +42,5 @@ Put product-specific details only in a **private** product planning repository a
 ## License
 
 By contributing, you agree your work is licensed under the MIT License in [`LICENSE`](LICENSE).
+
 

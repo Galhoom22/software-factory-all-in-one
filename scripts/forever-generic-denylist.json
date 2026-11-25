@@ -1,90 +1,6 @@
 {
-  "$schema_comment": "Forbidden patterns for the public Software Factory kit. Extend here when a new private product/person leaks once — never allow it twice. Galhoom22 (public OSS owner) is allowlisted in check-forever-generic.mjs.",
+  "$schema_comment": "Public forever-generic rules only — structural leakage (mailboxes, secrets, day-page URLs, absolute user paths). Never put private product/person/org names here; those live in the planning-repo product denylist and are blocked at sync time. Do not ban PROJECT-N patterns here — decision IDs like D-110 are valid.",
   "rules": [
-    {
-      "id": "product-masarhub",
-      "name": "MasarHub product name",
-      "pattern": "MasarHub|masarhub",
-      "flags": "i",
-      "probe": "MasarHub"
-    },
-    {
-      "id": "org-code-hunters",
-      "name": "code-hunters-studio org",
-      "pattern": "code-hunters-studio|code hunters studio",
-      "flags": "i",
-      "probe": "code-hunters-studio"
-    },
-    {
-      "id": "actor-job-seeker",
-      "name": "job-seeker product actor",
-      "pattern": "job[- ]seeker",
-      "flags": "i",
-      "probe": "job-seeker"
-    },
-    {
-      "id": "jira-kan-key",
-      "name": "KAN-N tracker key",
-      "pattern": "\\bKAN-\\d+\\b",
-      "flags": "",
-      "probe": "KAN-43"
-    },
-    {
-      "id": "planning-ai-resume-tailor",
-      "name": "ai-resume-tailor planning repo",
-      "pattern": "ai-resume-tailor",
-      "flags": "i",
-      "probe": "ai-resume-tailor-planning"
-    },
-    {
-      "id": "path-job-project",
-      "name": "Job_Project / local reda path",
-      "pattern": "Job_Project|e:\\\\reda\\\\|E:\\\\reda\\\\|/reda/Job_Project",
-      "flags": "i",
-      "probe": "Job_Project"
-    },
-    {
-      "id": "atlassian-masarhub",
-      "name": "masarhub Atlassian site",
-      "pattern": "masarhub\\.atlassian",
-      "flags": "i",
-      "probe": "masarhub.atlassian.net"
-    },
-    {
-      "id": "person-abdulrahman",
-      "name": "personal name Abdulrahman",
-      "pattern": "Abdulrahman",
-      "flags": "i",
-      "probe": "Abdulrahman"
-    },
-    {
-      "id": "person-reda-salem",
-      "name": "personal name Reda Salem",
-      "pattern": "reda\\s+salem",
-      "flags": "i",
-      "probe": "reda salem"
-    },
-    {
-      "id": "handle-redasalem",
-      "name": "personal handle redasalem",
-      "pattern": "@?redasalem\\b",
-      "flags": "i",
-      "probe": "redasalem"
-    },
-    {
-      "id": "product-veycraft",
-      "name": "veycraft product",
-      "pattern": "\\bveycraft\\b",
-      "flags": "i",
-      "probe": "veycraft"
-    },
-    {
-      "id": "product-career-ops",
-      "name": "career-ops product",
-      "pattern": "\\bcareer-ops\\b|job-hunter-os",
-      "flags": "i",
-      "probe": "career-ops"
-    },
     {
       "id": "personal-email",
       "name": "personal mailbox",
@@ -95,23 +11,30 @@
     {
       "id": "secret-shaped",
       "name": "secret-shaped token",
-      "pattern": "\\b(ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|xox[baprs]-[A-Za-z0-9-]+)\\b",
+      "pattern": "\\b(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|xox[baprs]-[A-Za-z0-9-]+)\\b",
       "flags": "",
       "probe": "ghp_abcdefghijklmnopqrstuvwxyz12"
     },
     {
       "id": "notion-page-uuid",
       "name": "Notion page id URL",
-      "pattern": "notion\\.(so|com)/[^\\s)]*[a-f0-9]{32}",
+      "pattern": "notion\\.(so|com)/[^\\s)\\]]*[a-f0-9]{32}",
       "flags": "i",
       "probe": "https://notion.so/workspace/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     },
     {
-      "id": "impl-masarhub-repos",
-      "name": "masarhub FE/BE repo names",
-      "pattern": "masarhub-frontend|masarhub-backend",
+      "id": "windows-user-path",
+      "name": "absolute Windows user path",
+      "pattern": "[A-Za-z]:\\\\Users\\\\[^\\\\\\s\"']+",
+      "flags": "",
+      "probe": "C:\\Users\\ExampleUser"
+    },
+    {
+      "id": "env-assignment-secret",
+      "name": "inline secret assignment",
+      "pattern": "(api[_-]?key|secret|password|token)\\s*=\\s*['\"][^'\"]{8,}['\"]",
       "flags": "i",
-      "probe": "masarhub-frontend"
+      "probe": "api_key=\"abcdefghijklmnop\""
     }
   ]
 }
