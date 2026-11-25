@@ -1,16 +1,15 @@
+README.md [101L]
 README.md [164L]
 # Software Factory All-in-One
 <p align="center">
   <img src="assets/software-factory-hero.svg" alt="Software Factory All-in-One — animated forge-atelier preview: requirements intake lights the rails, day line stamps Build through Ship, coverage ratchet climbs" width="920" />
-... [lean-ctx: omitted 2 lines]
-  <strong>Open-source software factory</strong> · requirements in → production-ready plan out · forever generic
 ... [lean-ctx: omitted 5 lines]
-  <img alt="AI agents" src="https://img.shields.io/badge/built%20for-AI%20agents-f59e0b?style=flat-square" />
-... [lean-ctx: omitted 2 lines]
 Open-source **software factory**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
 ... [lean-ctx: omitted 1 lines]
 **One principle:** the user provides root `my-project-requirements.md`. The AI Agent detects that file and runs this factory. No manual template picking.
-This folder is **generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
+This folder is **100% generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
+
+**Enforced:** every push/PR runs `node scripts/check-forever-generic.mjs` (denylist in `scripts/forever-generic-denylist.json`). A planning sync that fails the same check is refused. Non-generic content cannot land on `main`.
 ## Contributing
 Improvements that raise professionalism are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md). Keep the kit **forever generic** — practices only, never one product’s private details.
 ## Why this factory exists
@@ -44,47 +43,38 @@ software-factory-all-in-one/
 Use it at the very start of a new product (an ERP, a booking app, a backend-only service, anything), before any implementation repository exists. It answers "what do I set up, in what order, and what does done look like?" so nothing is forgotten.
 ## What Is Inside
 | File | Purpose |
-... [lean-ctx: omitted 4 lines]
+... [lean-ctx: omitted 1 lines]
 | [`03-PROTOTYPE.md`](03-PROTOTYPE.md) | How to build the prototype: a clickable UI in the exact production frontend stack, or an API explorer with mock responses for a backend-only product. |
 | [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) | Adaptive feature-level delivery for the **implementation** repositories: decompose the SRS once, match engineering depth to risk, require evidence for completion. |
-... [lean-ctx: omitted 3 lines]
+... [lean-ctx: omitted 1 lines]
 | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) | Fixed day pipeline for FE/BE implementation chats: day run-through → closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured**) → Pareto 20% + new-chat handoff. |
 ... [lean-ctx: omitted 1 lines]
 | [`07-judgment/studio-company.md`](07-judgment/studio-company.md) + [`templates/docs/STUDIO_ORG.md`](templates/docs/STUDIO_ORG.md) | Studio-as-company seats, goals, atomic checkout (Paperclip patterns as judgment). |
-... [lean-ctx: omitted 2 lines]
-| [`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md) | **Always-Current** closeout: every playbook edit leaves packs/coverage/mirror fresh (CI-gated). |
-| [`07-judgment/verification-engineering.md`](07-judgment/verification-engineering.md) | Prove AI-written changes: criteria→evidence; author≠judge; risk-matched layers. |
+... [lean-ctx: omitted 3 lines]
 | [`07-judgment/integration-engineering.md`](07-judgment/integration-engineering.md) | Any external integration: interfaces, contract, adapter, idempotency, fallback. |
-... [lean-ctx: omitted 5 lines]
-| [`07-judgment/software-factory.md`](07-judgment/software-factory.md) | Software Factory + multi-agent line (Mastra/Vercel/Warp patterns as judgment) paired with seats. |
-| [`coverage/`](coverage/README.md) | Living atlas: craft homes, [`07-software-surfaces`](coverage/07-software-surfaces.md), and [`08-ai-agents`](coverage/08-ai-agents.md) harness %. |
-... [lean-ctx: omitted 1 lines]
-| [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
 ... [lean-ctx: omitted 4 lines]
+| [`technologies/`](technologies/README.md) | Per-technology packs (official-docs distillations): best practices, use/stop lists, common mistakes. Start with `php/php-8.6`. |
+... [lean-ctx: omitted 1 lines]
 | [`templates/`](templates/) | Fill-in skeleton files laid out exactly like a new planning repository (includes `implementation/github-actions/` for FE/BE). |
-**Optional reference:** if your studio already has one finished planning repo with a solid `project-ui/`, copy its starter kit, `scripts/check-ui.mjs`, `scripts/crawl.mjs`, and tests — then adapt names and routes. Do not bake that product’s name into this playbook.
+... [lean-ctx: omitted 1 lines]
 ## Start a New Product
 **Preferred path (requirements-driven):** follow [`00-USAGE.md`](00-USAGE.md) — seed the repo from this playbook, add root `my-project-requirements.md`, open the AI agent. The agent detects the file and runs planning.
 ... [lean-ctx: omitted 1 lines]
 1. Create an empty **private** repository for the product's planning (for example `erp-planning`). Clone or copy from the public [Software Factory All-in-One](https://github.com/Galhoom22/software-factory-all-in-one) and start from its `templates/`.
 2. Copy everything inside [`templates/`](templates/) to the new repository's root, including the hidden `.github/`, `.editorconfig`, `.gitattributes`, and `.gitignore`.
-... [lean-ctx: omitted 2 lines]
+... [lean-ctx: omitted 1 lines]
    - `docs/` (including `AGENT_START.md`, `OWNER_STANDING.md`, `DELIVERY.md`, SEO, Docker, FE/BE guides, `REFERENCES.md`, `SCOPE_REJECTIONS.md`, `JUDGMENT.md`, `actors/`, `decision-logs/`, `learning-from-mistakes/`) → `docs/`
 ... [lean-ctx: omitted 1 lines]
    - `agent-discovery/` root pointers (`CLAUDE.md`, `GEMINI.md`, `llms.txt`, `.gemini/`, `.github/…`, `.windsurf/…`) → matching paths at the new repo root
-... [lean-ctx: omitted 5 lines]
-6. Replace every `{{PLACEHOLDER}}` in seeded templates as the agent fills them from the requirements file. Delete any section marked *Optional* that the product does not need (for example `docs/AI.md` when the product has no AI).
-... [lean-ctx: omitted 1 lines]
+... [lean-ctx: omitted 3 lines]
 ### Placeholders
 | Placeholder | Example |
-... [lean-ctx: omitted 2 lines]
+... [lean-ctx: omitted 1 lines]
 | `{{ONE_LINE}}` | A bilingual planning workspace for product teams |
 | `{{FRONTEND}}` | Next.js 16 + Tailwind CSS 4.3 |
 ... [lean-ctx: omitted 1 lines]
 | `{{DATABASE}}` | PostgreSQL 18 + pgvector |
-... [lean-ctx: omitted 2 lines]
-| `{{UI_LANGUAGES}}` | Language A (RTL if needed) and Language B |
-... [lean-ctx: omitted 2 lines]
+... [lean-ctx: omitted 3 lines]
 | `{{NODE_LTS}}` | 26 (Active LTS at planning time — re-verify on nodejs.org) |
 ... [lean-ctx: omitted 1 lines]
 | `{{COMPONENT_LIBRARY}}`, `{{ICON_LIBRARY}}`, `{{FONTS}}` | shadcn/ui (Radix base, RTL mode); Phosphor; Geist for Latin and IBM Plex Sans Arabic |

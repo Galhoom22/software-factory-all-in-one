@@ -26,9 +26,14 @@ jobs:
         with:
           node-version: 26
 
+      - name: Forever-generic hard gate (no product/person/private leakage)
+        run: node scripts/check-forever-generic.mjs
+
       - name: Requirements-activation wiring intact
         run: node scripts/check-requirements-activation.mjs
 
       - name: Planning entry gate (skip if no my-project-requirements.md)
         run: node scripts/check-planning-entry.mjs
 
+      - name: Playbook freshness wiring intact
+        run: node scripts/check-playbook-freshness.mjs
