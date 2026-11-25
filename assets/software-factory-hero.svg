@@ -1,0 +1,363 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" role="img" aria-labelledby="title desc">
+  <title id="title">Software Factory All-in-One — method preview</title>
+  <desc id="desc">Animated forge-atelier preview: requirements intake lights the rails, a day line stamps Build through Ship, then the coverage ratchet climbs. Forever generic — no product names.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090b10"/>
+      <stop offset="50%" stop-color="#111722"/>
+      <stop offset="100%" stop-color="#0a0e16"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2130"/>
+      <stop offset="100%" stop-color="#101620"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9a3412"/>
+      <stop offset="40%" stop-color="#f0b35a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="ember" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#7c2d12" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#c2410c" stop-opacity="0.4"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1c2433" stroke-width="1"/>
+    </pattern>
+    <style><![CDATA[
+      .ui { font-family: "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: "JetBrains Mono", "Cascadia Code", ui-monospace, Menlo, Consolas, monospace; }
+      .ink { fill: #eef2f8; }
+      .mute { fill: #8b96a8; }
+      .steel { fill: #c5cedb; }
+      .copper { fill: #f0b35a; }
+      .sage { fill: #9dba8c; }
+
+      .scene-a { animation: sa 12s linear infinite; }
+      .scene-b { animation: sb 12s linear infinite; }
+      .scene-c { animation: sc 12s linear infinite; }
+      @keyframes sa {
+        0%, 30.5% { opacity: 1; }
+        33%, 97% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes sb {
+        0%, 33% { opacity: 0; }
+        35.5%, 63.5% { opacity: 1; }
+        66%, 100% { opacity: 0; }
+      }
+      @keyframes sc {
+        0%, 66% { opacity: 0; }
+        68.5%, 96.5% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      .a1 { animation: rA1 12s ease-out infinite; }
+      .a2 { animation: rA2 12s ease-out infinite; }
+      .a3 { animation: rA3 12s ease-out infinite; }
+      .a5 { animation: rA5 12s ease-out infinite; }
+      @keyframes rA1 { 0% { opacity: 0.7; } 5%, 100% { opacity: 1; } }
+      @keyframes rA2 { 0% { opacity: 0.55; } 8%, 100% { opacity: 1; } }
+      @keyframes rA3 { 0% { opacity: 0.65; } 10%, 100% { opacity: 1; } }
+      @keyframes rA5 { 0% { opacity: 0.45; } 16%, 100% { opacity: 1; } }
+
+      .rail { transform-box: fill-box; transform-origin: left center; animation: railGrow 12s ease-out infinite; }
+      @keyframes railGrow {
+        0% { transform: scaleX(0.28); }
+        18%, 30% { transform: scaleX(1); }
+        33%, 100% { transform: scaleX(1); }
+      }
+      .st1 { animation: st1 12s ease-out infinite; }
+      .st2 { animation: st2 12s ease-out infinite; }
+      .st3 { animation: st3 12s ease-out infinite; }
+      .st4 { animation: st4 12s ease-out infinite; }
+      @keyframes st1 { 0% { opacity: 0.55; } 8%, 100% { opacity: 1; } }
+      @keyframes st2 { 0%, 8% { opacity: 0.35; } 12%, 100% { opacity: 1; } }
+      @keyframes st3 { 0%, 12% { opacity: 0.35; } 16%, 100% { opacity: 1; } }
+      @keyframes st4 { 0%, 16% { opacity: 0.35; } 20%, 100% { opacity: 1; } }
+
+      .b0 { animation: rB0 12s ease-out infinite; }
+      .b1 { animation: rB1 12s ease-out infinite; }
+      .b2 { animation: rB2 12s ease-out infinite; }
+      .b3 { animation: rB3 12s ease-out infinite; }
+      .b4 { animation: rB4 12s ease-out infinite; }
+      .b5 { animation: rB5 12s ease-out infinite; }
+      @keyframes rB0 { 0%, 34% { opacity: 0; } 36%, 100% { opacity: 1; } }
+      @keyframes rB1 { 0%, 37% { opacity: 0; } 39%, 100% { opacity: 1; } }
+      @keyframes rB2 { 0%, 39% { opacity: 0; } 41%, 100% { opacity: 1; } }
+      @keyframes rB3 { 0%, 42% { opacity: 0; } 44%, 100% { opacity: 1; } }
+      @keyframes rB4 { 0%, 45% { opacity: 0; } 47%, 100% { opacity: 1; } }
+      @keyframes rB5 { 0%, 48% { opacity: 0; } 50%, 100% { opacity: 1; } }
+
+      .stamp { transform-box: fill-box; transform-origin: center; animation: stampA 12s ease-out infinite; }
+      .stamp-b { transform-box: fill-box; transform-origin: center; animation: stampB 12s ease-out infinite; }
+      .stamp-c { transform-box: fill-box; transform-origin: center; animation: stampC 12s ease-out infinite; }
+      .stamp-d { transform-box: fill-box; transform-origin: center; animation: stampD 12s ease-out infinite; }
+      @keyframes stampA {
+        0%, 40% { opacity: 0; transform: scale(1.4) rotate(-8deg); }
+        42%, 63% { opacity: 1; transform: none; }
+        66%, 100% { opacity: 0; }
+      }
+      @keyframes stampB {
+        0%, 45% { opacity: 0; transform: scale(1.4) rotate(7deg); }
+        47%, 63% { opacity: 1; transform: none; }
+        66%, 100% { opacity: 0; }
+      }
+      @keyframes stampC {
+        0%, 50% { opacity: 0; transform: scale(1.4) rotate(-5deg); }
+        52%, 63% { opacity: 1; transform: none; }
+        66%, 100% { opacity: 0; }
+      }
+      @keyframes stampD {
+        0%, 55% { opacity: 0; transform: scale(1.45) rotate(6deg); }
+        57%, 63% { opacity: 1; transform: none; }
+        66%, 100% { opacity: 0; }
+      }
+
+      .c0 { animation: rC0 12s ease-out infinite; }
+      .c1 { animation: rC1 12s ease-out infinite; }
+      .c2 { animation: rC2 12s ease-out infinite; }
+      .c3 { animation: rC3 12s ease-out infinite; }
+      .c4 { animation: rC4 12s ease-out infinite; }
+      @keyframes rC0 { 0%, 67% { opacity: 0; } 69%, 100% { opacity: 1; } }
+      @keyframes rC1 { 0%, 70% { opacity: 0; } 72%, 100% { opacity: 1; } }
+      @keyframes rC2 { 0%, 73% { opacity: 0; } 75%, 100% { opacity: 1; } }
+      @keyframes rC3 { 0%, 76% { opacity: 0; } 78%, 100% { opacity: 1; } }
+      @keyframes rC4 { 0%, 80% { opacity: 0; } 82%, 100% { opacity: 1; } }
+
+      .bar-fill { transform-box: fill-box; transform-origin: left center; animation: barFill 12s ease-out infinite; }
+      @keyframes barFill {
+        0%, 72% { transform: scaleX(0.18); }
+        88%, 96% { transform: scaleX(1); }
+        100% { transform: scaleX(1); }
+      }
+
+      .tag-a { animation: tagA 12s linear infinite; }
+      .tag-b { animation: tagB 12s linear infinite; }
+      .tag-c { animation: tagC 12s linear infinite; }
+      @keyframes tagA {
+        0%, 31% { opacity: 1; }
+        33%, 99% { opacity: 0.38; }
+        100% { opacity: 1; }
+      }
+      @keyframes tagB {
+        0%, 33% { opacity: 0.38; }
+        35%, 64% { opacity: 1; }
+        66%, 100% { opacity: 0.38; }
+      }
+      @keyframes tagC {
+        0%, 66% { opacity: 0.38; }
+        68%, 97% { opacity: 1; }
+        100% { opacity: 0.38; }
+      }
+
+      .floor-glow { animation: floorPulse 12s ease-in-out infinite; }
+      @keyframes floorPulse {
+        0%, 100% { opacity: 0.28; }
+        25% { opacity: 0.55; }
+        55% { opacity: 0.32; }
+        80% { opacity: 0.5; }
+      }
+
+      .progress { transform-box: fill-box; transform-origin: left center; animation: sweep 12s linear infinite; }
+      @keyframes sweep { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+
+      .pulse-dot { animation: pulseDot 1.6s ease-in-out infinite; }
+      @keyframes pulseDot {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 1; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .scene-a, .scene-a * { animation: none !important; opacity: 1 !important; transform: none !important; }
+        .scene-b, .scene-c { animation: none !important; opacity: 0 !important; }
+        .tag-a { animation: none !important; opacity: 1 !important; }
+        .tag-b, .tag-c { animation: none !important; opacity: 0.38 !important; }
+        .progress { animation: none !important; transform: scaleX(0.33); }
+        .rail, .bar-fill { animation: none !important; transform: scaleX(1); }
+        .stamp, .stamp-b, .stamp-c, .stamp-d { animation: none !important; opacity: 1 !important; transform: none !important; }
+        .floor-glow, .pulse-dot { animation: none !important; opacity: 0.45 !important; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="920" height="480" fill="url(#bg)"/>
+  <rect width="920" height="480" fill="url(#grid)" opacity="0.5"/>
+  <ellipse class="floor-glow" cx="460" cy="438" rx="360" ry="52" fill="url(#ember)"/>
+
+  <!-- Workbench -->
+  <rect x="32" y="24" width="856" height="412" rx="16" fill="url(#panel)" stroke="#2c3648" stroke-width="1.5"/>
+  <rect x="32" y="24" width="856" height="54" rx="16" fill="#121822"/>
+  <rect x="32" y="60" width="856" height="18" fill="#121822"/>
+  <path d="M48 48h20M48 48v20" fill="none" stroke="#f0b35a" stroke-width="2.25" stroke-linecap="square"/>
+  <path d="M872 48h-20M872 48v20" fill="none" stroke="#f0b35a" stroke-width="2.25" stroke-linecap="square"/>
+  <path d="M48 412h20M48 412v-20" fill="none" stroke="#f0b35a" stroke-width="2" stroke-linecap="square" opacity="0.45"/>
+  <path d="M872 412h-20M872 412v-20" fill="none" stroke="#f0b35a" stroke-width="2" stroke-linecap="square" opacity="0.45"/>
+
+  <circle class="pulse-dot" cx="68" cy="51" r="4" fill="#f0b35a"/>
+  <text class="ui copper" x="84" y="56" font-size="13" font-weight="700" letter-spacing="1.8">SOFTWARE FACTORY</text>
+  <text class="ui mute" x="236" y="56" font-size="12" font-weight="600">· ALL-IN-ONE</text>
+  <text class="mono mute" x="640" y="56" font-size="11">FORGE PREVIEW · MIT</text>
+
+  <!-- SCENE A -->
+  <g class="scene-a">
+    <text class="ui ink" x="68" y="118" font-size="23" font-weight="700">Requirements land. Rails wake.</text>
+    <text class="ui mute a1" x="68" y="146" font-size="14">Drop one requirements file — the factory detects it and opens the line.</text>
+
+    <g class="a2">
+      <rect x="68" y="168" width="300" height="78" rx="10" fill="#0b1018" stroke="#3d4a5f" stroke-width="1.25"/>
+      <rect x="68" y="168" width="7" height="78" rx="2" fill="url(#copper)"/>
+      <text class="mono steel" x="92" y="198" font-size="13" font-weight="700">my-project-requirements.md</text>
+      <text class="mono mute" x="92" y="222" font-size="11">detected · actor loop armed · no MVP mode</text>
+    </g>
+
+    <g class="a2">
+      <rect x="388" y="168" width="464" height="78" rx="10" fill="#0b1018" stroke="#3d4a5f" stroke-width="1.25"/>
+      <text class="ui steel" x="408" y="198" font-size="14" font-weight="700">What the line produces</text>
+      <text class="mono mute" x="408" y="222" font-size="12">plan · prototype · judgment · day rails · CI gates</text>
+    </g>
+
+    <g class="a3">
+      <text class="ui mute" x="68" y="278" font-size="11" font-weight="700" letter-spacing="1.2">FACTORY LINE</text>
+      <rect x="68" y="292" width="784" height="12" rx="6" fill="#0b1018" stroke="#2c3648"/>
+      <rect class="rail" x="68" y="292" width="784" height="12" rx="6" fill="url(#copper)"/>
+
+      <g class="st1">
+        <circle cx="120" cy="298" r="10" fill="#151c28" stroke="#f0b35a" stroke-width="2.25"/>
+        <text class="mono copper" x="120" y="332" font-size="12" text-anchor="middle" font-weight="700">00</text>
+        <text class="ui mute" x="120" y="350" font-size="11" text-anchor="middle">Usage</text>
+      </g>
+      <g class="st2">
+        <circle cx="320" cy="298" r="10" fill="#151c28" stroke="#f0b35a" stroke-width="2.25"/>
+        <text class="mono copper" x="320" y="332" font-size="12" text-anchor="middle" font-weight="700">02</text>
+        <text class="ui mute" x="320" y="350" font-size="11" text-anchor="middle">Delivery</text>
+      </g>
+      <g class="st3">
+        <circle cx="560" cy="298" r="10" fill="#151c28" stroke="#f0b35a" stroke-width="2.25"/>
+        <text class="mono copper" x="560" y="332" font-size="12" text-anchor="middle" font-weight="700">08</text>
+        <text class="ui mute" x="560" y="350" font-size="11" text-anchor="middle">Day line</text>
+      </g>
+      <g class="st4">
+        <circle cx="800" cy="298" r="10" fill="#151c28" stroke="#f0b35a" stroke-width="2.25"/>
+        <text class="mono copper" x="800" y="332" font-size="12" text-anchor="middle" font-weight="700">09</text>
+        <text class="ui mute" x="800" y="350" font-size="11" text-anchor="middle">CI / CD</text>
+      </g>
+    </g>
+
+    <g class="a5">
+      <rect x="68" y="370" width="784" height="40" rx="8" fill="#0d141e" stroke="#314056"/>
+      <text class="mono sage" x="88" y="395" font-size="13" font-weight="700">LINE HOT</text>
+      <text class="mono mute" x="178" y="395" font-size="13">· forever generic · practices only · public MIT mirror</text>
+    </g>
+  </g>
+
+  <!-- SCENE B -->
+  <g class="scene-b">
+    <text class="ui ink b0" x="68" y="118" font-size="23" font-weight="700">One calendar day. One closeout.</text>
+    <text class="ui mute b1" x="68" y="146" font-size="14">Must-finish → evidence → PR → green CI → merge → Done. No theater.</text>
+
+    <g class="b2">
+      <rect x="68" y="170" width="184" height="128" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
+      <text class="mono mute" x="84" y="196" font-size="11">01</text>
+      <text class="ui steel" x="84" y="222" font-size="17" font-weight="700">Build</text>
+      <text class="ui mute" x="84" y="248" font-size="12">Smallest complete</text>
+      <text class="ui mute" x="84" y="268" font-size="12">change that ships</text>
+      <g class="stamp">
+        <rect x="108" y="236" width="92" height="30" rx="4" fill="none" stroke="#9dba8c" stroke-width="2.25" transform="rotate(-8 154 251)"/>
+        <text class="mono sage" x="154" y="256" font-size="12" text-anchor="middle" font-weight="800" transform="rotate(-8 154 251)">LANDED</text>
+      </g>
+    </g>
+    <g class="b3">
+      <rect x="268" y="170" width="184" height="128" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
+      <text class="mono mute" x="284" y="196" font-size="11">02</text>
+      <text class="ui steel" x="284" y="222" font-size="17" font-weight="700">Review</text>
+      <text class="ui mute" x="284" y="248" font-size="12">Human bar +</text>
+      <text class="ui mute" x="284" y="268" font-size="12">independent pass</text>
+      <g class="stamp-b">
+        <rect x="308" y="236" width="92" height="30" rx="4" fill="none" stroke="#f0b35a" stroke-width="2.25" transform="rotate(7 354 251)"/>
+        <text class="mono copper" x="354" y="256" font-size="12" text-anchor="middle" font-weight="800" transform="rotate(7 354 251)">CLEARED</text>
+      </g>
+    </g>
+    <g class="b4">
+      <rect x="468" y="170" width="184" height="128" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
+      <text class="mono mute" x="484" y="196" font-size="11">03</text>
+      <text class="ui steel" x="484" y="222" font-size="17" font-weight="700">Prove</text>
+      <text class="ui mute" x="484" y="248" font-size="12">CI green · criteria</text>
+      <text class="ui mute" x="484" y="268" font-size="12">→ evidence</text>
+      <g class="stamp-c">
+        <rect x="508" y="236" width="92" height="30" rx="4" fill="none" stroke="#9dba8c" stroke-width="2.25" transform="rotate(-5 554 251)"/>
+        <text class="mono sage" x="554" y="256" font-size="12" text-anchor="middle" font-weight="800" transform="rotate(-5 554 251)">GREEN</text>
+      </g>
+    </g>
+    <g class="b5">
+      <rect x="668" y="170" width="184" height="128" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
+      <text class="mono mute" x="684" y="196" font-size="11">04</text>
+      <text class="ui steel" x="684" y="222" font-size="17" font-weight="700">Ship</text>
+      <text class="ui mute" x="684" y="248" font-size="12">Merge · tracker</text>
+      <text class="ui mute" x="684" y="268" font-size="12">· handoff</text>
+      <g class="stamp-d">
+        <rect x="708" y="236" width="92" height="30" rx="4" fill="none" stroke="#f0b35a" stroke-width="2.25" transform="rotate(6 754 251)"/>
+        <text class="mono copper" x="754" y="256" font-size="12" text-anchor="middle" font-weight="800" transform="rotate(6 754 251)">DONE</text>
+      </g>
+    </g>
+
+    <g class="b5">
+      <rect x="68" y="322" width="784" height="68" rx="10" fill="#0d141e" stroke="#314056"/>
+      <text class="mono steel" x="88" y="352" font-size="13" font-weight="700">DAY PIPELINE</text>
+      <text class="mono mute" x="88" y="374" font-size="12">Author ≠ judge · skip CD honestly when hooks are missing · never invent Done</text>
+    </g>
+  </g>
+
+  <!-- SCENE C -->
+  <g class="scene-c">
+    <text class="ui ink c0" x="68" y="118" font-size="23" font-weight="700">Craft compounds. Coverage climbs.</text>
+    <text class="ui mute c1" x="68" y="146" font-size="14">Every useful lesson lands in the kit — then the public mirror stays in sync.</text>
+
+    <g class="c2">
+      <rect x="68" y="168" width="372" height="176" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
+      <text class="ui steel" x="88" y="200" font-size="15" font-weight="700">Surfaces atlas</text>
+      <text class="mono mute" x="88" y="232" font-size="12">Web SPA</text>
+      <rect x="200" y="222" width="210" height="9" rx="4" fill="#1a2230"/>
+      <rect class="bar-fill" x="200" y="222" width="210" height="9" rx="4" fill="url(#copper)"/>
+      <text class="mono mute" x="88" y="266" font-size="12">API / backend</text>
+      <rect x="200" y="256" width="210" height="9" rx="4" fill="#1a2230"/>
+      <rect class="bar-fill" x="200" y="256" width="210" height="9" rx="4" fill="url(#copper)"/>
+      <text class="mono mute" x="88" y="300" font-size="12">Judgment packs</text>
+      <rect x="200" y="290" width="210" height="9" rx="4" fill="#1a2230"/>
+      <rect class="bar-fill" x="200" y="290" width="210" height="9" rx="4" fill="url(#copper)"/>
+      <text class="mono sage" x="88" y="328" font-size="12" font-weight="700">RATCHET ON · excellence never thins</text>
+    </g>
+
+    <g class="c3">
+      <rect x="460" y="168" width="392" height="176" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
+      <text class="ui steel" x="480" y="200" font-size="15" font-weight="700">What stays out</text>
+      <text class="mono mute" x="480" y="236" font-size="13">× product names &amp; people</text>
+      <text class="mono mute" x="480" y="264" font-size="13">× tracker keys &amp; day URLs</text>
+      <text class="mono mute" x="480" y="292" font-size="13">× secrets &amp; real personal data</text>
+      <text class="mono copper" x="480" y="324" font-size="13" font-weight="700">✓ practices only · forever generic</text>
+    </g>
+
+    <g class="c4">
+      <rect x="68" y="364" width="784" height="40" rx="8" fill="#0d141e" stroke="#314056"/>
+      <text class="mono steel" x="88" y="389" font-size="12" font-weight="700">PUBLIC MIRROR</text>
+      <text class="mono mute" x="228" y="389" font-size="12">synced · MIT · ready for the next product</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(32, 452)">
+    <g class="tag-a">
+      <rect x="0" y="0" width="112" height="22" rx="4" fill="#151c28" stroke="#f0b35a" stroke-width="1.35"/>
+      <text class="mono copper" x="56" y="15" font-size="11" text-anchor="middle" font-weight="700">1 · INTAKE</text>
+    </g>
+    <g class="tag-b">
+      <rect x="122" y="0" width="118" height="22" rx="4" fill="#151c28" stroke="#6b778a" stroke-width="1.25"/>
+      <text class="mono steel" x="181" y="15" font-size="11" text-anchor="middle" font-weight="700">2 · DAY LINE</text>
+    </g>
+    <g class="tag-c">
+      <rect x="250" y="0" width="124" height="22" rx="4" fill="#151c28" stroke="#6b778a" stroke-width="1.25"/>
+      <text class="mono steel" x="312" y="15" font-size="11" text-anchor="middle" font-weight="700">3 · RATCHET</text>
+    </g>
+    <rect x="396" y="8" width="460" height="6" rx="3" fill="#1a2230"/>
+    <rect class="progress" x="396" y="8" width="460" height="6" rx="3" fill="url(#copper)"/>
+  </g>
+</svg>
