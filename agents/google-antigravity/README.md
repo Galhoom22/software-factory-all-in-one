@@ -27,6 +27,6 @@
 
 ## Related
 
-- Atlas: [`../coverage/08-ai-agents.md`](../coverage/08-ai-agents.md)
-- Freshness: [`../07-judgment/playbook-freshness.md`](../07-judgment/playbook-freshness.md)
-- Agent discovery templates: [`../templates/agent-discovery/`](../templates/agent-discovery/)
+- Atlas: [`../../coverage/08-ai-agents.md`](../../coverage/08-ai-agents.md)
+- Freshness: [`../../07-judgment/playbook-freshness.md`](../../07-judgment/playbook-freshness.md)
+- Agent discovery templates: [`../../templates/agent-discovery/`](../../templates/agent-discovery/)
