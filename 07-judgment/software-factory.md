@@ -46,6 +46,8 @@ Absorb patterns (do **not** vendor frameworks as AGENTS):
 
 - Multi-agent craft: one convergence owner, bounded contracts, independent review ([SalarsNet multi-agent coding team](https://salars.net/ai/multi-agent-software-development) and similar handbook patterns)
 
+- [Factory.com — Software Factory product](https://factory.com/product/software-factory) (model routing, full-SDLC stages, quality gates + human judgment, outcome metrics, trust/control)
+
 
 
 Log borrows in product `docs/REFERENCES.md`. Optional vendor CLIs (Mastra Studio, Warp, Paperclip) are **experiments** — never replace Jira/Notion/GitHub or playbook day closeout unless a DECISIONS row says so.
@@ -170,3 +172,58 @@ At day start (`08`): goal + seat + checkout **and** name the factory stage you a
 
 - Excellence: [`EXCELLENCE.md`](../EXCELLENCE.md)
 
+
+## Factory.com absorb (judgment only — 2026-11-25)
+
+Patterns from [Factory’s Software Factory](https://factory.com/product/software-factory). **Do not** vendor Droids, Factory SaaS, or their cookbooks as AGENTS / day SoT. Keep Jira/Notion/GitHub + this playbook’s day closeout.
+
+### 1. Layers of a software factory (map to ours)
+
+| Their layer | Portable meaning | Our home |
+|-------------|------------------|----------|
+| **Agents & orchestration** | Single seat → multi-step missions; optional scheduled automations | `08` day seat · [`delegation.md`](delegation.md) · CI recipes below |
+| **Entry / triage** | Signals become owned goals; nothing starts mid-build | Intake + triage stages above · tracker / Notion must-finish |
+| **Quality gates** | Automated validation; humans own judgment | CI `09` · CodeRabbit · [`verification-engineering.md`](verification-engineering.md) · [`human-code-review.md`](human-code-review.md) |
+| **Ops & knowledge** | After merge: incidents, docs freshness, rollouts, outcome measurement | Product DEPLOYMENT / SECURITY · [`playbook-freshness.md`](playbook-freshness.md) · metrics below |
+| **Foundation** | Model choice, where agents run, governance | [`ai-engineering.md`](ai-engineering.md) · product `docs/AI.md` · SECURITY · Candor |
+
+### 2. Model routing (not one model forever)
+
+No single model wins every axis. **Route the task** (plan vs codegen vs review vs security skim) to the tool/model that fits; adopt new models without rewriting the day pipeline. Pins and evals still live in product `docs/AI.md` + [`ai-engineering.md`](ai-engineering.md). Floating “whatever is newest” without a pin is a reliability bug.
+
+### 3. Outcome metrics (measure delivered work, not tokens)
+
+Lines, tokens, and “PRs opened” do not prove the factory works. Prefer product-level outcome signals when the team measures (record the **practice**, not vanity dashboards):
+
+| Metric | Question |
+|--------|----------|
+| **Cycle time** | Signal → production (or → Done for the current phase) |
+| **Autonomy ratio** | Share of merged work that needed no mid-flight human rewrite (honest; include review gates) |
+| **Incident MTTR** | Alert → deployed fix (when ops exist) |
+| **Code shelf life** | How long shipped code stays untouched (stability, not “never change”) |
+| **Cost / merged PR** | Model+tool spend ÷ PRs that actually merged with green CI |
+
+Use these in day/weekly review only when numbers exist. Do **not** invent fake case-study numbers in this playbook.
+
+### 4. Trust before autonomy
+
+Autonomy scales only with control:
+
+- Least privilege; **secrets never in agent context** when avoidable
+- Risk tiers per repo/change; validation gates before merge
+- Command / tool allowlists where the harness supports them
+- Auditable actions (PR, CI logs, tracker comments) — narrative “agent said Done” is not an audit trail
+- Roll out readiness first (Phase A CI before Phase B/C CD — [`09-CI-CD.md`](../09-CI-CD.md))
+
+### 5. Scheduled recipes (optional automations)
+
+Factory lists recurring jobs (PR review bots, docs sync, lint autofix, license headers, matrix tests). Portable rule: **automate only what already has a clear gate and a human owner for exceptions**. Prefer GitHub Actions / existing CI over a second agent OS. Never let a nightly bot merge without the same independent review bar as a human day.
+
+### Forbid (Factory.com-specific)
+
+| Don’t | Do |
+|-------|-----|
+| Require Factory / Droids / AutoWiki as product SoT | Keep stages + seats + CI you already run |
+| Paste vendor case-study numbers into README as if they were ours | Measure *your* cycle time / MTTR when you have data |
+| Swap model pins mid-day without eval | Route + pin + golden eval ([`ai-engineering.md`](ai-engineering.md)) |
+| Skip human judgment because “full SDLC agent” | Quality gates stay author≠judge |

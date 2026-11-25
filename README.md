@@ -30,6 +30,7 @@ This factory gives the agent a **complete operating system for planning and deli
 | **Stack craft on demand** | 18 technology packs (Laravel, Next.js, PHP, React, …) with use/stop/mistakes |
 | **Harness drive-craft** | 13 agent/IDE packs (Cursor, Codex, Claude, Gemini, …) under one `AGENTS.md` rulebook |
 | **Honest coverage atlas** | ~**89%** craft-home coverage tracked in [`coverage/`](coverage/README.md) — deepen, don’t duplicate |
+| **Outcome metrics over token vanity** | Cycle time, cost/merged PR, MTTR when you measure — not “tokens used” ([`07-judgment/software-factory.md`](07-judgment/software-factory.md)) |
 | **Forever generic** | 100% reusable for any product; CI blocks private leakage |
 
 **North star:** maximum agent speed × maximum professionalism. Details: [`EXCELLENCE.md`](EXCELLENCE.md).
