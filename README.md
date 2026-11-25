@@ -9,6 +9,14 @@
 </p>
 
 
+
+<p align="center">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square" /></a>
+  <a href="https://github.com/Galhoom22/software-factory-all-in-one"><img alt="Public template" src="https://img.shields.io/badge/GitHub-Template-38bdf8?style=flat-square" /></a>
+  <img alt="Forever generic" src="https://img.shields.io/badge/content-forever%20generic-a78bfa?style=flat-square" />
+  <img alt="AI agents" src="https://img.shields.io/badge/built%20for-AI%20agents-f59e0b?style=flat-square" />
+</p>
+
 **Canonical public home:** [Galhoom22/software-factory-all-in-one](https://github.com/Galhoom22/software-factory-all-in-one) · **License:** MIT
 
 Open-source **software factory**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
@@ -18,6 +26,10 @@ Open-source **software factory**: one **planning repository** that holds require
 **One principle:** the user provides root `my-project-requirements.md`. The AI Agent detects that file and runs this factory. No manual template picking.
 
 This folder is **generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
+
+## Contributing
+
+Improvements that raise professionalism are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md). Keep the kit **forever generic** — practices only, never one product’s private details.
 
 ## Why this factory exists
 
