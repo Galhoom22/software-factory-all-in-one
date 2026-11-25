@@ -45,7 +45,7 @@ Planning repository for **{{PRODUCT}}**: {{ONE_LINE}}.
 - [`docs/SEO.md`](docs/SEO.md) — launch SEO (public pages only); FE details in `docs/frontend/SEO.md`.
 - [`docs/DOCKER.md`](docs/DOCKER.md) — local Docker Compose; FE/BE details in `docs/frontend/DOCKER.md` and `docs/backend/DOCKER.md`.
 - [`notes.md`](notes.md) — ideas for later that are not requirements yet.
-- `playbook/` — how this planning repository is set up, reusable for the next product.
+- `software-factory-all-in-one/` — how this planning repository is set up, reusable for the next product.
 
 ### Frontend developer
 

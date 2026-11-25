@@ -56,7 +56,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 
 | Change | Why it raises professionalism |
 |--------|-------------------------------|
-| `playbook/coverage/**` inventory + % | Agents stop duplicating practices; upgrades target thin spots |
+| `software-factory-all-in-one/coverage/**` inventory + % | Agents stop duplicating practices; upgrades target thin spots |
 | Agent protocol in coverage README | Owner asks become: check → report status/% → skip/deepen/add |
 | Prompt in `05-PROMPTS.md` | Copy-paste path for “is this already in the template?” |
 | Lesson in `06-LESSONS.md` | Next product inherits the habit |

@@ -48,7 +48,7 @@ Teams lose decisions in chat. Specs drift from what ships. New teammates cannot 
 
 ## Constraints and preferences
 
-- Stack preference (optional hint only): e.g. Next.js + Laravel — agent must still **advise** from these requirements (`playbook/07-judgment/stack-selection.md`); no universal default stack  
+- Stack preference (optional hint only): e.g. Next.js + Laravel — agent must still **advise** from these requirements (`software-factory-all-in-one/07-judgment/stack-selection.md`); no universal default stack  
 - Hosted checkout only if we take payments (payments may be “later”)  
 - No real personal data in prototypes or sample content  
 - Private GitHub repos  

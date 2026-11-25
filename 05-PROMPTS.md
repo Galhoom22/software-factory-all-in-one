@@ -15,16 +15,16 @@ When coding in an implementation repo (see also [08-IMPLEMENTATION-DAY.md](08-IM
 ## Technologies packs
 Use with [`technologies/README.md`](technologies/README.md).
 
-> Open `playbook/technologies/<stack>/` for the stack I am using (start with `php/` + `php-8.6` for PHP). Follow official-refs, best-practices, **quality.md**, use-these, stop-using, and common-mistakes. **Automatically** re-check official docs/Context7 for the pinned line (no separate search ask). Enforce modern syntax + Clean Code + architecture + earned patterns. Do not dump the full vendor manual. Do not change the product’s SRS version pin without an ADR. If the pack is missing, create it from `technologies/_pack-template/`, update coverage, and sync the studio playbook mirror.
+> Open `software-factory-all-in-one/technologies/<stack>/` for the stack I am using (start with `php/` + `php-8.6` for PHP). Follow official-refs, best-practices, **quality.md**, use-these, stop-using, and common-mistakes. **Automatically** re-check official docs/Context7 for the pinned line (no separate search ask). Enforce modern syntax + Clean Code + architecture + earned patterns. Do not dump the full vendor manual. Do not change the product’s SRS version pin without an ADR. If the pack is missing, create it from `technologies/_pack-template/`, update coverage, and sync the studio playbook mirror.
 
 ## Playbook coverage (before adding a practice)
 Use with [`EXCELLENCE.md`](EXCELLENCE.md) + [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
 
-> **AI harness coverage (D-109):** before adding a new coding agent/IDE guide, read `playbook/coverage/08-ai-agents.md` + `playbook/agents/README.md`. Deepen the pack; do not fork AGENTS.md.
+> **AI harness coverage (D-109):** before adding a new coding agent/IDE guide, read `software-factory-all-in-one/coverage/08-ai-agents.md` + `software-factory-all-in-one/agents/README.md`. Deepen the pack; do not fork AGENTS.md.
 
-> **Always-Current (D-108):** after any playbook edit, finish `07-judgment/playbook-freshness.md` closeout and run `node playbook/scripts/check-playbook-freshness.mjs` before Done.
+> **Always-Current (D-108):** after any playbook edit, finish `07-judgment/playbook-freshness.md` closeout and run `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` before Done.
 
-> Before adding or inventing practice `<X>` in the playbook/template: confirm it raises an [`EXCELLENCE.md`](EXCELLENCE.md) dimension (none down). Then read `playbook/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.
+> Before adding or inventing practice `<X>` in the software-factory-all-in-one/template: confirm it raises an [`EXCELLENCE.md`](EXCELLENCE.md) dimension (none down). Then read `software-factory-all-in-one/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the studio playbook mirror.
 > If `<X>` would **lower** professionalism or weaken the day/workflow: Action = **refuse**; explain why; propose a better alternative or recommend skipping (Candor / D-82). Do not dual-sync a degrading change.
 > If `<X>` would violate COMPLIANCE/SECURITY, professional ethics, or create unmanaged High risk: Action = **refuse**; cite the rule/risk class; propose a **safer alternative scenario** (`07-judgment/compliance-ethics-risk.md`, D-83).
 
@@ -34,7 +34,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 **New planning repo (user already added `my-project-requirements.md`):**
 
-> Root `my-project-requirements.md` is present. That is the activation signal. Read it fully, then `playbook/00-USAGE.md` and `playbook/01-STEPS.md`. Do not wait for another command. Do not overwrite the entry file. Apply 80/20: produce the smallest complete planning workspace for this project. Fill placeholders from the file, ask only blocking questions, record assumptions, keep `playbook/` generic, and do not create implementation repos unless I authorize that.
+> Root `my-project-requirements.md` is present. That is the activation signal. Read it fully, then `software-factory-all-in-one/00-USAGE.md` and `software-factory-all-in-one/01-STEPS.md`. Do not wait for another command. Do not overwrite the entry file. Apply 80/20: produce the smallest complete planning workspace for this project. Fill placeholders from the file, ask only blocking questions, record assumptions, keep `software-factory-all-in-one/` generic, and do not create implementation repos unless I authorize that.
 
 **Reconcile after the user edited the entry file:**
 
@@ -42,13 +42,13 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 **Read the repository (start of every chat — detect entry file):**
 
-> First check for root `my-project-requirements.md`. If it exists, follow `AGENTS.md` § Requirements-driven activation and `playbook/00-USAGE.md`. Also read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md` (if present), `.cursor/rules/`, `.codex/`, `.github/`, `docs/`, `playbook/`, and `project-ui/`. Then continue the user's task (or planning if the entry file just activated work).
+> First check for root `my-project-requirements.md`. If it exists, follow `AGENTS.md` § Requirements-driven activation and `software-factory-all-in-one/00-USAGE.md`. Also read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md` (if present), `.cursor/rules/`, `.codex/`, `.github/`, `docs/`, `software-factory-all-in-one/`, and `project-ui/`. Then continue the user's task (or planning if the entry file just activated work).
 
 ## Starting
 
 **Read the repository (start of every chat):**
 
-> Check for root `my-project-requirements.md` first (activation). Then read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md` (if present), `.cursor/rules/`, `.codex/`, `.github/copilot-instructions.md`, `GEMINI.md`, `.windsurf/rules/`, `.github/`, `docs/`, `playbook/`, and `project-ui/`, then reply only "ok".
+> Check for root `my-project-requirements.md` first (activation). Then read `docs/AGENT_START.md`, `AGENTS.md`, `README.md`, `requirements.md` (if present), `.cursor/rules/`, `.codex/`, `.github/copilot-instructions.md`, `GEMINI.md`, `.windsurf/rules/`, `.github/`, `docs/`, `software-factory-all-in-one/`, and `project-ui/`, then reply only "ok".
 
 **Any AI (including a weak or unfamiliar harness):**
 
@@ -64,11 +64,11 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 **Set up from the playbook (new product):**
 
-> This is a new planning repository. Seed `playbook/templates/` per `playbook/00-USAGE.md` / `playbook/README.md`. I will put (or already put) requirements in root `my-project-requirements.md` — treat that file as activation. Fill placeholders from it, ask only blocking questions, keep the playbook generic, then follow `playbook/01-STEPS.md` with 80/20 depth.
+> This is a new planning repository. Seed `software-factory-all-in-one/templates/` per `software-factory-all-in-one/00-USAGE.md` / `software-factory-all-in-one/README.md`. I will put (or already put) requirements in root `my-project-requirements.md` — treat that file as activation. Fill placeholders from it, ask only blocking questions, keep the playbook generic, then follow `software-factory-all-in-one/01-STEPS.md` with 80/20 depth.
 
 ## Phase 0 and 1
 
-> List the competitors of `<product>` in `<markets>`, pick the single closest one to learn from (**clean-room**: patterns/flows only — no code, logos, copy, or owned content), and list the features that would make us stronger than it. When that peer is load-bearing, add a recon map + must/should/could matrix (`docs/competitor-recon/` or BRD appendix) per `playbook/07-judgment/competitor-recon.md`. If using public reviews for gaps: verbatim linked quotes only, state sample size, mark thin themes — never fabricate. Write the result into BRD §8 and `docs/REFERENCES.md`.
+> List the competitors of `<product>` in `<markets>`, pick the single closest one to learn from (**clean-room**: patterns/flows only — no code, logos, copy, or owned content), and list the features that would make us stronger than it. When that peer is load-bearing, add a recon map + must/should/could matrix (`docs/competitor-recon/` or BRD appendix) per `software-factory-all-in-one/07-judgment/competitor-recon.md`. If using public reviews for gaps: verbatim linked quotes only, state sample size, mark thin themes — never fabricate. Write the result into BRD §8 and `docs/REFERENCES.md`.
 
 > Turn this idea into `requirements.md` in English, following the template's line style. Include both interface languages with a switch on every screen, every sign-in method, sign-out, settings, data rights, billing, the account emails, and the empty state of every core object: `<idea>`.
 
@@ -82,10 +82,10 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Absorb Playwright official intro / best practices / CI / accessibility into the FE TESTING guide and CI templates (short critical list, user-facing locators, web-first asserts, mocked PR API, axe, traces on retry). Update playbook `07-judgment/playwright-e2e.md` if missing. Do not grow a flaky mega-suite.
 
-> Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Plan webhook-first entitlement, signature verification, idempotent events, separate local/CI sandboxes (or fakes), and current Checkout/Payment Intent/Setup Intent patterns (no deprecated Sources/Charges/Tokens for new work). Update `requirements.md` §4, expand `SECURITY.md` WH and `COMPLIANCE.md` CP, and every document that mentions pricing. Use the provider's official Agents/docs (MCP/skills or `.md` URLs) — not memorized API shapes. Judgment: `playbook/07-judgment/payments.md`.
-> If this product reserves scarce capacity (hotels, appointments, seats, slots): design the booking lifecycle (quote → hold → pay/confirm → cancel) with inventory units, hold TTL, recheck-before-commit, idempotency + external reference, policy snapshots, timezone rules, and supplier webhook/poll handling. Sandbox before live. If using a travel MCP (e.g. Nuitée Connect), mirror official API tool order (search → lock price → book → manage) and never invent confirmation numbers. Update API contract + TESTING. Judgment: `playbook/07-judgment/booking.md` (+ `payments.md` when money moves).
+> Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Plan webhook-first entitlement, signature verification, idempotent events, separate local/CI sandboxes (or fakes), and current Checkout/Payment Intent/Setup Intent patterns (no deprecated Sources/Charges/Tokens for new work). Update `requirements.md` §4, expand `SECURITY.md` WH and `COMPLIANCE.md` CP, and every document that mentions pricing. Use the provider's official Agents/docs (MCP/skills or `.md` URLs) — not memorized API shapes. Judgment: `software-factory-all-in-one/07-judgment/payments.md`.
+> If this product reserves scarce capacity (hotels, appointments, seats, slots): design the booking lifecycle (quote → hold → pay/confirm → cancel) with inventory units, hold TTL, recheck-before-commit, idempotency + external reference, policy snapshots, timezone rules, and supplier webhook/poll handling. Sandbox before live. If using a travel MCP (e.g. Nuitée Connect), mirror official API tool order (search → lock price → book → manage) and never invent confirmation numbers. Update API contract + TESTING. Judgment: `software-factory-all-in-one/07-judgment/booking.md` (+ `payments.md` when money moves).
 
-> Write `docs/COMPLIANCE.md` covering the data protection, consumer protection, payment, marketing, accessibility, and AI laws of `<markets>` (include Egypt / Arab / global as relevant), from official sources. List the UI each law requires. Include ethics (IEEE-CS/ACM spirit) and a short risk-management section. Judgment: `playbook/07-judgment/compliance-ethics-risk.md`.
+> Write `docs/COMPLIANCE.md` covering the data protection, consumer protection, payment, marketing, accessibility, and AI laws of `<markets>` (include Egypt / Arab / global as relevant), from official sources. List the UI each law requires. Include ethics (IEEE-CS/ACM spirit) and a short risk-management section. Judgment: `software-factory-all-in-one/07-judgment/compliance-ethics-risk.md`.
 
 > Write `docs/SECURITY.md` from the latest OWASP Top 10 (web, API, and LLM if the product uses AI), ASVS, and NIST password guidance, with rule IDs, owners, and an Every Page Checklist.
 
@@ -93,9 +93,9 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Write `docs/DEPLOYMENT.md` (shared) plus `docs/frontend/DEPLOYMENT.md` and `docs/backend/DEPLOYMENT.md` (step by step, one per repository). Pick the cheapest hosting that meets every requirement in SRS §2 and COMPLIANCE, with prices and terms checked today on the official pages, the options compared, environments, release flow, backups, rollback, and when to grow. Record the choice in DECISIONS.md.
 
-> *(In a new implementation repository)* On a branch, run `specify init --here --integration <agent>` with the Spec Kit version pinned in SRS §2, then write the constitution only from rules that already exist in the planning repository, cited by ID: the governing rules, the SECURITY and COMPLIANCE red lines, the accessibility target, the stack versions, this developer's Definition of Done, and the adaptive feature rules in `playbook/04-FEATURE_SDLC.md` (evidence over checklists, no fabricated results, security unchanged by profile).
+> *(In a new implementation repository)* On a branch, run `specify init --here --integration <agent>` with the Spec Kit version pinned in SRS §2, then write the constitution only from rules that already exist in the planning repository, cited by ID: the governing rules, the SECURITY and COMPLIANCE red lines, the accessibility target, the stack versions, this developer's Definition of Done, and the adaptive feature rules in `software-factory-all-in-one/04-FEATURE_SDLC.md` (evidence over checklists, no fabricated results, security unchanged by profile).
 
-> *(Handoff to implementation)* Using `playbook/04-FEATURE_SDLC.md`, decompose the approved SRS into epics and independently verifiable features. Write `docs/features/requirements-map.md` so every FR/NFR is mapped or explicitly unresolved, flag conflicts, and create one short feature file per feature from the skeleton. Choose Lightweight / Standard / Comprehensive from risk (profile ≠ ASVS level). Keep Definition of Ready, verification matrix, quality gates, and completion decision honest — a filled template is not Done. Do not copy the SRS into those files.
+> *(Handoff to implementation)* Using `software-factory-all-in-one/04-FEATURE_SDLC.md`, decompose the approved SRS into epics and independently verifiable features. Write `docs/features/requirements-map.md` so every FR/NFR is mapped or explicitly unresolved, flag conflicts, and create one short feature file per feature from the skeleton. Choose Lightweight / Standard / Comprehensive from risk (profile ≠ ASVS level). Keep Definition of Ready, verification matrix, quality gates, and completion decision honest — a filled template is not Done. Do not copy the SRS into those files.
 
 > *(AI products)* Write `docs/AI.md`: at least ten free AI sources with an API, their current models per task, and the rules a source must pass before it handles real data.
 
@@ -103,9 +103,9 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > In `project-ui/`, install `<framework>` using only the official installer from `<official docs URL>`. Install nothing else.
 
-> Set up the design skills with one role each as `playbook/03-PROTOTYPE.md` describes, write `PRODUCT.md`, `DESIGN.md`, the design rules file, the UI guard, and the tests, then add them to CI.
+> Set up the design skills with one role each as `software-factory-all-in-one/03-PROTOTYPE.md` describes, write `PRODUCT.md`, `DESIGN.md`, the design rules file, the UI guard, and the tests, then add them to CI.
 
-> Build the starter kit from `playbook/03-PROTOTYPE.md` and the home page "Screens and flows".
+> Build the starter kit from `software-factory-all-in-one/03-PROTOTYPE.md` and the home page "Screens and flows".
 
 > Build the `<area>` screens for the `<actor>`: every state in the PROTOTYPE.md state checklist, production-level, realistic fictional data in every language, both themes, phone width. Add them to `screens.ts`, `flows.ts`, and the README Screen Index, and run the design review.
 

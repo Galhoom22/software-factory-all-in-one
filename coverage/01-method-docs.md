@@ -1,6 +1,6 @@
 # Coverage — method docs (`00`–`09` + judgment)
 
-Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are under `playbook/`.
+Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are under `software-factory-all-in-one/`.
 
 ---
 

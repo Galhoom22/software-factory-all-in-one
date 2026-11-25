@@ -64,7 +64,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Workflow | Homes | % | Covered behaviors |
 |----|----------|-------|---|-------------------|
 | ✅ | Forever-generic playbook | OWNER_STANDING template, `README` | **98** | No product/people/tracker URLs in playbook |
-| ✅ | Owner “add to playbook” dual mirror | OWNER_STANDING, `08` | **95** | Local `playbook/` + studio sync same session |
+| ✅ | Owner “add to playbook” dual mirror | OWNER_STANDING, `08` | **95** | Local `software-factory-all-in-one/` + studio sync same session |
 | ✅ | Coverage atlas consult-before-add | `coverage/` (this folder), prompts, lessons | **100** | Status + % + upgrade vs add |
 | ✅ | Excellence north star / ratchet | `EXCELLENCE.md`, coverage protocol step 0 | **92** | Every edit raises a dimension; trajectory not one-shot (D-87) |
 | ✅ | Studio as a company | `07-judgment/studio-company`, `STUDIO_ORG`, `08` | **90** | Seats, goals, checkout; Paperclip judgment only (D-88) |

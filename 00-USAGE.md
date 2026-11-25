@@ -25,8 +25,8 @@ After planning is ready enough, you create separate **implementation** repositor
 
 1. Create an **empty** private GitHub repository (no auto-generated README if you can avoid it), named for example `<product>-planning`.
 2. Add this Engineering Playbook into it:
-   - Copy the whole `playbook/` folder (method docs), **and**
-   - Copy everything inside `playbook/templates/` to the **repository root** (rename `AGENTS.template.md` → `AGENTS.md`, `LICENSE.template` → `LICENSE`, move `cursor-rules/` → `.cursor/rules/`, `codex/` → `.codex/`, `agent-discovery/` pointers to the root as the README describes).
+   - Copy the whole `software-factory-all-in-one/` folder (method docs), **and**
+   - Copy everything inside `software-factory-all-in-one/templates/` to the **repository root** (rename `AGENTS.template.md` → `AGENTS.md`, `LICENSE.template` → `LICENSE`, move `cursor-rules/` → `.cursor/rules/`, `codex/` → `.codex/`, `agent-discovery/` pointers to the root as the README describes).
 3. Open the repo in your AI agent from the git root.
 
 This repo is the **planning workspace** only.
@@ -60,7 +60,7 @@ The agent must automatically:
 5. Fill placeholders, instantiate templates, and run [`01-STEPS.md`](01-STEPS.md) in order (adapted to what the product needs).
 6. Produce a usable planning workspace (formal `requirements.md`, shared docs, agent rules, CI, prototype when UI exists, CI/CD phase A by default — see [`09-CI-CD.md`](09-CI-CD.md)).
 7. Ask only **blocking** questions; record assumptions otherwise.
-8. Keep the playbook **generic** — never paste product names into `playbook/` method docs.
+8. Keep the playbook **generic** — never paste product names into `software-factory-all-in-one/` method docs.
 
 No separate “initialize” command is required. If the file is **absent**, the agent must **not** assume a new-project bootstrap was requested.
 
@@ -114,7 +114,7 @@ This playbook improves forever via [`EXCELLENCE.md`](EXCELLENCE.md) (north star 
 
 Planning CI runs these without a manual step:
 
-- `playbook/scripts/check-requirements-activation.mjs` — playbook still wires activation.
+- `software-factory-all-in-one/scripts/check-requirements-activation.mjs` — playbook still wires activation.
 - `scripts/check-planning-entry.mjs` — if `my-project-requirements.md` exists, agent rules must be wired; prints derived-doc progress. If the file is absent, the check skips.
 
-Studio mirror `planning-playbook` runs the same gates via synced `.github/workflows/ci.yml`.
+Public `Galhoom22/software-factory-all-in-one` runs the same gates via synced `.github/workflows/ci.yml`.

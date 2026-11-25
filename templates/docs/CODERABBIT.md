@@ -23,7 +23,7 @@ Keep `AGENTS.md` in each implementation repo (CodeRabbit loads it by default).
 
 Default **Free** plan: full reviews via **CLI/IDE**; GitHub PRs get **summarization** only ([plans](https://docs.coderabbit.ai/management/plans)). Do not enable paid trials or usage products unless the owner asks.
 
-Closeout: **must-finish 100% → PR → CI green → human code-review bar** (readability + modern pinned-line syntax + best practices — `playbook/07-judgment/human-code-review.md`) **+ CodeRabbit** (Free: CLI/IDE + summary; paid: GitHub review) → merge → verify → tracker → day page.
+Closeout: **must-finish 100% → PR → CI green → human code-review bar** (readability + modern pinned-line syntax + best practices — `software-factory-all-in-one/07-judgment/human-code-review.md`) **+ CodeRabbit** (Free: CLI/IDE + summary; paid: GitHub review) → merge → verify → tracker → day page.
 
 | Surface | Free | Paid later |
 |---------|------|------------|
@@ -46,4 +46,4 @@ Secrets; trust boundary (server authority); cross-user access; PII in AI/logs/UR
 
 ## 4. What CodeRabbit does not replace
 
-The **human code-review bar** (readability / modern pinned-line syntax / best practices — `playbook/07-judgment/human-code-review.md`); human judgment on auth, billing, and deletion; CI tests; legal counsel; product decisions.
+The **human code-review bar** (readability / modern pinned-line syntax / best practices — `software-factory-all-in-one/07-judgment/human-code-review.md`); human judgment on auth, billing, and deletion; CI tests; legal counsel; product decisions.

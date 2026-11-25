@@ -1,4 +1,4 @@
-# Runs on the studio planning-playbook mirror after sync (playbook/ → repo root).
+# Runs on Galhoom22/software-factory-all-in-one after sync (local software-factory-all-in-one/ → repo root).
 # Before first use elsewhere, pin action SHAs to current releases (Dependabot afterwards).
 name: Playbook CI
 
@@ -31,3 +31,4 @@ jobs:
 
       - name: Planning entry gate (skip if no my-project-requirements.md)
         run: node scripts/check-planning-entry.mjs
+

@@ -1,6 +1,6 @@
 # Codex setup (CLI-first)
 
-<!-- Copy to `.codex/README.md`. Plain path names only (template lives under playbook/templates/). -->
+<!-- Copy to `.codex/README.md`. Plain path names only (template lives under software-factory-all-in-one/templates/). -->
 
 OpenAI Codex (**CLI**, IDE extension, and Desktop app) share this folder. **Primary target: Codex CLI.**
 

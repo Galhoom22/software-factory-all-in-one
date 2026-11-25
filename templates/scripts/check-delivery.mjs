@@ -17,7 +17,7 @@ const fail = (msg) => {
 
 const requiredFiles = [
   "docs/DELIVERY.md",
-  "playbook/02-DELIVERY.md",
+  "software-factory-all-in-one/02-DELIVERY.md",
   "AGENTS.md",
   ".cursor/rules/delivery.mdc",
   ".codex/config.toml",
@@ -99,7 +99,7 @@ const agentFacing = [
   ".codex/README.md",
   ".github/copilot-instructions.md",
   ".windsurf/rules/00-agent-start.md",
-  "playbook/02-DELIVERY.md",
+  "software-factory-all-in-one/02-DELIVERY.md",
 ];
 const banned = [
   /good enough for MVP/i,
@@ -115,10 +115,10 @@ for (const f of agentFacing) {
   }
 }
 
-const playbook = read("playbook/02-DELIVERY.md");
+const playbook = read("software-factory-all-in-one/02-DELIVERY.md");
 if (!playbook.includes("There is no MVP delivery mode")) {
-  fail("playbook/02-DELIVERY.md must state there is no MVP delivery mode");
+  fail("software-factory-all-in-one/02-DELIVERY.md must state there is no MVP delivery mode");
 }
-if (!playbook.includes("actor")) fail("playbook/02-DELIVERY.md must describe the actor loop");
+if (!playbook.includes("actor")) fail("software-factory-all-in-one/02-DELIVERY.md must describe the actor loop");
 
 console.log("check-delivery: ok");

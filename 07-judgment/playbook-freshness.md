@@ -2,7 +2,7 @@
 
 **Purpose:** the Engineering Playbook must stay a **living, up-to-date** reference. Stale packs, stale %, stale version pins, or a local copy that drifted from the studio mirror are professionalism failures — not “fine for later.”
 
-**Pairs with:** [`EXCELLENCE.md`](../EXCELLENCE.md) ratchet · [`coverage/`](../coverage/README.md) · [`technologies/README.md`](../technologies/README.md) (D-79) · Context7 ([`context7-docs.md`](context7-docs.md), D-97) · dual sync (D-52).
+**Pairs with:** [`EXCELLENCE.md`](../EXCELLENCE.md) ratchet · [`coverage/`](../coverage/README.md) · [`technologies/README.md`](../technologies/README.md) (D-79) · Context7 ([`context7-docs.md`](context7-docs.md), D-97) · public mirror sync (D-110).
 
 ---
 
@@ -12,8 +12,8 @@
 
 1. Leave the playbook **current as of this session** — not “mostly right.”
 2. Finish the **Always-Current closeout** below **before** claiming Done / ending the session.
-3. Run `node playbook/scripts/check-playbook-freshness.mjs` (planning CI runs it too). Fix failures in the same change.
-4. Sync the studio playbook mirror the same session (`node scripts/sync-planning-playbook.mjs` from the product planning root — D-52).
+3. Run `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` (planning CI runs it too). Fix failures in the same change.
+4. Sync the public factory mirror the same session (`node scripts/sync-software-factory.mjs` from the product planning root — D-110).
 
 Candor still wins: if an ask would *lower* bar or freeze outdated advice as “done,” refuse (D-82).
 
@@ -32,8 +32,8 @@ Agents run this checklist whenever the rule fires. Skip a line only with an expl
 | 5 | **Owner-names / URL paste** | If the owner named a stack or pasted docs: refresh/create pack same session (D-79) — no “we’ll update later” |
 | 6 | **Templates** | If the practice belongs in seed templates, update `templates/` the same change (generic only) |
 | 7 | **Prompts / lessons** | One-line wire in `05-PROMPTS` / `06-LESSONS` when agents must discover the rule |
-| 8 | **Structural gate** | `node playbook/scripts/check-playbook-freshness.mjs` exits 0 |
-| 9 | **Mirror** | Studio `planning-playbook` synced (D-52) |
+| 8 | **Structural gate** | `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` exits 0 |
+| 9 | **Mirror** | Public `Galhoom22/software-factory-all-in-one` synced (D-110) |
 | 10 | **Trail** | Lasting bar → product `DECISIONS` + `OWNER_STANDING` changelog when this product hosts the playbook copy |
 
 **Memory is not evidence of “latest.”** Training cut and old chat do not count as a freshness check.
@@ -48,7 +48,7 @@ Agents run this checklist whenever the rule fires. Skip a line only with an expl
 | Technologies packs | Pin + edition/line match **today’s stable** official docs for that pack; Checked dates honest |
 | Coverage % | Reflects files that exist **now**; two-numbers rule (craft vs industry) intact |
 | Templates | Seed a new planning repo without teaching abandoned procedures |
-| Mirror | GitHub studio playbook == local `playbook/` after the session |
+| Mirror | Public GitHub factory == local `software-factory-all-in-one/` after the session |
 
 Not required every session: re-audit **every** pack on earth. Required: never leave **touched** homes stale, and never invent “current” without an official/Context7 check.
 
@@ -61,7 +61,7 @@ Not required every session: re-audit **every** pack on earth. Required: never le
 | Edit a pack, leave old Checked dates | Re-check official docs; stamp today |
 | Add a stack, skip `coverage/` + surfaces language row | Update both in the same change |
 | “CI green later” after playbook edit | Run freshness script before push |
-| Dual-sync forgotten | D-52 same session — no second ask |
+| Dual-sync forgotten | D-110 same session — no second ask |
 | Claim huge professionalism gain with no ratchet evidence | Cite dimension + checklist rows completed |
 
 ---

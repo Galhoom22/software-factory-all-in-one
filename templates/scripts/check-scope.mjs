@@ -54,7 +54,7 @@ const walkBannedNames = (dir, depth = 0) => {
     return;
   }
   for (const name of entries) {
-    if (name === "node_modules" || name === ".git" || name === "project-ui" || name === "playbook" || name === "vendor") {
+    if (name === "node_modules" || name === ".git" || name === "project-ui" || name === "software-factory-all-in-one" || name === "vendor") {
       continue;
     }
     const full = join(dir, name);

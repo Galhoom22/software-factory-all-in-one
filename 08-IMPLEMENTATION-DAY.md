@@ -218,7 +218,7 @@ The Pareto block is written so the owner can paste it into ChatGPT (or similar) 
 
 ## Excellence ratchet (playbook changes)
 
-When this day (or any session) updates the playbook/template: follow [`EXCELLENCE.md`](EXCELLENCE.md) — raise a dimension, atlas first, candor on downgrades, update coverage %, sync studio mirror. The dream is the best reusable method; progress is incremental, never a single megaprompt.
+When this day (or any session) updates the software-factory-all-in-one/template: follow [`EXCELLENCE.md`](EXCELLENCE.md) — raise a dimension, atlas first, candor on downgrades, update coverage %, sync studio mirror. The dream is the best reusable method; progress is incremental, never a single megaprompt.
 
 ## Coverage atlas (before inventing a practice)
 When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
@@ -232,7 +232,7 @@ When the owner **changes** a lasting preference that belongs in this method (day
 
 1. Update the product `docs/OWNER_STANDING.md` (+ changelog) in the same session.
 2. Update **this playbook** (this file, [`09-CI-CD.md`](09-CI-CD.md), and/or `templates/docs/OWNER_STANDING.md`, prompts, lessons) so the **next** product inherits it — keep wording generic.
-3. If the studio keeps a private playbook GitHub mirror, **sync in the same session** (for example `node scripts/sync-planning-playbook.mjs`).
+3. If the studio keeps a private playbook GitHub mirror, **sync in the same session** (for example `node scripts/sync-software-factory.mjs`).
 
 Do not leave standing only in chat memory or only in one product’s docs.
 

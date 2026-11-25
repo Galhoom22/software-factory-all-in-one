@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Verifies the playbook wires requirements-driven activation + CI automation.
- * Run from planning repo: node playbook/scripts/check-requirements-activation.mjs
+ * Run from planning repo: node software-factory-all-in-one/scripts/check-requirements-activation.mjs
  * Or from playbook root after sync: node scripts/check-requirements-activation.mjs
  */
 import fs from "node:fs";

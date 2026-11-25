@@ -7,7 +7,7 @@ alwaysApply: true
 
 1. Read `docs/OWNER_STANDING.md` (repo root) for lasting owner working preferences. Do **not** rely on chat memory alone.
 2. When the user states a **lasting** preference about how agents must work (not a one-off task), **update `docs/OWNER_STANDING.md` in the same session** (edit the matching section + changelog line). Tool-specific board details go in their standing board file; product/tech decisions go in `docs/DECISIONS.md`.
-3. If that preference is a **reusable workflow** (implementation day loop, closeout order, CI/CD gates, final reply shape, standing↔playbook mirror), also update `playbook/` in **generic** wording — especially `playbook/08-IMPLEMENTATION-DAY.md`, `playbook/09-CI-CD.md`, and `playbook/templates/docs/OWNER_STANDING.md` — then sync any studio playbook GitHub mirror in the same session when the product uses one (for example `node scripts/sync-planning-playbook.mjs`).
+3. If that preference is a **reusable workflow** (implementation day loop, closeout order, CI/CD gates, final reply shape, standing↔playbook mirror), also update `software-factory-all-in-one/` in **generic** wording — especially `software-factory-all-in-one/08-IMPLEMENTATION-DAY.md`, `software-factory-all-in-one/09-CI-CD.md`, and `software-factory-all-in-one/templates/docs/OWNER_STANDING.md` — then sync any studio playbook GitHub mirror in the same session when the product uses one (for example `node scripts/sync-software-factory.mjs`).
 4. After updating standing docs, keep local default branch ↔ origin mirrored per OWNER_STANDING / AGENTS Git Safety.
 
 

@@ -90,7 +90,7 @@ When reviewing a whole deployable, score trade-offs across: **Reliability**, **S
 
 | Forbid | Why |
 |--------|-----|
-| Vendoring this course (or Azure ARM / RDMA / LoRA lesson trees) into `playbook/` or AGENTS | Forever-generic; rot; second constitution |
+| Vendoring this course (or Azure ARM / RDMA / LoRA lesson trees) into `software-factory-all-in-one/` or AGENTS | Forever-generic; rot; second constitution |
 | Requiring enterprise HPC/edge patterns on a modular monolith SPA↔API product | Fashion ≠ fit ([`stack-selection.md`](stack-selection.md)) |
 | Treating audit logs as proof when high-impact branches can bypass them | False evidence |
 | Letting model confidence raise practice level | Consequence picks the level |

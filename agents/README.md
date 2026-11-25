@@ -9,7 +9,7 @@
 ## Layout
 
 ```text
-playbook/agents/
+software-factory-all-in-one/agents/
   README.md
   _pack-template/
   cursor/  openai-codex/  claude-code/  chatgpt/  gemini/

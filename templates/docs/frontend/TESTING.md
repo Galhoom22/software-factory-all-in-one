@@ -16,7 +16,7 @@
 2. Prefer unit/component tests; keep E2E to a **short critical list** (typically 3–6 journeys). Coverage % is a signal, not the goal.
 3. Mock the API on every PR (`page.route`, MSW, or stub server). Full-stack smoke is staging/release — never a live sibling API on PR CI.
 4. Accessibility is a gate: `@axe-core/playwright` on critical journeys (no critical/serious). Automated axe does not replace keyboard/manual checks.
-5. Depth follows `playbook/04-FEATURE_SDLC.md` profiles — never weaken security or a11y for “Lightweight.”
+5. Depth follows `software-factory-all-in-one/04-FEATURE_SDLC.md` profiles — never weaken security or a11y for “Lightweight.”
 6. Playwright judgment: planning playbook `07-judgment/playwright-e2e.md` (official intro / best practices / CI / a11y distilled).
 
 ## 2. Tooling
@@ -72,4 +72,4 @@ Lint, typecheck, unit/component, **critical Playwright** (when enabled), secret 
 
 ## Algorithmic / hot-path performance
 
-When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `playbook/07-judgment/dsa-performance.md`.
+When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `software-factory-all-in-one/07-judgment/dsa-performance.md`.

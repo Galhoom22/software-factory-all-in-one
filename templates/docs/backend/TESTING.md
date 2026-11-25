@@ -17,7 +17,7 @@
 3. Fake external providers (AI, payments, mail, embeddings) in CI. If a real provider sandbox is required, use a **CI-only** sandbox separate from local developer sandboxes.
 4. SPA cookie-auth feature tests use the stateful/session harness the product actually ships — not bearer-only assumptions.
 5. Coverage % is a signal, not a merge goal.
-6. Depth follows `playbook/04-FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
+6. Depth follows `software-factory-all-in-one/04-FEATURE_SDLC.md` profiles; never weaken security tests for “Lightweight.”
 
 ## 2. Tooling
 
@@ -59,11 +59,11 @@ Formatter, static analysis, full test suite, secret scan on every PR.
 
 ## Algorithmic / hot-path performance
 
-When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `playbook/07-judgment/dsa-performance.md`.
+When a change can grow with data (lists, search/match, export, heavy queries), require a short DSA check: expected `n`, Time/Space class, structure choice, edge cases. Treat N+1 / unbounded loads / nested O(n²+) in the request path as failures. Judgment: `software-factory-all-in-one/07-judgment/dsa-performance.md`.
 
 ## 7. API readiness (environments)
 
-Local HTTP green is **not** enough to hand an API to frontend or call it production-ready. Judgment: `playbook/07-judgment/api-readiness.md`.
+Local HTTP green is **not** enough to hand an API to frontend or call it production-ready. Judgment: `software-factory-all-in-one/07-judgment/api-readiness.md`.
 
 | Layer | Proof | Owner |
 |-------|-------|-------|

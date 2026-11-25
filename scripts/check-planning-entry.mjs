@@ -11,7 +11,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const root = path.basename(path.dirname(here)) === "playbook"
+const root = path.basename(path.dirname(here)) === "software-factory-all-in-one"
   ? path.resolve(here, "../..")
   : path.resolve(here, "..");
 

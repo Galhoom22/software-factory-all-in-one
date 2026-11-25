@@ -25,7 +25,7 @@ If a pack is missing a row above, deepen that pack — do not invent a parallel 
 ## Layout
 
 ```text
-playbook/technologies/
+software-factory-all-in-one/technologies/
   README.md                 ← this file (agent protocol)
   _pack-template/           ← copy when adding Laravel, Next.js, …
   php/                      ← first language pack
@@ -84,7 +84,7 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 1. **Search latest (same session):** open official vendor docs and/or Context7 for that stack’s **current stable** line. Memory and old chat are not evidence.
 2. **Compare to the playbook pack:** read `technologies/<slug>/` (or note that it is missing). Match version slice, `use-these` / `stop-using`, `official-refs` dates, and `quality.md` against what official docs say **today**.
 3. **If current:** say so briefly and proceed with advice/coding from the pack + product SRS pin.
-4. **If stale or missing:** update or create the pack from `_pack-template/` the **same session** (latest line + use/stop/mistakes + quality + dated official-refs), bump [`coverage/`](../coverage/README.md), commit path through planning `main` per product rules, and run `node scripts/sync-planning-playbook.mjs` (D-52). The playbook is a **starting point that must stay current**, not a frozen snapshot.
+4. **If stale or missing:** update or create the pack from `_pack-template/` the **same session** (latest line + use/stop/mistakes + quality + dated official-refs), bump [`coverage/`](../coverage/README.md), commit path through planning `main` per product rules, and run `node scripts/sync-software-factory.mjs` (D-52). The playbook is a **starting point that must stay current**, not a frozen snapshot.
 5. **Product SRS still wins** for what that product *runs*. If the pack moves ahead of a product pin, update the pack and **propose** an ADR — do not silently bump production versions.
 6. Still run [`07-judgment/stack-selection.md`](../07-judgment/stack-selection.md) when the question is “which stack?” — this trigger is for **freshness of craft**, not for forcing one stack onto every product.
 

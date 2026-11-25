@@ -45,7 +45,7 @@
 - [ ] Tests match [TESTING.md](TESTING.md).
 - [ ] Tests, static analysis, and dependency audits pass in CI.
 - [ ] Verified end to end with the real frontend.
-- [ ] Engineering depth matches the feature's risk profile in `playbook/04-FEATURE_SDLC.md`; completion cites verification evidence. Definition of Done, release, and outcome validation stay separate.
+- [ ] Engineering depth matches the feature's risk profile in `software-factory-all-in-one/04-FEATURE_SDLC.md`; completion cites verification evidence. Definition of Done, release, and outcome validation stay separate.
 
 ## 6. Working With the Frontend Developer
 

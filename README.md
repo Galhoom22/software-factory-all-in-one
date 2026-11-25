@@ -1,16 +1,18 @@
-# Playbook — Planning Repository Template
+# Software Factory All-in-One
 
-A reusable **project-planning engine**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
+**Canonical public home:** [Galhoom22/software-factory-all-in-one](https://github.com/Galhoom22/software-factory-all-in-one) · **License:** MIT
+
+Open-source **software factory**: one **planning repository** that holds requirements, derived documents, AI agent rules, CI, and a **prototype** — before real implementation repos exist.
 
 **How to use (start here):** [`00-USAGE.md`](00-USAGE.md)
 
-**One principle:** the user provides root `my-project-requirements.md`. The AI Agent detects that file and runs the playbook. No manual template picking.
+**One principle:** the user provides root `my-project-requirements.md`. The AI Agent detects that file and runs this factory. No manual template picking.
 
 This folder is **generic** and must **stay** generic forever. Keep product names, people, org paths, tracker keys, and day-page URLs out of method docs and out of `templates/` — those belong in each product’s own `docs/OWNER_STANDING.md` after copy. Placeholder **examples** in the table below are sample fill-ins only; replace them for each product. Never reverse this rule when adding CI/CD, day-loop, or other practices.
 
-## Why this playbook exists
+## Why this factory exists
 
-**Purpose:** one living place that holds the craft needed to build **any** software (and AI/software-backed products) so AI agents work at **maximum speed with maximum quality**. Agents bring speed; this playbook brings the rails, judgment, stacks, day loops, and lessons that make quality repeatable — for hands-off agent coding **and** for professional revenue products. Grow it over time (languages, packs, lessons). Full north star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
+**Purpose:** one living place that holds the craft needed to build **any** software (and AI/software-backed products) so AI agents work at **maximum speed with maximum quality**. Agents bring speed; this factory brings the rails, judgment, stacks, day loops, and lessons that make quality repeatable — for hands-off agent coding **and** for professional revenue products. Grow it over time (languages, packs, lessons). Full north star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
 
 
 
@@ -19,8 +21,9 @@ This folder is **generic** and must **stay** generic forever. Keep product names
 Method files are **prefixed so they sort in delivery order**. Keep this numbering when you add a new method doc.
 
 ```text
-playbook/
+software-factory-all-in-one/
   README.md                 Entry (this file)
+  LICENSE                   MIT
   00-USAGE.md               How a new user starts (requirements-driven)
   01-STEPS.md               Ordered steps idea → complete plan
   02-DELIVERY.md            Actor-loop delivery (no MVP mode)
@@ -36,7 +39,7 @@ playbook/
   agents/                   Per-harness packs (Cursor, Codex, Claude, Gemini, Trae, …)
   technologies/             Per-stack packs (PHP, Laravel, Next.js, …)
   examples/                 Copyable samples (e.g. my-project-requirements)
-  scripts/                  Playbook self-checks (activation wiring)
+  scripts/                  Factory self-checks (activation wiring)
   templates/                Skeleton of a new planning repository
 ```
 
@@ -89,7 +92,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
 
 **Manual seed checklist** (what the agent also does when bootstrapping):
 
-1. Create an empty **private** repository for the product's planning (for example `erp-planning`). If you use a studio org copy of this playbook, start from that private mirror’s `templates/` instead of inventing a new layout.
+1. Create an empty **private** repository for the product's planning (for example `erp-planning`). Clone or copy from the public [Software Factory All-in-One](https://github.com/Galhoom22/software-factory-all-in-one) and start from its `templates/`.
 2. Copy everything inside [`templates/`](templates/) to the new repository's root, including the hidden `.github/`, `.editorconfig`, `.gitattributes`, and `.gitignore`.
 3. Rename the files that carry a different name here so they do not affect this repository:
    - `AGENTS.template.md` → `AGENTS.md`
@@ -99,7 +102,7 @@ Use it at the very start of a new product (an ERP, a booking app, a backend-only
    - `cursor-rules/` → `.cursor/rules/`
    - `codex/` → `.codex/` (OpenAI Codex project config + hooks)
    - `LICENSE.template` → `LICENSE`
-4. Copy this whole `playbook/` folder into the new repository too, so it keeps improving there.
+4. Copy this whole `software-factory-all-in-one/` folder into the new repository too, so it keeps improving there.
 5. Add root **`my-project-requirements.md`** (from [`examples/my-project-requirements.example.md`](examples/my-project-requirements.example.md)). That file is the activation signal.
 6. Replace every `{{PLACEHOLDER}}` in seeded templates as the agent fills them from the requirements file. Delete any section marked *Optional* that the product does not need (for example `docs/AI.md` when the product has no AI).
 7. The agent follows [`01-STEPS.md`](01-STEPS.md) from Phase 0 with 80/20 depth.
@@ -126,7 +129,7 @@ Every other `{{...}}` is a local fill-in named for what it holds (for example `{
 
 ## Keeping It Current
 
-**Hard gate (Always-Current):** [`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md) — after every playbook change, finish the closeout checklist and run `node playbook/scripts/check-playbook-freshness.mjs` before Done. Stale packs/%/pins are a professionalism failure.
+**Hard gate (Always-Current):** [`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md) — after every playbook change, finish the closeout checklist and run `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` before Done. Stale packs/%/pins are a professionalism failure.
 
 **North star:** [`EXCELLENCE.md`](EXCELLENCE.md) — aspiration is the best human+AI planning→implementation playbook; progress is a **ratchet** (each change raises at least one excellence dimension). One session never “finishes” that dream.
 

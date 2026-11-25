@@ -4,7 +4,7 @@
 
 **What this is not:** a second constitution, a product backlog, or permission to skip quality. Presence ≠ Done for a product; this atlas only answers “does the **template/method** already have this?”
 
-**Mirrors:** keep this folder identical in the local product `playbook/` copy **and** the studio GitHub playbook mirror (same-session sync). Forever-generic — no product names, people, tracker keys, or day-page URLs.
+**Mirrors:** keep this folder identical in the local product `software-factory-all-in-one/` copy **and** the public Software Factory GitHub mirror (same-session sync). Forever-generic — no product names, people, tracker keys, or day-page URLs.
 
 ---
 
@@ -150,7 +150,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 ## File map
 
 ```text
-playbook/coverage/
+software-factory-all-in-one/coverage/
   README.md                 ← you are here (rubric + scorecard + agent protocol)
   01-method-docs.md         ← 00–09 + 07-judgment
   02-templates-docs.md      ← templates/docs, requirements, project-ui docs

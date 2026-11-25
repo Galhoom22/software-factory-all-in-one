@@ -7,7 +7,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 ## First check — requirements activation
 
 1. Look for root **`my-project-requirements.md`**.
-2. If it **exists**: that file is the activation signal. Read it fully, then read `playbook/00-USAGE.md` and run (or continue) playbook planning per `AGENTS.md` § Requirements-driven activation. Do **not** wait for a separate “start planning” command. Do **not** overwrite the entry file.
+2. If it **exists**: that file is the activation signal. Read it fully, then read `software-factory-all-in-one/00-USAGE.md` and run (or continue) playbook planning per `AGENTS.md` § Requirements-driven activation. Do **not** wait for a separate “start planning” command. Do **not** overwrite the entry file.
 3. If it is **absent**: do **not** bootstrap a new product unless the user explicitly asked. Continue with the user’s task under the rails below.
 4. Formal product truth, once written, lives in `requirements.md` (derived from the entry file). Keep both consistent when both exist.
 
@@ -28,7 +28,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 6. Do only what the user asked. Prefer the smallest correct change. (Exception: when `my-project-requirements.md` is present, “what the user asked” includes running the playbook from that file.)
 7. Keep every affected document current in the **same** change.
 8. Do **not** weaken Governing Product Rules, `docs/DELIVERY.md`, or accepted decisions without **explicit** user approval.
-9. Keep `playbook/` generic — no product names, people, or tracker IDs in method docs.
+9. Keep `software-factory-all-in-one/` generic — no product names, people, or tracker IDs in method docs.
 10. Do **not** create implementation repositories unless the user explicitly authorizes that.
 
 ## Where truth lives
@@ -37,7 +37,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 |------|------|
 | Human entry / activation | `my-project-requirements.md` (when present) |
 | Product rules (formal) | `requirements.md` |
-| How to use the playbook | `playbook/00-USAGE.md` |
+| How to use the playbook | `software-factory-all-in-one/00-USAGE.md` |
 | Delivery method | `docs/DELIVERY.md` |
 | Full agent rules | `AGENTS.md` |
 | Decisions | `docs/DECISIONS.md`, `docs/decision-logs/` |
@@ -61,7 +61,7 @@ node scripts/check-scope.mjs
 node scripts/check-planning-entry.mjs
 ```
 
-If this repository keeps a nested `playbook/`, also run `node playbook/scripts/check-requirements-activation.mjs` and `node playbook/scripts/check-playbook-freshness.mjs`.
+If this repository keeps a nested `software-factory-all-in-one/`, also run `node software-factory-all-in-one/scripts/check-requirements-activation.mjs` and `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs`.
 
 If you changed `project-ui/`, also run that package's `npm test`, `npm run check:ui`, and `npm run lint`.
 

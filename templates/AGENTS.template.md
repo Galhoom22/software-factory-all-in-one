@@ -14,11 +14,11 @@ When you start or inspect this repository:
 
 1. If root `my-project-requirements.md` **exists**, treat that as the instruction to run (or continue) playbook planning — do **not** wait for "start planning" / "initialize".
 2. Read the whole file. Do **not** overwrite, delete, or empty it.
-3. Read `playbook/00-USAGE.md` and `playbook/01-STEPS.md`. Apply **80/20**: smallest complete planning set for this project's complexity; skip unneeded docs.
+3. Read `software-factory-all-in-one/00-USAGE.md` and `software-factory-all-in-one/01-STEPS.md`. Apply **80/20**: smallest complete planning set for this project's complexity; skip unneeded docs.
 4. Derive formal [`requirements.md`](requirements.md) and other planning assets from the entry file (and later reconciliations). Keep `my-project-requirements.md` as the human entry; keep `requirements.md` as the structured product source of truth once it exists.
 5. Ask only **blocking** questions. Record assumptions and their impact. Do not re-ask facts already in the file.
 6. On re-runs: reconcile derived docs; preserve accepted decisions unless the new requirements justify revisiting them; list incomplete work. Do not duplicate whole documents from scratch.
-7. Never contaminate `playbook/` method docs or generic templates with product names, people, tracker IDs, or URLs.
+7. Never contaminate `software-factory-all-in-one/` method docs or generic templates with product names, people, tracker IDs, or URLs.
 8. Do **not** create implementation repositories unless the user explicitly authorizes that. Never mix production application code into this planning repo.
 
 If root `my-project-requirements.md` is **absent**, do **not** assume a new-project bootstrap was requested. Follow the user's explicit task and the rest of this file.
@@ -55,7 +55,7 @@ When adding a new harness: add a thin pointer that points here; do not fork a se
 ## Professionalism bar
 
 - Every pass must leave the repository **measurably more professional** than before: fix defects found on the way (and log them), leave a guard or check when a contract changed, delete dead weight you uncover, verify every interface language and text direction that the change touches, and report concretely what improved. A pass that only adds without improving quality is incomplete.
-- Playbook/template edits follow playbook `EXCELLENCE.md`: ratchet toward the best reusable method; raise an excellence dimension; deepen-over-duplicate via `playbook/coverage/`; never dual-sync a bar-lowering change.
+- Playbook/template edits follow playbook `EXCELLENCE.md`: ratchet toward the best reusable method; raise an excellence dimension; deepen-over-duplicate via `software-factory-all-in-one/coverage/`; never dual-sync a bar-lowering change.
 
 ## Borrowing from outside
 
@@ -78,7 +78,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
 - The team is **frontend and backend**. Frontend-only content goes in `docs/frontend/`, backend-only content in `docs/backend/`, and anything both sides need stays in the shared docs. Every SRS requirement has an Owner (FE / BE / Both). The API contract is the only shared interface.
 - [`README.md`](README.md) is the public summary and must stay consistent with `requirements.md`.
 - [`docs/COMPLIANCE.md`](docs/COMPLIANCE.md) and [`docs/SECURITY.md`](docs/SECURITY.md) define legal and security red lines. Never propose or document a feature that violates them; flag any conflict to the user. Run the SECURITY "Every Page Checklist" for UI work.
-- Booking/reservation products: follow `playbook/07-judgment/booking.md` (holds, recheck-before-commit, idempotency; D-84). Pair with `07-judgment/payments.md` when money moves.
+- Booking/reservation products: follow `software-factory-all-in-one/07-judgment/booking.md` (holds, recheck-before-commit, idempotency; D-84). Pair with `07-judgment/payments.md` when money moves.
 - [`docs/frontend/TESTING.md`](docs/frontend/TESTING.md) and [`docs/backend/TESTING.md`](docs/backend/TESTING.md) define how each owner verifies the product. Keep them split; prefer risk-matched tests over coverage theater.
 - [`docs/CODERABBIT.md`](docs/CODERABBIT.md) (if present) defines how an AI PR reviewer is configured for implementation repos. Keep FE/BE yaml and guidelines in sync with SECURITY and the API contract.
 - [`docs/TESTSPRITE.md`](docs/TESTSPRITE.md) (if present) defines how agentic live-app verification is configured for staging. Keep FE/BE guidelines and PRD/api-doc uploads in sync with the product contract; never use real personal data.
@@ -88,7 +88,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
 - [`docs/SEO.md`](docs/SEO.md) and [`docs/frontend/SEO.md`](docs/frontend/SEO.md) define launch search readiness: index public marketing and legal only; keep the signed-in app `noindex`; bilingual metadata, robots/sitemap, honest structured data, plus GEO craft for AI answer surfaces — never fake authority. Day gate: playbook `07-judgment/seo-geo.md`.
 - **Official references only:** versions and documentation links live in [SRS §2](docs/SRS.md#2-technology-stack). Use the latest **stable / Active LTS** of each listed line (not RCs). Verify on the official site before changing a version. Pin CI tools (Node, `impeccable@x.y.z`) to the same lines.
 - [`notes.md`](notes.md) holds ideas, not requirements. An idea enters `requirements.md` only when the user decides it, and leaves `notes.md` once it is built.
-- `playbook/` holds the reusable method behind this repository. When a change creates a practice worth repeating in the next product (a document, a check, a rule, a lesson), update the playbook in the same commit, keeping it generic. `playbook/04-FEATURE_SDLC.md` is for **implementation** repositories (feature decomposition and adaptive depth); do not create `docs/features/` in the planning repository. `playbook/08-IMPLEMENTATION-DAY.md` is the owner↔agent **day pipeline** (run-through → closeout → Pareto + handoff). Lasting cadence changes update `docs/OWNER_STANDING.md` **and** the playbook (then sync any studio playbook mirror).
+- `software-factory-all-in-one/` holds the reusable method behind this repository. When a change creates a practice worth repeating in the next product (a document, a check, a rule, a lesson), update the playbook in the same commit, keeping it generic. `software-factory-all-in-one/04-FEATURE_SDLC.md` is for **implementation** repositories (feature decomposition and adaptive depth); do not create `docs/features/` in the planning repository. `software-factory-all-in-one/08-IMPLEMENTATION-DAY.md` is the owner↔agent **day pipeline** (run-through → closeout → Pareto + handoff). Lasting cadence changes update `docs/OWNER_STANDING.md` **and** the playbook (then sync any studio playbook mirror).
 
 ## Git Safety (Mandatory)
 

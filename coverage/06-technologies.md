@@ -1,6 +1,6 @@
 # Coverage — technologies library
 
-Paths under `playbook/technologies/`.
+Paths under `software-factory-all-in-one/technologies/`.
 
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|

@@ -34,7 +34,7 @@ Domain authentication (DKIM, SPF, DMARC), leaving the email sandbox, private sto
 
 ## 8. Smoke Test (after every deploy)
 
-Run after **staging** deploy on every day closeout that reaches Phase B+, and after **production** only on an approved release. Fictional data only. Part of API readiness: `playbook/07-judgment/api-readiness.md`.
+Run after **staging** deploy on every day closeout that reaches Phase B+, and after **production** only on an approved release. Fictional data only. Part of API readiness: `software-factory-all-in-one/07-judgment/api-readiness.md`.
 
 Minimum:
 

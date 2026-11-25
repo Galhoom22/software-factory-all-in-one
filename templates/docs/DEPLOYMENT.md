@@ -55,7 +55,7 @@ Which region, why, and what each launch market's transfer rules require (COMPLIA
 
 Local, staging (fictional data, separate domain if cookies are shared across subdomains), production.
 
-**API readiness:** each environment needs its own proof (local HTTP tests → CI → staging smoke → production release smoke). See `playbook/07-judgment/api-readiness.md` and `playbook/09-CI-CD.md` § API readiness by environment. Never treat local green as staging/production green.
+**API readiness:** each environment needs its own proof (local HTTP tests → CI → staging smoke → production release smoke). See `software-factory-all-in-one/07-judgment/api-readiness.md` and `software-factory-all-in-one/09-CI-CD.md` § API readiness by environment. Never treat local green as staging/production green.
 
 ## 8. Release Flow
 

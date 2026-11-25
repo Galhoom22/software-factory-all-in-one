@@ -1,6 +1,6 @@
 # Coverage — agents, harnesses, CI, scripts, implementation Actions
 
-Paths under `playbook/templates/` unless noted.
+Paths under `software-factory-all-in-one/templates/` unless noted.
 
 ---
 
@@ -10,7 +10,7 @@ Paths under `playbook/templates/` unless noted.
 |----|------------|------|---|-------|
 | ✅ | Single rulebook | `AGENTS.template.md` | **95** | Becomes product `AGENTS.md` |
 | ✅ | Agent discovery pack | `agent-discovery/**` | **93** | CLAUDE, GEMINI, llms.txt, Copilot, Windsurf, Gemini settings |
-| ✅ | Agents harness library | `playbook/agents/**` + `coverage/08-ai-agents` | **88** | Per-harness craft; atlas % (D-109) |
+| ✅ | Agents harness library | `software-factory-all-in-one/agents/**` + `coverage/08-ai-agents` | **88** | Per-harness craft; atlas % (D-109) |
 | ✅ | Cursor rules | `cursor-rules/*.mdc` | **92** | delivery, ponytail, clean-code, engineering-standards, owner-standing, project-ui-design, requirements-activation |
 | ✅ | Codex rails | `codex/**` | **90** | config.toml, hooks, SessionStart/Stop scripts, CLI.md |
 | ✅ | Codex verify script | `scripts/verify-codex-cli.mjs` | **85** | Machine check |
@@ -32,7 +32,7 @@ Paths under `playbook/templates/` unless noted.
 | ✅ | Agents check | `scripts/check-agents.mjs` | **90** | Discovery not gutted |
 | ✅ | Scope check | `scripts/check-scope.mjs` | **88** | Planning-only scope |
 | ✅ | Planning entry gate | `scripts/check-planning-entry.mjs` | **92** | Activation when entry file exists |
-| ✅ | Playbook activation wiring | `playbook/scripts/check-requirements-activation.mjs` | **92** | Playbook self-check (method side) |
+| ✅ | Playbook activation wiring | `software-factory-all-in-one/scripts/check-requirements-activation.mjs` | **92** | Playbook self-check (method side) |
 
 ---
 
@@ -45,7 +45,7 @@ Paths under `playbook/templates/` unless noted.
 | ✅ | Frontend CI skeleton | `implementation/github-actions/frontend-ci.yml` | **88** | Node/lint/test/build (+ Playwright hook) |
 | ✅ | Staging deploy CI | `implementation/github-actions/ci-with-staging-deploy.yml` | **85** | Phase B — only when hooks exist |
 | ✅ | Production deploy | `implementation/github-actions/deploy-production.yml` | **85** | Manual `workflow_dispatch` |
-| ✅ | Method for progressive CD | `playbook/09-CI-CD.md` | **94** | Agents auto-detect phase |
+| ✅ | Method for progressive CD | `software-factory-all-in-one/09-CI-CD.md` | **94** | Agents auto-detect phase |
 
 **Impl CI/CD average: ~88%**
 
@@ -57,7 +57,7 @@ These live in the **product planning repo** that owns the playbook copy (not cop
 
 | ✅ | Capability | Typical path (product planning repo) | % | Notes |
 |----|------------|--------------------------------------|---|-------|
-| ✅ | Sync local `playbook/` → studio GitHub mirror | `scripts/sync-planning-playbook.mjs` | **93** | Private-only; same-session D-52 pattern |
+| ✅ | Sync local `software-factory-all-in-one/` → studio GitHub mirror | `scripts/sync-software-factory.mjs` | **93** | Private-only; same-session D-52 pattern |
 | ✅ | Jira CSV / card generators | `scripts/generate-jira-*.mjs` (product) | **70** | Product-specific; method in `docs/jira` templates is thinner |
 | ⚠️ | Coverage % auto-validator | *(none)* | **20** | Atlas is manual by design; do not invent a heavy scorer unless drift becomes real |
 
@@ -67,7 +67,7 @@ These live in the **product planning repo** that owns the playbook copy (not cop
 
 | If owner asks to add… | Prefer | Avoid |
 |-----------------------|--------|-------|
-| New AI harness support | Pack under `playbook/agents/<slug>/` + thin `agent-discovery/` pointer + `08-ai-agents` % | Forking a second rulebook |
+| New AI harness support | Pack under `software-factory-all-in-one/agents/<slug>/` + thin `agent-discovery/` pointer + `08-ai-agents` % | Forking a second rulebook |
 | New CI gate | Extend `09-CI-CD` + matching YAML skeleton | Mid-day PR spam “for CI” |
 | New CodeRabbit paid product | Wait for explicit owner opt-in (`08` Free default) | Starting trials |
 | Auto-sync playbook | Use existing sync script | Manual GitHub web edits that diverge |

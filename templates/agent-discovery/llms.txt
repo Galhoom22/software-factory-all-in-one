@@ -4,7 +4,7 @@
 
 ## Start here
 
-- [Entry requirements (activation)](my-project-requirements.md): if this root file exists, the agent runs playbook planning automatically (`playbook/00-USAGE.md`)
+- [Entry requirements (activation)](my-project-requirements.md): if this root file exists, the agent runs playbook planning automatically (`software-factory-all-in-one/00-USAGE.md`)
 - [Agent start (any AI)](docs/AGENT_START.md): hard rails, map, checks
 - [AGENTS.md](AGENTS.md): full mandatory rules for every coding agent
 - [Delivery method](docs/DELIVERY.md): actor loop; no MVP delivery mode

@@ -8,7 +8,7 @@
 - [ ] New or changed requirements are specific, testable, one per row, have an Owner, and appear in SRS §10 traceability; lasting decisions are logged in `docs/DECISIONS.md`.
 - [ ] No secrets and no real personal data; sample data is clearly fictional.
 - [ ] Satisfies `docs/COMPLIANCE.md` and `docs/SECURITY.md` (UI work: its Every Page Checklist, §14).
-- [ ] If the change creates a reusable practice, `playbook/` is updated.
+- [ ] If the change creates a reusable practice, `software-factory-all-in-one/` is updated.
 
 **If `project-ui/` changed:**
 

@@ -1,6 +1,6 @@
 # Coverage — planning document templates (`templates/`)
 
-Paths relative to `playbook/templates/` unless noted. These seed a **new planning repository**.
+Paths relative to `software-factory-all-in-one/templates/` unless noted. These seed a **new planning repository**.
 
 ---
 

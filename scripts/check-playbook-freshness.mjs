@@ -194,7 +194,7 @@ if (exists(agentsRoot)) {
   }
   note("agents packs scanned: " + agentDirs.length + " (" + agentDirs.join(", ") + ")");
 } else {
-  fail("playbook/agents/ missing");
+  fail("software-factory-all-in-one/agents/ missing");
 }
 
 const aiAgentsCov = path.join(coverageRoot, "08-ai-agents.md");
@@ -210,7 +210,7 @@ if (errors.length) {
   for (const e of errors) console.error(`  - ${e}`);
   for (const n of notes) console.error(`  note: ${n}`);
   console.error(
-    "Method: playbook/07-judgment/playbook-freshness.md — fix in the same change; re-verify official docs when touching packs.",
+    "Method: software-factory-all-in-one/07-judgment/playbook-freshness.md — fix in the same change; re-verify official docs when touching packs.",
   );
   process.exit(1);
 }

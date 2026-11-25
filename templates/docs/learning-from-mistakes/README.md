@@ -2,7 +2,7 @@
 
 Hard-won **engineering** lessons so the same non-obvious bug is not paid for twice.
 
-Use this folder in the **planning** repo (prototype / docs bugs) and copy the same pattern into each **implementation** repo (API / app bugs). Planning-process lessons stay in `playbook/06-LESSONS.md`. **UI visual defects** go in `project-ui/DESIGN-ERRORS.md` (fix same turn + append).
+Use this folder in the **planning** repo (prototype / docs bugs) and copy the same pattern into each **implementation** repo (API / app bugs). Planning-process lessons stay in `software-factory-all-in-one/06-LESSONS.md`. **UI visual defects** go in `project-ui/DESIGN-ERRORS.md` (fix same turn + append).
 
 ## When to write
 
@@ -44,8 +44,8 @@ Transferable rule for next time.
 
 Agents promote **without waiting for the owner** when the **Lesson** would help the **next** product **and** clearly raises template professionalism:
 
-1. Add one bullet under the matching section in `playbook/06-LESSONS.md` (forever-generic — no product names, people, or ticket keys). Or tighten TESTING / SECURITY / CI templates if that is the better home.
-2. Sync the studio planning-playbook mirror the same session when that is how the studio works.
+1. Add one bullet under the matching section in `software-factory-all-in-one/06-LESSONS.md` (forever-generic — no product names, people, or ticket keys). Or tighten TESTING / SECURITY / CI templates if that is the better home.
+2. Sync the public Software Factory All-in-One mirror the same session (`node scripts/sync-software-factory.mjs`).
 3. Leave the detailed story in this folder; the playbook only keeps the rule.
 4. **Do not promote** typos, one-off env glitches, or a rule already present in `06-LESSONS.md`. Depth over volume.
 
@@ -53,4 +53,4 @@ Starter examples (generic): [`queue-dispatch-before-commit.md`](queue-dispatch-b
 
 ## Recall
 
-Before declaring a hard bug unsolvable, scan this folder, the sibling implementation repo’s `docs/learning-from-mistakes/`, `playbook/06-LESSONS.md` § Implementation, and `project-ui/DESIGN-ERRORS.md`.
+Before declaring a hard bug unsolvable, scan this folder, the sibling implementation repo’s `docs/learning-from-mistakes/`, `software-factory-all-in-one/06-LESSONS.md` § Implementation, and `project-ui/DESIGN-ERRORS.md`.
