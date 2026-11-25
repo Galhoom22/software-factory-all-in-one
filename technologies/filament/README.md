@@ -23,7 +23,7 @@
 ## Product vs pack
 
 - This pack describes professional **Filament 5** panels/components.
-- **MasarHub** job-seeker UI is **Next.js ↔ Laravel API** — do **not** make Filament the job-seeker app shell without an ADR. Filament may still fit a **separate admin** product/panel if the team decides so in planning.
+- If the product UI is **Next.js ↔ Laravel API**, do **not** make Filament the primary app shell without an ADR. Filament may still fit a **separate admin** panel if the team decides so in planning.
 - Open Laravel + Livewire + Tailwind packs together when implementing.
 
 ## Related

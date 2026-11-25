@@ -21,7 +21,7 @@
 ## Product vs pack
 
 - This pack describes professional **Tailwind v4** setup and class usage.
-- Product SRS / FE stack still owns the pin (MasarHub already assumes Tailwind 4 + Firefox 128 — D-10 / NFR browser notes).
+- Product SRS / FE stack still owns the pin (the product SRS already pins Tailwind + its browser matrix).
 - Never bump major CSS tooling silently — ADR + SRS/CI when product changes.
 
 ## Related

@@ -110,7 +110,7 @@ Agents run this **before** inventing or “improving” a practice:
 
 5. **Wire it** — method + prompts/lessons/day loop/CI as needed so agents actually use it.
 
-6. **Measure** — update the coverage row/% in the same change; sync the public Software Factory mirror (D-52).
+6. **Measure** — update the coverage row/% in the same change; sync the public Software Factory mirror (D-110).
 7. **Always-Current** — run the freshness closeout + `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs`; re-verify official docs for touched packs ([`playbook-freshness.md`](07-judgment/playbook-freshness.md)).
 
 8. **Leave a trail** — if it is a lasting bar change, add a `DECISIONS` row in the product that hosts the playbook copy.
@@ -159,7 +159,7 @@ Progress is **visible** in: rising honest coverage %, fewer ⚠️ rows, sharper
 
 | Copy a course / agent kit wholesale into the repo | Second constitution; see judgment README |
 
-| Thin MasarHub-style full-cadence products by citing “flexibility” | D-85 pin; excellence includes knowing when rigor is earned |
+| Thin a full-cadence product by citing “flexibility” | D-85 pin; excellence includes knowing when rigor is earned |
 
 | Skip dual sync “just this once” | Drift between local and studio mirror kills reuse |
 

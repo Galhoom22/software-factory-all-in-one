@@ -34,5 +34,5 @@ Always re-check the [upgrade guide](https://livewire.laravel.com/docs/4.x/upgrad
 
 | Stop using | Why |
 |------------|-----|
-| Dropping Livewire into MasarHub Next.js FE by habit | Wrong delivery architecture (API + SPA) without ADR |
+| Dropping Livewire into a Next.js SPA by habit | Wrong delivery architecture (API + SPA) without ADR |
 | Fat components that own all domain rules | Push domain to Laravel services; keep components thin |

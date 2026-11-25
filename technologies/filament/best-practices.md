@@ -34,7 +34,7 @@ Sources: [Getting started](https://filamentphp.com/docs/5.x/getting-started), [I
 ## Security / trust
 
 - Panel auth is not product API auth — keep gates/policies on models and actions.
-- `make:filament-user` is for panel operators; do not confuse with job-seeker User accounts without an explicit product design.
+- `make:filament-user` is for panel operators; do not confuse with end-user accounts without an explicit product design.
 - Validate and authorize every mutating action (same bar as Livewire/Laravel packs).
 
 ## Pairing

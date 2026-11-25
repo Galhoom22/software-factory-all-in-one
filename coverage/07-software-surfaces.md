@@ -96,7 +96,7 @@ Order is **studio leverage**, not academic completeness. Re-rank when a real pro
 | 6 | ASP.NET Core / EF Core packs | .NET web APIs | learn.microsoft.com |
 | 7 | Games judgment only if a game product is real | Games | Engine vendor docs — do not invent |
 
-Agents may **propose** the next gap (“we’re at 8% on iOS native — want Swift pack next?”) when the owner asks about readiness or a new product surface. Do not spam proposals mid-MasarHub job-seeker day unless the owner asked.
+Agents may **propose** the next gap (“we’re at 8% on iOS native — want Swift pack next?”) when the owner asks about readiness or a new product surface. Do not spam proposals mid implementation day unless the owner asked.
 
 ---
 

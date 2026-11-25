@@ -30,4 +30,4 @@ Sources: [releases & support](https://learn.microsoft.com/en-us/dotnet/core/rele
 | Stop | Why |
 |------|-----|
 | “Always use .NET 11 because newest” | Support track is a product decision |
-| Silent rewrite of MasarHub to .NET | Needs stack-selection ADR |
+| Silent rewrite of the product stack to .NET | Needs stack-selection ADR |

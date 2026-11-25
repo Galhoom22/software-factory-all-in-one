@@ -23,7 +23,7 @@
 ## Product vs pack
 
 - This pack is **React library** professionalism (UI components + hooks).
-- **MasarHub job-seeker UI** is **Next.js** — open this pack for React idioms **and** keep the product’s Next architecture (do not silently replace Next with a bare Vite SPA).
+- When the product UI is **Next.js**, open this pack for React idioms **and** keep that Next architecture (do not silently replace Next with a bare Vite SPA).
 - Pair with [`../javascript/`](../javascript/README.md), HTML/CSS/Tailwind packs; also [`../nextjs/`](../nextjs/README.md); Inertia React → also [`../inertiajs/`](../inertiajs/README.md).
 
 ## Related
@@ -32,4 +32,5 @@
 - Design patterns / verification: playbook `07-judgment/` (human-code-review, context7-docs).
 
 ---
+
 

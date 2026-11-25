@@ -15,7 +15,7 @@ Works with Ponytail: smallest complete change that still meets this bar.
 ## 2. Architecture fit
 
 - Filament = **server-driven admin UI** on Laravel + Livewire + Tailwind.
-- **MasarHub job-seeker** remains Next.js ↔ API. Filament is for **admin/ops panels** or other products that choose that stack — not a silent replacement for the SPA.
+- When the product UI is Next.js ↔ API, Filament is for **admin/ops panels** or other products that choose that stack — not a silent replacement for the SPA.
 - Domain rules stay in Laravel services/models; Filament Resources stay a UI over that domain.
 
 ## 3. Design patterns (judgment)
@@ -36,3 +36,4 @@ Before non-trivial Filament work:
 
 - Laravel + Livewire + Tailwind packs
 - Coverage: `coverage/06-technologies.md`
+

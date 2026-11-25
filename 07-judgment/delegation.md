@@ -4,7 +4,7 @@ Absorb **agent delegation** as **judgment only**: when one agent (the **orchestr
 
 **Sources distilled (not dependencies):** [amElnagdy/delegate-skills](https://github.com/amElnagdy/delegate-skills) (MIT) — brief → dispatch → review → land loop; fleet/lane idea; “relay never commits.” Do **not** vendor the Skills CLI package, nineteen `*-delegate` trees, or `relay.mjs` into the playbook as AGENTS or a required toolchain.
 
-**When this applies:** the day agent (or human) asks another coding agent/CLI to implement while staying reviewer; multi-task queues through a second implementer; adversarial read-only second opinion from another agent. Default MasarHub day run-through remains **one seat, one checkout** ([`studio-company.md`](studio-company.md)) — delegation is an optional tool, not a second constitution.
+**When this applies:** the day agent (or human) asks another coding agent/CLI to implement while staying reviewer; multi-task queues through a second implementer; adversarial read-only second opinion from another agent. Default product day run-through remains **one seat, one checkout** ([`studio-company.md`](studio-company.md)) — delegation is an optional tool, not a second constitution.
 
 ## Problem this prevents
 

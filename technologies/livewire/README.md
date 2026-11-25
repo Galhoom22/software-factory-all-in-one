@@ -3,7 +3,7 @@
 **Pinned slice for new work in this pack:** **Livewire 4.x** (docs checked 2026-11-21).  
 **Official home:** [Quickstart](https://livewire.laravel.com/docs/4.x/quickstart) · [Installation](https://livewire.laravel.com/docs/4.x/installation) · [Upgrade](https://livewire.laravel.com/docs/4.x/upgrading) · [Docs 4.x](https://livewire.laravel.com/docs/4.x)
 
-**Requires:** Laravel **10+**, PHP **8.1+** (prefer product pin — MasarHub Laravel 13 / PHP per SRS).
+**Requires:** Laravel **10+**, PHP **8.1+** (prefer the product SRS pin).
 
 ## When to open this pack
 
@@ -23,7 +23,7 @@
 ## Product vs pack
 
 - This pack describes professional **Livewire 4** apps.
-- **MasarHub** job-seeker UI is **Next.js ↔ Laravel API** — do **not** introduce Livewire into that product without an ADR that changes delivery architecture.
+- If the product UI is **Next.js ↔ Laravel API**, do **not** introduce Livewire without an ADR that changes delivery architecture.
 - Use this pack for Laravel Blade/Livewire products (or future studio apps that choose that stack).
 
 ## Related

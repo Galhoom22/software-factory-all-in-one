@@ -23,7 +23,7 @@
 ## Product vs pack
 
 - This pack describes professional **Laravel 13** code.
-- Product SRS §2 owns the product’s pin (MasarHub already targets Laravel 13).
+- Product SRS §2 owns the Laravel version pin.
 - Never bump major without ADR + SRS + CI.
 
 ## Related
@@ -31,3 +31,4 @@
 - PHP pack: [`../php/`](../php/README.md)
 - API readiness: `07-judgment/api-readiness.md`
 - Day pipeline: `08-IMPLEMENTATION-DAY.md`
+

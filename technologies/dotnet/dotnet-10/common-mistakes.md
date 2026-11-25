@@ -30,4 +30,4 @@
 |---------|-----------------|-----|
 | Treating this pack as ASP.NET expertise | Wrong middleware/Minimal API shapes | ASP.NET Learn / future aspnetcore pack |
 | Ignoring C# pack | Pre-nullable language habits | Open [`../../csharp/`](../../csharp/README.md) |
-| Assuming MasarHub is .NET | Wrong stack | Product SRS; stack-selection ADR first |
+| Assuming the product is .NET without an ADR | Wrong stack | Product SRS; stack-selection ADR first |

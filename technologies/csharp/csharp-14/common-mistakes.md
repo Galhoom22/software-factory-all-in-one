@@ -32,7 +32,7 @@
 | God `Program.cs` / Service classes | Untestable, unreadable | Small types; host composition root only |
 | Inventing ASP.NET APIs from memory | Wrong middleware/DI shapes | Context7 / official ASP.NET docs when that pack exists |
 | Pattern-for-show (Factory on 3 lines) | Noise | [`design-patterns.md`](../../../07-judgment/design-patterns.md) |
-| Assuming MasarHub is .NET | Wrong stack | Product SRS; this pack is craft, not a silent rewrite |
+| Assuming the product is .NET without an ADR | Wrong stack | Product SRS; this pack is craft, not a silent rewrite |
 
 ## Security
 

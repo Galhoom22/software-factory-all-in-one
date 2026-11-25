@@ -15,7 +15,7 @@ Works with Ponytail: smallest complete change that still meets this bar.
 ## 2. Architecture fit
 
 - Livewire is a **Laravel full-stack UI** style (server components over HTTP).
-- **MasarHub** job-seeker delivery is **Next.js FE + Laravel API** — Livewire is the wrong default there. Use this pack for Blade/Livewire products only (or after an ADR changes MasarHub’s UI strategy).
+- When delivery is **Next.js FE + Laravel API**, Livewire is the wrong default there. Use this pack for Blade/Livewire products only (or after an ADR changes the UI strategy).
 - Domain logic still belongs in services / actions the Laravel pack already prefers — Livewire components should stay thin.
 
 ## 3. Design patterns (judgment)
@@ -37,3 +37,4 @@ Before non-trivial Livewire work:
 
 - Laravel + Alpine + Tailwind packs
 - Coverage: `coverage/06-technologies.md`
+

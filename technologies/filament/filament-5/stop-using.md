@@ -20,7 +20,7 @@ Sources: [Installation](https://filamentphp.com/docs/5.x/introduction/installati
 |------------|-------------|
 | Hand-rolled admin CRUD that duplicates Resources | `make:filament-resource` / Resources docs |
 | Second Alpine CDN beside Filament/Livewire | Single bundled Alpine |
-| Putting job-seeker product UI inside Filament by habit | Next.js ↔ API for MasarHub actor UI; Filament only if product chooses admin |
+| Putting the primary actor UI inside Filament by habit | Next.js ↔ API for the primary actor UI; Filament only if product chooses admin |
 | Fat Resources owning all domain rules | Thin UI over Laravel domain services |
 
 ## Config

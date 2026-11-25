@@ -8,7 +8,7 @@
 | Vite app still on PostCSS Tailwind only | Slower / awkward DX | Migrate to `@tailwindcss/vite` |
 | Leaving `autoprefixer` + `postcss-import` “just in case” | Redundant, confusing | Remove when on v4 PostCSS/Vite paths |
 | New `tailwind.config.js` + empty CSS theme | Split brain; fights CSS-first model | Prefer `@theme` |
-| Claiming “Done on Tailwind 4” while browsers NFR still target Firefox &lt; 128 | Visual/CSS features break | Align SRS browser matrix (MasarHub: Firefox 128+) |
+| Claiming “Done on Tailwind 4” while browsers NFR still target Firefox &lt; 128 | Visual/CSS features break | Align SRS browser matrix (match the product SRS browser matrix) |
 
 ## Authoring
 

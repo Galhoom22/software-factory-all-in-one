@@ -22,7 +22,7 @@ Sources: [Installation](https://alpinejs.dev/essentials/installation), [Start He
 | `x-for` directly on a `<div>` / `<li>` | `x-for` on `<template>` |
 | Giant multi-screen apps as one `x-data` blob | Split islands; or use the product SPA framework |
 | `x-html` with unsanitized user input | `x-text` or sanitized trusted HTML only |
-| Rebuilding React/Next features in Alpine inside MasarHub FE | Stay on Next.js unless ADR says otherwise |
+| Rebuilding React/Next features in Alpine inside the product frontend | Stay on Next.js unless ADR says otherwise |
 
 ## Legacy / wrong generation
 

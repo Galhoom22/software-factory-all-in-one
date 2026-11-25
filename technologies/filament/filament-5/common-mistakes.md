@@ -23,7 +23,7 @@
 
 | Mistake | What goes wrong | Fix |
 |---------|-----------------|-----|
-| Replacing MasarHub Next.js with Filament silently | Breaks actor-loop FE plan | ADR required |
+| Replacing the product Next.js UI with Filament silently | Breaks actor-loop FE plan | ADR required |
 | Double Alpine | Init errors | Remove duplicate |
 
 ## Agent habits

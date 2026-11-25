@@ -106,7 +106,7 @@ At day start (`08`): name **goal** (product + actor) + **seat** (FE or BE day ag
 
 
 
-When the owner wants to **experiment** with a multi-agent company dashboard (not required for MasarHub day cadence):
+When the owner wants to **experiment** with a multi-agent company dashboard (not required for the product day cadence):
 
 
 

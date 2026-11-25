@@ -24,7 +24,7 @@
 
 - This pack is **C# language** professionalism grounded in Microsoft Learn.
 - **Language version follows TFM** ([language versioning](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-versioning)): `.NET 10` → C# **14** (default here); `.NET 11` → C# **15**; `.NET 9` → C# **13**. Do not set `LangVersion` newer than the target framework supports.
-- **MasarHub** job-seeker stack remains **Laravel / Next.js** unless a product ADR chooses .NET — this pack does not silently replace that stack.
+- The product keeps its **SRS-pinned** stack unless an ADR chooses .NET — this pack does not silently replace that stack.
 - Prefer **.NET 10 LTS + C# 14** for new .NET products unless the owner/ADR pins .NET 11 (C# 15). Re-check [What's new](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/) before adopting C# 15-only features.
 
 ## Related

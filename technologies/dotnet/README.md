@@ -25,7 +25,7 @@
 - Pair with [`../csharp/`](../csharp/README.md) for language craft (C# 14 on .NET 10).
 - **.NET 11** is the current **STS** line (shipped Nov 2026) — use only when product SRS/ADR pins `net11.0`. Prefer **.NET 10 LTS** for stability-sensitive products ([support policy](https://learn.microsoft.com/en-us/dotnet/core/releases-and-support)).
 - You may install the **latest SDK** (even STS) while targeting an older runtime TFM.
-- **MasarHub** stays Laravel/Next unless a separate ADR chooses .NET — this pack does not rewrite that stack.
+- The product keeps its SRS-pinned stack unless a separate ADR chooses .NET — this pack does not rewrite that stack.
 
 ## Related
 

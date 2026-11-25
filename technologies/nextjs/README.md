@@ -26,7 +26,7 @@
 
 - This pack is **Next.js framework** professionalism.
 - Pair with [`../react/`](../react/README.md) for React 19 idioms; HTML/CSS/Tailwind/JS packs for fundamentals.
-- Product SRS still owns the product pin (e.g. MasarHub **Next.js 16**). Do not silently bump majors — ADR if the product line moves.
+- Product SRS still owns the product pin (whatever the product SRS pins). Do not silently bump majors — ADR if the product line moves.
 - Next is typically the **UI host** — keep AI keys / business entitlement on the backend unless the product architecture explicitly says otherwise.
 
 ## Related
