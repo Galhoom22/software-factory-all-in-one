@@ -1,0 +1,54 @@
+name: Improvement idea
+description: Propose a practice, pack, judgment note, or docs clarity upgrade.
+title: "[idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prefer deepening an existing home in `coverage/` over inventing a parallel file. Must raise professionalism. Forever generic only.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Method docs (00–09)
+        - Judgment (07-judgment)
+        - Technologies packs
+        - Agents / harness packs
+        - Templates
+        - Coverage atlas
+        - CI / scripts
+        - Docs / README / community
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem this prevents
+      description: What goes wrong for teams or agents without this improvement?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Smallest complete change that helps. Link official docs if stack-related.
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Coverage check
+      description: Did you look at coverage/ first? Is there already a home to deepen?
+      placeholder: e.g. coverage/06-technologies.md already has X at 80% — deepen that
+  - type: checkboxes
+    id: generic
+    attributes:
+      label: Forever-generic confirmation
+      options:
+        - label: This idea is reusable for any product (no private product details)
+          required: true
+        - label: I read CONTRIBUTING.md and EXCELLENCE.md
+          required: true

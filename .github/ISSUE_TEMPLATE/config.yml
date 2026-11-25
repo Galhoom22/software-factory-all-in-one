@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report (private)
+    url: https://github.com/Galhoom22/software-factory-all-in-one/security/advisories/new
+    about: Report secrets, unsafe defaults, or other security concerns privately — do not open a public issue.
+  - name: Read CONTRIBUTING first
+    url: https://github.com/Galhoom22/software-factory-all-in-one/blob/main/CONTRIBUTING.md
+    about: Forever-generic rules and how to propose improvements.

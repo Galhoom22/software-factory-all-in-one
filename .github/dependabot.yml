@@ -1,0 +1,9 @@
+# Keep GitHub Actions pins fresh. No product app deps live in this kit root.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    labels:
+      - dependencies
