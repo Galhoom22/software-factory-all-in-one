@@ -31,9 +31,12 @@ Put product-specific details only in a **private** product planning repository a
 ## How to contribute
 
 1. Fork and branch from `main`.
-2. Keep changes small and complete (callers, checks, coverage % when relevant).
-3. Run factory self-checks when you touch wiring or packs:
-   - `node scripts/check-forever-generic.mjs` (**required**)
+2. Keep changes small and complete (callers, checks, coverage % when relevant). Edit with exact replacements; never paste a tool's compressed or elided view of a file back into it, and review net deletions in your diff before committing.
+3. Run the required checks on **every** change, including docs-only edits:
+   - `node scripts/check-forever-generic.mjs`
+   - `node scripts/check-content-integrity.mjs` (no tool artifacts, tables render on GitHub, links and anchors resolve)
+
+   When you also touch wiring, packs or the atlas, run:
    - `node scripts/check-requirements-activation.mjs`
    - `node scripts/check-playbook-freshness.mjs`
 4. Prefer deepening an existing home over inventing a parallel file (see `coverage/`).

@@ -24,6 +24,9 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Payment-provider agent guidance (hosted checkout, webhook entitlement, sandboxes, modern Intent APIs) | Dumping full Connect/Issuing/Tax catalogs or making agentic commerce required scope |
 | Playwright E2E (user-facing locators, web-first asserts, mocked PR CI, axe, traces on retry) | Exhaustive E2E of every screen on every PR; live backend required for CI; trace-on-every-test |
 | GoF-style design patterns (problem → naive → blueprint; composition; shared language) | Pattern encyclopedia in-repo; Factory/Observer on three-line fixes; Singleton as default global |
+
+| Practice | Adopt (where it lands) | Forbid |
+|----------|------------------------|--------|
 | DSA / Big-O / algorithmic performance (Pareto study habits) | Day + FEATURE Performance module: name `n`, Time/Space class, structure, edges | Dumping LeetCode catalogs/solutions into product repos; interview grind as merge gate |
 | API readiness across environments (contract + local + CI + staging/prod smoke) | Day API gate + BACKEND TESTING + DEPLOYMENT smoke | Second OpenAPI/Postman SoT; Done on local-only green; live prod checks with real PII |
 | API design (consumer-first REST craft) | Design bar inside API readiness; resource naming; method semantics; docs=agreement | Course PDF as AGENTS; mandatory HATEOAS; Digest auth; dual OpenAPI SoT |

@@ -29,6 +29,9 @@ jobs:
       - name: Forever-generic hard gate (no product/person/private leakage)
         run: node scripts/check-forever-generic.mjs
 
+      - name: Content integrity (no tool artifacts, renderable tables, valid links)
+        run: node scripts/check-content-integrity.mjs
+
       - name: Requirements-activation wiring intact
         run: node scripts/check-requirements-activation.mjs
 

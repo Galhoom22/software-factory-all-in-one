@@ -66,6 +66,7 @@ Full walkthrough: [`00-USAGE.md`](00-USAGE.md) · ordered steps: [`01-STEPS.md`]
 | Kit files (method + templates + packs) | **~400** | this repository |
 | License | **MIT** | [`LICENSE`](LICENSE) |
 | Forever-generic gate | **CI enforced** | `scripts/check-forever-generic.mjs` |
+| Content-integrity gate | **CI enforced** | `scripts/check-content-integrity.mjs` |
 
 Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~27%) — we do not pretend equal depth everywhere. See [`coverage/07-software-surfaces.md`](coverage/07-software-surfaces.md).
 
@@ -164,6 +165,7 @@ Improvements that **raise professionalism** are welcome. Prefer deepening an exi
 
 ```bash
 node scripts/check-forever-generic.mjs
+node scripts/check-content-integrity.mjs
 node scripts/check-requirements-activation.mjs
 node scripts/check-playbook-freshness.mjs
 ```

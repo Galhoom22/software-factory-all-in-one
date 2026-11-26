@@ -1,18 +1,10 @@
 # Judgment — Context window hygiene (agents)
 
-
-
 ## Problem this prevents
-
-
 
 Context window overflow is **silent**. When tool outputs, logs, or chat history exceed what the model can keep, the agent does not always crash — it truncates, drops earlier instructions, invents from incomplete data, or “finishes” half-done work. That is a professionalism failure, not a model quirk.
 
-
-
 This judgment absorbs (do **not** vendor frameworks into the product):
-
-
 
 - **Memory Pointer Pattern** — store large tool payloads outside the LLM context; pass a short reference (path / key / SHA) and a summary ([AWS / Strands write-up](https://dev.to/aws/ai-context-window-overflow-memory-pointer-fix-3akc); IBM-scale pointer vs raw-token research cited there).
 
@@ -20,11 +12,7 @@ This judgment absorbs (do **not** vendor frameworks into the product):
 
 - **Long-running harness** — one feature / clean commit / progress outside chat so the next session does not guess ([Anthropic — Effective harnesses for long-running agents](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents)).
 
-
-
 ## Adopt (always on for agents)
-
-
 
 1. **Truth outside the chat.** Git commits, feature files, day checklist, issue tracker, and written handoffs are the system of record. Chat is working memory only.
 
@@ -42,41 +30,22 @@ This judgment absorbs (do **not** vendor frameworks into the product):
 
 8. **Security / money / PII:** never rely on a compacted summary alone — re-check files and tests.
 
-
-
 ## Forbid
 
-
-
 | Do not | Why |
-
 |--------|-----|
-
 | Paste entire CI logs, DB dumps, or multi-thousand-line files into the chat | Overflow + silent truncation |
-
 | Mid-day “approve the next slice” gates | Burns context **and** breaks the day pipeline |
-
 | Keep a polluted chat hoping automatic compaction remembers decisions | Compaction loses subtle facts; write them to files first |
-
 | Re-fetch the same large payload every turn | Waste; use a pointer |
-
 | Treat the handoff as proof without re-reading cited paths / SHAs | Stale pointer risk |
-
 | Invent a second agent framework or memory product inside planning | Judgment only — harness features (compact, subagents) stay in the IDE |
-
-
 
 ## Day pipeline placement
 
-
-
 Apply continuously during [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md) run-through and closeout. End-of-day **New-chat handoff** is the primary cross-session pointer. Domain gates (API, SEO, booking, …) stay as they are — this judgment is about **how** evidence enters the model, not which gates fire.
 
-
-
 ## Minimum habits (checklist)
-
-
 
 - [ ] Large tool output → path/id + ≤ short summary in chat
 
@@ -86,11 +55,7 @@ Apply continuously during [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.
 
 - [ ] Next chat: paste handoff → re-read repo → verify claims against git
 
-
-
 ## Related homes
-
-
 
 - Day loop: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md)
 
@@ -99,4 +64,3 @@ Apply continuously during [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.
 - Lessons: [`06-LESSONS.md`](../06-LESSONS.md) § Working With AI Agents
 
 - Proportional depth (do not over-engineer tiny products): `08` § Proportional day pipeline (D-85)
-

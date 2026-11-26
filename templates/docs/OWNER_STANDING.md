@@ -83,6 +83,7 @@ Default for implementation chats. Full method: `software-factory-all-in-one/08-I
 ## Changelog
 
 | Date (UTC) | Change |
+|------------|--------|
 | YYYY-MM-DD | Proportional day pipeline — scale rigor with product risk (D-85). |
 | YYYY-MM-DD | Integration engineering day gate for external partners (D-101). |
 | YYYY-MM-DD | AI engineering day gate for det/prob systems (D-102). |
