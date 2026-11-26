@@ -42,6 +42,19 @@ function die(msg) {
   console.error(`seed: ${msg}`);
   process.exit(1);
 }
+/** "v1.0.0", "v1.0.0+unreleased" (the copy carries changes after that release) or "unreleased". */
+function kitVersion(dir) {
+  let text;
+  try {
+    text = fs.readFileSync(path.join(dir, "CHANGELOG.md"), "utf8").replace(/\r\n/g, "\n");
+  } catch {
+    return "version unknown";
+  }
+  const released = text.match(/^## \[(\d+\.\d+\.\d+)\]/m);
+  const pending = (text.split(/^## \[Unreleased\]\n/m)[1] || "").split(/^## /m)[0].trim();
+  if (!released) return "unreleased";
+  return `v${released[1]}${pending ? "+unreleased" : ""}`;
+}
 const real = (p) => {
   // Resolve symlinks for the deepest existing ancestor so aliases of the kit are recognised.
   let base = path.resolve(p);
@@ -127,7 +140,7 @@ function report(lines) {
     for (const p of plan) copy(p.from, path.join(target, p.dest));
     report([
       `seeded ${target}`,
-      `vendored kit: ${KIT_DIR}/ (${kitFiles.length} files — read-only; improve it upstream with a pull request)`,
+      `vendored kit: ${KIT_DIR}/ (${kitVersion(KIT)}, ${kitFiles.length} files — read-only; improve it upstream with a pull request)`,
       `templates:    ${plan.length} files at the product root`,
       `next: replace {{PLACEHOLDERS}}, add my-project-requirements.md (see ${KIT_DIR}/examples/), commit, open your agent`,
     ]);
@@ -152,7 +165,7 @@ function report(lines) {
     for (const p of moved) copy(p.from, path.join(root, p.dest));
     report([
       `seeded in place: ${root}`,
-      `moved ${entries.length} kit entries into ${KIT_DIR}/ (read-only; improve it upstream with a pull request)`,
+      `moved ${entries.length} kit entries (${kitVersion(DRY ? root : vendored)}) into ${KIT_DIR}/ (read-only; improve it upstream with a pull request)`,
       `templates: ${moved.length} files at the repository root`,
       `next: replace {{PLACEHOLDERS}}, add my-project-requirements.md, commit, open your agent`,
     ]);
@@ -162,6 +175,7 @@ function report(lines) {
     if (!fs.existsSync(vendored)) die(`${vendored} not found — seed the repository first`);
     if (inside(vendored, KIT) || inside(KIT, vendored)) die("cannot update the kit from itself");
     const kitFiles = listFiles(KIT);
+    const fromVersion = kitVersion(vendored);
     if (!DRY) {
       // Stage the new copy next to the old one, swap, and keep the old copy until the swap succeeded.
       const stamp = Date.now();
@@ -184,7 +198,7 @@ function report(lines) {
       fs.rmSync(backup, { recursive: true, force: true });
     }
     report([
-      `updated ${vendored} (${kitFiles.length} files)`,
+      `updated ${vendored}: ${fromVersion} → ${kitVersion(KIT)} (${kitFiles.length} files)`,
       `product files untouched — compare ${KIT_DIR}/templates/ with your product files (see ${KIT_DIR}/CHANGELOG.md)`,
     ]);
   }

@@ -23,6 +23,7 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 | SF-13 | Competitor recon is clean-room | Accepted |
 | SF-14 | Forever generic, public, contributions upstream; vendored copies are read-only | Accepted |
 | SF-15 | Gates are zero-dependency, check-only and probe-tested | Accepted |
+| SF-16 | Releases follow SemVer from a vendored copy's point of view; tags never move | Accepted |
 
 ## Decisions
 
@@ -130,3 +131,10 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Context:** Tool output written back into files once replaced real content with elision markers; numbers drifted; templates broke only after instantiation.
 - **Decision:** Kit gates are plain Node scripts without dependencies that never rewrite files and carry self-tests (probes): content integrity, structure (facts computed from the tree), forever-generic, requirements activation and the seed smoke test ([`ARCHITECTURE.md`](ARCHITECTURE.md) § Gates).
 - **Consequences:** ✅ Regressions fail CI before they merge. ❌ New conventions need a matching check.
+
+### SF-16 Releases and immutable tags
+
+- **Status:** Accepted
+- **Context:** Products vendor the kit and need a stable version to pin, read and upgrade from; `main` can carry unreleased changes.
+- **Decision:** Releases are GitHub releases tagged `vX.Y.Z`, with notes taken from `CHANGELOG.md`. MAJOR when a seeded repository that was green can turn red or a referenced path moves; MINOR for additions that keep seeded repositories green; PATCH for fixes. Tags are never moved or deleted ([`CONTRIBUTING.md`](CONTRIBUTING.md) § Releasing).
+- **Consequences:** ✅ Products pin a release and upgrade deliberately with `seed.mjs --update` from a release checkout. ❌ Removing a deprecated path waits for the next MAJOR.
