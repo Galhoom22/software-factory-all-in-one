@@ -25,7 +25,7 @@ Never read the whole kit. Pick the one route that matches the task, read its **a
 
 | Area | Single source of truth for | Never contains | Index |
 |------|----------------------------|----------------|-------|
-| Root files | Overview and counts ([`README`](README.md)), agent rules for the kit ([`AGENTS`](AGENTS.md)), structure and routes (this file), how to change the kit ([`CONTRIBUTING`](CONTRIBUTING.md)), why it is shaped this way ([`DECISIONS`](DECISIONS.md)), the north star ([`EXCELLENCE`](EXCELLENCE.md)) | Product facts; private workflow | — |
+| Root files | Overview and counts ([`README`](README.md)), agent rules for the kit ([`AGENTS`](AGENTS.md)), structure and routes (this file), how to change the kit ([`CONTRIBUTING`](CONTRIBUTING.md)), why it is shaped this way ([`DECISIONS`](DECISIONS.md)), what changed ([`CHANGELOG`](CHANGELOG.md)), the north star ([`EXCELLENCE`](EXCELLENCE.md)) | Product facts; private workflow | — |
 | Method `00`–`09` | The delivery process and the slots where gates plug in | Lists of every guide or pack; vendor tools as mandatory steps | [`README`](README.md) map |
 | [`07-judgment/`](07-judgment/README.md) | One guide per specialist concern and its trigger | Second constitutions; product facts | Router table (the only list of guides) |
 | [`technologies/`](technologies/README.md) | Craft for one stack and version line | Which stack a product uses; product version pins | Pack table + shared protocol |

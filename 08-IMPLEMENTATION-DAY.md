@@ -18,7 +18,7 @@ Proof: verification engineering — criterion → evidence for every checkbox (l
 Closeout (automatic, same session):
   PR
   → CI green (GitHub Actions on the PR — merge gate)
-  → Human code-review bar + CodeRabbit (Free: CLI/IDE review + optional PR summary; paid: GitHub review)
+  → Human code-review bar (+ the product's AI PR reviewer, if it uses one)
   → merge
   → verify on that commit (local) + confirm CI on default branch green
   → CD when configured (staging deploy from main → smoke → Sentry if live)
@@ -79,7 +79,6 @@ A product’s `docs/OWNER_STANDING.md` may require the **full** implementation d
 
 Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard / Comprehensive), [`09-CI-CD.md`](09-CI-CD.md) (Phase A/B/C), Candor (SF-07).
 
-
 **Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, propose one generic bullet for the factory's `06-LESSONS.md` (or the matching template) upstream as a pull request the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
@@ -138,7 +137,7 @@ When must-finish is truly 100%:
 
 1. **PR** — one PR for the day’s finished work (Conventional Commits; no secrets / no real PII).
 2. **CI green** — wait for GitHub Actions on that PR to pass. Fix failures on the branch before continuing. Do **not** merge on a red or unfinished required check. Method: [`09-CI-CD.md`](09-CI-CD.md).
-3. **Human code-review bar + CodeRabbit** — (a) self-review the day’s diff as a senior/tech lead: human readability, Clean Code, **modern syntax for the pinned language/framework line**, and pack best practices ([`07-judgment/human-code-review.md`](07-judgment/human-code-review.md)); (b) on **Free**: run **CLI or IDE** full CodeRabbit review on the day branch; GitHub may post a **PR summary** only. On **paid**: wait for the GitHub App full PR review. Fix **blocking** findings before merge. Do **not** start paid trials or usage products unless the owner asks. CodeRabbit does not waive inhuman or outdated code.
+3. **Human code-review bar (+ AI reviewer if configured)** — (a) always: self-review the day’s diff as a senior/tech lead: human readability, Clean Code, **modern syntax for the pinned language/framework line**, and pack best practices ([`07-judgment/human-code-review.md`](07-judgment/human-code-review.md)); (b) only when the product uses an AI PR reviewer (for example CodeRabbit): run it as the product's reviewer configuration says (for CodeRabbit: `docs/CODERABBIT.md`) and fix **blocking** findings before merge — never start paid trials or usage products unless the owner asks. An AI reviewer never waives inhuman or outdated code.
 4. **Merge** into the default branch in the same session.
 5. **Verify** on that merge commit (re-run the day’s proof checks locally) **and** confirm CI on the default branch is green. If either fails: stop — do not mark tracker/checklist Done; fix first.
 6. **CD (when staging/production hooks exist)** — wait for the staging deploy started by CI on `main` (or the documented hook); run the smoke test from the repo’s DEPLOYMENT guide; glance Sentry if that release is live. If CD is **not** configured yet, say so in the day summary and skip — do not invent a fake deploy pass. Production stays **manual approval** (`workflow_dispatch` + environment reviewers), not an automatic day step.
@@ -155,23 +154,13 @@ Never mark tracker or checklist finished before post-merge verification (and req
 - Until hooks exist (**Phase A**), CI still runs; CD steps are skipped honestly. When hooks appear later, move to Phase B/C using the same method — no new philosophy ([`09-CI-CD.md`](09-CI-CD.md) § Progressive activation).
 - Full rules and workflow skeletons: [`09-CI-CD.md`](09-CI-CD.md), [`templates/implementation/github-actions/`](templates/implementation/github-actions/).
 
-## Human code review + CodeRabbit in this pipeline
+## Review in this pipeline
 
-**Senior / tech-lead bar first:** every code day, the agent reviews its own diff for human readability, current pinned-line syntax, and best practices before treating the slice as Done — [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md). Goal: a real human and an AI can both understand the change.
+**Senior / tech-lead bar first:** every code day, the agent reviews its own diff for human readability, current pinned-line syntax and best practices before treating the slice as Done — [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md). Goal: a real human and an AI can both understand the change.
 
-## CodeRabbit in this pipeline
+**AI pull-request reviewer (optional, e.g. CodeRabbit):** closeout opens a PR; when the product uses an AI reviewer, run it on the day branch, fix **blocking** findings, then merge **only after CI is green**. Plan, surfaces and limits are product configuration — keep them in the product's reviewer doc (for CodeRabbit: `docs/CODERABBIT.md`, [template](templates/docs/CODERABBIT.md)).
 
-Default while on the **Free** plan ([plans](https://docs.coderabbit.ai/management/plans)): do **not** start paid trials, usage-based reviews, Deep Scan, or Agent products unless the owner explicitly opts in later.
-
-| Surface | Free plan role |
-|---------|----------------|
-| **CLI / IDE (Cursor)** | **Primary review gate.** Full code review. Limits: **3 IDE + 3 CLI reviews / developer / hour**, ≤150 files/review after path filters. Run on the day branch **before merge** (after CI is green or in parallel once the PR exists — still fix CI first if both fail). |
-| **GitHub App on the PR** | **PR summarization only** on Free (not full inline review). Still connect FE/BE repos; keep **1 PR summary / developer / hour**. Useful walkthrough; not the depth gate. |
-| **Web settings** | Connect org + repos; keep committed `.coderabbit.yaml` + guidelines. Skip paid-only surfaces (Triage extras, linked repos, knowledge repos, usage billing). |
-
-- Closeout still opens a PR (summary may post). Agent runs **CodeRabbit CLI or IDE review**, fixes **blocking** findings, then merges **only after CI is green**.
-- When the owner later pays (Essentials+), GitHub App full PR review becomes the primary review gate again; CLI/IDE stay optional early passes.
-- CodeRabbit does **not** replace CI tests, the **human code-review bar** (readability / modern syntax / best practices), human judgment on auth/billing/AI/deletion, SECURITY/COMPLIANCE red lines, the DSA hot-path check, the API readiness gate (contract + design bar + HTTP + env smoke), the cross-surface compatibility gate (sibling/contract parity), or the SEO+GEO gate on public pages. Setup: product `docs/CODERABBIT.md` (or playbook `templates/docs/CODERABBIT.md`).
+An AI reviewer does **not** replace CI tests, the human code-review bar, human judgment on auth / billing / AI / deletion, SECURITY and COMPLIANCE red lines, the DSA hot-path check, the API readiness gate, the cross-surface compatibility gate, or the SEO+GEO gate on public pages.
 
 ## Final reply shape (mandatory)
 
@@ -216,25 +205,11 @@ For every Pareto topic, include all of the following (skip a bullet only with an
 
 The Pareto block is written so the owner can paste it into ChatGPT (or similar) and ask to explain **those files**, how they fit the architecture, and how to **read** similar code later. The agent does not need to render full source in chat; accurate paths + symbols + connection narrative are enough for the next tool to load the tree.
 
-## Excellence ratchet (playbook changes)
+## Changing the factory during a day
 
-When this day (or any session) updates the software-factory-all-in-one/template: follow [`EXCELLENCE.md`](EXCELLENCE.md) — raise a dimension, atlas first, candor on downgrades, update coverage %, land it upstream through a pull request. The dream is the best reusable method; progress is incremental, never a single megaprompt.
+Lasting collaboration preferences (this pipeline, language, remotes, assignees) live in the product's `docs/OWNER_STANDING.md`; update it and its changelog in the same session — never leave standing only in chat memory.
 
-## Coverage atlas (before inventing a practice)
-When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
-**Candor (SF-07):** if that ask would lower professionalism, weaken this pipeline, violate COMPLIANCE/SECURITY/ethics, or create unmanaged High risk, **refuse and advise** (why + safer alternative scenario or skip). Do not propose a degrading change upstream. Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md). Product standing: `docs/OWNER_STANDING.md` § Candor.
-
-## Owner standing ↔ factory upstream
-
-Lasting collaboration preferences (this pipeline, language, remotes, assignees) live in the product’s `docs/OWNER_STANDING.md`.
-
-When the owner **changes** a lasting preference that belongs in this method (day loop, closeout order, CI/CD gates, final reply shape, or “update both playbook copies”):
-
-1. Update the product `docs/OWNER_STANDING.md` (+ changelog) in the same session.
-2. Update **this playbook** (this file, [`09-CI-CD.md`](09-CI-CD.md), and/or `templates/docs/OWNER_STANDING.md`, prompts, lessons) so the **next** product inherits it — keep wording generic.
-3. Propose the generic change upstream as a pull request to the factory repository in the same session; the vendored copy stays read-only and is refreshed with `seed.mjs --update`.
-
-Do not leave standing only in chat memory or only in one product’s docs.
+When the change belongs in the method itself (day loop, closeout order, CI/CD gates, final reply shape) or the owner asks to add a practice to the factory, follow [`CONTRIBUTING.md`](CONTRIBUTING.md) § Changing the factory: atlas first, raise an excellence dimension, refuse a downgrade with a safer alternative (Candor, SF-07 — [`compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md)), and propose the generic change upstream as a pull request. The vendored copy stays read-only.
 
 ## What this is not
 
