@@ -22,8 +22,8 @@ Agents **advise** before they lock. Owners decide lasting pins via ADR / `DECISI
 | Tie architecture and **earned** patterns to that choice (modular monolith vs other; Resource/controller patterns; etc.) | Architecture docs + [`design-patterns.md`](design-patterns.md) |
 | Open matching [`technologies/`](../technologies/README.md) packs **after** the pin for professionalism (syntax, quality, stop-using) | Packs are **how to write well**, not **which stack to pick** |
 | For Laravel TALL / VILT, open the composition map so every letter’s pack is loaded | [`php-laravel-compositions.md`](../technologies/php-laravel-compositions.md) |
-| Re-check official docs / Context7 for pinned lines before non-trivial code | D-66 habit |
-| When the owner **names** a stack to work with, search latest + refresh the playbook pack if stale (same session, no ask) | [`technologies/README`](../technologies/README.md) § Owner names a stack (D-79) |
+| Re-check official docs / Context7 for pinned lines before non-trivial code | SF-05 habit |
+| When the owner **names** a stack to work with, search latest + refresh the pack if stale (same session, no ask — as an upstream pull request when the kit is vendored) | [`technologies/README`](../technologies/README.md) § Owner names a stack (SF-05) |
 
 ## Forbid
 
@@ -35,7 +35,7 @@ Agents **advise** before they lock. Owners decide lasting pins via ADR / `DECISI
 | Bolt Livewire / Filament / Inertia / Vue onto a product that already chose SPA ↔ API (or the reverse) without an ADR | Different architectures |
 | Dump a pattern encyclopedia or microservices C4 onto a modular monolith by fashion | [`sad-adr.md`](sad-adr.md), [`design-patterns.md`](design-patterns.md) |
 | Invent versions from memory | Official docs + product SRS pin |
-| Leave a technologies pack stale after the owner named that stack | Playbook is a living starting point (D-79) |
+| Leave a technologies pack stale after the owner named that stack | The factory is a living starting point: refresh the pack, or propose the refresh upstream when the kit is vendored (SF-05) |
 
 ## Advice shape (when the owner consults)
 

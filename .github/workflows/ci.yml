@@ -1,4 +1,4 @@
-# Runs on Galhoom22/software-factory-all-in-one after sync (local software-factory-all-in-one/ → repo root).
+# Factory CI: every kit gate plus the seed smoke test, on each push and pull request.
 # Before first use elsewhere, pin action SHAs to current releases (Dependabot afterwards).
 name: Factory CI
 

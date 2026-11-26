@@ -1,6 +1,6 @@
 # Inertia.js — best practices
 
-Sources: [Introduction](https://inertiajs.com/docs/v3/getting-started/index), [Server-side setup](https://inertiajs.com/docs/v3/installation/server-side-setup), [Client-side setup](https://inertiajs.com/docs/v3/installation/client-side-setup), [Upgrade guide](https://inertiajs.com/docs/v3/getting-started/upgrade-guide). Re-check official docs before non-trivial Inertia work (D-66).
+Sources: [Introduction](https://inertiajs.com/docs/v3/getting-started/index), [Server-side setup](https://inertiajs.com/docs/v3/installation/server-side-setup), [Client-side setup](https://inertiajs.com/docs/v3/installation/client-side-setup), [Upgrade guide](https://inertiajs.com/docs/v3/getting-started/upgrade-guide). Re-check official docs before non-trivial Inertia work (SF-05).
 
 ## 1. What Inertia is
 

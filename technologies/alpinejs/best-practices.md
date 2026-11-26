@@ -1,6 +1,6 @@
 # Alpine.js — best practices
 
-Sources: [Start Here](https://alpinejs.dev/start-here), [Installation](https://alpinejs.dev/essentials/installation). Re-check official docs before non-trivial Alpine work (D-66).
+Sources: [Start Here](https://alpinejs.dev/start-here), [Installation](https://alpinejs.dev/essentials/installation). Re-check official docs before non-trivial Alpine work (SF-05).
 
 ## Install defaults (v3)
 

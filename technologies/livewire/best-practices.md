@@ -1,6 +1,6 @@
 # Livewire — best practices
 
-Sources: [Quickstart](https://livewire.laravel.com/docs/4.x/quickstart), [Installation](https://livewire.laravel.com/docs/4.x/installation), [Upgrade](https://livewire.laravel.com/docs/4.x/upgrading). Re-check official docs before non-trivial Livewire work (D-66).
+Sources: [Quickstart](https://livewire.laravel.com/docs/4.x/quickstart), [Installation](https://livewire.laravel.com/docs/4.x/installation), [Upgrade](https://livewire.laravel.com/docs/4.x/upgrading). Re-check official docs before non-trivial Livewire work (SF-05).
 
 ## Install defaults (4.x)
 

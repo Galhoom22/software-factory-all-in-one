@@ -246,7 +246,7 @@
     <g class="a5">
       <rect x="68" y="370" width="784" height="40" rx="8" fill="#0d141e" stroke="#314056"/>
       <text class="mono sage" x="88" y="395" font-size="13" font-weight="700">LINE HOT</text>
-      <text class="mono mute" x="178" y="395" font-size="13">· forever generic · practices only · public MIT mirror</text>
+      <text class="mono mute" x="178" y="395" font-size="13">· forever generic · practices only · MIT</text>
     </g>
   </g>
 
@@ -310,7 +310,7 @@
   <!-- SCENE C -->
   <g class="scene-c">
     <text class="ui ink c0" x="68" y="118" font-size="23" font-weight="700">Craft compounds. Coverage climbs.</text>
-    <text class="ui mute c1" x="68" y="146" font-size="14">Every useful lesson lands in the kit — then the public mirror stays in sync.</text>
+    <text class="ui mute c1" x="68" y="146" font-size="14">Every useful lesson lands upstream — every vendored copy can pull it.</text>
 
     <g class="c2">
       <rect x="68" y="168" width="372" height="176" rx="12" fill="#0b1018" stroke="#3d4a5f"/>
@@ -338,7 +338,7 @@
 
     <g class="c4">
       <rect x="68" y="364" width="784" height="40" rx="8" fill="#0d141e" stroke="#314056"/>
-      <text class="mono steel" x="88" y="389" font-size="12" font-weight="700">PUBLIC MIRROR</text>
+      <text class="mono steel" x="88" y="389" font-size="12" font-weight="700">UPSTREAM PR</text>
       <text class="mono mute" x="228" y="389" font-size="12">synced · MIT · ready for the next product</text>
     </g>
   </g>

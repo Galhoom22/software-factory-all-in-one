@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Fails CI if universal agent discovery files are missing or no longer
- * point at AGENTS.md / AGENT_START (D-44). Keeps harness pointers honest
+ * point at AGENTS.md / AGENT_START (SF-03). Keeps harness pointers honest
  * without duplicating the full rulebook.
  */
 import { readFileSync, existsSync } from "node:fs";
@@ -45,12 +45,14 @@ for (const phrase of [
   "check-delivery.mjs",
   "check-agents.mjs",
   "check-scope.mjs",
-  "English",
+  "Reply in",
   "Governing Product Rules",
   "Conventional Commits",
 ]) {
   if (!start.includes(phrase)) fail(`docs/AGENT_START.md must contain: ${phrase}`);
 }
+
+if (!/Reply in \S+/.test(start)) fail("docs/AGENT_START.md must state the reply language (\"Reply in <language>\")");
 
 const agents = read("AGENTS.md");
 if (!agents.includes("docs/AGENT_START.md")) {

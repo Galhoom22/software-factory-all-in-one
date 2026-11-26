@@ -254,6 +254,38 @@ for (const m of readmeText.matchAll(/~\s*(?:\*\*)?(\d{1,3})%/g)) {
   if (!atlasPercents.has(m[1])) fail(`README.md cites ~${m[1]}% which does not appear in coverage/README.md`);
 }
 
+// --- Decision IDs: every SF-NN cited resolves in DECISIONS.md; D-NN only in the product-log template ---
+{
+  const decisionsPath = path.join(playbookRoot, "DECISIONS.md");
+  if (!exists(decisionsPath)) fail("DECISIONS.md (the kit decision log) is missing");
+  else {
+    const defined = new Set([...read(decisionsPath).matchAll(/^### (SF-\d{2})\b/gm)].map((m) => m[1]));
+    const textFiles = [];
+    (function walkText(dir) {
+      for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (ent.name === ".git" || ent.name === "node_modules") continue;
+        const p = path.join(dir, ent.name);
+        if (ent.isDirectory()) walkText(p);
+        else if (/\.(md|mdc|mjs|toml|json|yml|txt)$/.test(ent.name)) textFiles.push(p);
+      }
+    })(playbookRoot);
+    for (const file of textFiles) {
+      const rel = path.relative(playbookRoot, file).split(path.sep).join("/");
+      if (rel === "scripts/check-structure.mjs") continue;
+      const text = read(file);
+      for (const m of text.matchAll(/\bSF-(\d{2})\b/g)) {
+        if (!defined.has(`SF-${m[1]}`)) fail(`${rel} cites SF-${m[1]}, which DECISIONS.md does not define`);
+      }
+      const productLog = rel === "templates/docs/DECISIONS.md" || rel.startsWith("templates/docs/decision-logs/");
+      if (!productLog) {
+        for (const m of text.matchAll(/\bD-(\d{2,3})\b/g)) {
+          fail(`${rel} cites D-${m[1]} — kit text cites kit decisions (SF-NN); product IDs belong in a product's own log`);
+        }
+      }
+    }
+  }
+}
+
 // --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
 {
   const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));

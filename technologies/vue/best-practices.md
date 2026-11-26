@@ -1,6 +1,6 @@
 # Vue.js — best practices
 
-Sources: [Introduction](https://vuejs.org/guide/introduction.html), [Quick Start](https://vuejs.org/guide/quick-start.html), [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html). Re-check official docs before non-trivial Vue work (D-66).
+Sources: [Introduction](https://vuejs.org/guide/introduction.html), [Quick Start](https://vuejs.org/guide/quick-start.html), [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html). Re-check official docs before non-trivial Vue work (SF-05).
 
 ## 1. What Vue is
 

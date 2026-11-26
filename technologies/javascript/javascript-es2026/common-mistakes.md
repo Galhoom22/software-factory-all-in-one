@@ -37,7 +37,7 @@
 |---------|-----------------|-----|
 | Confusing MDN **language** docs with **Web APIs** | Wrong APIs invented | Language = this pack; DOM/Fetch = Web APIs |
 | Shipping Stage-3 proposals from blogs | Non-portable code | Prefer MDN + ECMA-262 Stage 4 / Baseline |
-| Memorizing ES year feature lists | Drift | Re-open MDN hub + this pack (D-66) |
+| Memorizing ES year feature lists | Drift | Re-open MDN hub + this pack (SF-05) |
 | Silent product target bump for one API | Breaks older browsers/Node | ADR + SRS/browserslist change |
 
 ---

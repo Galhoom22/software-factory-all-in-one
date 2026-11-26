@@ -29,7 +29,7 @@ If it helps a human+AI team **plan or build software** (including AI products an
 The same playbook must work for:
 
 1. **Hands-off agent coding** — the owner mostly supervises; the agent executes end-to-end against this reference.
-2. **Professional / revenue products** — real users, money, PII, compliance; full rigor and evidence (proportional depth still applies — D-85).
+2. **Professional / revenue products** — real users, money, PII, compliance; full rigor and evidence (proportional depth still applies — SF-08).
 3. **Anything in between** — prototypes, tools, APIs, studios — as long as software is being built.
 
 Do **not** fork a “vibe” playbook and a “serious” playbook. One method; rigor scales with risk.
@@ -39,8 +39,8 @@ Do **not** fork a “vibe” playbook and a “serious” playbook. One method; 
 When the owner says “add X to the playbook / raise professionalism”:
 
 1. Ask: does X make the **single reference** stronger for the **next** software build (speed **and** quality)?
-2. If yes → atlas → deepen or add → wire → sync (D-110).
-3. If it is vanity, duplicate, or lowers a rail → Candor refuse (D-82).
+2. If yes → atlas → deepen or add → wire → sync (SF-14).
+3. If it is vanity, duplicate, or lowers a rail → Candor refuse (SF-07).
 
 The dream is the **strongest reusable software-building playbook** we can grow over time (more languages, more craft, more lessons) — never a finished one-shot dump. Trajectory: [`EXCELLENCE.md`](EXCELLENCE.md) ratchet + [`coverage/`](coverage/README.md).
 
@@ -53,8 +53,8 @@ Score a change against these — not against marketing adjectives:
 | **Speed × quality** | One reference makes agents fast **and** high-quality; chat memory alone is not enough |
 | **Safety rails** | SECURITY / COMPLIANCE / ethics / candor hold; High risk is named and treated |
 | **Evidence** | Done needs proof (tests, CI, contract); no checklist theater |
-| **Proportional rigor** | Small products stay light; rigor grows with money/PII/API/public/booking (D-85) |
-| **Agent-operable** | Context hygiene, handoffs, memory pointers; rules fit an LLM session (D-86) |
+| **Proportional rigor** | Small products stay light; rigor grows with money/PII/API/public/booking (SF-08) |
+| **Agent-operable** | Context hygiene, handoffs, memory pointers; rules fit an LLM session (SF-09) |
 | **Forever-generic** | No product names, people, or tracker URLs in method/`templates/` |
 | **Deepen-over-duplicate** | Coverage atlas first; one home per practice; % stays honest |
 | **Always-Current** | Touched homes stay fresh this session; official/Context7 evidence; freshness CI gate ([`07-judgment/playbook-freshness.md`](07-judgment/playbook-freshness.md)) |
@@ -74,14 +74,14 @@ Agents run this **before** inventing or “improving” a practice:
 
 2. **Atlas** — consult [`coverage/`](coverage/README.md); report ✅/⚠️/❌ + %; deepen the existing home when strong.
 
-3. **Candor** — if the ask would lower professionalism, **refuse** + safer alternative (D-82 / D-83). Do not dual-sync a downgrade.
+3. **Candor** — if the ask would lower professionalism, **refuse** + safer alternative (SF-07). Do not propose a downgrade upstream.
 
 4. **Smallest complete** — Ponytail: least new surface that fully works; no parallel constitutions.
 
 5. **Wire it** — method + prompts/lessons/day loop/CI as needed so agents actually use it.
 
-6. **Measure** — update the coverage row/% in the same change; sync the public Software Factory mirror (D-110).
-7. **Always-Current** — run the freshness closeout + `node software-factory-all-in-one/scripts/check-structure.mjs`; re-verify official docs for touched packs ([`playbook-freshness.md`](07-judgment/playbook-freshness.md)).
+6. **Measure** — update the coverage row/% in the same change; land it through a pull request to the factory repository (SF-14).
+7. **Always-Current** — run the freshness closeout + the structure gate (`node scripts/check-structure.mjs` in the factory; `node software-factory-all-in-one/scripts/check-structure.mjs` in a product); re-verify official docs for touched packs ([`playbook-freshness.md`](07-judgment/playbook-freshness.md)).
 
 8. **Leave a trail** — if it is a lasting bar change, add a `DECISIONS` row in the product that hosts the playbook copy.
 
@@ -106,8 +106,8 @@ Progress is **visible** in: rising honest coverage %, fewer ⚠️ rows, sharper
 | One mega-rewrite to “finish” the dream | Context overflow + unreviewable diff; use the ratchet |
 | Add parallel docs for the same practice | Dilutes the atlas; agents ignore both |
 | Copy a course / agent kit wholesale into the repo | Second constitution; see judgment README |
-| Thin a full-cadence product by citing “flexibility” | D-85 pin; excellence includes knowing when rigor is earned |
-| Skip dual sync “just this once” | Drift between local and studio mirror kills reuse |
+| Thin a full-cadence product by citing “flexibility” | SF-08 pin; excellence includes knowing when rigor is earned |
+| Edit a vendored copy “just this once” | Local forks drift from the factory and stop receiving fixes |
 
 ## Related homes
 

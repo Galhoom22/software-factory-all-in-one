@@ -1,5 +1,5 @@
 {
-  "$schema_comment": "Public forever-generic rules only — structural leakage (mailboxes, secrets, day-page URLs, absolute user paths). Never put private product/person/org names here; those live in the planning-repo product denylist and are blocked at sync time. Do not ban PROJECT-N patterns here — decision IDs like D-110 are valid.",
+  "$schema_comment": "Public forever-generic rules only — structural leakage (mailboxes, secrets, day-page URLs, absolute user paths). Never put private product/person/org names here; those live in the planning-repo product denylist and are blocked at sync time. Do not ban PROJECT-N patterns here — decision IDs like SF-14 are valid.",
   "rules": [
     {
       "id": "personal-email",

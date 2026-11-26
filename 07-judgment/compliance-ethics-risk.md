@@ -6,7 +6,7 @@ Absorb **regulatory compliance**, **professional ethics**, and **risk management
 
 1. Product `COMPLIANCE.md` + `SECURITY.md` + Governing Product Rules (binding for *this* product)
 2. [IEEE-CS / ACM Software Engineering Code of Ethics](https://www.computer.org/education/code-of-ethics) (public interest first; refuse unethical asks)
-3. Official market regulators for launch markets (e.g. GDPR / ICO privacy-by-design, national data-protection laws in Egypt and Arab markets, sector rules when applicable)
+3. Official market regulators for launch markets (e.g. GDPR / ICO privacy-by-design, national data-protection laws in each launch market, sector rules when applicable)
 4. Risk process primers: identify → assess → treat → monitor ([IBM risk management overview](https://www.ibm.com/think/topics/risk-management); software-project framing such as project / technical / business risk)
 5. Compliant SDLC craft: compliance is a **floor**; risk judgment closes gaps standards have not named yet ([Sonar — software regulatory compliance / compliant SDLC](https://www.sonarsource.com/resources/library/software-regulatory-compliance-a-developers-guide-to-compliant-sdlc/))
 
@@ -20,7 +20,7 @@ Agents that only “ship the feature” when the owner asks for something that:
 - Conflicts with professional ethics (deception, unsafe approval, undisclosed danger, fabricating claims)
 - Creates unmanaged project / technical / business / compliance / reputational risk
 
-…leave the next product exposed to fines, bans, breaches, and lost trust. Candor (D-82) without this map is vague; this file names **what** to refuse and **how** to propose safer alternatives.
+…leave the next product exposed to fines, bans, breaches, and lost trust. Candor (SF-07) without this map is vague; this file names **what** to refuse and **how** to propose safer alternatives.
 
 ## Three lenses (keep distinct)
 
@@ -47,7 +47,7 @@ Do **not** treat “we passed a checklist” as “no residual risk.” Do **not
 
 | Practice | Pass when |
 |----------|-----------|
-| **Markets first** | Product COMPLIANCE lists launch markets (e.g. Egypt, Arab region, EU/UK, global baseline) and maps laws → UI/API obligations |
+| **Markets first** | Product COMPLIANCE lists launch markets (e.g. each launch country or region, EU/UK, global baseline) and maps laws → UI/API obligations |
 | **Privacy by design** | Collect only what the product needs; lawful basis / consent where required; retention + deletion; transfer mechanisms documented |
 | **Secure / compliant SDLC** | Secrets out of git; dependency and vulnerability awareness; change evidence via CI/PR; no “ship now, patch forever” for known critical issues without a plan |
 | **Payments / marketing / a11y / AI** | Hosted checkout only when charging; honest marketing; WCAG bar from COMPLIANCE; AI consent + no fabrication rules enforced |
@@ -79,9 +79,9 @@ When the owner asks for something that fails these lenses:
 
 | Forbid | Why |
 |--------|-----|
-| Blindly implementing an owner ask that violates COMPLIANCE / SECURITY / ethics | D-82 + this judgment |
+| Blindly implementing an owner ask that violates COMPLIANCE / SECURITY / ethics | SF-07 + this judgment |
 | Claiming SOC 2 / ISO / “fully compliant worldwide” without evidence | Deception |
-| Collecting “nice to have” PII or sending raw resumes to third parties without stripping/consent | Privacy-by-design failure |
+| Collecting “nice to have” PII or sending raw personal documents to third parties without stripping/consent | Privacy-by-design failure |
 | Skipping risk talk on money / PII / AI / irreversible actions because “it’s a small change” | Risk acceptance by silence |
 | Dumping full ISO/COSO manuals into the planning repo | Judgment only; product COMPLIANCE stays the SoT |
 
@@ -89,4 +89,4 @@ When the owner asks for something that fails these lenses:
 
 - Templates: `templates/docs/COMPLIANCE.md`, `templates/docs/SECURITY.md`, `templates/docs/OWNER_STANDING.md` § Candor
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md)
-- Sibling: [`payments.md`](payments.md), [`booking.md`](booking.md), [`api-readiness.md`](api-readiness.md), Candor (D-82)
+- Sibling: [`payments.md`](payments.md), [`booking.md`](booking.md), [`api-readiness.md`](api-readiness.md), Candor (SF-07)

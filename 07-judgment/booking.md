@@ -85,7 +85,7 @@ When must-finish touches booking inventory, holds, confirm/cancel, supplier APIs
 
 1. Open this file + [`payments.md`](payments.md) if money moves.
 2. Prove recheck + idempotency + hold expiry (or N/A with reason).
-3. Candor: refuse designs that skip holds, recheck, or idempotency — propose the safer scenario (D-82 / D-83).
+3. Candor: refuse designs that skip holds, recheck, or idempotency — propose the safer scenario (SF-07).
 
 Closeout day summary: cite booking proof (or **N/A — no booking surfaces**).
 

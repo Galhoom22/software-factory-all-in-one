@@ -28,15 +28,15 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | Priority | Capability | Today % | Target % | Suggested upgrade (smallest complete) | Status |
 |----------|------------|---------|----------|----------------------------------------|--------|
 | P0 | **Coverage atlas itself** | was 0 | **100** | This folder + agent protocol + prompts/lessons | ✅ Done 2026-11-21 |
-| P1 | **AI agent harness atlas + agents/** | was thin | **living** | `08-ai-agents.md` + `agents/` packs (D-109) | ✅ Done 2026-11-23 |
+| P1 | **AI agent harness atlas + agents/** | was thin | **living** | `08-ai-agents.md` + `agents/` packs (SF-11) | ✅ Done 2026-11-23 |
 | P1 | **Software industry surfaces atlas** | was 0 | **living** | `07-software-surfaces.md` + language map + two-numbers rule | ✅ Done 2026-11-23 |
 | P0 | **API readiness in day loop** | was ~55 | **88** | `07-judgment/api-readiness.md` + `08`/`09` + BE TESTING/DEPLOYMENT | ✅ Done 2026-11-21 |
 | P0 | **Technologies library + PHP 8.6** | was 0 | **85** (PHP slice) | `technologies/` + php-8.6 pack from php.net | ✅ Done 2026-11-21 |
-| P0 | **Tech pack quality bar + auto latest-docs** | was thin | **92** | `quality.md` + hard agent protocol (D-66) | ✅ Done 2026-11-21 |
+| P0 | **Tech pack quality bar + auto latest-docs** | was thin | **92** | `quality.md` + hard agent protocol (SF-05) | ✅ Done 2026-11-21 |
 | P0 | **Laravel 13 pack** | was 0 | **88** | `technologies/laravel/` from laravel.com/docs/13.x | ✅ Done 2026-11-21 |
-| P2 | Next.js pack | **92** | **92** | `technologies/nextjs/` (D-100) | ✅ Done 2026-11-23 |
+| P2 | Next.js pack | **92** | **92** | `technologies/nextjs/` (SF-05) | ✅ Done 2026-11-23 |
 | P1 | Consult-before-add agent habit | was ~40 | **95** | Wire atlas into README, `05-PROMPTS`, `06-LESSONS`, OWNER_STANDING | ✅ Done 2026-11-21 |
-| P1 | Rust language pack | **88** | **88** | `technologies/rust/` from doc.rust-lang.org/stable (D-107) | ✅ Done 2026-11-23 |
+| P1 | Rust language pack | **88** | **88** | `technologies/rust/` from doc.rust-lang.org/stable (SF-05) | ✅ Done 2026-11-23 |
 | P2 | Antigravity deepen + discovery pointer | **42** | **75** | Official Antigravity docs → pack + thin root pointer | ❌ Open |
 | P2 | Trae / Lingma deepen from official docs | **36–38** | **70** | Owner pastes official URLs → fill packs | ❌ Open |
 | P1 | TypeScript pack | **0** | **85** | `technologies/typescript/` from typescriptlang.org | ❌ Open (raises web/RN/Electron/extensions) |
@@ -71,7 +71,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 2. If missing, check this file’s **intentional exclusions** — maybe it must stay product-side.
 3. If it is a **real thin spot**, prefer upgrading the listed home over a new parallel file.
 4. After the change: update the row %, this backlog status, and `coverage/README` scorecard date.
-5. Sync public Software Factory mirror same session.
+5. Land the change through a pull request to the factory repository.
 
 ---
 
@@ -84,4 +84,4 @@ These are **not** gaps; listed so agents do not reinvent them:
 - Requirements activation + CI entry gates (`00`, scripts) — **~95%**
 - Multi-harness discovery with one `AGENTS` rulebook — **~93%**
 - Feature SDLC evidence rules — **~93%**
-- Automatic lesson capture + forever-generic dual sync — **~93%**
+- Automatic lesson capture + forever-generic upstream contributions — **~93%**

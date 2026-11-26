@@ -4,7 +4,7 @@
 
 **What this is not:** a second constitution, a product backlog, or permission to skip quality. Presence ≠ Done for a product; this atlas only answers “does the **template/method** already have this?”
 
-**Mirrors:** keep this folder identical in the local product `software-factory-all-in-one/` copy **and** the public Software Factory GitHub mirror (same-session sync). Forever-generic — no product names, people, tracker keys, or day-page URLs.
+**Copies:** product repositories vendor this folder read-only (`scripts/seed.mjs`); improvements land through pull requests to the factory repository, and each product picks them up with `seed.mjs --update` from a fresh factory checkout. Forever-generic — no product names, people, tracker keys, or day-page URLs.
 
 ---
 
@@ -21,9 +21,9 @@ When the owner says *add X to the playbook / template / workflow* (any language)
    - **Action:** skip · deepen/upgrade · add new (with quality bar)
 3. **If ✅ and ≥ 85%:** do **not** duplicate. Say it exists; only deepen if the owner asked for more professionalism or a real gap vs current practice.
 4. **If ⚠️ (40–84%):** upgrade the existing home first (method + template + prompt + lesson as needed) — do not create a parallel doc.
-5. **If ❌ or &lt; 40%:** add the smallest complete practice (method and/or `templates/`), update this atlas in the **same** change, then sync the studio mirror.
-6. Quality bar unchanged: forever-generic; must raise professionalism; dual local + GitHub sync.
-7. **Candor:** if the owner’s ask would **lower** professionalism or weaken a working workflow, **do not implement it**. Say no, explain why, propose a better alternative or recommend skipping (D-82). Dual-sync only changes that raise the bar.
+5. **If ❌ or &lt; 40%:** add the smallest complete practice (method and/or `templates/`), update this atlas in the **same** change, then land it upstream through a pull request.
+6. Quality bar unchanged: forever-generic; must raise professionalism; lands upstream through a pull request.
+7. **Candor:** if the owner’s ask would **lower** professionalism or weaken a working workflow, **do not implement it**. Say no, explain why, propose a better alternative or recommend skipping (SF-07). Propose upstream only changes that raise the bar.
 
 Owner standing / product calendars stay out of this folder — link from product `docs/OWNER_STANDING.md` only.
 
@@ -107,22 +107,22 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Cross-surface compatibility (FE↔BE↔services) | `07-judgment/cross-surface-compatibility` + `08` + `SIBLING` | ✅ ~90% |
 | ADR / architecture decisions | `07-judgment/sad-adr` + `DECISIONS` template | ✅ ~90% |
 | Requirements-driven stack selection | `07-judgment/stack-selection` + `00-USAGE` + `technologies/` | ✅ ~90% |
-| Owner-names-stack pack freshness | `technologies/README` (D-79) | ✅ ~90% |
-| Packages over reinvention | `07-judgment/packages` (D-80) | ✅ ~90% |
-| SEO + GEO dual opt (public pages) | `07-judgment/seo-geo` + SEO templates + `08` (D-81) | ✅ ~88% |
-| Candor / refuse degrading asks | OWNER_STANDING + coverage protocol + `08` (D-82) | ✅ ~90% |
-| Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (D-83) | ✅ ~88% |
-| Booking / reservations | `07-judgment/booking` + `08` (D-84) | ✅ ~88% |
-| Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (D-87) | ✅ ~94% |
-| Playbook purpose / speed×quality single reference | `EXCELLENCE.md` § Why + `README` + `00-USAGE` (D-93) | ✅ ~95% |
-| Studio as a company / org seats | `07-judgment/studio-company` + `STUDIO_ORG` template (D-88) | ✅ ~90% |
-| Competitor recon / clean-room | `07-judgment/competitor-recon` + template (D-89) | ✅ ~88% |
-| Software Factory + multi-agent | `07-judgment/software-factory` + `STUDIO_ORG` + `08` (D-90) | ✅ ~93% |
-| Proportional day pipeline | `08` § Proportional + `09` phases + FEATURE profiles (D-85) | ✅ ~90% |
-| Context window / memory pointers | `07-judgment/context-window` + `08` + handoffs (D-86) | ✅ ~90% |
+| Owner-names-stack pack freshness | `technologies/README` (SF-05) | ✅ ~90% |
+| Packages over reinvention | `07-judgment/packages` (SF-06) | ✅ ~90% |
+| SEO + GEO dual opt (public pages) | `07-judgment/seo-geo` + SEO templates + `08` (SF-10) | ✅ ~88% |
+| Candor / refuse degrading asks | OWNER_STANDING + coverage protocol + `08` (SF-07) | ✅ ~90% |
+| Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (SF-07) | ✅ ~88% |
+| Booking / reservations | `07-judgment/booking` + `08` (SF-10) | ✅ ~88% |
+| Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (SF-11) | ✅ ~94% |
+| Playbook purpose / speed×quality single reference | `EXCELLENCE.md` § Why + `README` + `00-USAGE` (SF-11) | ✅ ~95% |
+| Studio as a company / org seats | `07-judgment/studio-company` + `STUDIO_ORG` template (SF-12) | ✅ ~90% |
+| Competitor recon / clean-room | `07-judgment/competitor-recon` + template (SF-13) | ✅ ~88% |
+| Software Factory + multi-agent | `07-judgment/software-factory` + `STUDIO_ORG` + `08` (SF-12) | ✅ ~93% |
+| Proportional day pipeline | `08` § Proportional + `09` phases + FEATURE profiles (SF-08) | ✅ ~90% |
+| Context window / memory pointers | `07-judgment/context-window` + `08` + handoffs (SF-09) | ✅ ~90% |
 | TALL / VILT compositions map | `technologies/php-laravel-compositions` | ✅ ~90% |
 | Requirements activation | `00-USAGE` + entry scripts + CI | ✅ ~95% |
-| Playbook dual sync (local↔GitHub) | `04-workflows` (product script outside templates) | ✅ ~93% |
+| Upstream contributions (vendored copy read-only) | `04-workflows` + `CONTRIBUTING.md` | ✅ ~93% |
 | PHP 8.6 tech pack | `technologies/php` | ✅ ~85% |
 | Laravel 13 tech pack | `technologies/laravel` | ✅ ~88% |
 | Tailwind CSS v4 tech pack | `technologies/tailwindcss` | ✅ ~88% |
@@ -172,42 +172,42 @@ software-factory-all-in-one/coverage/
 | 2026-11-26 | Structure gate `check-structure.mjs` (renamed from `check-playbook-freshness.mjs`; shim kept one release): judgment index and README counts/percentages are computed and checked. |
 | 2026-11-26 | Content-integrity gate (`check-content-integrity.mjs`); restored coverage files and FEATURE_SDLC/EXCELLENCE/judgment tables damaged by tool write-back. |
 | 2026-11-25 | Factory.com Software Factory absorb (routing, outcome metrics, trust/control) into `07-judgment/software-factory.md`; coverage ~93%. |
-| 2026-11-23 | D-109: AI agent harness atlas (`08-ai-agents`) + `agents/` packs (US + China + Antigravity). |
-| 2026-11-23 | D-108: Always-Current playbook freshness closeout + `check-playbook-freshness.mjs` CI gate. |
-| 2026-11-23 | D-107: Rust 1.100 + edition 2024 technologies pack from doc.rust-lang.org/stable. |
-| 2026-11-23 | D-106: software industry surfaces atlas (`07-software-surfaces`) — % per surface + language map; two-numbers rule vs 01–06 professionalism. |
-| 2026-11-21 | D-90: Software Factory + multi-agent line paired with studio seats.
-| 2026-11-23 | D-101: integration engineering judgment (any partner boundary) in day workflow. |
-| 2026-11-23 | D-102: AI engineering judgment (det/prob seam, evals, admission) in day workflow. |
-| 2026-11-23 | D-103: agent delegation judgment (brief → review → land; implementer never commits). |
-| 2026-11-23 | D-104: C# 14 (.NET 10) technologies pack from learn.microsoft.com/dotnet/csharp. |
-| 2026-11-23 | D-105: .NET 10 LTS technologies pack from learn.microsoft.com/dotnet. |
-| 2026-11-23 | D-100: Next.js 16 technologies pack from nextjs.org/docs; npm 16.4.x. |
-| 2026-11-23 | D-99: React 19 technologies pack from react.dev; npm 19.3.x. |
-| 2026-11-23 | D-98: verification engineering judgment (criteria→evidence; author≠judge) in day workflow. |
-| 2026-11-23 | D-97: Context7 / current-docs day gate (pinned-line freshness; day evidence). |
-| 2026-11-23 | D-96: human code-review bar (readability, modern syntax, best practices) in day workflow; CodeRabbit assists. |
-| 2026-11-23 | D-95: Pareto 20% file-anchored (paths, structure, connections) for ChatGPT code-reading growth. |
-| 2026-11-23 | D-94: enterprise system-design judgment (six questions, practice levels, verification-dominant) absorbed; course tree not vendored. |
-| 2026-11-23 | D-93: playbook purpose explicit — single reference for agent speed×quality (vibe + professional products). |
-| 2026-11-23 | D-92: API design judgment (consumer-first REST craft) absorbed from course; design bar in API readiness gate. |
-| 2026-11-23 | D-91: cross-surface compatibility day gate (sibling read / owned-seat write; monorepo+split+services). |
-| 2026-11-21 | D-89: competitor recon / clean-room parity (replica-skill judgment).
-| 2026-11-21 | D-88: studio-as-company (Paperclip judgment) + STUDIO_ORG + optional CLI.
-| 2026-11-21 | D-87: EXCELLENCE.md north star + ratchet for every future playbook upgrade.
-| 2026-11-21 | D-86: context-window hygiene (memory pointers, handoff, mid-day checkpoint ≠ owner go). |
-| 2026-11-21 | D-85: proportional day pipeline (flexible rigor; always-on core). |
-| 2026-11-21 | D-84: booking/reservations judgment + day gate. |
-| 2026-11-21 | D-83: compliance/ethics/risk judgment + candor safer-scenario; day check. |
-| 2026-11-21 | D-82 candor: refuse/advise when an add would lower professionalism. |
-| 2026-11-21 | D-81: SEO + GEO judgment + templates + day gate; dual sync. |
-| 2026-11-21 | Symfony 8 pack (D-77) from symfony.com/doc. |
-| 2026-11-21 | Vue 3 pack (D-76) from vuejs.org/guide/introduction. |
-| 2026-11-21 | Inertia.js 3 pack (D-75) from inertiajs.com/docs/v3/getting-started. |
-| 2026-11-21 | CSS Snapshot 2026 pack (D-74) from MDN Web/CSS. |
-| 2026-11-21 | HTML Living Standard pack (D-73) from MDN Web/HTML. |
-| 2026-11-21 | JavaScript / ES2026 pack (D-72) from MDN Web/JavaScript. |
-| 2026-11-21 | Laravel 13 pack (D-67). |
-| 2026-11-21 | Technologies library + PHP 8.6 pack (D-65). |
-| 2026-11-21 | API readiness gate absorbed (D-64); workflows ~91%. |
+| 2026-11-23 | SF-11: AI agent harness atlas (`08-ai-agents`) + `agents/` packs (US + China + Antigravity). |
+| 2026-11-23 | SF-11: Always-Current playbook freshness closeout + `check-playbook-freshness.mjs` CI gate. |
+| 2026-11-23 | SF-05: Rust 1.100 + edition 2024 technologies pack from doc.rust-lang.org/stable. |
+| 2026-11-23 | SF-11: software industry surfaces atlas (`07-software-surfaces`) — % per surface + language map; two-numbers rule vs 01–06 professionalism. |
+| 2026-11-21 | SF-12: Software Factory + multi-agent line paired with studio seats.
+| 2026-11-23 | SF-10: integration engineering judgment (any partner boundary) in day workflow. |
+| 2026-11-23 | SF-10: AI engineering judgment (det/prob seam, evals, admission) in day workflow. |
+| 2026-11-23 | SF-10: agent delegation judgment (brief → review → land; implementer never commits). |
+| 2026-11-23 | SF-05: C# 14 (.NET 10) technologies pack from learn.microsoft.com/dotnet/csharp. |
+| 2026-11-23 | SF-05: .NET 10 LTS technologies pack from learn.microsoft.com/dotnet. |
+| 2026-11-23 | SF-05: Next.js 16 technologies pack from nextjs.org/docs; npm 16.4.x. |
+| 2026-11-23 | SF-05: React 19 technologies pack from react.dev; npm 19.3.x. |
+| 2026-11-23 | SF-10: verification engineering judgment (criteria→evidence; author≠judge) in day workflow. |
+| 2026-11-23 | SF-05: Context7 / current-docs day gate (pinned-line freshness; day evidence). |
+| 2026-11-23 | SF-10: human code-review bar (readability, modern syntax, best practices) in day workflow; CodeRabbit assists. |
+| 2026-11-23 | SF-09: Pareto 20% file-anchored (paths, structure, connections) for ChatGPT code-reading growth. |
+| 2026-11-23 | SF-10: enterprise system-design judgment (six questions, practice levels, verification-dominant) absorbed; course tree not vendored. |
+| 2026-11-23 | SF-11: playbook purpose explicit — single reference for agent speed×quality (vibe + professional products). |
+| 2026-11-23 | SF-10: API design judgment (consumer-first REST craft) absorbed from course; design bar in API readiness gate. |
+| 2026-11-23 | SF-10: cross-surface compatibility day gate (sibling read / owned-seat write; monorepo+split+services). |
+| 2026-11-21 | SF-13: competitor recon / clean-room parity (replica-skill judgment).
+| 2026-11-21 | SF-12: studio-as-company (Paperclip judgment) + STUDIO_ORG + optional CLI.
+| 2026-11-21 | SF-11: EXCELLENCE.md north star + ratchet for every future playbook upgrade.
+| 2026-11-21 | SF-09: context-window hygiene (memory pointers, handoff, mid-day checkpoint ≠ owner go). |
+| 2026-11-21 | SF-08: proportional day pipeline (flexible rigor; always-on core). |
+| 2026-11-21 | SF-10: booking/reservations judgment + day gate. |
+| 2026-11-21 | SF-07: compliance/ethics/risk judgment + candor safer-scenario; day check. |
+| 2026-11-21 | SF-07 candor: refuse/advise when an add would lower professionalism. |
+| 2026-11-21 | SF-10: SEO + GEO judgment + templates + day gate; dual sync. |
+| 2026-11-21 | Symfony 8 pack (SF-05) from symfony.com/doc. |
+| 2026-11-21 | Vue 3 pack (SF-05) from vuejs.org/guide/introduction. |
+| 2026-11-21 | Inertia.js 3 pack (SF-05) from inertiajs.com/docs/v3/getting-started. |
+| 2026-11-21 | CSS Snapshot 2026 pack (SF-05) from MDN Web/CSS. |
+| 2026-11-21 | HTML Living Standard pack (SF-05) from MDN Web/HTML. |
+| 2026-11-21 | JavaScript / ES2026 pack (SF-05) from MDN Web/JavaScript. |
+| 2026-11-21 | Laravel 13 pack (SF-05). |
+| 2026-11-21 | Technologies library + PHP 8.6 pack (SF-05). |
+| 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |

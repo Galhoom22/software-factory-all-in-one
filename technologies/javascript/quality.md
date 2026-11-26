@@ -54,7 +54,7 @@ Before non-trivial JavaScript work in a session:
 
 1. Open this pack (`best-practices` + version slice + this file).
 2. **Re-verify** the pinned line on [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and/or [ECMA-262](https://262.ecma-international.org/) — do not trust chat memory for “latest.”
-3. If the vendor moved (new edition, new deprecations), update the pack in the same session when professionalism rises, then sync the public Software Factory mirror.
+3. If the vendor moved (new edition, new deprecations), update the pack in the same session when professionalism rises, through a pull request to the factory repository.
 4. Never silently bump the **product** browser/Node pin — propose ADR if the product should move.
 
 ## Related

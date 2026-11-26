@@ -6,12 +6,12 @@ Paths under `software-factory-all-in-one/technologies/`.
 |----|------------|------|---|-------|
 | ✅ | Technologies library layout | `technologies/README.md` | **90** | Slug + version-slice convention; agent protocol |
 | ✅ | Select-before-craft gate | `07-judgment/stack-selection.md` + `technologies/README` | **90** | Packs ≠ product stack; requirements decide |
-| ✅ | Owner-names-stack freshness | `technologies/README` § Owner names a stack | **90** | Auto search official/Context7; update pack if stale (D-79) |
-| ✅ | Context7 day gate (judgment) | `07-judgment/context7-docs` + `08` | **93** | resolve→query / official fallback; day summary evidence (D-97) |
+| ✅ | Owner-names-stack freshness | `technologies/README` § Owner names a stack | **90** | Auto search official/Context7; update the pack if stale — upstream pull request when vendored (SF-05) |
+| ✅ | Context7 day gate (judgment) | `07-judgment/context7-docs` + `08` | **93** | resolve→query / official fallback; day summary evidence (SF-05) |
 | ✅ | TALL / VILT / PHP compositions map | `technologies/php-laravel-compositions.md` | **90** | Which packs to open together; gaps listed honestly |
 | ✅ | PHP pack hub | `technologies/php/` | **90** | Official refs + modern baseline + `quality.md` |
 | ✅ | PHP 8.6 version slice | `technologies/php/php-8.6/` | **85** | use / stop / common mistakes from php.net |
-| ✅ | Quality bar + auto latest-docs | `technologies/README` + each `quality.md` | **92** | Clean Code/architecture/patterns + mandatory official refresh (D-66) |
+| ✅ | Quality bar + auto latest-docs | `technologies/README` + each `quality.md` | **92** | Clean Code/architecture/patterns + mandatory official refresh (SF-05) |
 | ✅ | Pack template for next stacks | `technologies/_pack-template/` | **90** | Required file list for Laravel/Next/… |
 | ✅ | Laravel pack hub | `technologies/laravel/` | **88** | Official 13.x refs + practices + quality |
 | ✅ | Laravel 13 version slice | `technologies/laravel/laravel-13/` | **88** | use / stop / mistakes from laravel.com/docs/13.x |

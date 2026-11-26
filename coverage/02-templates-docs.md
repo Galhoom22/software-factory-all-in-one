@@ -53,7 +53,7 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
-| ✅ | FE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER / SEO+GEO | `docs/frontend/**` | **90** | Owner-split testing (D-33); FE SEO includes GEO craft |
+| ✅ | FE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER / SEO+GEO | `docs/frontend/**` | **90** | Owner-split testing (SF-10); FE SEO includes GEO craft |
 | ✅ | BE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER | `docs/backend/**` | **88** | — |
 | ✅ | FE/BE CodeRabbit yaml + guidelines | `docs/{frontend,backend}/coderabbit.yaml`, `CODERABBIT_GUIDELINES.md` | **90** | Sync when SECURITY/COMPLIANCE change |
 | ✅ | FE/BE TestSprite guidelines | `docs/*/TESTSPRITE_GUIDELINES.md` | **78** | Present; less battle-tested than CodeRabbit rails |

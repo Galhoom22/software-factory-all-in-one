@@ -47,7 +47,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **88** | Assumptions, thin slices, five-axis review | Not a vendored skills OS |
 | ✅ | Payments / providers | `07-judgment/payments.md` | **88** | Webhook-first, idempotency, current APIs | Pair with SECURITY/COMPLIANCE templates |
 | ✅ | Booking / reservations | `07-judgment/booking.md` | **88** | Holds, recheck, idempotency, inventory; pair payments |
-| ✅ | Context window hygiene | `07-judgment/context-window.md` | **90** | Pointers; fresh chat; D-86 | — |
+| ✅ | Context window hygiene | `07-judgment/context-window.md` | **90** | Pointers; fresh chat; SF-09 | — |
 | ✅ | Playwright E2E | `07-judgment/playwright-e2e.md` | **88** | Short critical list, locators, CI traces | FE TESTING template holds product rules |
 | ✅ | SAD / ADR | `07-judgment/sad-adr.md` | **90** | DECISIONS.md + C4 in ARCHITECTURE; no second SAD | — |
 | ✅ | Enterprise system design | `07-judgment/enterprise-system-design.md` | **90** | Six questions; practice levels; verification-dominant; output admission |
@@ -64,7 +64,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Entry requirements example | `examples/my-project-requirements.example.md` | **90** | Copyable activation sample |
 | ✅ | Playbook self-check scripts | `scripts/check-requirements-activation.mjs`, `scripts/check-seed.mjs` (runs the seeded `check-planning-entry.mjs`) | **92** | CI + local |
 | ✅ | Seed + smoke test | `scripts/seed.mjs`, `scripts/check-seed.mjs` | **90** | Clone / in-place (template) / update seeding; seeded repos pass their own gates on every change |
-| ✅ | Playbook CI workflow | `.github/workflows/ci.yml` | **90** | Studio mirror uses synced copy |
+| ✅ | Factory CI workflow | `.github/workflows/ci.yml` | **90** | Every gate + seed smoke test on each push and pull request |
 | ✅ | Content-integrity gate | `scripts/check-content-integrity.mjs` | **90** | Tool-artifact markers, GitHub table shape, links/anchors; kit + planning CI |
 | ✅ | Excellence north star | `EXCELLENCE.md` | **95** | Ratchet + **why** (speed×quality single reference; vibe + professional) |
 | ✅ | Studio as a company | `07-judgment/studio-company.md` + `templates/docs/STUDIO_ORG.md` | **90** | Org seats; Paperclip judgment |

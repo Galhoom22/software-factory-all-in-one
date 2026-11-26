@@ -1,6 +1,6 @@
 # Prototype — See the Product Before Building It
 
-The prototype lives in `project-ui/` inside the planning repository. It is the **only** code allowed there. Its job is to make the plan visible and clickable so gaps show up before implementation, not after. Prefer copying a finished `project-ui/` from an existing planning repo (typical stack example: Next.js + React + Tailwind + shadcn/ui + Phosphor; CI on Node Active LTS) rather than rewriting the starter kit.
+The prototype lives in `project-ui/` inside the planning repository. It is the **only** code allowed there. Its job is to make the plan visible and clickable so gaps show up before implementation, not after. Prefer copying a finished `project-ui/` from an existing planning repo (typical stack example: Next.js + React + Tailwind + shadcn/ui + one icon library; CI on Node Active LTS) rather than rewriting the starter kit.
 
 ## Rules for Both Tracks
 
@@ -64,11 +64,11 @@ The home page (`/`) is the team's map, built in its final shape from the start (
 
 | Parameter | Meaning |
 |-----------|---------|
-| `?state=<ID>` | Shows one state of a screen, for example `/resume/experience?state=R03-validation`. |
+| `?state=<ID>` | Shows one state of a screen, for example `/profile/experience?state=P03-validation`. |
 | `?item=<id>` | Opens one record of a list. |
 | `?lang=en` | Switches the interface language. |
 
-Screen IDs are a letter per area and a number (`A01` account, `R03` resume section); state IDs extend them (`R03-validation`). Keep IDs stable; documents and conversations refer to them.
+Screen IDs are a letter per area and a number (`A01` account, `P03` profile section); state IDs extend them (`P03-validation`). Keep IDs stable; documents and conversations refer to them.
 
 ### State Checklist (every screen)
 

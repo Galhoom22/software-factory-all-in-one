@@ -13,7 +13,7 @@ Defaults for agents **and** humans driving **Cursor** against this Engineering P
 
 - Prefer **one clear goal** per session (planning stage, or one implementation day must-finish).
 - Keep large outputs as **paths + summaries** (context-window judgment).
-- End with evidence: checks run, coverage/% touched, mirror sync when playbook changed.
+- End with evidence: checks run, coverage/% touched, and an upstream pull request when you improved the factory.
 
 ## 3. Discovery pointer
 

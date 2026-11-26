@@ -32,6 +32,6 @@ Sources: [Docs](https://nextjs.org/docs), [Getting Started](https://nextjs.org/d
 
 - Always open the **React** pack for component/hooks craft.
 - Tailwind / SEO judgment when styling or public pages change.
-- Re-check Context7 `/vercel/next.js` + official docs this session for non-trivial APIs (D-66 / D-97).
+- Re-check Context7 `/vercel/next.js` + official docs this session for non-trivial APIs (SF-05).
 
 ---

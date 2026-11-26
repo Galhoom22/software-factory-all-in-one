@@ -63,4 +63,4 @@ Apply continuously during [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.
 
 - Lessons: [`06-LESSONS.md`](../06-LESSONS.md) § Working With AI Agents
 
-- Proportional depth (do not over-engineer tiny products): `08` § Proportional day pipeline (D-85)
+- Proportional depth (do not over-engineer tiny products): `08` § Proportional day pipeline (SF-08)

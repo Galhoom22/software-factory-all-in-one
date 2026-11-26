@@ -67,7 +67,7 @@ Always run [`stack-selection.md`](../07-judgment/stack-selection.md) for a **new
 ## Agent checklist when the owner says “TALL” or “VILT”
 
 1. Confirm product architecture allows that composition (ADR if switching).
-2. D-79 freshness: official docs/Context7 for each letter’s pack; update stale packs same session.
+2. SF-05 freshness: official docs/Context7 for each letter’s pack; update stale packs the same session (an upstream pull request when the kit is vendored).
 3. Open **all** packs in the table for that stack (+ web fundamentals as needed).
 4. Apply each pack’s `quality.md` — modern syntax + Clean Code + earned patterns only.
 

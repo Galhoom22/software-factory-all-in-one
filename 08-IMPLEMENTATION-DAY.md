@@ -77,10 +77,10 @@ A product’s `docs/OWNER_STANDING.md` may require the **full** implementation d
 | Keep Lightweight FEATURE profile after High-risk money/PII/booking appears | Risk grew; rigor must grow |
 | Invent a parallel “lite day loop” file | One pipeline; proportional depth inside it |
 
-Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard / Comprehensive), [`09-CI-CD.md`](09-CI-CD.md) (Phase A/B/C), Candor (D-82 / D-83).
+Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard / Comprehensive), [`09-CI-CD.md`](09-CI-CD.md) (Phase A/B/C), Candor (SF-07).
 
 
-**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, add one generic bullet to playbook `06-LESSONS.md` (or the matching template) and sync the public Software Factory mirror the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
+**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, propose one generic bullet for the factory's `06-LESSONS.md` (or the matching template) upstream as a pull request the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
 
@@ -92,11 +92,11 @@ Long days and large tool outputs **silently** degrade agents (truncation, lost e
 
 **Mid-day context refresh ≠ mid-day owner “go”:** start-once / finish must-finish still holds. If the window is polluted, write a short progress checkpoint (paths, SHAs, next action), then continue in a **fresh chat** with that checkpoint — never invent per-slice approval theater.
 
-Judgment: [`07-judgment/context-window.md`](07-judgment/context-window.md) (D-86). Pairs with Anthropic-style compaction/handoff craft and the Memory Pointer pattern (large payloads stay outside the LLM).
+Judgment: [`07-judgment/context-window.md`](07-judgment/context-window.md) (SF-09). Pairs with Anthropic-style compaction/handoff craft and the Memory Pointer pattern (large payloads stay outside the LLM).
 
 ## Studio company seats (hard rule)
 
-Work like a **small company**, not a pile of chats. At day start, name: (1) **goal** (product + current actor), (2) **seat** (FE or BE day agent — see product `docs/STUDIO_ORG.md`), (3) **checkout** — this session exclusively owns today’s must-finish (no second agent competing on the same Story/day). Escalate blockers to the Board (owner); do not invent parallel product direction. Consequential new seats/tools need owner approval. Judgment: [`07-judgment/studio-company.md`](07-judgment/studio-company.md) (seats — D-88) + [`07-judgment/software-factory.md`](07-judgment/software-factory.md) (line: intake→triage→plan→build→independent review→Done — D-90). Name the factory stage you are in; keep acceptance criteria as the contract; CI/CodeRabbit are independent review — not the builder’s self-score.
+Work like a **small company**, not a pile of chats. At day start, name: (1) **goal** (product + current actor), (2) **seat** (FE or BE day agent — see product `docs/STUDIO_ORG.md`), (3) **checkout** — this session exclusively owns today’s must-finish (no second agent competing on the same Story/day). Escalate blockers to the Board (owner); do not invent parallel product direction. Consequential new seats/tools need owner approval. Judgment: [`07-judgment/studio-company.md`](07-judgment/studio-company.md) (seats — SF-12) + [`07-judgment/software-factory.md`](07-judgment/software-factory.md) (line: intake→triage→plan→build→independent review→Done — SF-12). Name the factory stage you are in; keep acceptance criteria as the contract; CI/CodeRabbit are independent review — not the builder’s self-score.
 
 ## Day run-through
 
@@ -144,7 +144,7 @@ When must-finish is truly 100%:
 6. **CD (when staging/production hooks exist)** — wait for the staging deploy started by CI on `main` (or the documented hook); run the smoke test from the repo’s DEPLOYMENT guide; glance Sentry if that release is live. If CD is **not** configured yet, say so in the day summary and skip — do not invent a fake deploy pass. Production stays **manual approval** (`workflow_dispatch` + environment reviewers), not an automatic day step.
 7. **Issue tracker** — mark Done only when the Story’s acceptance is fully met; otherwise leave In Progress with a progress comment (Stories may span days).
 8. **Day page** — check off must-finish, mark day finished, fill finished / tomorrow / **full day summary** (include merge SHA, CI run link, **verification evidence** (criterion→evidence or N/A), **human code-review** pass (or N/A — docs only), **Context7 / current-docs** (library IDs or official URLs checked, or N/A — no library API), **integration** (partners + checklist evidence or N/A), **AI engineering** (paths + golden-eval/admission evidence or N/A), **delegation** (implementer + brief/gate evidence or N/A), **API readiness evidence** — contract IDs + test/CI proof + phase A/B/C smoke note — **cross-surface compatibility** — surfaces checked + sibling read pointers + handoff note or “N/A” — **SEO+GEO evidence** when public pages changed or “N/A”, **compliance/ethics/risk note** when PII/money/AI/claims/vendors touched or “N/A”, **booking proof** when inventory/holds/supplier touched or “N/A”, and CD/smoke result or “CD not configured”).
-9. **Lesson capture (automatic when earned)** — surprising root cause or useful discovery → implementation `docs/learning-from-mistakes/`; if reusable **and** it raises professionalism → playbook `06-LESSONS.md` (or matching template) + studio sync same session. No owner prompt. Skip noise and duplicates.
+9. **Lesson capture (automatic when earned)** — surprising root cause or useful discovery → implementation `docs/learning-from-mistakes/`; if reusable **and** it raises professionalism → propose it upstream for the factory's `06-LESSONS.md` (or matching template) as a pull request the same session. No owner prompt. Skip noise and duplicates.
 
 Never mark tracker or checklist finished before post-merge verification (and required CI) succeeds. Never wait for the owner to ask for closeout.
 
@@ -187,7 +187,7 @@ Emit both automatically. Do not wait for a second ask. Prompt shape: [`05-PROMPT
 - **Select** the few highest-leverage outcomes of the day (features, concepts, decisions). Do not narrate every commit or mid-day detour.
 - **Explain each selected topic thoroughly** — enough that the owner can copy the Pareto half into ChatGPT (or similar) and learn: vocabulary, how the system works, why choices were made, and what to study next.
 - **“20%” is topic selection, not brevity.** Ultra-short stubs fail this requirement. Teaching depth belongs here; the handoff stays operational and tight.
-- **File-anchored (hard rule — D-95):** keep Pareto topic selection. Do **not** replace it with a file dump or a long diary. For **each** selected topic, ground the teaching in the **real paths the day changed or introduced**, so a second AI (ChatGPT, etc.) can walk the owner through **code reading**, structure, and architecture — not only abstract prose.
+- **File-anchored (hard rule — SF-09):** keep Pareto topic selection. Do **not** replace it with a file dump or a long diary. For **each** selected topic, ground the teaching in the **real paths the day changed or introduced**, so a second AI (ChatGPT, etc.) can walk the owner through **code reading**, structure, and architecture — not only abstract prose.
 
 ### Per-topic shape (teachable + concrete)
 
@@ -218,13 +218,13 @@ The Pareto block is written so the owner can paste it into ChatGPT (or similar) 
 
 ## Excellence ratchet (playbook changes)
 
-When this day (or any session) updates the software-factory-all-in-one/template: follow [`EXCELLENCE.md`](EXCELLENCE.md) — raise a dimension, atlas first, candor on downgrades, update coverage %, sync studio mirror. The dream is the best reusable method; progress is incremental, never a single megaprompt.
+When this day (or any session) updates the software-factory-all-in-one/template: follow [`EXCELLENCE.md`](EXCELLENCE.md) — raise a dimension, atlas first, candor on downgrades, update coverage %, land it upstream through a pull request. The dream is the best reusable method; progress is incremental, never a single megaprompt.
 
 ## Coverage atlas (before inventing a practice)
 When the owner asks to add a day-loop, closeout, CI, or similar practice to the playbook, consult [`coverage/`](coverage/README.md) first (✅/⚠️/❌ + %). Deepen existing homes at high %; do not fork a second pipeline. Update atlas rows when coverage changes.
-**Candor (D-82 / D-83):** if that ask would lower professionalism, weaken this pipeline, violate COMPLIANCE/SECURITY/ethics, or create unmanaged High risk, **refuse and advise** (why + safer alternative scenario or skip). Do not dual-sync a degrading change. Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md). Product standing: `docs/OWNER_STANDING.md` § Candor.
+**Candor (SF-07):** if that ask would lower professionalism, weaken this pipeline, violate COMPLIANCE/SECURITY/ethics, or create unmanaged High risk, **refuse and advise** (why + safer alternative scenario or skip). Do not propose a degrading change upstream. Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md). Product standing: `docs/OWNER_STANDING.md` § Candor.
 
-## Owner standing ↔ playbook mirror
+## Owner standing ↔ factory upstream
 
 Lasting collaboration preferences (this pipeline, language, remotes, assignees) live in the product’s `docs/OWNER_STANDING.md`.
 
@@ -232,7 +232,7 @@ When the owner **changes** a lasting preference that belongs in this method (day
 
 1. Update the product `docs/OWNER_STANDING.md` (+ changelog) in the same session.
 2. Update **this playbook** (this file, [`09-CI-CD.md`](09-CI-CD.md), and/or `templates/docs/OWNER_STANDING.md`, prompts, lessons) so the **next** product inherits it — keep wording generic.
-3. If the studio keeps a public Software Factory GitHub mirror, **sync in the same session** (for example `node scripts/sync-software-factory.mjs`).
+3. Propose the generic change upstream as a pull request to the factory repository in the same session; the vendored copy stays read-only and is refreshed with `seed.mjs --update`.
 
 Do not leave standing only in chat memory or only in one product’s docs.
 

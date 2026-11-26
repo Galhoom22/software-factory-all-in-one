@@ -55,7 +55,7 @@ Before merge / before marking must-finish Done on code days:
 3. **Closeout** — CI green → **human code-review bar** (this file) + CodeRabbit → fix blockers → merge.
 4. Day summary: note **human code-review** pass (or **N/A — docs only**) plus CodeRabbit evidence.
 
-Candor: refuse “ship ugly; AI understands it” — rewrite for human readability in the same session when the bar fails (D-82).
+Candor: refuse “ship ugly; AI understands it” — rewrite for human readability in the same session when the bar fails (SF-07).
 
 ## Related homes
 

@@ -6,4 +6,4 @@ This repository uses a single agent rulebook. Import it (do not invent a second 
 
 @./AGENTS.md
 
-Hard reminder: planning-only repo; no application code outside `project-ui/`; there is no MVP delivery mode (actor loop / `docs/DELIVERY.md`); English replies; no secrets or real personal data.
+Hard reminder: planning-only repo; no application code outside `project-ui/`; there is no MVP delivery mode (actor loop / `docs/DELIVERY.md`); replies in {{REPLY_LANGUAGE}}; no secrets or real personal data.

@@ -8,7 +8,7 @@ This is a **product planning** repository, not the FE/BE implementation repos.
 
 1. Never add application code outside `project-ui/`. No real backend, auth, database, API calls, or real AI.
 2. There is no MVP delivery mode. Actor-loop delivery only (`docs/DELIVERY.md`). Do not omit, stub, or weaken the current actor.
-3. Reply in English (or the language `AGENTS.md` sets).
+3. Reply in {{REPLY_LANGUAGE}} (the language `AGENTS.md` sets).
 4. Never commit secrets, `.env` files, or real personal data — mocks stay fictional.
 5. Never force-push, rewrite pushed history, or change remotes / repository settings.
 6. Prefer the smallest correct change; keep every affected document current in the same change.

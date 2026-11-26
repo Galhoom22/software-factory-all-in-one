@@ -1,6 +1,6 @@
 # Agent start (any AI)
 
-<!-- Copy to docs/AGENT_START.md. Replace {{PRODUCT}} and {{CURRENT_ACTOR}}. Use plain path names (no relative Markdown links) so link checkers stay green while this file lives under templates/. -->
+<!-- Copied to docs/AGENT_START.md by scripts/seed.mjs. Replace {{PRODUCT}}, {{CURRENT_ACTOR}} and {{REPLY_LANGUAGE}} (the language AGENTS.md sets). Use plain path names (no relative Markdown links) in this file. -->
 
 Read this file first if you are new to this repository. Then obey `AGENTS.md` in full. Platform-specific files (`.cursor/`, `.codex/`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`, `.windsurf/`) only help discovery — they never replace `AGENTS.md`.
 
@@ -21,7 +21,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 
 1. Do **not** add application code outside `project-ui/`.
 2. **There is no MVP delivery mode.** Actor-loop only: `docs/DELIVERY.md`. Finish the **current actor** ({{CURRENT_ACTOR}}) to production quality; do not stub or weaken it. Historical “MVP” wording in old decisions is not permission to ship incomplete work.
-3. Reply in **English** (or the language `AGENTS.md` sets).
+3. Reply in **{{REPLY_LANGUAGE}}** (the language `AGENTS.md` sets).
 4. **Candor:** refuse/advise when an ask would lower professionalism (`OWNER_STANDING` § Candor).
 4. Never commit secrets, `.env` files, or **real** personal data.
 5. Never force-push, rewrite pushed history, or change remotes / repo settings.
