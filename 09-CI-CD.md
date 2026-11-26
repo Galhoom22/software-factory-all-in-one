@@ -52,7 +52,7 @@ Minimum jobs (grow with the product):
 
 - Secret scan (e.g. gitleaks CLI).
 - Required docs exist; governing rules / delivery / agent-discovery / scope scripts.
-- **Automation (always):** `software-factory-all-in-one/scripts/check-requirements-activation.mjs` (playbook wiring) and `scripts/check-planning-entry.mjs` (when root `my-project-requirements.md` exists, enforce agent activation rules and print planning progress; skip cleanly when the entry file is absent). Studio mirror runs the same via Playbook CI.
+- **Automation (always):** `software-factory-all-in-one/scripts/check-requirements-activation.mjs` (playbook wiring) and `scripts/check-planning-entry.mjs` (when root `my-project-requirements.md` exists, enforce agent activation rules and print planning progress; skip cleanly when the entry file is absent). The kit's own Factory CI exercises both in freshly seeded repositories through `scripts/check-seed.mjs`.
 - When `project-ui/` exists: install, lint, tests, build, UI anti-pattern detect.
 
 Agents: run the same scripts locally before every push; watch the Actions run after push; fix red CI in the same session.

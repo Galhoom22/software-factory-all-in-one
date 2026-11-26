@@ -10,7 +10,7 @@
 
 This log records **why** each lasting product or technical decision was made. Linked documents hold the details; this file holds the reason and the trade-off. It is the product’s ADR log — do **not** add a parallel `docs/adr/` tree in planning unless the owner explicitly chooses one for an implementation repo.
 
-Judgment for SAD/ADR craft: playbook [`07-judgment/sad-adr.md`](../../07-judgment/sad-adr.md).
+Judgment for SAD/ADR craft: playbook [`07-judgment/sad-adr.md`](../software-factory-all-in-one/07-judgment/sad-adr.md).
 
 ---
 

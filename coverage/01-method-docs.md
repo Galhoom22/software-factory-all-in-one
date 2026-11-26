@@ -62,7 +62,8 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
 | ✅ | Entry requirements example | `examples/my-project-requirements.example.md` | **90** | Copyable activation sample |
-| ✅ | Playbook self-check scripts | `scripts/check-requirements-activation.mjs`, `check-planning-entry.mjs` | **92** | CI + local |
+| ✅ | Playbook self-check scripts | `scripts/check-requirements-activation.mjs`, `scripts/check-seed.mjs` (runs the seeded `check-planning-entry.mjs`) | **92** | CI + local |
+| ✅ | Seed + smoke test | `scripts/seed.mjs`, `scripts/check-seed.mjs` | **90** | Clone / in-place (template) / update seeding; seeded repos pass their own gates on every change |
 | ✅ | Playbook CI workflow | `.github/workflows/ci.yml` | **90** | Studio mirror uses synced copy |
 | ✅ | Content-integrity gate | `scripts/check-content-integrity.mjs` | **90** | Tool-artifact markers, GitHub table shape, links/anchors; kit + planning CI |
 | ✅ | Excellence north star | `EXCELLENCE.md` | **95** | Ratchet + **why** (speed×quality single reference; vibe + professional) |

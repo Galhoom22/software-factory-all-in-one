@@ -40,7 +40,7 @@ This factory gives the agent a **complete operating system for planning and deli
 ## How it works (60 seconds)
 
 ```text
-1. Copy this kit into a new PRIVATE planning repo
+1. Seed a new PRIVATE planning repo:  node scripts/seed.mjs ../acme-planning
 2. Write root my-project-requirements.md  (your product in plain language)
 3. Open your AI coding agent — it detects the file and runs 00-USAGE → 01-STEPS
 4. You review decisions; the agent fills templates/, prototype rails, CI, and agent rules
@@ -81,11 +81,12 @@ Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~27%)
 
 ## Quick start
 
-1. **Use as template** (or clone) → create a **private** product planning repo (example name: `erp-planning`).
-2. Keep this kit’s method docs (`00`–`09`, `07-judgment/`, `technologies/`, `agents/`, `coverage/`) and copy [`templates/`](templates/) to the new repo root (including hidden `.github/`, `.editorconfig`, `.gitignore`).
+1. **Seed a private planning repo** — either clone this kit and run `node scripts/seed.mjs ../erp-planning`, or click **Use this template** (private), clone your new repo and run `node scripts/seed.mjs --in-place`.
+2. You get the kit vendored read-only in `software-factory-all-in-one/` and [`templates/`](templates/) instantiated at the root (`AGENTS.md`, `docs/`, `.cursor/rules/`, `.codex/`, CI, …). The seed never overwrites existing files, and its CI is green before you write any requirements (proven on every change by `scripts/check-seed.mjs`).
 3. Add **root** `my-project-requirements.md` (start from [`examples/my-project-requirements.example.md`](examples/my-project-requirements.example.md)).
 4. Open Cursor / Codex / Claude Code / your agent and say you want planning started from that file.
 5. Follow agent output; replace `{{PLACEHOLDERS}}` with your product facts in *your* private repo only.
+6. Later, refresh the vendored kit from a newer clone with `node scripts/seed.mjs --update ../erp-planning` (product files are never touched).
 
 Detailed seed steps and placeholder table: [`00-USAGE.md`](00-USAGE.md) and the section below.
 

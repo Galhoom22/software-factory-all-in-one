@@ -254,6 +254,19 @@ for (const m of readmeText.matchAll(/~\s*(?:\*\*)?(\d{1,3})%/g)) {
   if (!atlasPercents.has(m[1])) fail(`README.md cites ~${m[1]}% which does not appear in coverage/README.md`);
 }
 
+// --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
+{
+  const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));
+  const block = seedSrc.match(/const KIT_TOP = new Set\(\[([\s\S]*?)\]\)/);
+  if (!block) fail("scripts/seed.mjs must declare KIT_TOP");
+  else {
+    const declared = new Set([...block[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]));
+    const actual = fs.readdirSync(playbookRoot).filter((e) => e !== ".git" && e !== "node_modules");
+    for (const e of actual) if (!declared.has(e)) fail(`scripts/seed.mjs KIT_TOP is missing top-level entry "${e}"`);
+    for (const e of declared) if (!actual.includes(e)) fail(`scripts/seed.mjs KIT_TOP lists "${e}" which does not exist`);
+  }
+}
+
 note(`packs scanned: ${packDirs.length} (${packDirs.join(", ")})`);
 
 if (errors.length) {

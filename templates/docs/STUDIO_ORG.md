@@ -1,6 +1,6 @@
 # Studio org chart (company seats)
 
-Fill this once per product studio. Treat the planning + FE/BE work as a **small company**: every seat has a job, one manager, and clear checkout rules. Method: playbook [`07-judgment/studio-company.md`](../../07-judgment/studio-company.md) (Paperclip patterns absorbed as judgment — not a second OS).
+Fill this once per product studio. Treat the planning + FE/BE work as a **small company**: every seat has a job, one manager, and clear checkout rules. Method: playbook [`07-judgment/studio-company.md`](../software-factory-all-in-one/07-judgment/studio-company.md) (Paperclip patterns absorbed as judgment — not a second OS).
 
 ## Company goal
 
@@ -38,7 +38,7 @@ Add rows when the studio grows (design, QA, ops). Each new seat needs a **manage
 
 ## Software Factory line (how work moves)
 
-Method: playbook [`07-judgment/software-factory.md`](../../07-judgment/software-factory.md). Seats above are **who**; stages below are **how**.
+Method: playbook [`07-judgment/software-factory.md`](../software-factory-all-in-one/07-judgment/software-factory.md). Seats above are **who**; stages below are **how**.
 
 | Stage | Owner seat (default) | Evidence |
 |-------|----------------------|----------|

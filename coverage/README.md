@@ -168,6 +168,7 @@ software-factory-all-in-one/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-26 | `scripts/seed.mjs` (clone / `--in-place` / `--update`) + `scripts/check-seed.mjs` smoke test; templates green on day one; template links in product coordinates; planning-entry gate no longer depends on the folder name. |
 | 2026-11-26 | Structure gate `check-structure.mjs` (renamed from `check-playbook-freshness.mjs`; shim kept one release): judgment index and README counts/percentages are computed and checked. |
 | 2026-11-26 | Content-integrity gate (`check-content-integrity.mjs`); restored coverage files and FEATURE_SDLC/EXCELLENCE/judgment tables damaged by tool write-back. |
 | 2026-11-25 | Factory.com Software Factory absorb (routing, outcome metrics, trust/control) into `07-judgment/software-factory.md`; coverage ~93%. |
