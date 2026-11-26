@@ -38,7 +38,7 @@ Put product-specific details only in a **private** product planning repository a
 
    When you also touch wiring, packs or the atlas, run:
    - `node scripts/check-requirements-activation.mjs`
-   - `node scripts/check-playbook-freshness.mjs`
+   - `node scripts/check-structure.mjs`
 4. Prefer deepening an existing home over inventing a parallel file (see `coverage/`).
 5. Open a PR with **why** the change raises professionalism.
 

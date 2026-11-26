@@ -61,7 +61,7 @@ node scripts/check-scope.mjs
 node scripts/check-planning-entry.mjs
 ```
 
-If this repository keeps a nested `software-factory-all-in-one/`, also run `node software-factory-all-in-one/scripts/check-requirements-activation.mjs` and `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs`.
+If this repository keeps a nested `software-factory-all-in-one/`, also run `node software-factory-all-in-one/scripts/check-requirements-activation.mjs` and `node software-factory-all-in-one/scripts/check-structure.mjs`.
 
 If you changed `project-ui/`, also run that package's `npm test`, `npm run check:ui`, and `npm run lint`.
 

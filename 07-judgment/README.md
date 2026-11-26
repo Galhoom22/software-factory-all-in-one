@@ -32,7 +32,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | API design (consumer-first REST craft) | Design bar inside API readiness; resource naming; method semantics; docs=agreement | Course PDF as AGENTS; mandatory HATEOAS; Digest auth; dual OpenAPI SoT |
 | Requirements-driven stack selection (advise → specify → ADR) | Options + recommendation from **this** product’s requirements; pin in SRS + DECISIONS; architecture/patterns follow | One-size-fits-all stack; locking TALL/MERN/Next by fashion; packs that replace product constitution |
 | Owner names a stack → pack freshness | Search official/Context7; update `technologies/<slug>/` if stale (same session) | Waiting for “update the pack”; advising from memory while the pack drifts |
-| Playbook Always-Current (freshness closeout) | Same-session checklist + `check-playbook-freshness.mjs` CI; touched packs get today’s Checked dates | Shipping playbook edits with stale %/pins/mirror drift |
+| Playbook Always-Current (freshness closeout) | Same-session checklist + `check-structure.mjs` CI; touched packs get today’s Checked dates | Shipping playbook edits with stale %/pins/mirror drift |
 | AI agent harness atlas | `coverage/08-ai-agents` + `agents/<slug>/` packs; AGENTS.md stays SoT | Second constitution per IDE; fake high % on skeleton CN packs |
 | Packages over reinvention (when earned) | Prefer a verified package for non-trivial work; skip packages for trivial helpers | DIY complexity by habit; dependency for every micro-task |
 | SEO + GEO (public pages) | Dual technical + citeable craft on indexable marketing/legal; Google foundations over vendor hacks | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
@@ -95,6 +95,8 @@ AI engineering (det/prob seam + evals): [`ai-engineering.md`](ai-engineering.md)
 Agent delegation: [`delegation.md`](delegation.md).
 
 Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
+
+Factory freshness (Always-Current closeout): [`playbook-freshness.md`](playbook-freshness.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

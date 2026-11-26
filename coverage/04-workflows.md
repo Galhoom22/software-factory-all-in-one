@@ -11,7 +11,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Requirements-driven activation | `00-USAGE`, `01-STEPS`, entry example, `check-planning-entry`, Cursor `requirements-activation.mdc` | **95** | Detect root entry file → plan without waiting; never overwrite entry; 80/20 |
 | ✅ | Seed new planning repo from templates | `README`, `00-USAGE` | **92** | Copy templates including hidden files; fill placeholders |
 | ✅ | Keep every document current | `AGENTS.template`, `01-STEPS` | **90** | Same-commit doc updates; no stale summaries |
-| ✅ | Playbook Always-Current closeout | `07-judgment/playbook-freshness`, `scripts/check-playbook-freshness.mjs`, CI | **95** | Every playbook edit: atlas/% + official Checked dates + structural CI + D-110 mirror |
+| ✅ | Playbook Always-Current closeout | `07-judgment/playbook-freshness`, `scripts/check-structure.mjs`, CI | **95** | Every playbook edit: atlas/% + official Checked dates + structural CI + D-110 mirror |
 | ✅ | Small stages + Conventional Commits | `AGENTS.template` | **90** | One stage → check → commit (planning repo cadence) |
 | ✅ | Planning CI gates | `09-CI-CD`, templates `.github/workflows/ci.yml` | **90** | Delivery/agents/scope/activation checks |
 

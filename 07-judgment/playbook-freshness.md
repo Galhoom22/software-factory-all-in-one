@@ -12,7 +12,7 @@
 
 1. Leave the playbook **current as of this session** — not “mostly right.”
 2. Finish the **Always-Current closeout** below **before** claiming Done / ending the session.
-3. Run `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` (planning CI runs it too). Fix failures in the same change.
+3. Run `node software-factory-all-in-one/scripts/check-structure.mjs` (planning CI runs it too). Fix failures in the same change.
 4. Sync the public factory mirror the same session (`node scripts/sync-software-factory.mjs` from the product planning root — D-110).
 
 Candor still wins: if an ask would *lower* bar or freeze outdated advice as “done,” refuse (D-82).
@@ -32,7 +32,7 @@ Agents run this checklist whenever the rule fires. Skip a line only with an expl
 | 5 | **Owner-names / URL paste** | If the owner named a stack or pasted docs: refresh/create pack same session (D-79) — no “we’ll update later” |
 | 6 | **Templates** | If the practice belongs in seed templates, update `templates/` the same change (generic only) |
 | 7 | **Prompts / lessons** | One-line wire in `05-PROMPTS` / `06-LESSONS` when agents must discover the rule |
-| 8 | **Structural gate** | `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` exits 0 |
+| 8 | **Structural gate** | `node software-factory-all-in-one/scripts/check-structure.mjs` exits 0 |
 | 9 | **Mirror** | Public `Galhoom22/software-factory-all-in-one` synced (D-110) |
 | 10 | **Trail** | Lasting bar → product `DECISIONS` + `OWNER_STANDING` changelog when this product hosts the playbook copy |
 
@@ -71,4 +71,4 @@ Not required every session: re-audit **every** pack on earth. Required: never le
 - Technologies auto-refresh: [`technologies/README.md`](../technologies/README.md) § Owner names a stack  
 - Coverage protocol: [`coverage/README.md`](../coverage/README.md)  
 - Day Context7 gate: [`context7-docs.md`](context7-docs.md)  
-- Structural check: [`../scripts/check-playbook-freshness.mjs`](../scripts/check-playbook-freshness.mjs)
+- Structural check: [`../scripts/check-structure.mjs`](../scripts/check-structure.mjs)

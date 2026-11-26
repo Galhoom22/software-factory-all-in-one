@@ -52,22 +52,24 @@ jobs:
       - name: Planning-only scope intact
         run: node scripts/check-scope.mjs
 
-      - name: Playbook requirements-activation wiring
+      - name: Factory requirements-activation wiring
         run: |
           if [ -f software-factory-all-in-one/scripts/check-requirements-activation.mjs ]; then
             node software-factory-all-in-one/scripts/check-requirements-activation.mjs
           else
-            echo "No nested playbook/ — skip activation wiring check"
+            echo "No vendored software-factory-all-in-one/ — skip activation wiring check"
           fi
       - name: Planning entry activation gate
         run: node scripts/check-planning-entry.mjs
 
-      - name: Playbook Always-Current freshness gate
+      - name: Factory structure gate
         run: |
-          if [ -f software-factory-all-in-one/scripts/check-playbook-freshness.mjs ]; then
-            node software-factory-all-in-one/scripts/check-playbook-freshness.mjs
+          if [ -f software-factory-all-in-one/scripts/check-structure.mjs ]; then
+            node software-factory-all-in-one/scripts/check-structure.mjs
+          elif [ -f software-factory-all-in-one/scripts/check-playbook-freshness.mjs ]; then
+            node software-factory-all-in-one/scripts/check-playbook-freshness.mjs  # older vendored copies
           else
-            echo "No nested playbook/ — skip freshness check"
+            echo "No vendored software-factory-all-in-one/ — skip structure check"
           fi
 
       - name: Codex CLI project wiring intact
@@ -78,7 +80,7 @@ jobs:
           missing=$(grep -E '^\| (FR|NFR)-[0-9]+ ' docs/SRS.md | grep -vE '\| (FE|BE|Both) \|$' || true)
           if [ -n "$missing" ]; then echo "Requirements without owner:"; echo "$missing"; exit 1; fi
 
-      # Add the steps below once project-ui/ exists (playbook STEPS.md, step 11).
+      # Add the steps below once project-ui/ exists (software-factory-all-in-one/01-STEPS.md, Phase 4).
       # - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       #   with:
       #     node-version: 26

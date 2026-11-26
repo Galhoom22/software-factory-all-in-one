@@ -168,6 +168,7 @@ software-factory-all-in-one/coverage/
 
 | Date (UTC) | Change |
 |------------|--------|
+| 2026-11-26 | Structure gate `check-structure.mjs` (renamed from `check-playbook-freshness.mjs`; shim kept one release): judgment index and README counts/percentages are computed and checked. |
 | 2026-11-26 | Content-integrity gate (`check-content-integrity.mjs`); restored coverage files and FEATURE_SDLC/EXCELLENCE/judgment tables damaged by tool write-back. |
 | 2026-11-25 | Factory.com Software Factory absorb (routing, outcome metrics, trust/control) into `07-judgment/software-factory.md`; coverage ~93%. |
 | 2026-11-23 | D-109: AI agent harness atlas (`08-ai-agents`) + `agents/` packs (US + China + Antigravity). |
@@ -199,7 +200,6 @@ software-factory-all-in-one/coverage/
 | 2026-11-21 | D-83: compliance/ethics/risk judgment + candor safer-scenario; day check. |
 | 2026-11-21 | D-82 candor: refuse/advise when an add would lower professionalism. |
 | 2026-11-21 | D-81: SEO + GEO judgment + templates + day gate; dual sync. |
-|------------|--------|
 | 2026-11-21 | Symfony 8 pack (D-77) from symfony.com/doc. |
 | 2026-11-21 | Vue 3 pack (D-76) from vuejs.org/guide/introduction. |
 | 2026-11-21 | Inertia.js 3 pack (D-75) from inertiajs.com/docs/v3/getting-started. |

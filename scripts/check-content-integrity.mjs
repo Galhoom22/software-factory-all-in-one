@@ -124,13 +124,35 @@ const HTML_BLOCK =
 const startsBlock = (l) => /^ {0,3}(#{1,6}(\s|$)|>|`{3}|~{3}|([-*_])(\s*\3){2,}\s*$|[-*+]\s|\d+[.)]\s)/.test(l) || HTML_BLOCK.test(l);
 
 // Lines of a GFM type-6 HTML block (start tag through the next blank line) are raw HTML, not table rows.
+// GFM end conditions: <pre|script|style|textarea> → closing tag, <!-- → -->, <? → ?>, <![CDATA[ → ]]>,
+// <!X → >; every other block tag (type 6) → the next blank line.
+function htmlBlockEnd(l) {
+  const t1 = l.match(/^ {0,3}<(script|pre|style|textarea)(?:\s|>|$)/i);
+  if (t1) return /<\/(?:script|pre|style|textarea)>/i; // any type-1 closing tag ends the block
+  if (/^ {0,3}<!--/.test(l)) return /-->/;
+  if (/^ {0,3}<\?/.test(l)) return /\?>/;
+  if (/^ {0,3}<!\[CDATA\[/.test(l)) return /\]\]>/;
+  if (/^ {0,3}<![A-Za-z]/.test(l)) return />/;
+  return "blank";
+}
 function htmlBlockMask(lines, mask) {
   const html = new Array(lines.length).fill(false);
-  let open = false;
+  let end = null;
   lines.forEach((l, i) => {
-    if (mask[i]) return;
-    if (open && l.trim() === "") open = false;
-    else if (open || HTML_BLOCK.test(l)) open = html[i] = true;
+    if (!end) {
+      if (mask[i] || !HTML_BLOCK.test(l)) return;
+      end = htmlBlockEnd(l);
+      html[i] = true;
+      if (end !== "blank" && end.test(l.slice(l.indexOf("<") + 1))) end = null;
+      return;
+    }
+    if (end === "blank") {
+      if (l.trim() === "") end = null;
+      else html[i] = true;
+      return;
+    }
+    html[i] = true;
+    if (end.test(l)) end = null;
   });
   return html;
 }
@@ -140,7 +162,7 @@ function tableFindings(lines, mask = codeMask(lines)) {
   const inTable = new Array(lines.length).fill(false);
   const html = htmlBlockMask(lines, mask);
   for (let i = 1; i < lines.length; i++) {
-    if (mask[i] || mask[i - 1] || !isDelimiterRow(lines[i])) continue;
+    if (mask[i] || mask[i - 1] || html[i] || html[i - 1] || !isDelimiterRow(lines[i])) continue;
     const header = lines[i - 1];
     if (header.trim() === "" || !hasPipe(header) || isDelimiterRow(header)) {
       if (/^\s*\|/.test(lines[i])) out.push({ line: i + 1, issue: "table delimiter row without a header row directly above it" });
@@ -153,8 +175,9 @@ function tableFindings(lines, mask = codeMask(lines)) {
       out.push({ line: i + 1, issue: `delimiter row has ${delimiterWidth} cells but header has ${width} — GitHub renders the block as plain text` });
     }
     let j = i + 1;
-    for (; j < lines.length && !mask[j] && lines[j].trim() !== "" && hasPipe(lines[j]) && !startsBlock(lines[j]); j++) {
+    for (; j < lines.length && !mask[j] && !html[j] && lines[j].trim() !== "" && hasPipe(lines[j]) && !startsBlock(lines[j]); j++) {
       inTable[j] = true;
+      if (isDelimiterRow(lines[j])) out.push({ line: j + 1, issue: "stray delimiter row inside a table body — GitHub renders it as a row of dashes" });
       const c = cellCount(lines[j]);
       if (c > width) out.push({ line: j + 1, issue: `row has ${c} cells but header has ${width} — GitHub drops the extra cells` });
     }
@@ -170,6 +193,7 @@ function tableFindings(lines, mask = codeMask(lines)) {
 }
 
 selfTest("blank line inside table", tableFindings(["| a | b |", "", "|---|---|", "| 1 | 2 |"]).length > 0);
+selfTest("stray delimiter row in body", tableFindings(["| a | b |", "|---|---|", "| 1 | 2 |", "|---|---|", "| 3 | 4 |"]).length > 0);
 selfTest("row wider than header", tableFindings(["| a | b |", "|---|---|", "| 1 | 2 | 3 |"]).length > 0);
 selfTest("delimiter narrower than header", tableFindings(["| a | b |", "| --- |", "| 1 | 2 |"]).length > 0);
 selfTest("table without leading pipes", tableFindings(["A | B", "--- | ---", "1 | 2 | 3"]).length > 0);
@@ -177,6 +201,10 @@ selfTest("table ends where a heading begins", tableFindings(["A | B", "--- | ---
 selfTest("inline HTML stays inside a table row", tableFindings(["A | B", "--- | ---", "<kbd>x</kbd> | y | dropped"]).length > 0);
 selfTest("HTML block ends a table", tableFindings(["A | B", "--- | ---", "<div>one | two | three</div>"]).length === 0);
 selfTest("type-6 <source> ends a table", tableFindings(["A | B", "--- | ---", '<source srcset="a|b|c">']).length === 0);
+selfTest("literal table example inside an HTML block", tableFindings(["<pre>", "| a | b |", "|---|---|", "| 1 | 2 |", "|---|---|", "</pre>"]).length === 0);
+selfTest("<pre> block spans blank lines until </pre>", tableFindings(["<pre>", "| a | b |", "", "|---|---|", "</pre>"]).length === 0);
+selfTest("any type-1 closing tag ends the block", tableFindings(["<pre>", "</style>", "", "| a | b |", "|---|---|", "| 1 | 2 | 3 |"]).length > 0);
+selfTest("table after a closed <pre> is checked", tableFindings(["<pre>x</pre>", "| a | b |", "|---|---|", "| 1 | 2 | 3 |"]).length > 0);
 selfTest("pipe line inside an HTML block is raw HTML", tableFindings(["<details>", "| raw | html |", "</details>"]).length === 0);
 selfTest(
   "valid tables and nested fences",

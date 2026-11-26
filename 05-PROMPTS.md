@@ -22,7 +22,7 @@ Use with [`EXCELLENCE.md`](EXCELLENCE.md) + [`coverage/README.md`](coverage/READ
 
 > **AI harness coverage (D-109):** before adding a new coding agent/IDE guide, read `software-factory-all-in-one/coverage/08-ai-agents.md` + `software-factory-all-in-one/agents/README.md`. Deepen the pack; do not fork AGENTS.md.
 
-> **Always-Current (D-108):** after any playbook edit, finish `07-judgment/playbook-freshness.md` closeout and run `node software-factory-all-in-one/scripts/check-playbook-freshness.mjs` before Done.
+> **Always-Current (D-108):** after any playbook edit, finish `07-judgment/playbook-freshness.md` closeout and run `node software-factory-all-in-one/scripts/check-structure.mjs` before Done.
 
 > Before adding or inventing practice `<X>` in the software-factory-all-in-one/template: confirm it raises an [`EXCELLENCE.md`](EXCELLENCE.md) dimension (none down). Then read `software-factory-all-in-one/coverage/README.md` and the matching domain file. Reply with Status (✅/⚠️/❌), Coverage %, paths, and Action (skip / deepen / add). If ✅ and high %, do not create a parallel file — deepen the existing home only if professionalism clearly rises. If you change the playbook, update the coverage row/% in the same change and sync the public Software Factory mirror.
 > If `<X>` would **lower** professionalism or weaken the day/workflow: Action = **refuse**; explain why; propose a better alternative or recommend skipping (Candor / D-82). Do not dual-sync a degrading change.
