@@ -1,8 +1,8 @@
 # Coverage — software industry surfaces
 
-**What this is:** honest **% readiness** of the playbook to plan and implement **each kind of software product** (web, mobile, desktop, games, extensions, …) — plus which **languages / stacks** map to which surface.
+**What this is:** honest **% readiness** of the factory to plan and implement **each kind of software product** (web, mobile, desktop, games, extensions, …) — plus which **languages / stacks** map to which surface.
 
-**What this is not:** a second playbook. Generic method (actor loop, day pipeline, CI/CD, security, FEATURE_SDLC) still applies everywhere. This file answers: *“If we build X tomorrow, how covered are we?”*
+**What this is not:** a second factory. Generic method (actor loop, day pipeline, CI/CD, security, FEATURE_SDLC) still applies everywhere. This file answers: *“If we build X tomorrow, how covered are we?”*
 
 **Score meaning for a surface:** method rails that already apply **plus** surface-specific judgment, templates, and `technologies/` packs. Same rubric as [`README.md`](README.md) (✅/⚠️/❌ + %).
 
@@ -34,7 +34,7 @@ Last audit: **2026-11-23** (Rust pack landed).
 | **Desktop — hybrid** (Electron / Tauri / similar) | ⚠️ | **20** | JS/TS + web packs; **Rust** language pack (Tauri affinity) | No Electron/Tauri product pack yet; auto-update / sandbox craft |
 | **Browser extensions** (Chromium / Firefox / Safari) | ❌ | **5** | Web security judgment partially transferable | No MV3 pack; store review / permissions craft |
 | **CLI & developer tools** | ⚠️ | **36** | Agent/CI scripts culture; .NET/`dotnet` CLI notes; **Rust** pack; packages judgment | Dedicated CLI UX / distribution judgment still thin |
-| **Libraries / SDKs / packages** | ⚠️ | **40** | Packages judgment; Cargo crate craft in Rust pack; versioning in technologies | Semver/publish/API-compat playbook still thin |
+| **Libraries / SDKs / packages** | ⚠️ | **40** | Packages judgment; Cargo crate craft in Rust pack; versioning in technologies | Semver/publish/API-compat factory still thin |
 | **Games** (engines / realtime interactive) | ❌ | **3** | Almost nothing surface-specific | No engine pack (Unity/Godot/Unreal); no loop/perf craft |
 | **Embedded / IoT / firmware** | ❌ | **8** | **Rust** pack + Embedded Book pointer; security red lines | No RTOS / device-specific pack |
 | **Operating systems / kernels / drivers** | ❌ | **1** | Out of studio default scope | Do not fake coverage; add only if a real product needs it |
@@ -53,7 +53,7 @@ Last audit: **2026-11-23** (Rust pack landed).
 | **Surfaces listed** | 21 |
 | **Weighted readiness** (equal weight per surface row) | **~27%** |
 | **Studio-default strength** (web app + HTTP API + admin web only) | **~83%** |
-| **Honest message** | Playbook **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (~25%). Do not confuse the two numbers. |
+| **Honest message** | Factory **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (~25%). Do not confuse the two numbers. |
 
 ---
 
@@ -104,7 +104,7 @@ Agents may **propose** the next gap (“we’re at 8% on iOS native — want Swi
 
 | Need | Home |
 |------|------|
-| Playbook *capability* coverage (method, templates, workflows) | [`01`](01-method-docs.md)–[`06`](06-technologies.md), [`README`](README.md) |
+| Factory *capability* coverage (method, templates, workflows) | [`01`](01-method-docs.md)–[`06`](06-technologies.md), [`README`](README.md) |
 | Gaps / intentional exclusions | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) |
 | Stack choice for a product | [`../07-judgment/stack-selection.md`](../07-judgment/stack-selection.md) |
 | Pack craft after pin | [`../technologies/README.md`](../technologies/README.md) |

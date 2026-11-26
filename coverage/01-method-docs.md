@@ -8,7 +8,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 
 | ✅ | Capability | Path | % | What “covered” means | Gaps / upgrade notes |
 |----|------------|------|---|----------------------|----------------------|
-| ✅ | Playbook entry + layout | `README.md` | **95** | Numbered layout, when to use, seed steps, placeholders, keeping current | Point newcomers to `coverage/` (done 2026-11-21) |
+| ✅ | Factory entry + layout | `README.md` | **95** | Numbered layout, when to use, seed steps, placeholders, keeping current | Point newcomers to `coverage/` (done 2026-11-21) |
 | ✅ | Requirements-driven usage | `00-USAGE.md` | **95** | Entry file activates planning; 80/20; planning vs impl; CI automation pointers | — |
 | ✅ | Ordered planning steps | `01-STEPS.md` | **93** | Phase 0→N with outputs + Done; wires prompts/lessons | Keep steps aligned when templates grow |
 | ✅ | Actor-loop delivery (no MVP) | `02-DELIVERY.md` | **98** | Production-complete per actor; wiring so agents cannot forget | — |
@@ -62,7 +62,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
 | ✅ | Entry requirements example | `examples/my-project-requirements.example.md` | **90** | Copyable activation sample |
-| ✅ | Playbook self-check scripts | `scripts/check-requirements-activation.mjs`, `scripts/check-seed.mjs` (runs the seeded `check-planning-entry.mjs`) | **92** | CI + local |
+| ✅ | Factory self-check scripts | `scripts/check-requirements-activation.mjs`, `scripts/check-seed.mjs` (runs the seeded `check-planning-entry.mjs`) | **92** | CI + local |
 | ✅ | Seed + smoke test | `scripts/seed.mjs`, `scripts/check-seed.mjs` | **90** | Clone / in-place (template) / update seeding; seeded repos pass their own gates on every change |
 | ✅ | Factory CI workflow | `.github/workflows/ci.yml` | **90** | Every gate + seed smoke test on each push and pull request |
 | ✅ | Content-integrity gate | `scripts/check-content-integrity.mjs` | **90** | Tool-artifact markers, GitHub table shape, links/anchors; kit + planning CI |

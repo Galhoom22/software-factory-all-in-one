@@ -1,6 +1,6 @@
 # Actor packs
 
-Planning specs organized by **actor** (who uses the capability). Matches actor-loop delivery (`docs/DELIVERY.md` / playbook `02-DELIVERY.md`).
+Planning specs organized by **actor** (who uses the capability). Matches actor-loop delivery (`docs/DELIVERY.md` / factory `02-DELIVERY.md`).
 
 | Path | Role |
 |------|------|

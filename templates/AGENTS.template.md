@@ -12,7 +12,7 @@ Root file **`my-project-requirements.md`** is the user's project entry and the *
 
 When you start or inspect this repository:
 
-1. If root `my-project-requirements.md` **exists**, treat that as the instruction to run (or continue) playbook planning — do **not** wait for "start planning" / "initialize".
+1. If root `my-project-requirements.md` **exists**, treat that as the instruction to run (or continue) factory planning — do **not** wait for "start planning" / "initialize".
 2. Read the whole file. Do **not** overwrite, delete, or empty it.
 3. Read `software-factory-all-in-one/00-USAGE.md` and `software-factory-all-in-one/01-STEPS.md`. Apply **80/20**: smallest complete planning set for this project's complexity; skip unneeded docs.
 4. Derive formal [`requirements.md`](requirements.md) and other planning assets from the entry file (and later reconciliations). Keep `my-project-requirements.md` as the human entry; keep `requirements.md` as the structured product source of truth once it exists.
@@ -55,13 +55,13 @@ When adding a new harness: add a thin pointer that points here; do not fork a se
 ## Professionalism bar
 
 - Every pass must leave the repository **measurably more professional** than before: fix defects found on the way (and log them), leave a guard or check when a contract changed, delete dead weight you uncover, verify every interface language and text direction that the change touches, and report concretely what improved. A pass that only adds without improving quality is incomplete.
-- Playbook/template edits follow playbook `EXCELLENCE.md`: ratchet toward the best reusable method; raise an excellence dimension; deepen-over-duplicate via `software-factory-all-in-one/coverage/`; never propose a bar-lowering change upstream.
+- Factory/template edits follow factory `EXCELLENCE.md`: ratchet toward the best reusable method; raise an excellence dimension; deepen-over-duplicate via `software-factory-all-in-one/coverage/`; never propose a bar-lowering change upstream.
 
 ## Borrowing from outside
 
 - Log every external borrow in [`docs/REFERENCES.md`](docs/REFERENCES.md) in the same commit (taken / rejected / where it landed). Read that register before a new borrowing pass.
 - Scope bans live in [`docs/SCOPE_REJECTIONS.md`](docs/SCOPE_REJECTIONS.md) as stable `REJ-xx` IDs.
-- Absorb outside methods as judgment only ([`docs/JUDGMENT.md`](docs/JUDGMENT.md) / playbook `07-judgment/`) — never install a second constitution or competing design authority.
+- Absorb outside methods as judgment only ([`docs/JUDGMENT.md`](docs/JUDGMENT.md) / factory `07-judgment/`) — never install a second constitution or competing design authority.
 
 ## Efficiency (ponytail)
 
@@ -85,7 +85,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
 - [`docs/DECISIONS.md`](docs/DECISIONS.md) records why each lasting decision was made. When a change makes or reverses one, add a new entry (never edit an accepted one).
 - [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) is the shared hosting setup, with step-by-step guides in `docs/frontend/` and `docs/backend/`. Re-verify prices and plans on the official pages before relying on them.
 - [`docs/DOCKER.md`](docs/DOCKER.md) (and FE/BE `DOCKER.md`) defines local containerization for implementation repos. Never bake secrets into images; do not replace the chosen production host with Docker unless a decision says so.
-- [`docs/SEO.md`](docs/SEO.md) and [`docs/frontend/SEO.md`](docs/frontend/SEO.md) define launch search readiness: index public marketing and legal only; keep the signed-in app `noindex`; metadata in every UI language, robots/sitemap, honest structured data, plus GEO craft for AI answer surfaces — never fake authority. Day gate: playbook `07-judgment/seo-geo.md`.
+- [`docs/SEO.md`](docs/SEO.md) and [`docs/frontend/SEO.md`](docs/frontend/SEO.md) define launch search readiness: index public marketing and legal only; keep the signed-in app `noindex`; metadata in every UI language, robots/sitemap, honest structured data, plus GEO craft for AI answer surfaces — never fake authority. Day gate: factory `07-judgment/seo-geo.md`.
 - **Official references only:** versions and documentation links live in [SRS §2](docs/SRS.md#2-technology-stack). Use the latest **stable / Active LTS** of each listed line (not RCs). Verify on the official site before changing a version. Pin CI tools (Node, `impeccable@x.y.z`) to the same lines.
 - [`notes.md`](notes.md) holds ideas, not requirements. An idea enters `requirements.md` only when the user decides it, and leaves `notes.md` once it is built.
 - `software-factory-all-in-one/` holds the reusable method behind this repository. When a change creates a practice worth repeating in the next product (a document, a check, a rule, a lesson), propose it upstream to the factory as a pull request in generic wording; never edit the vendored folder in place. `software-factory-all-in-one/04-FEATURE_SDLC.md` is for **implementation** repositories (feature decomposition and adaptive depth); do not create `docs/features/` in the planning repository. `software-factory-all-in-one/08-IMPLEMENTATION-DAY.md` is the owner↔agent **day pipeline** (run-through → closeout → Pareto + handoff). Lasting cadence changes update `docs/OWNER_STANDING.md`; their generic form goes upstream to the factory as a pull request (the vendored folder stays read-only).

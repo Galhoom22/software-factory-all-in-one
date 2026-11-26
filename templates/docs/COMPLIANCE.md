@@ -91,7 +91,7 @@ Product laws are necessary but not sufficient. Agents and the team also follow t
 | ET-03 | If a requested design is likely unsafe, unlawful, or ethically wrong, **refuse and propose a safer alternative** before building (Candor). | Both |
 | ET-04 | Prefer privacy-friendly defaults; collect the minimum personal data the product needs. | Both |
 
-Judgment map: playbook `07-judgment/compliance-ethics-risk.md`.
+Judgment map: factory `07-judgment/compliance-ethics-risk.md`.
 
 ## Risk management (engineering)
 
@@ -104,5 +104,5 @@ For non-trivial features and owner asks that touch money, PII, AI, irreversible 
 3. **Treat** — avoid → reduce → share/transfer → accept (accept only with explicit owner acknowledgment).
 4. **Monitor** — name the proof that watches residual risk (tests, CI, logs, counsel).
 
-Do not silently accept High residual risk. Day gate: playbook `08-IMPLEMENTATION-DAY.md` + `07-judgment/compliance-ethics-risk.md`.
+Do not silently accept High residual risk. Day gate: factory `08-IMPLEMENTATION-DAY.md` + `07-judgment/compliance-ethics-risk.md`.
 

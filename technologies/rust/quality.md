@@ -1,10 +1,10 @@
 # Rust — quality bar (Clean Code · architecture · patterns)
 
-Works with Ponytail: smallest complete change that still meets this bar. Stack-specific syntax lives in [`best-practices.md`](best-practices.md) and [`rust-1.100/`](rust-1.100/README.md). Cross-cutting rules live in playbook homes below — **do not duplicate them**; apply them in Rust form.
+Works with Ponytail: smallest complete change that still meets this bar. Stack-specific syntax lives in [`best-practices.md`](best-practices.md) and [`rust-1.100/`](rust-1.100/README.md). Cross-cutting rules live in factory homes below — **do not duplicate them**; apply them in Rust form.
 
 ## 1. Clean Code (always on)
 
-Source: project / user `clean-code.mdc` + playbook Clean Code rules.
+Source: project / user `clean-code.mdc` + factory Clean Code rules.
 
 | Rule | Rust shape |
 |------|------------|

@@ -23,7 +23,7 @@
 - A product may still pin an older Active/Maintenance line until its SRS and CI move.
 - Never change production PHP solely because this pack exists — record an ADR and update SRS §2 + CI.
 
-## Related playbook homes
+## Related factory homes
 
 - Backend CI / day loop: `09-CI-CD.md`, `08-IMPLEMENTATION-DAY.md`
 - API readiness: `07-judgment/api-readiness.md`

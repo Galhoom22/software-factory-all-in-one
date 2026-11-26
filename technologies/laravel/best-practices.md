@@ -25,7 +25,7 @@ Defaults for agents under this pack. Grounded in [Laravel 13.x docs](https://lar
 ## 4. Queues & async
 
 - Long / AI / email / webhook side effects → **Jobs** on the queue; keep HTTP fast.
-- **Dispatch after DB commit** when the job needs the new row (see playbook lessons).
+- **Dispatch after DB commit** when the job needs the new row (see factory lessons).
 - Use job attributes (`#[Tries]`, `#[Backoff]`, `#[Timeout]`, …) and `Queue::route(...)` where they clarify ops ([releases](https://laravel.com/docs/13.x/releases)).
 - Idempotent jobs for webhooks / payments.
 

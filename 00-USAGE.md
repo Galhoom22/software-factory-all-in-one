@@ -1,4 +1,4 @@
-# How to use this Engineering Playbook
+# How to use this Software Factory
 
 **One principle:** create `my-project-requirements.md`. The AI Agent owns the planning process.
 
@@ -7,7 +7,7 @@ You do **not** need to learn the internal folder layout, pick templates by hand,
 
 ## Why bother (speed × quality)
 
-AI agents are fast by default. **Quality** only stays high when requirements, rails, contracts, stack craft, day loops, and lessons live in **one** loadable reference — this factory (vendored read-only in your repository, maintained upstream). Use it for hands-off agent coding and for professional products alike. North star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this playbook exists.
+AI agents are fast by default. **Quality** only stays high when requirements, rails, contracts, stack craft, day loops, and lessons live in **one** loadable reference — this factory (vendored read-only in your repository, maintained upstream). Use it for hands-off agent coding and for professional products alike. North star: [`EXCELLENCE.md`](EXCELLENCE.md) § Why this factory exists.
 
 ## What this is
 
@@ -55,13 +55,13 @@ Whenever the agent starts or inspects the repo and finds root `my-project-requir
 The agent must automatically:
 
 1. Read the whole file.
-2. Inspect this playbook (`00-USAGE`, `01-STEPS`, `02-DELIVERY`, templates, …).
+2. Inspect this factory (`00-USAGE`, `01-STEPS`, `02-DELIVERY`, templates, …).
 3. Apply the **80/20** rule: smallest complete planning set for this project’s complexity.
 4. **Advise and pin the stack** from requirements ([`07-judgment/stack-selection.md`](07-judgment/stack-selection.md)): constraints that bite → 2–3 options → one recommendation → specify language/frameworks/FE↔BE join/packages → architecture + earned patterns → ADR + SRS pin. Never claim one stack fits every product.
 5. Fill placeholders, instantiate templates, and run [`01-STEPS.md`](01-STEPS.md) in order (adapted to what the product needs).
 6. Produce a usable planning workspace (formal `requirements.md`, shared docs, agent rules, CI, prototype when UI exists, CI/CD phase A by default — see [`09-CI-CD.md`](09-CI-CD.md)).
 7. Ask only **blocking** questions; record assumptions otherwise.
-8. Keep the playbook **generic** — never paste product names into `software-factory-all-in-one/` method docs.
+8. Keep the factory **generic** — never paste product names into `software-factory-all-in-one/` method docs.
 
 No separate “initialize” command is required. If the file is **absent**, the agent must **not** assume a new-project bootstrap was requested.
 
@@ -94,7 +94,7 @@ Edit `my-project-requirements.md` again. On the next session the agent reconcile
 ## Quick checklist for a new user
 
 - [ ] Empty planning repo created  
-- [ ] Playbook method + `templates/` seeded at root  
+- [ ] Factory method + `templates/` seeded at root  
 - [ ] `my-project-requirements.md` written at root  
 - [ ] Agent opened on the repo (it should start from that file)  
 - [ ] Fill `docs/STUDIO_ORG.md` (seats + company goal)
@@ -109,13 +109,13 @@ After seeding templates, fill `docs/STUDIO_ORG.md` (company seats, goals, exclus
 
 ## Excellence trajectory
 
-This playbook improves forever via [`EXCELLENCE.md`](EXCELLENCE.md) (north star + ratchet) and [`coverage/`](coverage/README.md). New products inherit the latest bar; they do not freeze a “finished” template.
+This factory improves forever via [`EXCELLENCE.md`](EXCELLENCE.md) (north star + ratchet) and [`coverage/`](coverage/README.md). New products inherit the latest bar; they do not freeze a “finished” template.
 
 ## Automation (CI)
 
 Planning CI runs these without a manual step:
 
-- `software-factory-all-in-one/scripts/check-requirements-activation.mjs` — playbook still wires activation.
+- `software-factory-all-in-one/scripts/check-requirements-activation.mjs` — factory still wires activation.
 - `scripts/check-planning-entry.mjs` — if `my-project-requirements.md` exists, agent rules must be wired; prints derived-doc progress. If the file is absent, the check skips.
 
 This kit's own CI runs `scripts/check-seed.mjs`, which seeds the templates into temporary repositories (fresh, activated, in-place, updated) and runs exactly these product checks, so a template change that would break a new repository fails before it merges.

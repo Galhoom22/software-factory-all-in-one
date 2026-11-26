@@ -1,6 +1,6 @@
 # .NET — quality bar (Clean Code · architecture · patterns)
 
-Works with Ponytail: smallest complete change that still meets this bar. Platform syntax lives in [`best-practices.md`](best-practices.md) and [`dotnet-10/`](dotnet-10/README.md). Language: [`../csharp/quality.md`](../csharp/quality.md). Cross-cutting rules live in playbook homes — **do not duplicate them**.
+Works with Ponytail: smallest complete change that still meets this bar. Platform syntax lives in [`best-practices.md`](best-practices.md) and [`dotnet-10/`](dotnet-10/README.md). Language: [`../csharp/quality.md`](../csharp/quality.md). Cross-cutting rules live in factory homes — **do not duplicate them**.
 
 ## 1. Clean Code (always on)
 

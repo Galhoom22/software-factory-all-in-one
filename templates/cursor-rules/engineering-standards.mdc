@@ -16,11 +16,11 @@ When generating, reviewing, refactoring, or suggesting code, default to a **Prin
 4. Separation of concerns; high cohesion; low coupling; prefer composition over inheritance.
 5. Intention-revealing names; small focused functions; readable by a human in one pass.
 6. Framework conventions first; no new architecture style in a side edit.
-7. Prefer stdlib / platform / already-installed deps; never add a dependency for a few lines. For **non-trivial** capabilities, prefer a verified package over costly DIY when it saves time/money and raises professionalism (playbook `07-judgment/packages.md`); verify fit, maintenance, license, and security first.
+7. Prefer stdlib / platform / already-installed deps; never add a dependency for a few lines. For **non-trivial** capabilities, prefer a verified package over costly DIY when it saves time/money and raises professionalism (factory `07-judgment/packages.md`); verify fit, maintenance, license, and security first.
 8. Security by default: validate at trust boundaries; never hardcode secrets; least privilege.
 9. Testability: minimize hidden dependencies; isolate business logic from infrastructure when the change needs it.
 10. If several designs fit, pick the simplest maintainable one that is correct on edge cases.
-11. On algorithmic hot paths: name expected `n` and prefer an appropriate complexity class / data structure (see playbook `07-judgment/dsa-performance.md`); do not ship unbounded nested O(n²+) work in request paths.
+11. On algorithmic hot paths: name expected `n` and prefer an appropriate complexity class / data structure (see factory `07-judgment/dsa-performance.md`); do not ship unbounded nested O(n²+) work in request paths.
 
 ## Architecture decision order
 

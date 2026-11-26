@@ -20,7 +20,7 @@ Upstream study path (human reading): owner’s Pareto DSA set (Brute → Optimiz
 
 | Anti-pattern | Why |
 |--------------|-----|
-| Dumping a 49-problem (or larger) catalog / solution tree into planning or product docs | Second curriculum; forever-generic playbook forbids study dumps |
+| Dumping a 49-problem (or larger) catalog / solution tree into planning or product docs | Second curriculum; forever-generic factory forbids study dumps |
 | Mandating LeetCode practice as a merge gate | Product delivery ≠ interview grind |
 | Premature micro-opts or exotic structures on tiny bounded `n` | YAGNI; readability first when constraints are tiny |
 | Claiming “O(1) hash” without **average** / amortization honesty | Misleading evidence |

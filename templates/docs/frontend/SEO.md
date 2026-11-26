@@ -3,7 +3,7 @@
 | Field | Value |
 |-------|-------|
 | Owner | Frontend |
-| Related | `docs/SEO.md`, playbook `07-judgment/seo-geo.md` |
+| Related | `docs/SEO.md`, factory `07-judgment/seo-geo.md` |
 
 ## Defaults
 

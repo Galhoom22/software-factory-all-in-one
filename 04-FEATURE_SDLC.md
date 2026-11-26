@@ -351,7 +351,7 @@ Copy into the implementation repository's `docs/features/<epic>/<feature>.md` an
 
 ---
 
-## How This Fits the Planning Playbook
+## How This Fits the factory
 
 | Planning artifact | Role in this SDLC |
 |-------------------|-------------------|

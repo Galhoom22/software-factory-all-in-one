@@ -26,7 +26,7 @@ Upstream reading (human only, optional): [ombharatiya/ai-system-design-guide](ht
 
 | Do not | Why |
 |--------|-----|
-| Copy the guide tree into `software-factory-all-in-one/` or the product repo | Forever-generic playbook; prices and model names rot |
+| Copy the guide tree into `software-factory-all-in-one/` or the product repo | Forever-generic factory; prices and model names rot |
 | Install LangChain / multi-agent kits as the product constitution | Framework-native first; second stack fights SF-06-style rules |
 | Claim Done on an AI path without golden-set evidence | Same as FEATURE_SDLC: observation over hope |
 | Give an AI job tools + private data + open egress together | “Lethal trifecta” — remove one leg |

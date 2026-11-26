@@ -2,15 +2,15 @@
 
 ## Aspiration (honest)
 
-This playbook aims to become the **most professional, reusable planning → implementation method** for human + AI software teams — a bar so clear and so hard to copy that later templates look thin beside it.
+This factory aims to become the **most professional, reusable planning → implementation method** for human + AI software teams — a bar so clear and so hard to copy that later templates look thin beside it.
 
 That is a **trajectory**, not a claim that today’s files are already “#1 in history.” **One prompt cannot finish it.** Every future edit is one ratchet click toward that bar — or it should not land.
 
-## Why this playbook exists (purpose — hard)
+## Why this factory exists (purpose — hard)
 
 **One sentence:** gather everything useful for building software into **one** living reference so an AI agent can execute **fast** and still ship at **high quality**.
 
-Agents already supply **speed**. They do **not** automatically supply **judgment, rails, stack craft, day loops, security, contracts, or lessons** unless those live where the agent can load them. Scattered tips in chat memory fail; a single playbook succeeds.
+Agents already supply **speed**. They do **not** automatically supply **judgment, rails, stack craft, day loops, security, contracts, or lessons** unless those live where the agent can load them. Scattered tips in chat memory fail; a single factory succeeds.
 
 ### What “everything useful” means
 
@@ -26,23 +26,23 @@ If it helps a human+AI team **plan or build software** (including AI products an
 
 ### Who it must serve
 
-The same playbook must work for:
+The same factory must work for:
 
 1. **Hands-off agent coding** — the owner mostly supervises; the agent executes end-to-end against this reference.
 2. **Professional / revenue products** — real users, money, PII, compliance; full rigor and evidence (proportional depth still applies — SF-08).
 3. **Anything in between** — prototypes, tools, APIs, studios — as long as software is being built.
 
-Do **not** fork a “vibe” playbook and a “serious” playbook. One method; rigor scales with risk.
+Do **not** fork a “vibe” factory and a “serious” factory. One method; rigor scales with risk.
 
 ### How agents use this purpose
 
-When the owner says “add X to the playbook / raise professionalism”:
+When the owner says “add X to the factory / raise professionalism”:
 
 1. Ask: does X make the **single reference** stronger for the **next** software build (speed **and** quality)?
 2. If yes → atlas → deepen or add → wire → sync (SF-14).
 3. If it is vanity, duplicate, or lowers a rail → Candor refuse (SF-07).
 
-The dream is the **strongest reusable software-building playbook** we can grow over time (more languages, more craft, more lessons) — never a finished one-shot dump. Trajectory: [`EXCELLENCE.md`](EXCELLENCE.md) ratchet + [`coverage/`](coverage/README.md).
+The dream is the **strongest reusable software-building factory** we can grow over time (more languages, more craft, more lessons) — never a finished one-shot dump. Trajectory: [`EXCELLENCE.md`](EXCELLENCE.md) ratchet + [`coverage/`](coverage/README.md).
 
 ## What “best” means here (dimensions)
 
@@ -62,7 +62,7 @@ Score a change against these — not against marketing adjectives:
 | **Operable day loop** | Start once → finish must-finish → closeout → Pareto + handoff |
 | **Company seats** | Org chart, goal ancestry, atomic checkout — studio feels like a firm ([`07-judgment/studio-company.md`](07-judgment/studio-company.md)) |
 | **Software Factory line** | Intake→triage→plan→build→independent review→Done with evidence ([`07-judgment/software-factory.md`](07-judgment/software-factory.md)) |
-| **Transferable lessons** | Real surprises become one sharp playbook bullet when the next product benefits |
+| **Transferable lessons** | Real surprises become one sharp factory bullet when the next product benefits |
 
 A change that raises vanity (more files, louder claims) without raising a dimension **fails** the bar.
 

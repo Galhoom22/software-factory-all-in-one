@@ -29,7 +29,7 @@
 
 ## Related
 
-- Design patterns / Context7 / human review: playbook `07-judgment/`
+- Design patterns / Context7 / human review: factory `07-judgment/`
 - Packages over reinvention (crates.io): [`07-judgment/packages.md`](../../07-judgment/packages.md)
 - Industry surfaces (CLI, systems, Tauri affinity): [`coverage/07-software-surfaces.md`](../../coverage/07-software-surfaces.md)
 - Stack selection before forcing Rust onto a product: [`07-judgment/stack-selection.md`](../../07-judgment/stack-selection.md)

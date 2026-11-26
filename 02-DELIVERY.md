@@ -1,6 +1,6 @@
 # Delivery Method — Actor Loop (Planning Repositories)
 
-**Mandatory** for every product started from this playbook. Product-specific copy lives in that repo’s `docs/DELIVERY.md`; this file is the reusable method.
+**Mandatory** for every product started from this factory. Product-specific copy lives in that repo’s `docs/DELIVERY.md`; this file is the reusable method.
 
 ## There is no MVP delivery mode
 

@@ -29,7 +29,7 @@
 ## Related
 
 - Inertia React adapter requires React **19+** (see Inertia pack).
-- Design patterns / verification: playbook `07-judgment/` (human-code-review, context7-docs).
+- Design patterns / verification: factory `07-judgment/` (human-code-review, context7-docs).
 
 ---
 

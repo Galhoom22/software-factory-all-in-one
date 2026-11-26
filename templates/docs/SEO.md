@@ -1,11 +1,11 @@
 # SEO + GEO — [Product]
 
-> Planning only. FE implements public-page technical SEO and on-page craft (`docs/frontend/SEO.md`). Judgment: playbook `07-judgment/seo-geo.md`.
+> Planning only. FE implements public-page technical SEO and on-page craft (`docs/frontend/SEO.md`). Judgment: factory `07-judgment/seo-geo.md`.
 
 | Field | Value |
 |-------|-------|
 | Owner | Shared strategy; **FE** implements |
-| Related | `docs/frontend/SEO.md`, COMPLIANCE marketing/privacy red lines, DECISIONS (SEO entry), playbook `07-judgment/seo-geo.md` |
+| Related | `docs/frontend/SEO.md`, COMPLIANCE marketing/privacy red lines, DECISIONS (SEO entry), factory `07-judgment/seo-geo.md` |
 
 ## Goal
 

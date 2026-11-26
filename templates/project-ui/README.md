@@ -1,6 +1,6 @@
 # project-ui — Prototype
 
-A non-functional prototype of {{PRODUCT}}, built with **{{FRONTEND}}** (the production frontend stack), or an API explorer for a backend-only product. Its only purpose is to see and click through the product from [`requirements.md`](../requirements.md) before implementation starts. How to build it: `playbook/03-PROTOTYPE.md`.
+A non-functional prototype of {{PRODUCT}}, built with **{{FRONTEND}}** (the production frontend stack), or an API explorer for a backend-only product. Its only purpose is to see and click through the product from [`requirements.md`](../requirements.md) before implementation starts. How to build it: `software-factory-all-in-one/03-PROTOTYPE.md`.
 
 **Owner:** the frontend developer (see [`docs/frontend/README.md`](../docs/frontend/README.md)).
 

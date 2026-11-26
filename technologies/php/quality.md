@@ -1,10 +1,10 @@
 # PHP — quality bar (Clean Code · architecture · patterns)
 
-This file answers the owner’s bar: **modern syntax alone is not enough**. PHP code under this pack must also be readable, maintainable, and structured. Stack-specific syntax lives in [`best-practices.md`](best-practices.md) and [`php-8.6/`](php-8.6/README.md). Cross-cutting rules live in the playbook homes below — **do not duplicate them**; apply them in PHP form.
+This file answers the owner’s bar: **modern syntax alone is not enough**. PHP code under this pack must also be readable, maintainable, and structured. Stack-specific syntax lives in [`best-practices.md`](best-practices.md) and [`php-8.6/`](php-8.6/README.md). Cross-cutting rules live in the factory homes below — **do not duplicate them**; apply them in PHP form.
 
 ## 1. Clean Code (always on)
 
-Source: project / user `clean-code.mdc` + playbook Clean Code rules.
+Source: project / user `clean-code.mdc` + factory Clean Code rules.
 
 | Rule | PHP shape |
 |------|-----------|

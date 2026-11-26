@@ -72,14 +72,14 @@ A product’s `docs/OWNER_STANDING.md` may require the **full** implementation d
 
 | Do not | Why |
 |--------|-----|
-| Run every optional gate on a tiny no-API tool “because the playbook listed them” | Over-engineering; wastes the day |
+| Run every optional gate on a tiny no-API tool “because the factory listed them” | Over-engineering; wastes the day |
 | Skip CI / merge verify / red lines “because the project is small” | Under-engineering; not flexibility |
 | Keep Lightweight FEATURE profile after High-risk money/PII/booking appears | Risk grew; rigor must grow |
 | Invent a parallel “lite day loop” file | One pipeline; proportional depth inside it |
 
 Pairs with: [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (Lightweight / Standard / Comprehensive), [`09-CI-CD.md`](09-CI-CD.md) (Phase A/B/C), Candor (SF-07).
 
-**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises playbook professionalism**, propose one generic bullet for the factory's `06-LESSONS.md` (or the matching template) upstream as a pull request the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
+**Lesson capture (automatic — no owner ask):** when the day produced a surprising root cause **or** a useful discovery the agent did not know, capture it **before the final reply** without waiting to be told. Write `docs/learning-from-mistakes/<kebab>.md` in the implementation repo. If the rule is reusable and **raises factory professionalism**, propose one generic bullet for the factory's `06-LESSONS.md` (or the matching template) upstream as a pull request the same session. **Quality bar:** next product avoids real rework or a trust/security mistake; forever-generic; no duplicate of an existing `06-LESSONS` bullet; skip typos and one-offs. Prefer depth over volume.
 
 Treat this as a **handoff pipeline**: each stage feeds the next. Do not invent mid-day approval gates.
 

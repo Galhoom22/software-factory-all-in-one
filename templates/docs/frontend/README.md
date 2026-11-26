@@ -59,5 +59,5 @@
 ## Working with the backend (compatibility)
 
 - Meet the backend only in [`API_CONTRACT.md`](../API_CONTRACT.md).
-- Before Done: **read** sibling API expectations; do **not** edit the backend repo unless standing grants write. Method: playbook `07-judgment/cross-surface-compatibility.md`.
+- Before Done: **read** sibling API expectations; do **not** edit the backend repo unless standing grants write. Method: factory `07-judgment/cross-surface-compatibility.md`.
 - Keep implementation-repo `docs/SIBLING.md` current.

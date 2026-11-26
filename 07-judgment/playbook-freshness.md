@@ -1,6 +1,6 @@
-# Playbook freshness — always current (hard)
+# Factory freshness — always current (hard)
 
-**Purpose:** the Engineering Playbook must stay a **living, up-to-date** reference. Stale packs, stale %, stale version pins, or a vendored copy edited in place instead of improved upstream are professionalism failures — not “fine for later.”
+**Purpose:** the Software Factory must stay a **living, up-to-date** reference. Stale packs, stale %, stale version pins, or a vendored copy edited in place instead of improved upstream are professionalism failures — not “fine for later.”
 
 **Pairs with:** [`EXCELLENCE.md`](../EXCELLENCE.md) ratchet · [`coverage/`](../coverage/README.md) · [`technologies/README.md`](../technologies/README.md) (SF-05) · Context7 ([`context7-docs.md`](context7-docs.md), SF-05) · upstream pull requests (SF-14).
 
@@ -8,9 +8,9 @@
 
 ## Hard rule
 
-**After every change that touches the playbook** (method, judgment, `templates/`, `technologies/`, `coverage/`, scripts, examples) **and** whenever the owner adds/edits a practice, stack, surface, or lasting workflow:
+**After every change that touches the factory** (method, judgment, `templates/`, `technologies/`, `coverage/`, scripts, examples) **and** whenever the owner adds/edits a practice, stack, surface, or lasting workflow:
 
-1. Leave the playbook **current as of this session** — not “mostly right.”
+1. Leave the factory **current as of this session** — not “mostly right.”
 2. Finish the **Always-Current closeout** below **before** claiming Done / ending the session.
 3. Run the structure gate — `node scripts/check-structure.mjs` from the factory repository, or `node software-factory-all-in-one/scripts/check-structure.mjs` from a product repository. Fix failures in the same change.
 4. Land the change through a pull request to the factory repository; a vendored copy is never edited in place (SF-14) — the only exception is a maintainer's designated source copy ([`AGENTS.md`](../AGENTS.md)).
@@ -34,7 +34,7 @@ Agents run this checklist whenever the rule fires. Skip a line only with an expl
 | 7 | **Prompts / lessons** | One-line wire in `05-PROMPTS` / `06-LESSONS` when agents must discover the rule |
 | 8 | **Structural gate** | `node software-factory-all-in-one/scripts/check-structure.mjs` exits 0 |
 | 9 | **Upstream** | Pull request opened against the factory repository and its status recorded in the handoff; vendored copies are refreshed with `seed.mjs --update` after it merges (SF-14) |
-| 10 | **Trail** | Lasting bar → product `DECISIONS` + `OWNER_STANDING` changelog when this product hosts the playbook copy |
+| 10 | **Trail** | Lasting bar → product `DECISIONS` + `OWNER_STANDING` changelog when this product hosts the factory copy |
 
 **Memory is not evidence of “latest.”** Training cut and old chat do not count as a freshness check.
 
@@ -60,7 +60,7 @@ Not required every session: re-audit **every** pack on earth. Required: never le
 |--------------|------------|
 | Edit a pack, leave old Checked dates | Re-check official docs; stamp today |
 | Add a stack, skip `coverage/` + surfaces language row | Update both in the same change |
-| “CI green later” after playbook edit | Run freshness script before push |
+| “CI green later” after factory edit | Run freshness script before push |
 | Editing a vendored copy in place | Propose the change upstream (SF-14); refresh copies with `seed.mjs --update` |
 | Claim huge professionalism gain with no ratchet evidence | Cite dimension + checklist rows completed |
 

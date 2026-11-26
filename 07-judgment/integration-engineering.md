@@ -2,7 +2,7 @@
 
 Absorb **integration engineering** as **judgment only**: the craft of connecting systems, APIs, people, and knowledge so the **whole** works — especially at **interfaces**. Use this whenever an agent integrates with **anything** (payment provider, OAuth, email, storage, webhooks, AI vendor, sibling API, legacy SOAP, MCP tool, third-party SDK).
 
-**Sources distilled (not dependencies):** [integration.engineering](https://integration.engineering/) (systems / interface / lifecycle framing); software API-contract and agent-integration practice (adapters, idempotency, retries, fallbacks). Do **not** vendor NEDION cubes, railway case libraries, or a maturity-model product into the playbook.
+**Sources distilled (not dependencies):** [integration.engineering](https://integration.engineering/) (systems / interface / lifecycle framing); software API-contract and agent-integration practice (adapters, idempotency, retries, fallbacks). Do **not** vendor NEDION cubes, railway case libraries, or a maturity-model product into the factory.
 
 **When this applies:** must-finish touches an **external or cross-boundary** dependency (HTTP partner, webhook, queue consumer of foreign events, OAuth, file/object store, email/SMS, AI provider, browser MCP, another deployable). Pure in-process refactors with no new boundary: **N/A**.
 

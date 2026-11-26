@@ -1,6 +1,6 @@
 # Judgment — payments, billing, and provider agents
 
-Absorb **payment-provider agent guidance** (MCP servers, agent skills, sandbox tooling, modern Checkout / PaymentIntent / SetupIntent patterns, webhook-first entitlement) as judgment mapped onto this playbook. Do **not** dump a full payment-product catalog, Connect/Issuing/Treasury trees, or agentic-commerce directories into planning.
+Absorb **payment-provider agent guidance** (MCP servers, agent skills, sandbox tooling, modern Checkout / PaymentIntent / SetupIntent patterns, webhook-first entitlement) as judgment mapped onto this factory. Do **not** dump a full payment-product catalog, Connect/Issuing/Treasury trees, or agentic-commerce directories into planning.
 
 Upstream reading (human only, optional): the chosen provider’s **Agents / AI** docs, security guide, webhooks, testing, and go-live checklist (example shape: Stripe `docs.stripe.com/agents`, security guide, webhooks, sandboxes). Prefer the **behaviors** below; keep product names and live account URLs out of this file.
 
@@ -27,7 +27,7 @@ Upstream reading (human only, optional): the chosen provider’s **Agents / AI**
 | Recommend Sources API, Charges-first flows, or Tokens for **new** integrations when Intent/Checkout/Setup paths exist | Provider LLM agent best practices; obsolete rails |
 | Put secret API keys in the frontend, prototype, or chat | Secrets red lines |
 | Use the same sandbox/test project for local tinkering and CI | Flaky tests and polluted fixtures |
-| Copy the entire provider docs tree (Connect, Issuing, Terminal, Tax, …) into the playbook | Forever-generic; product-specific only when the product needs that surface |
+| Copy the entire provider docs tree (Connect, Issuing, Terminal, Tax, …) into the factory | Forever-generic; product-specific only when the product needs that surface |
 | Treat “agentic commerce / Directory / sell-through-agents” as required product scope | Optional market later; not a planning default |
 | Weaken webhook verification “for the prototype” in implementation | Prototype stays mock-only; real BE must verify |
 

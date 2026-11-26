@@ -59,6 +59,6 @@ Candor: refuse “ship ugly; AI understands it” — rewrite for human readabil
 
 ## Related homes
 
-- Clean Code / engineering standards (project `.cursor/rules/clean-code.mdc`, playbook clean-code rules)
+- Clean Code / engineering standards (project `.cursor/rules/clean-code.mdc`, factory clean-code rules)
 - [`technologies/`](../technologies/README.md) packs · [`context7-docs.md`](context7-docs.md) · [`agent-skills.md`](agent-skills.md) five-axis review
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md) · CodeRabbit templates

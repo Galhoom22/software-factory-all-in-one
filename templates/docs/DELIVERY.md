@@ -3,7 +3,7 @@
 **Status:** Mandatory.  
 **Audience:** every human and AI agent in this planning repository.
 
-Copy and adapt from the playbook’s [`02-DELIVERY.md`](../software-factory-all-in-one/02-DELIVERY.md). Keep the hard rules below.
+Copy and adapt from the factory’s [`02-DELIVERY.md`](../software-factory-all-in-one/02-DELIVERY.md). Keep the hard rules below.
 
 ## 1. There is no MVP delivery mode
 

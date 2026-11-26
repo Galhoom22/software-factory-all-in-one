@@ -17,7 +17,7 @@
 3. Mock the API on every PR (`page.route`, MSW, or stub server). Full-stack smoke is staging/release — never a live sibling API on PR CI.
 4. Accessibility is a gate: `@axe-core/playwright` on critical journeys (no critical/serious). Automated axe does not replace keyboard/manual checks.
 5. Depth follows `software-factory-all-in-one/04-FEATURE_SDLC.md` profiles — never weaken security or a11y for “Lightweight.”
-6. Playwright judgment: planning playbook `07-judgment/playwright-e2e.md` (official intro / best practices / CI / a11y distilled).
+6. Playwright judgment: planning factory `07-judgment/playwright-e2e.md` (official intro / best practices / CI / a11y distilled).
 
 ## 2. Tooling
 
@@ -68,7 +68,7 @@ Visual regression CI, Pact, exhaustive E2E of every screen state, full multi-bro
 
 ## 7. CI
 
-Lint, typecheck, unit/component, **critical Playwright** (when enabled), secret scan on every PR. Upload `playwright-report/` on failure/cancelled. Method: playbook `09-CI-CD.md` + `07-judgment/playwright-e2e.md`.
+Lint, typecheck, unit/component, **critical Playwright** (when enabled), secret scan on every PR. Upload `playwright-report/` on failure/cancelled. Method: factory `09-CI-CD.md` + `07-judgment/playwright-e2e.md`.
 
 ## Algorithmic / hot-path performance
 

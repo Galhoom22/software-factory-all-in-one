@@ -80,7 +80,7 @@ How the frontend signs in and sends credentials (prefer HTTP-only cookie session
 
 ### 6.1 Change Process (contract-first)
 
-Design bar (consumer tasks, naming, method semantics): playbook `07-judgment/api-design.md`.
+Design bar (consumer tasks, naming, method semantics): factory `07-judgment/api-design.md`.
 
 1. Whoever needs a change opens a pull request that edits **this file only**.
 2. The other developer approves it. No code is written against an unapproved change.

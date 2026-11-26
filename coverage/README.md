@@ -1,6 +1,6 @@
-# Playbook coverage atlas
+# Factory coverage atlas
 
-**What this is:** the living inventory of what the Engineering Playbook already covers — method docs, templates, workflows, judgment packs, CI rails, **and software-industry surfaces** (web, mobile, desktop, games, …) with honest ✅/⚠️/❌ and **%**. Agents use it **before** adding or “inventing” a practice the owner requests.
+**What this is:** the living inventory of what the Software Factory already covers — method docs, templates, workflows, judgment packs, CI rails, **and software-industry surfaces** (web, mobile, desktop, games, …) with honest ✅/⚠️/❌ and **%**. Agents use it **before** adding or “inventing” a practice the owner requests.
 
 **What this is not:** a second constitution, a product backlog, or permission to skip quality. Presence ≠ Done for a product; this atlas only answers “does the **template/method** already have this?”
 
@@ -12,7 +12,7 @@
 
 This explains how to read and score the atlas; the full procedure for changing the factory is [`CONTRIBUTING.md`](../CONTRIBUTING.md) § Changing the factory.
 
-When the owner says *add X to the playbook / template / workflow* (any language):
+When the owner says *add X to the factory / template / workflow* (any language):
 
 0. **North star** — [`EXCELLENCE.md`](../EXCELLENCE.md): raise at least one excellence dimension without lowering another? If not, skip or refuse (Candor).
 1. **Search this atlas first** (`README` scorecard + the matching domain file). For *can we build X kind of software?* or *what percent are we on mobile/desktop?* use [`07-software-surfaces.md`](07-software-surfaces.md). For *what % are we on Cursor/Codex/Trae/Antigravity?* use [`08-ai-agents.md`](08-ai-agents.md). Do not confuse industry/harness breadth with the **professionalism** scorecard for domains 01–06.
@@ -37,7 +37,7 @@ Owner standing / product calendars stay out of this folder — link from product
 |------|---------|
 | ✅ | Capability exists and is wired enough that a new product can follow it without inventing a second system |
 | ⚠️ | Mentioned or skeleton exists, but depth, prompts, CI, or day-loop wiring is incomplete |
-| ❌ | Not in the playbook (may still live only in one product’s docs — do not count that as template coverage) |
+| ❌ | Not in the factory (may still live only in one product’s docs — do not count that as template coverage) |
 
 | % band | Meaning |
 |--------|---------|
@@ -67,7 +67,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~27%** breadth | ⚠️ |
 | [`08-ai-agents.md`](08-ai-agents.md) | AI agent / IDE harnesses (Cursor, Codex, Claude, Gemini, CN tools, …) | ~20 | **~58%** breadth | ⚠️ |
 
-### Overall playbook professionalism
+### Overall factory professionalism
 
 | Metric | Value |
 |--------|-------|
@@ -116,7 +116,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Compliance / ethics / risk | `07-judgment/compliance-ethics-risk` + COMPLIANCE template + `08` (SF-07) | ✅ ~88% |
 | Booking / reservations | `07-judgment/booking` + `08` (SF-10) | ✅ ~88% |
 | Excellence north star / ratchet | `EXCELLENCE.md` + this atlas (SF-11) | ✅ ~94% |
-| Playbook purpose / speed×quality single reference | `EXCELLENCE.md` § Why + `README` + `00-USAGE` (SF-11) | ✅ ~95% |
+| Factory purpose / speed×quality single reference | `EXCELLENCE.md` § Why + `README` + `00-USAGE` (SF-11) | ✅ ~95% |
 | Studio as a company / org seats | `07-judgment/studio-company` + `STUDIO_ORG` template (SF-12) | ✅ ~90% |
 | Competitor recon / clean-room | `07-judgment/competitor-recon` + template (SF-13) | ✅ ~88% |
 | Software Factory + multi-agent | `07-judgment/software-factory` + `STUDIO_ORG` + `08` (SF-12) | ✅ ~93% |
@@ -139,13 +139,13 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Symfony 8 tech pack | `technologies/symfony` | ✅ ~88% |
 | Next.js tech pack | `technologies/nextjs` | ✅ ~92% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
-| Always-Current / playbook freshness | `07-judgment/playbook-freshness` + CI script | ✅ ~95% |
+| Always-Current / factory freshness | `07-judgment/playbook-freshness` + CI script | ✅ ~95% |
 | AI agent harness % (Cursor/Codex/Claude/Trae/…) | `08-ai-agents` + `agents/` | ⚠️ breadth ~58%; studio-default ~92% |
 | Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth ~27%; web+API ~83% |
 | Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌ ~8–12% |
 | Desktop / Electron / extensions / games | `07-software-surfaces` | ❌/~⚠️ ~3–18% |
 | Which language maps to which surface | `07-software-surfaces` § Languages | living map |
-| Notion daily task page template | `05-gaps` | ❌ 0% in playbook (product standing by design) |
+| Notion daily task page template | `05-gaps` | ❌ 0% in factory (product standing by design) |
 
 ---
 

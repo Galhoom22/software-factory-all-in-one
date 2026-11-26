@@ -5,27 +5,46 @@
 
 **Region note:** Global (Anthropic availability).
 
+Shared rules for every harness — the single rulebook, session habits and quality bar — are in [`../README.md`](../README.md).
+
 ## When to open this pack
 
 - Using **Claude Code** CLI or Anthropic coding harness on this repo.
 
-## Files
+## Official references
 
-| File | Purpose |
-|------|---------|
-| [`official-refs.md`](official-refs.md) | Dated official URLs |
-| [`best-practices.md`](best-practices.md) | How to get the best result with this harness on this playbook |
-| [`quality.md`](quality.md) | Quality bar for harness-specific guidance |
-| [`claude-code-cli/`](claude-code-cli/README.md) | Current product-form slice: use / stop / mistakes |
+Re-verify on the vendor site when bumping; prefer these over blogs.
+
+| Topic | Official URL | Checked |
+|-------|--------------|---------|
+| Claude Code docs | https://docs.anthropic.com/en/docs/claude-code | 2026-11-23 |
+| Anthropic docs hub | https://docs.anthropic.com/ | 2026-11-23 |
+
+## How to drive it
+
+- **Discovery pointer:** Root `CLAUDE.md` → `@docs/AGENT_START.md` + `@AGENTS.md`.
+- **Depth:** **full**. If thin: deepen from official docs before claiming high coverage %.
+
+## Use these
+
+- Keep `CLAUDE.md` a thin pointer only.
+- Prefer long-running harness habits: one feature / clean commit / progress outside chat.
+- Use Skills only when they map to factory judgment — do not vendor a second constitution.
+
+## Stop using
+
+- Do not paste a third-party skills pack as AGENTS.md.
+- Do not wrap Antigravity / other logins in ways that violate third-party ToS.
+
+## Common mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| Forking rules into CLAUDE.md | Keep pointer; edit AGENTS.md |
+| Huge chat dumps as SoT | Use handoff + git |
 
 ## Product vs pack
 
 - **Single rulebook:** product `AGENTS.md` (+ `docs/AGENT_START.md`) remains the only full constitution. This pack teaches **how to drive Claude Code** so it obeys that rulebook.
 - Discovery pointer: Root `CLAUDE.md` → `@docs/AGENT_START.md` + `@AGENTS.md`.
 - Do not fork a second rulebook inside this pack.
-
-## Related
-
-- Atlas: [`../../coverage/08-ai-agents.md`](../../coverage/08-ai-agents.md)
-- Freshness: [`../../07-judgment/playbook-freshness.md`](../../07-judgment/playbook-freshness.md)
-- Agent discovery templates: [`../../templates/agent-discovery/`](../../templates/agent-discovery/)
