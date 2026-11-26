@@ -328,6 +328,37 @@ if (
   }
 }
 
+// --- CHANGELOG: [Unreleased] first; releases "## [X.Y.Z] - YYYY-MM-DD", newest first, non-empty, with link references ---
+{
+  const cl = read(path.join(playbookRoot, "CHANGELOG.md")).replace(/\r\n/g, "\n");
+  const heads = [...cl.matchAll(/^## \[([^\]]+)\](.*)$/gm)].map((m) => ({ name: m[1], rest: m[2].trim(), index: m.index }));
+  if (!heads.length || heads[0].name !== "Unreleased") fail("CHANGELOG.md must start its entries with ## [Unreleased]");
+  const versions = heads.slice(1);
+  const newer = (a, b) => {
+    const x = a.split(".").map(Number);
+    const y = b.split(".").map(Number);
+    for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] > y[i];
+    return false;
+  };
+  versions.forEach((v, i) => {
+    if (!/^\d+\.\d+\.\d+$/.test(v.name) || !/^- \d{4}-\d{2}-\d{2}$/.test(v.rest)) {
+      fail(`CHANGELOG.md heading "## [${v.name}] ${v.rest}" must read "## [X.Y.Z] - YYYY-MM-DD"`);
+    }
+    if (i > 0 && !newer(versions[i - 1].name, v.name)) fail(`CHANGELOG.md versions must be newest first (${versions[i - 1].name} before ${v.name})`);
+    const after = cl.slice(v.index).split("\n").slice(1);
+    const next = after.findIndex((l) => /^## /.test(l));
+    const content = after.slice(0, next < 0 ? after.length : next).filter((l) => !/^\[[^\]]+\]:\s*https?:\/\//.test(l));
+    if (!content.join("\n").trim()) fail(`CHANGELOG.md section ${v.name} is empty`);
+  });
+  if (versions.length && !new RegExp(`^\\[Unreleased\\]: https://\\S+/compare/v${versions[0].name.replace(/\./g, "\\.")}\\.\\.\\.HEAD$`, "m").test(cl)) {
+    fail(`CHANGELOG.md [Unreleased] must compare from the newest release: …/compare/v${versions[0].name}...HEAD`);
+  }
+  for (const h of heads) {
+    const ref = new RegExp(`^\\[${h.name.replace(/\./g, "\\.")}\\]: https://`, "m");
+    if (!ref.test(cl)) fail(`CHANGELOG.md is missing the link reference for [${h.name}]`);
+  }
+}
+
 // --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
 {
   const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));

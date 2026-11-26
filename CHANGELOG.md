@@ -1,15 +1,19 @@
 # Changelog
 
-Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); releases follow [Semantic Versioning](https://semver.org/) once tagged. If you vendor the kit, read this file before and after `seed.mjs --update`.
+Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [Semantic Versioning](https://semver.org/) as defined for this kit in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Releasing. If you vendor the kit, read this file before and after `seed.mjs --update`.
 
 ## [Unreleased]
+
+## [1.0.0] - 2026-11-26
+
+First stable release: the structure, paths, template mapping and gates below are what MINOR and PATCH releases keep working for vendored copies.
 
 ### Added
 
 - `scripts/seed.mjs` — seed a planning repository from a clone, `--in-place` after "Use this template", or `--update` a vendored copy; never overwrites existing files.
 - `scripts/check-seed.mjs` — smoke test: fresh, activated, in-place and updated seeds pass their own gates.
 - `scripts/check-content-integrity.mjs` — no tool artifacts written back, tables GitHub can render, links and anchors that resolve (`--product`, `--artifacts-only`).
-- `scripts/check-structure.mjs` — renamed from `check-playbook-freshness.mjs`; adds router ↔ guides, computed README facts, cited-decision and `KIT_TOP` checks.
+- `scripts/check-structure.mjs` — renamed from `check-playbook-freshness.mjs` (the old name remains as a deprecated alias until 2.0.0); adds router ↔ guides, computed README facts, cited-decision and `KIT_TOP` checks.
 - `ARCHITECTURE.md` (task routes, which instruction wins, owners), `DECISIONS.md` (SF-01 … SF-15), kit `AGENTS.md` and `CLAUDE.md`, `.gitignore`, `.gitattributes`, this changelog.
 
 ### Changed
@@ -34,10 +38,20 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 - The kit-root copy of `check-planning-entry.mjs` (seeded repositories run their own `scripts/check-planning-entry.mjs`).
 
+### Deprecated
+
+- `scripts/check-playbook-freshness.mjs` — use `scripts/check-structure.mjs`; the old name is removed in 2.0.0.
+
+### Known limitations (planned for 1.1.0)
+
+- Product entry files (`templates/AGENTS.template.md`, `templates/docs/AGENT_START.md`, `llms.txt`) do not yet point agents at the task routes in `ARCHITECTURE.md` § 1.
+- Hub documents (`08`, `04`, `01`) link guides directly as well as through the judgment router.
+- There is no written bug-fix procedure yet, and a few script names in `03-PROTOTYPE.md` refer to files a product creates itself.
+
 ### Migration (vendored copies)
 
 1. From a fresh clone of the kit: `node scripts/seed.mjs --update <your-planning-repo>`.
-2. In your CI, call `software-factory-all-in-one/scripts/check-structure.mjs` (the old `check-playbook-freshness.mjs` name still works for one release).
+2. In your CI, call `software-factory-all-in-one/scripts/check-structure.mjs` (the old `check-playbook-freshness.mjs` name keeps working until 2.0.0).
 3. Compare the fixed `templates/scripts/check-scope.mjs`, `check-planning-entry.mjs` and `check-agents.mjs` with your `scripts/` copies and merge the fixes (keep any checks your product added), then fill the new language and icon placeholders.
 
 ## Before versioning — atlas history
@@ -89,3 +103,6 @@ Kept verbatim from the coverage atlas, newest first.
 | 2026-11-21 | Technologies library + PHP 8.6 pack (SF-05). |
 | 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |
+
+[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.0.0

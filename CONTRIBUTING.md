@@ -70,6 +70,21 @@ A vendored copy (`<product>/software-factory-all-in-one/`) is read-only. To impr
 
 A maintainer may develop the factory inside a private planning repository as its designated source copy. Publishing from it must run every gate plus a private product, person and organisation denylist on the files **and** on the publish message; refuse when the public repository has changes that are not back-ported yet; go through a pull request that public CI checks before it merges; and publish exactly the source tree, with nothing injected. Never force-push.
 
+## Releasing (maintainers)
+
+Versions follow [Semantic Versioning](https://semver.org/), read from a vendored copy's point of view ([SF-16](DECISIONS.md#sf-16-releases-and-immutable-tags)):
+
+| Bump | When |
+|------|------|
+| **MAJOR** | A seeded repository that was green can turn red, or a path products reference (a file, a script, the template mapping) moves or disappears |
+| **MINOR** | New guides, packs, templates or gates that keep seeded repositories green |
+| **PATCH** | Fixes and clarifications |
+
+1. Move the `## [Unreleased]` entries under `## [X.Y.Z] - YYYY-MM-DD` in [`CHANGELOG.md`](CHANGELOG.md) and update the link references at the bottom: add `[X.Y.Z]: …/releases/tag/vX.Y.Z` and point `[Unreleased]` at `…/compare/vX.Y.Z...HEAD` (the structure gate checks both).
+2. Merge, and wait for Factory CI on `main`.
+3. Publish from the commit you tag: check out `<main-sha>` (the CI-verified merge), run `node scripts/release-notes.mjs X.Y.Z > notes.md`, then `gh release create vX.Y.Z --target <main-sha> --title "vX.Y.Z" --notes-file notes.md`.
+4. Tags are never moved or deleted; a bad release is fixed by the next PATCH release.
+
 ## Conduct and security
 
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — Contributor Covenant 2.1

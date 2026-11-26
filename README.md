@@ -5,6 +5,7 @@
 One planning kit that turns a short requirements file into a complete product plan (docs, prototype rails, agent rules, CI, day loops, stack judgment) so agents ship **fast and professional** — not vibes.
 
 <p align="center">
+  <a href="https://github.com/Galhoom22/software-factory-all-in-one/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Galhoom22/software-factory-all-in-one?style=flat-square" /></a>
   <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square" /></a>
   <a href="coverage/README.md"><img alt="Craft coverage" src="https://img.shields.io/badge/craft_coverage-~89%25-38bdf8?style=flat-square" /></a>
   <a href="technologies/README.md"><img alt="Technology packs" src="https://img.shields.io/badge/technology_packs-17-f59e0b?style=flat-square" /></a>
@@ -81,7 +82,7 @@ Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~27%)
 
 ## Quick start
 
-1. **Seed a private planning repo** — either clone this kit and run `node scripts/seed.mjs ../erp-planning`, or click **Use this template** (private), clone your new repo and run `node scripts/seed.mjs --in-place`.
+1. **Seed a private planning repo** — either clone the [latest release](https://github.com/Galhoom22/software-factory-all-in-one/releases/latest) of this kit (`main` may carry unreleased changes) and run `node scripts/seed.mjs ../erp-planning`, or click **Use this template** (private), clone your new repo and run `node scripts/seed.mjs --in-place`.
 2. You get the kit vendored read-only in `software-factory-all-in-one/` and [`templates/`](templates/) instantiated at the root (`AGENTS.md`, `docs/`, `.cursor/rules/`, `.codex/`, CI, …). The seed never overwrites existing files, and its CI is green before you write any requirements (proven on every change by `scripts/check-seed.mjs`).
 3. Add **root** `my-project-requirements.md` (start from [`examples/my-project-requirements.example.md`](examples/my-project-requirements.example.md)).
 4. Open Cursor / Codex / Claude Code / your agent and say you want planning started from that file.

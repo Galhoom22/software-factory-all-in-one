@@ -24,7 +24,7 @@ After planning is ready enough, you create separate **implementation** repositor
 ## Step 1 — Create a Planning Repository
 
 1. Seed a private planning repository — pick one:
-   - **From a clone of this kit:** `node scripts/seed.mjs ../<product>-planning`
+   - **From a clone of this kit** (check out the latest release tag for a stable version): `node scripts/seed.mjs ../<product>-planning`
    - **From GitHub:** click **Use this template** (private), clone the new repository, then run `node scripts/seed.mjs --in-place`
 2. The seed vendors the kit into `software-factory-all-in-one/` (read-only — improve it upstream with a pull request) and instantiates `templates/` at the root: `AGENTS.template.md` → `AGENTS.md`, `LICENSE.template` → `LICENSE`, `cursor-rules/` → `.cursor/rules/`, `codex/` → `.codex/`, `agent-discovery/` pointers → root. It never overwrites an existing file. `templates/implementation/` stays in the kit for your implementation repositories.
 3. The seeded checks (`.github/workflows/ci.yml`) are green before you write any requirements; `node scripts/seed.mjs --update <repo>` later refreshes only the vendored kit.
