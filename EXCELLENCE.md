@@ -66,26 +66,11 @@ Score a change against these — not against marketing adjectives:
 
 A change that raises vanity (more files, louder claims) without raising a dimension **fails** the bar.
 
-## Ratchet protocol (every playbook / template edit)
+## Ratchet protocol
 
-Agents run this **before** inventing or “improving” a practice:
+The step-by-step procedure for every factory or template change lives in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Changing the factory; this file defines the dimensions that procedure must raise.
 
-1. **North star** — will this move at least one dimension **up** without moving another **down**?
-
-2. **Atlas** — consult [`coverage/`](coverage/README.md); report ✅/⚠️/❌ + %; deepen the existing home when strong.
-
-3. **Candor** — if the ask would lower professionalism, **refuse** + safer alternative (SF-07). Do not propose a downgrade upstream.
-
-4. **Smallest complete** — Ponytail: least new surface that fully works; no parallel constitutions.
-
-5. **Wire it** — method + prompts/lessons/day loop/CI as needed so agents actually use it.
-
-6. **Measure** — update the coverage row/% in the same change; land it through a pull request to the factory repository (SF-14).
-7. **Always-Current** — run the freshness closeout + the structure gate (`node scripts/check-structure.mjs` in the factory; `node software-factory-all-in-one/scripts/check-structure.mjs` in a product); re-verify official docs for touched packs ([`playbook-freshness.md`](07-judgment/playbook-freshness.md)).
-
-8. **Leave a trail** — if it is a lasting bar change, add a `DECISIONS` row in the product that hosts the playbook copy.
-
-**Ratchet rule:** never ship a playbook change that makes the next product *less* professional than before. Prefer skip over a noisy “upgrade.”
+**Ratchet rule:** never ship a change that makes the next product *less* professional than before. Prefer skip over a noisy “upgrade.”
 
 ## How we get there over time
 

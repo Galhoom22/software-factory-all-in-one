@@ -124,6 +124,7 @@ Never put real product names, people, or tracker keys **back into this public ki
 EXCELLENCE.md             North star + upgrade ratchet
 ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
 DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-15)
+CHANGELOG.md              What changed, and how to update a vendored copy
 AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
 coverage/                 Honest ✅/% atlas (craft · surfaces · agents)
 agents/                   Per-harness packs
@@ -137,6 +138,7 @@ scripts/                  Self-checks (activation, freshness, forever-generic)
 |------|------|
 | Which documents to load for a task | [`ARCHITECTURE.md`](ARCHITECTURE.md) § 1 |
 | Why a rule exists | [`DECISIONS.md`](DECISIONS.md) |
+| What changed / how to update a vendored copy | [`CHANGELOG.md`](CHANGELOG.md) |
 | Day closeout (PR → CI → review → merge → CD) | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) + [`09-CI-CD.md`](09-CI-CD.md) |
 | Stack professionalism | [`technologies/`](technologies/README.md) |
 | Agent harness tips | [`agents/`](agents/README.md) |
@@ -170,14 +172,7 @@ Open a **bug**, **idea**, or **question** from the Issues tab — blank issues a
 
 ## Contributing
 
-Improvements that **raise professionalism** are welcome. Prefer deepening an existing [`coverage/`](coverage/README.md) home over inventing a parallel file. Run:
-
-```bash
-node scripts/check-forever-generic.mjs
-node scripts/check-content-integrity.mjs
-node scripts/check-requirements-activation.mjs
-node scripts/check-structure.mjs
-```
+Improvements that **raise professionalism** are welcome. [`CONTRIBUTING.md`](CONTRIBUTING.md) has the procedure (atlas first, the excellence ratchet, the five gates CI runs) and how to propose a change from a product repository that vendors the kit.
 
 ---
 

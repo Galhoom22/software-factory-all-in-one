@@ -11,6 +11,7 @@
 - [ ] Ran `node scripts/check-content-integrity.mjs` (no tool artifacts; tables render; links resolve) and reviewed net deletions
 - [ ] Ran other relevant checks (`check-requirements-activation.mjs`, `check-structure.mjs`) when wiring/packs changed
 - [ ] Updated `coverage/` % or atlas row when coverage changed
+- [ ] Added a `CHANGELOG.md` line under `[Unreleased]` (with migration steps if vendored copies must act)
 
 ## Test plan
 

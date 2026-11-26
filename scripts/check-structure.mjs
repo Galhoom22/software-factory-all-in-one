@@ -286,6 +286,36 @@ for (const m of readmeText.matchAll(/~\s*(?:\*\*)?(\d{1,3})%/g)) {
   }
 }
 
+// --- Every gate is wired into CI and named where contributors and agents look (no drift between lists) ---
+// In CI the gate must be an executed step ("run: node scripts/<gate>"), not just a mention or a comment.
+function runsGate(yaml, gate) {
+  const escaped = gate.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  // a single-line `run: node …` step, or a `node …` line inside a multi-line `run: |` block (comments never count)
+  return new RegExp(`^\\s*(?:-\\s*)?(?:run:\\s*)?node\\s+scripts/${escaped}(?:\\s|$)`, "m").test(yaml);
+}
+if (
+  !runsGate("      - run: node scripts/check-x.mjs", "check-x.mjs") ||
+  !runsGate("        run: |\n          node scripts/check-x.mjs --flag", "check-x.mjs") ||
+  runsGate("      # run: node scripts/check-x.mjs", "check-x.mjs") ||
+  runsGate("      - name: node scripts/check-x.mjs", "check-x.mjs")
+) {
+  fail("runsGate self-test failed");
+}
+{
+  const gates = fs.readdirSync(path.join(playbookRoot, "scripts")).filter((f) => /^check-.+\.mjs$/.test(f) && f !== "check-playbook-freshness.mjs");
+  for (const [rel, label] of [[".github/workflows/ci.yml", "kit CI"], ["CONTRIBUTING.md", "CONTRIBUTING"], ["AGENTS.md", "AGENTS.md"], ["ARCHITECTURE.md", "ARCHITECTURE"]]) {
+    if (!exists(path.join(playbookRoot, rel))) {
+      fail(`${rel} is missing`);
+      continue;
+    }
+    const text = read(path.join(playbookRoot, rel));
+    for (const g of gates) {
+      const wired = rel.endsWith(".yml") ? runsGate(text, g) : text.includes(g);
+      if (!wired) fail(`${label} (${rel}) does not ${rel.endsWith(".yml") ? "run" : "name"} the gate scripts/${g}`);
+    }
+  }
+}
+
 // --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
 {
   const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));

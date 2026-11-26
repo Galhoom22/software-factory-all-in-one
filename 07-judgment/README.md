@@ -2,6 +2,40 @@
 
 When a useful external method appears (Spec Kit, enterprise design courses, engineering-agent kits, design-skill packs), **do not** install it as a second source of truth inside the planning repository.
 
+## Router — open a guide only when its trigger applies
+
+This table is the only list of judgment guides. Hub documents link the slot, not every guide. **Always on** guides apply to every change; open the others only when their trigger is true.
+
+| Open when … | Guide | Plugs into |
+|-------------|-------|------------|
+| **Always on** — any change you are about to call done | [`verification-engineering.md`](verification-engineering.md) | 08 closeout · 04 § Verification |
+| **Always on** — long sessions, large outputs, handoffs, a fresh chat | [`context-window.md`](context-window.md) | 08 context hygiene |
+| **Always on** — an ask that could lower professionalism, break law or ethics, or add unmanaged High risk | [`compliance-ethics-risk.md`](compliance-ethics-risk.md) | Candor · product COMPLIANCE |
+| Code was written or changed | [`human-code-review.md`](human-code-review.md) | 08 review |
+| Non-trivial library or framework API on the pinned stack | [`context7-docs.md`](context7-docs.md) | 08 build · technology packs |
+| Choosing or changing a stack | [`stack-selection.md`](stack-selection.md) | 00-USAGE step 3 · 01-STEPS |
+| Studying competitors or claiming parity | [`competitor-recon.md`](competitor-recon.md) | 01-STEPS Phase 0 |
+| Writing architecture docs or a lasting decision | [`sad-adr.md`](sad-adr.md) | Product DECISIONS · SRS |
+| Planning an AI feature (RAG, agents, evals) | [`ai-system-design.md`](ai-system-design.md) | Product docs/AI.md · SRS |
+| Setting up team seats, goals or task checkout | [`studio-company.md`](studio-company.md) | Product STUDIO_ORG · 08 seats |
+| Moving work through intake → review → done with several agents | [`software-factory.md`](software-factory.md) | 08 pipeline · STUDIO_ORG |
+| Absorbing an outside agent-skills pack or workflow | [`agent-skills.md`](agent-skills.md) | The rule below |
+| Designing or changing an HTTP API | [`api-design.md`](api-design.md) | API_CONTRACT · 08 API gate |
+| An API must work in CI, staging and production, not only locally | [`api-readiness.md`](api-readiness.md) | 08 API gate · 09-CI-CD |
+| Frontend ↔ backend ↔ service contracts change (fields, headers, events, auth) | [`cross-surface-compatibility.md`](cross-surface-compatibility.md) | 08 · product SIBLING |
+| Connecting any external partner (payments, email, maps, webhooks, …) | [`integration-engineering.md`](integration-engineering.md) | 08 integration gate |
+| Model, prompt, RAG, agent or eval code paths | [`ai-engineering.md`](ai-engineering.md) | 08 AI gate · product docs/AI.md |
+| Money moves (checkout, billing, refunds, payment webhooks) | [`payments.md`](payments.md) | Product SECURITY · 08 |
+| Scarce capacity is reserved (bookings, appointments, seats) | [`booking.md`](booking.md) | SRS · 08 |
+| Consequential side effects, high-risk boundaries, retries after timeouts | [`enterprise-system-design.md`](enterprise-system-design.md) | 08 high-stakes · 04 risk |
+| Hot paths: loops over growing data, search or ranking, batch jobs | [`dsa-performance.md`](dsa-performance.md) | 04 Performance module · 08 |
+| Adding an abstraction or a named design pattern | [`design-patterns.md`](design-patterns.md) | 04 design · review |
+| Building a non-trivial capability that a package might already provide | [`packages.md`](packages.md) | 04 design · product DECISIONS |
+| Browser end-to-end tests in a frontend repository | [`playwright-e2e.md`](playwright-e2e.md) | Frontend TESTING · 09-CI-CD |
+| Public marketing or legal pages (search and AI answers) | [`seo-geo.md`](seo-geo.md) | Product SEO docs · 08 SEO gate |
+| Handing work to a separate implementer agent | [`delegation.md`](delegation.md) | 08 delegation gate |
+| Changing the factory itself (packs, guides, atlas, templates) | [`playbook-freshness.md`](playbook-freshness.md) | CONTRIBUTING · structure gate |
+
 ## Rule
 
 1. **Map** the useful ideas onto documents you already keep (`requirements.md`, BRD/PRD/SRS, `docs/API_CONTRACT.md`, ADRs / `DECISIONS.md`, actor UI packs, CI).
@@ -25,78 +59,7 @@ When a useful external method appears (Spec Kit, enterprise design courses, engi
 | Playwright E2E (user-facing locators, web-first asserts, mocked PR CI, axe, traces on retry) | Exhaustive E2E of every screen on every PR; live backend required for CI; trace-on-every-test |
 | GoF-style design patterns (problem → naive → blueprint; composition; shared language) | Pattern encyclopedia in-repo; Factory/Observer on three-line fixes; Singleton as default global |
 
-| Practice | Adopt (where it lands) | Forbid |
-|----------|------------------------|--------|
-| DSA / Big-O / algorithmic performance (Pareto study habits) | Day + FEATURE Performance module: name `n`, Time/Space class, structure, edges | Dumping LeetCode catalogs/solutions into product repos; interview grind as merge gate |
-| API readiness across environments (contract + local + CI + staging/prod smoke) | Day API gate + BACKEND TESTING + DEPLOYMENT smoke | Second OpenAPI/Postman SoT; Done on local-only green; live prod checks with real PII |
-| API design (consumer-first REST craft) | Design bar inside API readiness; resource naming; method semantics; docs=agreement | Course PDF as AGENTS; mandatory HATEOAS; Digest auth; dual OpenAPI SoT |
-| Requirements-driven stack selection (advise → specify → ADR) | Options + recommendation from **this** product’s requirements; pin in SRS + DECISIONS; architecture/patterns follow | One-size-fits-all stack; locking TALL/MERN/Next by fashion; packs that replace product constitution |
-| Owner names a stack → pack freshness | Search official/Context7; update `technologies/<slug>/` if stale (same session) | Waiting for “update the pack”; advising from memory while the pack drifts |
-| Playbook Always-Current (freshness closeout) | Same-session checklist + `check-structure.mjs` CI; touched packs get today’s Checked dates | Shipping playbook edits with stale %/pins/mirror drift |
-| AI agent harness atlas | `coverage/08-ai-agents` + `agents/<slug>/` packs; AGENTS.md stays SoT | Second constitution per IDE; fake high % on skeleton CN packs |
-| Packages over reinvention (when earned) | Prefer a verified package for non-trivial work; skip packages for trivial helpers | DIY complexity by habit; dependency for every micro-task |
-| SEO + GEO (public pages) | Dual technical + citeable craft on indexable marketing/legal; Google foundations over vendor hacks | Ranking/citation vanity as Done; fake authority; AI-only markup theater |
-| Compliance / ethics / risk | Laws + IEEE ethics + identify/assess/treat/monitor; refuse unlawful or unethical asks with safer alternative | Checklist theater; fake certifications; silent High-risk acceptance |
-| Booking / reservations | Holds, recheck-before-commit, idempotency, inventory, cancel snapshots; AI/MCP sandbox | Confirm from search cache; skip recheck; double-book on retry |
-| Context window hygiene | Memory pointers, truth outside chat, fresh-chat handoff, mid-day checkpoint ≠ owner “go” | Paste-bomb logs/dumps; polluted chat as SoT; slice-approval theater |
-| Studio as a company | Org seats, goal ancestry, atomic checkout, board approvals; optional Paperclip CLI | Vendor Paperclip as AGENTS; 20 unsupervised agent tabs; dual checkout |
-| Competitor recon / clean-room parity | Screen/flow/feature matrix; evidence-linked gaps; must-have parity; brand sweep | Clone pack as AGENTS; copy peer assets; invent reviews; vibe “parity” |
-| Cross-surface compatibility (FE↔BE↔services) | Day gate + `SIBLING.md`; read sibling, write only owned seat; contract-first | Edit sibling seat; Done without consumer parity; ship breaking shapes silently |
-| Software Factory + multi-agent line | Intake→triage→plan→build→independent review→Done; seats + convergence owner | Vendor Mastra/Warp as AGENTS; builder self-approve; dual checkout |
-| Enterprise system design (boundary / verification) | Six questions; AI practice levels; verification-dominant changes; output admission | Vendor Azure/HPC course trees; HATEOAS/enterprise fashion on modular monoliths |
-| Human code review (senior / tech-lead bar) | Readability for humans; modern pinned-line syntax; pack best practices; CodeRabbit assists | “AI understands it” as Done; CodeRabbit-only waiver; style-committee theater |
-| Context7 / current library docs | This-session docs for pinned lines; resolve→query; official fallback | Training memory as “latest”; silent major bumps; Context7 theater on renames |
-| Verification engineering (AI-written change proof) | Criteria→evidence; author≠judge; layers; risk-matched depth | “Agent said Done”; builder tests alone; vendor SaaS lock-in; chip UVM ceremony |
-| Integration engineering (any external connection) | Boundaries/interfaces; contract; adapter; idempotency; fallback; SoR | “SDK installed = integrated”; blind retries; NEDION vendor lock-in |
-| AI engineering (det/prob + evals) | Seam propose≠execute; golden eval; admission; dual-mode classical+AI | Soften classical bars; vendor LLMOps/LangChain as constitution; vibes Done |
-| Agent delegation (orchestrator→implementer) | Self-contained brief; implementer never commits; orchestrator reviews+lands | Paste chat as brief; implementer auto-commit; trust self-report; vendor all *-delegate skills |
-
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
-
-AI system design judgment: [`ai-system-design.md`](ai-system-design.md) (patterns). Day craft: [`ai-engineering.md`](ai-engineering.md).
-
-SAD / ADR judgment: [`sad-adr.md`](sad-adr.md).
-
-Agent engineering skills judgment: [`agent-skills.md`](agent-skills.md).
-
-Payments / billing judgment: [`payments.md`](payments.md).
-Booking / reservations: [`booking.md`](booking.md).
-
-Playwright E2E judgment: [`playwright-e2e.md`](playwright-e2e.md).
-
-Design patterns judgment: [`design-patterns.md`](design-patterns.md).
-
-DSA / algorithmic performance judgment: [`dsa-performance.md`](dsa-performance.md).
-
-API readiness across environments: [`api-readiness.md`](api-readiness.md).
-
-API design (consumer-first): [`api-design.md`](api-design.md).
-
-Requirements-driven stack selection: [`stack-selection.md`](stack-selection.md).
-
-Packages over reinvention: [`packages.md`](packages.md).
-SEO + GEO: [`seo-geo.md`](seo-geo.md).
-Compliance / ethics / risk: [`compliance-ethics-risk.md`](compliance-ethics-risk.md).
-Context window hygiene: [`context-window.md`](context-window.md).
-Studio as a company: [`studio-company.md`](studio-company.md).
-Competitor recon / clean-room: [`competitor-recon.md`](competitor-recon.md).
-Software Factory + multi-agent line: [`software-factory.md`](software-factory.md).
-
-Enterprise system design: [`enterprise-system-design.md`](enterprise-system-design.md).
-
-Human code review: [`human-code-review.md`](human-code-review.md).
-
-Context7 / current docs: [`context7-docs.md`](context7-docs.md).
-
-Verification engineering: [`verification-engineering.md`](verification-engineering.md).
-
-Integration engineering: [`integration-engineering.md`](integration-engineering.md).
-AI engineering (det/prob seam + evals): [`ai-engineering.md`](ai-engineering.md).
-Agent delegation: [`delegation.md`](delegation.md).
-
-Cross-surface compatibility: [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
-
-Factory freshness (Always-Current closeout): [`playbook-freshness.md`](playbook-freshness.md).
 
 Prototype craft checklists distilled from external skills (checklist only): `project-ui/PRE-DELIVERY-UX.md`, `project-ui/ANTI-SLOP.md`.
 

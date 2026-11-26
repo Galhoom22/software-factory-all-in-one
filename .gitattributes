@@ -1,0 +1,6 @@
+# Normalise line endings so tools on any OS read and write the same bytes.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary

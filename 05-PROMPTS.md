@@ -18,6 +18,8 @@ Use with [`technologies/README.md`](technologies/README.md).
 > Open `software-factory-all-in-one/technologies/<stack>/` for the stack I am using (start with `php/` + `php-8.6` for PHP). Follow official-refs, best-practices, **quality.md**, use-these, stop-using, and common-mistakes. **Automatically** re-check official docs/Context7 for the pinned line (no separate search ask). Enforce modern syntax + Clean Code + architecture + earned patterns. Do not dump the full vendor manual. Do not change the product’s SRS version pin without an ADR. If the pack is missing or stale, create or refresh it from `technologies/_pack-template/` in a checkout of the factory repository (never in the vendored copy), update coverage there and open a pull request; refresh the vendored copy with `seed.mjs --update` after it merges.
 
 ## Playbook coverage (before adding a practice)
+
+Procedure: [`CONTRIBUTING.md`](CONTRIBUTING.md) § Changing the factory. The prompts below apply it.
 Use with [`EXCELLENCE.md`](EXCELLENCE.md) + [`coverage/README.md`](coverage/README.md). Prefer deepen-over-duplicate.
 
 > **AI harness coverage (SF-11):** before adding a new coding agent/IDE guide, read `software-factory-all-in-one/coverage/08-ai-agents.md` + `software-factory-all-in-one/agents/README.md`. Deepen the pack; do not fork AGENTS.md.

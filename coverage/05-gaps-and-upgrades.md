@@ -13,7 +13,7 @@ Scoring of a gap uses the same rubric as [`README.md`](README.md): how covered t
 | Topic | Playbook % | Why excluded | Where it lives instead |
 |-------|------------|--------------|------------------------|
 | Notion day-page / calendar URLs | **0** | Product- and calendar-specific | Product `docs/OWNER_STANDING.md` |
-| Tracker project keys (`KAN-…`) | **0** | Product board | Product `docs/jira/**` + board rules |
+| Tracker project keys (for example `ABC-123`) | **0** | Product board | Product `docs/jira/**` + board rules |
 | Full Spec Kit tree in planning | **0** | Second constitution forbidden | Impl repos; judgment in `07-judgment` |
 | `docs/features/**` in planning | **0** | Evidence belongs with code | Impl `docs/features/` per `04-FEATURE_SDLC` |
 | Runnable Next.js app under `templates/project-ui` | **35** | Templates stay light; copy from a finished planning product | Method `03-PROTOTYPE` + optional reference product |
