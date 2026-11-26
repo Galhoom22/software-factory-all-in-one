@@ -347,7 +347,8 @@ if (
     if (i > 0 && !newer(versions[i - 1].name, v.name)) fail(`CHANGELOG.md versions must be newest first (${versions[i - 1].name} before ${v.name})`);
     const after = cl.slice(v.index).split("\n").slice(1);
     const next = after.findIndex((l) => /^## /.test(l));
-    const content = after.slice(0, next < 0 ? after.length : next).filter((l) => !/^\[[^\]]+\]:\s*https?:\/\//.test(l));
+    // link definitions (the footer or a section's own) are not visible release content
+    const content = after.slice(0, next < 0 ? after.length : next).filter((l) => !/^\[[^\]]+\]:\s*\S/.test(l));
     if (!content.join("\n").trim()) fail(`CHANGELOG.md section ${v.name} is empty`);
   });
   if (versions.length && !new RegExp(`^\\[Unreleased\\]: https://\\S+/compare/v${versions[0].name.replace(/\./g, "\\.")}\\.\\.\\.HEAD$`, "m").test(cl)) {

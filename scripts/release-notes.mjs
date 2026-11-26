@@ -25,9 +25,13 @@ if (start < 0) {
 }
 let end = lines.findIndex((l, i) => i > start && /^## /.test(l));
 if (end < 0) end = lines.length;
-// Link-reference definitions (the CHANGELOG footer) are not release notes.
-const body = lines.slice(start + 1, end).filter((l) => !/^\[[^\]]+\]:\s*https?:\/\//.test(l)).join("\n").trim();
-if (!body) {
+// The CHANGELOG footer ([Unreleased]: … and [X.Y.Z]: … references) is not release notes; other link definitions are kept.
+const footer = /^\[(?:Unreleased|\d+\.\d+\.\d+)\]:\s*https?:\/\//;
+const section = lines.slice(start + 1, end).filter((l) => !footer.test(l));
+const body = section.join("\n").trim();
+// A section that holds only link definitions has no visible notes.
+const visible = section.filter((l) => !/^\[[^\]]+\]:\s*\S/.test(l)).join("\n").trim();
+if (!visible) {
   console.error(`release-notes: the ${version} section of CHANGELOG.md is empty`);
   process.exit(1);
 }
