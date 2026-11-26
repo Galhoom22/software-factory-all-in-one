@@ -2,7 +2,7 @@
 
 Absorb **agent delegation** as **judgment only**: when one agent (the **orchestrator**) hands a bounded coding task to a **separate** implementer (another CLI, Cursor Task/subagent, second session, or fleet lane), then **reviews the diff and lands the commit**. Use this whenever must-finish explicitly dispatches work to a second coding agent. Pure single-session inline work: **N/A**.
 
-**Sources distilled (not dependencies):** [amElnagdy/delegate-skills](https://github.com/amElnagdy/delegate-skills) (MIT) — brief → dispatch → review → land loop; fleet/lane idea; “relay never commits.” Do **not** vendor the Skills CLI package, nineteen `*-delegate` trees, or `relay.mjs` into the playbook as AGENTS or a required toolchain.
+**Sources distilled (not dependencies):** [amElnagdy/delegate-skills](https://github.com/amElnagdy/delegate-skills) (MIT) — brief → dispatch → review → land loop; fleet/lane idea; “relay never commits.” Do **not** vendor the Skills CLI package, nineteen `*-delegate` trees, or `relay.mjs` into the factory as AGENTS or a required toolchain.
 
 **When this applies:** the day agent (or human) asks another coding agent/CLI to implement while staying reviewer; multi-task queues through a second implementer; adversarial read-only second opinion from another agent. Default product day run-through remains **one seat, one checkout** ([`studio-company.md`](studio-company.md)) — delegation is an optional tool, not a second constitution.
 

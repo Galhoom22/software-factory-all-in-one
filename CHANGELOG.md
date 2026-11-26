@@ -21,9 +21,12 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 - `07-judgment/README.md` is a trigger → guide → slot router and the only list of guides; hub documents link slots instead of every guide.
 - `08-IMPLEMENTATION-DAY.md` has one tool-agnostic review section; an AI PR reviewer is optional and configured per product.
 - `CONTRIBUTING.md` owns the change procedure (ratchet, gates, contributing from a product, maintainer publishing); `EXCELLENCE.md` keeps the dimensions.
+- Agent harness packs are one `README.md` each (98 files became 14); the shared quality bar and session habits live once in `agents/README.md`.
+- The kit calls itself the factory (or the kit) everywhere; "playbook" wording is retired. File names stay stable — `07-judgment/playbook-freshness.md` keeps its path.
 
 ### Fixed
 
+- The product CODEOWNERS template protects `/software-factory-all-in-one/` (it pointed at a stale `/playbook/` path).
 - Content damaged by tool write-back restored (coverage atlas, `04-FEATURE_SDLC.md`, `EXCELLENCE.md`, judgment tables).
 - A freshly seeded repository passes its own CI before the prototype exists; `check-planning-entry.mjs` no longer depends on the checkout folder name; `check-agents.mjs` no longer requires replies in English.
 

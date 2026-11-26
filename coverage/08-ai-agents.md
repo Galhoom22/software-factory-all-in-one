@@ -1,6 +1,6 @@
 # Coverage — AI agent / IDE harnesses
 
-**What this is:** honest **% readiness** of the playbook to drive **popular coding agents and AI IDEs** (US + China + cloud chat) so each harness produces playbook-grade results.
+**What this is:** honest **% readiness** of the factory to drive **popular coding agents and AI IDEs** (US + China + cloud chat) so each harness produces factory-grade results.
 
 **What this is not:** a second constitution. Product `AGENTS.md` remains the only full rulebook. Packs under [`software-factory-all-in-one/agents/`](../agents/README.md) teach **how to drive** each harness.
 

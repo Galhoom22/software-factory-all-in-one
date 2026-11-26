@@ -18,7 +18,7 @@ Hard rails — never violate:
 4. Never force-push, rewrite pushed history, change remotes/settings, or commit secrets / real personal data.
 5. Work in small stages: edit → short checks → Conventional Commit → push only after checks pass (same as .github/workflows/ci.yml).
 6. When editing project-ui/: read project-ui/PRODUCT.md, project-ui/DESIGN.md, and .cursor/rules/project-ui-design.mdc first; keep every UI language and text direction correct; run npm test and npm run check:ui before claiming done.
-7. Keep every affected document current in the same change (requirements, docs/, README, playbook, prototype indexes).
+7. Keep every affected document current in the same change (requirements, docs/, README, prototype indexes; factory improvements go upstream).
 8. Prefer the smallest correct change (YAGNI). Do not invent requirements; ask when ambiguous.
 9. On SessionStart, .codex/hooks.json injects a short rail reminder — treat it as mandatory context.
 10. Before claiming done, run: node scripts/check-delivery.mjs && node scripts/check-agents.mjs && node scripts/check-scope.mjs (plus project-ui checks if UI changed).

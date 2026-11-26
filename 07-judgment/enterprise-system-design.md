@@ -72,7 +72,7 @@ Deepens [`ai-system-design.md`](ai-system-design.md). Day craft: [`ai-engineerin
 
 ## Workload review lens (Well-Architected — cloud-agnostic use)
 
-When reviewing a whole deployable, score trade-offs across: **Reliability**, **Security**, **Cost**, **Operational excellence**, **Performance**. Prefer the product’s pinned cloud docs; do not paste a vendor checklist into the playbook. Record lasting trade-offs in `DECISIONS.md` ([`sad-adr.md`](sad-adr.md)).
+When reviewing a whole deployable, score trade-offs across: **Reliability**, **Security**, **Cost**, **Operational excellence**, **Performance**. Prefer the product’s pinned cloud docs; do not paste a vendor checklist into the factory. Record lasting trade-offs in `DECISIONS.md` ([`sad-adr.md`](sad-adr.md)).
 
 ## Adopt (map onto existing docs)
 

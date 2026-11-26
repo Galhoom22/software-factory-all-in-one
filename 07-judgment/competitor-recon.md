@@ -8,7 +8,7 @@ Competitor study that steals owned assets (code, logos, copy, private APIs), inv
 
 Absorb **methods** from [replica-skill](https://github.com/Jakeschincariol/replica-skill) (MIT): recon map, feature matrix, evidence-linked reviews, parity scoring, brand leftover sweep, clean-room rails. Log the borrow in product `docs/REFERENCES.md`.
 
-**Do not** install the Replica pack as `AGENTS.md`, as a second delivery constitution, or as a default “clone any app” studio workflow. This playbook builds **original products** that learn from peers — not shippable copies of others’ trade dress, catalogues, or networks.
+**Do not** install the Replica pack as `AGENTS.md`, as a second delivery constitution, or as a default “clone any app” studio workflow. This factory builds **original products** that learn from peers — not shippable copies of others’ trade dress, catalogues, or networks.
 
 ## Adopt
 

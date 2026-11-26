@@ -22,7 +22,7 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 |----|------------|------|---|-------|
 | ✅ | Docs index | `docs/README.md` | **85** | — |
 | ✅ | Agent hard rails (short) | `docs/AGENT_START.md` | **95** | Weak-model onboarding |
-| ✅ | Owner standing ledger | `docs/OWNER_STANDING.md` | **92** | Day loop, playbook dual-update, generic rule |
+| ✅ | Owner standing ledger | `docs/OWNER_STANDING.md` | **92** | Day loop, factory dual-update, generic rule |
 | ✅ | Actor-loop delivery doc | `docs/DELIVERY.md` | **95** | Mirrors method `02` |
 | ✅ | Decision log | `docs/DECISIONS.md` | **90** | ADR-style entries |
 | ✅ | BRD | `docs/BRD.md` | **88** | Why / market / competitors |
@@ -39,7 +39,7 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 | ✅ | TestSprite (shared) | `docs/TESTSPRITE.md` | **80** | Agentic E2E/API — thinner than CodeRabbit |
 | ✅ | References borrow register | `docs/REFERENCES.md` | **85** | Taken / rejected / where landed |
 | ✅ | Scope rejections | `docs/SCOPE_REJECTIONS.md` | **88** | Stable `REJ-xx` IDs |
-| ✅ | Judgment pointer | `docs/JUDGMENT.md` | **90** | Points at playbook `07-judgment` |
+| ✅ | Judgment pointer | `docs/JUDGMENT.md` | **90** | Points at factory `07-judgment` |
 | ✅ | Actors pack | `docs/actors/**` | **85** | Current-actor screens/flow skeletons |
 | ✅ | Decision-log folder | `docs/decision-logs/README.md` | **75** | Optional overflow; main log is DECISIONS |
 | ✅ | Learning-from-mistakes | `docs/learning-from-mistakes/**` | **90** | README + sample lessons (queue, AI mutate, CI lockfile) |
@@ -90,4 +90,4 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 | New “constitution” | Expand SECURITY / COMPLIANCE / AGENTS | Duplicates governing rules |
 | New architecture bible | FE/BE `ARCHITECTURE.md` + DECISIONS | Full SAD paste (`07-judgment/sad-adr`) |
 | New testing bible shared FE+BE | Keep split TESTING guides | Inventing a third shared testing book |
-| New prototype screen rules | `03-PROTOTYPE` + `project-ui-design` rule | Baking product screens into playbook |
+| New prototype screen rules | `03-PROTOTYPE` + `project-ui-design` rule | Baking product screens into factory |

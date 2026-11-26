@@ -11,7 +11,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Requirements-driven activation | `00-USAGE`, `01-STEPS`, entry example, `check-planning-entry`, Cursor `requirements-activation.mdc` | **95** | Detect root entry file → plan without waiting; never overwrite entry; 80/20 |
 | ✅ | Seed new planning repo from templates | `README`, `00-USAGE` | **92** | Copy templates including hidden files; fill placeholders |
 | ✅ | Keep every document current | `AGENTS.template`, `01-STEPS` | **90** | Same-commit doc updates; no stale summaries |
-| ✅ | Playbook Always-Current closeout | `07-judgment/playbook-freshness`, `scripts/check-structure.mjs`, CI | **95** | Every playbook edit: atlas/% + official Checked dates + structural CI + upstream pull request (SF-14) |
+| ✅ | Factory Always-Current closeout | `07-judgment/playbook-freshness`, `scripts/check-structure.mjs`, CI | **95** | Every factory edit: atlas/% + official Checked dates + structural CI + upstream pull request (SF-14) |
 | ✅ | Small stages + Conventional Commits | `AGENTS.template` | **90** | One stage → check → commit (planning repo cadence) |
 | ✅ | Planning CI gates | `09-CI-CD`, templates `.github/workflows/ci.yml` | **90** | Delivery/agents/scope/activation checks |
 
@@ -59,18 +59,18 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 
 ---
 
-## Playbook maintenance workflows
+## Factory maintenance workflows
 
 | ✅ | Workflow | Homes | % | Covered behaviors |
 |----|----------|-------|---|-------------------|
-| ✅ | Forever-generic playbook | OWNER_STANDING template, `README` | **98** | No product/people/tracker URLs in playbook |
+| ✅ | Forever-generic factory | OWNER_STANDING template, `README` | **98** | No product/people/tracker URLs in factory |
 | ✅ | Owner “add to the factory” → upstream pull request | OWNER_STANDING, `08`, `CONTRIBUTING.md` | **95** | Vendored copy read-only; generic change proposed upstream the same session |
 | ✅ | Coverage atlas consult-before-add | `coverage/` (this folder), prompts, lessons | **100** | Status + % + upgrade vs add |
 | ✅ | Excellence north star / ratchet | `EXCELLENCE.md`, coverage protocol step 0 | **92** | Every edit raises a dimension; trajectory not one-shot (SF-11) |
 | ✅ | Studio as a company | `07-judgment/studio-company`, `STUDIO_ORG`, `08` | **90** | Seats, goals, checkout; Paperclip judgment only (SF-12) |
 | ✅ | Competitor recon / clean-room | `07-judgment/competitor-recon`, `01-STEPS` 0.2, REFERENCES | **88** | Patterns only; evidence reviews; SF-13 |
 | ✅ | Software Factory + multi-agent | `07-judgment/software-factory`, `STUDIO_ORG`, `08`, `09` | **93** | Line + seats; independent review; outcome metrics; SF-12 |
-| ✅ | Standing preference → playbook | OWNER_STANDING template | **92** | Lasting workflow prefs update method + sync |
+| ✅ | Standing preference → factory | OWNER_STANDING template | **92** | Lasting workflow prefs update method + sync |
 | ⚠️ | Studio repo-map diagram updates | Product standing / decisions (not in generic templates deeply) | **55** | Practice exists in mature studios; thin in seed templates — see gaps |
 
 ---
@@ -88,4 +88,4 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 
 ## Domain average
 
-**Workflow coverage ≈ 91%** — strongest studio operating system area. Remaining gaps are mostly product-side tooling (Notion page shapes, org atlas) intentionally kept out of the generic playbook.
+**Workflow coverage ≈ 91%** — strongest studio operating system area. Remaining gaps are mostly product-side tooling (Notion page shapes, org atlas) intentionally kept out of the generic factory.

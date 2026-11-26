@@ -10,7 +10,7 @@
 /docs/DECISIONS.md                  @{{OWNER}}
 /docs/DEPLOYMENT.md                 @{{OWNER}}
 /.cursor/rules/                     @{{OWNER}}
-/playbook/                          @{{OWNER}}
+/software-factory-all-in-one/       @{{OWNER}}
 
 # Design system and UI guard
 /project-ui/DESIGN.md               @{{OWNER}}

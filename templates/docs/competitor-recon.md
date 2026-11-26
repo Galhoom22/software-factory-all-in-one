@@ -1,6 +1,6 @@
 # Competitor recon (clean-room)
 
-Fill when a peer product is load-bearing for planning. Method: playbook [`07-judgment/competitor-recon.md`](../software-factory-all-in-one/07-judgment/competitor-recon.md). **Clean-room:** patterns and flows only — never the peer’s code, logos, copy, or owned content.
+Fill when a peer product is load-bearing for planning. Method: factory [`07-judgment/competitor-recon.md`](../software-factory-all-in-one/07-judgment/competitor-recon.md). **Clean-room:** patterns and flows only — never the peer’s code, logos, copy, or owned content.
 
 ## Scope
 

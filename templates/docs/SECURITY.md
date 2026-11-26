@@ -118,7 +118,7 @@ Upload parsing for AI ingest also follows §6 (content type by bytes, size caps 
 
 ## 12. Payments and Webhooks (WH)
 
-*Optional — delete this section if the product takes no payments.* Card data never touches product servers (`SR-07`). Prefer the provider's hosted checkout or Elements so the product stays out of raw PAN scope. Judgment: playbook [`07-judgment/payments.md`](../software-factory-all-in-one/07-judgment/payments.md).
+*Optional — delete this section if the product takes no payments.* Card data never touches product servers (`SR-07`). Prefer the provider's hosted checkout or Elements so the product stays out of raw PAN scope. Judgment: factory [`07-judgment/payments.md`](../software-factory-all-in-one/07-judgment/payments.md).
 
 | ID | Rule | Owner |
 |----|------|-------|

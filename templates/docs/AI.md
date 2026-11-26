@@ -98,4 +98,4 @@ Try in order until quality on the golden set is enough:
 
 ## 13. Judgment source
 
-Staff-level AI design patterns are absorbed as judgment only — see playbook [`07-judgment/ai-system-design.md`](../software-factory-all-in-one/07-judgment/ai-system-design.md). Day workflow for AI paths (det/prob seam, golden eval, admission, practice level): [`07-judgment/ai-engineering.md`](../software-factory-all-in-one/07-judgment/ai-engineering.md). Do not vendor interview guides or rotating price sheets into this repo.
+Staff-level AI design patterns are absorbed as judgment only — see factory [`07-judgment/ai-system-design.md`](../software-factory-all-in-one/07-judgment/ai-system-design.md). Day workflow for AI paths (det/prob seam, golden eval, admission, practice level): [`07-judgment/ai-engineering.md`](../software-factory-all-in-one/07-judgment/ai-engineering.md). Do not vendor interview guides or rotating price sheets into this repo.

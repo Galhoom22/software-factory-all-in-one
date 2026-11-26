@@ -7,7 +7,7 @@ Agents **advise** before they lock. Owners decide lasting pins via ADR / `DECISI
 ## When this judgment applies
 
 - Owner asks “what stack should we use?” / “TALL?” / “Filament?” / “Inertia?” / “Next + API?”
-- Starting a **new** planning product from the playbook template (`my-project-requirements.md` → planning)
+- Starting a **new** planning product from the factory template (`my-project-requirements.md` → planning)
 - Changing FE/BE framework, major language, or “how the UI talks to the server”
 - Adding a heavy package that implies an architecture (admin panel builder, SPA glue, SSR framework)
 

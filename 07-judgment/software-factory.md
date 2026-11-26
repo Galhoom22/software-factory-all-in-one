@@ -6,7 +6,7 @@ A studio with **seats** (who) but no **line** (how work moves) still thrash: age
 
 ## Two halves (use both)
 
-| Half | Question | Playbook home |
+| Half | Question | Factory home |
 |------|----------|---------------|
 | **Studio company (MAS)** | Who owns what? | [`studio-company.md`](studio-company.md) + `STUDIO_ORG` |
 | **Software Factory** | How does a work item move from signal → evidence → merge? | This file + day loop `08` + FEATURE `04` + CI `09` |
@@ -29,9 +29,9 @@ Absorb patterns (do **not** vendor frameworks as AGENTS):
 
 - [Factory.com — Software Factory product](https://factory.com/product/software-factory) (model routing, full-SDLC stages, quality gates + human judgment, outcome metrics, trust/control)
 
-Log borrows in product `docs/REFERENCES.md`. Optional vendor CLIs (Mastra Studio, Warp, Paperclip) are **experiments** — never replace Jira/Notion/GitHub or playbook day closeout unless a DECISIONS row says so.
+Log borrows in product `docs/REFERENCES.md`. Optional vendor CLIs (Mastra Studio, Warp, Paperclip) are **experiments** — never replace Jira/Notion/GitHub or factory day closeout unless a DECISIONS row says so.
 
-## Factory stages → this playbook
+## Factory stages → this factory
 
 Stages are stable; **depth is proportional** (SF-08). Skip honestly when the work is already scoped.
 
@@ -80,7 +80,7 @@ Stages are stable; **depth is proportional** (SF-08). Skip honestly when the wor
 
 | Do not | Why |
 |--------|-----|
-| Vendor Mastra/Warp/eve as product constitution | Second OS; fights forever-generic playbook |
+| Vendor Mastra/Warp/eve as product constitution | Second OS; fights forever-generic factory |
 | Builder self-approves Done without CI/independent review | Capture; factory without a line |
 | Skip triage into a High-risk money/PII change | Silent wrong build |
 | Infinite revision loops | Cost + context overflow |
@@ -103,7 +103,7 @@ At day start (`08`): goal + seat + checkout **and** name the factory stage you a
 
 ## Factory.com absorb (judgment only — 2026-11-25)
 
-Patterns from [Factory’s Software Factory](https://factory.com/product/software-factory). **Do not** vendor Droids, Factory SaaS, or their cookbooks as AGENTS / day SoT. Keep Jira/Notion/GitHub + this playbook’s day closeout.
+Patterns from [Factory’s Software Factory](https://factory.com/product/software-factory). **Do not** vendor Droids, Factory SaaS, or their cookbooks as AGENTS / day SoT. Keep Jira/Notion/GitHub + this factory’s day closeout.
 
 ### 1. Layers of a software factory (map to ours)
 
@@ -131,7 +131,7 @@ Lines, tokens, and “PRs opened” do not prove the factory works. Prefer produ
 | **Code shelf life** | How long shipped code stays untouched (stability, not “never change”) |
 | **Cost / merged PR** | Model+tool spend ÷ PRs that actually merged with green CI |
 
-Use these in day/weekly review only when numbers exist. Do **not** invent fake case-study numbers in this playbook.
+Use these in day/weekly review only when numbers exist. Do **not** invent fake case-study numbers in this factory.
 
 ### 4. Trust before autonomy
 

@@ -51,5 +51,5 @@
 
 - Draft every new or changed endpoint as a change to [`API_CONTRACT.md`](../API_CONTRACT.md) (§6.1) and wait for approval.
 - Provide example responses so the frontend can build on mocks.
-- Before Done: **read** the frontend client's expected shapes (mocks/types/docs); do **not** edit the frontend repository unless standing grants that seat write access. Method: playbook `07-judgment/cross-surface-compatibility.md`.
-- Keep an implementation-repo `docs/SIBLING.md` current (copy from playbook `templates/docs/SIBLING.md`).
+- Before Done: **read** the frontend client's expected shapes (mocks/types/docs); do **not** edit the frontend repository unless standing grants that seat write access. Method: factory `07-judgment/cross-surface-compatibility.md`.
+- Keep an implementation-repo `docs/SIBLING.md` current (copy from factory `templates/docs/SIBLING.md`).

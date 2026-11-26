@@ -1,6 +1,6 @@
 # Steps — From an Idea to a Complete Plan
 
-**Requirements-driven path (preferred for new products):** the user seeds this playbook into an empty planning repo and adds root `my-project-requirements.md`. That file is the activation signal — see [`00-USAGE.md`](00-USAGE.md). The agent detects it, owns planning, applies **80/20** (smallest complete set for this project's complexity), and walks the phases below without waiting for "start planning". Do **not** overwrite the entry file. Formal `requirements.md` is derived from it. If the entry file is absent, do **not** assume bootstrap.
+**Requirements-driven path (preferred for new products):** the user seeds this factory into an empty planning repo and adds root `my-project-requirements.md`. That file is the activation signal — see [`00-USAGE.md`](00-USAGE.md). The agent detects it, owns planning, applies **80/20** (smallest complete set for this project's complexity), and walks the phases below without waiting for "start planning". Do **not** overwrite the entry file. Formal `requirements.md` is derived from it. If the entry file is absent, do **not** assume bootstrap.
 
 The order below is the order that worked, corrected with hindsight. In the reference product several things came late and forced rework: the product name changed after dozens of screens, compliance, security, the decision log, and the license were applied backwards, and prices changed three times. Here they come early. Each step names its output and what **done** means; [`05-PROMPTS.md`](05-PROMPTS.md) has a ready prompt for most steps, and [`06-LESSONS.md`](06-LESSONS.md) explains why each rule exists.
 
@@ -27,7 +27,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 0.3 Create the repository and the workspace
 
-- **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this playbook’s `templates/` (or from the public Software Factory home when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
+- **Output:** a **private**, empty GitHub repository named `<product>-planning` (no generated README, license, or `.gitignore`; they come from the templates), seeded from this factory’s `templates/` (or from the public Software Factory home when one exists), the GitHub CLI signed in (`gh auth status`), and the agent workspace ready. Product and planning work repos stay private.
 - **Workspace:** the reply language rule, the ponytail rule, design skills with one role each (see [`03-PROTOTYPE.md`](03-PROTOTYPE.md#design-skills)), and an official-documentation source for agents (for example the Context7 MCP server).
 - **Also:** add root `my-project-requirements.md` in the same bootstrap when starting a new product (see 0.0).
 - **Done:** the first commit (templates copied, entry file present when bootstrapping) is pushed.

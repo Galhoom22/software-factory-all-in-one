@@ -2,15 +2,15 @@
 
 Absorb **AI engineering** as **judgment only**: the craft of building and operating software where some behavior is **probabilistic** (model samples, retrieval ranks, agent plans) while the product still must be **correct, safe, and operable**. Use this whenever must-finish touches prompts, models, RAG, agents/tools, AI jobs, evals, or AI observability — **and** when classical (fully deterministic) features sit next to those paths so the seam stays honest.
 
-**Sources distilled (not dependencies):** Chip Huyen *AI Engineering* / agents practice (eval sets, failure modes); Agentic SDLC “two computers” / deterministic–probabilistic boundary; GenAIOps / eval harness practice (offline golden sets → CI gates → runtime traces → drift); AWS/enterprise RAI guardrails + HITL patterns; production AI observability (journey traces, admission ≠ generation stop). Do **not** vendor a single LLMOps platform, LangChain kit, or rotating model price sheet into the playbook.
+**Sources distilled (not dependencies):** Chip Huyen *AI Engineering* / agents practice (eval sets, failure modes); Agentic SDLC “two computers” / deterministic–probabilistic boundary; GenAIOps / eval harness practice (offline golden sets → CI gates → runtime traces → drift); AWS/enterprise RAI guardrails + HITL patterns; production AI observability (journey traces, admission ≠ generation stop). Do **not** vendor a single LLMOps platform, LangChain kit, or rotating model price sheet into the factory.
 
 **When this applies:** must-finish changes model choice, prompts, retrieval, tool-using agents, AI job queues, eval fixtures, guardrails/admission, or AI telemetry. Pure classical CRUD/UI with **no** model path and no AI side effects: **N/A** (classical engineering + verification still apply).
 
-**Dual-mode target:** the same playbook succeeds for (1) **deterministic** software — fixed outputs, loud failures, CI as judge — and (2) **probabilistic** / AI-deep systems — distributional outputs, quiet failures — by putting every consequential effect on the deterministic side of the seam.
+**Dual-mode target:** the same factory succeeds for (1) **deterministic** software — fixed outputs, loud failures, CI as judge — and (2) **probabilistic** / AI-deep systems — distributional outputs, quiet failures — by putting every consequential effect on the deterministic side of the seam.
 
 ## Problem this prevents
 
-Teams treat “the AI feature” as one machine. Probabilistic outputs look fluent and pass superficial review; side effects commit before schema/policy/admission; evals are vibes or a one-off demo; production has no trace of prompt/retrieval/tool versions; guardrails are keyword filters; classical and AI paths share no shared SoR or failure story. Result: confident wrong writes, un-auditable incidents, and a playbook that only works for CRUD.
+Teams treat “the AI feature” as one machine. Probabilistic outputs look fluent and pass superficial review; side effects commit before schema/policy/admission; evals are vibes or a one-off demo; production has no trace of prompt/retrieval/tool versions; guardrails are keyword filters; classical and AI paths share no shared SoR or failure story. Result: confident wrong writes, un-auditable incidents, and a factory that only works for CRUD.
 
 **Target:** every AI-touching change names the **det/prob seam**, runs a **fixed fictional golden eval** (or assert smoke) before Done, admits outputs before side effects, and leaves **criteria→evidence** (not “model said OK”).
 

@@ -5,27 +5,44 @@
 
 **Region note:** API global-ish; host IDE may be Cursor/Claude/Trae/etc. — this pack is the **model/API** layer.
 
+Shared rules for every harness — the single rulebook, session habits and quality bar — are in [`../README.md`](../README.md).
+
 ## When to open this pack
 
 - Product or host routes coding tasks through DeepSeek models.
 
-## Files
+## Official references
 
-| File | Purpose |
-|------|---------|
-| [`official-refs.md`](official-refs.md) | Dated official URLs |
-| [`best-practices.md`](best-practices.md) | How to get the best result with this harness on this playbook |
-| [`quality.md`](quality.md) | Quality bar for harness-specific guidance |
-| [`deepseek-api/`](deepseek-api/README.md) | Current product-form slice: use / stop / mistakes |
+Re-verify on the vendor site when bumping; prefer these over blogs.
+
+| Topic | Official URL | Checked |
+|-------|--------------|---------|
+| DeepSeek platform | https://platform.deepseek.com/ | 2026-11-23 |
+| DeepSeek site | https://www.deepseek.com/ | 2026-11-23 |
+
+## How to drive it
+
+- **Discovery pointer:** Not an IDE — configure the host harness (Cursor/CLI) to use DeepSeek; still load AGENTS.md in that host.
+- **Depth:** **skeleton**. If thin: deepen from official docs before claiming high coverage %.
+
+## Use these
+
+- Treat DeepSeek as the model behind a host harness — open the host pack too.
+- Re-verify pricing/rate limits on official pages before budgeting agent loops.
+- Deepen when owner pastes DeepSeek API docs.
+
+## Stop using
+
+- Do not confuse “DeepSeek model” with a complete IDE discovery pack.
+
+## Common mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| Skipping host AGENTS.md | Load AGENTS in Cursor/CLI/Trae that calls DeepSeek |
 
 ## Product vs pack
 
 - **Single rulebook:** product `AGENTS.md` (+ `docs/AGENT_START.md`) remains the only full constitution. This pack teaches **how to drive DeepSeek** so it obeys that rulebook.
 - Discovery pointer: Not an IDE — configure the host harness (Cursor/CLI) to use DeepSeek; still load AGENTS.md in that host.
 - Do not fork a second rulebook inside this pack.
-
-## Related
-
-- Atlas: [`../../coverage/08-ai-agents.md`](../../coverage/08-ai-agents.md)
-- Freshness: [`../../07-judgment/playbook-freshness.md`](../../07-judgment/playbook-freshness.md)
-- Agent discovery templates: [`../../templates/agent-discovery/`](../../templates/agent-discovery/)

@@ -1,6 +1,6 @@
 # Judgment — production agent engineering skills
 
-Absorb **senior engineering agent workflows** (define → plan → build → verify → review → ship) as judgment mapped onto this playbook. Do **not** install a third-party skills pack as `AGENTS.md`, a second constitution, or an always-on Cursor skill tree that overrides product rules.
+Absorb **senior engineering agent workflows** (define → plan → build → verify → review → ship) as judgment mapped onto this factory. Do **not** install a third-party skills pack as `AGENTS.md`, a second constitution, or an always-on Cursor skill tree that overrides product rules.
 
 Upstream reading (human only, optional): packs such as [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) (lifecycle skills + slash commands). Prefer the **behaviors** below; skip interview-me/idea-refine as required gates unless the owner asks.
 
@@ -31,7 +31,7 @@ Upstream reading (human only, optional): packs such as [addyosmani/agent-skills]
 
 | Do not | Why |
 |--------|-----|
-| Copy all 25 skills into every product repo | Forever-generic playbook; product `AGENTS.md` stays the single rulebook |
+| Copy all 25 skills into every product repo | Forever-generic factory; product `AGENTS.md` stays the single rulebook |
 | Force Spec Kit `specify init` / parallel `specs/` in **planning** | Already mapped as judgment only ([`07-judgment/README.md`](README.md)) |
 | Mandate red-green TDD on every trivial change | Risk-matched tests (FEATURE_SDLC); non-trivial logic still gets a check |
 | Replace CodeRabbit/CI with a prose-only “five-axis” ritual | Review complements CI; it does not replace it |

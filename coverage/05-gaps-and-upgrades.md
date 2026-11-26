@@ -4,13 +4,13 @@
 **North star:** upgrades exist to ratchet toward [`EXCELLENCE.md`](../EXCELLENCE.md) — prefer closing ⚠️ / low-% rows over inventing parallel domains. One prompt never finishes the dream.
 Honest weak spots. **Intentional exclusions are not defects.** Upgrade only when professionalism rises for the *next* product.
 
-Scoring of a gap uses the same rubric as [`README.md`](README.md): how covered the capability is **inside the playbook today**.
+Scoring of a gap uses the same rubric as [`README.md`](README.md): how covered the capability is **inside the factory today**.
 
 ---
 
 ## Intentional exclusions (do not “fix” by dumping product stuff here)
 
-| Topic | Playbook % | Why excluded | Where it lives instead |
+| Topic | Factory % | Why excluded | Where it lives instead |
 |-------|------------|--------------|------------------------|
 | Notion day-page / calendar URLs | **0** | Product- and calendar-specific | Product `docs/OWNER_STANDING.md` |
 | Tracker project keys (for example `ABC-123`) | **0** | Product board | Product `docs/jira/**` + board rules |
@@ -61,7 +61,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | Prompt in `05-PROMPTS.md` | Copy-paste path for “is this already in the template?” |
 | Lesson in `06-LESSONS.md` | Next product inherits the habit |
 | OWNER_STANDING template bullet | Seeded products get the consult-before-add rule |
-| Playbook README link | Discoverable from the entry page |
+| Factory README link | Discoverable from the entry page |
 
 ---
 

@@ -65,4 +65,4 @@ Teams lose decisions in chat. Specs drift from what ships. New teammates cannot 
 
 ## Anything else
 
-Keep the planning method simple. I will only maintain this file; the agent should build the rest of the planning repository from the playbook.
+Keep the planning method simple. I will only maintain this file; the agent should build the rest of the planning repository from the factory.

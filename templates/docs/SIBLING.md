@@ -2,7 +2,7 @@
 
 Fill this in each **implementation** repository. Planning remains the product SoT; this page is the seat-facing summary so agents do not guess how the other side consumes this code.
 
-Method: playbook [`07-judgment/cross-surface-compatibility.md`](../software-factory-all-in-one/07-judgment/cross-surface-compatibility.md).
+Method: factory [`07-judgment/cross-surface-compatibility.md`](../software-factory-all-in-one/07-judgment/cross-surface-compatibility.md).
 
 ## One-sentence boundary
 

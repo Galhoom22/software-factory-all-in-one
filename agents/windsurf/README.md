@@ -5,27 +5,42 @@
 
 **Region note:** Global (vendor availability).
 
+Shared rules for every harness — the single rulebook, session habits and quality bar — are in [`../README.md`](../README.md).
+
 ## When to open this pack
 
 - Windsurf IDE / Cascade agent on this repo.
 
-## Files
+## Official references
 
-| File | Purpose |
-|------|---------|
-| [`official-refs.md`](official-refs.md) | Dated official URLs |
-| [`best-practices.md`](best-practices.md) | How to get the best result with this harness on this playbook |
-| [`quality.md`](quality.md) | Quality bar for harness-specific guidance |
-| [`windsurf-cascade/`](windsurf-cascade/README.md) | Current product-form slice: use / stop / mistakes |
+Re-verify on the vendor site when bumping; prefer these over blogs.
+
+| Topic | Official URL | Checked |
+|-------|--------------|---------|
+| Windsurf documentation | https://docs.windsurf.com/ | 2026-11-23 |
+
+## How to drive it
+
+- **Discovery pointer:** `.windsurf/rules/` thin pointer + `AGENTS.md`.
+- **Depth:** **full**. If thin: deepen from official docs before claiming high coverage %.
+
+## Use these
+
+- Keep `.windsurf/rules` thin; AGENTS.md is SoT.
+- Same delivery / no-MVP rails as other harnesses.
+
+## Stop using
+
+- Do not invent a Windsurf-only constitution.
+
+## Common mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| Rules drift from AGENTS | Edit AGENTS; keep pointer |
 
 ## Product vs pack
 
 - **Single rulebook:** product `AGENTS.md` (+ `docs/AGENT_START.md`) remains the only full constitution. This pack teaches **how to drive Windsurf** so it obeys that rulebook.
 - Discovery pointer: `.windsurf/rules/` thin pointer + `AGENTS.md`.
 - Do not fork a second rulebook inside this pack.
-
-## Related
-
-- Atlas: [`../../coverage/08-ai-agents.md`](../../coverage/08-ai-agents.md)
-- Freshness: [`../../07-judgment/playbook-freshness.md`](../../07-judgment/playbook-freshness.md)
-- Agent discovery templates: [`../../templates/agent-discovery/`](../../templates/agent-discovery/)

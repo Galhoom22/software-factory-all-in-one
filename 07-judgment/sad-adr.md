@@ -23,7 +23,7 @@ Upstream reading (human only, optional): SAD+ADR template packs that use C4 + Me
 | Do not | Why |
 |--------|-----|
 | Require a full standalone `SAD.md` that rewrites BRD/PRD/SRS/SECURITY | One home per fact; documents drift |
-| Copy Uber/ride-share examples or multi-language template trees into the playbook | Forever-generic; noise |
+| Copy Uber/ride-share examples or multi-language template trees into the factory | Forever-generic; noise |
 | Force microservices C4 examples onto a modular monolith | Architecture must match the product’s DECISIONS |
 | Put every small choice in `DECISIONS.md` | Use `decision-logs/` or skip |
 | Edit an **Accepted** entry’s decision text | Add D-xx and mark the old one Superseded |

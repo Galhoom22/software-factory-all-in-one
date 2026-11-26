@@ -1,22 +1,41 @@
-# {{HARNESS}} — agent harness pack (template)
+# {{HARNESS}} — agent harness pack
 
-Copy to `agents/<slug>/`, replace placeholders, pin today’s product form from **official** vendor docs.
+Copy this file to `agents/<slug>/README.md` and fill it from the vendor's **official** docs, re-verified today (memory is not evidence). Keep the pack to this one file until it passes about 150 lines; then grow it into a folder ([`ARCHITECTURE.md`](../../ARCHITECTURE.md) § 5).
 
-**Pinned slice:** `{{SLICE}}`  
+**Pinned slice:** {{SLICE}} (checked {{YYYY-MM-DD}})
 **Official home:** {{OFFICIAL_DOCS_URL}}
 
-## Required files
+Shared rules for every harness — the single rulebook, session habits and quality bar — are in [`../README.md`](../README.md).
 
-| File | Must answer |
-|------|-------------|
-| `README.md` | Pin, when to open |
-| `official-refs.md` | Dated official URLs |
-| `best-practices.md` | How to drive this harness with AGENTS.md |
-| `quality.md` | Quality bar (no second constitution) |
-| `<slice>/use-these.md` | Prefer |
-| `<slice>/stop-using.md` | Ban |
-| `<slice>/common-mistakes.md` | Failure modes |
+## When to open this pack
 
-## Agent rule
+- {{WHEN}}
 
-Before advising on this harness: read the pack **and** re-check official docs this session. Update coverage/08 when depth changes.
+## Official references
+
+| Topic | Official URL | Checked |
+|-------|--------------|---------|
+| {{TOPIC}} | {{URL}} | {{YYYY-MM-DD}} |
+
+## How to drive it
+
+- **Discovery pointer:** {{HOW_THIS_HARNESS_FINDS_AGENTS_MD}}
+- **Depth:** {{FULL_OR_PARTIAL_AND_WHAT_IS_THIN}}
+
+## Use these
+
+- {{PREFER}}
+
+## Stop using
+
+- {{AVOID}}
+
+## Common mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| {{MISTAKE}} | {{FIX}} |
+
+## Product vs pack
+
+- The product's `AGENTS.md` stays the single rulebook; this pack teaches how to drive the harness so it obeys that rulebook.

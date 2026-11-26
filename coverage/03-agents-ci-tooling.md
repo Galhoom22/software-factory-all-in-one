@@ -32,7 +32,7 @@ Paths under `software-factory-all-in-one/templates/` unless noted.
 | ✅ | Agents check | `scripts/check-agents.mjs` | **90** | Discovery not gutted |
 | ✅ | Scope check | `scripts/check-scope.mjs` | **88** | Planning-only scope |
 | ✅ | Planning entry gate | `scripts/check-planning-entry.mjs` | **92** | Activation when entry file exists |
-| ✅ | Playbook activation wiring | `software-factory-all-in-one/scripts/check-requirements-activation.mjs` | **92** | Playbook self-check (method side) |
+| ✅ | Factory activation wiring | `software-factory-all-in-one/scripts/check-requirements-activation.mjs` | **92** | Factory self-check (method side) |
 
 ---
 
@@ -51,9 +51,9 @@ Paths under `software-factory-all-in-one/templates/` unless noted.
 
 ---
 
-## Studio / product scripts **outside** `templates/` (still part of the playbook system)
+## Studio / product scripts **outside** `templates/` (still part of the factory system)
 
-These live in the **product planning repo** that owns the playbook copy (not copied into every new seed unless you choose to). Still inventory them so agents do not “reinvent sync.”
+These live in the **product planning repo** that owns the factory copy (not copied into every new seed unless you choose to). Still inventory them so agents do not “reinvent sync.”
 
 | ✅ | Capability | Typical path (product planning repo) | % | Notes |
 |----|------------|--------------------------------------|---|-------|

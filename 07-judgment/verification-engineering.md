@@ -2,7 +2,7 @@
 
 Absorb **verification engineering** as **judgment only**: the craft of building **checks, environments, and evidence** so an agent-produced change is trustworthy before Done — not reading every line by hand, and not accepting “the agent said it works.”
 
-**Name collision:** in chip design, “verification engineer” often means hardware design verification (SystemVerilog / UVM). This file is about **software / AI-coding-agent** verification. Do **not** vendor LightSprint, Simulithic, or any one product’s sandbox UI into the playbook.
+**Name collision:** in chip design, “verification engineer” often means hardware design verification (SystemVerilog / UVM). This file is about **software / AI-coding-agent** verification. Do **not** vendor LightSprint, Simulithic, or any one product’s sandbox UI into the factory.
 
 **When this applies:** every implementation day that ships code (or non-trivial tests). Doc-only days: mark **N/A** for runtime layers; still keep honest evidence for doc claims when they affect delivery.
 
@@ -14,7 +14,7 @@ Agents write faster than humans can line-review. Teams then either (a) become th
 
 ## Testing vs verification vs validation
 
-| Word | Question | In this playbook |
+| Word | Question | In this factory |
 |------|----------|------------------|
 | **Testing** | Did the checks we built pass? | Unit/integration/E2E runs, lint/types |
 | **Verification** | Does the change meet the **agreed criteria**? | Acceptance ↔ evidence map; FEATURE verification matrix; day gates |

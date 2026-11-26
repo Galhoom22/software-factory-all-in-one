@@ -153,7 +153,23 @@ for (const slug of packDirs) {
   }
 }
 
-// --- Agent harness packs (same structural bar as technologies) ---
+// --- Agent harness packs: one README per harness; a pack that grew into a folder keeps the slice shape ---
+// Every row of the "## Official references" table must carry its own Checked date.
+function officialRefsDated(text) {
+  const section = (text.split("## Official references")[1] || "").split(/\n## /)[0];
+  const table = section.split("\n").filter((l) => /^\|/.test(l) && !/^\|[\s:|-]+\|\s*$/.test(l));
+  const cells = (l) => l.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  const col = table.length ? cells(table[0]).findIndex((c) => /^checked$/i.test(c)) : -1;
+  const rows = table.slice(1);
+  return col >= 0 && rows.length > 0 && rows.every((r) => /^20\d{2}-\d{2}-\d{2}$/.test(cells(r)[col] || ""));
+}
+if (
+  officialRefsDated("Pinned (checked 2026-01-01)\n## Official references\n| Topic | URL | Checked |\n|---|---|---|\n| Docs | https://example.org | |\n") ||
+  officialRefsDated("## Official references\n| Topic | URL | Checked |\n|---|---|---|\n| Docs | https://example.org/2026-01-01/docs | |\n") ||
+  !officialRefsDated("## Official references\n| Topic | URL | Checked |\n|---|---|---|\n| Docs | https://example.org | 2026-01-01 |\n")
+) {
+  fail("officialRefsDated self-test failed");
+}
 if (exists(agentsRoot)) {
   const skipAgentDirs = new Set(["_pack-template"]);
   const agentDirs = fs
@@ -167,30 +183,26 @@ if (exists(agentsRoot)) {
       fail("agents/" + slug + "/ exists but is not listed in agents/README.md packs table");
     }
     const packDir = path.join(agentsRoot, slug);
-    for (const req of ["README.md", "official-refs.md", "best-practices.md", "quality.md"]) {
-      if (!exists(path.join(packDir, req))) fail("agents/" + slug + "/ missing " + req);
+    const readmePath = path.join(packDir, "README.md");
+    if (!exists(readmePath)) {
+      fail("agents/" + slug + "/README.md missing");
+      continue;
     }
-    const refs = read(path.join(packDir, "official-refs.md"));
-    if (!/Checked/i.test(refs) || ![...refs.matchAll(/\b(20\d{2}-\d{2}-\d{2})\b/g)].length) {
-      fail("agents/" + slug + "/official-refs.md needs YYYY-MM-DD Checked dates");
+    const pack = read(readmePath);
+    for (const h of ["## Official references", "## Use these", "## Stop using", "## Common mistakes"]) {
+      if (!pack.includes(h)) fail("agents/" + slug + "/README.md is missing the \"" + h + "\" section");
     }
-    const slices = fs
-      .readdirSync(packDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory());
-    if (!slices.length) fail("agents/" + slug + "/ has no version-slice directory");
-    for (const slice of slices) {
+    if (!officialRefsDated(pack)) {
+      fail("agents/" + slug + "/README.md: every official-reference row needs a YYYY-MM-DD Checked date");
+    }
+    for (const slice of fs.readdirSync(packDir, { withFileTypes: true }).filter((d) => d.isDirectory())) {
       for (const f of ["use-these.md", "stop-using.md", "common-mistakes.md"]) {
-        if (!exists(path.join(packDir, slice.name, f))) {
-          fail("agents/" + slug + "/" + slice.name + "/ missing " + f);
-        }
+        if (!exists(path.join(packDir, slice.name, f))) fail("agents/" + slug + "/" + slice.name + "/ missing " + f);
       }
     }
   }
   for (const m of agentsReadme.matchAll(/\|\s*\[`([a-z0-9-]+)\/`\]\(\1\/README\.md\)/g)) {
-    const slug = m[1];
-    if (!exists(path.join(agentsRoot, slug))) {
-      fail("agents/README.md lists " + slug + "/ but directory is missing");
-    }
+    if (!exists(path.join(agentsRoot, m[1]))) fail("agents/README.md lists " + m[1] + "/ but directory is missing");
   }
   note("agents packs scanned: " + agentDirs.length + " (" + agentDirs.join(", ") + ")");
 } else {

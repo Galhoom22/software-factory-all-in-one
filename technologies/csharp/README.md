@@ -30,7 +30,7 @@
 ## Related
 
 - Platform: [`../dotnet/`](../dotnet/README.md) (.NET 10 LTS host / SDK / DI)
-- Design patterns / Context7 / human review: playbook `07-judgment/`
+- Design patterns / Context7 / human review: factory `07-judgment/`
 - Packages over reinvention: [`07-judgment/packages.md`](../../07-judgment/packages.md)
 - Stack selection before forcing .NET onto a product: [`07-judgment/stack-selection.md`](../../07-judgment/stack-selection.md)
 

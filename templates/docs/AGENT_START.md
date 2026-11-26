@@ -7,7 +7,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 ## First check — requirements activation
 
 1. Look for root **`my-project-requirements.md`**.
-2. If it **exists**: that file is the activation signal. Read it fully, then read `software-factory-all-in-one/00-USAGE.md` and run (or continue) playbook planning per `AGENTS.md` § Requirements-driven activation. Do **not** wait for a separate “start planning” command. Do **not** overwrite the entry file.
+2. If it **exists**: that file is the activation signal. Read it fully, then read `software-factory-all-in-one/00-USAGE.md` and run (or continue) factory planning per `AGENTS.md` § Requirements-driven activation. Do **not** wait for a separate “start planning” command. Do **not** overwrite the entry file.
 3. If it is **absent**: do **not** bootstrap a new product unless the user explicitly asked. Continue with the user’s task under the rails below.
 4. Formal product truth, once written, lives in `requirements.md` (derived from the entry file). Keep both consistent when both exist.
 
@@ -25,7 +25,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 4. **Candor:** refuse/advise when an ask would lower professionalism (`OWNER_STANDING` § Candor).
 4. Never commit secrets, `.env` files, or **real** personal data.
 5. Never force-push, rewrite pushed history, or change remotes / repo settings.
-6. Do only what the user asked. Prefer the smallest correct change. (Exception: when `my-project-requirements.md` is present, “what the user asked” includes running the playbook from that file.)
+6. Do only what the user asked. Prefer the smallest correct change. (Exception: when `my-project-requirements.md` is present, “what the user asked” includes running the factory from that file.)
 7. Keep every affected document current in the **same** change.
 8. Do **not** weaken Governing Product Rules, `docs/DELIVERY.md`, or accepted decisions without **explicit** user approval.
 9. Keep `software-factory-all-in-one/` generic — no product names, people, or tracker IDs in method docs.
@@ -37,7 +37,7 @@ Read this file first if you are new to this repository. Then obey `AGENTS.md` in
 |------|------|
 | Human entry / activation | `my-project-requirements.md` (when present) |
 | Product rules (formal) | `requirements.md` |
-| How to use the playbook | `software-factory-all-in-one/00-USAGE.md` |
+| How to use the factory | `software-factory-all-in-one/00-USAGE.md` |
 | Delivery method | `docs/DELIVERY.md` |
 | Full agent rules | `AGENTS.md` |
 | Decisions | `docs/DECISIONS.md`, `docs/decision-logs/` |

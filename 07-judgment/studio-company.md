@@ -10,7 +10,7 @@ Absorb operating ideas from [Paperclip](https://github.com/paperclipai/paperclip
 
 **Do not** install Paperclip as a second constitution, replace Jira/Notion/GitHub as sources of truth, or require its server for day closeout. Optional CLI: `paperclipai` / `npx paperclipai@latest` for owners who want a multi-agent control-plane experiment — disable telemetry if undesired (`PAPERCLIP_TELEMETRY_DISABLED=1` or `DO_NOT_TRACK=1`).
 
-## Adopt (map onto this playbook)
+## Adopt (map onto this factory)
 
 | Paperclip idea | Studio mapping |
 |----------------|----------------|
@@ -20,7 +20,7 @@ Absorb operating ideas from [Paperclip](https://github.com/paperclipai/paperclip
 | **Atomic checkout** | One assignee + one active agent session owns a calendar day / Story slice; no two chats competing on the same must-finish |
 | **Heartbeats / routines** | Implementation day pipeline (`08`) — start cue → finish must-finish → closeout |
 | **Approvals / governance** | Consequential changes need owner decision (new stack, new always-on tool, bar-lowering asks → Candor); merge gates = CI + CodeRabbit |
-| **Skills library** | Playbook `07-judgment/`, `technologies/`, Cursor skills — versioned reusable craft |
+| **Skills library** | Factory `07-judgment/`, `technologies/`, Cursor skills — versioned reusable craft |
 | **Cost control** | Prefer proportional depth (SF-08); avoid runaway token loops; name cost when choosing heavy approaches |
 | **Team catalog** | Seeded FE/BE day seats + planning agent — not twenty unsupervised terminals |
 
