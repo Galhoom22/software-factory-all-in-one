@@ -31,7 +31,7 @@ Before non-trivial CSS work:
 1. Open this pack (`best-practices` + `css-2026/` slice) and Tailwind pack if the product uses it.
 2. Re-check [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) / relevant module guide and/or [Snapshot 2026](https://www.w3.org/TR/css-2026/).
 3. Gate new features on product browser floor (MDN Baseline).
-4. Update the pack same session if professionalism rises; sync public Software Factory mirror.
+4. Update the pack same session if professionalism rises, through a pull request to the factory repository.
 
 ## Related
 

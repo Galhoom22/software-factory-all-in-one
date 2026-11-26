@@ -33,7 +33,7 @@ Log borrows in product `docs/REFERENCES.md`. Optional vendor CLIs (Mastra Studio
 
 ## Factory stages → this playbook
 
-Stages are stable; **depth is proportional** (D-85). Skip honestly when the work is already scoped.
+Stages are stable; **depth is proportional** (SF-08). Skip honestly when the work is already scoped.
 
 | Stage | Question | Studio mapping |
 |-------|----------|----------------|
@@ -89,7 +89,7 @@ Stages are stable; **depth is proportional** (D-85). Skip honestly when the work
 
 ## Day pipeline placement
 
-At day start (`08`): goal + seat + checkout **and** name the factory stage you are in (usually triage→build for a scoped day; plan gate when Standard+/High risk). Closeout **is** stages 6–8. Judgment pairs with [`studio-company.md`](studio-company.md), [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md), [`09-CI-CD.md`](../09-CI-CD.md), D-85 proportional depth.
+At day start (`08`): goal + seat + checkout **and** name the factory stage you are in (usually triage→build for a scoped day; plan gate when Standard+/High risk). Closeout **is** stages 6–8. Judgment pairs with [`studio-company.md`](studio-company.md), [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md), [`09-CI-CD.md`](../09-CI-CD.md), SF-08 proportional depth.
 
 ## Related homes
 

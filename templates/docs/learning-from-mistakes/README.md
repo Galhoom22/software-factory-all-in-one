@@ -44,8 +44,8 @@ Transferable rule for next time.
 
 Agents promote **without waiting for the owner** when the **Lesson** would help the **next** product **and** clearly raises template professionalism:
 
-1. Add one bullet under the matching section in `software-factory-all-in-one/06-LESSONS.md` (forever-generic — no product names, people, or ticket keys). Or tighten TESTING / SECURITY / CI templates if that is the better home.
-2. Sync the public Software Factory All-in-One mirror the same session (`node scripts/sync-software-factory.mjs`).
+1. Draft one bullet for the matching section of the factory's `06-LESSONS.md` (forever-generic — no product names, people, or ticket keys), or a tightening of the TESTING / SECURITY / CI templates if that is the better home — in a checkout of the factory repository, not in the vendored copy.
+2. Open that change as a pull request to the factory repository the same session (generic wording), targeting the home chosen in step 1.
 3. Leave the detailed story in this folder; the playbook only keeps the rule.
 4. **Do not promote** typos, one-off env glitches, or a rule already present in `06-LESSONS.md`. Depth over volume.
 

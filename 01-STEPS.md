@@ -21,7 +21,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 0.2 Research competitors and choose references
 
-- **Output:** a short competitor list, the **one** closest competitor to learn from, the features that would make the product stronger than it, and the references the prototype will borrow from: one component foundation (for example shadcn/ui), one UX reference for the core screen (for example Reactive Resume), and visual inspiration sites. Start [`docs/REFERENCES.md`](templates/docs/REFERENCES.md) in the same pass (taken / rejected / where it landed). When that peer is load-bearing, deepen with a **clean-room recon** (screens, flows, states, must/should/could matrix, what cannot be cloned) per [`07-judgment/competitor-recon.md`](07-judgment/competitor-recon.md) / [`templates/docs/competitor-recon.md`](templates/docs/competitor-recon.md) — patterns only, never their code/logos/copy; evidence-linked review gaps if used for positioning.
+- **Output:** a short competitor list, the **one** closest competitor to learn from, the features that would make the product stronger than it, and the references the prototype will borrow from: one component foundation (for example shadcn/ui), one UX reference for the core screen (for example a well-regarded open-source app in the same category), and visual inspiration sites. Start [`docs/REFERENCES.md`](templates/docs/REFERENCES.md) in the same pass (taken / rejected / where it landed). When that peer is load-bearing, deepen with a **clean-room recon** (screens, flows, states, must/should/could matrix, what cannot be cloned) per [`07-judgment/competitor-recon.md`](07-judgment/competitor-recon.md) / [`templates/docs/competitor-recon.md`](templates/docs/competitor-recon.md) — patterns only, never their code/logos/copy; evidence-linked review gaps if used for positioning.
 - **Rule:** borrow patterns, never branding, logos, copy, or illustrations. Record every reference and its license.
 - **Done:** BRD §8 lists the competitors; `docs/REFERENCES.md` has the borrow register; `project-ui/README.md` lists prototype references.
 
@@ -83,7 +83,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 ### 8. Legal and security red lines
 
-- **Output:** [`docs/COMPLIANCE.md`](templates/docs/COMPLIANCE.md) (laws per market including Egypt / Arab / global as relevant, consent, consumer protection, payments, accessibility, AI, ethics, risk-management notes, legal documents needed) and [`docs/SECURITY.md`](templates/docs/SECURITY.md) (OWASP-based rules with IDs and owners, and an **Every Page Checklist**). Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md).
+- **Output:** [`docs/COMPLIANCE.md`](templates/docs/COMPLIANCE.md) (laws for every launch market plus a global baseline, consent, consumer protection, payments, accessibility, AI, ethics, risk-management notes, legal documents needed) and [`docs/SECURITY.md`](templates/docs/SECURITY.md) (OWASP-based rules with IDs and owners, and an **Every Page Checklist**). Judgment: [`07-judgment/compliance-ethics-risk.md`](07-judgment/compliance-ethics-risk.md).
 - **How:** research the official sources for every launch market; write both **before** the prototype so screens are built compliant.
 - **Also list the UI the law requires:** consent at sign-up (unchecked marketing box), AI or processing consent before first use, data download, account deletion, one-step cancellation, full price and renewal terms, legal footer links, company information, sub-processor list.
 - **Done:** each has a red-lines table, and the PRD and SRS cite their rule IDs.
@@ -153,7 +153,7 @@ Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 ### 18. Keep everything current
 
 - Every change updates every affected document in the same commit; reread every line that counts or lists things; run the CI checks locally; push; confirm the CI run passes.
-- When a step here proves wrong or incomplete, fix this playbook in the same commit.
+- When a step here proves wrong or incomplete, open a pull request to the factory repository the same day (a vendored copy stays read-only).
 
 ### 19. Regular audits
 
@@ -182,4 +182,4 @@ Run these after every large batch of work (prompts in [`05-PROMPTS.md`](05-PROMP
 ### 23. Run implementation days as a fixed pipeline
 
 - Once FE/BE repos are building against a daily must-finish checklist, follow [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) and [`09-CI-CD.md`](09-CI-CD.md): owner starts the day → agent finishes every checkbox without mid-day continue cues → automatic closeout (PR → **CI green** → CodeRabbit → merge → verify → **CD when configured** → tracker → day page) → final reply = Pareto 20% then new-chat handoff. Copy FE/BE workflow skeletons from [`templates/implementation/github-actions/`](templates/implementation/github-actions/) before the first implementation PR.
-- Seed the product’s `docs/OWNER_STANDING.md` from [`templates/docs/OWNER_STANDING.md`](templates/docs/OWNER_STANDING.md). When lasting day-loop preferences change, update standing **and** this playbook (generic wording) in the same session, then sync any public Software Factory mirror.
+- Seed the product’s `docs/OWNER_STANDING.md` from [`templates/docs/OWNER_STANDING.md`](templates/docs/OWNER_STANDING.md). When lasting day-loop preferences change, update standing in the same session and propose the generic version upstream to the factory as a pull request (the vendored copy stays read-only).

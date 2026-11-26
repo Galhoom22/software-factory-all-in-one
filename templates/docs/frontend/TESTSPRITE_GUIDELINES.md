@@ -4,7 +4,7 @@ Copy into the frontend implementation repository. Paste into MCP/agent prompts w
 
 ## Hard constraints
 
-- Fictional data only; no real personal resumes or emails.
+- Fictional data only; no real personal documents or emails.
 - Password fixtures meet the product minimum length.
 - Do not skip consent, auth redirects, or destructive confirms.
 - Prefer critical journeys from `TESTING.md` (P0) over exhaustive UI coverage.

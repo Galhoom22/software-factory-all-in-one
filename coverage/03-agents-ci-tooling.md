@@ -10,7 +10,7 @@ Paths under `software-factory-all-in-one/templates/` unless noted.
 |----|------------|------|---|-------|
 | ✅ | Single rulebook | `AGENTS.template.md` | **95** | Becomes product `AGENTS.md` |
 | ✅ | Agent discovery pack | `agent-discovery/**` | **93** | CLAUDE, GEMINI, llms.txt, Copilot, Windsurf, Gemini settings |
-| ✅ | Agents harness library | `software-factory-all-in-one/agents/**` + `coverage/08-ai-agents` | **88** | Per-harness craft; atlas % (D-109) |
+| ✅ | Agents harness library | `software-factory-all-in-one/agents/**` + `coverage/08-ai-agents` | **88** | Per-harness craft; atlas % (SF-11) |
 | ✅ | Cursor rules | `cursor-rules/*.mdc` | **92** | delivery, ponytail, clean-code, engineering-standards, owner-standing, project-ui-design, requirements-activation |
 | ✅ | Codex rails | `codex/**` | **90** | config.toml, hooks, SessionStart/Stop scripts, CLI.md |
 | ✅ | Codex verify script | `scripts/verify-codex-cli.mjs` | **85** | Machine check |
@@ -57,7 +57,7 @@ These live in the **product planning repo** that owns the playbook copy (not cop
 
 | ✅ | Capability | Typical path (product planning repo) | % | Notes |
 |----|------------|--------------------------------------|---|-------|
-| ✅ | Sync local `software-factory-all-in-one/` → public Software Factory GitHub mirror | `scripts/sync-software-factory.mjs` | **93** | Public OSS; same-session D-110 pattern |
+| ✅ | Upstream contributions (vendored copies read-only) | `CONTRIBUTING.md`, `scripts/seed.mjs --update` | **93** | Public OSS; pull requests upstream (SF-14) |
 | ✅ | Jira CSV / card generators | `scripts/generate-jira-*.mjs` (product) | **70** | Product-specific; method in `docs/jira` templates is thinner |
 | ⚠️ | Coverage % auto-validator | *(none)* | **20** | Atlas is manual by design; do not invent a heavy scorer unless drift becomes real |
 
@@ -70,4 +70,4 @@ These live in the **product planning repo** that owns the playbook copy (not cop
 | New AI harness support | Pack under `software-factory-all-in-one/agents/<slug>/` + thin `agent-discovery/` pointer + `08-ai-agents` % | Forking a second rulebook |
 | New CI gate | Extend `09-CI-CD` + matching YAML skeleton | Mid-day PR spam “for CI” |
 | New CodeRabbit paid product | Wait for explicit owner opt-in (`08` Free default) | Starting trials |
-| Auto-sync playbook | Use existing sync script | Manual GitHub web edits that diverge |
+| Improve the factory | Pull request to the factory repository; refresh copies with `seed.mjs --update` | Editing a vendored copy in place |

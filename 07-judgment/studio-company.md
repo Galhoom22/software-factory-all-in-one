@@ -21,7 +21,7 @@ Absorb operating ideas from [Paperclip](https://github.com/paperclipai/paperclip
 | **Heartbeats / routines** | Implementation day pipeline (`08`) — start cue → finish must-finish → closeout |
 | **Approvals / governance** | Consequential changes need owner decision (new stack, new always-on tool, bar-lowering asks → Candor); merge gates = CI + CodeRabbit |
 | **Skills library** | Playbook `07-judgment/`, `technologies/`, Cursor skills — versioned reusable craft |
-| **Cost control** | Prefer proportional depth (D-85); avoid runaway token loops; name cost when choosing heavy approaches |
+| **Cost control** | Prefer proportional depth (SF-08); avoid runaway token loops; name cost when choosing heavy approaches |
 | **Team catalog** | Seeded FE/BE day seats + planning agent — not twenty unsupervised terminals |
 
 ### Default small-studio seats (fill names in product standing)
@@ -46,7 +46,7 @@ Scale later (design, QA, ops) by **adding seats with a manager and a job descrip
 
 | Do not | Why |
 |--------|-----|
-| Vendor Paperclip (or any agent OS) as `AGENTS.md` / day SoT | Second constitution; fights D-40 delivery + existing trackers |
+| Vendor Paperclip (or any agent OS) as `AGENTS.md` / day SoT | Second constitution; fights SF-02 delivery + existing trackers |
 | Two agents checkout the same Story/day without coordination | Duplicate PRs, lost context, spend waste |
 | Work with no goal link (“just coding”) | Goal drift; Paperclip’s “why” rule |
 | Hire new always-on agents/tools without owner approval | Unbounded org + cost |
@@ -78,7 +78,7 @@ Keep Jira/Notion/GitHub as the studio’s work SoT unless a new DECISIONS row sa
 
 ## Pair with Software Factory
 
-Seats answer **who**. The **line** (intake → triage → plan → build → independent review → human decision → Done) lives in [`software-factory.md`](software-factory.md) (D-90). Use both: company org + factory stages on every implementation day.
+Seats answer **who**. The **line** (intake → triage → plan → build → independent review → human decision → Done) lives in [`software-factory.md`](software-factory.md) (SF-12). Use both: company org + factory stages on every implementation day.
 
 ## Related homes
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Fails CI if the actor-loop delivery method (D-40) is removed or weakened
+ * Fails CI if the actor-loop delivery method (SF-02) is removed or weakened
  * in the places agents rely on. Does not ban the letters "MVP" in historical
  * decision titles — only the delivery excuse patterns and required wiring.
  */

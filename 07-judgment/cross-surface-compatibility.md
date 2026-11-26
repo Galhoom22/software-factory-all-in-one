@@ -65,7 +65,7 @@ When must-finish touches a shared API, contract field, auth cookie/CORS, event s
 1. Open this file + product `docs/SIBLING.md` (each impl repo) + planning contract.
 2. **Read** the sibling surface for current expectations; **do not write** there unless this seat owns it.
 3. Prove contract parity + local/CI proof; cite compatibility evidence in the day summary (or **N/A — no other surface**).
-4. Candor: refuse “ship now, tell the other side later” for breaking changes — propose contract-first + paired Story (D-82).
+4. Candor: refuse “ship now, tell the other side later” for breaking changes — propose contract-first + paired Story (SF-07).
 
 Closeout day summary: cite **cross-surface compatibility** evidence (surfaces checked + contract IDs + handoff note) or **N/A**.
 

@@ -1,6 +1,6 @@
 # Filament — best practices
 
-Sources: [Getting started](https://filamentphp.com/docs/5.x/getting-started), [Installation](https://filamentphp.com/docs/5.x/introduction/installation). Re-check official docs before non-trivial Filament work (D-66).
+Sources: [Getting started](https://filamentphp.com/docs/5.x/getting-started), [Installation](https://filamentphp.com/docs/5.x/introduction/installation). Re-check official docs before non-trivial Filament work (SF-05).
 
 ## Install defaults (5.x panel builder)
 

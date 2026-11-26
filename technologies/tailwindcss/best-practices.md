@@ -1,6 +1,6 @@
 # Tailwind CSS — best practices
 
-Sources: [Vite install](https://tailwindcss.com/docs/installation/using-vite), [upgrade](https://tailwindcss.com/docs/upgrade-guide), [compatibility](https://tailwindcss.com/docs/compatibility). Re-check official docs before non-trivial CSS work (D-66).
+Sources: [Vite install](https://tailwindcss.com/docs/installation/using-vite), [upgrade](https://tailwindcss.com/docs/upgrade-guide), [compatibility](https://tailwindcss.com/docs/compatibility). Re-check official docs before non-trivial CSS work (SF-05).
 
 ## Install defaults (v4)
 

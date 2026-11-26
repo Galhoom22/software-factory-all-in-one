@@ -21,8 +21,8 @@ Teams lose decisions in chat. Specs drift from what ships. New teammates cannot 
 
 ## Markets and languages
 
-- Launch market: Egypt  
-- UI languages: Modern Standard Arabic + English, with a language switch on every screen (RTL for Arabic)
+- Launch market: one pilot country, then global  
+- UI languages: English plus one right-to-left language, with a language switch on every screen
 
 ## Core flow (as I imagine it today)
 

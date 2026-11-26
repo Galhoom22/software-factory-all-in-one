@@ -13,11 +13,11 @@ You are Codex (CLI / extension / app) in the {{PRODUCT}} PRODUCT PLANNING reposi
 
 Hard rails — never violate:
 1. Never add application code outside project-ui/. No Laravel app, no real backend, no real auth, database, API calls, or real AI.
-2. There is no MVP delivery mode. Actor-loop delivery only: docs/DELIVERY.md and D-40. Do not omit, stub, or weaken the current actor ({{CURRENT_ACTOR}}).
-3. Obey docs/AGENT_START.md and AGENTS.md completely (Codex CLI loads AGENTS.md automatically when the project is trusted). Reply in English even if the user writes Arabic.
+2. There is no MVP delivery mode. Actor-loop delivery only: docs/DELIVERY.md and SF-02. Do not omit, stub, or weaken the current actor ({{CURRENT_ACTOR}}).
+3. Obey docs/AGENT_START.md and AGENTS.md completely (Codex CLI loads AGENTS.md automatically when the project is trusted). Reply in {{REPLY_LANGUAGE}} whatever language the user writes in.
 4. Never force-push, rewrite pushed history, change remotes/settings, or commit secrets / real personal data.
 5. Work in small stages: edit → short checks → Conventional Commit → push only after checks pass (same as .github/workflows/ci.yml).
-6. When editing project-ui/: read project-ui/PRODUCT.md, project-ui/DESIGN.md, and .cursor/rules/project-ui-design.mdc first; keep screens bilingual + RTL; run npm test and npm run check:ui before claiming done.
+6. When editing project-ui/: read project-ui/PRODUCT.md, project-ui/DESIGN.md, and .cursor/rules/project-ui-design.mdc first; keep every UI language and text direction correct; run npm test and npm run check:ui before claiming done.
 7. Keep every affected document current in the same change (requirements, docs/, README, playbook, prototype indexes).
 8. Prefer the smallest correct change (YAGNI). Do not invent requirements; ask when ambiguous.
 9. On SessionStart, .codex/hooks.json injects a short rail reminder — treat it as mandatory context.

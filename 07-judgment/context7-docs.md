@@ -16,7 +16,7 @@ Agents ship **stale idioms**: deprecated APIs, wrong major-version docs, copy-pa
 |---------|--------|
 | Non-trivial code in a stack with a `technologies/<slug>/` pack | Open the pack **and** Context7 (or official page) for the **pinned** line before coding |
 | Unsure about an API, option, middleware, config key, or upgrade path | `resolve-library-id` → `query-docs` (one concept per query) |
-| Owner names a stack / pastes official docs URL | Freshness path in [`technologies/README.md`](../technologies/README.md) (D-79) — Context7 + official compare → update pack if stale |
+| Owner names a stack / pastes official docs URL | Freshness path in [`technologies/README.md`](../technologies/README.md) (SF-05) — Context7 + official compare → update the pack if stale (from a product: an upstream pull request — the vendored copy is read-only) |
 | Human code-review “modern syntax” axis | Evidence = pack `use-these` **plus** a this-session docs/Context7 check when the change is non-trivial |
 
 **Skip / N/A:** renaming locals, copy edits, markdown-only planning, pure CSS token tweaks with no framework API, or re-applying an API already verified earlier **in the same session** for the same version.
@@ -38,7 +38,7 @@ Agents ship **stale idioms**: deprecated APIs, wrong major-version docs, copy-pa
 | **Context7 / official docs (this file)** | This-session proof the advice is still current |
 | **Human code-review bar** | Rejects outdated syntax even if tests pass ([`human-code-review.md`](human-code-review.md)) |
 
-None replaces another. A green pack file dated last month is not enough without a freshness check when the API surface is non-trivial (D-66).
+None replaces another. A green pack file dated last month is not enough without a freshness check when the API surface is non-trivial (SF-05).
 
 ## Day workflow hook
 
@@ -52,7 +52,7 @@ None replaces another. A green pack file dated last month is not enough without 
 - [ ] Non-trivial library/framework work was checked against Context7 **or** official vendor docs **this session**
 - [ ] Version matched the **product pin** / pack slice (no silent major bump)
 - [ ] Pack opened when one exists (`best-practices` + `quality` + version slice)
-- [ ] Stale pack updated same session when owner named the stack or docs proved drift (D-79 + D-110)
+- [ ] Stale pack fixed when the owner named the stack or docs proved drift — directly in the factory repository, or from a product by recording the drift and opening an upstream pull request the same session (SF-05 + SF-14)
 - [ ] Day summary records the check or honest N/A
 
 ## Anti-patterns
@@ -61,7 +61,7 @@ None replaces another. A green pack file dated last month is not enough without 
 |--------|-----|
 | Trust training memory for “latest Laravel / Next / PHP” | Drift; wrong majors |
 | Query Context7 then ignore the product SRS pin | Breaks the shipping line |
-| Dump entire Context7 responses into chat / Pareto | Context hygiene (D-86); distill into code + short evidence |
+| Dump entire Context7 responses into chat / Pareto | Context hygiene (SF-09); distill into code + short evidence |
 | Require Context7 for every one-line rename | Gate theater; use N/A |
 | Treat Context7 as a substitute for SECURITY/COMPLIANCE | Docs ≠ red lines |
 

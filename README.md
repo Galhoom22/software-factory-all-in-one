@@ -99,6 +99,10 @@ Detailed seed steps and placeholder table: [`00-USAGE.md`](00-USAGE.md) and the 
 | `{{FRONTEND}}` | Next.js 16 + Tailwind CSS |
 | `{{BACKEND}}` | Laravel 13 + PostgreSQL |
 | `{{NODE_LTS}}` | 26 (re-verify on nodejs.org) |
+| `{{REPLY_LANGUAGE}}` | English |
+| `{{DOCS_LANGUAGE}}` | English |
+| `{{UI_LANGUAGES}}` | English and Spanish |
+| `{{ICON_LIBRARY}}` | Lucide |
 
 Never put real product names, people, or tracker keys **back into this public kit**.
 
@@ -118,6 +122,9 @@ Never put real product names, people, or tracker keys **back into this public ki
 08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline + closeout
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet
+ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
+DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-15)
+AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
 coverage/                 Honest ✅/% atlas (craft · surfaces · agents)
 agents/                   Per-harness packs
 technologies/             Per-stack packs
@@ -128,6 +135,8 @@ scripts/                  Self-checks (activation, freshness, forever-generic)
 
 | Need | Open |
 |------|------|
+| Which documents to load for a task | [`ARCHITECTURE.md`](ARCHITECTURE.md) § 1 |
+| Why a rule exists | [`DECISIONS.md`](DECISIONS.md) |
 | Day closeout (PR → CI → review → merge → CD) | [`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md) + [`09-CI-CD.md`](09-CI-CD.md) |
 | Stack professionalism | [`technologies/`](technologies/README.md) |
 | Agent harness tips | [`agents/`](agents/README.md) |

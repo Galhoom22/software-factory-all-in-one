@@ -1,6 +1,6 @@
 # Symfony — best practices
 
-Sources: [Documentation hub](https://symfony.com/doc), [Setup](https://symfony.com/doc/current/setup.html), [Best practices](https://symfony.com/doc/current/best_practices.html), [Page creation](https://symfony.com/doc/current/page_creation.html). Re-check official docs before non-trivial Symfony work (D-66).
+Sources: [Documentation hub](https://symfony.com/doc), [Setup](https://symfony.com/doc/current/setup.html), [Best practices](https://symfony.com/doc/current/best_practices.html), [Page creation](https://symfony.com/doc/current/page_creation.html). Re-check official docs before non-trivial Symfony work (SF-05).
 
 ## 1. Create and run
 

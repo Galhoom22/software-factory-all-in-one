@@ -32,7 +32,7 @@ const SKIP = new Set([".git", "node_modules"]);
 const KEEP_AT_ROOT = new Set([".git", "my-project-requirements.md"]);
 // The kit's own top-level entries — the only things --in-place moves. check-structure.mjs keeps this list exact.
 const KIT_TOP = new Set([
-  ".github", ".gitignore", "00-USAGE.md", "01-STEPS.md", "02-DELIVERY.md", "03-PROTOTYPE.md", "04-FEATURE_SDLC.md",
+  ".github", ".gitignore", "AGENTS.md", "ARCHITECTURE.md", "CLAUDE.md", "DECISIONS.md", "00-USAGE.md", "01-STEPS.md", "02-DELIVERY.md", "03-PROTOTYPE.md", "04-FEATURE_SDLC.md",
   "05-PROMPTS.md", "06-LESSONS.md", "07-judgment", "08-IMPLEMENTATION-DAY.md", "09-CI-CD.md", "CODE_OF_CONDUCT.md",
   "CONTRIBUTING.md", "EXCELLENCE.md", "LICENSE", "README.md", "SECURITY.md", "agents", "assets", "coverage",
   "examples", "scripts", "technologies", "templates",

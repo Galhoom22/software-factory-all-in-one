@@ -29,7 +29,7 @@ Upstream study path (human reading): owner’s Pareto DSA set (Brute → Optimiz
 
 ## Day / PR check (30–60 seconds when earned)
 
-Run this when the change touches a **hot path**: loops over user/job/resume/list data, search/match/rank, export/batch jobs, recursive walks, or new queries that can grow with data.
+Run this when the change touches a **hot path**: loops over user/record/list data, search/match/rank, export/batch jobs, recursive walks, or new queries that can grow with data.
 
 1. What is `n` (and growth bound)?
 2. Current approach class: O(1) / O(log n) / O(n) / O(n log n) / O(n²+) / O(V+E) / O(pages×pageSize)?

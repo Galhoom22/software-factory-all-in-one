@@ -72,7 +72,7 @@ When must-finish adds/changes endpoints or contract shapes:
 1. Open this file + product `API_CONTRACT.md` + [`api-readiness.md`](api-readiness.md) + [`cross-surface-compatibility.md`](cross-surface-compatibility.md).
 2. Apply the design bar **before** coding the handler.
 3. Cite design evidence in the day summary (or **N/A — no HTTP surface change**).
-4. Candor: refuse “just expose the model” designs — propose resource + task-shaped endpoints (D-82).
+4. Candor: refuse “just expose the model” designs — propose resource + task-shaped endpoints (SF-07).
 
 ## Related homes
 
