@@ -1,6 +1,6 @@
 # Judgment — external methods mapped onto this repo
 
-See playbook [`07-judgment/`](../../07-judgment/README.md). This file is the product-local list of what was absorbed.
+See playbook [`07-judgment/`](../software-factory-all-in-one/07-judgment/README.md). This file is the product-local list of what was absorbed.
 
 ## Active maps
 

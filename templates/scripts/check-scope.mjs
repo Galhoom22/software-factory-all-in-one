@@ -77,7 +77,7 @@ const walkBannedNames = (dir, depth = 0) => {
 walkBannedNames(root);
 
 if (!existsSync(join(root, "project-ui", "package.json"))) {
-  fail("project-ui/package.json missing — prototype is the only allowed app tree");
+  console.log("check-scope: no project-ui/package.json yet — fine until the prototype step (software-factory-all-in-one/01-STEPS.md, Phase 4).");
 }
 
 console.log("check-scope: ok");

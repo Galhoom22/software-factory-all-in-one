@@ -23,11 +23,12 @@ After planning is ready enough, you create separate **implementation** repositor
 
 ## Step 1 — Create a Planning Repository
 
-1. Create an **empty** private GitHub repository (no auto-generated README if you can avoid it), named for example `<product>-planning`.
-2. Add this Engineering Playbook into it:
-   - Copy the whole `software-factory-all-in-one/` folder (method docs), **and**
-   - Copy everything inside `software-factory-all-in-one/templates/` to the **repository root** (rename `AGENTS.template.md` → `AGENTS.md`, `LICENSE.template` → `LICENSE`, move `cursor-rules/` → `.cursor/rules/`, `codex/` → `.codex/`, `agent-discovery/` pointers to the root as the README describes).
-3. Open the repo in your AI agent from the git root.
+1. Seed a private planning repository — pick one:
+   - **From a clone of this kit:** `node scripts/seed.mjs ../<product>-planning`
+   - **From GitHub:** click **Use this template** (private), clone the new repository, then run `node scripts/seed.mjs --in-place`
+2. The seed vendors the kit into `software-factory-all-in-one/` (read-only — improve it upstream with a pull request) and instantiates `templates/` at the root: `AGENTS.template.md` → `AGENTS.md`, `LICENSE.template` → `LICENSE`, `cursor-rules/` → `.cursor/rules/`, `codex/` → `.codex/`, `agent-discovery/` pointers → root. It never overwrites an existing file. `templates/implementation/` stays in the kit for your implementation repositories.
+3. The seeded checks (`.github/workflows/ci.yml`) are green before you write any requirements; `node scripts/seed.mjs --update <repo>` later refreshes only the vendored kit.
+4. Open the repo in your AI agent from the git root.
 
 This repo is the **planning workspace** only.
 
@@ -117,4 +118,4 @@ Planning CI runs these without a manual step:
 - `software-factory-all-in-one/scripts/check-requirements-activation.mjs` — playbook still wires activation.
 - `scripts/check-planning-entry.mjs` — if `my-project-requirements.md` exists, agent rules must be wired; prints derived-doc progress. If the file is absent, the check skips.
 
-Public `Galhoom22/software-factory-all-in-one` runs the same gates via synced `.github/workflows/ci.yml`.
+This kit's own CI runs `scripts/check-seed.mjs`, which seeds the templates into temporary repositories (fresh, activated, in-place, updated) and runs exactly these product checks, so a template change that would break a new repository fails before it merges.

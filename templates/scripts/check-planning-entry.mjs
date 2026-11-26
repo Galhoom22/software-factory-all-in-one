@@ -10,10 +10,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const here = path.dirname(fileURLToPath(import.meta.url));
-const root = path.basename(path.dirname(here)) === "software-factory-all-in-one"
-  ? path.resolve(here, "../..")
-  : path.resolve(here, "..");
+// This script lives in the product repository's scripts/ folder, so the repository root is its parent.
+// No folder-name heuristics: the verdict must not depend on what the checkout directory is called.
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const entryRel = "my-project-requirements.md";
 
