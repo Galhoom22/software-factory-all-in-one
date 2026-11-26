@@ -17,6 +17,8 @@
  *   node scripts/check-content-integrity.mjs --root <dir> --product
  *                                                                product coordinates (a seeded repository;
  *                                                                the vendored kit folder is skipped)
+ *   add --artifacts-only to run only the tool-artifact rules (adopt the gate on an existing repository
+ *   first, then tighten to the full check once its tables and links are clean)
  * Exit 0 = clean, 1 = findings, 2 = usage error.
  */
 import fs from "node:fs";
@@ -41,6 +43,7 @@ function optionValue(name) {
 }
 const rootArg = optionValue("--root");
 const PRODUCT = args.includes("--product");
+const ARTIFACTS_ONLY = args.includes("--artifacts-only");
 if (PRODUCT && !rootArg) usage("--product requires --root <dir>");
 const ROOT = path.resolve(rootArg || path.join(HERE, ".."));
 if (!fs.existsSync(ROOT) || !fs.statSync(ROOT).isDirectory()) usage(`root is not a directory: ${ROOT}`);
@@ -336,7 +339,7 @@ for (const abs of all) {
     const m = body.match(rule.re);
     if (m) findings.push({ file: r, line: body.slice(0, m.index).split(EOL).length, rule: rule.id, sample: m[0].slice(0, 80) });
   }
-  if (!DOC.test(abs)) continue;
+  if (ARTIFACTS_ONLY || !DOC.test(abs)) continue;
 
   const { lines, mask, anchors } = docInfo(abs);
   for (const t of tableFindings(lines, mask)) findings.push({ file: r, line: t.line, rule: "table-shape", sample: t.issue });
@@ -388,7 +391,7 @@ if (findings.length) {
 
 console.log(
   JSON.stringify(
-    { ok: true, coordinates: PRODUCT ? "product" : "kit", files_scanned: scanned, artifact_rules: ARTIFACTS.length, warnings: warnings.length },
+    { ok: true, coordinates: PRODUCT ? "product" : "kit", scope: ARTIFACTS_ONLY ? "artifacts-only" : "full", files_scanned: scanned, artifact_rules: ARTIFACTS.length, warnings: warnings.length },
     null,
     2,
   ),
