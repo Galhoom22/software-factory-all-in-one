@@ -1,0 +1,40 @@
+{
+  "$schema_comment": "Public forever-generic rules only — structural leakage (mailboxes, secrets, day-page URLs, absolute user paths). Never put private product/person/org names here; those live in the planning-repo product denylist and are blocked at sync time. Do not ban PROJECT-N patterns here — decision IDs like SF-14 are valid.",
+  "rules": [
+    {
+      "id": "personal-email",
+      "name": "personal mailbox",
+      "pattern": "[a-z0-9._%+-]+@(gmail|outlook|hotmail|yahoo|icloud)\\.[a-z]{2,}",
+      "flags": "i",
+      "probe": "someone@gmail.com"
+    },
+    {
+      "id": "secret-shaped",
+      "name": "secret-shaped token",
+      "pattern": "\\b(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|xox[baprs]-[A-Za-z0-9-]+)\\b",
+      "flags": "",
+      "probe": "ghp_abcdefghijklmnopqrstuvwxyz12"
+    },
+    {
+      "id": "notion-page-uuid",
+      "name": "Notion page id URL",
+      "pattern": "notion\\.(so|com)/[^\\s)\\]]*[a-f0-9]{32}",
+      "flags": "i",
+      "probe": "https://notion.so/workspace/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": "windows-user-path",
+      "name": "absolute Windows user path",
+      "pattern": "[A-Za-z]:\\\\Users\\\\[^\\\\\\s\"']+",
+      "flags": "",
+      "probe": "C:\\Users\\ExampleUser"
+    },
+    {
+      "id": "env-assignment-secret",
+      "name": "inline secret assignment",
+      "pattern": "(api[_-]?key|secret|password|token)\\s*=\\s*['\"][^'\"]{8,}['\"]",
+      "flags": "i",
+      "probe": "api_key=\"abcdefghijklmnop\""
+    }
+  ]
+}

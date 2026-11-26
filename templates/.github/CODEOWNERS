@@ -1,0 +1,23 @@
+# Changes to these paths request a review from the repository owner.
+# Enforced when branch protection on main requires code owner review.
+
+# Product source of truth and agent rules
+/requirements.md                    @{{OWNER}}
+/AGENTS.md                          @{{OWNER}}
+/docs/COMPLIANCE.md                 @{{OWNER}}
+/docs/SECURITY.md                   @{{OWNER}}
+/docs/API_CONTRACT.md               @{{OWNER}}
+/docs/DECISIONS.md                  @{{OWNER}}
+/docs/DEPLOYMENT.md                 @{{OWNER}}
+/.cursor/rules/                     @{{OWNER}}
+/software-factory-all-in-one/       @{{OWNER}}
+
+# Design system and UI guard
+/project-ui/DESIGN.md               @{{OWNER}}
+/project-ui/PRODUCT.md              @{{OWNER}}
+/project-ui/src/components/         @{{OWNER}}
+/project-ui/scripts/                @{{OWNER}}
+/project-ui/package.json            @{{OWNER}}
+
+# CI and review process
+/.github/                           @{{OWNER}}

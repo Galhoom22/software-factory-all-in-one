@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .codex/scripts/session-start.mjs",
+            "commandWindows": "node .codex/scripts/session-start.mjs",
+            "timeout": 20,
+            "statusMessage": "Loading planning-repo rails"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .codex/scripts/stop-check.mjs",
+            "commandWindows": "node .codex/scripts/stop-check.mjs",
+            "timeout": 60,
+            "statusMessage": "Verifying delivery rails before stop"
+          }
+        ]
+      }
+    ]
+  }
+}

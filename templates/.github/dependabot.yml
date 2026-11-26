@@ -1,0 +1,18 @@
+# Dependency update alerts (SECURITY SC-04). Updates arrive as pull requests and must pass CI;
+# majors stay manual because SRS §2 pins each framework to a version line.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /project-ui
+    schedule:
+      interval: weekly
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

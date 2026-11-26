@@ -1,0 +1,20 @@
+# Copy to: <fe-or-be-repo>/.github/workflows/deploy-production.yml
+# Requires a GitHub Environment named "production" with required reviewers.
+# Secret: FORGE_DEPLOY_HOOK_PRODUCTION (or host equivalent) — never commit the URL.
+name: Deploy production
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Trigger host deploy hook
+        run: curl -fsS -X POST "$HOOK"
+        env:
+          HOOK: ${{ secrets.FORGE_DEPLOY_HOOK_PRODUCTION }}

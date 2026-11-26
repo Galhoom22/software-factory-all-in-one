@@ -1,0 +1,48 @@
+# Copy to: <backend-repo>/.github/workflows/ci.yml
+# Pin action SHAs before relying on branch protection. Match php-version to SRS / composer.json.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          extensions: mbstring, pdo_sqlite, sqlite3, bcmath, intl
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Application key
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Format (Pint)
+        run: vendor/bin/pint --test
+
+      - name: Tests
+        run: php artisan test
+
+      # Uncomment when Forge staging hook exists (secret: FORGE_DEPLOY_HOOK_STAGING).
+      # deploy-staging must be a separate job with: needs: [tests], if: push to main.
+

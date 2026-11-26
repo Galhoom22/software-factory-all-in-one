@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# Copy to the frontend implementation repo root as `.coderabbit.yaml`
+
+language: "en-US"
+
+reviews:
+  profile: "assertive"
+  poem: false
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/.next/**"
+    - "!**/package-lock.json"
+  path_instructions:
+    - path: "**/*.{ts,tsx}"
+      instructions: |
+        Flag secrets, client-side authz, PII in storage or URLs, and HTML injection.
+        Flag browser calls to AI or payment providers.
+        Prefer API contract error handling and accessible forms.
+
+knowledge_base:
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - "**/CODERABBIT_GUIDELINES.md"
+      - "**/docs/CODERABBIT_GUIDELINES.md"

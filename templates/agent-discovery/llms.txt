@@ -1,0 +1,22 @@
+# {{PRODUCT}} planning repository
+
+> Product planning only. Not the FE/BE implementation repositories.
+
+## Start here
+
+- [Entry requirements (activation)](my-project-requirements.md): if this root file exists, the agent runs factory planning automatically (`software-factory-all-in-one/00-USAGE.md`)
+- [Agent start (any AI)](docs/AGENT_START.md): hard rails, map, checks
+- [AGENTS.md](AGENTS.md): full mandatory rules for every coding agent
+- [Delivery method](docs/DELIVERY.md): actor loop; no MVP delivery mode
+- [Requirements](requirements.md): formal product source of truth (derived from the entry file when present)
+- [README](README.md): public summary
+
+## Verify before claiming done
+
+- `node scripts/check-delivery.mjs`
+- `node scripts/check-agents.mjs`
+- `node scripts/check-scope.mjs`
+
+## Optional discovery files
+
+Harness-specific pointers all defer to AGENTS.md: CLAUDE.md, GEMINI.md, .codex/, .cursor/rules/, .github/copilot-instructions.md, .windsurf/rules/.

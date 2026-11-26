@@ -1,0 +1,42 @@
+# Factory CI: every kit gate plus the seed smoke test, on each push and pull request.
+# Before first use elsewhere, pin action SHAs to current releases (Dependabot afterwards).
+name: Factory CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: factory-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 26
+
+      - name: Forever-generic hard gate (no product/person/private leakage)
+        run: node scripts/check-forever-generic.mjs
+
+      - name: Content integrity (no tool artifacts, renderable tables, valid links)
+        run: node scripts/check-content-integrity.mjs
+
+      - name: Requirements-activation wiring intact
+        run: node scripts/check-requirements-activation.mjs
+
+      - name: Seed smoke test (templates pass their own gates once instantiated)
+        run: node scripts/check-seed.mjs
+
+      - name: Structure (packs, judgment index, README facts)
+        run: node scripts/check-structure.mjs

@@ -1,0 +1,10 @@
+.env
+.env.*
+node_modules/
+.next/
+__pycache__/
+
+# Impeccable engine binary (npx impeccable update downloads it)
+.cursor/skills/impeccable/scripts/bin/
+.agents/skills/impeccable/scripts/bin/
+

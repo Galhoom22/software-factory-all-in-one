@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# Copy to the backend implementation repo root as `.coderabbit.yaml`
+
+language: "en-US"
+
+reviews:
+  profile: "assertive"
+  poem: false
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!**/vendor/**"
+    - "!**/storage/**"
+    - "!**/composer.lock"
+  path_instructions:
+    - path: "**/*.php"
+      instructions: |
+        Flag missing ownership checks, unsigned webhooks, secrets in code, and PII in logs or AI payloads.
+        Prefer Form Requests, Policies, and Feature tests with a second-user authz case.
+
+knowledge_base:
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - "**/CODERABBIT_GUIDELINES.md"
+      - "**/docs/CODERABBIT_GUIDELINES.md"
