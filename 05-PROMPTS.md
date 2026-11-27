@@ -1,6 +1,6 @@
 # Prompts — What to Ask the Agent at Each Step
 
-Ready prompts for the steps in [`01-STEPS.md`](01-STEPS.md). Replace the `<...>` parts. Write them in any language; the agent always replies in **English** per `AGENTS.md`. Each prompt assumes the agent follows `docs/AGENT_START.md` and `AGENTS.md` (checks, commit, push, CI).
+Ready prompts for the steps in [`01-STEPS.md`](01-STEPS.md). Replace the `<...>` parts. Write them in any language; the agent replies in the language `AGENTS.md` sets. Each prompt assumes the agent follows `docs/AGENT_START.md` and `AGENTS.md` (checks, commit, push, CI).
 
 ## Implementation bar (judgment)
 
@@ -56,7 +56,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > You are a coding agent in this planning repository. Read `docs/AGENT_START.md` first, then obey `AGENTS.md` completely. There is no MVP delivery mode — actor loop only (`docs/DELIVERY.md`). Never add application code outside `project-ui/`. Never force-push or commit secrets / real personal data. Reply in the language `AGENTS.md` sets. After each stage run `node scripts/check-delivery.mjs`, `node scripts/check-agents.mjs`, and `node scripts/check-scope.mjs` (and project-ui checks if you touched the prototype). Then reply only "ok".
 
-**OpenAI Codex CLI (first session — preferred harness):**
+**OpenAI Codex CLI (first session):**
 
 > You are OpenAI Codex CLI in this planning repository (started from the git root). Obey `docs/AGENT_START.md`, `AGENTS.md`, and `.codex/` completely (see `.codex/CLI.md`). There is no MVP delivery mode — actor loop only (`docs/DELIVERY.md`). Never add application code outside `project-ui/`. Never force-push or commit secrets / real personal data. Before any `project-ui` edit, read `PRODUCT.md`, `DESIGN.md`, and `.cursor/rules/project-ui-design.mdc`. After each stage run `node scripts/check-delivery.mjs`, `check-agents.mjs`, and `check-scope.mjs`, then commit with Conventional Commits. Reply in the language `AGENTS.md` sets. Confirm SessionStart rails loaded, then reply only "ok".
 
@@ -72,7 +72,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > List the competitors of `<product>` in `<markets>`, pick the single closest one to learn from (**clean-room**: patterns/flows only — no code, logos, copy, or owned content), and list the features that would make us stronger than it. When that peer is load-bearing, add a recon map + must/should/could matrix (`docs/competitor-recon/` or BRD appendix) per `software-factory-all-in-one/07-judgment/competitor-recon.md`. If using public reviews for gaps: verbatim linked quotes only, state sample size, mark thin themes — never fabricate. Write the result into BRD §8 and `docs/REFERENCES.md`.
 
-> Turn this idea into `requirements.md` in English, following the template's line style. Include both interface languages with a switch on every screen, every sign-in method, sign-out, settings, data rights, billing, the account emails, and the empty state of every core object: `<idea>`.
+> Turn this idea into `requirements.md` in English, following the template's line style. Include every interface language (with a switch on every screen when there is more than one), every sign-in method, sign-out, settings, data rights, billing, the account emails, and the empty state of every core object: `<idea>`.
 
 ## Phase 2
 
@@ -109,7 +109,7 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Build the starter kit from `software-factory-all-in-one/03-PROTOTYPE.md` and the home page "Screens and flows".
 
-> Build the `<area>` screens for the `<actor>`: every state in the PROTOTYPE.md state checklist, production-level, realistic fictional data in every language, both themes, phone width. Add them to `screens.ts`, `flows.ts`, and the README Screen Index, and run the design review.
+> Build the `<area>` screens for the `<actor>`: every state in the `03-PROTOTYPE.md` state checklist, production-level, realistic fictional data in every language, every theme, phone width. Add them to `screens.ts`, `flows.ts`, and the README Screen Index, and run the design review.
 
 > Walk every flow of the `<actor>` as a first-time and as a returning user. Report every dead end, missing next action, wrong link, or repeated question, then fix them.
 

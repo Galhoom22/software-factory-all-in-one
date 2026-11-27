@@ -66,7 +66,7 @@ Each requirement traces to a PRD feature (F-xx). **Owner**: **BE** = backend dev
 | NFR-01 | Secrets come from environment configuration only, never from code or the repository. | Both |
 | NFR-02 | Logs never contain passwords, tokens, or personal data. | BE |
 | NFR-03 | Every screen meets WCAG 2.2 AA. | FE |
-| NFR-04 | The interface is available in {{UI_LANGUAGES}}, with a language switch on every screen. | FE |
+| NFR-04 | The interface is available in {{UI_LANGUAGES}}, with a language switch on every screen when there is more than one. | FE |
 
 ## 6. Data Model (Conceptual)
 

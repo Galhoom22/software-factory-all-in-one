@@ -59,7 +59,7 @@ These live in the **product planning repo** that owns the factory copy (not copi
 |----|------------|--------------------------------------|---|-------|
 | ✅ | Upstream contributions (vendored copies read-only) | `CONTRIBUTING.md`, `scripts/seed.mjs --update` | **93** | Public OSS; pull requests upstream (SF-14) |
 | ✅ | Jira CSV / card generators | `scripts/generate-jira-*.mjs` (product) | **70** | Product-specific; method in `docs/jira` templates is thinner |
-| ⚠️ | Coverage % auto-validator | *(none)* | **20** | Atlas is manual by design; do not invent a heavy scorer unless drift becomes real |
+| ⚠️ | Coverage % auto-validator | `scripts/check-structure.mjs` (rollup arithmetic only) | **50** | Row %s stay judgment; the equal-weight breadth rollups are recomputed from their rows since both drifted (see `05-gaps`) |
 
 ---
 

@@ -61,9 +61,9 @@ Last audit: **2026-11-23**.
 | Metric | Value |
 |--------|-------|
 | Harnesses with packs | **12** |
-| **Weighted harness readiness** (scorecard rows, equal weight) | **~58%** |
+| **Weighted harness readiness** (scorecard rows, equal weight) | **~53%** |
 | **Studio-default strength** (Cursor + Codex + Claude Code) | **~92%** |
-| **Honest message** | Discovery + rulebook are strong; **China + Antigravity** packs are intentionally skeleton until official docs deepen. Do not confuse ~92% studio-default with ~58% industry breadth. |
+| **Honest message** | Discovery + rulebook are strong; **China + Antigravity** packs are intentionally skeleton until official docs deepen. Do not confuse ~92% studio-default with the breadth rollup above (harness breadth). |
 
 ---
 

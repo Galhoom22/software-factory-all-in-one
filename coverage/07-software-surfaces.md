@@ -51,9 +51,9 @@ Last audit: **2026-11-23** (Rust pack landed).
 | Metric | Value |
 |--------|-------|
 | **Surfaces listed** | 21 |
-| **Weighted readiness** (equal weight per surface row) | **~27%** |
+| **Weighted readiness** (equal weight per surface row) | **~25%** |
 | **Studio-default strength** (web app + HTTP API + admin web only) | **~83%** |
-| **Honest message** | Factory **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (~25%). Do not confuse the two numbers. |
+| **Honest message** | Factory **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (weighted readiness above). Do not confuse the two numbers. |
 
 ---
 
@@ -109,4 +109,3 @@ Agents may **propose** the next gap (“we’re at 8% on iOS native — want Swi
 | Stack choice for a product | [`../07-judgment/stack-selection.md`](../07-judgment/stack-selection.md) |
 | Pack craft after pin | [`../technologies/README.md`](../technologies/README.md) |
 | North star | [`../EXCELLENCE.md`](../EXCELLENCE.md) |
-)

@@ -38,7 +38,7 @@ The order below is the order that worked, corrected with hindsight. In the refer
 
 - **Output:** [`requirements.md`](templates/requirements.md), the structured single source of truth, in English — derived from root `my-project-requirements.md` when that entry file exists (write the idea in any language first; the agent converts and structures).
 - **How:** the idea, the problem, the core flow, every feature as `User:` / `System:` / `Rule:` lines, the **current actor** scope, what is deferred, the actor-loop delivery method ([`02-DELIVERY.md`](02-DELIVERY.md)), and the **Governing Product Rules**. Open [`docs/SCOPE_REJECTIONS.md`](templates/docs/SCOPE_REJECTIONS.md) with stable `REJ-xx` IDs for out-of-scope and won-forever items, and seed [`docs/actors/Actor-01-CurrentActor/`](templates/docs/actors/Actor-01-CurrentActor/) (rename the folder to a real slug).
-- **Include from the start:** both interface languages and a language switch on every screen, sign-in methods (email plus the social providers the market expects), sign-out, account settings, data rights (download, delete, consent), and the empty states of every core object. The reference product added each of these later.
+- **Include from the start:** every interface language the product targets (with a language switch on every screen when there is more than one), sign-in methods (email plus the social providers the market expects), sign-out, account settings, data rights (download, delete, consent), and the empty states of every core object. The reference product added each of these later.
 - **Done:** someone new can read it and explain the current actor, that there is no MVP delivery mode, and the red lines.
 
 ### 2. Add the README, the license, and the notes file
@@ -134,7 +134,7 @@ Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 
 - **Order:** account → the core feature (the product's reason to exist) → its supporting screens → billing and settings → landing page → legal pages.
 - **Scope:** one actor at a time, production-complete for that actor ([`02-DELIVERY.md`](02-DELIVERY.md)); other actors and deferred screens stay out of the index. **There is no MVP delivery mode.** Keep that actor’s `docs/actors/.../screens.md` and `flow.md` current with the prototype index.
-- **Each screen:** every state reachable through `?state=` (see the state checklist in PROTOTYPE.md), production-level copy with no "prototype" labels, realistic fictional data, both languages, both themes, phone width — millimetre-accurate to what ships.
+- **Each screen:** every state reachable through `?state=` (see the state checklist in [`03-PROTOTYPE.md`](03-PROTOTYPE.md)), production-level copy with no "prototype" labels, realistic fictional data, every interface language and theme, phone width — millimetre-accurate to what ships.
 - **Done:** the tests prove every screen is in a flow and the README, and every state belongs to a screen.
 
 ### 16. Walk every flow as the user
@@ -145,7 +145,7 @@ Everything in this phase is detailed in [`03-PROTOTYPE.md`](03-PROTOTYPE.md).
 
 ### 17. Quality pass
 
-- Accessibility (WCAG 2.2 AA; `npm run crawl` with axe on every screen and state, both languages and themes), responsive at 320px, long content, RTL and LTR alignment, spelling in every language, fonts, colors, button states (hover, pressed, current), touch targets of 44px, purposeful motion that respects reduced motion, SEO+GEO per `docs/SEO.md` (public pages indexed with title/description/canonical/hreflang/robots/sitemap/honest JSON-LD + citeable Q&A craft; private ones not), Lighthouse. Tick `project-ui/PRE-DELIVERY-UX.md` and skim `ANTI-SLOP.md` before calling a screen done.
+- Accessibility (WCAG 2.2 AA; `npm run crawl` with axe on every screen and state, every interface language and theme), responsive at 320px, long content, alignment in every text direction the product supports, spelling in every language, fonts, colors, button states (hover, pressed, current), touch targets of 44px, purposeful motion that respects reduced motion, SEO+GEO per `docs/SEO.md` (public pages indexed with title/description/canonical/hreflang/robots/sitemap/honest JSON-LD + citeable Q&A craft; private ones not), Lighthouse. Tick `project-ui/PRE-DELIVERY-UX.md` and skim `ANTI-SLOP.md` before calling a screen done.
 - **Done:** the crawl reports only intentional problems; Lighthouse accessibility is 100 on every screen; landing SEO category is clean on a production-like build; owner-reported visual defects are fixed and logged in `DESIGN-ERRORS.md`.
 
 ## Phase 5 — Ongoing

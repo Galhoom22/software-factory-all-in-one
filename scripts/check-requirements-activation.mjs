@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Verifies the playbook wires requirements-driven activation + CI automation.
- * Run from planning repo: node software-factory-all-in-one/scripts/check-requirements-activation.mjs
- * Or from playbook root after sync: node scripts/check-requirements-activation.mjs
+ * Verifies the kit wires requirements-driven activation + CI automation.
+ * Run from a seeded planning repo: node software-factory-all-in-one/scripts/check-requirements-activation.mjs
+ * Or from the kit root: node scripts/check-requirements-activation.mjs
  */
 import fs from "node:fs";
 import path from "node:path";

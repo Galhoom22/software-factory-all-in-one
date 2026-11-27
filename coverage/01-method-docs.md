@@ -12,7 +12,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Requirements-driven usage | `00-USAGE.md` | **95** | Entry file activates planning; 80/20; planning vs impl; CI automation pointers | — |
 | ✅ | Ordered planning steps | `01-STEPS.md` | **93** | Phase 0→N with outputs + Done; wires prompts/lessons | Keep steps aligned when templates grow |
 | ✅ | Actor-loop delivery (no MVP) | `02-DELIVERY.md` | **98** | Production-complete per actor; wiring so agents cannot forget | — |
-| ✅ | Prototype / API explorer | `03-PROTOTYPE.md` | **90** | UI stack fidelity, design skills, states, bilingual/RTL, anti-slop | No full app scaffold inside method (by design) |
+| ✅ | Prototype / API explorer | `03-PROTOTYPE.md` | **90** | UI stack fidelity, design skills, states, every interface language and text direction, anti-slop | No full app scaffold inside method (by design) |
 | ✅ | Feature-level SDLC | `04-FEATURE_SDLC.md` | **93** | Decomposition, profiles, evidence, gates, Done/Released/Outcome | Feature files live in **impl** repos only |
 | ✅ | Ready agent prompts | `05-PROMPTS.md` | **90** | Activation, phases, audits, day/start cues | Coverage-check prompt added 2026-11-21 |
 | ✅ | Process lessons | `06-LESSONS.md` | **92** | Scope, payments, docs, tracker, design, BE API, Playwright, agents, Windows | Grows via automatic capture; avoid duplicates |

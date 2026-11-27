@@ -79,7 +79,7 @@ When the task writes or reviews code in a stack the product **already pinned** (
 
 ## Owner names a stack (hard trigger — no ask)
 
-When the owner says they will **use / work on / build with** a technology (e.g. “we’ll use Laravel”, “يلا PHP و Laravel”, “start with Filament”), treat that as an immediate cue — **do not wait** for “update the factory” or a docs URL paste:
+When the owner says they will **use / work on / build with** a technology (e.g. “we’ll use Laravel”, “start with Filament”, in any language), treat that as an immediate cue — **do not wait** for “update the factory” or a docs URL paste:
 
 1. **Search latest (same session):** open official vendor docs and/or Context7 for that stack’s **current stable** line. Memory and old chat are not evidence.
 2. **Compare to the factory pack:** read `technologies/<slug>/` (or note that it is missing). Match version slice, `use-these` / `stop-using`, `official-refs` dates, and `quality.md` against what official docs say **today**.

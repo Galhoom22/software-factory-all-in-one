@@ -2,7 +2,7 @@
 
 Absorb interview-style **data structures & algorithms** discipline into product engineering — without installing a LeetCode curriculum into the planning or implementation repositories.
 
-Upstream study path (human reading): owner’s Pareto DSA set (Brute → Optimized → Optimal, Big O + edges). **Do not** copy problem lists, C++ solutions, or pattern encyclopedias into product repos.
+Upstream study path (human reading): a curated DSA practice set (Brute → Optimized → Optimal, Big O + edges). **Do not** copy problem lists, solutions, or pattern encyclopedias into product repos.
 
 ## Adopt
 
@@ -20,7 +20,7 @@ Upstream study path (human reading): owner’s Pareto DSA set (Brute → Optimiz
 
 | Anti-pattern | Why |
 |--------------|-----|
-| Dumping a 49-problem (or larger) catalog / solution tree into planning or product docs | Second curriculum; forever-generic factory forbids study dumps |
+| Dumping a problem catalog / solution tree into planning or product docs | Second curriculum; forever-generic factory forbids study dumps |
 | Mandating LeetCode practice as a merge gate | Product delivery ≠ interview grind |
 | Premature micro-opts or exotic structures on tiny bounded `n` | YAGNI; readability first when constraints are tiny |
 | Claiming “O(1) hash” without **average** / amortization honesty | Misleading evidence |
@@ -53,5 +53,5 @@ Skip the ritual for trivial getters, pure config, copy edits, and clearly bounde
 
 ## Sources (do not vendor)
 
-- Owner Pareto DSA study repo (Big O + edges + Brute→Optimal habit) — judgment only
+- A curated DSA study set (Big O + edges + Brute→Optimal habit) — judgment only
 - Product SECURITY / TESTING for trust boundaries and risk-matched tests

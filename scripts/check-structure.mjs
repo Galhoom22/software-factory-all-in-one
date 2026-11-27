@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Structural Always-Current gate for playbook/.
+ * Structural Always-Current gate for the kit.
  * Does not hit the network — agents still must re-verify official docs/Context7
  * when they touch a pack (see 07-judgment/playbook-freshness.md).
  */
@@ -266,19 +266,88 @@ for (const m of readmeText.matchAll(/~\s*(?:\*\*)?(\d{1,3})%/g)) {
   if (!atlasPercents.has(m[1])) fail(`README.md cites ~${m[1]}% which does not appear in coverage/README.md`);
 }
 
+// --- Atlas rollups labelled "equal weight" are the rounded mean of their rows (the row %s stay judgment) ---
+/** Column `col` of the table body rows between two headings: bold "**N**" values, plus any cell that is not one. */
+function rowPercents(text, from, to, col) {
+  const start = text.indexOf(from);
+  if (start < 0) return { values: [], bad: [] };
+  const end = text.indexOf(to, start + from.length);
+  const isDelimiter = (l) => /^\|[\s:|-]+\|\s*$/.test(l);
+  const lines = text.slice(start, end < 0 ? text.length : end).split("\n");
+  // Body rows only: a header is the table row directly above a delimiter row.
+  const cells = lines
+    .filter((l, i) => /^\|/.test(l) && !isDelimiter(l) && !isDelimiter(lines[i + 1] || ""))
+    .map((l) => (l.split("|")[col] || "").trim());
+  const values = cells.map((c) => c.match(/^\*\*(\d+)\*\*$/)).filter(Boolean).map((m) => Number(m[1]));
+  return { values, bad: cells.filter((c) => !/^\*\*\d+\*\*$/.test(c)) };
+}
+const roundedMean = (a) => Math.round(a.reduce((s, x) => s + x, 0) / a.length);
+{
+  const probe = rowPercents("## A\n| X | % |\n|---|---|\n| a | **10** |\n| b | **21** |\n| c | **~5** |\n| e | % |\n## B\n| d | **99** |", "## A", "## B", 2);
+  if (roundedMean(probe.values) !== 16 || probe.bad.join() !== "**~5**,%") fail("atlas rollup self-test failed");
+}
+{
+  // Each rollup is stated in its own file and copied only into the lines listed here; other text links instead.
+  const covText = covReadme.replace(/\r\n/g, "\n");
+  const kitReadme = readmeText.replace(/\r\n/g, "\n");
+  const rollups = [
+    {
+      file: "07-software-surfaces.md", what: "industry-surface breadth", from: "## Scorecard by surface", to: "### Industry-surface rollup", col: 3,
+      own: /\*\*Weighted readiness\*\*[^|]*\|\s*\*\*~(\d+)%\*\*/, count: /\*\*Surfaces listed\*\*\s*\|\s*(\d+)\s*\|/,
+      copies: [["coverage/README.md", /\*\*Industry-surface breadth\*\*[^|]*\|\s*\*\*~(\d+)%\*\*/], ["coverage/README.md", /07-software-surfaces\.md\)[^\n]*\*\*~(\d+)%\*\* breadth/], ["README.md", /Industry-surface breadth[^\n]*\(~(\d+)%\)/]],
+    },
+    {
+      file: "08-ai-agents.md", what: "AI-agent harness breadth", from: "### Global / US-led", to: "### Cross-cutting", col: 3,
+      own: /\*\*Weighted harness readiness\*\*[^|]*\|\s*\*\*~(\d+)%\*\*/,
+      copies: [["coverage/README.md", /\*\*AI-agent harness breadth\*\*[^|]*\|\s*\*\*~(\d+)%\*\*/], ["coverage/README.md", /08-ai-agents\.md\)[^\n]*\*\*~(\d+)%\*\* breadth/]],
+    },
+  ];
+  const sources = { "coverage/README.md": covText, "README.md": kitReadme };
+  for (const r of rollups) {
+    const text = read(path.join(coverageRoot, r.file)).replace(/\r\n/g, "\n");
+    const { values, bad } = rowPercents(text, r.from, r.to, r.col);
+    if (!values.length) {
+      fail(`coverage/${r.file}: no scorecard rows found for the ${r.what} rollup`);
+      continue;
+    }
+    for (const c of bad) fail(`coverage/${r.file}: scorecard % cell "${c}" must be a bold whole number (**N**) so the ${r.what} rollup counts it`);
+    const n = roundedMean(values);
+    if (r.count) {
+      const c = text.match(r.count);
+      if (!c || Number(c[1]) !== values.length) fail(`coverage/${r.file} must state the number of scored rows (${values.length})`);
+    }
+    for (const [where, re] of [[`coverage/${r.file}`, r.own], ...r.copies]) {
+      const m = (where.startsWith("coverage/0") ? text : sources[where]).match(re);
+      if (!m) fail(`${where} must state the ${r.what} rollup`);
+      else if (Number(m[1]) !== n) fail(`${where} says ~${m[1]}% ${r.what} but its ${values.length} rows average ${n}%`);
+    }
+  }
+}
+
 // --- Decision IDs: every SF-NN cited resolves in DECISIONS.md; D-NN only in the product-log template ---
 {
   const decisionsPath = path.join(playbookRoot, "DECISIONS.md");
   if (!exists(decisionsPath)) fail("DECISIONS.md (the kit decision log) is missing");
   else {
     const defined = new Set([...read(decisionsPath).matchAll(/^### (SF-\d{2})\b/gm)].map((m) => m[1]));
+    // A range that starts at SF-01 describes the whole log, so it must end at the newest decision.
+    // Ranges that start later ("SF-03 to SF-05") name a subset and are not checked.
+    const ids = [...defined].sort();
+    const staleRanges = (text, newest) =>
+      [...text.matchAll(/\bSF-01\s*(?:…|\.\.\.?|–|—|-|to|through)\s*(?:SF-)?(\d{2})\b/g)]
+        .filter((m) => `SF-${m[1]}` !== newest)
+        .map((m) => m[0]);
+    {
+      const probe = "log (SF-01 … SF-15), SF-01 — SF-16, SF-01-15, SF-01..SF-12, SF-01 through SF-16, subset SF-03 to SF-05";
+      if (staleRanges(probe, "SF-16").join("|") !== "SF-01 … SF-15|SF-01-15|SF-01..SF-12") fail("decision-range self-test failed");
+    }
     const textFiles = [];
     (function walkText(dir) {
       for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
         if (ent.name === ".git" || ent.name === "node_modules") continue;
         const p = path.join(dir, ent.name);
         if (ent.isDirectory()) walkText(p);
-        else if (/\.(md|mdc|mjs|toml|json|yml|txt)$/.test(ent.name)) textFiles.push(p);
+        else if (/\.(md|mdc|mjs|toml|json|ya?ml|txt|template)$/.test(ent.name)) textFiles.push(p);
       }
     })(playbookRoot);
     for (const file of textFiles) {
@@ -287,6 +356,10 @@ for (const m of readmeText.matchAll(/~\s*(?:\*\*)?(\d{1,3})%/g)) {
       const text = read(file);
       for (const m of text.matchAll(/\bSF-(\d{2})\b/g)) {
         if (!defined.has(`SF-${m[1]}`)) fail(`${rel} cites SF-${m[1]}, which DECISIONS.md does not define`);
+      }
+      // CHANGELOG.md is history: a released entry keeps the range it had when it shipped.
+      if (rel !== "CHANGELOG.md") {
+        for (const r of staleRanges(text, ids.at(-1))) fail(`${rel} states "${r}" but DECISIONS.md runs ${ids[0]} … ${ids.at(-1)}`);
       }
       const productLog = rel === "templates/docs/DECISIONS.md" || rel.startsWith("templates/docs/decision-logs/");
       if (!productLog) {
@@ -315,7 +388,7 @@ if (
 }
 {
   const gates = fs.readdirSync(path.join(playbookRoot, "scripts")).filter((f) => /^check-.+\.mjs$/.test(f) && f !== "check-playbook-freshness.mjs");
-  for (const [rel, label] of [[".github/workflows/ci.yml", "kit CI"], ["CONTRIBUTING.md", "CONTRIBUTING"], ["AGENTS.md", "AGENTS.md"], ["ARCHITECTURE.md", "ARCHITECTURE"]]) {
+  for (const [rel, label] of [[".github/workflows/ci.yml", "kit CI"], ["CONTRIBUTING.md", "CONTRIBUTING"], ["AGENTS.md", "AGENTS.md"], ["ARCHITECTURE.md", "ARCHITECTURE"], [".github/pull_request_template.md", "PR template"]]) {
     if (!exists(path.join(playbookRoot, rel))) {
       fail(`${rel} is missing`);
       continue;

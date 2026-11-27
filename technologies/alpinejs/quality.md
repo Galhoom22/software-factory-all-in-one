@@ -14,7 +14,7 @@ Works with Ponytail: smallest complete change that still meets this bar.
 
 ## 2. Architecture fit
 
-- Alpine lives at the **edges** of server-rendered HTML (islands). It is not the app shell for the product’s Next.js SPA.
+- Alpine lives at the **edges** of server-rendered HTML (islands). It is not the app shell for a separate SPA frontend (for example Next.js).
 - State stays local to the island unless you deliberately use `Alpine.store` for small shared UI chrome.
 - Trust boundaries stay on the server/API — Alpine does not replace validation/authz.
 

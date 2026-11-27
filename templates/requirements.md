@@ -64,7 +64,7 @@
 ## 10. User Experience Principles
 
 - Principle: The fewest possible steps, with a clear goal for each step.
-- Principle: The interface is available in {{UI_LANGUAGES}}, with a language switch on every screen.
+- Principle: The interface is available in {{UI_LANGUAGES}}, with a language switch on every screen when there is more than one.
 
 ## 11. Security and Privacy Principles
 

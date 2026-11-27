@@ -68,7 +68,7 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 - **Engineering aha ≠ planning lessons.** Put non-obvious bug root causes in `docs/learning-from-mistakes/` (planning **or** implementation repo). Promote reusable rules into this file (especially **Implementation (backend API)**) the same session; keep product names out.
 - **Distinct brand, not a copy.** A dark theme too close to a competitor's had to be redone, and the light theme was redone to match it. Borrow patterns, never palettes, logos, or illustrations wholesale.
 - **The product name needs a wordmark** that stands out from the copy, and a unique logo; plan them with the brand, not after the screens.
-- **The screen index changed four times** (Figma-like canvas, live thumbnails, text catalogue, then one "Screens and flows" page). Build the final shape from PROTOTYPE.md directly.
+- **The screen index changed four times** (Figma-like canvas, live thumbnails, text catalogue, then one "Screens and flows" page). Build the final shape from `03-PROTOTYPE.md` directly.
 - **No prototype labels.** Screens first carried "prototype" banners and review controls; they were removed so every screen looks like production.
 - **Production-realistic mock data** exposes layout bugs (long names, many items, unbroken URLs) that `Test` data hides. Never use real people, including the team.
 - **Use logical CSS (start/end), never left/right**, when any interface language is right-to-left. The guard catches it.
@@ -167,9 +167,9 @@ Hard-won while shipping a real Laravel (or similar) modular API beside a plannin
 - **Never commit MCP API keys.** Tokens belong in the user’s local `mcp.json` / secrets store, not in the planning repository or factory templates.
 
 - **Harnesses do not share rule files.** Cursor loads `.cursor/rules/`; Codex loads `AGENTS.md` and `.codex/`; Copilot wants `.github/copilot-instructions.md`; Gemini wants `GEMINI.md`; Windsurf wants `.windsurf/rules/` or `AGENTS.md`. Put the full rules in **one** `AGENTS.md`, give weak models `docs/AGENT_START.md`, add thin pointers per harness, and keep CI (`check-delivery.mjs` + `check-agents.mjs`) failing if discovery is gutted.
-- **Long chats lose context.** Write a handoff before opening a new chat (PROMPTS.md), and start the new chat by having the agent read the repository.
+- **Long chats lose context.** Write a handoff before opening a new chat (`05-PROMPTS.md`), and start the new chat by having the agent read the repository.
 - **Context overflow is silent — use memory pointers.** Large CI logs, dumps, and whole-file pastes push out earlier instructions and produce wrong “Done.” Keep payloads on disk / in tool state; put **path / SHA / id + short summary** in the chat. Mid-day **context** refresh (checkpoint → fresh chat) is allowed; mid-day **owner “go”** waits are not. Judgment: [`07-judgment/context-window.md`](07-judgment/context-window.md) (SF-09).
-- **"Update everything" sweeps find real staleness.** Run the audits in PROMPTS.md after every batch of work, not only at the end.
+- **"Update everything" sweeps find real staleness.** Run the audits in `05-PROMPTS.md` after every batch of work, not only at the end.
 - **A second agent's audit is input, not instructions.** An outside report found real bugs (a language switch dropping the selected item, a check on a derived copy reading the original text, contract gaps), but each finding was checked in the code first and fixed once in the shared function; the report file was deleted once its findings were applied, so it never became a second source of truth.
 - **Ask for a score out of 100 with concrete findings**, then fix until none remain; vague "make it more professional" requests produce vague changes.
 - **Check every entry point of a legal gate.** AI consent was wired to the first three AI features, but a fourth AI action added later skipped it; when a feature adds a new AI entry point, route it through the consent screen and its flow.
