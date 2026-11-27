@@ -401,6 +401,46 @@ if (
   }
 }
 
+// --- Every workflow action (kit CI and template workflows) is pinned to a full commit SHA with its version comment ---
+function unpinnedActions(yaml) {
+  return [...yaml.matchAll(/^\s*(?:#\s*)?(?:-\s*)?uses:\s*(\S+)(.*)$/gm)]
+    .map((m) => ({ ref: m[1].replace(/^(["'])(.*)\1$/, "$2"), rest: m[2] })) // quoted YAML scalars are valid
+    .filter((a) => !a.ref.startsWith("./") && !a.ref.startsWith("docker://"))
+    .filter((a) => !/@[0-9a-f]{40}$/.test(a.ref) || !/#\s*v?\d/.test(a.rest))
+    .map((a) => a.ref);
+}
+if (
+  unpinnedActions(
+    [
+      "      - uses: actions/checkout@v4",
+      "      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0",
+      "      #   uses: a/b@0123456789012345678901234567890123456789",
+      "      - uses: ./local",
+      '      - uses: "c/d@0123456789012345678901234567890123456789" # v1.2.3',
+      "      - uses: 'e/f@0123456789012345678901234567890123456789' # v1.2.3",
+      "      - uses: './quoted-local'",
+      '      - uses: "g/h@v2"',
+    ].join("\n"),
+  ).join() !== "actions/checkout@v4,a/b@0123456789012345678901234567890123456789,g/h@v2"
+) {
+  fail("unpinnedActions self-test failed");
+}
+{
+  const workflows = [];
+  (function walkYaml(dir) {
+    for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (ent.name === ".git" || ent.name === "node_modules") continue;
+      const p = path.join(dir, ent.name);
+      if (ent.isDirectory()) walkYaml(p);
+      else if (/\.ya?ml$/.test(ent.name) && /(^|[\\/])(workflows|github-actions)[\\/]/.test(p)) workflows.push(p);
+    }
+  })(playbookRoot);
+  for (const file of workflows) {
+    const rel = path.relative(playbookRoot, file).split(path.sep).join("/");
+    for (const a of unpinnedActions(read(file))) fail(`${rel}: "${a}" must be pinned to a full commit SHA with a "# vX.Y.Z" comment`);
+  }
+}
+
 // --- CHANGELOG: [Unreleased] first; releases "## [X.Y.Z] - YYYY-MM-DD", newest first, non-empty, with link references ---
 {
   const cl = read(path.join(playbookRoot, "CHANGELOG.md")).replace(/\r\n/g, "\n");
