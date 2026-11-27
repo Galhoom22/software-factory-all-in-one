@@ -69,5 +69,5 @@ These live in the **product planning repo** that owns the factory copy (not copi
 |-----------------------|--------|-------|
 | New AI harness support | Pack under `software-factory-all-in-one/agents/<slug>/` + thin `agent-discovery/` pointer + `08-ai-agents` % | Forking a second rulebook |
 | New CI gate | Extend `09-CI-CD` + matching YAML skeleton | Mid-day PR spam “for CI” |
-| New CodeRabbit paid product | Wait for explicit owner opt-in (`08` Free default) | Starting trials |
+| New CodeRabbit paid product | Wait for explicit owner opt-in (`08`: the AI PR reviewer is optional; start on Free) | Starting trials |
 | Improve the factory | Pull request to the factory repository; refresh copies with `seed.mjs --update` | Editing a vendored copy in place |

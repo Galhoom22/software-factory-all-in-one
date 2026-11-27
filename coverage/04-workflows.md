@@ -44,7 +44,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Enterprise system-design boundary review | `07-judgment/enterprise-system-design`, `08` high-stakes | **90** | Six questions + AI practice level on consequential days |
 | ✅ | Compliance / ethics / risk day check | `07-judgment/compliance-ethics-risk`, `08`, COMPLIANCE | **88** | PII/money/AI/claims; safer scenario on refuse |
 | ✅ | Booking / reservation gate | `07-judgment/booking`, `08`, payments when money | **88** | Recheck + idempotency + hold TTL; N/A if no booking |
-| ✅ | Automatic closeout order | `08`, `09` | **96** | PR → CI green → CodeRabbit → merge → verify → CD(phase) → tracker → day page |
+| ✅ | Automatic closeout order | `08`, `09` | **96** | PR → CI green → AI PR reviewer if used → merge → verify → CD(phase) → tracker → day page |
 | ✅ | Progressive CD (A/B/C) | `09-CI-CD`, impl Actions YAML | **94** | Auto-detect; honest skip; no fake deploys |
 | ✅ | Human code-review bar | `07-judgment/human-code-review`, `08` closeout | **92** | Senior self-review: readability + modern syntax + best practices |
 | ✅ | Context7 / current-docs gate | `07-judgment/context7-docs`, `08` always-on | **93** | This-session docs for pinned library/framework APIs |
@@ -52,7 +52,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Integration engineering gate | `07-judgment/integration-engineering`, `08` always-on | **93** | External partners: checklist or N/A |
 | ✅ | AI engineering gate | `07-judgment/ai-engineering`, `08` always-on | **92** | AI paths: seam + eval + admission or N/A |
 | ✅ | Agent delegation gate | `07-judgment/delegation`, `08` always-on | **91** | Separate implementer: brief + land or N/A |
-| ✅ | CodeRabbit Free default | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked; does not waive human bar |
+| ✅ | Optional AI PR reviewer (CodeRabbit Free templates) | `08`, `CODERABBIT` templates | **92** | CLI/IDE gate; no paid trials unless asked; does not waive human bar |
 | ✅ | Pareto 20% + handoff | `08`, prompts | **97** | Teachable depth **file-anchored** (paths/structure/connections) + operational handoff |
 | ✅ | Context window hygiene | `07-judgment/context-window`, `08`, `05`, lessons | **90** | Pointers over blobs; fresh-chat checkpoint; SF-09 |
 | ✅ | Automatic lesson capture | `08`, `06-LESSONS`, learning-from-mistakes templates | **93** | Quality bar; propose upstream when reusable |

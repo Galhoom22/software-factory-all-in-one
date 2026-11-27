@@ -66,7 +66,7 @@ Run before dispatch and again before land:
 
 ## Optional tooling (never required)
 
-Owners may install [delegate-skills](https://github.com/amElnagdy/delegate-skills) via the Skills CLI for fleet lanes / `relay.mjs` experiments. That is a **local harness choice**. Product repos stay free of vendored relay trees unless a DECISIONS row says otherwise. Pair reviews with existing CI + CodeRabbit + human bar — not a substitute.
+Owners may install [delegate-skills](https://github.com/amElnagdy/delegate-skills) via the Skills CLI for fleet lanes / `relay.mjs` experiments. That is a **local harness choice**. Product repos stay free of vendored relay trees unless a DECISIONS row says otherwise. Pair reviews with existing CI + human bar (+ any AI PR reviewer) — not a substitute.
 
 ## Anti-patterns
 

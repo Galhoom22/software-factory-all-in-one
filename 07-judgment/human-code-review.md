@@ -32,9 +32,9 @@ Performance/DSA stays the existing hot-path check ([`dsa-performance.md`](dsa-pe
 |------|------|
 | **Human code-review bar (this file)** | Builder (agent) acts as senior: readability + modern syntax + best practices before claiming the slice Done |
 | **CI** | Clean-runner proof (tests, lint/format, secret scan) |
-| **CodeRabbit** | Mechanical second pass; fix **blocking** findings | 
+| **AI PR reviewer** (for example CodeRabbit, if used) | Mechanical second pass; fix **blocking** findings | 
 
-None replaces another. CodeRabbit Free CLI is still the default closeout review assist ([`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md)). A green CodeRabbit run does **not** waive unreadable or outdated code the agent can see.
+None replaces another. When the product uses an AI PR reviewer (for example CodeRabbit Free CLI), it is the closeout review assist ([`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md)). A green CodeRabbit run does **not** waive unreadable or outdated code the agent can see.
 
 ## Professional bar (checklist)
 
@@ -46,14 +46,14 @@ Before merge / before marking must-finish Done on code days:
 - [ ] Pack best-practices / quality applied (or N/A — no pack for this stack yet)
 - [ ] No secrets / real PII; trust boundaries still validated
 - [ ] Diff scoped to the task
-- [ ] CodeRabbit (or paid GitHub review) run per day pipeline; blocking items fixed
+- [ ] AI PR reviewer (for example CodeRabbit) run per day pipeline when the product uses one; blocking items fixed
 
 ## Day workflow hook
 
 1. **While coding** — write for the next human reader; prefer pack `use-these` over memory.
 2. **Before PR** — self-review the day’s diff against the axes above (senior pass).
-3. **Closeout** — CI green → **human code-review bar** (this file) + CodeRabbit → fix blockers → merge.
-4. Day summary: note **human code-review** pass (or **N/A — docs only**) plus CodeRabbit evidence.
+3. **Closeout** — CI green → **human code-review bar** (this file) + the AI PR reviewer if used → fix blockers → merge.
+4. Day summary: note **human code-review** pass (or **N/A — docs only**) plus AI reviewer evidence (or N/A).
 
 Candor: refuse “ship ugly; AI understands it” — rewrite for human readability in the same session when the bar fails (SF-07).
 

@@ -19,7 +19,7 @@ Absorb operating ideas from [Paperclip](https://github.com/paperclipai/paperclip
 | **Goal ancestry** | Every day / Story / feature cites the **product + current-actor goal** (why this work exists) |
 | **Atomic checkout** | One assignee + one active agent session owns a calendar day / Story slice; no two chats competing on the same must-finish |
 | **Heartbeats / routines** | Implementation day pipeline (`08`) — start cue → finish must-finish → closeout |
-| **Approvals / governance** | Consequential changes need owner decision (new stack, new always-on tool, bar-lowering asks → Candor); merge gates = CI + CodeRabbit |
+| **Approvals / governance** | Consequential changes need owner decision (new stack, new always-on tool, bar-lowering asks → Candor); merge gates = CI + a reviewer other than the builder |
 | **Skills library** | Factory `07-judgment/`, `technologies/`, Cursor skills — versioned reusable craft |
 | **Cost control** | Prefer proportional depth (SF-08); avoid runaway token loops; name cost when choosing heavy approaches |
 | **Team catalog** | Seeded FE/BE day seats + planning agent — not twenty unsupervised terminals |
@@ -36,7 +36,7 @@ Owner (Board)
 
 └── Frontend engineer (+ FE day agent) — UI Stories
 
-    Reviewer (CI + CodeRabbit) — merge gate, not a second product owner
+    Reviewer (CI + a non-builder reviewer: human, separate agent session or AI PR reviewer) — merge gate, not a second product owner
 
 ```
 
@@ -54,7 +54,7 @@ Scale later (design, QA, ops) by **adding seats with a manager and a job descrip
 
 ## Day pipeline placement
 
-At day start (`08`): name **goal** (product + actor) + **seat** (FE or BE day agent) + **checkout** (this chat owns today’s must-finish). Closeout still PR → CI → CodeRabbit → merge → verify. Judgment pairs with [`context-window.md`](context-window.md), [`EXCELLENCE.md`](../EXCELLENCE.md), Candor.
+At day start (`08`): name **goal** (product + actor) + **seat** (FE or BE day agent) + **checkout** (this chat owns today’s must-finish). Closeout still PR → CI → AI PR reviewer if used → merge → verify. Judgment pairs with [`context-window.md`](context-window.md), [`EXCELLENCE.md`](../EXCELLENCE.md), Candor.
 
 ## Optional Paperclip CLI
 

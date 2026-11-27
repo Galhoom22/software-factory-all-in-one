@@ -37,9 +37,9 @@ Local feature tests alone do **not** prove FE-ready or production-ready.
 | Skipping contract updates “we’ll tell FE later” | Pairing break; silent 4xx/5xx for FE |
 | Treating CodeRabbit or DSA checks as a substitute for HTTP proof | Different failure modes |
 
-## Day pipeline placement (with DSA / CodeRabbit / CI)
+## Day pipeline placement (with DSA / AI PR review / CI)
 
-Same spirit as DSA (hot paths) and CodeRabbit (review): a **named gate**, not a vibe.
+Same spirit as DSA (hot paths) and the AI PR reviewer when used (review): a **named gate**, not a vibe.
 
 1. **During the day** — for every API surface in must-finish: contract parity + local feature tests (see `08-IMPLEMENTATION-DAY.md`).
 2. **Before PR** — local suite = what CI will run (includes API feature tests).
@@ -62,4 +62,4 @@ Progressive phases stay in force (`09-CI-CD.md`): Phase A skips remote smoke hon
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`09-CI-CD.md`](../09-CI-CD.md)
 - Templates: `templates/docs/backend/TESTING.md`, `templates/docs/backend/DEPLOYMENT.md` § Smoke, `templates/docs/API_CONTRACT.md`
 - Design craft: [`api-design.md`](api-design.md)
-- Sibling quality gates: [`cross-surface-compatibility.md`](cross-surface-compatibility.md), [`dsa-performance.md`](dsa-performance.md), CodeRabbit in `08`, CI in `09`
+- Sibling quality gates: [`cross-surface-compatibility.md`](cross-surface-compatibility.md), [`dsa-performance.md`](dsa-performance.md), the optional AI PR reviewer in `08`, CI in `09`

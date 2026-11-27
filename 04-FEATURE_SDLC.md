@@ -180,7 +180,7 @@ Choose test types that the risk justifies (unit, integration, contract, E2E, reg
 
 ### 8. Review & CI
 
-Build, lint, tests, security / dependency checks, secret scanning, required review, integration. Solo work may use documented self-review when project policy allows; higher-risk changes may require an independent review. Day closeout still runs the product’s CI + CodeRabbit gates ([`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md), [`09-CI-CD.md`](09-CI-CD.md)).
+Build, lint, tests, security / dependency checks, secret scanning, required review, integration. Solo work may use documented self-review when project policy allows; higher-risk changes may require an independent review. Day closeout still runs the product’s CI gates (+ its AI PR reviewer, if it uses one) ([`08-IMPLEMENTATION-DAY.md`](08-IMPLEMENTATION-DAY.md), [`09-CI-CD.md`](09-CI-CD.md)).
 
 **Human code-review (when code shipped):** readability + modern pinned-line syntax + best practices — [`07-judgment/human-code-review.md`](07-judgment/human-code-review.md).
 

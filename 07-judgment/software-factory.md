@@ -42,7 +42,7 @@ Stages are stable; **depth is proportional** (SF-08). Skip honestly when the wor
 | **3. Plan** | Approach, files, acceptance criteria, checks | FEATURE note / short plan when Standard+ or High risk; Lightweight may fold plan into build |
 | **4. Human authorize (gate)** | May this plan/scope proceed? | Owner start-once for the day **or** explicit accept of a non-trivial plan; Candor on red-line asks |
 | **5. Build** | Change + local proof | Exclusive checkout seat implements; vertical slices; tests |
-| **6. Independent review** | Does the **diff** meet criteria without unacceptable fallout? | CI + CodeRabbit (or equivalent) — reviewer must not rely only on the builder’s story |
+| **6. Independent review** | Does the **diff** meet criteria without unacceptable fallout? | CI + a reviewer other than the builder (a human, a separate agent session or an AI PR reviewer such as CodeRabbit) — reviewer must not rely only on the builder’s story |
 | **7. Human release decision** | Merge / revise / stop | Closeout merge rules; production stays manual when CD Phase C |
 | **8. Done** | Outcome met (not just a PR merged) | Tracker Done + day page; FEATURE Done ≠ Released ≠ Outcome |
 
@@ -56,7 +56,7 @@ Stages are stable; **depth is proportional** (SF-08). Skip honestly when the wor
 
 3. **Acceptance criteria are the contract.** Planner writes them; builder satisfies them; independent reviewer judges the **diff + checks** against them verbatim. Verification engineering: author ≠ judge; evidence over narrative ([`verification-engineering.md`](verification-engineering.md)).
 
-4. **Independent review.** Prefer a separate session/model/tool (CI, CodeRabbit) that sees the branch and criteria — not the builder’s private reasoning dump.
+4. **Independent review.** Prefer a separate session/model/tool (CI plus a human, a second agent session or an AI PR reviewer) that sees the branch and criteria — not the builder’s private reasoning dump.
 
 5. **Bounded revisions.** Fix review findings; after a small number of failed loops, escalate to the Board with unresolved evidence — do not infinite-retry token burn.
 

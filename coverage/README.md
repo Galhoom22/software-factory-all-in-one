@@ -88,7 +88,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Owner ask (examples) | Atlas home | Typical status |
 |----------------------|------------|----------------|
 | Day run-through / closeout / Pareto | `04-workflows` + `08-IMPLEMENTATION-DAY` | ✅ ~97% |
-| Human code review (senior bar) | `07-judgment/human-code-review` + `08` + CodeRabbit | ✅ ~92% |
+| Human code review (senior bar) | `07-judgment/human-code-review` + `08` + optional AI PR reviewer | ✅ ~92% |
 | Context7 / current library docs | `07-judgment/context7-docs` + `08` + technologies | ✅ ~93% |
 | Verification engineering | `07-judgment/verification-engineering` + `08` + FEATURE | ✅ ~94% |
 | Integration engineering | `07-judgment/integration-engineering` + `08` + FEATURE | ✅ ~93% |
