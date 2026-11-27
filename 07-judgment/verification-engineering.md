@@ -25,7 +25,7 @@ A passing test without a criterion cell is incomplete verification. Outcome Achi
 ## Principles (day-usable)
 
 1. **Specify success before (or with) the ask** — must-finish / acceptance criteria are specific enough that a check can confirm them.
-2. **Separate author and judge** — the builder agent does not sole-certify Done. CI, CodeRabbit (or paid review), and the human code-review bar are the judge plane ([`software-factory.md`](software-factory.md) independent review).
+2. **Separate author and judge** — the builder agent does not sole-certify Done. CI, a reviewer other than the builder (a human, a separate agent session or an AI PR reviewer such as CodeRabbit) and the human code-review bar are the judge plane ([`software-factory.md`](software-factory.md) independent review).
 3. **Prefer deterministic checks before model opinion** — failing/passing tests and CI beat “another model said LGTM.”
 4. **Verify in a running environment when the surface needs it** — local HTTP / browser / staging smoke by phase ([`api-readiness.md`](api-readiness.md), product TESTING docs). Isolated unit-only is not enough for auth, money, or user journeys.
 5. **Save evidence of execution** — CI run links, command outputs, contract IDs, screenshots/recordings when UI — bound to the commit under review.
@@ -42,7 +42,7 @@ Use the cheapest layer that answers the criterion; escalate for risk:
 | Static | Lint, format, types, secret scan |
 | Automated tests | Unit / integration / contract per TESTING docs |
 | Running app / API | Local HTTP proof, E2E, staging smoke (phase B/C) |
-| Independent mechanical review | CodeRabbit Free CLI/IDE (or paid GitHub review) |
+| Independent mechanical review | The product's AI PR reviewer, if any (for example CodeRabbit Free CLI/IDE) |
 | Senior human bar | [`human-code-review.md`](human-code-review.md) |
 | Domain gates | API readiness, cross-surface, SEO+GEO, booking, compliance |
 | Human merge / validation | Owner approval of criteria and consequential release |
@@ -54,7 +54,7 @@ Fast layers should run while building so the agent can self-correct. Slow layers
 1. **Start** — for each must-finish item, know the success criterion (Story AC, feature file, or explicit day checkbox).
 2. **Build** — implement; keep a mental **criterion → evidence** map (FEATURE matrix when a feature file exists).
 3. **Before PR** — run the same local checks CI will run; fill evidence cells; fail open gaps honestly.
-4. **Closeout** — CI green → human code-review + CodeRabbit → merge → verify on default branch → CD/smoke when configured. Day summary cites verification evidence (links), not “tests passed” alone.
+4. **Closeout** — CI green → human code-review + AI PR reviewer if used → merge → verify on default branch → CD/smoke when configured. Day summary cites verification evidence (links), not “tests passed” alone.
 5. **Never** mark tracker/day Done on builder narrative without the judge-plane gates above.
 
 ## How this relates to existing homes
@@ -85,7 +85,7 @@ Fast layers should run while building so the agent can self-correct. Slow layers
 - [ ] Success criteria known before claiming the slice Done
 - [ ] Each critical criterion has an evidence link (or honest Failed / N/A)
 - [ ] Deterministic CI (and required local checks) green on the commit
-- [ ] Independent review plane ran (CodeRabbit + human bar on code days)
+- [ ] Independent review plane ran (human bar on code days + a non-builder reviewer)
 - [ ] Running-environment proof when the surface requires it
 - [ ] Residual gaps named; Outcome left to validation when appropriate
 

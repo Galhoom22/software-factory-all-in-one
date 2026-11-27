@@ -4,6 +4,10 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Changed
+
+- An AI pull request reviewer is optional everywhere, as 1.0.0 decided: the closeout order, review checklists, lessons and seat tables in `01`, `04`, `05`, `06`, `08`, `09`, seven judgment guides (`human-code-review`, `verification-engineering`, `agent-skills`, `studio-company`, `software-factory`, `delegation`, `api-readiness`), the atlas and the `OWNER_STANDING` / `STUDIO_ORG` templates say "AI PR reviewer if used" instead of making CodeRabbit a fixed step. CodeRabbit stays the worked example and its templates are unchanged. Wherever a review slot named CodeRabbit, it now requires a reviewer other than the builder (a human, a separate agent session or an AI PR reviewer), so CI alone never counts as independent review (SF-12). Every existing repository, including those that use CodeRabbit (its Free plan may post no GitHub review, so the old "CI + CodeRabbit" wording can leave CI alone), should edit the closeout and "independent review" lines of their `docs/OWNER_STANDING.md` and the reviewer rows of `docs/STUDIO_ORG.md` by hand to match the templates, because `seed.mjs --update` never touches product files.
+
 ## [1.1.0] - 2026-11-27
 
 The structure gate now computes the facts that had drifted by hand (the decision range, the atlas breadth rollups, every gate list), and generic text no longer carries one product's choices. Seeded repositories that were green stay green.

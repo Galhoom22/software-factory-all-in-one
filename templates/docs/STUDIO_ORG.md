@@ -20,7 +20,7 @@ Every implementation day and Story must stay traceable to this goal (goal ancest
 | Planning | Agent in planning repo | Board | Requirements, prototype, Jira pack, factory sync | Planning stages |
 | Backend engineer | {{BE_NAME}} (+ BE day agent) | Board | API Stories to production quality | BE calendar day / Story |
 | Frontend engineer | {{FE_NAME}} (+ FE day agent) | Board | UI Stories to production quality | FE calendar day / Story |
-| Reviewer | CI + CodeRabbit | Board | Merge evidence; not product ownership | PR review only |
+| Reviewer | CI + a non-builder reviewer (human, separate agent session or AI PR reviewer) | Board | Merge evidence; not product ownership | PR review only |
 
 Add rows when the studio grows (design, QA, ops). Each new seat needs a **manager**, a **job**, and **checkout scope** — no anonymous agent tabs.
 
@@ -46,7 +46,7 @@ Method: factory [`07-judgment/software-factory.md`](../software-factory-all-in-o
 | Triage | Checked-out day agent | Scope, risk, stop-or-go |
 | Plan | Day agent (+ Board if High risk) | Acceptance criteria |
 | Build | Day agent (exclusive checkout) | Diff + local tests |
-| Independent review | CI + CodeRabbit | Green checks / review |
+| Independent review | CI + a non-builder reviewer (human, separate agent session or AI PR reviewer) | Green checks / review |
 | Release decision | Board policy + closeout | Merge / hold / revise |
 | Done | Day agent closes tracker | Outcome met, not only PR |
 

@@ -12,7 +12,7 @@ The template must work on **day one of a new product**, when there is no server 
 
 | Phase | When it turns on | What the day closeout must do | What it must not do |
 |-------|------------------|-------------------------------|---------------------|
-| **A — CI only** | First implementation PR (default) | Local proof → PR → **CI green** → CodeRabbit → merge → verify on `main` (+ CI on `main`) → tracker → day page | Fail or block Done because staging/production is missing; call a deploy hook that does not exist |
+| **A — CI only** | First implementation PR (default) | Local proof → PR → **CI green** → AI PR reviewer if used → merge → verify on `main` (+ CI on `main`) → tracker → day page | Fail or block Done because staging/production is missing; call a deploy hook that does not exist |
 | **B — Staging CD** | Host is up **and** staging deploy hook secret exists **and** a `deploy-staging` (or equivalent) job is in the workflow | Everything in A, then wait for staging deploy from green `main` → smoke from DEPLOYMENT guide → Sentry glance if live | Deploy from a laptop; treat an empty Sentry inbox as a Done gate before any live release |
 | **C — Production CD** | GitHub `production` environment + production hook + owner approval path exist | Same as B for daily closeout; **production** only via manual `workflow_dispatch` + reviewers when the owner releases | Auto-deploy production on every day merge |
 
@@ -43,7 +43,7 @@ Local tests catch most bugs. **GitHub Actions** catches “works on my machine,�
 3. **CD only from `main`, only after CI, only in Phase B+.** Staging may auto-deploy on push to `main`. Production requires an explicit approved run (`workflow_dispatch` + environment reviewers).
 4. **Secrets only in host env and GitHub Actions secrets** — never in git, images, or chat.
 5. **Pin Actions to commit SHAs** (Dependabot updates them). Pin CLI tools run via `npx` to exact versions.
-6. **CodeRabbit ≠ CI.** Review finds design/security smells; CI proves tests and scans. Both are required in day closeout when the repo has them.
+6. **AI PR review (for example CodeRabbit) ≠ CI.** Review finds design/security smells; CI proves tests and scans. Both are required in day closeout when the repo has them.
 7. **No CD theater / no future-dependency traps.** Until staging/production hooks exist, stay in Phase A: document CD for later, skip deploy/smoke/Sentry-after-deploy honestly. Never add a live deploy job that will fail every PR because the secret is missing. Never make Done depend on infrastructure that is not live yet.
 
 ## Planning repository CI
@@ -108,7 +108,7 @@ Order that raises quality without mid-day PR spam (run only the steps the curren
 1. Must-finish **100%** + local proof.
 2. **PR** (one PR for the day).
 3. **CI green** on that PR (watch GitHub Actions; fix failures before continuing). *If the repo has no CI workflow yet, add Phase A CI in the same closeout before treating the day as done — do not skip inventing CI forever.*
-4. **CodeRabbit** (Free: CLI/IDE primary; paid: GitHub review).
+4. **AI PR reviewer, if the product uses one** (for example CodeRabbit — Free: CLI/IDE primary; paid: GitHub review).
 5. **Merge** to default branch.
 6. **Verify on `main`** (local proof again) **and** confirm CI on `main` is green.
 7. **CD (Phase B+ only):** wait for staging deploy; smoke; Sentry if live. **Phase A:** skip and write “CD not configured yet (Phase A)” in the day summary.
@@ -140,7 +140,7 @@ Rules:
 - [ ] Local checks match what CI will run.
 - [ ] PR open only after must-finish is 100%.
 - [ ] `gh run watch` / Actions UI: PR CI green before merge.
-- [ ] CodeRabbit blocking findings fixed.
+- [ ] AI PR reviewer blocking findings fixed (or N/A — none configured).
 - [ ] After merge: local verify + `main` CI green.
 - [ ] Phase B+: smoke + Sentry glance. Phase A: note “CD not configured yet” (honest, not a fake pass).
 - [ ] Never force-push; never put secrets in workflows as plaintext; never enable a deploy job that will red-CI every push because hooks are missing.

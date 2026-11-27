@@ -17,7 +17,7 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Ready agent prompts | `05-PROMPTS.md` | **90** | Activation, phases, audits, day/start cues | Coverage-check prompt added 2026-11-21 |
 | ✅ | Process lessons | `06-LESSONS.md` | **92** | Scope, payments, docs, tracker, design, BE API, Playwright, agents, Windows | Grows via automatic capture; avoid duplicates |
 | ✅ | Judgment pack index | `07-judgment/README.md` | **95** | Absorb outside methods; never second constitution | — |
-| ✅ | Implementation day pipeline | `08-IMPLEMENTATION-DAY.md` | **97** | Run-through, closeout, CodeRabbit, **file-anchored Pareto**, handoff, lesson capture |
+| ✅ | Implementation day pipeline | `08-IMPLEMENTATION-DAY.md` | **97** | Run-through, closeout, optional AI PR reviewer, **file-anchored Pareto**, handoff, lesson capture |
 | ✅ | CI/CD progressive phases | `09-CI-CD.md` | **94** | Phase A/B/C, planning + impl CI, CD rules, agent checklist | Host-specific secrets stay in product DEPLOYMENT |
 
 **Domain average (method core): ~93%**
