@@ -416,11 +416,12 @@ function unpinnedActions(yaml) {
       if (scalar.contentIndent !== null && indent >= scalar.contentIndent) continue;
       scalar = null;
     }
-    const m = line.match(/^\s*(?:#\s*)?(?:-\s*)?(?:uses|"uses"|'uses'):\s*(\S+)(.*)$/);
+    const m = line.match(/^\s*(?:#\s*)?(?:-\s*)?(?:uses|"uses"|'uses')\s*:\s*(\S+)(.*)$/);
     if (m) {
       const ref = m[1].replace(/^(["'])(.*)\1$/, "$2"); // quoted YAML scalars are valid
-      const local = ref.startsWith("./") || ref.startsWith("docker://");
-      if (!local && (!/@[0-9a-f]{40}$/.test(ref) || !/#\s*v?\d/.test(m[2]))) found.push(ref);
+      // Local actions are part of the repository; container actions pin an image digest; the rest pin a commit SHA + version comment.
+      const ok = ref.startsWith("./") || (ref.startsWith("docker://") ? /@sha256:[0-9a-f]{64}$/.test(ref) : /@[0-9a-f]{40}$/.test(ref) && /#\s*v?\d/.test(m[2]));
+      if (!ok) found.push(ref);
     } else {
       // A key starts with a word character or quote, so "- # note: |" (a comment) can never open a scalar.
       const h = line.match(/^( *)(-\s+)?[\w"'][^:#]*:\s*[|>](?:[-+]?([1-9])|([1-9])?[-+]?)\s*(?:#.*)?$/);
@@ -440,6 +441,9 @@ if (
       "      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0",
       "      #   uses: a/b@0123456789012345678901234567890123456789",
       "      - uses: ./local",
+      "      - uses: docker://alpine:3.20",
+      "      - uses : q/r@v1",
+      "      - uses: docker://alpine@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
       '      - uses: "c/d@0123456789012345678901234567890123456789" # v1.2.3',
       "      - uses: 'e/f@0123456789012345678901234567890123456789' # v1.2.3",
       "      - uses: './quoted-local'",
@@ -460,7 +464,7 @@ if (
       "      - # note: |",
       "        uses: o/p@v1",
     ].join("\n"),
-  ).join() !== "actions/checkout@v4,a/b@0123456789012345678901234567890123456789,g/h@v2,i/j@v3,k/l@v1,m/n@v1,o/p@v1"
+  ).join() !== "actions/checkout@v4,a/b@0123456789012345678901234567890123456789,docker://alpine:3.20,q/r@v1,g/h@v2,i/j@v3,k/l@v1,m/n@v1,o/p@v1"
 ) {
   fail("unpinnedActions self-test failed");
 }
