@@ -4,6 +4,10 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Added
+
+- `templates/AGENTS.template.md` § Git Safety: never paste or write back a tool's compressed or elided view of a file, and check the staged line counts for deletions you did not intend. The kit's own `AGENTS.md` already had this rule; seeded repositories now get it too. Existing repositories: add the bullet to your `AGENTS.md`, because `seed.mjs --update` never overwrites it.
+
 ## [1.0.0] - 2026-11-26
 
 First stable release: the structure, paths, template mapping and gates below are what MINOR and PATCH releases keep working for vendored copies.
