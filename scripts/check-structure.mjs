@@ -402,12 +402,36 @@ if (
 }
 
 // --- Every workflow action (kit CI and template workflows) is pinned to a full commit SHA with its version comment ---
+// Line scanner: `uses:` lines inside a block scalar (`run: |`, `>-`, `|2`, …) are text, not actions. Indents are
+// measured from the mapping key (after any "- "). Content indent = key indent + an explicit indicator, else the
+// indent of the first non-empty line, which must be deeper than the key; a less-indented line ends the scalar.
 function unpinnedActions(yaml) {
-  return [...yaml.matchAll(/^\s*(?:#\s*)?(?:-\s*)?uses:\s*(\S+)(.*)$/gm)]
-    .map((m) => ({ ref: m[1].replace(/^(["'])(.*)\1$/, "$2"), rest: m[2] })) // quoted YAML scalars are valid
-    .filter((a) => !a.ref.startsWith("./") && !a.ref.startsWith("docker://"))
-    .filter((a) => !/@[0-9a-f]{40}$/.test(a.ref) || !/#\s*v?\d/.test(a.rest))
-    .map((a) => a.ref);
+  const found = [];
+  let scalar = null; // { keyIndent, contentIndent }
+  for (const line of yaml.split(/\r?\n/)) {
+    const indent = line.match(/^ */)[0].length;
+    if (scalar) {
+      if (line.trim() === "") continue;
+      if (scalar.contentIndent === null && indent > scalar.keyIndent) scalar.contentIndent = indent;
+      if (scalar.contentIndent !== null && indent >= scalar.contentIndent) continue;
+      scalar = null;
+    }
+    const m = line.match(/^\s*(?:#\s*)?(?:-\s*)?(?:uses|"uses"|'uses'):\s*(\S+)(.*)$/);
+    if (m) {
+      const ref = m[1].replace(/^(["'])(.*)\1$/, "$2"); // quoted YAML scalars are valid
+      const local = ref.startsWith("./") || ref.startsWith("docker://");
+      if (!local && (!/@[0-9a-f]{40}$/.test(ref) || !/#\s*v?\d/.test(m[2]))) found.push(ref);
+    } else {
+      // A key starts with a word character or quote, so "- # note: |" (a comment) can never open a scalar.
+      const h = line.match(/^( *)(-\s+)?[\w"'][^:#]*:\s*[|>](?:[-+]?([1-9])|([1-9])?[-+]?)\s*(?:#.*)?$/);
+      if (h) {
+        const keyIndent = h[1].length + (h[2] ? h[2].length : 0);
+        const explicit = Number(h[3] || h[4] || 0);
+        scalar = { keyIndent, contentIndent: explicit ? keyIndent + explicit : null };
+      }
+    }
+  }
+  return found;
 }
 if (
   unpinnedActions(
@@ -420,8 +444,23 @@ if (
       "      - uses: 'e/f@0123456789012345678901234567890123456789' # v1.2.3",
       "      - uses: './quoted-local'",
       '      - uses: "g/h@v2"',
+      "      - run: |",
+      "          cat <<'EOF'",
+      "          uses: example/value",
+      "          EOF",
+      "        shell: bash",
+      '      - "uses": i/j@v3',
+      "      - name: after the script",
+      "        uses: k/l@v1",
+      "      - run: |2",
+      "            echo start",
+      "          uses: example/indented-script-text",
+      "      - name: |",
+      "        uses: m/n@v1",
+      "      - # note: |",
+      "        uses: o/p@v1",
     ].join("\n"),
-  ).join() !== "actions/checkout@v4,a/b@0123456789012345678901234567890123456789,g/h@v2"
+  ).join() !== "actions/checkout@v4,a/b@0123456789012345678901234567890123456789,g/h@v2,i/j@v3,k/l@v1,m/n@v1,o/p@v1"
 ) {
   fail("unpinnedActions self-test failed");
 }

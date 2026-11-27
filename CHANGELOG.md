@@ -11,6 +11,7 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 ### Fixed
 
 - The implementation workflow skeletons (`templates/implementation/github-actions/backend-ci.yml`, `frontend-ci.yml`) used `@v4` / `@v2` tags although their README and the kit CI require SHA pins. They now pin the releases verified on 2026-11-27: `actions/checkout` v7.0.1, `actions/setup-node` v7.1.0, `actions/upload-artifact` v7.0.2, `shivammathur/setup-php` 2.40.0. Implementation repositories that copied the old skeletons: pin your own workflows the same way; the new majors need a current runner (fine on GitHub-hosted runners; update self-hosted ones first).
+- The pin check reads `uses:` only where it is a key: text inside a block scalar (a `run: |` script or heredoc) is ignored, quoted keys (`"uses":`) and quoted values are understood.
 
 ## [1.1.1] - 2026-11-27
 
