@@ -48,7 +48,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | P3 | Studio repo-map practice in seed | **55** | **80** | Generic one-pager under method or templates: “when product repos change, update atlas diagrams” (no org URLs) | ⚠️ Open |
 | P3 | Jira/tracker pack genericity | **82** | **90** | Keep CSV/generator scripts product-side; strengthen `templates/docs/jira` with “implementation-ready card body” checklist only | ⚠️ Open |
 | P4 | Full prototype starter in templates | **35** | **70** | Optional: publish a *generic* `project-ui` minimal kit **without** product screens — only if copy-from-finished-product friction stays high | ❌ Deferred (Ponytail) |
-| P4 | Auto % validator script | **20** | **50** | Only if humans/agents stop updating the atlas; until then manual is fine | ❌ Deferred |
+| P4 | Auto % validator script | **50** | **50** | `check-structure.mjs` recomputes the two equal-weight breadth rollups (both had drifted from their rows: surfaces ~27% → ~25%, harnesses ~58% → ~53%); row %s and domain averages stay judgment | ✅ Done 2026-11-27 |
 
 ---
 

@@ -23,7 +23,7 @@
 
 | Mistake | What goes wrong | Fix |
 |---------|-----------------|-----|
-| Using Livewire for the product’s primary SPA UI without ADR | Stack conflict with Next.js | API + Next; Livewire only if product decides |
+| Using Livewire for the primary UI when the product pinned a separate SPA frontend, without an ADR | Stack conflict with the pinned frontend | API + that frontend; Livewire only if an ADR decides |
 | Giant god-component | Unmaintainable Blade/PHP | Child components / Form objects |
 
 ## Agent habits

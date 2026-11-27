@@ -57,10 +57,10 @@ Actor-loop delivery still applies when the product uses it: do not stub the **cu
 | Product shape | Day loop depth | Typical gates |
 |---------------|----------------|---------------|
 | **Small / early** (prototype tool, few screens, no money/PII/booking) | Core closeout only; FEATURE **Lightweight** when risk is bounded | CI Phase A; skip SEO/booking/API-readiness/CodeRabbit theater when those surfaces do not exist — mark **N/A** |
-| **Growing** (real users, API, bilingual app) | Core + gates that match touched surfaces | API readiness + cross-surface when APIs/contracts change; SEO+GEO when public pages change; DSA on hot paths |
+| **Growing** (real users, API, more than one interface language) | Core + gates that match touched surfaces | API readiness + cross-surface when APIs/contracts change; SEO+GEO when public pages change; DSA on hot paths |
 | **Full product** (payments, PII, AI, booking, multi-day Stories, Notion/Jira calendar) | Full method in this file | All applicable numbered gates; CodeRabbit; Pareto + handoff; tracker + day page; CD when hooks exist |
 
-**Grow forward, do not pretent:** when risk or surface area increases (first payment, first PII, first booking, first public marketing page), **add** the matching gate the same day — do not keep running “small product” mode after those surfaces exist.
+**Grow forward, do not pretend:** when risk or surface area increases (first payment, first PII, first booking, first public marketing page), **add** the matching gate the same day — do not keep running “small product” mode after those surfaces exist.
 
 **Shrink honestly:** domain gates already say **N/A** when the day does not touch that surface. Flexibility means using those N/As and FEATURE profiles — **not** deleting CI, skipping merge verification, or inventing a second MVP delivery mode.
 

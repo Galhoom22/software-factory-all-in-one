@@ -28,7 +28,7 @@ When the product later adds a server and hooks, the agent enables Phase B/C from
 
 Local tests catch most bugs. **GitHub Actions** catches “works on my machine,” missing files, wrong PHP/Node, and secret leaks. **CD** (host deploy hooks started by CI) stops laptop deploys and keeps staging/production tied to `main` only after checks pass. Together they raise professionalism without inventing a second delivery method — and without blocking early products that have only CI.
 
-## Two layers
+## Three layers
 
 | Layer | Where | Job |
 |-------|--------|-----|

@@ -32,7 +32,7 @@ Enforced in CI by `project-ui/scripts/check-ui.mjs` and the other quality gates 
 
 ## Non-Negotiables
 
-- **Languages:** every screen exists in {{UI_LANGUAGES}} with a visible language switch.
+- **Languages:** every screen exists in {{UI_LANGUAGES}}, with a visible language switch when there is more than one.
 - **RTL:** if any language is right-to-left, use logical utilities (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`, `text-start`), never left/right.
 - **Accessibility:** WCAG 2.2 AA: 4.5:1 text contrast, visible focus, keyboard navigation, labels on inputs.
 - **UI only:** mock data lives in `project-ui/src/mocks/`, shaped exactly like `docs/API_CONTRACT.md`.

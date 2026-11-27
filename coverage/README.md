@@ -48,7 +48,7 @@ Owner standing / product calendars stay out of this folder — link from product
 | **85–94** | Battle-tested for studio products; lessons + prompts + CI/day loop where relevant |
 | **95–100** | Fully specified; upgrades are edge cases only |
 
-**How to re-score after a change:** bump or drop the row’s % in the domain file **and** refresh the scorecard below in the same edit, and add a line to [`CHANGELOG.md`](../CHANGELOG.md).
+**How to re-score after a change:** bump or drop the row’s % in the domain file **and** refresh the scorecard below in the same edit, and add a line to [`CHANGELOG.md`](../CHANGELOG.md). The equal-weight breadth rollups (surfaces, harnesses) are arithmetic: `scripts/check-structure.mjs` fails when they stop matching the mean of their rows.
 
 ---
 
@@ -64,16 +64,16 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
 | [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~28 | **89%** | ✅ |
-| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~27%** breadth | ⚠️ |
-| [`08-ai-agents.md`](08-ai-agents.md) | AI agent / IDE harnesses (Cursor, Codex, Claude, Gemini, CN tools, …) | ~20 | **~58%** breadth | ⚠️ |
+| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~25%** breadth | ⚠️ |
+| [`08-ai-agents.md`](08-ai-agents.md) | AI agent / IDE harnesses (Cursor, Codex, Claude, Gemini, CN tools, …) | ~20 | **~53%** breadth | ⚠️ |
 
 ### Overall factory professionalism
 
 | Metric | Value |
 |--------|-------|
 | **Weighted overall coverage** (domains 01–06 craft homes) | **~89%** |
-| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~27%** |
-| **AI-agent harness breadth** ([`08`](08-ai-agents.md), equal-weight harnesses) | **~58%** |
+| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~25%** |
+| **AI-agent harness breadth** ([`08`](08-ai-agents.md), equal-weight harnesses) | **~53%** |
 | **Studio-default harness strength** (Cursor + Codex + Claude Code) | **~92%** |
 | **Studio-default strength** (web app + HTTP API + admin web) | **~83%** |
 | **Strongest areas** | Actor-loop delivery, implementation day pipeline, CI/CD progressive phases, agent discovery, requirements activation, lessons capture, web/API stack packs |
@@ -140,8 +140,8 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Next.js tech pack | `technologies/nextjs` | ✅ ~92% |
 | Full Next.js prototype app in templates | `02` / `05-gaps` | ⚠️ ~35% (docs + anti-slop only; copy from a finished product) |
 | Always-Current / factory freshness | `07-judgment/playbook-freshness` + CI script | ✅ ~95% |
-| AI agent harness % (Cursor/Codex/Claude/Trae/…) | `08-ai-agents` + `agents/` | ⚠️ breadth ~58%; studio-default ~92% |
-| Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth ~27%; web+API ~83% |
+| AI agent harness % (Cursor/Codex/Claude/Trae/…) | `08-ai-agents` + `agents/` | ⚠️ breadth and studio-default: scorecard above |
+| Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth and web+API strength: scorecard above |
 | Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌ ~8–12% |
 | Desktop / Electron / extensions / games | `07-software-surfaces` | ❌/~⚠️ ~3–18% |
 | Which language maps to which surface | `07-software-surfaces` § Languages | living map |

@@ -55,7 +55,7 @@ Never read the whole kit. Pick the one route that matches the task, read its **a
 | An agent harness | One `agents/<slug>/README.md` from [`agents/_pack-template/`](agents/_pack-template/README.md) | `check-structure` |
 | A method doc | The next free number (`10-…`); never renumber existing docs | `check-content-integrity` |
 | A template file | Write it in product coordinates; add it to the template CI list only if every product must have it | `check-seed` |
-| A gate | A zero-dependency script with probes, listed in CI and in CONTRIBUTING | Its own probes |
+| A gate | A zero-dependency script with probes, run in CI and named in CONTRIBUTING, AGENTS, this file and the PR template | Its own probes + `check-structure` (gate lists) |
 | A new top-level entry | Also add it to `KIT_TOP` in `scripts/seed.mjs` | `check-structure` |
 | A release | Move the `[Unreleased]` entries under a version heading in [`CHANGELOG.md`](CHANGELOG.md), then tag ([`CONTRIBUTING.md`](CONTRIBUTING.md) § Releasing) | `check-structure` (CHANGELOG format) |
 
@@ -65,7 +65,7 @@ Never read the whole kit. Pick the one route that matches the task, read its **a
 |--------|--------|---------|
 | [`check-forever-generic.mjs`](scripts/check-forever-generic.mjs) | No mailboxes, secret-shaped tokens, private page URLs or user paths | Kit CI, maintainer sync |
 | [`check-content-integrity.mjs`](scripts/check-content-integrity.mjs) | No tool artifacts written back; tables render on GitHub; links and anchors resolve | Kit CI, maintainer sync, seeded repos (`--product`) |
-| [`check-structure.mjs`](scripts/check-structure.mjs) | Packs well-formed; router lists every guide; README facts match the tree; cited decisions exist; `KIT_TOP` exact; CHANGELOG release format | Kit CI, seeded repos |
+| [`check-structure.mjs`](scripts/check-structure.mjs) | Packs well-formed; router lists every guide; README facts match the tree; cited decisions and decision ranges match the log; every gate is wired into CI and named in each gate list; equal-weight atlas rollups equal the mean of their rows; `KIT_TOP` exact; CHANGELOG release format | Kit CI, seeded repos |
 | [`check-requirements-activation.mjs`](scripts/check-requirements-activation.mjs) | The requirements-driven activation path is wired | Kit CI, seeded repos |
 | [`check-seed.mjs`](scripts/check-seed.mjs) | A seeded repository passes its own gates — fresh, activated, in place, updated | Kit CI, maintainer sync |
 

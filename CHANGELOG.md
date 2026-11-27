@@ -4,9 +4,40 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-27
+
+The structure gate now computes the facts that had drifted by hand (the decision range, the atlas breadth rollups, every gate list), and generic text no longer carries one product's choices. Seeded repositories that were green stay green.
+
 ### Added
 
 - `templates/AGENTS.template.md` § Git Safety: never paste or write back a tool's compressed or elided view of a file, and check the staged line counts for deletions you did not intend. The kit's own `AGENTS.md` already had this rule; seeded repositories now get it too. Existing repositories: add the bullet to your `AGENTS.md`, because `seed.mjs --update` never overwrites it.
+- `scripts/check-structure.mjs` checks every range that describes the whole decision log (it starts at `SF-01`; separators `…`, `...`, `..`, `–`, `—`, `-`, `to`, `through`) against the newest decision in `DECISIONS.md`. Sub-ranges such as `SF-03 to SF-05` are not checked; released `CHANGELOG.md` entries keep the range they shipped with.
+- `scripts/check-structure.mjs` also requires the pull request template to name every gate.
+- `scripts/check-structure.mjs` recomputes the equal-weight breadth rollups in `coverage/07-software-surfaces.md` and `coverage/08-ai-agents.md` from their rows (a scorecard % that is not a bold whole number fails, and the surfaces file must state how many rows it scores) and checks each copy it lists: the rollup line in that file, two lines in `coverage/README.md` and the surfaces figure in `README.md`. Other atlas text points at the rollup instead of repeating the number.
+
+### Changed
+
+- Forever generic: method docs (`01`, `03`, `05`, `08`) say "every interface language" (and "every text direction in scope") instead of assuming two, and the prompts no longer fix the reply language or name a preferred harness; technology packs (Alpine.js, Livewire, the PHP compositions map) no longer state one product's frontend as fact; `07-judgment/dsa-performance.md` no longer points at a person's study set; a non-English example was removed from `technologies/README.md`. No version facts changed, so no pack's Checked dates moved.
+- The language switch (and the UI guard rule for it) is required only when a product has more than one interface language: `03-PROTOTYPE.md`, and the templates `requirements.md`, `docs/SRS.md` NFR-04, `cursor-rules/project-ui-design.mdc`, the Copilot `project-ui` instructions and the PR template (`AGENTS.template.md` already said so). Existing repositories with several languages need no change.
+
+### Fixed
+
+- `README.md` named the decision log `SF-01 … SF-15` after `SF-16` was added.
+- The pull request template listed four of the five gates (no `check-seed.mjs`) and made two of them conditional; it now lists all five, as `CONTRIBUTING.md` requires.
+- Atlas arithmetic: industry-surface breadth is ~25% (the 21 rows average 25.4; the scorecard said ~27% while the same file said ~25%) and AI-agent harness breadth is ~53% (the 16 rows average 53.3; it said ~58%). No row was re-scored.
+- Small corrections: `09-CI-CD.md` "Two layers" heads a three-layer table; `06-LESSONS.md`, `05-PROMPTS.md`, `03-PROTOTYPE.md` and `01-STEPS.md` named `PROTOTYPE.md`, `PROMPTS.md` and `STEPS.md` without their numbers (now `03-`, `05-`, `01-`); a typo in `08-IMPLEMENTATION-DAY.md`; a stray character at the end of `coverage/07-software-surfaces.md`; two gate scripts still called the kit "the playbook" in their comments; `technologies/php-laravel-compositions.md` listed the Next.js pack as a gap although it exists.
+
+### Known limitations (still open from 1.0.0)
+
+- Product entry files (`templates/AGENTS.template.md`, `templates/docs/AGENT_START.md`, `llms.txt`) do not yet point agents at the task routes in `ARCHITECTURE.md` § 1.
+- Hub documents (`08`, `04`, `01`) link guides directly as well as through the judgment router.
+- There is no written bug-fix procedure yet, and a few script names in `03-PROTOTYPE.md` refer to files a product creates itself.
+
+### Migration (vendored copies)
+
+1. From a fresh clone of the v1.1.0 release: `node scripts/seed.mjs --update <your-planning-repo>`.
+2. Add the elided-view bullet to your `AGENTS.md` § Git Safety by hand (`seed.mjs --update` never touches product files).
+3. Only if your product has a single interface language: take the conditional language-switch wording into your `requirements.md`, `docs/SRS.md` (NFR-04), `.cursor/rules/project-ui-design.mdc`, `.github/instructions/project-ui.instructions.md` and `.github/pull_request_template.md` from the matching files under `software-factory-all-in-one/templates/`.
 
 ## [1.0.0] - 2026-11-26
 
@@ -108,5 +139,6 @@ Kept verbatim from the coverage atlas, newest first.
 | 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |
 
-[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.1.0
 [1.0.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.0.0

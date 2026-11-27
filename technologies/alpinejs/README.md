@@ -21,7 +21,7 @@
 ## Product vs pack
 
 - This pack describes professional **Alpine 3** usage.
-- Product SRS owns whether Alpine is allowed at all (the product frontend is Next.js — do **not** add Alpine there without an ADR).
+- Product SRS owns whether Alpine is allowed at all (when the product's frontend is a separate SPA such as Next.js, do **not** add Alpine there without an ADR).
 - Prefer Alpine for light progressive enhancement; do not rebuild an SPA in directives.
 
 ## Related

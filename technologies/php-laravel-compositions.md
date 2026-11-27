@@ -80,7 +80,6 @@ These raise professionalism later when the owner pastes official docs or names t
 | Dedicated **Vite** pack | Covered inside Laravel + Tailwind install paths today |
 | **Pest** / PHPUnit pack | Testing lives in product TESTING docs + FEATURE_SDLC |
 | **PostgreSQL** / Redis / queue workers | Infra — add when named |
-| **Next.js** pack | Separate SPA world (the product frontend); not part of TALL/VILT |
 | React/Svelte Inertia adapters as deep packs | VILT here means **Vue**; other adapters when a product needs them |
 
 ## Related

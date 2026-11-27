@@ -13,7 +13,7 @@
 **If `project-ui/` changed:**
 
 - [ ] Follows `project-ui/DESIGN.md`: design tokens only, existing components reused.
-- [ ] Works in every interface language, with the language switch visible.
+- [ ] Works in every interface language, with the language switch visible when there is more than one.
 - [ ] Every state is reachable from the screen index; the user flows and the README Screen Index are updated.
 - [ ] Keyboard, visible focus, labels, 4.5:1 contrast; no axe violations.
 - [ ] No behavior-design tricks (fake proof, urgency, gamification, pre-checked consent).

@@ -41,7 +41,7 @@ Build these before the first product screen; every screen then reuses them. File
 | Piece | What it does | Typical file |
 |-------|--------------|---------------|
 | Language and direction | `?lang=` picks the language (default: the main market's); the root sets `lang` and `dir`; a proxy passes the language and path to server components such as the 404 page; fonts per language through `next/font`. | `src/lib/i18n.ts`, `src/proxy.ts`, `src/app/layout.tsx` |
-| Language switch | Visible on every screen, keeps the current path and state. | `src/components/common.tsx` |
+| Language switch | When the product has more than one interface language: visible on every screen, keeps the current path and state. | `src/components/common.tsx` |
 | Theme | Light and dark, follows the device by default, a toggle on every screen, the choice kept in a cookie so the server renders it without a flash. | `src/components/ThemeToggle.tsx`, `src/app/layout.tsx` |
 | Full-prefetch link | Every route reads `?lang` and `?state`, so it is dynamic and the default prefetch loads nothing; one `Link` wrapper prefetches the whole page, making navigation instant. The guard bans the direct import. | `src/components/Link.tsx` |
 | Security headers | CSP, `nosniff`, referrer and permissions policies, no framing, no `X-Powered-By`; `allowedDevOrigins: ["127.0.0.1"]` so the dev server hydrates on that address. | `next.config.ts` |
@@ -58,7 +58,7 @@ The home page (`/`) is the team's map, built in its final shape from the start (
 
 - **On top, the user flows:** one card per actor listing its stages; each stage opens a clickable diagram (`/flows/<actor>`).
 - **Below, the screen index:** text only (no thumbnails or live previews), grouped by actor and section, each screen with its ID and its states underneath, each section linking to the flow stages that use it.
-- **Only built screens for the actor in focus**, production-complete. Both languages.
+- **Only built screens for the actor in focus**, production-complete. Every interface language.
 
 ### URL Conventions
 
@@ -91,8 +91,8 @@ Screen IDs are a letter per area and a number (`A01` account, `P03` profile sect
 | `src/app/flows.ts` | User flows per actor; each step names screens from the index. |
 | `src/app/flows.test.ts` | Fails when a flow misses a main screen or a state has no main screen. |
 | `src/app/docs.test.ts` | Fails when the README Screen Index misses a screen, SRS traceability misses an ID, or any Markdown link or heading anchor is broken. |
-| `scripts/check-ui.mjs` | UI guard: physical left/right utilities, raw colors instead of tokens, gradients, inline styles, network or storage code, raw HTML, `eval`, external images, direct `next/link`, unapproved dependencies, a screen without the language switch. |
-| `scripts/crawl.mjs` | Audit (`npm run crawl`): every screen and state in both languages, light and dark, desktop and phone, with axe, overflow, unnamed controls, broken anchors, wrong `lang`/`dir`, console errors, and link status. |
+| `scripts/check-ui.mjs` | UI guard: physical left/right utilities, raw colors instead of tokens, gradients, inline styles, network or storage code, raw HTML, `eval`, external images, direct `next/link`, unapproved dependencies, a screen without the language switch (when there is more than one interface language). |
+| `scripts/crawl.mjs` | Audit (`npm run crawl`): every screen and state in every interface language, light and dark, desktop and phone, with axe, overflow, unnamed controls, broken anchors, wrong `lang`/`dir`, console errors, and link status. |
 | `scripts/capture-landing-shots.mjs` | Captures real product screenshots for the landing page from the running prototype, per language and theme. |
 
 ### Checks
@@ -123,13 +123,13 @@ Then Lighthouse on a few screens (accessibility and SEO). The crawl's expected r
 
 1. Plan the screen and its states (`/impeccable shape` or a short written plan).
 2. Build it from the starter kit and the design tokens; add it to `screens.ts`, `flows.ts`, and the README Screen Index.
-3. Review: `critique`, `audit`, `harden` (RTL, long content, edge states), `polish`.
-4. Run the checks, then walk the flow it belongs to as the user (STEPS.md step 16).
+3. Review: `critique`, `audit`, `harden` (every text direction in scope, long content, edge states), `polish`.
+4. Run the checks, then walk the flow it belongs to as the user ([`01-STEPS.md`](01-STEPS.md) step 16).
 
 ### Landing Page
 
 - Sections in the order a visitor decides: what it is, how it works, the core value, privacy and trust, pricing, questions, a final call to action, and a footer with grouped links (product, legal, company).
-- Each section shows a **real screenshot** of the prototype, captured by script in both languages and themes, never a mock illustration.
+- Each section shows a **real screenshot** of the prototype, captured by script in every interface language and theme, never a mock illustration.
 - Pricing switches between billing periods with the product's documented default selected (do not invent a different default in the prototype), shows the full amount for the period with its per-month price, the full terms, and only the main payment methods. Every plan and pack button opens checkout with that choice already made (one URL parameter), and the checkout keeps it across the language switch.
 - Never fabricated reviews, metrics, or logos; a reviews section waits for real reviews (`notes.md`).
 - Draft legal pages, company information, and the sub-processor list are linked from the footer, marked as drafts until legal review.

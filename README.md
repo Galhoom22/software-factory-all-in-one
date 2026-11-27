@@ -68,7 +68,7 @@ Full walkthrough: [`00-USAGE.md`](00-USAGE.md) · ordered steps: [`01-STEPS.md`]
 | Forever-generic gate | **CI enforced** | `scripts/check-forever-generic.mjs` |
 | Content-integrity gate | **CI enforced** | `scripts/check-content-integrity.mjs` |
 
-Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~27%) — we do not pretend equal depth everywhere. See [`coverage/07-software-surfaces.md`](coverage/07-software-surfaces.md).
+Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~25%) — we do not pretend equal depth everywhere. See [`coverage/07-software-surfaces.md`](coverage/07-software-surfaces.md).
 
 ---
 
@@ -124,7 +124,7 @@ Never put real product names, people, or tracker keys **back into this public ki
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet
 ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
-DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-15)
+DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-16)
 CHANGELOG.md              What changed, and how to update a vendored copy
 AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
 coverage/                 Honest ✅/% atlas (craft · surfaces · agents)
