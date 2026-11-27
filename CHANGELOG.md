@@ -4,9 +4,13 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-27
+
+Supply-chain pinning is now enforced: every action in the kit's CI and in the workflow templates is pinned to a commit SHA (container actions to an image digest), and the structure gate fails on any that is not. Seeded repositories that were green stay green.
+
 ### Added
 
-- `scripts/check-structure.mjs` fails when a workflow under `.github/workflows/` or `templates/**/github-actions/` uses an action that is not pinned to a full commit SHA with a version comment (commented-out steps included).
+- `scripts/check-structure.mjs` fails when a workflow under `.github/workflows/` or `templates/**/github-actions/` uses an action that is not pinned to a full commit SHA with a version comment (commented-out steps included); container actions (`docker://`) must pin an image digest (`@sha256:…`); only local `./` actions are exempt.
 
 ### Fixed
 
@@ -156,7 +160,8 @@ Kept verbatim from the coverage atlas, newest first.
 | 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |
 
-[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.2.0
 [1.1.1]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.1.1
 [1.1.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.1.0
 [1.0.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.0.0
