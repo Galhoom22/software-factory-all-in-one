@@ -97,6 +97,7 @@ Lazy means efficient, not careless. Before writing anything new: skip if unneede
   2. Commit only the files related to the change.
   3. After pushing, confirm the CI run passes (for example `gh run watch`). If it fails, fix the cause and push the fix.
   4. If a check fails and cannot be fixed, do not push; report the failure.
+- **Never paste or write back a tool's compressed or elided view of a file.** Context tools can shorten what a read or a shell command shows. Edit with exact replacements against the real file, and before committing check the staged line counts (`git diff --staged --numstat`) for deletions you did not intend.
 - **Never force-push**, never rewrite pushed history (`reset --hard`, `rebase`, `commit --amend`, `filter-*`), and never delete branches, tags, or files unless the user explicitly asks.
 - **Never change** the remote URL, repository visibility, or repository settings.
 - Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): `type(scope): summary` (for example `feat(prototype): add billing screen states`).
