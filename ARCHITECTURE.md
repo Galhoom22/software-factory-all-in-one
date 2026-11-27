@@ -65,7 +65,7 @@ Never read the whole kit. Pick the one route that matches the task, read its **a
 |--------|--------|---------|
 | [`check-forever-generic.mjs`](scripts/check-forever-generic.mjs) | No mailboxes, secret-shaped tokens, private page URLs or user paths | Kit CI, maintainer sync |
 | [`check-content-integrity.mjs`](scripts/check-content-integrity.mjs) | No tool artifacts written back; tables render on GitHub; links and anchors resolve | Kit CI, maintainer sync, seeded repos (`--product`) |
-| [`check-structure.mjs`](scripts/check-structure.mjs) | Packs well-formed; router lists every guide; README facts match the tree; cited decisions and decision ranges match the log; every gate is wired into CI and named in each gate list; equal-weight atlas rollups equal the mean of their rows; `KIT_TOP` exact; CHANGELOG release format | Kit CI, seeded repos |
+| [`check-structure.mjs`](scripts/check-structure.mjs) | Packs well-formed; router lists every guide; README facts match the tree; cited decisions and decision ranges match the log; every gate is wired into CI and named in each gate list; equal-weight atlas rollups equal the mean of their rows; every workflow action is pinned to a commit SHA; `KIT_TOP` exact; CHANGELOG release format | Kit CI, seeded repos |
 | [`check-requirements-activation.mjs`](scripts/check-requirements-activation.mjs) | The requirements-driven activation path is wired | Kit CI, seeded repos |
 | [`check-seed.mjs`](scripts/check-seed.mjs) | A seeded repository passes its own gates — fresh, activated, in place, updated | Kit CI, maintainer sync |
 
