@@ -1,6 +1,6 @@
 # Software Factory All-in-One
 
-**Also known as:** `software-factory` · software factory · `software-factory-all-in-one` · مصنع برمجيات (Arabic for "software factory")
+**Also known as:** `software-factory` · software factory · `software-factory-all-in-one`
 
 **Open-source software factory for AI coding agents** — requirements in → production-ready plan out · forever generic · MIT
 
@@ -42,7 +42,7 @@ This factory gives the agent a **complete operating system for planning and deli
 
 In this repository, a **software factory** is not a CI/CD product brand and not a single IDE plugin. It is a **reusable method + templates**: you seed a private planning repo, write requirements in plain language, and agents follow a fixed spine (`00`–`09`, judgment, technology packs, harness packs) until planning for the current actor is production-quality — then implementation happens in separate FE/BE repos.
 
-If you searched for **software-factory**, **software factory all in one**, **software-factory-all-in-one**, or **مصنع برمجيات**, this kit is that method published as open source under MIT.
+If you searched for **software-factory**, **software factory all in one**, or **software-factory-all-in-one**, this kit is that method published as open source under MIT.
 
 ## Who this is for (and not)
 
@@ -140,7 +140,7 @@ Never put real product names, people, or tracker keys **back into this public ki
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet
 ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
-DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-20)
+DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-21)
 CHANGELOG.md              What changed, and how to update a vendored copy
 AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
 llms.txt                  Optional map for AI systems that read it (not a Google Search requirement)
@@ -182,9 +182,9 @@ This repository must stay **100% reusable** for any team and any product.
 
 An open-source **software factory** planning kit: seed a private repo, write `my-project-requirements.md`, and AI agents run a complete planning method (`00-USAGE` → `09-CI-CD`, judgment, templates) so the product plan is production-ready per actor. Canonical repo: [Galhoom22/software-factory-all-in-one](https://github.com/Galhoom22/software-factory-all-in-one).
 
-### Is this the same as "software-factory" or "مصنع برمجيات"?
+### Is this the same as "software-factory"?
 
-Those phrases are common names for this kind of method. This project's official name is **Software Factory All-in-One** (`software-factory-all-in-one`). Arabic speakers often say **مصنع برمجيات** for the same idea. Prefer the GitHub slug and this README when citing the kit.
+Yes — that phrase and **software factory all in one** are common names for this kind of method. This project's official name is **Software Factory All-in-One** (`software-factory-all-in-one`). Prefer the GitHub slug and this README when citing the kit. Kit documentation is **English only** (SF-21).
 
 ### Does it replace my frontend or backend app?
 

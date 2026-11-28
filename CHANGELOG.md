@@ -6,9 +6,12 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ### Added
 
+- **SF-21 English-only kit documentation:** remove non-English SEO aliases; README / `llms.txt` / standing state that all factory instructions stay English (including future language/i18n craft folders).
+
+
 - `architecture-patterns/` — on-demand cloud/distributed architecture library (44 packs; Azure Architecture Center catalog–inspired; original prose) with `07-judgment/architecture-patterns.md` selector (SF-20).
 - `scripts/check-structure.mjs` — architecture-pattern pack gate (six files, Sources Checked dates, index ↔ folders) parallel to design-patterns.
-- Public kit discoverability (SF-19): README direct answer + aliases (software-factory / software-factory-all-in-one / مصنع برمجيات), who-for table, FAQ for search/AI prompts; optional root [`llms.txt`](llms.txt) (explicitly not a Google Search requirement). Judgment cross-link in [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
+- Public kit discoverability (SF-19): README direct answer + English aliases (software-factory / software-factory-all-in-one), who-for table, FAQ for search/AI prompts; optional root [`llms.txt`](llms.txt) (explicitly not a Google Search requirement). Judgment cross-link in [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
 - Always-current API clients: OpenAPI 3.1 as machine hub ([openapis.org](https://www.openapis.org/) / [Swagger](https://swagger.io/)), regenerate from day one, CI drift + optional framework route parity, day gate in `08-IMPLEMENTATION-DAY.md` (SF-17).
 - Judgment + templates for HTTP API client packs: Postman Collection v2.1, Insomnia export, and Apidog-via-OpenAPI under `templates/docs/api-clients/`, with guide [`07-judgment/api-clients.md`](07-judgment/api-clients.md) (SF-17). One inventory → many clients; contract stays SoT.
 
