@@ -16,18 +16,19 @@ Security depth: threat modeling, CI workflow hardening, incident response and ve
 - `07-judgment/incident-response.md` — mitigate first, evidence timeline, postmortem triggers, blameless fishbone → 5 whys, typed Detect / Mitigate / Prevent actions, postmortem skeleton for implementation repositories.
 - `07-judgment/agent-skills.md` § Vetting before you install — hidden directives, invisible or bidi text, excessive agency, tool shadowing, silent exfiltration, unpinned fetches, encoded payloads (OWASP LLM Top 10 mapping).
 - `08-IMPLEMENTATION-DAY.md` gate 12 (security boundary: threat model + workflow edits); one-line lessons in `06-LESSONS.md`; three prompts in `05-PROMPTS.md`; router rows and an adopt/forbid row for community agent collections in `07-judgment/README.md` and `templates/docs/JUDGMENT.md`.
-- `scripts/check-structure.mjs` — every kit and template workflow that defines jobs declares a top-level `permissions:`, never uses `pull_request_target`, and never interpolates an attacker-controllable context (issue/PR/comment/review text, `head_ref`, commit messages) inside a `run:` or `script:` body (dot or `['index']` access, comment lines included); kit text files (`.md`, `.mdc`, scripts, YAML, JSON, …) contain none of U+200B–U+200F, U+061C, U+2060, U+FEFF, U+202A–U+202E, U+2066–U+2069. Both checks are self-tested.
+- `scripts/check-structure.mjs` — every kit and template workflow that defines jobs declares a top-level `permissions:`, declares no `pull_request_target` trigger under `on:`, and never interpolates an attacker-controllable context (issue/PR/comment/review text, `head_ref`, commit messages) inside a `run:` or `script:` value (dot or `['index']` access; block, quoted or plain values, including expressions split across lines and comment lines); kit text files (`.md`, `.mdc`, scripts, YAML, JSON, …) contain none of U+200B–U+200F, U+061C, U+2060, U+FEFF, U+202A–U+202E, U+2066–U+2069. Both checks are self-tested.
 
 ### Changed
 
 - Kit CI and the backend/frontend workflow skeletons check out with `persist-credentials: false` (none of those jobs push). Implementation repositories that copied the skeletons can add the same two lines.
 - `09-CI-CD.md` principle 5 names GitHub's workflow-dependency lockfile as the stronger option where adopted, and links the hardening checklist.
 - `templates/docs/DEPLOYMENT.md` § Rollback and Recovery links the incident-response guide.
+- `templates/docs/COMPLIANCE.md` adds DP-04 (breach-notice recipients, deadlines and sender per market) and a matching pre-launch checklist line, so the incident guide's legal step has a home.
 
 ### Migration (vendored copies)
 
 1. From a fresh clone of the v1.4.0 release: `node scripts/seed.mjs --update <your-planning-repo>`.
-2. No product-file edits are required for green CI. Optional: add `persist-credentials: false` to the checkout step of implementation workflows that never push, and run the `ci-hardening.md` checklist over your own `.github/workflows/`.
+2. No product-file edits are required for green CI. Optional: add `persist-credentials: false` to the checkout step of implementation workflows that never push, and run the `ci-hardening.md` checklist over your own `.github/workflows/`. Products already past launch: add a DP-04 row to `docs/COMPLIANCE.md` by hand (`seed.mjs --update` never touches product files).
 
 ## [1.3.0] - 2026-11-28
 

@@ -46,7 +46,7 @@ An outside skill, custom agent, MCP server or hook is **code and instructions th
 | Threat | What it looks like | Check |
 |--------|--------------------|-------|
 | Hidden directive (prompt injection) | Instructions aimed at the model in HTML comments, "system"-style tags, footnotes, or text a rendered preview hides | Read the **raw** file, not the preview; search for directive phrasing ("ignore previous", "you are now", "do not tell the user") |
-| Invisible or disguised text | Zero-width characters, bidi controls (Trojan Source), mixed-script look-alike names | Scan for U+200B–U+200F, U+061C, U+2060, U+FEFF, U+202A–U+202E, U+2066–U+2069; this kit's structure gate rejects them in kit files |
+| Invisible or disguised text | Zero-width characters, bidi controls (Trojan Source), mixed-script look-alike names | Scan for U+200B–U+200F, U+061C, U+2060, U+FEFF, U+202A–U+202E, U+2066–U+2069 (this kit's structure gate rejects them in kit files); also check that every tool, package, command and domain name uses a single script — a Cyrillic `і` (U+0456) makes `gіt` look like `git` while passing a code-point scan |
 | Excessive agency | Tool or permission list far wider than the stated purpose (a formatter asking for shell, network or credential access) | Purpose and tools must match; grant the narrowest set; no tokens with org-wide or write scope "for convenience" |
 | Tool poisoning or shadowing | A description that changes how a **different**, trusted tool behaves ("when X is present, always also send …") | A tool description may describe only itself |
 | Silent exfiltration | Reading env vars, keys or config and placing them in an output field, log, "telemetry" or URL | No step reads secrets it does not need; no unexplained outbound calls |

@@ -472,19 +472,34 @@ if (
 // --- Workflow hardening (07-judgment/ci-hardening.md): least-privilege token, no privileged PR trigger,
 // no attacker-controllable context pasted into a shell or github-script body (use env: instead) ---
 const ATTACKER_CONTEXT =
-  /\$\{\{[^}]*\b(?:github(?:\.|\[\s*['"])head_ref|github\.event\.(?:issue|pull_request|comment|review|review_comment|pages|commits|head_commit|discussion|discussion_comment)\b[\w.*[\]'"]*?(?:\.|\[\s*['"])(?:title|body|message|label|ref|page_name|name|email))\b[^}]*\}\}/; // dot and ['index'] access
+  /\$\{\{[^}]*\b(?:github\.head_ref|github\.event\.(?:issue|pull_request|comment|review|review_comment|pages|commits|head_commit|discussion|discussion_comment)\b[\w.*[\]]*?\.(?:title|body|message|label|ref|page_name|name|email))\b[^}]*\}\}/;
+// Flatten each ${{ }} to one canonical line: expressions ignore whitespace (newlines too) between tokens, and
+// github['event'].issue["title"] reads the same context as github.event.issue.title ('' is YAML's escaped quote in
+// a single-quoted scalar). The expression's newlines move after it, so the start line still counts right.
+const canonicalExpressions = (text) =>
+  text.replace(/\$\{\{[^}]*\}\}/g, (expr) => {
+    const flat = expr.replace(/\s*([.[\]])\s*/g, "$1").replace(/\[(''|['"])([\w-]+)\1\]/g, ".$2").replace(/\s+/g, " ");
+    return flat + "\n".repeat(expr.split("\n").length - 1);
+  });
+// shortcut: a line scanner, not a YAML parser — it enforces the mechanical subset of 07-judgment/ci-hardening.md;
+// switch to a parser dependency only if a real workflow shape slips past it.
 function workflowHardeningIssues(yaml) {
   const issues = [];
-  const lines = yaml.split(/\r?\n/);
+  // YAML allows the root mapping to be indented: measure it once, then read root keys relative to it.
+  const raw = yaml.split(/\r?\n/);
+  const rootIndent = (raw.find((l) => l.trim() !== "" && !/^\s*#/.test(l)) ?? "").match(/^ */)[0].length;
+  const lines = raw.map((l) => (l.startsWith(" ".repeat(rootIndent)) ? l.slice(rootIndent) : l));
   if (lines.some((l) => /^jobs\s*:/.test(l)) && !lines.some((l) => /^permissions\s*:/.test(l))) issues.push('no top-level "permissions:" (deny by default, grant per job)');
   const sink = (lineNo) => issues.push(`line ${lineNo}: attacker-controllable \${{ }} inside a script — pass it through env:`);
-  // The runner reads the whole scalar, so an expression may span lines: test the joined body, report the line it starts on.
+  // A run:/script: value (block, quoted or plain) continues on more-indented lines and the runner reads it whole,
+  // so an expression may span lines: test the joined value, report the line the expression starts on.
   const flush = () => {
-    const text = body.lines.join("\n");
+    const text = canonicalExpressions(body.lines.join("\n"));
     for (const m of text.matchAll(new RegExp(ATTACKER_CONTEXT.source, "g"))) sink(body.first + text.slice(0, m.index).split("\n").length - 1);
     body = null;
   };
-  let body = null; // { indent of the run:/script: key, first line number, lines } while inside its block scalar
+  let body = null; // { indent of the run:/script: key, first line number, lines } while inside its value
+  let inOn = false; // inside the top-level on: mapping, where triggers are declared
   lines.forEach((line, i) => {
     const indent = line.match(/^ */)[0].length;
     if (body !== null) {
@@ -496,11 +511,12 @@ function workflowHardeningIssues(yaml) {
       flush();
     }
     if (/^\s*#/.test(line)) return;
-    if (/\bpull_request_target\b/.test(line)) issues.push(`line ${i + 1}: pull_request_target trigger (runs fork code paths with a write token and secrets)`);
+    const onKey = line.match(/^(?:on|"on"|'on')\s*:(.*)$/);
+    if (onKey) inOn = true;
+    else if (/^\S/.test(line)) inOn = false;
+    if (inOn && /\bpull_request_target\b/.test(onKey ? onKey[1] : line)) issues.push(`line ${i + 1}: pull_request_target trigger (runs fork code paths with a write token and secrets)`);
     const key = line.match(/^( *)(-\s+)?(?:run|script)\s*:\s*(.*)$/);
-    if (!key) return;
-    if (/^[|>]/.test(key[3])) body = { indent: key[1].length + (key[2] ? key[2].length : 0), first: i + 2, lines: [] };
-    else if (ATTACKER_CONTEXT.test(key[3])) sink(i + 1);
+    if (key) body = { indent: key[1].length + (key[2] ? key[2].length : 0), first: i + 1, lines: [key[3]] };
   });
   if (body !== null) flush();
   return issues;
@@ -508,6 +524,7 @@ function workflowHardeningIssues(yaml) {
 if (
   workflowHardeningIssues(
     [
+      "name: Reject pull_request_target",
       "on:",
       "  pull_request_target:",
       "jobs:",
@@ -531,11 +548,24 @@ if (
       "            console.log(`${{ github.event.comment.body }}`)",
       "      # - run: echo ${{ github.event.issue.body }}",
       "      - name: ${{ github.event.pull_request.title }}",
+      "      - run: 'echo \"${{",
+      "          github.event.issue.title }}\"'",
+      "      - run: echo \"${{ github['event'].issue.title }}\"",
       "      - run: |",
       "          echo ${{ github.event.review.body }}",
+      "      - run: 'echo \"${{ github.event.issue[''title''] }}\"'",
+      "      - run: |",
+      '          echo "${{ github[',
+      "            'event'].issue.title }}\"",
+      "          echo ${{ github.event.issue.number }}",
+      "          echo ${{ github.event.comment.body }}",
     ].join("\n"),
   ).join("|") !==
-  'no top-level "permissions:" (deny by default, grant per job)|line 2: pull_request_target trigger (runs fork code paths with a write token and secrets)|line 9: attacker-controllable ${{ }} inside a script — pass it through env:|line 11: attacker-controllable ${{ }} inside a script — pass it through env:|line 12: attacker-controllable ${{ }} inside a script — pass it through env:|line 13: attacker-controllable ${{ }} inside a script — pass it through env:|line 15: attacker-controllable ${{ }} inside a script — pass it through env:|line 21: attacker-controllable ${{ }} inside a script — pass it through env:|line 25: attacker-controllable ${{ }} inside a script — pass it through env:'
+    ['no top-level "permissions:" (deny by default, grant per job)', "line 3: pull_request_target trigger (runs fork code paths with a write token and secrets)"]
+      .concat([10, 12, 13, 14, 16, 22, 25, 27, 29, 30, 32, 35].map((n) => `line ${n}: attacker-controllable \${{ }} inside a script — pass it through env:`))
+      .join("|") ||
+  workflowHardeningIssues(["  on: pull_request_target", "  permissions: {}", "  jobs:", "    a:", "      steps:", "        - run: echo ok"].join("\n")).join("|") !==
+    "line 1: pull_request_target trigger (runs fork code paths with a write token and secrets)"
 ) {
   fail("workflowHardeningIssues self-test failed");
 }
