@@ -629,6 +629,62 @@ if (
   }
 }
 
+
+// --- System-design packs: dirs ↔ index ↔ six files ↔ Checked dates ---
+{
+  const sdRoot = path.join(playbookRoot, "system-design");
+  if (exists(sdRoot)) {
+    const skip = new Set(["_pack-template"]);
+    const required = [
+      "README.md",
+      "problem-solution.md",
+      "applicability.md",
+      "implementation.md",
+      "trade-offs.md",
+      "relations.md",
+    ];
+    const index = read(path.join(sdRoot, "README.md"));
+    const dirs = fs
+      .readdirSync(sdRoot, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && !skip.has(d.name))
+      .map((d) => d.name)
+      .sort();
+    for (const slug of dirs) {
+      const listed =
+        index.includes("[`" + slug + "/`](" + slug + "/README.md)") ||
+        index.includes("system-design/" + slug + "/");
+      if (!listed) {
+        fail("system-design/" + slug + "/ exists but is not listed in system-design/README.md index");
+      }
+      for (const f of required) {
+        if (!exists(path.join(sdRoot, slug, f))) fail(`system-design/${slug}/ missing ${f}`);
+      }
+      const card = read(path.join(sdRoot, slug, "README.md"));
+      if (!/Checked/i.test(card)) fail(`system-design/${slug}/README.md has no Checked dates in Sources`);
+      if (![...card.matchAll(/\b(20\d{2}-\d{2}-\d{2})\b/g)].length) {
+        fail(`system-design/${slug}/README.md has no YYYY-MM-DD Checked dates`);
+      }
+    }
+    for (const m of index.matchAll(/\|\s*\[`([a-z0-9-]+)\/`\]\(\1\/README\.md\)/g)) {
+      const slug = m[1];
+      if (!exists(path.join(sdRoot, slug))) fail(`system-design/README.md lists ${slug}/ but directory is missing`);
+    }
+    {
+      const probeDir = path.join(sdRoot, "_structure-probe-missing-file");
+      fs.mkdirSync(probeDir, { recursive: true });
+      fs.writeFileSync(path.join(probeDir, "README.md"), "# probe\n");
+      let probed = false;
+      try {
+        if (!exists(path.join(probeDir, "problem-solution.md"))) probed = true;
+      } finally {
+        fs.rmSync(probeDir, { recursive: true, force: true });
+      }
+      if (!probed) fail("system-design structure probe self-test failed");
+    }
+    note(`system-design packs scanned: ${dirs.length}`);
+  }
+}
+
 // --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
 {
   const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));

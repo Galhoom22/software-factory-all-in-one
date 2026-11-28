@@ -217,3 +217,5 @@ When the change belongs in the method itself (day loop, closeout order, CI/CD ga
 - Not a second requirements source. Features still follow [`04-FEATURE_SDLC.md`](04-FEATURE_SDLC.md) (adaptive depth, evidence, separate Done / Released / Outcome).
 - Not a substitute for SECURITY / COMPLIANCE / Governing Product Rules.
 - Not permission to skip CI because local tests passed, or to deploy from a laptop.
+
+When the change is a **large-scale capacity or topology sketch**, run [`07-judgment/system-design.md`](07-judgment/system-design.md) (SF-22) and open at most 1–3 [`system-design/`](system-design/README.md) packs.

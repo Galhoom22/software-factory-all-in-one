@@ -4,6 +4,8 @@ Absorb **distributed and cloud architecture pattern judgment** for consequential
 
 Upstream reading (human only): [Azure Architecture Center — Cloud design patterns](https://learn.microsoft.com/en-us/azure/architecture/patterns/) (technology-agnostic catalog). Prefer the **behaviors** below; do not copy vendor sample domains into products ([`01-STEPS.md`](../01-STEPS.md) § Absorb outside references).
 
+Sibling large-scale method/fundamentals → [`system-design.md`](system-design.md) (SF-22).
+
 Sibling: in-process GoF shapes → [`design-patterns.md`](design-patterns.md). Boundary craft → [`enterprise-system-design.md`](enterprise-system-design.md). Integrations → [`integration-engineering.md`](integration-engineering.md).
 
 ## Adopt

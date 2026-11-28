@@ -28,6 +28,7 @@
 
 - [design-patterns/](design-patterns/README.md): GoF packs — open only via [07-judgment/design-patterns.md](07-judgment/design-patterns.md)
 architecture-patterns/: On-demand cloud/distributed architecture packs (open via 07-judgment/architecture-patterns.md; SF-20)
+system-design/: On-demand large-scale system design packs (open via 07-judgment/system-design.md; SF-22)
 - [technologies/](technologies/README.md): stack packs
 - [agents/](agents/README.md): harness packs
 - [coverage/](coverage/README.md): honest craft atlas
