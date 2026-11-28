@@ -64,7 +64,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
 | [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~28 | **89%** | ✅ |
-| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~25%** breadth | ⚠️ |
+| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~26%** breadth | ⚠️ |
 | [`08-ai-agents.md`](08-ai-agents.md) | AI agent / IDE harnesses (Cursor, Codex, Claude, Gemini, CN tools, …) | ~20 | **~53%** breadth | ⚠️ |
 
 ### Overall factory professionalism
@@ -72,7 +72,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Metric | Value |
 |--------|-------|
 | **Weighted overall coverage** (domains 01–06 craft homes) | **~89%** |
-| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~25%** |
+| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~26%** |
 | **AI-agent harness breadth** ([`08`](08-ai-agents.md), equal-weight harnesses) | **~53%** |
 | **Studio-default harness strength** (Cursor + Codex + Claude Code) | **~92%** |
 | **Studio-default strength** (web app + HTTP API + admin web) | **~83%** |
@@ -132,6 +132,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Livewire 4 tech pack | `technologies/livewire` | ✅ ~88% |
 | Filament 5 tech pack | `technologies/filament` | ✅ ~88% |
 | JavaScript / ES2026 tech pack | `technologies/javascript` | ✅ ~88% |
+| TypeScript tech pack | `technologies/typescript` | ✅ ~88% |
 | HTML Living Standard tech pack | `technologies/html` | ✅ ~88% |
 | CSS Snapshot 2026 tech pack | `technologies/css` | ✅ ~88% |
 | Inertia.js 3 tech pack | `technologies/inertiajs` | ✅ ~88% |

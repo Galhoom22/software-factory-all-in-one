@@ -39,7 +39,7 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | P1 | Rust language pack | **88** | **88** | `technologies/rust/` from doc.rust-lang.org/stable (SF-05) | ✅ Done 2026-11-23 |
 | P2 | Antigravity deepen + discovery pointer | **42** | **75** | Official Antigravity docs → pack + thin root pointer | ❌ Open |
 | P2 | Trae / Lingma deepen from official docs | **36–38** | **70** | Owner pastes official URLs → fill packs | ❌ Open |
-| P1 | TypeScript pack | **0** | **85** | `technologies/typescript/` from typescriptlang.org | ❌ Open (raises web/RN/Electron/extensions) |
+| P1 | TypeScript pack | **88** | **88** | `technologies/typescript/` from typescriptlang.org | ✅ Done 2026-11-28 |
 | P1 | Mobile surface (Swift **or** Kotlin **or** Flutter — product-driven) | **8–12** | **70** | Judgment + one pack when first mobile product starts | ❌ Open |
 | P2 | Browser extension MV3 | **5** | **70** | Judgment + Chromium/Firefox pack | ❌ Open |
 | P2 | Electron or Tauri pack | **15** | **70** | Hybrid desktop craft | ❌ Open |

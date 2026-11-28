@@ -26,7 +26,7 @@ Ponytail still wins on size: smallest **complete** change that meets this bar �
 | Depend on stable abstractions the app already uses | New interface packages “for later” with one call site |
 | Language features that remove classes of bugs (`===`, modules, private fields) | Clever metaprogramming (`with`, mutable `__proto__`, `eval`) |
 
-When the product is TypeScript + Next.js, also open those packs once they exist — typed APIs beat untyped “clever” JS.
+When the product is TypeScript + Next.js, also open [`../typescript/`](../typescript/README.md) and the Next pack — typed APIs beat untyped “clever” JS.
 
 ## 3. Design patterns (judgment only)
 
