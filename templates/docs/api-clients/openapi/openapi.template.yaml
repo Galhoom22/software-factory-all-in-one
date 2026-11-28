@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: "{{PRODUCT_NAME}} API"
+  version: "1.0.0"
+  description: |
+    Derived from docs/API_CONTRACT.md. Regenerate when the contract changes.
+    Do not treat this file as a second source of truth for product rules.
+servers:
+  - url: "{{API_BASE_URL}}"
+    description: Local or staging (set per environment; never commit secrets)
+tags:
+  - name: Auth
+  - name: Account
+paths:
+  /api/v1/auth/login:
+    post:
+      tags: [Auth]
+      summary: Login
+      operationId: authLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email, example: "user@example.test" }
+                password: { type: string, example: "replace-with-local-only" }
+                remember: { type: boolean, default: false }
+      responses:
+        "200":
+          description: Authenticated user
+        "401":
+          description: unauthenticated / invalid credentials
+  /api/v1/auth/user:
+    get:
+      tags: [Auth]
+      summary: Current user
+      operationId: authUser
+      responses:
+        "200":
+          description: User
+        "401":
+          description: unauthenticated
+  /api/v1/account:
+    put:
+      tags: [Account]
+      summary: Update account
+      operationId: accountUpdate
+      responses:
+        "200":
+          description: User
+components:
+  securitySchemes:
+    # Replace with the product's real scheme (cookie session, bearer, …).
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: "{{SESSION_COOKIE_NAME}}"

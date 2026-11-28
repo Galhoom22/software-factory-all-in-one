@@ -22,6 +22,7 @@ This table is the only list of judgment guides. Hub documents link the slot, not
 | Absorbing an outside agent-skills pack or workflow | [`agent-skills.md`](agent-skills.md) | The rule below |
 | Designing or changing an HTTP API | [`api-design.md`](api-design.md) | API_CONTRACT · 08 API gate |
 | An API must work in CI, staging and production, not only locally | [`api-readiness.md`](api-readiness.md) | 08 API gate · 09-CI-CD |
+| Humans need Postman / Insomnia / Apidog import packs for the HTTP API | [`api-clients.md`](api-clients.md) | API_CONTRACT · impl `docs/api-clients/` · 08 |
 | Frontend ↔ backend ↔ service contracts change (fields, headers, events, auth) | [`cross-surface-compatibility.md`](cross-surface-compatibility.md) | 08 · product SIBLING |
 | Connecting any external partner (payments, email, maps, webhooks, …) | [`integration-engineering.md`](integration-engineering.md) | 08 integration gate |
 | Model, prompt, RAG, agent or eval code paths | [`ai-engineering.md`](ai-engineering.md) | 08 AI gate · product docs/AI.md |

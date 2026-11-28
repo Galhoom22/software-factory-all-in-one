@@ -33,7 +33,7 @@ Local feature tests alone do **not** prove FE-ready or production-ready.
 | Declaring Done because only local `artisan test` / unit tests passed | Misses CI/env drift |
 | Hitting production with real personal data for “just a quick check” | COMPLIANCE / SECURITY |
 | Requiring live staging/production for every PR while Phase A (no hooks) | Fake CD / blocked Done |
-| Dumping a full Postman dump or generated OpenAPI tree as a second SoT | Contract drifts; keep one contract |
+| Dumping a hand-edited Postman dump as a second SoT | Contract drifts; keep one contract; derive clients via [`api-clients.md`](api-clients.md) |
 | Skipping contract updates “we’ll tell FE later” | Pairing break; silent 4xx/5xx for FE |
 | Treating CodeRabbit or DSA checks as a substitute for HTTP proof | Different failure modes |
 
@@ -62,4 +62,5 @@ Progressive phases stay in force (`09-CI-CD.md`): Phase A skips remote smoke hon
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md), [`09-CI-CD.md`](../09-CI-CD.md)
 - Templates: `templates/docs/backend/TESTING.md`, `templates/docs/backend/DEPLOYMENT.md` § Smoke, `templates/docs/API_CONTRACT.md`
 - Design craft: [`api-design.md`](api-design.md)
+- Human import packs: [`api-clients.md`](api-clients.md) · `templates/docs/api-clients/`
 - Sibling quality gates: [`cross-surface-compatibility.md`](cross-surface-compatibility.md), [`dsa-performance.md`](dsa-performance.md), the optional AI PR reviewer in `08`, CI in `09`

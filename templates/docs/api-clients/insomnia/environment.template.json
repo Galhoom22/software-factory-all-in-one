@@ -1,0 +1,11 @@
+{
+  "name": "{{PRODUCT_NAME}} — local",
+  "data": {
+    "baseUrl": "http://localhost:8000",
+    "acceptLanguage": "en",
+    "idempotencyKey": "",
+    "jobDescriptionId": "",
+    "tailoredResumeId": ""
+  },
+  "notes": "Mirror these keys in Insomnia's environment UI. Do not commit real secrets."
+}

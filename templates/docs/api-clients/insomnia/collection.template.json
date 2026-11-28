@@ -1,0 +1,67 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-28T00:00:00.000Z",
+  "__export_source": "software-factory.api-clients.template",
+  "resources": [
+    {
+      "_id": "wrk_template001",
+      "_type": "workspace",
+      "name": "{{PRODUCT_NAME}} API",
+      "description": "Generated from the product API contract. Regenerate on contract change."
+    },
+    {
+      "_id": "env_template001",
+      "_type": "environment",
+      "parentId": "wrk_template001",
+      "name": "local",
+      "data": {
+        "baseUrl": "http://localhost:8000",
+        "acceptLanguage": "en"
+      }
+    },
+    {
+      "_id": "fld_auth001",
+      "_type": "request_group",
+      "parentId": "wrk_template001",
+      "name": "Auth"
+    },
+    {
+      "_id": "req_csrf001",
+      "_type": "request",
+      "parentId": "fld_auth001",
+      "name": "GET sanctum/csrf-cookie",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/sanctum/csrf-cookie"
+    },
+    {
+      "_id": "req_login001",
+      "_type": "request",
+      "parentId": "fld_auth001",
+      "name": "POST /api/v1/auth/login",
+      "method": "POST",
+      "url": "{{ _.baseUrl }}/api/v1/auth/login",
+      "headers": [
+        { "name": "Accept", "value": "application/json" },
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "Accept-Language", "value": "{{ _.acceptLanguage }}" }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"user@example.test\",\n  \"password\": \"replace-locally-only\",\n  \"remember\": false\n}"
+      }
+    },
+    {
+      "_id": "req_user001",
+      "_type": "request",
+      "parentId": "fld_auth001",
+      "name": "GET /api/v1/auth/user",
+      "method": "GET",
+      "url": "{{ _.baseUrl }}/api/v1/auth/user",
+      "headers": [
+        { "name": "Accept", "value": "application/json" },
+        { "name": "Accept-Language", "value": "{{ _.acceptLanguage }}" }
+      ]
+    }
+  ]
+}
