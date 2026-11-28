@@ -4,6 +4,10 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Changed
+
+- `languages/arabic/` — deeper Arabic text craft: display-vs-index normalization (alef/yeh/teh-marbuta, tatweel, tashkeel), digits policy, no Latin transliteration in product storage, when to use a verified Arabic NLP package; judgment selector rows updated. Distilled from CAMeL Lab / CAMeL Tools concepts (not vendored).
+
 ### Added
 
 - `languages/` — on-demand locale craft library (Arabic, English, German, French, Spanish) with `07-judgment/languages.md` selector (SF-23); English-only instruction prose.
