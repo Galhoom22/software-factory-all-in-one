@@ -17,8 +17,8 @@
 
 ## Language and communication
 
-- Always reply in **{{REPLY_LANGUAGE}}**, whatever language the user writes in.
-- Be direct and concise.
+- Always reply to the human in **English**, even when they write in another language.
+- **Repository documentation language (SF-21):** English only — rules, playbook, templates, judgment, and any future language/i18n craft folders keep **instructions in English**. Product UI may ship other locales; instruction text agents load stays English.
 
 ## Candor with the owner (hard rule)
 

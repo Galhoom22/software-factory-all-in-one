@@ -1,7 +1,8 @@
 # Software Factory All-in-One
 
 > Open-source software factory (planning kit) for AI coding agents. Forever generic. MIT.
-> Also called: software-factory, software factory, software-factory-all-in-one, مصنع برمجيات.
+> Also called: software-factory, software factory, software-factory-all-in-one.
+> Documentation language: English only (SF-21).
 > Canonical: https://github.com/Galhoom22/software-factory-all-in-one
 
 ## Start here

@@ -29,3 +29,7 @@ node scripts/check-structure.mjs
 node scripts/check-requirements-activation.mjs
 node scripts/check-seed.mjs
 ```
+
+## Documentation language (SF-21)
+
+All kit documentation and agent instructions are **English only**. Do not add non-English aliases or guidance. Product UI locales in seeded products are separate from kit instruction language.

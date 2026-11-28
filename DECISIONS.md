@@ -159,7 +159,7 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 
 - **Date:** 2026-11-28
 - **Status:** Accepted
-- **Context:** The public GitHub home must be findable for queries like software-factory, software-factory-all-in-one, and مصنع برمجيات, and citeable by AI answer surfaces — without keyword spam, fake authority, or treating `llms.txt` as a Google Search requirement.
+- **Context:** The public GitHub home must be findable for queries like software-factory and software-factory-all-in-one, and citeable by AI answer surfaces — without keyword spam, fake authority, or treating `llms.txt` as a Google Search requirement.
 - **Decision:** Maintain the kit README with a direct answer, honest aliases, who-for/not-for, and FAQ; ship optional root [`llms.txt`](llms.txt) for systems that read it; keep GitHub description/topics aligned; follow [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md) and Google Search Central (SEO starter + AI optimization guides). Ranking and citation counts are not Done gates.
 - **Consequences:** ✅ Clear identity for search and AI grounding. ❌ Maintain FAQ/aliases when the kit name or spine changes.
 - **Related:** SF-10, [`README.md`](README.md), [`llms.txt`](llms.txt), [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
@@ -173,3 +173,11 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Consequences:** ✅ Shared distributed vocabulary and refuse-with-evidence. ❌ Maintain ~44 packs + structure gate; risk of opening the whole tree if the selector is skipped.
 - **Related:** SF-18, SF-15, [`architecture-patterns/README.md`](architecture-patterns/README.md), [`07-judgment/architecture-patterns.md`](07-judgment/architecture-patterns.md).
 
+### SF-21 English-only documentation language (kit)
+
+- **Date:** 2026-11-28
+- **Status:** Accepted
+- **Context:** Non-English aliases (including Arabic SEO phrases) and mixed-language instruction text reduce agent reliability. Owners may chat in any language; the kit and repository documentation agents load must stay one language. Future language/i18n craft folders must still instruct in English.
+- **Decision:** **English is the permanent documentation and instruction language** of Software Factory All-in-One (README, spine, judgment, templates, agents packs, technology packs, design/architecture pattern packs, coverage, examples). Do **not** add non-English aliases, FAQs, or guidance into the kit. Discoverability aliases are English only (`software-factory`, software factory, `software-factory-all-in-one`). Product repositories may still ship bilingual **product UI** locales; that is product content, not kit instruction language. This supersedes the non-English alias practice described under SF-19.
+- **Consequences:** ✅ One language for AI agents and reviewers. ❌ Non-English marketing aliases for the kit are out of scope.
+- **Related:** SF-19, [`README.md`](README.md), [`llms.txt`](llms.txt), [`AGENTS.md`](AGENTS.md).
