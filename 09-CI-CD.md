@@ -42,7 +42,7 @@ Local tests catch most bugs. **GitHub Actions** catches “works on my machine,�
 2. **Local proof first.** Agents still run the same checks locally before opening the PR (fail fast). CI is the shared proof, not a substitute for local runs.
 3. **CD only from `main`, only after CI, only in Phase B+.** Staging may auto-deploy on push to `main`. Production requires an explicit approved run (`workflow_dispatch` + environment reviewers).
 4. **Secrets only in host env and GitHub Actions secrets** — never in git, images, or chat.
-5. **Pin Actions to commit SHAs** (Dependabot updates them). Pin CLI tools run via `npx` to exact versions.
+5. **Pin Actions to commit SHAs** (Dependabot updates them), or adopt GitHub's workflow-dependency lockfile where the repository supports it. Pin CLI tools run via `npx` to exact versions. Least-privilege `permissions:`, no attacker-set `${{ }}` in scripts, and no privileged trigger running PR code — checklist in [`07-judgment/ci-hardening.md`](07-judgment/ci-hardening.md).
 6. **AI PR review (for example CodeRabbit) ≠ CI.** Review finds design/security smells; CI proves tests and scans. Both are required in day closeout when the repo has them.
 7. **No CD theater / no future-dependency traps.** Until staging/production hooks exist, stay in Phase A: document CD for later, skip deploy/smoke/Sentry-after-deploy honestly. Never add a live deploy job that will fail every PR because the secret is missing. Never make Done depend on infrastructure that is not live yet.
 

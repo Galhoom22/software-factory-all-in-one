@@ -6,7 +6,7 @@
 
 **Score meaning for a surface:** method rails that already apply **plus** surface-specific judgment, templates, and `technologies/` packs. Same rubric as [`README.md`](README.md) (✅/⚠️/❌ + %).
 
-Last audit: **2026-11-28** (TypeScript pack landed).
+Last audit: **2026-11-28** (TypeScript and Kotlin packs landed).
 
 ---
 
@@ -28,8 +28,8 @@ Last audit: **2026-11-28** (TypeScript pack landed).
 | **Web / HTTP APIs & modular backends** | ✅ | **88** | API contract, readiness, design, Laravel/PHP/Symfony/.NET packs, day gates, testing guides | Non-REST (gRPC/GraphQL) packs thin |
 | **Admin / internal tools (web)** | ✅ | **78** | Filament + Livewire + Alpine packs; same web rails | Desktop-admin / thick-client patterns |
 | **Mobile — iOS native** | ❌ | **8** | Generic delivery/security/CI judgment only | No Swift / SwiftUI / Xcode pack; no store/TestFlight judgment |
-| **Mobile — Android native** | ❌ | **8** | Same generic rails only | No Kotlin / Jetpack Compose pack; no Play Console judgment |
-| **Mobile — cross-platform** | ❌ | **12** | React pack helps RN slightly; C#/.NET helps MAUI slightly | No Flutter / RN / MAUI product packs; no store dual-pipeline |
+| **Mobile — Android native** | ⚠️ | **20** | Generic rails + **Kotlin** language pack | No Jetpack Compose / Android pack; no Play Console judgment |
+| **Mobile — cross-platform** | ❌ | **16** | React pack helps RN slightly; C#/.NET helps MAUI slightly; **Kotlin** pack covers KMP language craft | No Flutter / RN / MAUI product packs; no store dual-pipeline |
 | **Desktop — native** (Win / macOS / Linux) | ⚠️ | **18** | C# / .NET packs (Win/.NET path); generic CI | No WinUI/WPF/AppKit/GTK judgment; signing/notarization |
 | **Desktop — hybrid** (Electron / Tauri / similar) | ⚠️ | **26** | JS/**TypeScript** + web packs; **Rust** language pack (Tauri affinity) | No Electron/Tauri product pack yet; auto-update / sandbox craft |
 | **Browser extensions** (Chromium / Firefox / Safari) | ⚠️ | **12** | Web security + **TypeScript**/JS packs | No MV3 pack; store review / permissions craft |
@@ -51,7 +51,7 @@ Last audit: **2026-11-28** (TypeScript pack landed).
 | Metric | Value |
 |--------|-------|
 | **Surfaces listed** | 21 |
-| **Weighted readiness** (equal weight per surface row) | **~26%** |
+| **Weighted readiness** (equal weight per surface row) | **~27%** |
 | **Studio-default strength** (web app + HTTP API + admin web only) | **~83%** |
 | **Honest message** | Factory **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (weighted readiness above). Do not confuse the two numbers. |
 
@@ -71,7 +71,7 @@ Affinity only. A language can serve many surfaces; a product still pins via stac
 | **Symfony** | Web / APIs | ✅ | — |
 | **C# / .NET** | Web APIs, desktop, MAUI, games (Unity C#) | ✅ language + platform | ASP.NET / EF / MAUI / Unity still separate packs |
 | **Swift** | iOS, macOS, watchOS | ❌ | Priority when first iOS product starts |
-| **Kotlin** | Android, multiplatform | ❌ | Priority when first Android product starts |
+| **Kotlin** | Android, multiplatform, JVM backends | ✅ language | Kotlin 2.4 (K2); Compose / Ktor / Android still separate packs |
 | **Dart / Flutter** | Mobile + desktop + web cross | ❌ | — |
 | **Java** | Android legacy, enterprise backends | ❌ | — |
 | **Python** | Data, ML, backends, scripting | ❌ | High value for ML/data surfaces |

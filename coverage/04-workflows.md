@@ -84,6 +84,9 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | AI propose / human commit | `06-LESSONS`, learning-from-mistakes sample | **90** | Suggestions must not mutate canonical records |
 | ✅ | Consent soft-skip vs hard-fail | `06-LESSONS` | **85** | Background vs explicit AI endpoints |
 | ✅ | Payments webhook-first | `07-judgment/payments`, SECURITY WH | **88** | Signature + idempotency |
+| ✅ | Security boundary gate (threat model + workflow edits) | `07-judgment/threat-modeling`, `07-judgment/ci-hardening`, `08` gate 12 | **88** | Four questions + abuse-case test; workflow checklist |
+| ✅ | Incident response / blameless postmortem | `07-judgment/incident-response`, DEPLOYMENT rollback | **85** | Mitigate first; evidence timeline; typed actions |
+| ✅ | Vet outside skills / MCP / hooks before install | `07-judgment/agent-skills` § Vetting | **88** | Raw-file read; hidden text; excess agency; pinned fetches |
 
 ---
 

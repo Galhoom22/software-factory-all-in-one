@@ -82,6 +82,12 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Absorb Pareto DSA / Big-O habits (name `n`, Time/Space, Brute→better, edges; hot-path check in the day loop) into `07-judgment/dsa-performance.md`, FEATURE Performance module, and `08-IMPLEMENTATION-DAY.md`. Do not dump LeetCode problem catalogs or solution trees into the product.
 
+> Review `<workflow files>` against `07-judgment/ci-hardening.md`: triggers and trust, attacker-set `${{ }}` in scripts, least-privilege `permissions:`, pins, `persist-credentials`, secrets, OIDC. Report a severity table first, then each finding with the exact line and a corrected YAML snippet. Do not auto-apply.
+
+> Threat-model `<change>` with `07-judgment/threat-modeling.md`: the four questions, STRIDE only on the boundaries this change touches, one abuse case per kept threat, and the test that proves each mitigation.
+
+> Write a blameless postmortem for `<incident>` with `07-judgment/incident-response.md` from the evidence I paste only: timeline in UTC, fishbone then 5 whys on confirmed branches, typed Detect / Mitigate / Prevent actions with one owner each. Unknowns stay open questions.
+
 > Absorb Playwright official intro / best practices / CI / accessibility into the FE TESTING guide and CI templates (short critical list, user-facing locators, web-first asserts, mocked PR API, axe, traces on retry). Update factory `07-judgment/playwright-e2e.md` if missing. Do not grow a flaky mega-suite.
 
 > Research the payment providers and methods for `<markets>`. Prices only in US dollars, regional prices for `<regions>`, only the main methods on public pages, hosted checkout only. Plan webhook-first entitlement, signature verification, idempotent events, separate local/CI sandboxes (or fakes), and current Checkout/Payment Intent/Setup Intent patterns (no deprecated Sources/Charges/Tokens for new work). Update `requirements.md` §4, expand `SECURITY.md` WH and `COMPLIANCE.md` CP, and every document that mentions pricing. Use the provider's official Agents/docs (MCP/skills or `.md` URLs) — not memorized API shapes. Judgment: `software-factory-all-in-one/07-judgment/payments.md`.

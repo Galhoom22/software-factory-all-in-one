@@ -33,6 +33,7 @@ Paths under `software-factory-all-in-one/templates/` unless noted.
 | ✅ | Scope check | `scripts/check-scope.mjs` | **88** | Planning-only scope |
 | ✅ | Planning entry gate | `scripts/check-planning-entry.mjs` | **92** | Activation when entry file exists |
 | ✅ | Factory activation wiring | `software-factory-all-in-one/scripts/check-requirements-activation.mjs` | **92** | Factory self-check (method side) |
+| ✅ | Workflow hardening + hidden-text gate | `software-factory-all-in-one/scripts/check-structure.mjs` | **90** | Kit + template workflows: SHA pins, top-level `permissions:`, no `pull_request_target`, no attacker-set `${{ }}` in scripts; no invisible/bidi characters in kit text (self-tested) |
 
 ---
 
@@ -41,8 +42,8 @@ Paths under `software-factory-all-in-one/templates/` unless noted.
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
 | ✅ | Impl Actions README | `implementation/github-actions/README.md` | **90** | Phase A first |
-| ✅ | Backend CI skeleton | `implementation/github-actions/backend-ci.yml` | **88** | PHP/format/tests pattern |
-| ✅ | Frontend CI skeleton | `implementation/github-actions/frontend-ci.yml` | **88** | Node/lint/test/build (+ Playwright hook) |
+| ✅ | Backend CI skeleton | `implementation/github-actions/backend-ci.yml` | **89** | PHP/format/tests pattern; read-only token, `persist-credentials: false` |
+| ✅ | Frontend CI skeleton | `implementation/github-actions/frontend-ci.yml` | **89** | Node/lint/test/build (+ Playwright hook); read-only token, `persist-credentials: false` |
 | ✅ | Staging deploy CI | `implementation/github-actions/ci-with-staging-deploy.yml` | **85** | Phase B — only when hooks exist |
 | ✅ | Production deploy | `implementation/github-actions/deploy-production.yml` | **85** | Manual `workflow_dispatch` |
 | ✅ | Method for progressive CD | `software-factory-all-in-one/09-CI-CD.md` | **94** | Agents auto-detect phase |

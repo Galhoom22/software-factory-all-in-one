@@ -468,6 +468,77 @@ if (
 ) {
   fail("unpinnedActions self-test failed");
 }
+
+// --- Workflow hardening (07-judgment/ci-hardening.md): least-privilege token, no privileged PR trigger,
+// no attacker-controllable context pasted into a shell or github-script body (use env: instead) ---
+const ATTACKER_CONTEXT =
+  /\$\{\{[^}]*\b(?:github(?:\.|\[\s*['"])head_ref|github\.event\.(?:issue|pull_request|comment|review|review_comment|pages|commits|head_commit|discussion|discussion_comment)\b[\w.*[\]'"]*?(?:\.|\[\s*['"])(?:title|body|message|label|ref|page_name|name|email))\b[^}]*\}\}/; // dot and ['index'] access
+function workflowHardeningIssues(yaml) {
+  const issues = [];
+  const lines = yaml.split(/\r?\n/);
+  if (lines.some((l) => /^jobs\s*:/.test(l)) && !lines.some((l) => /^permissions\s*:/.test(l))) issues.push('no top-level "permissions:" (deny by default, grant per job)');
+  const sink = (lineNo) => issues.push(`line ${lineNo}: attacker-controllable \${{ }} inside a script — pass it through env:`);
+  // The runner reads the whole scalar, so an expression may span lines: test the joined body, report the line it starts on.
+  const flush = () => {
+    const text = body.lines.join("\n");
+    for (const m of text.matchAll(new RegExp(ATTACKER_CONTEXT.source, "g"))) sink(body.first + text.slice(0, m.index).split("\n").length - 1);
+    body = null;
+  };
+  let body = null; // { indent of the run:/script: key, first line number, lines } while inside its block scalar
+  lines.forEach((line, i) => {
+    const indent = line.match(/^ */)[0].length;
+    if (body !== null) {
+      // A "#" line here is script text: the runner substitutes ${{ }} before the shell sees the comment.
+      if (line.trim() === "" || indent > body.indent) {
+        body.lines.push(line);
+        return;
+      }
+      flush();
+    }
+    if (/^\s*#/.test(line)) return;
+    if (/\bpull_request_target\b/.test(line)) issues.push(`line ${i + 1}: pull_request_target trigger (runs fork code paths with a write token and secrets)`);
+    const key = line.match(/^( *)(-\s+)?(?:run|script)\s*:\s*(.*)$/);
+    if (!key) return;
+    if (/^[|>]/.test(key[3])) body = { indent: key[1].length + (key[2] ? key[2].length : 0), first: i + 2, lines: [] };
+    else if (ATTACKER_CONTEXT.test(key[3])) sink(i + 1);
+  });
+  if (body !== null) flush();
+  return issues;
+}
+if (
+  workflowHardeningIssues(
+    [
+      "on:",
+      "  pull_request_target:",
+      "jobs:",
+      "  a:",
+      "    steps:",
+      "      - env:",
+      "          TITLE: ${{ github.event.pull_request.title }}",
+      '        run: echo "$TITLE"',
+      '      - run: echo "${{ github.event.issue.title }}"',
+      "      - run: |",
+      "          git checkout ${{ github.head_ref }}",
+      "          # Issue: ${{ github.event.issue.body }}",
+      "          echo ${{ github.event.pull_request['title'] }}",
+      "          echo ${{ github.event.pull_request.number }}",
+      '          echo "${{',
+      '          github.event.issue.title }}"',
+      "        shell: bash",
+      "      - uses: actions/github-script@0123456789012345678901234567890123456789 # v8.0.0",
+      "        with:",
+      "          script: |",
+      "            console.log(`${{ github.event.comment.body }}`)",
+      "      # - run: echo ${{ github.event.issue.body }}",
+      "      - name: ${{ github.event.pull_request.title }}",
+      "      - run: |",
+      "          echo ${{ github.event.review.body }}",
+    ].join("\n"),
+  ).join("|") !==
+  'no top-level "permissions:" (deny by default, grant per job)|line 2: pull_request_target trigger (runs fork code paths with a write token and secrets)|line 9: attacker-controllable ${{ }} inside a script — pass it through env:|line 11: attacker-controllable ${{ }} inside a script — pass it through env:|line 12: attacker-controllable ${{ }} inside a script — pass it through env:|line 13: attacker-controllable ${{ }} inside a script — pass it through env:|line 15: attacker-controllable ${{ }} inside a script — pass it through env:|line 21: attacker-controllable ${{ }} inside a script — pass it through env:|line 25: attacker-controllable ${{ }} inside a script — pass it through env:'
+) {
+  fail("workflowHardeningIssues self-test failed");
+}
 {
   const workflows = [];
   (function walkYaml(dir) {
@@ -481,8 +552,28 @@ if (
   for (const file of workflows) {
     const rel = path.relative(playbookRoot, file).split(path.sep).join("/");
     for (const a of unpinnedActions(read(file))) fail(`${rel}: "${a}" must be pinned to a full commit SHA with a "# vX.Y.Z" comment`);
+    for (const issue of workflowHardeningIssues(read(file))) fail(`${rel}: ${issue} (07-judgment/ci-hardening.md)`);
   }
 }
+
+// --- No invisible or bidi-control characters in kit text: agents read these files as instructions, and hidden
+// text (zero-width, bidi overrides — "Trojan Source") can say something a reviewer never sees (07-judgment/agent-skills.md) ---
+const chr = (...codes) => String.fromCharCode(...codes); // built at runtime so this file holds no hidden characters itself
+const HIDDEN_RANGES = [[0x200b, 0x200f], [0x061c, 0x061c], [0x2060, 0x2060], [0xfeff, 0xfeff], [0x202a, 0x202e], [0x2066, 0x2069]];
+const HIDDEN_CHAR = new RegExp(`[${HIDDEN_RANGES.map(([a, b]) => `${chr(a)}-${chr(b)}`).join("")}]`);
+if (!HIDDEN_CHAR.test(`a${chr(0x200b)}b`) || !HIDDEN_CHAR.test(chr(0x202e)) || HIDDEN_CHAR.test(`plain ${chr(0x639, 0x631, 0x628)} text`)) fail("HIDDEN_CHAR self-test failed");
+(function walkText(dir) {
+  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (ent.name === ".git" || ent.name === "node_modules") continue;
+    const p = path.join(dir, ent.name);
+    if (ent.isDirectory()) walkText(p);
+    else if (/\.(md|mdc|mjs|js|ts|json|ya?ml|toml|txt|html|css)$/i.test(ent.name)) {
+      const lines = read(p).split(/\r?\n/);
+      const at = lines.findIndex((l) => HIDDEN_CHAR.test(l));
+      if (at !== -1) fail(`${path.relative(playbookRoot, p).split(path.sep).join("/")}:${at + 1}: invisible or bidi-control character (U+200B–U+200F, U+061C, U+2060, U+FEFF, U+202A–U+202E, U+2066–U+2069)`);
+    }
+  }
+})(playbookRoot);
 
 // --- CHANGELOG: [Unreleased] first; releases "## [X.Y.Z] - YYYY-MM-DD", newest first, non-empty, with link references ---
 {

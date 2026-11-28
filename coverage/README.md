@@ -64,7 +64,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | [`04-workflows.md`](04-workflows.md) | Operating workflows (activation, day loop, sync, closeout…) | 22 | **90%** | ✅ |
 | [`05-gaps-and-upgrades.md`](05-gaps-and-upgrades.md) | Honest weak spots + upgrade backlog | — | — | ⚠️ |
 | [`06-technologies.md`](06-technologies.md) | Per-stack packs under `technologies/` | ~28 | **89%** | ✅ |
-| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~26%** breadth | ⚠️ |
+| [`07-software-surfaces.md`](07-software-surfaces.md) | Industry surfaces (web/mobile/desktop/games/…) + language map | 21 | **~27%** breadth | ⚠️ |
 | [`08-ai-agents.md`](08-ai-agents.md) | AI agent / IDE harnesses (Cursor, Codex, Claude, Gemini, CN tools, …) | ~20 | **~53%** breadth | ⚠️ |
 
 ### Overall factory professionalism
@@ -72,7 +72,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Metric | Value |
 |--------|-------|
 | **Weighted overall coverage** (domains 01–06 craft homes) | **~89%** |
-| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~26%** |
+| **Industry-surface breadth** ([`07`](07-software-surfaces.md), equal-weight surfaces) | **~27%** |
 | **AI-agent harness breadth** ([`08`](08-ai-agents.md), equal-weight harnesses) | **~53%** |
 | **Studio-default harness strength** (Cursor + Codex + Claude Code) | **~92%** |
 | **Studio-default strength** (web app + HTTP API + admin web) | **~83%** |
@@ -94,6 +94,9 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Integration engineering | `07-judgment/integration-engineering` + `08` + FEATURE | ✅ ~93% |
 | AI engineering (det/prob) | `07-judgment/ai-engineering` + `08` + FEATURE + `docs/AI.md` | ✅ ~92% |
 | Agent delegation | `07-judgment/delegation` + `08` + FEATURE | ✅ ~91% |
+| Threat modeling (per boundary) | `07-judgment/threat-modeling` + FEATURE module + `08` gate 12 | ✅ ~88% |
+| CI workflow hardening | `07-judgment/ci-hardening` + `09` + structure gate | ✅ ~90% |
+| Incident response / postmortems | `07-judgment/incident-response` + DEPLOYMENT template | ✅ ~85% |
 | C# language pack | `technologies/csharp` + `csharp-14` | ✅ ~88% |
 | .NET platform pack | `technologies/dotnet` + `dotnet-10` | ✅ ~88% |
 | CI / CD / Forge phases | `04-workflows` + `09-CI-CD` + impl GA templates | ✅ ~92% |
@@ -133,6 +136,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Filament 5 tech pack | `technologies/filament` | ✅ ~88% |
 | JavaScript / ES2026 tech pack | `technologies/javascript` | ✅ ~88% |
 | TypeScript tech pack | `technologies/typescript` | ✅ ~88% |
+| Kotlin 2.4 tech pack | `technologies/kotlin` | ✅ ~88% |
 | HTML Living Standard tech pack | `technologies/html` | ✅ ~88% |
 | CSS Snapshot 2026 tech pack | `technologies/css` | ✅ ~88% |
 | Inertia.js 3 tech pack | `technologies/inertiajs` | ✅ ~88% |
@@ -143,7 +147,7 @@ Last full audit: **2026-11-23**. Domain files hold the line-by-line detail.
 | Always-Current / factory freshness | `07-judgment/playbook-freshness` + CI script | ✅ ~95% |
 | AI agent harness % (Cursor/Codex/Claude/Trae/…) | `08-ai-agents` + `agents/` | ⚠️ breadth and studio-default: scorecard above |
 | Software industry % (web/mobile/desktop/games/…) | `07-software-surfaces` | ⚠️ breadth and web+API strength: scorecard above |
-| Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌ ~8–12% |
+| Mobile iOS / Android / cross-platform readiness | `07-software-surfaces` | ❌/⚠️ ~8–20% (Kotlin language pack only) |
 | Desktop / Electron / extensions / games | `07-software-surfaces` | ❌/~⚠️ ~3–18% |
 | Which language maps to which surface | `07-software-surfaces` § Languages | living map |
 | Notion daily task page template | `05-gaps` | ❌ 0% in factory (product standing by design) |

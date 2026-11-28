@@ -29,6 +29,9 @@ This table is the only list of judgment guides. Hub documents link the slot, not
 | Money moves (checkout, billing, refunds, payment webhooks) | [`payments.md`](payments.md) | Product SECURITY · 08 |
 | Scarce capacity is reserved (bookings, appointments, seats) | [`booking.md`](booking.md) | SRS · 08 |
 | Consequential side effects, high-risk boundaries, retries after timeouts | [`enterprise-system-design.md`](enterprise-system-design.md) | 08 high-stakes · 04 risk |
+| A new or changed trust boundary (auth, roles, uploads, webhooks, personal data, AI tools) | [`threat-modeling.md`](threat-modeling.md) | 04 Threat modeling module · product SECURITY |
+| Adding or editing a CI workflow (`.github/workflows/`, reusable workflows, actions) | [`ci-hardening.md`](ci-hardening.md) | 09-CI-CD principles · structure gate |
+| A production incident, near-miss, or the first production environment | [`incident-response.md`](incident-response.md) | Product DEPLOYMENT rollback · 06-LESSONS |
 | Hot paths: loops over growing data, search or ranking, batch jobs | [`dsa-performance.md`](dsa-performance.md) | 04 Performance module · 08 |
 | Adding an abstraction or a named design pattern | [`design-patterns.md`](design-patterns.md) | 04 design · review |
 | Choosing a distributed / cloud architecture pattern | [`architecture-patterns.md`](architecture-patterns.md) | ARCHITECTURE · ADR · day design |
@@ -62,6 +65,7 @@ This table is the only list of judgment guides. Hub documents link the slot, not
 | Payment-provider agent guidance (hosted checkout, webhook entitlement, sandboxes, modern Intent APIs) | Dumping full Connect/Issuing/Tax catalogs or making agentic commerce required scope |
 | Playwright E2E (user-facing locators, web-first asserts, mocked PR CI, axe, traces on retry) | Exhaustive E2E of every screen on every PR; live backend required for CI; trace-on-every-test |
 | GoF-style design patterns (problem → naive → blueprint; composition; shared language) | Pattern encyclopedia in-repo; Factory/Observer on three-line fixes; Singleton as default global |
+| Community agent collections (workflow hardening, four-question threat model, blameless postmortem, vet-before-install for skills/MCP/hooks) | Bulk-installing hundreds of agents/instructions; vendor-specific (cloud, low-code) packs as default craft; persona "beast modes" as authority |
 
 Product templates: [`templates/docs/JUDGMENT.md`](../templates/docs/JUDGMENT.md).
 

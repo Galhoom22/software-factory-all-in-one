@@ -44,6 +44,7 @@ software-factory-all-in-one/technologies/
   filament/                 ← Filament 5.x pack
   javascript/               ← ECMAScript / JavaScript language pack
   typescript/               ← TypeScript 7.0 language pack
+  kotlin/                   ← Kotlin 2.4 language pack
   html/                     ← HTML Living Standard pack
   css/                      ← CSS (Snapshot 2026) pack
   inertiajs/                ← Inertia.js 3.x pack
@@ -108,6 +109,7 @@ When the owner says they will **use / work on / build with** a technology (e.g. 
 | [`filament/`](filament/README.md) | [`filament-5/`](filament/filament-5/README.md) | [`quality.md`](filament/quality.md) | ✅ |
 | [`javascript/`](javascript/README.md) | [`javascript-es2026/`](javascript/javascript-es2026/README.md) | [`quality.md`](javascript/quality.md) | ✅ |
 | [`typescript/`](typescript/README.md) | [`typescript-7.0/`](typescript/typescript-7.0/README.md) | [`quality.md`](typescript/quality.md) | ✅ |
+| [`kotlin/`](kotlin/README.md) | [`kotlin-2.4/`](kotlin/kotlin-2.4/README.md) | [`quality.md`](kotlin/quality.md) | ✅ |
 | [`html/`](html/README.md) | [`html-living/`](html/html-living/README.md) | [`quality.md`](html/quality.md) | ✅ |
 | [`css/`](css/README.md) | [`css-2026/`](css/css-2026/README.md) | [`quality.md`](css/quality.md) | ✅ |
 | [`inertiajs/`](inertiajs/README.md) | [`inertiajs-v3/`](inertiajs/inertiajs-v3/README.md) | [`quality.md`](inertiajs/quality.md) | ✅ |
