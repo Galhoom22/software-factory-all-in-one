@@ -42,3 +42,5 @@ When writing or reviewing architecture / decisions:
 ## Day workflow hook
 
 When a day’s must-finish changes stack boundaries, ownership of a deployable, or a lasting trade-off: add or supersede a `DECISIONS.md` entry **in the same session** before closeout — see [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md).
+
+When the ADR is about **queues, gateways, multi-region, sagas, or strangler slices**, complete the Architecture Decision Record in [`architecture-patterns.md`](architecture-patterns.md) (SF-20) and cite the chosen pack (or none).

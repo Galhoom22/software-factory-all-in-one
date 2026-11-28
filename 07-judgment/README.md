@@ -31,6 +31,7 @@ This table is the only list of judgment guides. Hub documents link the slot, not
 | Consequential side effects, high-risk boundaries, retries after timeouts | [`enterprise-system-design.md`](enterprise-system-design.md) | 08 high-stakes · 04 risk |
 | Hot paths: loops over growing data, search or ranking, batch jobs | [`dsa-performance.md`](dsa-performance.md) | 04 Performance module · 08 |
 | Adding an abstraction or a named design pattern | [`design-patterns.md`](design-patterns.md) | 04 design · review |
+| Choosing a distributed / cloud architecture pattern | [`architecture-patterns.md`](architecture-patterns.md) | ARCHITECTURE · ADR · day design |
 | Building a non-trivial capability that a package might already provide | [`packages.md`](packages.md) | 04 design · product DECISIONS |
 | Browser end-to-end tests in a frontend repository | [`playwright-e2e.md`](playwright-e2e.md) | Frontend TESTING · 09-CI-CD |
 | Public marketing or legal pages (search and AI answers) | [`seo-geo.md`](seo-geo.md) | Product SEO docs · 08 SEO gate |

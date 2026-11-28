@@ -3,7 +3,11 @@
 Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [Semantic Versioning](https://semver.org/) as defined for this kit in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Releasing. If you vendor the kit, read this file before and after `seed.mjs --update`.
 
 ## [Unreleased]
+
 ### Added
+
+- `architecture-patterns/` — on-demand cloud/distributed architecture library (44 packs; Azure Architecture Center catalog–inspired; original prose) with `07-judgment/architecture-patterns.md` selector (SF-20).
+- `scripts/check-structure.mjs` — architecture-pattern pack gate (six files, Sources Checked dates, index ↔ folders) parallel to design-patterns.
 - Public kit discoverability (SF-19): README direct answer + aliases (software-factory / software-factory-all-in-one / مصنع برمجيات), who-for table, FAQ for search/AI prompts; optional root [`llms.txt`](llms.txt) (explicitly not a Google Search requirement). Judgment cross-link in [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
 - Always-current API clients: OpenAPI 3.1 as machine hub ([openapis.org](https://www.openapis.org/) / [Swagger](https://swagger.io/)), regenerate from day one, CI drift + optional framework route parity, day gate in `08-IMPLEMENTATION-DAY.md` (SF-17).
 - Judgment + templates for HTTP API client packs: Postman Collection v2.1, Insomnia export, and Apidog-via-OpenAPI under `templates/docs/api-clients/`, with guide [`07-judgment/api-clients.md`](07-judgment/api-clients.md) (SF-17). One inventory → many clients; contract stays SoT.

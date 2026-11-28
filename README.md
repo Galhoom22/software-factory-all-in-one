@@ -12,7 +12,7 @@
   <a href="coverage/README.md"><img alt="Craft coverage" src="https://img.shields.io/badge/craft_coverage-~89%25-38bdf8?style=flat-square" /></a>
   <a href="technologies/README.md"><img alt="Technology packs" src="https://img.shields.io/badge/technology_packs-17-f59e0b?style=flat-square" /></a>
   <a href="agents/README.md"><img alt="Agent harnesses" src="https://img.shields.io/badge/agent_harnesses-12-a78bfa?style=flat-square" /></a>
-  <a href="07-judgment/"><img alt="Judgment guides" src="https://img.shields.io/badge/judgment_guides-28-94a3b8?style=flat-square" /></a>
+  <a href="07-judgment/"><img alt="Judgment guides" src="https://img.shields.io/badge/judgment_guides-29-94a3b8?style=flat-square" /></a>
   <a href="https://github.com/Galhoom22/software-factory-all-in-one"><img alt="Public template" src="https://img.shields.io/badge/GitHub-Template-38bdf8?style=flat-square" /></a>
 </p>
 
@@ -29,7 +29,7 @@ This factory gives the agent a **complete operating system for planning and deli
 | **One activation signal** | Drop `my-project-requirements.md` → the agent runs the factory. No template shopping. |
 | **Full planning spine** | Requirements → BRD/PRD/SRS-shaped docs → prototype → FEATURE_SDLC → day pipeline → CI/CD phases |
 | **Actor-loop delivery** | Finish one actor to production quality — **no MVP mode** that leaves screens stubbed |
-| **Judgment, not vibes** | 28 guides (payments, booking, verification, AI engineering, review bar, …) |
+| **Judgment, not vibes** | 29 guides (payments, booking, verification, AI engineering, review bar, …) |
 | **Stack craft on demand** | 17 technology packs (Laravel, Next.js, PHP, React, …) with use/stop/mistakes |
 | **Harness drive-craft** | 12 agent/IDE packs (Cursor, Codex, Claude, Gemini, …) under one `AGENTS.md` rulebook |
 | **Honest coverage atlas** | ~**89%** craft-home coverage tracked in [`coverage/`](coverage/README.md) — deepen, don’t duplicate |
@@ -75,7 +75,7 @@ Full walkthrough: [`00-USAGE.md`](00-USAGE.md) · ordered steps: [`01-STEPS.md`]
 | Metric | Value | Where |
 |--------|------:|-------|
 | Method docs (delivery order) | **9** (`00`–`09`; `07` is the judgment folder) | repo root |
-| Judgment guides | **28** | [`07-judgment/`](07-judgment/) |
+| Judgment guides | **29** | [`07-judgment/`](07-judgment/) |
 | Technology packs | **17** | [`technologies/`](technologies/README.md) |
 | AI agent harness packs | **12** | [`agents/`](agents/README.md) |
 | Craft-home coverage (domains 01–06) | **~89%** | [`coverage/`](coverage/README.md) |
@@ -135,18 +135,19 @@ Never put real product names, people, or tracker keys **back into this public ki
 04-FEATURE_SDLC.md        Feature depth for implementation repos
 05-PROMPTS.md             Ready agent prompts + audits
 06-LESSONS.md             Transferable planning lessons
-07-judgment/              28 judgment guides (payments, AI, review, …)
+07-judgment/              29 judgment guides (payments, AI, review, …)
 08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline + closeout
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet
 ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
-DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-19)
+DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-20)
 CHANGELOG.md              What changed, and how to update a vendored copy
 AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
 llms.txt                  Optional map for AI systems that read it (not a Google Search requirement)
 coverage/                 Honest ✅/% atlas (craft · surfaces · agents)
 agents/                   Per-harness packs
 technologies/             Per-stack packs
+architecture-patterns/    On-demand cloud/distributed packs (open via 07-judgment/architecture-patterns.md only)
 design-patterns/          On-demand GoF packs (open via 07-judgment/design-patterns.md only)
 templates/                Skeleton of a new planning repository
 examples/                 Sample requirements entry file
@@ -200,6 +201,10 @@ The kit's judgment [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md) and SEO te
 ### Where do design patterns live?
 
 On-demand under [`design-patterns/`](design-patterns/README.md). Open folders only after [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md) names a candidate (SF-18).
+
+### Architecture patterns (distributed / cloud)
+
+On-demand under [`architecture-patterns/`](architecture-patterns/README.md). Open folders only after [`07-judgment/architecture-patterns.md`](07-judgment/architecture-patterns.md) names a candidate (SF-20). Catalog inspired by Azure Architecture Center cloud design patterns; prose is original and forever-generic.
 
 ### What license?
 

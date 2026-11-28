@@ -142,7 +142,7 @@ Time-box spikes; record the decision when the box ends. Approach, affected compo
 
 Tasks traced to acceptance criteria; follow project standards; prefer framework-native features; no new pattern or package without a short justification (evaluate existing deps, license, advisories, transitive cost). Keep changes focused and independently verifiable. Link PRs as evidence (task → PR / commit).
 
-When introducing a consequential pattern, package, or architecture choice: record problem → selected solution → rejected alternative → trade-off (one row). Pattern judgment: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
+When introducing a consequential pattern, package, or architecture choice: record problem → selected solution → rejected alternative → trade-off (one row). Pattern judgment: [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md). For distributed topology, use [`07-judgment/architecture-patterns.md`](07-judgment/architecture-patterns.md) (SF-20) before opening packs.
 
 When the change is an algorithmic / collection / query hot path: prefer a correct linear (or justified n log n) approach over nested O(n²+) in the request path; record time↔space trade-offs. DSA judgment: [`07-judgment/dsa-performance.md`](07-judgment/dsa-performance.md).
 
