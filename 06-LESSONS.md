@@ -23,6 +23,7 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 - **Recheck before you confirm a booking.** Search results are not inventory truth; holds expire; retries without idempotency + external reference double-book suppliers; cancel using the policy snapshot on the booking. AI/MCP travel tools still need lock-price then book ([`07-judgment/booking.md`](07-judgment/booking.md)).
 
 ## Documents
+- **API client collections drift when hand-edited thrice.** Keep one inventory/OpenAPI derived from the contract; generate Postman, Insomnia, and Apidog-ready OpenAPI from it ([`07-judgment/api-clients.md`](07-judgment/api-clients.md)). Collections help humans verify; they do not replace Feature tests or become a second SoT.
 
 - **Write compliance and security before screens.** They came after many screens, and every screen had to be revisited.
 - **Start the decision log with the first decision.** Writing it later means reconstructing reasons from memory.

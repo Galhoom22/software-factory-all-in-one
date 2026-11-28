@@ -138,3 +138,10 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Context:** Products vendor the kit and need a stable version to pin, read and upgrade from; `main` can carry unreleased changes.
 - **Decision:** Releases are GitHub releases tagged `vX.Y.Z`, with notes taken from `CHANGELOG.md`. MAJOR when a seeded repository that was green can turn red or a referenced path moves; MINOR for additions that keep seeded repositories green; PATCH for fixes. Tags are never moved or deleted ([`CONTRIBUTING.md`](CONTRIBUTING.md) § Releasing).
 - **Consequences:** ✅ Products pin a release and upgrade deliberately with `seed.mjs --update` from a release checkout. ❌ Removing a deprecated path waits for the next MAJOR.
+
+### SF-17 API client import packs derived from the contract
+
+- **Status:** Accepted
+- **Context:** Teams need Postman, Insomnia, or Apidog to verify APIs by hand, but three hand-edited collections drift from the contract and can hide secrets.
+- **Decision:** Ship `docs/api-clients/` with one inventory/OpenAPI derived from `API_CONTRACT`, then generate Postman v2.1, Insomnia export, and Apidog-ready OpenAPI. Judgment: [`07-judgment/api-clients.md`](07-judgment/api-clients.md); templates: [`templates/docs/api-clients/`](templates/docs/api-clients/README.md). Collections complement Feature tests; they never replace them or become a second SoT.
+- **Consequences:** ✅ One-click human verify. ✅ Same regenerate path for every tool. ❌ Inventory must stay matched to the contract on every API change.

@@ -3,6 +3,8 @@
 Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [Semantic Versioning](https://semver.org/) as defined for this kit in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Releasing. If you vendor the kit, read this file before and after `seed.mjs --update`.
 
 ## [Unreleased]
+### Added
+- Judgment + templates for HTTP API client packs: Postman Collection v2.1, Insomnia export, and Apidog-via-OpenAPI under `templates/docs/api-clients/`, with guide [`07-judgment/api-clients.md`](07-judgment/api-clients.md) (SF-17). One inventory → many clients; contract stays SoT.
 
 ## [1.2.0] - 2026-11-27
 
