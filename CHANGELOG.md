@@ -4,6 +4,24 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-11-28
+
+API client packs are runnable on import: import → local environment → Send works, auth flow included, with a gate that enforces it. Seeded repositories that were green stay green.
+
+### Added
+
+- `07-judgment/api-clients.md` § Runnable on import, plus adopt rule 9: import → local env → Send works, auth flow included. The server owns `Accept` (JSON on API paths before routing, so guests get a JSON 401 instead of an HTML error or a login redirect); spec and packs own `Content-Type`; packs send `Origin`/`Referer` from `frontendUrl` and fetch the CSRF token in a request-level pre-request script; stateful-domain lists include the frontend port. New forbid row and two common mistakes.
+- `templates/implementation/scripts/check-api-clients.mjs` fails when a Postman request with a body lacks `Content-Type` and, with `inventory.auth = "cookie-session"`, when a session request lacks `Origin` or an unsafe one lacks the CSRF pre-request. It walks nested folders and ignores disabled headers and scripts.
+
+### Changed
+
+- Apidog imports the **Postman pack** for running (OpenAPI cannot carry scripts); OpenAPI stays the reviewable description. Insomnia is documented as not a verified runnable client for cookie sessions (its Postman import lists `request`-object operations as a limitation). `frontendUrl` must be an origin, with port, in the server's stateful-domains list. Postman/Insomnia/Apidog templates gain `frontendUrl`, `Origin`/`Referer`, and the CSRF pre-request on the login sample. One-line lesson in `06-LESSONS.md`.
+
+### Migration (vendored copies)
+
+1. From a fresh clone of the v1.5.0 release: `node scripts/seed.mjs --update <your-planning-repo>`.
+2. Optional: add `"auth": "cookie-session"` to `docs/api-clients/inventory.json` if your product uses cookie sessions, regenerate, and copy the updated `check-api-clients.mjs`. Existing green repositories stay green until they opt in, apart from the generic `Content-Type`-on-body check.
+
 ## [1.4.1] - 2026-11-28
 ### Added
 
@@ -223,7 +241,8 @@ Kept verbatim from the coverage atlas, newest first.
 | 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |
 
-[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.4.1...HEAD
+[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.5.0
 [1.4.1]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.4.1
 [1.4.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.4.0
 [1.3.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.3.0

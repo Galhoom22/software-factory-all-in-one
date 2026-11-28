@@ -17,7 +17,8 @@
       "name": "local",
       "data": {
         "baseUrl": "http://localhost:8000",
-        "acceptLanguage": "en"
+        "acceptLanguage": "en",
+        "frontendUrl": "http://localhost:3000"
       }
     },
     {
@@ -32,19 +33,26 @@
       "parentId": "fld_auth001",
       "name": "GET sanctum/csrf-cookie",
       "method": "GET",
-      "url": "{{ _.baseUrl }}/sanctum/csrf-cookie"
+      "url": "{{ _.baseUrl }}/sanctum/csrf-cookie",
+      "headers": [
+        { "name": "Origin", "value": "{{ _.frontendUrl }}" },
+        { "name": "Referer", "value": "{{ _.frontendUrl }}/" }
+      ]
     },
     {
       "_id": "req_login001",
       "_type": "request",
       "parentId": "fld_auth001",
       "name": "POST /api/v1/auth/login",
+      "description": "Cookie-session products: needs an X-XSRF-TOKEN header this export cannot fetch. Run the session flow in Postman or Apidog, or set the header by hand (see README).",
       "method": "POST",
       "url": "{{ _.baseUrl }}/api/v1/auth/login",
       "headers": [
         { "name": "Accept", "value": "application/json" },
         { "name": "Content-Type", "value": "application/json" },
-        { "name": "Accept-Language", "value": "{{ _.acceptLanguage }}" }
+        { "name": "Accept-Language", "value": "{{ _.acceptLanguage }}" },
+        { "name": "Origin", "value": "{{ _.frontendUrl }}" },
+        { "name": "Referer", "value": "{{ _.frontendUrl }}/" }
       ],
       "body": {
         "mimeType": "application/json",
@@ -60,7 +68,9 @@
       "url": "{{ _.baseUrl }}/api/v1/auth/user",
       "headers": [
         { "name": "Accept", "value": "application/json" },
-        { "name": "Accept-Language", "value": "{{ _.acceptLanguage }}" }
+        { "name": "Accept-Language", "value": "{{ _.acceptLanguage }}" },
+        { "name": "Origin", "value": "{{ _.frontendUrl }}" },
+        { "name": "Referer", "value": "{{ _.frontendUrl }}/" }
       ]
     }
   ]

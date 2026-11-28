@@ -83,6 +83,45 @@ if (drifted.length) {
   process.exit(1);
 }
 
+// Runnable on import: nothing the client could derive is left for a human to add by hand.
+// Set inventory.auth = "cookie-session" for Sanctum-style SPAs; Bearer products skip the session checks.
+const cookieSession = inventory.auth === "cookie-session";
+const notRunnable = [];
+// Collection v2.1 folders nest; a request is any item with `request`.
+function* postmanRequests(items) {
+  for (const item of items ?? []) {
+    if (item.request) yield item;
+    else yield* postmanRequests(item.item);
+  }
+}
+const postmanDir = path.join(clientsDir, "postman");
+for (const name of fs.existsSync(postmanDir) ? fs.readdirSync(postmanDir) : []) {
+  if (!name.endsWith(".postman_collection.json")) continue;
+  const collection = JSON.parse(fs.readFileSync(path.join(postmanDir, name), "utf8"));
+  for (const item of postmanRequests(collection.item)) {
+    const { method = "GET", header = [], url, body } = item.request;
+    const raw = typeof url === "string" ? url : url?.raw ?? "";
+    // Disabled headers are not sent, so they do not count.
+    const has = (key) => header.some((h) => !h.disabled && h.key.toLowerCase() === key.toLowerCase());
+    const problems = [];
+    if (body && !has("Content-Type")) problems.push("Content-Type");
+    if (cookieSession && !raw.includes("/webhooks/")) {
+      if (!has("Origin")) problems.push("Origin");
+      const unsafe = ["POST", "PUT", "PATCH", "DELETE"].includes(method.toUpperCase());
+      const xsrf = (item.event ?? []).some(
+        (e) => e.listen === "prerequest" && !e.disabled && [].concat(e.script?.exec ?? []).join("\n").includes("XSRF"),
+      );
+      if (unsafe && !xsrf) problems.push("XSRF pre-request");
+    }
+    if (problems.length) notRunnable.push(`${item.name}: ${problems.join(", ")}`);
+  }
+}
+if (notRunnable.length) {
+  console.error("Requests not runnable on import (see 07-judgment/api-clients.md § Runnable on import):");
+  for (const n of notRunnable) console.error(" -", n);
+  process.exit(1);
+}
+
 const artisanPath = path.join(root, "artisan");
 if (!fs.existsSync(artisanPath)) {
   console.log("check-api-clients: packs current (no artisan — skip route parity)");

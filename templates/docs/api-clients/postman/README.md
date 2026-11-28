@@ -15,7 +15,7 @@
 - Collection v2.1 only (v1 unsupported).
 - Folders match contract sections.
 - Collection-level `Accept` / `Accept-Language`; override per request when needed.
-- Pre-request scripts only for CSRF/idempotency helpers — keep them small and documented.
+- Runnable on import: `Origin`/`Referer` = `{{frontendUrl}}` on session requests, and a request-level pre-request script on each unsafe method that fetches the CSRF cookie and sets the token header (the template login request shows it). Keep scripts small and generated, never hand-edited.
 - Tests tab: assert status + optional `code` for business errors; do not duplicate the whole Feature suite.
 
 ## Common mistakes
@@ -23,7 +23,8 @@
 | Mistake | Fix |
 |---------|-----|
 | Embedding production tokens in the collection | Environment secrets / local overrides only |
-| Forgetting CSRF cookie step on SPA APIs | Document and script `GET /sanctum/csrf-cookie` first |
+| Forgetting CSRF cookie step on SPA APIs | Generate the CSRF pre-request script on every unsafe request; do not ask humans to copy tokens |
+| Login 200 but the next call 401 | Send `Origin`; list the frontend origin **with port** in stateful domains |
 | Using Collection Runner against production | Local/staging only unless explicitly approved |
 | Editing paths only in Postman | Change contract → regenerate |
 
