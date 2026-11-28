@@ -33,7 +33,7 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 | ✅ | Security red lines | `docs/SECURITY.md` | **92** | OWASP IDs + Every Page Checklist |
 | ✅ | AI provider / rules | `docs/AI.md` | **85** | Optional delete if no AI |
 | ✅ | SEO + GEO (shared) | `docs/SEO.md` | **90** | Honest public SEO + GEO craft; day gate wired |
-| ✅ | Docker (shared) | `docs/DOCKER.md` | **85** | Local Compose; prod host separate |
+| ✅ | Docker (shared) | `docs/DOCKER.md` | **88** | Local Compose; prod host separate; Laravel serve/--no-reload trap |
 | ✅ | Deployment (shared) | `docs/DEPLOYMENT.md` | **88** | Hosting choice + DR rules |
 | ✅ | CodeRabbit (shared) | `docs/CODERABBIT.md` | **88** | Free vs paid; does not replace CI |
 | ✅ | TestSprite (shared) | `docs/TESTSPRITE.md` | **80** | Agentic E2E/API — thinner than CodeRabbit |
@@ -42,7 +42,7 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 | ✅ | Judgment pointer | `docs/JUDGMENT.md` | **90** | Points at factory `07-judgment` |
 | ✅ | Actors pack | `docs/actors/**` | **85** | Current-actor screens/flow skeletons |
 | ✅ | Decision-log folder | `docs/decision-logs/README.md` | **75** | Optional overflow; main log is DECISIONS |
-| ✅ | Learning-from-mistakes | `docs/learning-from-mistakes/**` | **90** | README + sample lessons (queue, AI mutate, CI lockfile) |
+| ✅ | Learning-from-mistakes | `docs/learning-from-mistakes/**` | **92** | README + sample lessons (queue, AI mutate, CI lockfile, Laravel serve/Compose env) |
 | ✅ | Jira / tracker pack | `docs/jira/**` | **82** | Generic current-actor SPRINTS + README (product fills keys) |
 
 **Shared-docs average: ~89%**
@@ -54,7 +54,7 @@ Paths relative to `software-factory-all-in-one/templates/` unless noted. These s
 | ✅ | Capability | Path | % | Notes |
 |----|------------|------|---|-------|
 | ✅ | FE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER / SEO+GEO | `docs/frontend/**` | **90** | Owner-split testing (SF-10); FE SEO includes GEO craft |
-| ✅ | BE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER | `docs/backend/**` | **88** | — |
+| ✅ | BE index / ARCHITECTURE / TESTING / DEPLOYMENT / DOCKER | `docs/backend/**` | **90** | BE Docker notes Compose vs Herd DB host + serve --no-reload |
 | ✅ | FE/BE CodeRabbit yaml + guidelines | `docs/{frontend,backend}/coderabbit.yaml`, `CODERABBIT_GUIDELINES.md` | **90** | Sync when SECURITY/COMPLIANCE change |
 | ✅ | FE/BE TestSprite guidelines | `docs/*/TESTSPRITE_GUIDELINES.md` | **78** | Present; less battle-tested than CodeRabbit rails |
 

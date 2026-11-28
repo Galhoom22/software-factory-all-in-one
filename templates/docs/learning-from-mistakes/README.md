@@ -49,7 +49,7 @@ Agents promote **without waiting for the owner** when the **Lesson** would help 
 3. Leave the detailed story in this folder; the factory only keeps the rule.
 4. **Do not promote** typos, one-off env glitches, or a rule already present in `06-LESSONS.md`. Depth over volume.
 
-Starter examples (generic): [`queue-dispatch-before-commit.md`](queue-dispatch-before-commit.md), [`ci-runtime-mismatched-lockfile.md`](ci-runtime-mismatched-lockfile.md), [`ai-suggestions-must-not-mutate-source.md`](ai-suggestions-must-not-mutate-source.md).
+Starter examples (generic): [`queue-dispatch-before-commit.md`](queue-dispatch-before-commit.md), [`ci-runtime-mismatched-lockfile.md`](ci-runtime-mismatched-lockfile.md), [`ai-suggestions-must-not-mutate-source.md`](ai-suggestions-must-not-mutate-source.md), [`laravel-serve-strips-compose-env.md`](laravel-serve-strips-compose-env.md).
 
 ## Recall
 
