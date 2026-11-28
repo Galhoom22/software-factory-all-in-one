@@ -181,3 +181,12 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Decision:** **English is the permanent documentation and instruction language** of Software Factory All-in-One (README, spine, judgment, templates, agents packs, technology packs, design/architecture pattern packs, coverage, examples). Do **not** add non-English aliases, FAQs, or guidance into the kit. Discoverability aliases are English only (`software-factory`, software factory, `software-factory-all-in-one`). Product repositories may still ship bilingual **product UI** locales; that is product content, not kit instruction language. This supersedes the non-English alias practice described under SF-19.
 - **Consequences:** ✅ One language for AI agents and reviewers. ❌ Non-English marketing aliases for the kit are out of scope.
 - **Related:** SF-19, [`README.md`](README.md), [`llms.txt`](llms.txt), [`AGENTS.md`](AGENTS.md).
+
+### SF-22 On-demand system design library
+
+- **Date:** 2026-11-28
+- **Status:** Accepted
+- **Context:** Architecture-patterns name cloud topologies; GoF covers in-process shapes. Teams still lacked a forever-generic, selector-gated reference for **system design method**, fundamentals (CAP, latency, caching, LB/CDN), and worked exercises — and risked vendoring third-party primer trees into the kit.
+- **Decision:** Ship `system-design/` as an **on-demand** library (concept + exercise packs). Agents open it **only** through [`07-judgment/system-design.md`](07-judgment/system-design.md) (selector first, then 1–3 folders). **Chosen: none (baseline)** remains mandatory. Prose is original and English-only (SF-21); [https://github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) inspired the topic catalog, not copy-paste content. The library is never pasted into products. Upstream primer checkouts used for absorb are deleted after extraction — they are not part of the kit.
+- **Consequences:** ✅ Shared design vocabulary and refuse-with-evidence. ❌ Maintain packs + structure gate; risk of interview cargo-cult if the selector is skipped.
+- **Related:** SF-18, SF-20, SF-21, [`system-design/README.md`](system-design/README.md), [`07-judgment/system-design.md`](07-judgment/system-design.md).

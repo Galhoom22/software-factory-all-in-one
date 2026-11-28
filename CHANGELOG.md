@@ -6,6 +6,10 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ### Added
 
+- `system-design/` — on-demand large-scale system design library (24 packs; primer topic–inspired; original English prose) with `07-judgment/system-design.md` selector (SF-22).
+- `scripts/check-structure.mjs` — system-design pack gate (six files, Sources Checked dates, index ↔ folders).
+
+
 - **SF-21 English-only kit documentation:** remove non-English SEO aliases; README / `llms.txt` / standing state that all factory instructions stay English (including future language/i18n craft folders).
 
 

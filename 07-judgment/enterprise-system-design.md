@@ -116,3 +116,5 @@ Closeout: architecture/AI consequential days mention boundary review (or **N/A**
 ## Related on-demand library
 
 Distributed topology candidates: [`architecture-patterns.md`](architecture-patterns.md) (SF-20) → at most 1–3 [`architecture-patterns/`](../architecture-patterns/README.md) packs. In-process GoF: [`design-patterns.md`](design-patterns.md).
+
+Capacity and building-block sketches: [`system-design.md`](system-design.md) (SF-22) → at most 1–3 [`system-design/`](../system-design/README.md) packs.
