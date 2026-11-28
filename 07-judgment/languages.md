@@ -34,6 +34,7 @@ Absorb **locale / human-language craft** when a product ships (or adds) a UI or 
 | You need to … | Pack | Do not confuse with |
 |---------------|------|---------------------|
 | Shipping **Arabic (Modern Standard)** UI or data | Arabic (Modern Standard) (`arabic/`) | English pack (baseline LTR) |
+| Arabic **search / normalize / NLP** (display vs index, diacritics, morphology) | `arabic/` especially `data-and-search.md` + `backend-api.md` | DIY character hacks; Latin transliteration encodings in product storage |
 | Shipping **English** UI or data | English (`english/`) | Kit documentation language (always English) |
 | Shipping **German** UI or data | German (`german/`) | english pack |
 | Shipping **French** UI or data | French (`french/`) | spanish pack |
@@ -45,6 +46,7 @@ Absorb **locale / human-language craft** when a product ships (or adds) a UI or 
 |------|-----|
 | Kit English vs product English | Are we writing **agent instructions** (always EN) or **product UI** locale `en`? |
 | Arabic pack vs bilingual product | MSA/RTL craft vs "we also have English" |
+| Arabic display text vs search keys | Preserve user spelling in storage; fold alef/yeh/teh-marbuta/diacritics only on the index/query path |
 | es-ES vs es-419 | Which market vocabulary? |
 | fr-FR vs fr-CA | Same |
 | Sie/du or vous/tú | Formality locked in DESIGN? |

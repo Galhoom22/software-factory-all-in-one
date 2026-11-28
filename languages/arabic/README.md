@@ -5,7 +5,7 @@
 | **BCP 47** | `ar` |
 | **Direction** | rtl |
 | **Script** | Arabic script (abjad); contextual letter forms; optional Eastern Arabic-Indic digits |
-| **Intent** | Ship Arabic UI and data correctly: RTL layout, MSA copy, collation, and search without dialect leakage unless the product explicitly chooses it. |
+| **Intent** | Ship Arabic UI and data correctly: RTL layout, MSA copy, collation, display-vs-index normalization, and search without dialect leakage unless the product explicitly chooses it. |
 
 ## Summary
 
@@ -29,4 +29,7 @@ Open only after [`07-judgment/languages.md`](../../07-judgment/languages.md) nam
 |--------|---------|
 | Unicode / CLDR / ICU locale concepts (general) | 2026-11-28 |
 | W3C i18n / WCAG direction & language (general) | 2026-11-28 |
+| CAMeL Lab Arabic NLP practice (normalize, dediacritize, clean presentation forms, MSA vs dialect tooling — concepts only; MIT-licensed CAMeL Tools as reference) | 2026-11-28 |
 | Product DESIGN + COMPLIANCE when market law applies | 2026-11-28 |
+
+
