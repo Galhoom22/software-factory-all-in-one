@@ -17,8 +17,12 @@ docs/api-clients/
   openapi/                  ← OpenAPI 3.1 hub (JSON + YAML) — Swagger/Postman/Insomnia/Apidog
   postman/                  ← Collection v2.1 + environment
   insomnia/                 ← export format 4 + environment
-  apidog/                   ← imports ../openapi + env notes
+  apidog/                   ← imports the Postman pack (scripts) + env notes
 ```
+
+## Runnable on import
+
+Import → pick **local** → Send works, auth flow included. The server answers JSON on API paths without an `Accept` header; packs set `Content-Type`, `Origin`/`Referer` (`frontendUrl`) and fetch the CSRF token per unsafe request. Humans type only `baseUrl` and `frontendUrl` when theirs differ (`frontendUrl` must be an origin, with port, in the server's stateful-domains list, for example `http://localhost:5173` for a Vite frontend), fictional credentials and resource IDs. Set `"auth": "cookie-session"` in `inventory.json` for Sanctum-style SPAs so `check-api-clients` enforces it. Judgment: [`api-clients.md` § Runnable on import](../../software-factory-all-in-one/07-judgment/api-clients.md#runnable-on-import).
 
 ## Cadence (non-negotiable)
 

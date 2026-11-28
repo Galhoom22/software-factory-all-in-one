@@ -2,11 +2,15 @@
 
 **Official:** https://insomnia.rest/
 
-## Import (one shot)
+## Import (runnable)
+
+Cookie-session products: Insomnia is **not** a verified runnable client. Its docs list Postman `request`-object operations (the CSRF script uses `pm.request.headers.upsert`) among Postman import limitations ([scripts docs](https://developer.konghq.com/insomnia/scripts/)); the format 4 export has no documented script field; and the Cookie template tag yields the URL-encoded value, which the server rejects as a token header. Run the session flow in Postman or Apidog. In Insomnia, send the CSRF-cookie request first, then set `X-XSRF-TOKEN` to the URL-decoded `XSRF-TOKEN` cookie before each unsafe request (re-copy it after login, which rotates it).
+
+Setup (all products):
 
 1. Insomnia → **Import** → choose `*.insomnia.json` (export format **4**).
-2. Or import `../openapi/openapi.yaml` and overlay the environment values from `environment.template.json`.
-3. Activate the local environment; set `baseUrl`.
+2. Or import `../openapi/openapi.yaml` and overlay the environment values from `environment.template.json` (browsing only: it sends no `Origin`/`Referer`, so a cookie session will not stick).
+3. Activate the local environment; set `baseUrl`. Cookie-session products using the format 4 export also set `frontendUrl` (it feeds `Origin`/`Referer`) to an origin, with port, in the server's stateful-domains list, before the CSRF-cookie request.
 
 ## Best practices
 

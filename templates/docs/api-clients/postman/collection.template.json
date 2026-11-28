@@ -2,12 +2,13 @@
   "info": {
     "_postman_id": "00000000-0000-4000-8000-000000000001",
     "name": "{{PRODUCT_NAME}} API",
-    "description": "Generated from the product API contract. Regenerate on contract change. Fictional sample bodies only.",
+    "description": "Generated from the product API contract. Regenerate on contract change. Fictional sample bodies only. Runnable on import: session requests send Origin/Referer from frontendUrl; unsafe methods fetch their own CSRF token. Bearer products drop those and capture the token in a login test script instead.",
     "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
     { "key": "baseUrl", "value": "{{baseUrl}}" },
-    { "key": "acceptLanguage", "value": "en" }
+    { "key": "acceptLanguage", "value": "en" },
+    { "key": "frontendUrl", "value": "http://localhost:3000" }
   ],
   "item": [
     {
@@ -17,19 +18,51 @@
           "name": "GET sanctum/csrf-cookie",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              { "key": "Accept", "value": "application/json" },
+              { "key": "Origin", "value": "{{frontendUrl}}" },
+              { "key": "Referer", "value": "{{frontendUrl}}/" }
+            ],
             "url": "{{baseUrl}}/sanctum/csrf-cookie",
-            "description": "Required before cookie-session login on Sanctum-style SPAs. Skip if the product uses Bearer tokens."
+            "description": "Optional to send by hand: unsafe requests fetch it in their pre-request script. Skip if the product uses Bearer tokens."
           }
         },
         {
           "name": "POST /api/v1/auth/login",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Generated: fetch a fresh XSRF token for this session (login rotates it, so never cache it).",
+                  "const frontendUrl = pm.variables.replaceIn('{{frontendUrl}}');",
+                  "pm.sendRequest({",
+                  "  url: pm.variables.replaceIn('{{baseUrl}}/sanctum/csrf-cookie'),",
+                  "  method: 'GET',",
+                  "  header: { Accept: 'application/json', Origin: frontendUrl, Referer: frontendUrl + '/' },",
+                  "}, (err, res) => {",
+                  "  if (err) { console.error('csrf-cookie failed', err); return; }",
+                  "  const cookieName = 'XSRF-TOKEN';",
+                  "  let token = res.cookies && res.cookies.get ? res.cookies.get(cookieName) : undefined;",
+                  "  if (!token) res.headers.each((h) => {",
+                  "    const pair = h.value.split(';')[0];",
+                  "    if (/^set-cookie$/i.test(h.key) && pair.startsWith(cookieName + '=')) token = pair.slice(cookieName.length + 1);",
+                  "  });",
+                  "  if (token) pm.request.headers.upsert({ key: 'X-XSRF-TOKEN', value: decodeURIComponent(token) });",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
               { "key": "Accept", "value": "application/json" },
               { "key": "Content-Type", "value": "application/json" },
-              { "key": "Accept-Language", "value": "{{acceptLanguage}}" }
+              { "key": "Accept-Language", "value": "{{acceptLanguage}}" },
+              { "key": "Origin", "value": "{{frontendUrl}}" },
+              { "key": "Referer", "value": "{{frontendUrl}}/" }
             ],
             "body": {
               "mode": "raw",
@@ -45,7 +78,9 @@
             "method": "GET",
             "header": [
               { "key": "Accept", "value": "application/json" },
-              { "key": "Accept-Language", "value": "{{acceptLanguage}}" }
+              { "key": "Accept-Language", "value": "{{acceptLanguage}}" },
+              { "key": "Origin", "value": "{{frontendUrl}}" },
+              { "key": "Referer", "value": "{{frontendUrl}}/" }
             ],
             "url": "{{baseUrl}}/api/v1/auth/user"
           }

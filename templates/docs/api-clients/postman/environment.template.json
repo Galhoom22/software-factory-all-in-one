@@ -4,6 +4,7 @@
   "values": [
     { "key": "baseUrl", "value": "http://localhost:8000", "type": "default", "enabled": true },
     { "key": "acceptLanguage", "value": "en", "type": "default", "enabled": true },
+    { "key": "frontendUrl", "value": "http://localhost:3000", "type": "default", "enabled": true },
     { "key": "idempotencyKey", "value": "", "type": "default", "enabled": true },
     { "key": "jobDescriptionId", "value": "", "type": "default", "enabled": true },
     { "key": "tailoredResumeId", "value": "", "type": "default", "enabled": true }
