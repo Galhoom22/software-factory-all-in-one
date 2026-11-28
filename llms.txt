@@ -1,0 +1,40 @@
+# Software Factory All-in-One
+
+> Open-source software factory (planning kit) for AI coding agents. Forever generic. MIT.
+> Also called: software-factory, software factory, software-factory-all-in-one, مصنع برمجيات.
+> Canonical: https://github.com/Galhoom22/software-factory-all-in-one
+
+## Start here
+
+- [README](README.md): what it is, value, quick start, FAQ
+- [00-USAGE](00-USAGE.md): requirements-driven activation
+- [01-STEPS](01-STEPS.md): idea → complete plan
+- [ARCHITECTURE](ARCHITECTURE.md): which documents to load for a task
+- [EXCELLENCE](EXCELLENCE.md): north star (speed × professionalism)
+
+## Method spine
+
+- [02-DELIVERY](02-DELIVERY.md): actor loop (no MVP delivery mode)
+- [03-PROTOTYPE](03-PROTOTYPE.md): production-faithful prototype
+- [04-FEATURE_SDLC](04-FEATURE_SDLC.md): feature depth in implementation repos
+- [05-PROMPTS](05-PROMPTS.md): ready agent prompts
+- [06-LESSONS](06-LESSONS.md): transferable lessons
+- [07-judgment/](07-judgment/README.md): conditional judgment guides (SEO+GEO, payments, AI, patterns, …)
+- [08-IMPLEMENTATION-DAY](08-IMPLEMENTATION-DAY.md): day pipeline + closeout
+- [09-CI-CD](09-CI-CD.md): CI/CD phases for honest Done
+
+## Libraries (on demand)
+
+- [design-patterns/](design-patterns/README.md): GoF packs — open only via [07-judgment/design-patterns.md](07-judgment/design-patterns.md)
+- [technologies/](technologies/README.md): stack packs
+- [agents/](agents/README.md): harness packs
+- [coverage/](coverage/README.md): honest craft atlas
+
+## Seed and contribute
+
+- Seed: `node scripts/seed.mjs ../your-planning-repo` (see README Quick start)
+- [CONTRIBUTING](CONTRIBUTING.md) · [CHANGELOG](CHANGELOG.md) · [DECISIONS](DECISIONS.md) · [LICENSE](LICENSE)
+
+## Note for Google Search
+
+Google Search does not require this file ([AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)). It exists for systems that choose to read `llms.txt`. Human-facing truth stays in README.md and the method docs.

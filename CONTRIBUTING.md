@@ -70,6 +70,15 @@ A vendored copy (`<product>/software-factory-all-in-one/`) is read-only. To impr
 
 A maintainer may develop the factory inside a private planning repository as its designated source copy. Publishing from it must run every gate plus a private product, person and organisation denylist on the files **and** on the publish message; refuse when the public repository has changes that are not back-ported yet; go through a pull request that public CI checks before it merges; and publish exactly the source tree, with nothing injected. Never force-push.
 
+## Public discoverability (maintainers)
+
+When changing the kit’s public identity (name, one-line pitch, FAQ, topics):
+
+1. Keep [`README.md`](README.md) people-first: direct answer, honest aliases, FAQ — no keyword spam or fake rankings (SF-19).
+2. Keep [`llms.txt`](llms.txt) in sync as an **optional** map for AI systems that read it; do not claim it affects Google Search ([Google AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)).
+3. Align the GitHub repository description and topics with the README (no private product names).
+4. Judgment: [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
+
 ## Releasing (maintainers)
 
 Versions follow [Semantic Versioning](https://semver.org/), read from a vendored copy's point of view ([SF-16](DECISIONS.md#sf-16-releases-and-immutable-tags)):
