@@ -39,7 +39,7 @@ Workflows are **how agents and owners run work**, not just file names. Each row 
 | ✅ | Cross-surface compatibility | `07-judgment/cross-surface-compatibility`, `08`, `SIBLING` template | **90** | Sibling read; owned-seat write; contract-first handoff |
 | ✅ | API readiness across environments | `07-judgment/api-readiness`, `08`, `09`, BE TESTING/DEPLOYMENT | **90** | Contract + design bar + local + CI + phase smoke; FE-handoff honesty |
 | ✅ | API design craft | `07-judgment/api-design`, contract template, `08` gate 7 | **90** | Consumer-first; HTTP semantics; docs=agreement |
-| ✅ | API client import packs (Postman / Insomnia / Apidog) | `07-judgment/api-clients`, `templates/docs/api-clients/` | **88** | One inventory → OpenAPI + client folders; not a second SoT |
+| ✅ | API client import packs (OpenAPI hub → Postman / Insomnia / Apidog) | `07-judgment/api-clients`, `templates/docs/api-clients/`, `08` API readiness (f) | **92** | Always-current from first route; CI drift + route parity; not a second SoT |
 | ✅ | SEO + GEO on public-page days | `07-judgment/seo-geo`, `08`, SEO templates | **88** | Checklist + N/A for private-only days; no ranking vanity Done |
 | ✅ | Candor on degrading asks | OWNER_STANDING + coverage + `08` (SF-07) | **90** | Refuse/advise; never propose bar-lowering changes upstream |
 | ✅ | Enterprise system-design boundary review | `07-judgment/enterprise-system-design`, `08` high-stakes | **90** | Six questions + AI practice level on consequential days |

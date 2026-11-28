@@ -43,6 +43,18 @@ jobs:
       - name: Tests
         run: php artisan test
 
+      # Always-current API packs (OpenAPI → Postman/Insomnia/Apidog). Skip until docs/api-clients/ exists.
+      - name: Setup Node
+        if: hashFiles('docs/api-clients/inventory.json') != ''
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+
+      - name: API clients always-current
+        if: hashFiles('docs/api-clients/inventory.json') != ''
+        run: node scripts/check-api-clients.mjs
+
       # Uncomment when Forge staging hook exists (secret: FORGE_DEPLOY_HOOK_STAGING).
       # deploy-staging must be a separate job with: needs: [tests], if: push to main.
+
 

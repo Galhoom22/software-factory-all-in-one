@@ -4,6 +4,7 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 ### Added
+- Always-current API clients: OpenAPI 3.1 as machine hub ([openapis.org](https://www.openapis.org/) / [Swagger](https://swagger.io/)), regenerate from day one, CI drift + optional framework route parity, day gate in `08-IMPLEMENTATION-DAY.md` (SF-17).
 - Judgment + templates for HTTP API client packs: Postman Collection v2.1, Insomnia export, and Apidog-via-OpenAPI under `templates/docs/api-clients/`, with guide [`07-judgment/api-clients.md`](07-judgment/api-clients.md) (SF-17). One inventory → many clients; contract stays SoT.
 
 ## [1.2.0] - 2026-11-27
