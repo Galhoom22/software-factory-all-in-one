@@ -1,64 +1,73 @@
-# Judgment — API clients (Postman · Insomnia · Apidog)
+# Judgment — API description + clients (OpenAPI · Swagger · Postman · Insomnia · Apidog)
 
-Manual API exploration that stays honest with the contract. Complements automated tests — it does not replace them.
+Human-verify the HTTP API **from the first route that lands**, not after the actor is finished. Complements automated tests — never replaces them.
 
-**Official homes:** [Postman](https://www.postman.com/) · [Insomnia](https://insomnia.rest/) · [Apidog](https://apidog.com/)
+**Standards / tools:** [OpenAPI Initiative](https://www.openapis.org/) · [OpenAPI learning](https://learn.openapis.org/) · [Swagger](https://swagger.io/) · [Postman](https://www.postman.com/) · [Insomnia](https://insomnia.rest/) · [Apidog](https://apidog.com/)
 
 ## Problem this prevents
 
-- “Green tests” while nobody can import and exercise the live API in one click.
-- Three hand-edited collections that drift from `API_CONTRACT` / OpenAPI.
-- Secrets, production PII, or real billing keys inside committed collections.
-- Treating a Postman dump as a second source of truth for paths and shapes.
+- Waiting until “the project is done” to get a usable collection — then discovering contract drift.
+- Three hand-edited Postman/Insomnia/Apidog trees that disagree with `API_CONTRACT` and with each other.
+- Treating a client dump as a second source of truth.
+- Secrets or real PII inside committed collections.
+- “Green Feature tests” while nobody can open Swagger/Postman and exercise the live API in one import.
 
-## Adopt (wire into planning + implementation)
+## Adopt (always-current — day one)
 
-1. **Contract stays SoT.** Human agreement lives in product `docs/API_CONTRACT.md` (or equivalent). Machine inventory / OpenAPI is **derived** from that contract — never invent paths in a client folder.
-2. **One inventory → many clients.** Keep a single endpoint inventory (or OpenAPI 3.1). Generate or export **Postman Collection v2.1**, **Insomnia export**, and **Apidog-ready OpenAPI** from that inventory. Prefer a small generator script over hand-syncing three trees.
-3. **Folder per client** under `docs/api-clients/` (implementation API repo) or planning `docs/api-clients/` when the product is API-only:
+1. **Contract stays human SoT.** Product `docs/API_CONTRACT.md` (or equivalent) is the agreement. Machine artifacts are **derived**.
+2. **OpenAPI is the machine hub.** Maintain an **OpenAPI 3.1** Description (`openapi` + `info` + `paths` / `components` — see [learn.openapis.org structure](https://learn.openapis.org/specification/structure)). Commit **JSON and/or YAML**. Swagger Editor / Swagger UI, Postman, Insomnia, and Apidog all import OpenAPI.
+3. **One inventory → many clients.** From that OpenAPI (or a single endpoint inventory that generates it), produce:
+   - OpenAPI 3.1 (hub)
+   - Postman Collection **v2.1** + environment
+   - Insomnia export (format 4) + environment
+   - Apidog pack = import OpenAPI + env notes (do not rely on proprietary project dumps as SoT)
+4. **Bootstrap on the first API Story.** Empty or stub folders are fine on day 0 of coding; the **first** authenticated route that merges must update inventory/OpenAPI + regenerate clients in the **same** change. Then **every** Story that adds, renames, removes, or changes a path/method/header/body updates the pack again — same PR. Never “we’ll fill Postman at the end.”
+5. **CI drift gate.** Implementation API repos run a check that regenerates clients and **fails if git would change** generated files, and that inventory paths stay aligned with the framework route table. Stale collections cannot merge.
+6. **Environments, not hard-coded hosts.** `baseUrl`, locale, idempotency placeholders live in env files. Production secrets never ship in git.
+7. **Auth as the product does it.** Document CSRF/cookie vs Bearer in each client README. Wrong auth in the collection lies to the team.
+8. **Day evidence.** On API days: contract IDs + regenerated clients + Feature tests. Optional: one happy-path Send in Postman/Swagger against local. Collections are the **human verify plane**; CI Feature tests are the **judge plane**.
 
-   | Folder | Import file | Also include |
-   |--------|-------------|--------------|
-   | `openapi/` | `openapi.yaml` (OpenAPI 3.1) | README: regenerate rule |
-   | `postman/` | `*.postman_collection.json` + `*.postman_environment.json` | README: auth, variables, practices |
-   | `insomnia/` | `*.insomnia.json` (export format 4) + env | README: same |
-   | `apidog/` | Prefer OpenAPI import (`../openapi/…`) + env notes | README: Apidog project setup |
-
-4. **Environments, not hard-coded hosts.** `baseUrl`, `acceptLanguage`, and auth placeholders live in environment files. Local / staging / production are separate envs; production env never ships real secrets.
-5. **Auth as the product does it.** Cookie/CSRF SPA, Bearer, API keys — document the exact pre-request steps in each client README. Collections that skip CSRF for Sanctum-style APIs lie to the team.
-6. **Idempotency and consent.** Requests that spend money, start jobs, or need AI consent include the required headers/`code` expectations in the request description.
-7. **Day evidence.** When an API Story lands, cite: contract change (if any) + regenerated clients + at least one happy-path import smoke in the chosen client (or N/A with reason). Automated Feature tests remain the judge plane; the collection is the human verify plane.
-
-Product template: [`templates/docs/api-clients/`](../templates/docs/api-clients/README.md).
+Product template: [`templates/docs/api-clients/`](../templates/docs/api-clients/README.md).  
+Impl CI sketch: regenerate + `check-api-clients` in [`templates/implementation/github-actions/backend-ci.yml`](../templates/implementation/github-actions/backend-ci.yml).
 
 ## Forbid
 
 | Forbid | Why |
 |--------|-----|
+| Deferring collections until actor/ship day | Unusable mid-build; drift accumulates |
 | Hand-maintaining three full collections as independent SoTs | Drift; wrong paths ship |
-| Committing tokens, session cookies, webhook secrets, or real PII | Security / COMPLIANCE |
-| Replacing Feature/CI tests with “I clicked Send in Postman” | Builder-only verification |
+| Committing tokens, cookies, webhook secrets, or real PII | Security / COMPLIANCE |
+| Replacing Feature/CI tests with “I clicked Send” | Builder-only verification |
 | OpenAPI that invents fields not in the contract | Cross-surface breakage |
-| One giant undocumented dump with no folders or env | Unusable for the team |
+| “Auto sync from production URL” as SoT in Apidog/Swagger | Live scrape ≠ contract |
+| Skipping the CI drift check | Stale packs merge silently |
 
-## Best practices (all three tools)
+## Best practices
 
-- Folder by domain (Auth, Account, Billing, …) matching the contract sections.
-- Name requests `METHOD path` or a short intent (`Register`, `Start tailor`).
-- Document expected status + business `code` on failure in the request description.
-- Use variables for IDs returned by prior steps (`{{jobDescriptionId}}`).
-- Keep example bodies **fictional** (clearly fake emails/names).
-- After every contract change that adds/renames/removes an endpoint: regenerate clients in the **same** change.
+### OpenAPI / Swagger
+
+- Keep `openapi: 3.1.0` (or the line your tools pin); bump `info.version` when the **description** of the API changes.
+- List `servers` with clear descriptions (local / staging); use variables, not secrets.
+- Path item parameters for `{id}`-style segments; reusable pieces under `components` when they repeat.
+- Operation `summary` / `description` carry expected status and business `code`s the UI branches on.
+- Import the same file into [Swagger Editor](https://editor.swagger.io/) for a quick read; Swagger UI for browse — still regenerate from inventory/contract, do not edit only in the UI.
+
+### Postman / Insomnia / Apidog
+
+- Folders match contract sections.
+- Fictional example bodies only (`@example.test`).
+- Fresh `Idempotency-Key` per intentional money/job action.
+- After contract change: regenerate → re-import or refresh → smoke one path.
 
 ## Common mistakes
 
 | Mistake | Fix |
 |---------|-----|
-| Importing once, never regenerating | Tie regenerate to the contract PR checklist |
-| Putting `Authorization: Bearer` on a cookie SPA API | Match Sanctum/CSRF (or your real auth) |
-| Same Idempotency-Key forever in the collection | Generate per intentional user action; reuse only on retry |
-| Testing webhooks with unsigned bodies | Use provider test tools / signed fixtures |
-| Apidog “sync from production” inventing docs | Import **your** OpenAPI; do not scrape live as SoT |
+| “Collections later when FE is ready” | Backend owns the pack from first route |
+| Editing only inside Postman/Apidog cloud | Change contract → inventory → regenerate → commit |
+| OpenAPI without path parameters for `{id}` | Declare them; clients need them |
+| Inventory missing new artisan/framework routes | CI route-parity fails until inventory catches up |
+| Same Idempotency-Key forever | Generate per user action; reuse only on retry |
 
 ## Related homes
 
@@ -66,4 +75,5 @@ Product template: [`templates/docs/api-clients/`](../templates/docs/api-clients/
 - [`api-readiness.md`](api-readiness.md) — local / CI / staging smoke bar
 - [`verification-engineering.md`](verification-engineering.md) — criteria → evidence
 - [`cross-surface-compatibility.md`](cross-surface-compatibility.md) — FE/BE handshake
+- Day pipeline: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md) API + clients gate
 - Product `docs/API_CONTRACT.md` · Feature tests · 09-CI-CD
