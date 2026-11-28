@@ -685,6 +685,58 @@ if (
   }
 }
 
+
+// --- Language (locale) packs: dirs ↔ index ↔ six files ↔ Checked dates ---
+{
+  const langRoot = path.join(playbookRoot, "languages");
+  if (exists(langRoot)) {
+    const skip = new Set(["_pack-template"]);
+    const required = ["README.md","ui-ux.md","frontend.md","backend-api.md","data-and-search.md","pitfalls.md"];
+    const index = read(path.join(langRoot, "README.md"));
+    const dirs = fs
+      .readdirSync(langRoot, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && !skip.has(d.name))
+      .map((d) => d.name)
+      .sort();
+    for (const slug of dirs) {
+      const listed =
+        index.includes("[`" + slug + "/`](" + slug + "/README.md)") ||
+        index.includes("languages/" + slug + "/");
+      if (!listed) {
+        fail("languages/" + slug + "/ exists but is not listed in languages/README.md index");
+      }
+      for (const f of required) {
+        if (!exists(path.join(langRoot, slug, f))) fail(`languages/${slug}/ missing ${f}`);
+      }
+      const card = read(path.join(langRoot, slug, "README.md"));
+      if (!/Checked/i.test(card)) fail(`languages/${slug}/README.md has no Checked dates in Sources`);
+      if (![...card.matchAll(/\b(20\d{2}-\d{2}-\d{2})\b/g)].length) {
+        fail(`languages/${slug}/README.md has no YYYY-MM-DD Checked dates`);
+      }
+      if (/[\u0600-\u06FF]/.test(card)) {
+        fail(`languages/${slug}/README.md must stay English-only (SF-21); found Arabic script`);
+      }
+    }
+    for (const m of index.matchAll(/\|\s*\[`([a-z0-9-]+)\/`\]\(\1\/README\.md\)/g)) {
+      const slug = m[1];
+      if (!exists(path.join(langRoot, slug))) fail(`languages/README.md lists ${slug}/ but directory is missing`);
+    }
+    {
+      const probeDir = path.join(langRoot, "_structure-probe-missing-file");
+      fs.mkdirSync(probeDir, { recursive: true });
+      fs.writeFileSync(path.join(probeDir, "README.md"), "# probe\n");
+      let probed = false;
+      try {
+        if (!exists(path.join(probeDir, "ui-ux.md"))) probed = true;
+      } finally {
+        fs.rmSync(probeDir, { recursive: true, force: true });
+      }
+      if (!probed) fail("languages structure probe self-test failed");
+    }
+    note(`language packs scanned: ${dirs.length}`);
+  }
+}
+
 // --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
 {
   const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));

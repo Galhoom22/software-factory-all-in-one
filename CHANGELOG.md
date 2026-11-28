@@ -6,6 +6,10 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ### Added
 
+- `languages/` — on-demand locale craft library (Arabic, English, German, French, Spanish) with `07-judgment/languages.md` selector (SF-23); English-only instruction prose.
+- `scripts/check-structure.mjs` — language-pack gate (six files, Sources dates, index ↔ folders, no Arabic script in pack README).
+
+
 - `system-design/` — on-demand large-scale system design library (24 packs; primer topic–inspired; original English prose) with `07-judgment/system-design.md` selector (SF-22).
 - `scripts/check-structure.mjs` — system-design pack gate (six files, Sources Checked dates, index ↔ folders).
 

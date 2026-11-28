@@ -4,6 +4,8 @@ Absorb **system design judgment** for capacity, edge, data, and reliability sket
 
 Upstream reading (human only): [https://github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer). Prefer the **behaviors** below; do not copy third-party sample brands into products ([`01-STEPS.md`](../01-STEPS.md) § Absorb outside references). Kit language: English only (SF-21).
 
+Sibling locales → [`languages.md`](languages.md) (SF-23).
+
 Siblings: cloud pattern names → [`architecture-patterns.md`](architecture-patterns.md). GoF → [`design-patterns.md`](design-patterns.md). Boundaries → [`enterprise-system-design.md`](enterprise-system-design.md). ADR craft → [`sad-adr.md`](sad-adr.md).
 
 ## Adopt

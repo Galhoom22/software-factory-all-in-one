@@ -34,7 +34,7 @@ const KEEP_AT_ROOT = new Set([".git", "my-project-requirements.md"]);
 const KIT_TOP = new Set([
   ".github", ".gitattributes", ".gitignore", "AGENTS.md", "CHANGELOG.md", "ARCHITECTURE.md", "CLAUDE.md", "DECISIONS.md", "00-USAGE.md", "01-STEPS.md", "02-DELIVERY.md", "03-PROTOTYPE.md", "04-FEATURE_SDLC.md",
   "05-PROMPTS.md", "06-LESSONS.md", "07-judgment", "08-IMPLEMENTATION-DAY.md", "09-CI-CD.md", "CODE_OF_CONDUCT.md",
-  "CONTRIBUTING.md", "EXCELLENCE.md", "LICENSE", "llms.txt", "README.md", "SECURITY.md", "agents", "assets", "architecture-patterns", "coverage", "design-patterns", "system-design",
+  "CONTRIBUTING.md", "EXCELLENCE.md", "LICENSE", "llms.txt", "README.md", "SECURITY.md", "agents", "assets", "architecture-patterns", "coverage", "design-patterns", "languages", "system-design",
   "examples", "scripts", "technologies", "templates",
 ]);
 

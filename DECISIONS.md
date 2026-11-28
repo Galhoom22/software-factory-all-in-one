@@ -190,3 +190,12 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Decision:** Ship `system-design/` as an **on-demand** library (concept + exercise packs). Agents open it **only** through [`07-judgment/system-design.md`](07-judgment/system-design.md) (selector first, then 1–3 folders). **Chosen: none (baseline)** remains mandatory. Prose is original and English-only (SF-21); [https://github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) inspired the topic catalog, not copy-paste content. The library is never pasted into products. Upstream primer checkouts used for absorb are deleted after extraction — they are not part of the kit.
 - **Consequences:** ✅ Shared design vocabulary and refuse-with-evidence. ❌ Maintain packs + structure gate; risk of interview cargo-cult if the selector is skipped.
 - **Related:** SF-18, SF-20, SF-21, [`system-design/README.md`](system-design/README.md), [`07-judgment/system-design.md`](07-judgment/system-design.md).
+
+### SF-23 On-demand human-language (locale) craft library
+
+- **Date:** 2026-11-28
+- **Status:** Accepted
+- **Context:** Products ship multiple human languages (UI/UX, FE, API messages, collation/search). Agents lacked forever-generic, selector-gated locale craft and risked writing non-English instructions into the kit or treating English layout rules as universal.
+- **Decision:** Ship `languages/` as an **on-demand** library (one folder per human language / locale family). Starter set: Arabic (`ar`), English (`en`), German (`de`), French (`fr`), Spanish (`es`). Agents open packs **only** through [`07-judgment/languages.md`](07-judgment/languages.md). **All pack prose is English** (SF-21) — guidance *about* the locale, never kit docs *in* that language. Add further locales with `_pack-template/` when a product earns them. Never paste packs into products.
+- **Consequences:** ✅ Consistent multilingual craft. ❌ Maintain packs + structure gate (including English-only README check).
+- **Related:** SF-21, [`languages/README.md`](languages/README.md), [`07-judgment/languages.md`](07-judgment/languages.md).
