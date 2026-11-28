@@ -74,4 +74,6 @@ Backend-only / private-API days: **skip** (say N/A). Do not invent marketing wor
 - Method: [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md)
 - Templates: `templates/docs/SEO.md`, `templates/docs/frontend/SEO.md`
 - Lessons: [`06-LESSONS.md`](../06-LESSONS.md) (SEO honesty)
+
+- This kit’s public GitHub home: maintain [`README.md`](../README.md) (direct answers, FAQ, honest aliases) and optional [`llms.txt`](../llms.txt) for discoverability of **Software Factory All-in-One** itself (SF-19) — same honesty bar; `llms.txt` is optional for non-Google systems only.
 - Product COMPLIANCE marketing / privacy red lines

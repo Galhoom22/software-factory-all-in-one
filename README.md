@@ -1,8 +1,10 @@
 # Software Factory All-in-One
 
+**Also known as:** `software-factory` · software factory · `software-factory-all-in-one` · مصنع برمجيات (Arabic for "software factory")
+
 **Open-source software factory for AI coding agents** — requirements in → production-ready plan out · forever generic · MIT
 
-One planning kit that turns a short requirements file into a complete product plan (docs, prototype rails, agent rules, CI, day loops, stack judgment) so agents ship **fast and professional** — not vibes.
+**Direct answer:** [Software Factory All-in-One](https://github.com/Galhoom22/software-factory-all-in-one) is a forever-generic **software factory** (planning kit / playbook) that turns a short requirements file into a complete product plan — docs, prototype rails, agent rules, CI, day loops, and stack judgment — so AI coding agents ship **fast and professional**, not vibes.
 
 <p align="center">
   <a href="https://github.com/Galhoom22/software-factory-all-in-one/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Galhoom22/software-factory-all-in-one?style=flat-square" /></a>
@@ -35,6 +37,20 @@ This factory gives the agent a **complete operating system for planning and deli
 | **Forever generic** | 100% reusable for any product; CI blocks private leakage |
 
 **North star:** maximum agent speed × maximum professionalism. Details: [`EXCELLENCE.md`](EXCELLENCE.md).
+
+## What "software factory" means here
+
+In this repository, a **software factory** is not a CI/CD product brand and not a single IDE plugin. It is a **reusable method + templates**: you seed a private planning repo, write requirements in plain language, and agents follow a fixed spine (`00`–`09`, judgment, technology packs, harness packs) until planning for the current actor is production-quality — then implementation happens in separate FE/BE repos.
+
+If you searched for **software-factory**, **software factory all in one**, **software-factory-all-in-one**, or **مصنع برمجيات**, this kit is that method published as open source under MIT.
+
+## Who this is for (and not)
+
+| For | Not for |
+|-----|---------|
+| Teams that plan with AI coding agents (Cursor, Codex, Claude, Gemini, …) and want evidence-based Done | A hosted SaaS "factory" you log into |
+| Building a new product's **planning** repository from scratch | Dropping application code into this public kit |
+| Raising professionalism (security, delivery, SEO+GEO on product public pages, patterns, …) | Keyword-stuffed doorway pages or fake authority |
 
 ---
 
@@ -124,12 +140,14 @@ Never put real product names, people, or tracker keys **back into this public ki
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet
 ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
-DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-18)
+DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-19)
 CHANGELOG.md              What changed, and how to update a vendored copy
 AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
+llms.txt                  Optional map for AI systems that read it (not a Google Search requirement)
 coverage/                 Honest ✅/% atlas (craft · surfaces · agents)
 agents/                   Per-harness packs
 technologies/             Per-stack packs
+design-patterns/          On-demand GoF packs (open via 07-judgment/design-patterns.md only)
 templates/                Skeleton of a new planning repository
 examples/                 Sample requirements entry file
 scripts/                  Self-checks (activation, freshness, forever-generic)
@@ -156,6 +174,36 @@ This repository must stay **100% reusable** for any team and any product.
 - **Forbidden here:** product names, people, tracker keys, day-page URLs, secrets, real personal data.
 
 **Enforced:** CI runs `node scripts/check-forever-generic.mjs`. Planning sync also refuses private product/person leakage before publish. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+## FAQ (search and AI answers)
+
+### What is Software Factory All-in-One?
+
+An open-source **software factory** planning kit: seed a private repo, write `my-project-requirements.md`, and AI agents run a complete planning method (`00-USAGE` → `09-CI-CD`, judgment, templates) so the product plan is production-ready per actor. Canonical repo: [Galhoom22/software-factory-all-in-one](https://github.com/Galhoom22/software-factory-all-in-one).
+
+### Is this the same as "software-factory" or "مصنع برمجيات"?
+
+Those phrases are common names for this kind of method. This project's official name is **Software Factory All-in-One** (`software-factory-all-in-one`). Arabic speakers often say **مصنع برمجيات** for the same idea. Prefer the GitHub slug and this README when citing the kit.
+
+### Does it replace my frontend or backend app?
+
+No. It produces and maintains the **planning** repository. You implement in separate FE/BE (or other) product repos using the day pipeline and FEATURE_SDLC.
+
+### How do I start in under five minutes?
+
+Use **Use this template** (private) or clone a [release](https://github.com/Galhoom22/software-factory-all-in-one/releases/latest), run `node scripts/seed.mjs`, write `my-project-requirements.md`, open your agent. Details: [Quick start](#quick-start) and [`00-USAGE.md`](00-USAGE.md).
+
+### How does this relate to SEO and GEO for *my* product?
+
+The kit's judgment [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md) and SEO templates teach honest technical SEO + people-first GEO craft for **your product's public pages**. This README itself is maintained for discoverability of the kit (clear answers, FAQ, no fake rankings). For Google Search, foundations remain SEO — not vendor-only "GEO hacks" ([Google AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide); [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)).
+
+### Where do design patterns live?
+
+On-demand under [`design-patterns/`](design-patterns/README.md). Open folders only after [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md) names a candidate (SF-18).
+
+### What license?
+
+[MIT](LICENSE). Reuse freely; keep the kit forever-generic if you contribute back.
 
 ---
 

@@ -154,3 +154,13 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Decision:** Ship `design-patterns/` as an **on-demand** library (one folder per classic GoF pattern in the 22-pattern catalog). Agents open it **only** through [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md) (selector first, then 1–3 candidate folders). Pattern-for-show stays forbidden; the no-pattern baseline is mandatory in every Pattern Decision Record. The library is never pasted into products.
 - **Consequences:** ✅ Shared language and refuse-with-evidence. ❌ Maintain 22 packs + structure gate; risk of agents opening the whole tree if the selector is skipped.
 - **Related:** SF-14, SF-15, [`design-patterns/README.md`](design-patterns/README.md), [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).
+
+### SF-19 Public kit discoverability (SEO + GEO craft on the OSS home)
+
+- **Date:** 2026-11-28
+- **Status:** Accepted
+- **Context:** The public GitHub home must be findable for queries like software-factory, software-factory-all-in-one, and مصنع برمجيات, and citeable by AI answer surfaces — without keyword spam, fake authority, or treating `llms.txt` as a Google Search requirement.
+- **Decision:** Maintain the kit README with a direct answer, honest aliases, who-for/not-for, and FAQ; ship optional root [`llms.txt`](llms.txt) for systems that read it; keep GitHub description/topics aligned; follow [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md) and Google Search Central (SEO starter + AI optimization guides). Ranking and citation counts are not Done gates.
+- **Consequences:** ✅ Clear identity for search and AI grounding. ❌ Maintain FAQ/aliases when the kit name or spine changes.
+- **Related:** SF-10, [`README.md`](README.md), [`llms.txt`](llms.txt), [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
+
