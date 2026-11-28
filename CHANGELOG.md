@@ -4,6 +4,16 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-11-28
+### Added
+
+- Docker Compose / Laravel local trap: `templates/docs/learning-from-mistakes/laravel-serve-strips-compose-env.md` — default `artisan serve` strips Compose `DB_HOST` so a mounted host `.env` (`127.0.0.1`) wins inside the container; HTTP fails while CLI looks fine. Fix: `serve --no-reload` on the Compose API command/CMD. Wired into `templates/docs/DOCKER.md`, `templates/docs/backend/DOCKER.md`, and `06-LESSONS.md`.
+
+
+### Migration (vendored copies)
+1. From a fresh clone of the v1.4.1 release: `node scripts/seed.mjs --update <your-planning-repo>`.
+2. No product-file edits required for green CI. Optional: copy the new learning-from-mistakes sample and Docker checklist lines into implementation Docker docs if you maintain them by hand.
+
 ## [1.4.0] - 2026-11-28
 
 Security depth: threat modeling, CI workflow hardening, incident response and vet-before-install for outside agent skills, with a structure gate that enforces the mechanical parts on the kit's own workflows and text. Plus the Kotlin 2.4 pack. Seeded repositories that were green stay green.
@@ -213,7 +223,8 @@ Kept verbatim from the coverage atlas, newest first.
 | 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |
 
-[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.4.1
 [1.4.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.4.0
 [1.3.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.3.0
 [1.2.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.2.0
