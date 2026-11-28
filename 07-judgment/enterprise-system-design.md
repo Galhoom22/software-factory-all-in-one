@@ -112,3 +112,7 @@ Closeout: architecture/AI consequential days mention boundary review (or **N/A**
 
 - [`agent-skills.md`](agent-skills.md) · [`ai-system-design.md`](ai-system-design.md) · [`ai-engineering.md`](ai-engineering.md) · [`sad-adr.md`](sad-adr.md) · [`api-design.md`](api-design.md) · [`booking.md`](booking.md) · [`payments.md`](payments.md)
 - Method: [`04-FEATURE_SDLC.md`](../04-FEATURE_SDLC.md), [`08-IMPLEMENTATION-DAY.md`](../08-IMPLEMENTATION-DAY.md)
+
+## Related on-demand library
+
+Distributed topology candidates: [`architecture-patterns.md`](architecture-patterns.md) (SF-20) → at most 1–3 [`architecture-patterns/`](../architecture-patterns/README.md) packs. In-process GoF: [`design-patterns.md`](design-patterns.md).

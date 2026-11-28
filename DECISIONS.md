@@ -164,3 +164,12 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Consequences:** ✅ Clear identity for search and AI grounding. ❌ Maintain FAQ/aliases when the kit name or spine changes.
 - **Related:** SF-10, [`README.md`](README.md), [`llms.txt`](llms.txt), [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
 
+### SF-20 On-demand software architecture patterns library
+
+- **Date:** 2026-11-28
+- **Status:** Accepted
+- **Context:** GoF `design-patterns/` covers in-process shapes. Distributed/cloud topology still had no forever-generic, selector-gated reference — agents either invented ad-hoc names or cargo-culted vendor samples.
+- **Decision:** Ship `architecture-patterns/` as an **on-demand** library (one folder per Azure Architecture Center cloud design pattern in the current catalog). Agents open it **only** through [`07-judgment/architecture-patterns.md`](07-judgment/architecture-patterns.md) (selector first, then 1–3 candidate folders). **Chosen: none (baseline)** remains mandatory. Prose is original and cloud-agnostic; Microsoft Learn is the catalog source of truth for names/slugs, not copy-paste content. The library is never pasted into products.
+- **Consequences:** ✅ Shared distributed vocabulary and refuse-with-evidence. ❌ Maintain ~44 packs + structure gate; risk of opening the whole tree if the selector is skipped.
+- **Related:** SF-18, SF-15, [`architecture-patterns/README.md`](architecture-patterns/README.md), [`07-judgment/architecture-patterns.md`](07-judgment/architecture-patterns.md).
+

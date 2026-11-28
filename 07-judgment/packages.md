@@ -76,4 +76,5 @@ When the work is non-trivial:
 - Ponytail / engineering standards: never add a dependency for a few lines — this judgment covers the **other** side (do not DIY a product when a package earns it)
 - [`stack-selection.md`](stack-selection.md) — whole-stack choice; this file is **per capability**
 - [`design-patterns.md`](design-patterns.md) — patterns ≠ packages; both must be earned
+- [`architecture-patterns.md`](architecture-patterns.md) — distributed topology ≠ a package; both must be earned
 - Product `SECURITY` / `COMPLIANCE` — may veto a package

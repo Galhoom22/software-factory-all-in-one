@@ -1,6 +1,6 @@
 # Judgment — object-oriented design patterns
 
-Absorb **GoF-style design pattern judgment** (creational / structural / behavioral blueprints; problem → naive → enhanced) for implementation design. Keep the on-demand reference library in [`design-patterns/`](../design-patterns/README.md) — open it **only through this selector**, never paste packs into products, never force a named pattern on every feature, and never copy toy “pizza/duck” sample trees (SF-18).
+Absorb **GoF-style design pattern judgment** (creational / structural / behavioral blueprints; problem → naive → enhanced) for implementation design. Keep the on-demand reference library in [`design-patterns/`](../design-patterns/README.md). For queues, gateways, sagas, and multi-region shapes use [`architecture-patterns.md`](architecture-patterns.md) instead — open it **only through this selector**, never paste packs into products, never force a named pattern on every feature, and never copy toy “pizza/duck” sample trees (SF-18).
 
 Upstream reading (human only, optional): classic GoF catalogs and reputable pattern courses. Prefer the **behaviors** below; keep instructor names and course PDFs out of product repos after absorption ([`01-STEPS.md`](../01-STEPS.md) § Absorb outside references).
 
