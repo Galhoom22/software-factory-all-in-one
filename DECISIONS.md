@@ -145,3 +145,12 @@ Product repositories keep their own log (`docs/DECISIONS.md`, IDs `D-NN`); kit d
 - **Context:** Teams need Postman, Insomnia, or Apidog to verify APIs by hand, but three hand-edited collections drift from the contract and can hide secrets.
 - **Decision:** Ship `docs/api-clients/` with one inventory → **OpenAPI 3.1 hub** (JSON+YAML) derived from `API_CONTRACT`, then generate Postman v2.1, Insomnia export, and Apidog-ready OpenAPI. Bootstrap on the **first** API Story; regenerate in the **same** change as every route edit; CI drift + route-parity gate so packs stay always-current mid-build (not only at ship). Judgment: [`07-judgment/api-clients.md`](07-judgment/api-clients.md); templates: [`templates/docs/api-clients/`](templates/docs/api-clients/README.md). Collections complement Feature tests; they never replace them or become a second SoT.
 - **Consequences:** ✅ One-click human verify. ✅ Same regenerate path for every tool. ❌ Inventory must stay matched to the contract on every API change.
+
+### SF-18 On-demand GoF design-pattern library
+
+- **Date:** 2026-11-28
+- **Status:** Accepted
+- **Context:** The judgment guide told agents not to dump a pattern encyclopedia into the repo, which left no shared, forever-generic reference when a consequential abstraction needed a named shape — and made “no pattern” harder to argue with evidence.
+- **Decision:** Ship `design-patterns/` as an **on-demand** library (one folder per classic GoF pattern in the 22-pattern catalog). Agents open it **only** through [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md) (selector first, then 1–3 candidate folders). Pattern-for-show stays forbidden; the no-pattern baseline is mandatory in every Pattern Decision Record. The library is never pasted into products.
+- **Consequences:** ✅ Shared language and refuse-with-evidence. ❌ Maintain 22 packs + structure gate; risk of agents opening the whole tree if the selector is skipped.
+- **Related:** SF-14, SF-15, [`design-patterns/README.md`](design-patterns/README.md), [`07-judgment/design-patterns.md`](07-judgment/design-patterns.md).

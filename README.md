@@ -124,7 +124,7 @@ Never put real product names, people, or tracker keys **back into this public ki
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet
 ARCHITECTURE.md           Task routes (load only what you need), which instruction wins, owners
-DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-17)
+DECISIONS.md              Why the kit is shaped this way (SF-01 … SF-18)
 CHANGELOG.md              What changed, and how to update a vendored copy
 AGENTS.md · CLAUDE.md     Rules for agents working on the kit itself
 coverage/                 Honest ✅/% atlas (craft · surfaces · agents)

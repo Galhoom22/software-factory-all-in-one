@@ -516,6 +516,63 @@ if (
   }
 }
 
+
+// --- Design-pattern packs: dirs ↔ index table ↔ six files ↔ Checked dates ---
+{
+  const dpRoot = path.join(playbookRoot, "design-patterns");
+  if (exists(dpRoot)) {
+    const skip = new Set(["_pack-template"]);
+    const required = [
+      "README.md",
+      "problem-solution.md",
+      "applicability.md",
+      "implementation.md",
+      "trade-offs.md",
+      "relations.md",
+    ];
+    const index = read(path.join(dpRoot, "README.md"));
+    const dirs = fs
+      .readdirSync(dpRoot, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && !skip.has(d.name))
+      .map((d) => d.name)
+      .sort();
+    for (const slug of dirs) {
+      const listed =
+        index.includes("[`" + slug + "/`](" + slug + "/README.md)") ||
+        index.includes("design-patterns/" + slug + "/");
+      if (!listed) {
+        fail("design-patterns/" + slug + "/ exists but is not listed in design-patterns/README.md index");
+      }
+      for (const f of required) {
+        if (!exists(path.join(dpRoot, slug, f))) fail(`design-patterns/${slug}/ missing ${f}`);
+      }
+      const card = read(path.join(dpRoot, slug, "README.md"));
+      if (!/Checked/i.test(card)) fail(`design-patterns/${slug}/README.md has no Checked dates in Sources`);
+      if (![...card.matchAll(/\b(20\d{2}-\d{2}-\d{2})\b/g)].length) {
+        fail(`design-patterns/${slug}/README.md has no YYYY-MM-DD Checked dates`);
+      }
+    }
+    for (const m of index.matchAll(/\|\s*\[`([a-z0-9-]+)\/`\]\(\1\/README\.md\)/g)) {
+      const slug = m[1];
+      if (!exists(path.join(dpRoot, slug))) fail(`design-patterns/README.md lists ${slug}/ but directory is missing`);
+    }
+    // Probe: a broken fixture must fail the same checks (SF-15).
+    {
+      const probeDir = path.join(dpRoot, "_structure-probe-missing-file");
+      fs.mkdirSync(probeDir, { recursive: true });
+      fs.writeFileSync(path.join(probeDir, "README.md"), "# probe\n");
+      let probed = false;
+      try {
+        if (!exists(path.join(probeDir, "problem-solution.md"))) probed = true;
+      } finally {
+        fs.rmSync(probeDir, { recursive: true, force: true });
+      }
+      if (!probed) fail("design-patterns structure probe self-test failed");
+    }
+    note(`design-pattern packs scanned: ${dirs.length} (${dirs.join(", ")})`);
+  }
+}
+
 // --- seed.mjs KIT_TOP must list exactly the kit's top-level entries (what --in-place moves) ---
 {
   const seedSrc = read(path.join(playbookRoot, "scripts", "seed.mjs"));
