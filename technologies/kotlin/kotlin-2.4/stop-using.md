@@ -32,11 +32,11 @@ Sources: [Compatibility guide for 2.4](https://kotlinlang.org/docs/compatibility
 | `!!` to silence the compiler | Model nullability; `?:` with a clear fallback or `requireNotNull` with a message |
 | `lateinit var` for values available at construction | Constructor `val` |
 | Getter/setter boilerplate and Java-style builders | Properties, default + named arguments |
-| Overload ladders in new code | Default arguments — but never replace overloads in an already-published API: JVM callers break with `NoSuchMethodError`; keep the existing signatures per the [backward-compatibility guidelines](https://kotlinlang.org/docs/api-guidelines-backward-compatibility.html) |
+| Overload ladders in new code | Default arguments — but never replace overloads in an already-published API: JVM callers break with `NoSuchMethodError`; keep the existing signatures per the [backward-compatibility guidelines](https://kotlinlang.org/docs/api-guidelines-backward-compatibility.html). Java callers see only the full signature of a function with default arguments: add `@JvmOverloads` to a new Java-facing concrete function or constructor; an abstract or interface method keeps explicit overloads, because `@JvmOverloads` "can't be used on abstract methods, including methods defined in interfaces" ([Java interop](https://kotlinlang.org/docs/java-to-kotlin-interop.html)) |
 | `GlobalScope.launch` | A scope tied to a lifecycle (structured concurrency) |
 | Mutable collections in public APIs | Read-only interfaces |
 | Raw `String`/`Long` IDs across layers | `@JvmInline value class` |
-| `_items` + `items` backing-property pairs that only narrow the type (greenfield) | Explicit backing fields (Stable in 2.4); keep the pair when the getter needs custom logic |
+| `_items` + `items` backing-property pairs that only narrow the type (greenfield) | Explicit backing fields (Stable in 2.4); keep the pair where explicit fields are not allowed — a custom getter, a `var`, an `open` or delegated property, or a compile-time constant ([limitations](https://kotlinlang.org/docs/properties.html)) |
 | Experimental flags in product builds without an ADR | Stable features only |
 
 ## Never as product constitution

@@ -82,11 +82,11 @@ Use with [`00-USAGE.md`](00-USAGE.md). Prefer this over asking the user to pick 
 
 > Absorb Pareto DSA / Big-O habits (name `n`, Time/Space, Brute→better, edges; hot-path check in the day loop) into `07-judgment/dsa-performance.md`, FEATURE Performance module, and `08-IMPLEMENTATION-DAY.md`. Do not dump LeetCode problem catalogs or solution trees into the product.
 
-> Review `<workflow files>` against `07-judgment/ci-hardening.md`: triggers and trust, attacker-set `${{ }}` in scripts, least-privilege `permissions:`, pins, `persist-credentials`, secrets, OIDC. Report a severity table first, then each finding with the exact line and a corrected YAML snippet. Do not auto-apply.
+> Review `<workflow files>` against `software-factory-all-in-one/07-judgment/ci-hardening.md`: triggers and trust, attacker-set `${{ }}` in scripts, least-privilege `permissions:`, pins, `persist-credentials`, secrets, OIDC. Report a severity table first, then each finding with the exact line and a corrected YAML snippet. Do not auto-apply.
 
-> Threat-model `<change>` with `07-judgment/threat-modeling.md`: the four questions, STRIDE only on the boundaries this change touches, one abuse case per kept threat, and the test that proves each mitigation.
+> Threat-model `<change>` with `software-factory-all-in-one/07-judgment/threat-modeling.md`: the four questions, STRIDE only on the boundaries this change touches, one abuse case per kept threat, and the test that proves each mitigation.
 
-> Write a blameless postmortem for `<incident>` with `07-judgment/incident-response.md` from the evidence I paste only: timeline in UTC, fishbone then 5 whys on confirmed branches, typed Detect / Mitigate / Prevent actions with one owner each. Unknowns stay open questions.
+> Write a blameless postmortem for `<incident>` with `software-factory-all-in-one/07-judgment/incident-response.md` from the evidence I paste only: timeline in UTC, fishbone then 5 whys on confirmed branches, typed Detect / Mitigate / Prevent actions with one owner each. Unknowns stay open questions.
 
 > Absorb Playwright official intro / best practices / CI / accessibility into the FE TESTING guide and CI templates (short critical list, user-facing locators, web-first asserts, mocked PR API, axe, traces on retry). Update factory `07-judgment/playwright-e2e.md` if missing. Do not grow a flaky mega-suite.
 

@@ -3,7 +3,7 @@
 **Pinned slice for new work in this pack:** **Kotlin 2.4** (language release **2.4.0**; current stable bug-fix **2.4.21**, released **2026-10-08**). K2 is the only compiler. Docs checked **2026-11-28**.  
 **Official home:** [Kotlin Docs](https://kotlinlang.org/docs/home.html) · [Basic syntax](https://kotlinlang.org/docs/basic-syntax.html) · [Idioms](https://kotlinlang.org/docs/idioms.html) · [Coding conventions](https://kotlinlang.org/docs/coding-conventions.html) · [What's new in 2.4](https://kotlinlang.org/docs/whatsnew24.html) · [Compatibility guide 2.4](https://kotlinlang.org/docs/compatibility-guide-24.html) · [Releases](https://kotlinlang.org/docs/releases.html)
 
-**Context7:** resolve with `resolve-library-id` ("Kotlin") on first use and record the chosen ID here; not verified in the session that created this pack.
+**Context7:** resolve with `resolve-library-id` ("Kotlin") on first use; keep the chosen ID in your session notes. In a vendored copy this file is read-only — propose the verified ID upstream instead of editing it here. Not verified in the session that created this pack.
 
 ## When to open this pack
 

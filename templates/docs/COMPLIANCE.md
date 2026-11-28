@@ -40,6 +40,7 @@ Launch in a market only after its row is reviewed.
 | DP-01 | Consent is explicit, separate per purpose, and never pre-checked. | Both |
 | DP-02 | Users can download their data and permanently delete their account themselves. | Both |
 | DP-03 | Retention periods are defined for every kind of data. | BE |
+| DP-04 | Breach notification: for each market, who must be told (regulator, affected users, partners), within what deadline, and who on the team sends it — {{BREACH_NOTICE_DUTIES}}. Incident steps: `software-factory-all-in-one/07-judgment/incident-response.md`. | Both |
 
 ## 4. Vendor Requirements
 
@@ -77,6 +78,7 @@ Launch in a market only after its row is reviewed.
 - [ ] Every market's laws reviewed by a lawyer.
 - [ ] Legal documents published and linked from every public page's footer.
 - [ ] Data processing agreements signed with every vendor.
+- [ ] Breach-notice recipients, deadlines and sender recorded per market (DP-04).
 - [ ] If payments are in scope: full price/renewal shown before charge; cancel as easy as start; entitlement only after provider confirm; receipts reachable (CP-01–CP-05).
 
 
