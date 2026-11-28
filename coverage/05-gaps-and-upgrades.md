@@ -40,10 +40,11 @@ Prioritize by **leverage × risk**. Re-score the matching atlas row when you dee
 | P2 | Antigravity deepen + discovery pointer | **42** | **75** | Official Antigravity docs → pack + thin root pointer | ❌ Open |
 | P2 | Trae / Lingma deepen from official docs | **36–38** | **70** | Owner pastes official URLs → fill packs | ❌ Open |
 | P1 | TypeScript pack | **88** | **88** | `technologies/typescript/` from typescriptlang.org | ✅ Done 2026-11-28 |
-| P1 | Mobile surface (Swift **or** Kotlin **or** Flutter — product-driven) | **8–12** | **70** | Judgment + one pack when first mobile product starts | ❌ Open |
+| P1 | Mobile surface (Swift **or** Kotlin **or** Flutter — product-driven; Kotlin language pack landed 2026-11-28) | **8–20** | **70** | Judgment + one pack when first mobile product starts | ❌ Open |
 | P2 | Browser extension MV3 | **5** | **70** | Judgment + Chromium/Firefox pack | ❌ Open |
 | P2 | Electron or Tauri pack | **15** | **70** | Hybrid desktop craft | ❌ Open |
 | P2 | TestSprite rails depth | **78** | **88** | When a product ships TestSprite for real: fold lessons into templates + `06-LESSONS` | ⚠️ Open |
+| P1 | Security depth beyond red lines (threat model, CI workflow security, incidents, outside-skill vetting) | was 30–55 | **85–90** | `07-judgment/threat-modeling`, `ci-hardening`, `incident-response`, `agent-skills` § Vetting + structure gate | ✅ Done 2026-11-28 |
 | P2 | Observability (Sentry-class) method in templates | **60** | **85** | Short shared `docs/` stub or DEPLOYMENT subsection: DSN empty in git, no PII, glance-after-deploy — keep host names out | ⚠️ Open |
 | P3 | Studio repo-map practice in seed | **55** | **80** | Generic one-pager under method or templates: “when product repos change, update atlas diagrams” (no org URLs) | ⚠️ Open |
 | P3 | Jira/tracker pack genericity | **82** | **90** | Keep CSV/generator scripts product-side; strengthen `templates/docs/jira` with “implementation-ready card body” checklist only | ⚠️ Open |

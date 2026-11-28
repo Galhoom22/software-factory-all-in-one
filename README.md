@@ -10,9 +10,9 @@
   <a href="https://github.com/Galhoom22/software-factory-all-in-one/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Galhoom22/software-factory-all-in-one?style=flat-square" /></a>
   <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square" /></a>
   <a href="coverage/README.md"><img alt="Craft coverage" src="https://img.shields.io/badge/craft_coverage-~89%25-38bdf8?style=flat-square" /></a>
-  <a href="technologies/README.md"><img alt="Technology packs" src="https://img.shields.io/badge/technology_packs-18-f59e0b?style=flat-square" /></a>
+  <a href="technologies/README.md"><img alt="Technology packs" src="https://img.shields.io/badge/technology_packs-19-f59e0b?style=flat-square" /></a>
   <a href="agents/README.md"><img alt="Agent harnesses" src="https://img.shields.io/badge/agent_harnesses-12-a78bfa?style=flat-square" /></a>
-  <a href="07-judgment/"><img alt="Judgment guides" src="https://img.shields.io/badge/judgment_guides-31-94a3b8?style=flat-square" /></a>
+  <a href="07-judgment/"><img alt="Judgment guides" src="https://img.shields.io/badge/judgment_guides-34-94a3b8?style=flat-square" /></a>
   <a href="https://github.com/Galhoom22/software-factory-all-in-one"><img alt="Public template" src="https://img.shields.io/badge/GitHub-Template-38bdf8?style=flat-square" /></a>
 </p>
 
@@ -29,8 +29,8 @@ This factory gives the agent a **complete operating system for planning and deli
 | **One activation signal** | Drop `my-project-requirements.md` → the agent runs the factory. No template shopping. |
 | **Full planning spine** | Requirements → BRD/PRD/SRS-shaped docs → prototype → FEATURE_SDLC → day pipeline → CI/CD phases |
 | **Actor-loop delivery** | Finish one actor to production quality — **no MVP mode** that leaves screens stubbed |
-| **Judgment, not vibes** | 31 guides (payments, booking, verification, AI engineering, review bar, …) |
-| **Stack craft on demand** | 18 technology packs (Laravel, Next.js, PHP, React, …) with use/stop/mistakes |
+| **Judgment, not vibes** | 34 guides (payments, booking, verification, AI engineering, threat modeling, CI hardening, incidents, …) |
+| **Stack craft on demand** | 19 technology packs (Laravel, Next.js, PHP, React, Kotlin, …) with use/stop/mistakes |
 | **Harness drive-craft** | 12 agent/IDE packs (Cursor, Codex, Claude, Gemini, …) under one `AGENTS.md` rulebook |
 | **Honest coverage atlas** | ~**89%** craft-home coverage tracked in [`coverage/`](coverage/README.md) — deepen, don’t duplicate |
 | **Outcome metrics over token vanity** | Cycle time, cost/merged PR, MTTR when you measure — not “tokens used” ([`07-judgment/software-factory.md`](07-judgment/software-factory.md)) |
@@ -75,8 +75,8 @@ Full walkthrough: [`00-USAGE.md`](00-USAGE.md) · ordered steps: [`01-STEPS.md`]
 | Metric | Value | Where |
 |--------|------:|-------|
 | Method docs (delivery order) | **9** (`00`–`09`; `07` is the judgment folder) | repo root |
-| Judgment guides | **31** | [`07-judgment/`](07-judgment/) |
-| Technology packs | **18** | [`technologies/`](technologies/README.md) |
+| Judgment guides | **34** | [`07-judgment/`](07-judgment/) |
+| Technology packs | **19** | [`technologies/`](technologies/README.md) |
 | AI agent harness packs | **12** | [`agents/`](agents/README.md) |
 | Craft-home coverage (domains 01–06) | **~89%** | [`coverage/`](coverage/README.md) |
 | Studio-default harness strength | **~92%** | Cursor + Codex + Claude |
@@ -84,7 +84,7 @@ Full walkthrough: [`00-USAGE.md`](00-USAGE.md) · ordered steps: [`01-STEPS.md`]
 | Forever-generic gate | **CI enforced** | `scripts/check-forever-generic.mjs` |
 | Content-integrity gate | **CI enforced** | `scripts/check-content-integrity.mjs` |
 
-Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~26%) — we do not pretend equal depth everywhere. See [`coverage/07-software-surfaces.md`](coverage/07-software-surfaces.md).
+Industry-surface breadth (mobile/desktop/games/…) is tracked separately (~27%) — we do not pretend equal depth everywhere. See [`coverage/07-software-surfaces.md`](coverage/07-software-surfaces.md).
 
 ---
 
@@ -135,7 +135,7 @@ Never put real product names, people, or tracker keys **back into this public ki
 04-FEATURE_SDLC.md        Feature depth for implementation repos
 05-PROMPTS.md             Ready agent prompts + audits
 06-LESSONS.md             Transferable planning lessons
-07-judgment/              31 judgment guides (payments, AI, review, …)
+07-judgment/              34 judgment guides (payments, AI, review, security, …)
 08-IMPLEMENTATION-DAY.md  Owner↔agent day pipeline + closeout
 09-CI-CD.md               CI/CD phases for honest Done
 EXCELLENCE.md             North star + upgrade ratchet

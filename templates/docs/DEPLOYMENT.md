@@ -63,7 +63,7 @@ Pull request → CI → staging → smoke test → approved production deploy.
 
 ## 9. Rollback and Recovery
 
-Bad release, migration rules, lost server (data-loss and downtime targets), security incident.
+Bad release, migration rules, lost server (data-loss and downtime targets), security incident. Incident response and blameless postmortems: `software-factory-all-in-one/07-judgment/incident-response.md`.
 
 ## 10. Pre-Launch Checklist
 

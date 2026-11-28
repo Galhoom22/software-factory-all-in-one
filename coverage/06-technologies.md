@@ -27,6 +27,8 @@ Paths under `software-factory-all-in-one/technologies/`.
 | ✅ | ECMAScript 2026 slice | `technologies/javascript/javascript-es2026/` | **88** | use / stop / mistakes from MDN + ECMA-262 |
 | ✅ | TypeScript pack hub | `technologies/typescript/` | **88** | typescriptlang.org/docs; Context7 `/websites/typescriptlang` |
 | ✅ | TypeScript 7.0 slice | `technologies/typescript/typescript-7.0/` | **88** | use / stop / mistakes; native tsc; TS 6 side-by-side for API tools |
+| ✅ | Kotlin pack hub | `technologies/kotlin/` | **88** | kotlinlang.org/docs; Context7 ID to record on first use |
+| ✅ | Kotlin 2.4 slice | `technologies/kotlin/kotlin-2.4/` | **88** | use / stop / mistakes from What's new 2.4 + compatibility guide 2.4; K2 only |
 | ✅ | HTML pack hub | `technologies/html/` | **88** | MDN HTML + WHATWG Living Standard + quality |
 | ✅ | HTML Living Standard slice | `technologies/html/html-living/` | **88** | use / stop / mistakes from MDN + obsolete.html |
 | ✅ | CSS pack hub | `technologies/css/` | **88** | MDN CSS + Snapshot 2026 + quality |
@@ -60,6 +62,7 @@ Paths under `software-factory-all-in-one/technologies/`.
 | Asks if TALL / VILT / PHP world is covered | Open `php-laravel-compositions.md`; deepen packs or fill listed gaps |
 | Pastes MDN JavaScript / ECMAScript docs | Deepen `javascript/` — do not fork a second JS bible |
 | Pastes TypeScript docs (typescriptlang.org/docs) | Deepen `typescript/` — do not fork a second TS bible |
+| Pastes Kotlin docs (kotlinlang.org/docs) | Deepen `kotlin/` — do not fork a second Kotlin bible; Compose / Ktor / Android get their own packs |
 | Pastes MDN HTML / WHATWG HTML docs | Deepen `html/` — do not fork a second HTML bible |
 | Pastes MDN CSS / W3C CSS Snapshot docs | Deepen `css/` (keep Tailwind pack for utilities) — do not fork a second CSS bible |
 | Pastes Inertia.js docs URL | Deepen `inertiajs/` — do not fork a second Inertia bible |

@@ -44,7 +44,10 @@ Legend: ✅ / ⚠️ / ❌ · % per [`README.md`](README.md) rubric. Paths are u
 | ✅ | Integration engineering | `07-judgment/integration-engineering.md` | **93** | Any partner: interfaces, contract, adapter, idempotency, fallback |
 | ✅ | AI engineering | `07-judgment/ai-engineering.md` | **92** | Det/prob seam, admission, golden eval, practice level; dual-mode classical+AI |
 | ✅ | Agent delegation | `07-judgment/delegation.md` | **91** | Orchestrator→implementer: brief, gates, land; never vendor skill trees |
-| ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **88** | Assumptions, thin slices, five-axis review | Not a vendored skills OS |
+| ✅ | Agent skills operating bar | `07-judgment/agent-skills.md` | **90** | Assumptions, thin slices, five-axis review; vet-before-install table (hidden directives, invisible text, excess agency, unpinned fetches) | Not a vendored skills OS |
+| ✅ | Threat modeling | `07-judgment/threat-modeling.md` + FEATURE module + `08` gate 12 | **88** | Four questions; STRIDE per touched boundary; abuse-case tests; depth by risk | — |
+| ✅ | CI workflow hardening | `07-judgment/ci-hardening.md` + `09` + structure gate | **90** | Trigger trust, `${{ }}` injection, least privilege, pins/lockfile, OIDC, runners | Gate enforces the mechanical subset on kit + template workflows |
+| ✅ | Incident response / postmortems | `07-judgment/incident-response.md` + DEPLOYMENT template link | **85** | Mitigate first; blameless; fishbone → 5 whys; typed actions; skeleton | Grows with the first product incident lessons |
 | ✅ | Payments / providers | `07-judgment/payments.md` | **88** | Webhook-first, idempotency, current APIs | Pair with SECURITY/COMPLIANCE templates |
 | ✅ | Booking / reservations | `07-judgment/booking.md` | **88** | Holds, recheck, idempotency, inventory; pair payments |
 | ✅ | Context window hygiene | `07-judgment/context-window.md` | **90** | Pointers; fresh chat; SF-09 | — |
