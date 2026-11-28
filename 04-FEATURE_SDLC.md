@@ -376,3 +376,5 @@ After a major SRS change, re-run Project Decomposition and update `requirements-
 - [Google SRE Workbook — Monitoring](https://sre.google/workbook/monitoring/) — operational feedback
 
 When the change is a **large-scale capacity or topology sketch**, run [`07-judgment/system-design.md`](07-judgment/system-design.md) (SF-22) and open at most 1–3 [`system-design/`](system-design/README.md) packs.
+
+When the change **ships or alters a UI/content locale**, run [`07-judgment/languages.md`](07-judgment/languages.md) (SF-23) and open the matching [`languages/`](languages/README.md) pack(s).

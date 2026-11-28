@@ -33,6 +33,7 @@ This table is the only list of judgment guides. Hub documents link the slot, not
 | Adding an abstraction or a named design pattern | [`design-patterns.md`](design-patterns.md) | 04 design · review |
 | Choosing a distributed / cloud architecture pattern | [`architecture-patterns.md`](architecture-patterns.md) | ARCHITECTURE · ADR · day design |
 | Sketching large-scale system design (capacity, edge, data) | [`system-design.md`](system-design.md) | ARCHITECTURE · ADR · day design |
+| Shipping or changing a product UI/content language (locale) | [`languages.md`](languages.md) | DESIGN · i18n · day design |
 | Building a non-trivial capability that a package might already provide | [`packages.md`](packages.md) | 04 design · product DECISIONS |
 | Browser end-to-end tests in a frontend repository | [`playwright-e2e.md`](playwright-e2e.md) | Frontend TESTING · 09-CI-CD |
 | Public marketing or legal pages (search and AI answers) | [`seo-geo.md`](seo-geo.md) | Product SEO docs · 08 SEO gate |

@@ -219,3 +219,5 @@ When the change belongs in the method itself (day loop, closeout order, CI/CD ga
 - Not permission to skip CI because local tests passed, or to deploy from a laptop.
 
 When the change is a **large-scale capacity or topology sketch**, run [`07-judgment/system-design.md`](07-judgment/system-design.md) (SF-22) and open at most 1–3 [`system-design/`](system-design/README.md) packs.
+
+When the change **ships or alters a UI/content locale**, run [`07-judgment/languages.md`](07-judgment/languages.md) (SF-23) and open the matching [`languages/`](languages/README.md) pack(s).
