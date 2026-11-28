@@ -6,7 +6,7 @@
 
 **Score meaning for a surface:** method rails that already apply **plus** surface-specific judgment, templates, and `technologies/` packs. Same rubric as [`README.md`](README.md) (✅/⚠️/❌ + %).
 
-Last audit: **2026-11-23** (Rust pack landed).
+Last audit: **2026-11-28** (TypeScript pack landed).
 
 ---
 
@@ -24,17 +24,17 @@ Last audit: **2026-11-23** (Rust pack landed).
 
 | Surface | Mark | % | What exists today | Biggest gap |
 |---------|------|---|-------------------|-------------|
-| **Web apps** (SSR / SPA / MPA / marketing + signed-in) | ✅ | **82** | Method + FE/BE templates + Next/React/Vue/Inertia/HTML/CSS/JS/Tailwind packs + prototype rails | Mobile-web / PWA depth; full prototype scaffold in templates |
+| **Web apps** (SSR / SPA / MPA / marketing + signed-in) | ✅ | **85** | Method + FE/BE templates + Next/React/Vue/Inertia/HTML/CSS/JS/**TS**/Tailwind packs + prototype rails | Mobile-web / PWA depth; full prototype scaffold in templates |
 | **Web / HTTP APIs & modular backends** | ✅ | **88** | API contract, readiness, design, Laravel/PHP/Symfony/.NET packs, day gates, testing guides | Non-REST (gRPC/GraphQL) packs thin |
 | **Admin / internal tools (web)** | ✅ | **78** | Filament + Livewire + Alpine packs; same web rails | Desktop-admin / thick-client patterns |
 | **Mobile — iOS native** | ❌ | **8** | Generic delivery/security/CI judgment only | No Swift / SwiftUI / Xcode pack; no store/TestFlight judgment |
 | **Mobile — Android native** | ❌ | **8** | Same generic rails only | No Kotlin / Jetpack Compose pack; no Play Console judgment |
 | **Mobile — cross-platform** | ❌ | **12** | React pack helps RN slightly; C#/.NET helps MAUI slightly | No Flutter / RN / MAUI product packs; no store dual-pipeline |
 | **Desktop — native** (Win / macOS / Linux) | ⚠️ | **18** | C# / .NET packs (Win/.NET path); generic CI | No WinUI/WPF/AppKit/GTK judgment; signing/notarization |
-| **Desktop — hybrid** (Electron / Tauri / similar) | ⚠️ | **20** | JS/TS + web packs; **Rust** language pack (Tauri affinity) | No Electron/Tauri product pack yet; auto-update / sandbox craft |
-| **Browser extensions** (Chromium / Firefox / Safari) | ❌ | **5** | Web security judgment partially transferable | No MV3 pack; store review / permissions craft |
+| **Desktop — hybrid** (Electron / Tauri / similar) | ⚠️ | **26** | JS/**TypeScript** + web packs; **Rust** language pack (Tauri affinity) | No Electron/Tauri product pack yet; auto-update / sandbox craft |
+| **Browser extensions** (Chromium / Firefox / Safari) | ⚠️ | **12** | Web security + **TypeScript**/JS packs | No MV3 pack; store review / permissions craft |
 | **CLI & developer tools** | ⚠️ | **36** | Agent/CI scripts culture; .NET/`dotnet` CLI notes; **Rust** pack; packages judgment | Dedicated CLI UX / distribution judgment still thin |
-| **Libraries / SDKs / packages** | ⚠️ | **40** | Packages judgment; Cargo crate craft in Rust pack; versioning in technologies | Semver/publish/API-compat factory still thin |
+| **Libraries / SDKs / packages** | ⚠️ | **45** | Packages judgment; Cargo crate craft in Rust pack; **TypeScript** declaration craft; versioning in technologies | Semver/publish/API-compat factory still thin |
 | **Games** (engines / realtime interactive) | ❌ | **3** | Almost nothing surface-specific | No engine pack (Unity/Godot/Unreal); no loop/perf craft |
 | **Embedded / IoT / firmware** | ❌ | **8** | **Rust** pack + Embedded Book pointer; security red lines | No RTOS / device-specific pack |
 | **Operating systems / kernels / drivers** | ❌ | **1** | Out of studio default scope | Do not fake coverage; add only if a real product needs it |
@@ -51,7 +51,7 @@ Last audit: **2026-11-23** (Rust pack landed).
 | Metric | Value |
 |--------|-------|
 | **Surfaces listed** | 21 |
-| **Weighted readiness** (equal weight per surface row) | **~25%** |
+| **Weighted readiness** (equal weight per surface row) | **~26%** |
 | **Studio-default strength** (web app + HTTP API + admin web only) | **~83%** |
 | **Honest message** | Factory **professionalism inside its homes** is high (~89% in domains 01–06). **Industry breadth** across all software kinds is still early (weighted readiness above). Do not confuse the two numbers. |
 
@@ -63,7 +63,7 @@ Affinity only. A language can serve many surfaces; a product still pins via stac
 
 | Language / platform | Primary surfaces | Pack in `technologies/`? | Notes |
 |---------------------|------------------|--------------------------|-------|
-| **JavaScript / TypeScript** | Web, hybrid desktop, extensions, RN, CLI | ✅ JS; ⚠️ TS pack missing | TS pack is a high-value upgrade |
+| **JavaScript / TypeScript** | Web, hybrid desktop, extensions, RN, CLI | ✅ JS + TS | Open both packs when the product uses TS |
 | **HTML / CSS** | Web, hybrid shells | ✅ | — |
 | **PHP** | Web backends, admin | ✅ | — |
 | **Laravel / Livewire / Filament / Inertia / Vue** | Web apps + admin | ✅ | Compositions map exists |
@@ -88,13 +88,12 @@ Order is **studio leverage**, not academic completeness. Re-rank when a real pro
 
 | Priority | Upgrade | Raises surfaces | Suggested sources (official only) |
 |----------|---------|-----------------|-----------------------------------|
-| 1 | TypeScript pack | Web, RN, Electron, extensions | typescriptlang.org/docs |
-| 2 | Mobile judgment + one starter pack (Swift **or** Kotlin **or** Flutter — product-driven) | Mobile rows | Apple / Android / Flutter docs |
-| 3 | Browser-extension MV3 judgment + pack | Extensions | developer.chrome.com, MDN WebExtensions |
-| 4 | Electron **or** Tauri pack | Hybrid desktop | electronjs.org / tauri.app |
-| 5 | Python pack (language) | ML, data, scripting | docs.python.org |
-| 6 | ASP.NET Core / EF Core packs | .NET web APIs | learn.microsoft.com |
-| 7 | Games judgment only if a game product is real | Games | Engine vendor docs — do not invent |
+| 1 | Mobile judgment + one starter pack (Swift **or** Kotlin **or** Flutter — product-driven) | Mobile rows | Apple / Android / Flutter docs |
+| 2 | Browser-extension MV3 judgment + pack | Extensions | developer.chrome.com, MDN WebExtensions |
+| 3 | Electron **or** Tauri pack | Hybrid desktop | electronjs.org / tauri.app |
+| 4 | Python pack (language) | ML, data, scripting | docs.python.org |
+| 5 | ASP.NET Core / EF Core packs | .NET web APIs | learn.microsoft.com |
+| 6 | Games judgment only if a game product is real | Games | Engine vendor docs — do not invent |
 
 Agents may **propose** the next gap (“we’re at 8% on iOS native — want Swift pack next?”) when the owner asks about readiness or a new product surface. Do not spam proposals mid implementation day unless the owner asked.
 

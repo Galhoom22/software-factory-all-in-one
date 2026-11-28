@@ -7,7 +7,7 @@
 
 - Writing or reviewing **core JavaScript** (browser, Node, or other hosts) — not framework-only recipes.
 - Choosing modern language defaults (`const`/`let`, modules, `===`, async, iterators, Maps/Sets).
-- Separating **language** (this pack) from **Web APIs / DOM** (MDN Web APIs) and from **TypeScript / Next.js** packs when those exist.
+- Separating **language** (this pack) from **Web APIs / DOM** (MDN Web APIs) and from **TypeScript** ([`../typescript/`](../typescript/README.md)) and **Next.js** packs.
 
 ## Files
 
@@ -22,7 +22,7 @@
 
 - This pack describes professional **ECMAScript / JavaScript language** usage grounded in MDN + ECMA-262.
 - A product’s **runtime floor** (browsers, Node LTS) decides which ES2025/2026 APIs are safe without polyfills — check MDN Baseline / product SRS before adopting a brand-new built-in.
-- TypeScript, React, Next.js, Alpine, Livewire, etc. layer on top; open those packs for framework rules. Do not invent DOM/API “style” from memory — use MDN Web APIs when the task is host-specific.
+- TypeScript ([`../typescript/`](../typescript/README.md)), React, Next.js, Alpine, Livewire, etc. layer on top; open those packs for framework rules. Do not invent DOM/API “style” from memory — use MDN Web APIs when the task is host-specific.
 
 ## Related
 

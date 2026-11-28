@@ -4,6 +4,10 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Added
+
+- `technologies/typescript/` — TypeScript 7.0 pack (Handbook + TSConfig + 6.0/7.0 defaults; side-by-side TS 6 for API tools) from [typescriptlang.org/docs](https://www.typescriptlang.org/docs/).
+
 ### Changed
 
 - `languages/arabic/` — deeper Arabic text craft: display-vs-index normalization (alef/yeh/teh-marbuta, tatweel, tashkeel), digits policy, no Latin transliteration in product storage, when to use a verified Arabic NLP package; judgment selector rows updated. Distilled from CAMeL Lab / CAMeL Tools concepts (not vendored).

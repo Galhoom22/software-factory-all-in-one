@@ -25,6 +25,8 @@ Paths under `software-factory-all-in-one/technologies/`.
 | ✅ | Filament 5.x slice | `technologies/filament/filament-5/` | **88** | use / stop / mistakes from filamentphp.com/docs/5.x |
 | ✅ | JavaScript pack hub | `technologies/javascript/` | **88** | MDN hub + Guide/Reference + quality |
 | ✅ | ECMAScript 2026 slice | `technologies/javascript/javascript-es2026/` | **88** | use / stop / mistakes from MDN + ECMA-262 |
+| ✅ | TypeScript pack hub | `technologies/typescript/` | **88** | typescriptlang.org/docs; Context7 `/websites/typescriptlang` |
+| ✅ | TypeScript 7.0 slice | `technologies/typescript/typescript-7.0/` | **88** | use / stop / mistakes; native tsc; TS 6 side-by-side for API tools |
 | ✅ | HTML pack hub | `technologies/html/` | **88** | MDN HTML + WHATWG Living Standard + quality |
 | ✅ | HTML Living Standard slice | `technologies/html/html-living/` | **88** | use / stop / mistakes from MDN + obsolete.html |
 | ✅ | CSS pack hub | `technologies/css/` | **88** | MDN CSS + Snapshot 2026 + quality |
@@ -57,6 +59,7 @@ Paths under `software-factory-all-in-one/technologies/`.
 | Pastes an official stack docs URL (e.g. Tailwind Vite install) | Create or deepen `technologies/<slug>/` from `_pack-template/`; pin latest official line; update this atlas + sync |
 | Asks if TALL / VILT / PHP world is covered | Open `php-laravel-compositions.md`; deepen packs or fill listed gaps |
 | Pastes MDN JavaScript / ECMAScript docs | Deepen `javascript/` — do not fork a second JS bible |
+| Pastes TypeScript docs (typescriptlang.org/docs) | Deepen `typescript/` — do not fork a second TS bible |
 | Pastes MDN HTML / WHATWG HTML docs | Deepen `html/` — do not fork a second HTML bible |
 | Pastes MDN CSS / W3C CSS Snapshot docs | Deepen `css/` (keep Tailwind pack for utilities) — do not fork a second CSS bible |
 | Pastes Inertia.js docs URL | Deepen `inertiajs/` — do not fork a second Inertia bible |
