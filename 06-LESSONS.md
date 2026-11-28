@@ -23,6 +23,7 @@ Each lesson comes from real rework on a shipped planning product **or** from imp
 - **Recheck before you confirm a booking.** Search results are not inventory truth; holds expire; retries without idempotency + external reference double-book suppliers; cancel using the policy snapshot on the booking. AI/MCP travel tools still need lock-price then book ([`07-judgment/booking.md`](07-judgment/booking.md)).
 
 ## Documents
+- **Factory sync trailers need a full planning SHA.** Squash-merge bodies may shorten `Factory-Sync-Source`; the sync script expands 7–40 hex chars, and publishers must pass the full `rev-parse HEAD` hash so the next divergence check can verify the tree.
 - **Collections that wait until “the API is finished” are already stale.** Bootstrap OpenAPI + clients on the first route; keep inventory in the same PR as every path change; CI must fail on drift ([`07-judgment/api-clients.md`](07-judgment/api-clients.md)).
 - **API client collections drift when hand-edited thrice.** Keep one inventory/OpenAPI derived from the contract; generate Postman, Insomnia, and Apidog-ready OpenAPI from it ([`07-judgment/api-clients.md`](07-judgment/api-clients.md)). Collections help humans verify; they do not replace Feature tests or become a second SoT.
 
