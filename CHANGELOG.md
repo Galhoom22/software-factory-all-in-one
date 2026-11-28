@@ -4,33 +4,33 @@ Notable changes to Software Factory All-in-One. Format: [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-11-28
+
+On-demand craft libraries and English-only kit docs: architecture patterns, system design, human-language locale packs, TypeScript 7.0, API-client templates, and public discoverability. Seeded repositories that were green stay green.
+
 ### Added
 
 - `technologies/typescript/` — TypeScript 7.0 pack (Handbook + TSConfig + 6.0/7.0 defaults; side-by-side TS 6 for API tools) from [typescriptlang.org/docs](https://www.typescriptlang.org/docs/).
+- `languages/` — on-demand locale craft library (Arabic, English, German, French, Spanish) with `07-judgment/languages.md` selector (SF-23); English-only instruction prose.
+- `scripts/check-structure.mjs` — language-pack gate (six files, Sources dates, index ↔ folders, no Arabic script in pack README).
+- `system-design/` — on-demand large-scale system design library (24 packs; primer topic–inspired; original English prose) with `07-judgment/system-design.md` selector (SF-22).
+- `scripts/check-structure.mjs` — system-design pack gate (six files, Sources Checked dates, index ↔ folders).
+- `architecture-patterns/` — on-demand cloud/distributed architecture library (44 packs; Azure Architecture Center catalog–inspired; original prose) with `07-judgment/architecture-patterns.md` selector (SF-20).
+- `scripts/check-structure.mjs` — architecture-pattern pack gate (six files, Sources Checked dates, index ↔ folders) parallel to design-patterns.
+- **SF-21 English-only kit documentation:** remove non-English SEO aliases; README / `llms.txt` / standing state that all factory instructions stay English (including future language/i18n craft folders).
+- Public kit discoverability (SF-19): README direct answer + English aliases (software-factory / software-factory-all-in-one), who-for table, FAQ for search/AI prompts; optional root [`llms.txt`](llms.txt) (explicitly not a Google Search requirement). Judgment cross-link in [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
+- Always-current API clients: OpenAPI 3.1 as machine hub ([openapis.org](https://www.openapis.org/) / [Swagger](https://swagger.io/)), regenerate from day one, CI drift + optional framework route parity, day gate in `08-IMPLEMENTATION-DAY.md` (SF-17).
+- Judgment + templates for HTTP API client packs: Postman Collection v2.1, Insomnia export, and Apidog-via-OpenAPI under `templates/docs/api-clients/`, with guide [`07-judgment/api-clients.md`](07-judgment/api-clients.md) (SF-17). One inventory → many clients; contract stays SoT.
 
 ### Changed
 
 - `languages/arabic/` — deeper Arabic text craft: display-vs-index normalization (alef/yeh/teh-marbuta, tatweel, tashkeel), digits policy, no Latin transliteration in product storage, when to use a verified Arabic NLP package; judgment selector rows updated. Distilled from CAMeL Lab / CAMeL Tools concepts (not vendored).
 
-### Added
+### Migration (vendored copies)
 
-- `languages/` — on-demand locale craft library (Arabic, English, German, French, Spanish) with `07-judgment/languages.md` selector (SF-23); English-only instruction prose.
-- `scripts/check-structure.mjs` — language-pack gate (six files, Sources dates, index ↔ folders, no Arabic script in pack README).
-
-
-- `system-design/` — on-demand large-scale system design library (24 packs; primer topic–inspired; original English prose) with `07-judgment/system-design.md` selector (SF-22).
-- `scripts/check-structure.mjs` — system-design pack gate (six files, Sources Checked dates, index ↔ folders).
-
-
-- **SF-21 English-only kit documentation:** remove non-English SEO aliases; README / `llms.txt` / standing state that all factory instructions stay English (including future language/i18n craft folders).
-
-
-- `architecture-patterns/` — on-demand cloud/distributed architecture library (44 packs; Azure Architecture Center catalog–inspired; original prose) with `07-judgment/architecture-patterns.md` selector (SF-20).
-- `scripts/check-structure.mjs` — architecture-pattern pack gate (six files, Sources Checked dates, index ↔ folders) parallel to design-patterns.
-- Public kit discoverability (SF-19): README direct answer + English aliases (software-factory / software-factory-all-in-one), who-for table, FAQ for search/AI prompts; optional root [`llms.txt`](llms.txt) (explicitly not a Google Search requirement). Judgment cross-link in [`07-judgment/seo-geo.md`](07-judgment/seo-geo.md).
-- Always-current API clients: OpenAPI 3.1 as machine hub ([openapis.org](https://www.openapis.org/) / [Swagger](https://swagger.io/)), regenerate from day one, CI drift + optional framework route parity, day gate in `08-IMPLEMENTATION-DAY.md` (SF-17).
-- Judgment + templates for HTTP API client packs: Postman Collection v2.1, Insomnia export, and Apidog-via-OpenAPI under `templates/docs/api-clients/`, with guide [`07-judgment/api-clients.md`](07-judgment/api-clients.md) (SF-17). One inventory → many clients; contract stays SoT.
-
+1. From a fresh clone of the v1.3.0 release: `node scripts/seed.mjs --update <your-planning-repo>`.
+2. No product-file edits are required for green CI. Open new on-demand libraries only through their judgment selectors (`architecture-patterns`, `system-design`, `languages`) when a change earns them.
+3. If the product uses TypeScript, open `technologies/typescript/` and keep the product `typescript` pin under SRS/ADR (do not silent-bump).
 ## [1.2.0] - 2026-11-27
 
 Supply-chain pinning is now enforced: every action in the kit's CI and in the workflow templates is pinned to a commit SHA (container actions to an image digest), and the structure gate fails on any that is not. Seeded repositories that were green stay green.
@@ -187,7 +187,8 @@ Kept verbatim from the coverage atlas, newest first.
 | 2026-11-21 | API readiness gate absorbed (SF-10); workflows ~91%. |
 | 2026-11-21 | Created coverage atlas; first full inventory + scoring; wired into playbook README / prompts / lessons / OWNER_STANDING template. |
 
-[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/Galhoom22/software-factory-all-in-one/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.3.0
 [1.2.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.2.0
 [1.1.1]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.1.1
 [1.1.0]: https://github.com/Galhoom22/software-factory-all-in-one/releases/tag/v1.1.0
